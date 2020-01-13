@@ -42,4 +42,5 @@ Look at <https://wiki.hl7.org/IG_Publisher_Documentation>
 Running in workspace in command line mode:
 
 $ java -jar org.hl7.fhir.publisher.jar -ig lab-order/lab-order.json
+
 Checks folders, installs hl7.fhir.r4.core#4.0.4
