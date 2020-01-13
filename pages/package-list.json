@@ -1,21 +1,21 @@
 {
-  "package-id": "ch.fhir.ig.ch-ig-lab-order",
-  "title": "CH-IG-LAB-ORDER (R4)",
+  "package-id": "ch.fhir.ig.ch-lab-order",
+  "title": "CH-LAB-ORDER (R4)",
   "introduction": "Implementation guide for generic lab order forms",
-  "canonical": "http://fhir.ch/ig/ch-ig-lab-order",
+  "canonical": "http://fhir.ch/ig/ch-lab-order",
   "list": [
     {
       "version": "current",
       "date": "n/a",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://fhir.ch/ig/ch-ig-lab-order/index.html",
+      "path": "http://build.fhir.org/ig/ch-lab-order/index.html",
       "status": "ci-build"
     },
     {
       "version": "dev",
       "date": "n/a",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/ch-ig-lab-order/index.html",
+      "path": "http://build.fhir.org/ig/ch-lab-order/index.html",
       "status": "ci-build"
     }
   ]
