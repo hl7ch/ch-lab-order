@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-ig-patient"/>
-    <url value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
+    <id value="ch-lab-order-patient"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
     <version value="0.1.0"/>
-    <name value="CHIGPatient"/>
-    <title value="CH IG Patient Profile"/>
+    <name value="CH Lab Order Patient"/>
+    <title value="CH Lab Order Patient Profile"/>
     <status value="draft"/>
     <date value="2018-10-15T00:00:00+10:00"/>
     <publisher value="HL7 Switzerland"/>

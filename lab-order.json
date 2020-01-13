@@ -3,7 +3,7 @@
   "version": "4.0.1",
   "fixed-business-version": "0.0.1",
   "license": "CC-BY-SA-4.0",
-  "npm-name": "ch.fhir.ig.ch-ig",
+  "npm-name": "ch.fhir.ig.ch-lab-order",
   "paths": {
     "resources": [
       "resources",
@@ -36,7 +36,7 @@
     }
   ],
   "template": "https://github.com/ahdis/ig-template",
-  "canonicalBase": "http://fhir.ch/ig/ch-ig",
+  "canonicalBase": "http://fhir.ch/ig/ch-lab-order",
   "dependencyList": [
     {
       "name": "chcore",
@@ -44,7 +44,7 @@
       "version": "dev"
     }
   ],
-  "source": "implementationguide/ch.fhir.ig.ch-ig-lab-order.xml",
+  "source": "implementationguide/ch.fhir.ig.ch-lab-order.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {},
   "suppressedWarningFile": "suppressedwarnings.txt",

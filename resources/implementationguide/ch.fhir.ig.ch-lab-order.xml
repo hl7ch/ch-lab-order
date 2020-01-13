@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ch.fhir.ig.ch-ig"/>
+  <id value="ch.fhir.ig.ch-lab-order"/>
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      ImplementationGuide for CH-IG
+      ImplementationGuide for CH-Lab Order
     </div>
   </text>
-  <url value="http://fhir.ch/ig/ch-ig/ImplementationGuide/ch.fhir.ig.ch-ig-lab-order"/>
+  <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order"/>
   <version value="0.0.1"/>
-  <name value="CH_IG_LAB_ORDER"/>
-  <title value="CH-IG-Lab-Order"/>
+  <name value="CH__LAB_ORDER"/>
+  <title value="CH--Lab-Order"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2019-07-02"/>
@@ -30,7 +30,7 @@
     </coding>
   </jurisdiction>
   <copyright value="CC-BY-SA-4.0"/>
-  <packageId value="ch.fhir.ig.ch-ig"/>
+  <packageId value="ch.fhir.ig.ch-lab-order"/>
   <license value="CC-BY-SA-4.0"/>
   <fhirVersion value="4.0.1"/>
   <definition>
@@ -38,11 +38,11 @@
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig-lab-order/StructureDefinition/ch-ig-patient"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-ig-patient"/>
+        <reference value="StructureDefinition/ch-lab-order-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
