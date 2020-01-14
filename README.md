@@ -41,6 +41,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
 Look at <https://wiki.hl7.org/IG_Publisher_Documentation>
 Running in workspace in command line mode:
 
-$ java -jar org.hl7.fhir.publisher.jar -ig ch-lab-order/lab-order.json
+$ java -jar org.hl7.fhir.publisher.jar -ig ch-lab-order/ig.json
 
-Checks folders, installs hl7.fhir.r4.core#4.0.4
+Checks folders, installs hl7.fhir.r4.core#4.0.1
