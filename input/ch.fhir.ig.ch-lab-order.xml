@@ -51,7 +51,7 @@
     <!-- References to code systems -->
     <resource>
       <reference>
-        <reference value="CodeSystem/ig-example"/>
+        <reference value="CodeSystem/example"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -73,7 +73,7 @@
     <!-- References to value sets -->
     <resource>
       <reference>
-        <reference value="ValueSet/ig-example"/>
+        <reference value="ValueSet/example-extensional"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

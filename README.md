@@ -38,7 +38,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
 
 ### IG Publisher
 
-Look at <https://wiki.hl7.org/IG_Publisher_Documentation>
+Look at <https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation>
 Running in workspace/ch-lab-order/ in command line mode:
 
 $ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini
