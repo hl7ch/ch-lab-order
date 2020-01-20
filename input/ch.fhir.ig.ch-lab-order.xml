@@ -44,13 +44,13 @@
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
+      <exampleCanonical value="StructureDefinition/ch-lab-order-composition"/>
     </resource>
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+      <exampleCanonical value="StructureDefinition/ch-lab-order-patient"/>
     </resource>
 
     <!-- References to code systems -->
