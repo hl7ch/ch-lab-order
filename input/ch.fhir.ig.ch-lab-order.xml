@@ -33,6 +33,11 @@
   <packageId value="ch.fhir.ig.ch-lab-order"/>
   <license value="CC-BY-SA-4.0"/>
   <fhirVersion value="4.0.1"/>
+  <dependsOn>
+    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
+    <packageId value="ch.fhir.ig.ch-orf"/>
+    <version value="current"/>
+  </dependsOn>
   <definition>
     <!-- References to examples -->
     <resource>
@@ -51,7 +56,7 @@
     <!-- References to code systems -->
     <resource>
       <reference>
-        <reference value="CodeSystem/example"/>
+        <reference value="CodeSystem/ig-example"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -73,7 +78,7 @@
     <!-- References to value sets -->
     <resource>
       <reference>
-        <reference value="ValueSet/example-extensional"/>
+        <reference value="ValueSet/ig-example"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
