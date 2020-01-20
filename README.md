@@ -42,5 +42,9 @@ Look at <https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation>
 Running in workspace/ch-lab-order/ in command line mode:
 
 $ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini
+if Terminology server not available:
+$ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini -tx n/a
 
-Checks folders, installs hl7.fhir.r4.core#4.0.1
+Checks folders, installs hl7.fhir.r4.core#4.0.1, builds IG
+
+Static pages by jekyll : <http://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html>
