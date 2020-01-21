@@ -9,14 +9,14 @@
         "date": "n/a",
         "desc": "Continuous Integration Build (latest in version control)",
         "path": "http://fhir.ch/ig/ch-lab-order/index.html",
-        "status": "ci-build"
+        "status": "draft"
       },
       {
         "version": "dev",
         "date": "n/a",
         "desc": "Continuous Integration Build (latest in version control)",
         "path": "http://build.fhir.org/ig/ch-lab-order/index.html",
-        "status": "ci-build"
+        "status": "draft"
       }
     ]
   }
