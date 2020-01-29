@@ -44,12 +44,16 @@
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
+      <name value="Zuweisung"/>
+      <description value="Example for Composition"/>
       <exampleCanonical value="StructureDefinition/ch-lab-order-composition"/>
     </resource>
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
+      <name value="FranzMuster"/>
+      <description value="Example for Patient"/>
       <exampleCanonical value="StructureDefinition/ch-lab-order-patient"/>
     </resource>
 
@@ -93,5 +97,17 @@
         <generation value="markdown"/>
       </page>
     </page>
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI build"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages" />
+      <value value="input/pages"/>
+    </parameter>
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2020+"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
