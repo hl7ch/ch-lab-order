@@ -52,11 +52,11 @@ Checks folders, installs hl7.fhir.r4.core#4.0.1, builds IG
 
 ### Visit your static pages powered by jekyll
 
-## web
+#### web
 
 <http://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html>
 
-## local
+#### local
 
 * navigate to the root directory 'ch-lab-order'
 
