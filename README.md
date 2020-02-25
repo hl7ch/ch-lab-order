@@ -39,6 +39,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
 ### IG Publisher
 
 Look at <https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation>
+
 Running in workspace/ch-lab-order/ in command line mode:
 
 $ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini
@@ -49,4 +50,26 @@ $ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini -tx n/a
 
 Checks folders, installs hl7.fhir.r4.core#4.0.1, builds IG
 
-Static pages by jekyll : <http://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html>
+### Visit your static pages powered by jekyll
+
+web :
+
+<http://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html>
+
+local:
+
+-navigate to the root directory 'ch-lab-order'
+
+after running IG publisher:
+
+-cd output (This directory is build by IG Publisher and doesn't exist in the repository)
+
+-open a new Gemfile (e.g. 'vi Gemfile')
+
+-add the following two lines
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+
+-run 'bundle install' and 'bundle exec jekyll serve'
+
+-visite in your browser '127.0.0.1:4000/index.html'
