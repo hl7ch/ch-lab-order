@@ -52,24 +52,24 @@ Checks folders, installs hl7.fhir.r4.core#4.0.1, builds IG
 
 ### Visit your static pages powered by jekyll
 
-web :
+## web
 
 <http://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html>
 
-local:
+## local
 
--navigate to the root directory 'ch-lab-order'
+* navigate to the root directory 'ch-lab-order'
 
 after running IG publisher:
 
--cd output (This directory is build by IG Publisher and doesn't exist in the repository)
+* cd output (This directory is build by IG Publisher and doesn't exist in the repository)
 
--open a new Gemfile (e.g. 'vi Gemfile')
+* open a new Gemfile (e.g. 'vi Gemfile')
 
--add the following two lines
+* add the following two lines
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 
--run 'bundle install' and 'bundle exec jekyll serve'
+* run 'bundle install' and 'bundle exec jekyll serve'
 
--visite in your browser '127.0.0.1:4000/index.html'
+* visite in your browser '127.0.0.1:4000/index.html'
