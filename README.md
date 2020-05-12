@@ -73,3 +73,7 @@ gem 'github-pages', group: :jekyll_plugins
 * run 'bundle install' and 'bundle exec jekyll serve'
 
 * visite in your browser '127.0.0.1:4000/index.html'
+
+## VARIA
+DSTU2 U.S. Data Access Framework (DAF) DiagnosticOrder Profile
+https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html
