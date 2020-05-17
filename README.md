@@ -77,3 +77,5 @@ gem 'github-pages', group: :jekyll_plugins
 ## VARIA
 DSTU2 U.S. Data Access Framework (DAF) DiagnosticOrder Profile
 https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html
+LIVD example bundle 
+http://hl7.org/fhir/uv/livd/2019Sep/livd-example.html
