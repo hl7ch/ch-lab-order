@@ -74,6 +74,16 @@ gem 'github-pages', group: :jekyll_plugins
 
 * visite in your browser '127.0.0.1:4000/index.html'
 
+## further procedure (look at https://fhirblog.com/clinicians-on-fhir-workshop/)
+1. Description of Problem (use cases from CDA-CH)
+2.  Build Information models based on use cases
+3.  Build 'Resources model' and References Graph'
+4.  Build all FHIR Artifacts:
+  * Profiles on resources (extenstions and constraints)
+  * ValueSets and CodeSystem resources
+  * Documentation
+  * Other possible Resources
+
 ## VARIA
 DSTU2 U.S. Data Access Framework (DAF) DiagnosticOrder Profile
 https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html  
