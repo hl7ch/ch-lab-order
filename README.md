@@ -74,7 +74,8 @@ gem 'github-pages', group: :jekyll_plugins
 
 * visite in your browser '127.0.0.1:4000/index.html'
 
-## further procedure (look at https://fhirblog.com/clinicians-on-fhir-workshop/)
+## further procedure
+look at https://fhirblog.com/clinicians-on-fhir-workshop/
 1. Description of Problem (use cases from CDA-CH)
 2.  Build Information models based on use cases
 3.  Build 'Resources model' and References Graph'
