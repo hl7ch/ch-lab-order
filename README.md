@@ -75,26 +75,38 @@ gem 'github-pages', group: :jekyll_plugins
 * visite in your browser '127.0.0.1:4000/index.html'
 
 ## further procedure
-look at https://fhirblog.com/clinicians-on-fhir-workshop/
+
+look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
+
 1. Description of Problem (use cases from CDA-CH)
-2.  Build Information models based on use cases
-3.  Build 'Resources model' and References Graph'
-4.  Build all FHIR Artifacts:
-  * Profiles on resources (extenstions and constraints)
-  * ValueSets and CodeSystem resources
+
+2. Build Information models based on use cases
+
+3. Build 'Resources model' and References Graph'
+
+4. Build all FHIR Artifacts:
+
+* Profiles on resources (extenstions and constraints)
+
+* ValueSets and CodeSystem resources
+
   * Documentation
+
   * Other possible Resources
 
-## VARIA
+## Useful Links
+
 DSTU2 U.S. Data Access Framework (DAF) DiagnosticOrder Profile
-https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html  
-LIVD example bundle 
-http://hl7.org/fhir/uv/livd/2019Sep/livd-example.html  
-Roche qualitative LIVD example bundle http://hl7.org/fhir/uv/livd/2019Sep/livd-example-roche-qual.html#root  
+'https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html'
+LIVD example bundle
+'http://hl7.org/fhir/uv/livd/2019Sep/livd-example.html'
+Roche qualitative LIVD example bundle 'http://hl7.org/fhir/uv/livd/2019Sep/livd-example-roche-qual.html#root'  
 
 ### Structured data capture
 
-https://wiki.ihe.net/index.php/Retrieve_Form_for_Data_Capture
-ITI QRPH Supplement – Structured Data Capture: https://ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf
+'https://wiki.ihe.net/index.php/Retrieve_Form_for_Data_Capture'
 
-HL7 FHIR Implementation guide: http://hl7.org/fhir/uv/sdc/2018Sep/index.html
+ITI QRPH Supplement – Structured Data Capture:
+'https://ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf'
+
+HL7 FHIR Implementation guide: 'http://hl7.org/fhir/uv/sdc/2018Sep/index.html'
