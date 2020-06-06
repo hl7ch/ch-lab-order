@@ -66,9 +66,11 @@ after running IG publisher:
 
 * open a new Gemfile (e.g. 'vi Gemfile')
 
-* add the following two lines
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+* add the following two lines:
+
+  source 'https://rubygems.org'
+
+  gem 'github-pages', group: :jekyll_plugins
 
 * run 'bundle install' and 'bundle exec jekyll serve'
 
@@ -86,20 +88,29 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
 4. Build all FHIR Artifacts:
 
-* Profiles on resources (extenstions and constraints)
+   * Profiles on resources (extenstions and constraints)
 
-* ValueSets and CodeSystem resources
+   * ValueSets and CodeSystem resources
 
-  * Documentation
+   * Documentation
 
-  * Other possible Resources
+   * Other possible Resources
 
 ## Useful Links
 
+### LOINC for in vitro Diagnostics (LLIVD)
+
 DSTU2 U.S. Data Access Framework (DAF) DiagnosticOrder Profile
 'https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html'
+
+Digital Format for Publication of LOINC to Vendor IVD Test Results by IICC:
+
+'http://ivdconnectivity.org/wp-content/uploads/delightful-downloads/2017/06/IICC_LIVD_Digital_Format_2017_06_01_R2.pdf'
+
 LIVD example bundle
+
 'http://hl7.org/fhir/uv/livd/2019Sep/livd-example.html'
+
 Roche qualitative LIVD example bundle 'http://hl7.org/fhir/uv/livd/2019Sep/livd-example-roche-qual.html#root'  
 
 ### Structured data capture
