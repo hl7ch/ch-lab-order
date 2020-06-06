@@ -96,4 +96,5 @@ Roche qualitative LIVD example bundle http://hl7.org/fhir/uv/livd/2019Sep/livd-e
 
 https://wiki.ihe.net/index.php/Retrieve_Form_for_Data_Capture
 ITI QRPH Supplement – Structured Data Capture: https://ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf
+
 HL7 FHIR Implementation guide: http://hl7.org/fhir/uv/sdc/2018Sep/index.html
