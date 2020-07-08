@@ -140,6 +140,20 @@ $ java -jar publisher.jar -ig ig.ini
 
 9. Let the pages be generated ♺
 
+## Worflow for Repository
+The process is a simplified adaption of [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/).
+
+### Branching
+The project has two locked branches:
+- `master`: The master branch only contains the source code of the LATEST STABLE release.
+- `develop`: This branch is the mainbranch for creating the feature branches. The develop branch does not contain untested code!
+
+For every feature or issue in the github repo create a sepparate branch. The branch should be named with the pattern `[ISSUE_ID]-[ISSUE_NAME]`. Whereas the `[ISSUE_ID]` could be something like `#10` and the `[ISSUE_NAME]` could be `create-worflow-documentation`. So the final branch name would be `#10-create-worflow-documentation`.
+
+IF there is an issue that needs a hotfix, we will create the issue branch from the master and merge it back to master with no develop involvement.
+
+If a new release is ready, it needs to be tested again on the develop branch. Before the testing do update the version number. After successfully testing merge it into master and it can be released.
+
 ## Useful Links
 
 ### LOINC for in vitro Diagnostics (LLIVD)
