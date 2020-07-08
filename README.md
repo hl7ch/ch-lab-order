@@ -96,7 +96,7 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
    * Other possible Resources
 
-### Installation of environment on mac
+## Installation of environment on mac
 
 1. Install Homebrew
 ```
@@ -126,7 +126,7 @@ $ echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
 ```
 _Important:_ X.X are the first two Numbers of the version checked previously in step 3.
 
-5. Check if gem path point to correct directory
+5. Check if gem path points to correct directory
 ```
 $ gem env
 ```
