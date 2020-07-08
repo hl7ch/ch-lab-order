@@ -96,6 +96,50 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
    * Other possible Resources
 
+### Installation of environment on mac
+
+1. Install Homebrew
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+2. Install ruby for current user (do not install globally)
+3. And add it to your bash profile
+```
+$ brew install ruby
+
+$ echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+```
+
+3. Relaunch terminal and check install path and version
+```
+$ which ruby
+
+$ ruby -v
+```
+
+4. Install Jeykll and add your path file
+```
+$ gem install --user-install bundler jekyll
+
+$ echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
+```
+_Important:_ X.X are the first two Numbers of the version checked previously in step 3.
+
+5. Check if gem path point to correct directory
+```
+$ gem env
+```
+
+6. Download IG Publisher
+7. Copy .jar file into main directory of your project
+8. Execute .jar file with
+```
+$ java -jar publisher.jar -ig ig.ini
+```
+
+9. Let the pages be generated ♺
+
 ## Useful Links
 
 ### LOINC for in vitro Diagnostics (LLIVD)
