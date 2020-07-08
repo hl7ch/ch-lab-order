@@ -28,10 +28,14 @@ Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-o
 
 ### Installation of JDK Oracle for Fedora 31
 
+```
 $ cat /etc/fedora-release   or $ cat /usr/lib/os-release
+```
 Fedora release 31 (Thirty One)
 
+```
 $ java -version
+```
 java version "1.8.0_231"
 Java(TM) SE Runtime Environment (build 1.8.0_231-b11)
 Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
@@ -42,11 +46,15 @@ Look at <https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation>
 
 Running in workspace/ch-lab-order/ in command line mode:
 
+```
 $ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini
+```
 
 if Terminology server not available:
 
+```
 $ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini -tx n/a
+```
 
 Checks folders, installs hl7.fhir.r4.core#4.0.1, builds IG
 
@@ -70,11 +78,13 @@ after running IG publisher:
 
   source 'https://rubygems.org'
 
+  ```
   gem 'github-pages', group: :jekyll_plugins
+  ```
 
-* run 'bundle install' and 'bundle exec jekyll serve'
+* run `bundle install` and `bundle exec jekyll serve`
 
-* visite in your browser '127.0.0.1:4000/index.html'
+* visite in your browser `127.0.0.1:4000/index.html`
 
 ## further procedure
 
