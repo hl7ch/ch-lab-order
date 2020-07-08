@@ -96,6 +96,64 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
    * Other possible Resources
 
+## Installation of environment on mac
+
+1. Install Homebrew
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+2. Install ruby for current user (do not install globally)
+3. And add it to your bash profile
+```
+$ brew install ruby
+
+$ echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+```
+
+3. Relaunch terminal and check install path and version
+```
+$ which ruby
+
+$ ruby -v
+```
+
+4. Install Jeykll and add your path file
+```
+$ gem install --user-install bundler jekyll
+
+$ echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
+```
+_Important:_ X.X are the first two Numbers of the version checked previously in step 3.
+
+5. Check if gem path points to correct directory
+```
+$ gem env
+```
+
+6. Download IG Publisher
+7. Copy .jar file into main directory of your project
+8. Execute .jar file with
+```
+$ java -jar publisher.jar -ig ig.ini
+```
+
+9. Let the pages be generated ♺
+
+## Worflow for Repository
+The process is a simplified adaption of [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/).
+
+### Branching
+The project has two locked branches:
+- `master`: The master branch only contains the source code of the LATEST STABLE release.
+- `develop`: This branch is the mainbranch for creating the feature branches. The develop branch does not contain untested code!
+
+For every feature or issue in the github repo create a sepparate branch. The branch should be named with the pattern `[ISSUE_ID]-[ISSUE_NAME]`. Whereas the `[ISSUE_ID]` could be something like `#10` and the `[ISSUE_NAME]` could be `create-worflow-documentation`. So the final branch name would be `#10-create-worflow-documentation`.
+
+IF there is an issue that needs a hotfix, we will create the issue branch from the master and merge it back to master with no develop involvement.
+
+If a new release is ready, it needs to be tested again on the develop branch. Before the testing do update the version number. After successfully testing merge it into master and it can be released.
+
 ## Useful Links
 
 ### LOINC for in vitro Diagnostics (LLIVD)
