@@ -114,7 +114,6 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 ```
 
 2. Install ruby for current user (do not install globally)
-
 3. And add it to your bash profile
 ```
 $ brew install ruby
@@ -130,6 +129,7 @@ $ ruby -v
 ```
 
 4. Install Jeykll and add your path file
+
 ```
 $ gem install --user-install bundler jekyll
 
@@ -155,7 +155,9 @@ $ java -jar publisher.jar -ig ig.ini
 The process is a simplified adaption of [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/).
 
 ### Branching
+
 The project has two locked branches:
+
 - `master`: The master branch only contains the source code of the LATEST STABLE release.
 - `develop`: This branch is the mainbranch for creating the feature branches. The develop branch does not contain untested code!
 
@@ -166,12 +168,6 @@ IF there is an issue that needs a hotfix, we will create the issue branch from t
 If a new release is ready, it needs to be tested again on the develop branch. Before the testing do update the version number. After successfully testing merge it into master and it can be released.
 
 ## Useful Links
-
-### Licence
-
-LOINC Copyright Notice and License 'https://loinc.org/kb/license/'
-(2.) The name of, or any contents of, any fields in the Group 1 Artifacts shall not be changed. The contents of any fields in the Group 3 Artifacts shall not be changed. New fields may be added to the Group 1 Artifacts and Group 3 Artifacts to attach additional information to existing LOINC records.
-(10.) 
 
 ### LOINC for in vitro Diagnostics (LLIVD)
 

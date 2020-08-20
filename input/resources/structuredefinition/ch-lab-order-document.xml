@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="ch-lab-order-document"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
+    <version value="0.1.0"/>
+    <name value="CHLabOrderDocument"/>
+    <title value="CH LAB ORDER Document Profile"/>
+    <status value="draft"/>
+    <date value="2018-10-15T00:00:00+10:00"/>
+    <publisher value="HL7 Switzerland"/>
+    <contact>
+        <name value="HL7 Switzerland"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.hl7.ch/"/>
+        </telecom>
+    </contact>
+    <description value="IG Document definition is just an example!"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CH"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1" />
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="ServiceRequest"/>
+    <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="ServiceRequest">
+          <path value="ServiceRequest"/>
+          <short value="CH LAB ORDER Document"/>
+        </element>
+        <element id="ServiceRequest.entry:ChCorePatient">
+          <path value="ServiceRequest.entry"/>
+          <sliceName value="ChCorePatient"/>
+          <short value="Reference on CH Core Patient"/>
+          <min value="1"/>
+          <max value="2"/>
+        </element>
+        <element id="ServiceRequest.entry:ChCorePatient.resource">
+          <path value="ServiceRequest.entry.resource"/>
+          <min value="1"/>
+          <type>
+            <code value="Resource"/>
+            <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/dataEntryPerson"/>
+          </type>
+        </element>
+    </differential>
+</StructureDefinition>

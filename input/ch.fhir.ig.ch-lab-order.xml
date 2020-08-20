@@ -33,11 +33,11 @@
   <packageId value="ch.fhir.ig.ch-lab-order"/>
   <license value="CC-BY-SA-4.0"/>
   <fhirVersion value="4.0.1"/>
-  <dependsOn>
+  <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
     <packageId value="ch.fhir.ig.ch-orf"/>
-    <version value="current"/>
-  </dependsOn>
+    <version value="0.9.1"/>
+</dependsOn>
   <definition>
     <!-- References to examples -->
     <resource>
@@ -69,6 +69,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-composition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-lab-order-document"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
