@@ -43,8 +43,9 @@ Look at <https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation>
 Get the IG Publisher at <https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar>
 
 Running in workspace/ch-lab-order/ in command line mode:
+Make sure you use the latest version of publisher.
 
-```java
+```bash
 java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
