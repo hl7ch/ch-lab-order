@@ -51,7 +51,7 @@ java -jar input-cache/publisher.jar -ig ig.ini
 
 if Terminology server not available:
 
-```java
+```bash
 java -jar input-cache/publisher.jar -ig ig.ini -tx n/a
 ```
 
@@ -77,7 +77,7 @@ after running IG publisher:
 
   source 'https://rubygems.org'
 
-  ```RoR
+  ```bash
   gem 'github-pages', group: :jekyll_plugins
   ```
 
@@ -117,7 +117,7 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
 3. And add it to your bash profile
 
-    ```brew
+    ```bash
     brew install ruby
     echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
     ```
@@ -131,7 +131,7 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
 5. Install Jeykll and add your path file
 
-    ```ruby
+    ```bash
     gem install --user-install bundler jekyll
     echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
     ```
@@ -140,7 +140,7 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
 6. Check if gem path points to correct directory
 
-    ```ruby
+    ```bash
     gem env
     ```
 
@@ -150,7 +150,7 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 
 9. Execute .jar file with
 
-    ```java
+    ```bash
     java -jar publisher.jar -ig ig.ini
     ```
 
