@@ -33,6 +33,7 @@
           <path value="ServiceRequest"/>
           <short value="CH LAB ORDER Document"/>
         </element>
+        <!--
         <element id="ServiceRequest.entry:ChCorePatient">
           <path value="ServiceRequest.entry"/>
           <sliceName value="ChCorePatient"/>
@@ -48,5 +49,6 @@
             <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/dataEntryPerson"/>
           </type>
         </element>
+        -->
     </differential>
 </StructureDefinition>

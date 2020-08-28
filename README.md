@@ -113,7 +113,7 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     ```
 
-2. Install ruby for current user (do not install globally)
+2. Install ruby for  user (do not install globally)
 
 3. And add it to your bash profile
 

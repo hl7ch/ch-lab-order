@@ -37,7 +37,7 @@
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
     <packageId value="ch.fhir.ig.ch-orf"/>
     <version value="0.9.1"/>
-</dependsOn>
+  </dependsOn>
   <definition>
     <!-- References to examples -->
     <resource>
@@ -46,7 +46,7 @@
       </reference>
       <name value="Zuweisung"/>
       <description value="Example for Composition"/>
-      <exampleCanonical value="StructureDefinition/ch-lab-order-composition"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
     </resource>
     <resource>
       <reference>
@@ -54,7 +54,7 @@
       </reference>
       <name value="FranzMuster"/>
       <description value="Example for Patient"/>
-      <exampleCanonical value="StructureDefinition/ch-lab-order-patient"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
     </resource>
 
     <!-- References to code systems -->
