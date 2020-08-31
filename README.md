@@ -46,6 +46,11 @@ Running in workspace/ch-lab-order/ in command line mode:
 Make sure you use the latest version of publisher.
 
 ```bash
+java --version
+openjdk 11.0.8 2020-07-14
+OpenJDK Runtime Environment 18.9 (build 11.0.8+10)
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.8+10, mixed mode, sharing)
+
 java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
@@ -75,9 +80,9 @@ after running IG publisher:
 
 * add the following two lines:
 
+  ```bash
   source 'https://rubygems.org'
 
-  ```bash
   gem 'github-pages', group: :jekyll_plugins
   ```
 

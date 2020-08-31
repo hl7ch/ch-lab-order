@@ -23,6 +23,16 @@
       <value value="https://www.hl7.ch/"/>
     </telecom>
   </contact>
+    <!-- responsible for this Implementation Guide-->
+  <contact>
+    <name value="Marcel Hanselmann"/>
+    <telecom>
+      <system value="email"/>
+      <value value="marcel.hanselmann@bluewin.ch"/>
+    </telecom>
+  </contact>
+
+  <description value="ImplementationGuide for CH:Laboratory Order"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -33,13 +43,44 @@
   <packageId value="ch.fhir.ig.ch-lab-order"/>
   <license value="CC-BY-SA-4.0"/>
   <fhirVersion value="4.0.1"/>
+  <!-- dependencies from other IG's-->
   <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
     <packageId value="ch.fhir.ig.ch-orf"/>
     <version value="0.9.1"/>
   </dependsOn>
+  <dependsOn id="chcore">
+    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
+    <packageId value="ch.fhir.ig.ch-core"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="structureddatacapture">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
+    <packageId value="hl7.fhir.uv.sdc"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="cheprmhealth">
+    <uri value="http://fhir.ch/ig/ch-epr-term/ImplementationGuide/ch.fhir.ig.ch-epr-term"/>
+    <packageId value="ch.fhir.ig.ch-epr-mhealth"/>
+    <version value="current"/>
+  </dependsOn>
+
   <definition>
-    <!-- References to examples -->
+    <grouping>
+      <name value="CH Laboratory Order"/>
+    </grouping>
+
+<!--
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-min"/>
+      </reference>
+      <name value="ServiceRequest"/>
+      <description value="Lab Order"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
+    </resource>
+
+     References to examples:  -->
     <resource>
       <reference>
         <reference value="Composition/Zuweisung"/>
