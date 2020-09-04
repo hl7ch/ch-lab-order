@@ -39,8 +39,8 @@
       <code value="CH"/>
     </coding>
   </jurisdiction>
-  <copyright value="CC-BY-SA-4.0"/>
-  <packageId value="ch.fhir.ig.ch-lab-order"/>
+  <copyright value="CC-BY-SA-4.0"/> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
+  <packageId value="ch.fhir.ig.ch-lab-order"/> <!-- NPM package name-->
   <license value="CC-BY-SA-4.0"/>
   <fhirVersion value="4.0.1"/>
 
@@ -69,9 +69,19 @@
     <version value="2.0.4"/>
   </dependsOn>
 
+  <global>
+    <!-- Patients, Organisations and Practitioners must conform CH-core-->
+    <type value="Patient"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
+    <type value="Organisation"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
+    <type value="Practitioner"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+  </global>
+
   <definition>
     <grouping>
-      <name value="CH Laboratory Order"/>
+      <name value="CHCoreCompositionEPR"/>
     </grouping>
 
   <!--
