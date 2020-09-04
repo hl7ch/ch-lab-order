@@ -32,7 +32,7 @@
     </telecom>
   </contact>
 
-  <description value="ImplementationGuide for CH:Laboratory Order"/>
+  <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -67,14 +67,14 @@
     <uri value="http://fhir.ch/ig/ch-epr-term/ImplementationGuide/ch.fhir.ig.ch-epr-term"/>
     <packageId value="ch.fhir.ig.ch-epr-term"/>
     <version value="2.0.4"/>
- </dependsOn>
+  </dependsOn>
 
   <definition>
     <grouping>
       <name value="CH Laboratory Order"/>
     </grouping>
 
-<!--
+  <!--
     <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
@@ -83,8 +83,10 @@
       <description value="Lab Order"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     </resource>
-
-     References to examples:  -->
+  -->
+  
+  <!-- Resources -->
+  <!-- References to examples:  -->
     <resource>
       <reference>
         <reference value="Composition/Zuweisung"/>
