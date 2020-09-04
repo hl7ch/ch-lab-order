@@ -207,6 +207,11 @@ HL7 FHIR Implementation guide: 'http://hl7.org/fhir/uv/sdc/2018Sep/index.html'
 
 Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 
+[Laboratory ask at order entry panel](https://loinc.org/89543-3)
+[Universal Lab Orders Value Set from LOINC](https://loinc.org/file-access/download-id/9825/)
+
 ### Order and Referral by Form (ORF)
 
 'http://build.fhir.org/ig/ahdis/ch-orf/'
+
+[LOINC Document Ontology](https://loinc.org/document-ontology/)
