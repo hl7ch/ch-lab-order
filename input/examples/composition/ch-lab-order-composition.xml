@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-lab-order-composition"/>
-    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
+    <id value="ch-lab-order-document"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     <version value="0.1.0"/>
     <name value="CHLabOrderComposition"/>
     <title value="CH LAB ORDER Composition Profile"/>

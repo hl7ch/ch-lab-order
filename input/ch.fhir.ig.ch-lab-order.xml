@@ -51,6 +51,7 @@
     <version value="0.9.1"/>
   </dependsOn>
 
+  <!-- Theese IG are already part of chorf or chcore
   <dependsOn id="chcore">
     <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
     <packageId value="ch.fhir.ig.ch-core"/>
@@ -68,6 +69,7 @@
     <packageId value="ch.fhir.ig.ch-epr-term"/>
     <version value="2.0.4"/>
   </dependsOn>
+   -->
 
   <global>
     <!-- Patients, Organisations and Practitioners must conform CH-core-->
@@ -96,15 +98,16 @@
   -->
   
   <!-- Resources -->
-  <!-- References to examples:  -->
+  <!-- References to examples: 
     <resource>
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
       <name value="Zuweisung"/>
       <description value="Example for Composition"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     </resource>
+   -->
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
@@ -123,18 +126,8 @@
     </resource>
 
     <!-- References to structure definitions -->
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-document"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
+    
+  
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-patient"/>
