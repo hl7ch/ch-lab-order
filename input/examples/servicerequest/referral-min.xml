@@ -11,4 +11,36 @@
   <requester>
       <reference value="Practitioner/AgparMarc"/>
   </requester>
+
+  <encounter>
+    <!-- 0..1 Reference(Encounter) Encounter in which the request was created -->
+  </encounter>
+
+  <performerType>
+    <!-- 0..1 CodeableConcept Performer role -->
+  </performerType>
+
+  <performer>
+    <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
+    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
+    <reference value="Organisation/LaborPipette"/>
+  </performer>
+
+  <locationCode>
+    <!-- 0..* CodeableConcept Requested location -->
+  </locationCode>
+
+  <locationReference>
+    <!-- 0..* Reference(Location) Requested location -->
+  </locationReference>
+
+  <reasonCode>
+    <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
+  </reasonCode>
+  
+  <reasonReference>
+    <!-- 0..* Reference(Condition|Observation|DiagnosticReport|
+    DocumentReference) Explanation/Justification for service or service -->
+  </reasonReference>
+
 </ServiceRequest>

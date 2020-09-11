@@ -71,8 +71,9 @@
   </dependsOn>
    -->
 
-  <global>
-    <!-- Patients, Organisations and Practitioners must conform CH-core-->
+  <!-- Patients, Organisations and Practitioners must conform CH-core-->
+  <!--
+  <global>  
     <type value="Patient"/>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
     <type value="Organisation"/>
@@ -80,6 +81,7 @@
     <type value="Practitioner"/>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
   </global>
+   -->
 
   <definition>
     <grouping>
@@ -113,7 +115,7 @@
         <reference value="Patient/FranzMuster"/>
       </reference>
       <name value="FranzMuster"/>
-      <description value="Example for Patient"/>
+      <description value="Example for EPR-Patient"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
     </resource>
 
