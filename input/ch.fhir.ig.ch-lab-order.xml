@@ -51,25 +51,15 @@
     <version value="0.9.1"/>
   </dependsOn>
 
-  <!-- Theese IG are already part of chorf or chcore
+  <!-- 
+
   <dependsOn id="chcore">
     <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
     <packageId value="ch.fhir.ig.ch-core"/>
-    <version value="current"/>
+    <version value="1.1.0"/>
   </dependsOn>
-  
-  <dependsOn id="sdc">
-    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
-    <packageId value="hl7.fhir.uv.sdc"/>
-    <version value="current"/>
-  </dependsOn>
-  
-  <dependsOn id="cheprterm">
-    <uri value="http://fhir.ch/ig/ch-epr-term/ImplementationGuide/ch.fhir.ig.ch-epr-term"/>
-    <packageId value="ch.fhir.ig.ch-epr-term"/>
-    <version value="2.0.4"/>
-  </dependsOn>
-   -->
+
+  -->
 
   <!-- Patients, Organisations and Practitioners must conform CH-core-->
   <global>  
