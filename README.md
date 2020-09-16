@@ -24,7 +24,6 @@ Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-o
 ## Prerequisites
 
 * Oracle JDK: <https://fedoraproject.org/wiki/JDK_on_Fedora>
-* IG Publisher: <https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar>
 
 ### Installation of JDK Oracle for Fedora 31
 
