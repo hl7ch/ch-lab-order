@@ -22,7 +22,7 @@ Anwendungen, welche Konformität mit dem ch-lab-order Projekt beanspruchen, müs
 
 Anbietern von Anwendungen mit Fragebogen auf beiden Seiten des Kommunikationsprozesses wird dringend empfohlen, für alle Daten in den obligatorisch vorgegebenen Elementen Schnittstellen zu anderen Anwendungen (wie KIS und PACS) zu implementieren. Anwendungen, die auf diese Weise konzipiert sind, bieten Out-of-the-box Verbindungsfähigkeit für obligatorische gegebene Elemente sowie Out-of-the-box Interoperabilität für alle Fragebögen, soweit es sich um Benutzerschnittstellen seitens Ausfüller und Empfänger handelt.
 
-Nichts spricht gegen Schnittstellen für Daten im anwendungsfallspezifischen Teil eines bestimmten Fragebogens. Man muss jedoch bedenken, dass solche Schnittstellen an einen bestimmten Fragebogen gebunden sind. Besitztum oder andere Mittel, die Änderungen des Fragebogens regeln, sind daher ratsam.
+Nichts spricht gegen Schnittstellen für Daten im anwendungsfallspezifischen Teil eines bestimmten Fragebogens. Man muss jedoch bedenken, dass solche Schnittstellen an einen bestimmten Fragebogen gebunden sind. Besitztum oder andere Mittel, die Änderungen des Fragebogens regeln, sind daher ratsam. Wir haben vorgesehen, eine solche Schnittstelle zum [LOINC FHIR Terminology Server](https://loinc.org/fhir/) zu verwenden.
 
 Das ch-lab-order Projekt befasst sich mit Transport, Workflow und Inhalt. Er basiert auf den Ressourcen von HL7 FHIR und insbesondere auf der Ressource FHIR-Fragebogen (questionnaire). FHIR spezifiziert RESTful Web Services als Transportmittel.  Eine Implementierung auf Basis von RESTful Web Services wird dringend empfohlen, ist aber nicht zwingend erforderlich. Der Workflow wird durch den Geltungsbereich des ch-lab-order Projekts angesprochen, der den gerichteten Informationsaustausch mit Anfrage und Antwort behandelt. Der Inhalt wird durch eine Reihe von obligatorisch vorgegebenen Elementen und Codes und die Möglichkeit, beides je nach Bedarf der angesprochenen Anwendungsfälle zu erweitern, definiert.
 
@@ -37,6 +37,12 @@ Fragebögen und Formulare sind im Gesundheitswesen allgegenwärtig. Sie werden z
 ### Auftragsformulare
 
 Die laborspezifischen Auftragsformulare werden in 3 Schritten erstellt:
+
+1. ORF Formaular als Ausgangspunkt
+
+2. Davon abgeleitet das generische Labor- und Pathologie-Auftragsformular
+
+3. Von den Laboren durch die ValueSets ihrer Kataloge und evtl. durch das Logo ergänzte Fragebogen
 
 #### ORF Formular (generisches Auftragsformular)
 
@@ -62,9 +68,9 @@ Das Labor- und Pathologie-Auftragsformular enthält zusätzlich zu den Daten des
 
 #### Laborspezifische Auftragsformulare
 
-Die ch-lab-order Formulare sind von einem Form Repository für Labore abrufbar. Das Repository liefert eine Liste der fachspezifischen Labor-Auftragsformulare (aktuell 22 Einträge, ensprechend den 22 Laboratory Order Panels). Aus der Liste können dann die benötigten Auftragsformulare ausgewählt und geholt werden. Diese enthalten noch keinerlei Value-Sets von Labor-Tests.
+Die ch-lab-order Formulare sind von einem Form Repository öffentlich abrufbar. Das Repository liefert eine Liste der fachspezifischen Labor-Auftragsformularen (aktuell 22 Einträge, ensprechend den 22 Laboratory Order Panels). Aus der Liste können dann die benötigten Auftragsformulare ausgewählt und geholt werden. Diese enthalten noch keinerlei Value-Sets von Labor-Tests.
 
-Nachdem ein Laborbeauftragter generische Labor- und Pathologie-Auftragsformulare vom Form Repository bezogen hat, kann er sie mit dem eigenen Logo versehen (branding).
+Damit ein Laborbeauftragter generische Labor- und Pathologie-Auftragsformulare für seine eigene Organisation sichtbar zur Verfügung stellen kann, hat er die Möglichkeit, das Formular mit einem eigenen Logo zu versehen versehen (Branding), z.B. als PDF Template oder angehängte Bilddatei. Da der Implementationsguide nur auf JSON- bzw. XML Files ausgerichtet ist, wird sich das Branding ausserhalb seines Aufgabenbereichs befinden.
 
 1. Anschliessend kann er sie mit den spezifischen Value-Sets der verschiedenen Labor-Fachrichtungen in Form von Fragebogen (Questionnaires) ausstatten (Fragebogen finden). Die Fragebogen lassen die Auswahl der gewünschten Analysen zu. Es ist vorgesehen, die Auftragsformulare direkt durch Abfrage der LOINC Laboratory Order Panels zu erstellen. Da die Labore nur ein Subset aller möglichen Analysen (sogenannter Labor-Katalog) anbieten, muss der Laborbeauftragte die gebrandeten Labor-Auftrtagsformulare entsprechend einschränken, sodass sie nur die vom Labor angebotenen Analysen beinhalten.
 
@@ -74,9 +80,9 @@ Nachdem ein Laborbeauftragter generische Labor- und Pathologie-Auftragsformulare
 
 4. Adaptive Formulare: Es besteht auch die Möglichkeit, Auftrags-Formulare direkt aus generischen Formularen mittels Import von Laboratory Order Panels zu erstellen und mit spezifischen Fragen zu ergänzen.
 
-5. Vorausgefüllte Formulare: Selbstverständlich müssen die Daten ORF Formulars schon vorausgefüllt werden. Bei Vorhandensein vorausgefüllt sind Anamnese, Status, Diagnose und Fragestellung, jeweils fallbezogen.
+5. Vorausgefüllte Formulare: Selbstverständlich müssen die Daten ORF Formulars schon vorausgefüllt werden. Bei Vorhandensein vorausgefüllt sind Anamnese, Status, Diagnose, aktuelle Medikation, und Fragestellung, jeweils fallbezogen.
 
-6. Weiterverwendung von Formulardaten: Die ausgefüllten Formulare werden mit denvorausgefüllten Daten in Form eines Bündels (FHIR: bundle) vom Typ Dokument (FHIR: typ Document) in elektronischer Form End-zu-End verschlüsselt übermittelt (FHIR: Transaction).
+6. Weiterverwendung von Formulardaten: Die ausgefüllten Formulare werden mit den vorausgefüllten Daten in Form eines Bündels (FHIR: bundle) vom Typ Dokument (FHIR: typ Document) in elektronischer Form End-zu-End verschlüsselt übermittelt (FHIR: Transaction).
 
 ### Weiterverarbeitung im Labor
 
