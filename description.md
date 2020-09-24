@@ -38,7 +38,7 @@ Fragebögen und Formulare sind im Gesundheitswesen allgegenwärtig. Sie werden z
 
 Die laborspezifischen Auftragsformulare werden in 3 Schritten erstellt:
 
-1. ORF Formaular als Ausgangspunkt
+1. ORF Formular als Ausgangspunkt
 
 2. Davon abgeleitet das generische Labor- und Pathologie-Auftragsformular
 
@@ -62,7 +62,7 @@ Ein generisches Auftrags- und Überweisungsformular ist der Ausgangspunkt. Diese
 
 Das Labor- und Pathologie-Auftragsformular enthält zusätzlich zu den Daten des generischen Auftragsformulares noch weitere Datenfelder und erfüllt die Anforderungen des ch-lab-order Implementationsguides:
 
-* Die Proben-ID (specimen-ID), welche für Labor- und Pathologie-Untersuchungen benötigt wird, ist ein wichtiger Bestandteil des Auftrages. Durch sie wird auf die dazugehörige Probe eindeutig referenziert. Der Auftraggeber erhält die Proben-ID erst als letzten Schritt im Arbeitsablauf zur Erstellung des Auftrages, damit sichergestellt ist, dass keine Probe ohne dazugehörigen Auftrag im Labor ankommt. Die Probe (Serum, Urin, Vollblut, Gewebeteil etc.) wird mit der Proben-ID in Form einer ausgedruckten Klebe-Etikette versehen.
+* Die Proben-ID (specimen-ID), welche für Labor- und Pathologie-Untersuchungen benötigt wird, ist ein wichtiger Bestandteil des Auftrages. Durch sie wird auf die dazugehörige Probe eindeutig referenziert. Der Auftraggeber erhält die Proben-ID erst als letzten Schritt im Arbeitsablauf zur Erstellung des Auftrages, damit sichergestellt ist, dass keine Probe ohne dazugehörigen Auftrag im Labor ankommt. Die Probe (Serum, Urin, Vollblut, Gewebeteil etc.) wird mit der Proben-ID in Form einer ausgedruckten Klebe-Etikette versehen. Das Labor muss zu diesem Zweck einen Service einrichten, der dem Auftraggeber die Probem-ID zukommen lässt, in dem Moment, in dem er den digitalen Auftrag erhält.
 
 * Fachrichtungs-ID, gestützt auf die [LOINC Laboratory Order Panels](https://loinc.org/panels/category/laboratory-order-panels/), aktuell 22 Panels, die LOINC speziell für den Laborauftrag zur Verfügung stellt. Alternativ könnten auch die Kategorien der [Laboratory studies (set)](https://loinc.org/26436-6/), die sich über den loinc [Terminologie Server](https://fhir.loinc.org/CodeSystem/$lookup?system=http://loinc.org&code=26436-6) auffinden lassen, verwendet werden. Spezifische Fragebogen der Laborfachrichtung lassen sich hier einbauen (3. Schritt)
 
@@ -80,7 +80,7 @@ Damit ein Laborbeauftragter generische Labor- und Pathologie-Auftragsformulare f
 
 4. Adaptive Formulare: Es besteht auch die Möglichkeit, Auftrags-Formulare direkt aus generischen Formularen mittels Import von Laboratory Order Panels zu erstellen und mit spezifischen Fragen zu ergänzen.
 
-5. Vorausgefüllte Formulare: Selbstverständlich müssen die Daten ORF Formulars schon vorausgefüllt werden. Bei Vorhandensein vorausgefüllt sind Anamnese, Status, Diagnose, aktuelle Medikation, und Fragestellung, jeweils fallbezogen.
+5. Vorausgefüllte Formulare: Selbstverständlich müssen die Daten des ORF Formulars schon vorausgefüllt werden. Bei Vorhandensein vorausgefüllt sind Anamnese, Status, Diagnose, aktuelle Medikation, und Fragestellung, jeweils fallbezogen.
 
 6. Weiterverwendung von Formulardaten: Die ausgefüllten Formulare werden mit den vorausgefüllten Daten in Form eines Bündels (FHIR: bundle) vom Typ Dokument (FHIR: typ Document) in elektronischer Form End-zu-End verschlüsselt übermittelt (FHIR: Transaction).
 
