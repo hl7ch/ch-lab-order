@@ -51,7 +51,7 @@
     <version value="0.9.1"/>
   </dependsOn>
 
-  
+  <!-- -->
   <dependsOn id="chcore">
     <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
     <packageId value="ch.fhir.ig.ch-core"/>

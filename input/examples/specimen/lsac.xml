@@ -1,19 +1,35 @@
 <Specimen xmlns="http://hl7.org/fhir">
   <!-- from Resource: id, meta, implicitRules, and language -->
   <!-- from DomainResource: text, contained, extension, and modifierExtension -->
-  <identifier><!-- 0..* Identifier External Identifier --></identifier>
+  <identifier><!-- 0..* This is a business identifier, not a resource identifier (see discussion) --></identifier>
   <accessionIdentifier>
     <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
   </accessionIdentifier>
   <status value="[code]"/><!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
   <type> 
+    <!--   
+   Type is a loosely defined field because there is such a lot of variation in how it
+     is used.
+   The principal variation is how much information that could be represented elsewhere
+     is also
+   represented here. For instance, here's some possible types:
+     lithium heparin plasma   (+ .container.additive) (e.g. SNOMED CT 446272009)
+     transfusion bag of blood (+ container.type)
+     Peritoneal lavage        (+ collection.bodySite)
+   If the type includes other fields, it would be normal not to populate the other fields
+
+   Note that this practice is so widespread that it's pointless to try and stop it    -->
     <coding> 
       <system value="http://snomed.info/sct"/> 
-      <code value="119297000"/> 
-      <display value="Blood"/> 
+      <code value="258450006"/> 
+      <display value="Cerebrospinal fluid sample"/> 
     </coding> 
   </type> 
-  <subject><!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device --></subject>
+  <subject>
+    <!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This 
+      may be from patient(s), from a location (e.g., the source of an environmental sample), or a
+      sampling of a substance or a device -->
+  </subject>
   <receivedTime value="[dateTime]"/><!-- 0..1 The time when specimen was received for processing -->
   <parent><!-- 0..* Reference(Specimen) Specimen from which this specimen originated --></parent>
   <request><!-- 0..* Reference(ServiceRequest) Why the specimen was collected --></request>

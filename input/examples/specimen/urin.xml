@@ -6,7 +6,13 @@
     <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
   </accessionIdentifier>
   <status value="[code]"/><!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
-  <type><!-- 0..1 CodeableConcept Kind of material that forms the specimen --></type>
+  <type>
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="122575003"/> 
+      <display value="Urine"/> 
+    </coding> 
+  </type>
   <subject><!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device --></subject>
   <receivedTime value="[dateTime]"/><!-- 0..1 The time when specimen was received for processing -->
   <parent><!-- 0..* Reference(Specimen) Specimen from which this specimen originated --></parent>

@@ -62,13 +62,13 @@
       <country value="Frankreich"/>
     </valueAddress>
   </extension>
+  <!-- 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
     <valueAddress>
       <city value="Köniz"/>
       <state value="BE"/>
     </valueAddress>
   </extension>
-  <!-- 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-religion">
     <valueCodeableConcept>
       <coding>
