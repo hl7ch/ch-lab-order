@@ -367,8 +367,8 @@
                                 </coding>
                             </valueCodeableConcept>
                         </extension>
-                        <linkId value="chemogramm"/>
-                        <text value="Chemogramm"/>
+                        <linkId value="clinical-chemistrym"/>
+                        <text value="Clinical-chemistrym"/>
                         <type value="open-choice"/>
                         <item>
                             <linkId value="lab"/>
