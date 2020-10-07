@@ -1,5 +1,7 @@
 # Projekt Laborverordnung oder ch-lab-order
 
+## Ausgangslage
+
 Das Projekt betrifft den gerichteten Informationsaustausch zwischen Institutionen wie Arztpraxen, Spitälern und Teststellen mit Medizinisch Chemischen Laboren, Anfordern von früheren Testergebnissen usw. Solche Anfragen und Verordnungen werden meist mittels strukturierter Formulare erstellt. Formulare für diese Zwecke sind in der Regel proprietäre Konstrukte der Labore und eignen sich nur selten für die maschinelle Weiterverarbeitung. Darüber hinaus sind solche Formulare mehr oder weniger hartkodiert und betroffene Systeme lassen sich möglicherweise nicht ohne weiteres für neue Anwendungsfälle aktualisieren.
 
 Das Projekt verwendet den HL7 Standard FHIR (darum werden die entsprechenden englischen Bezeichnungen erwähnt) und behandelt zwei Szenarien:
@@ -22,7 +24,7 @@ Anwendungen, welche Konformität mit dem ch-lab-order Projekt beanspruchen, müs
 
 Anbietern von Anwendungen mit Fragebogen auf beiden Seiten des Kommunikationsprozesses wird dringend empfohlen, für alle Daten in den obligatorisch vorgegebenen Elementen Schnittstellen zu anderen Anwendungen (wie KIS und PACS) zu implementieren. Anwendungen, die auf diese Weise konzipiert sind, bieten Out-of-the-box Verbindungsfähigkeit für obligatorische gegebene Elemente sowie Out-of-the-box Interoperabilität für alle Fragebögen, soweit es sich um Benutzerschnittstellen seitens Ausfüller und Empfänger handelt.
 
-Nichts spricht gegen Schnittstellen für Daten im anwendungsfallspezifischen Teil eines bestimmten Fragebogens. Man muss jedoch bedenken, dass solche Schnittstellen an einen bestimmten Fragebogen gebunden sind. Besitztum oder andere Mittel, die Änderungen des Fragebogens regeln, sind daher ratsam. Wir haben vorgesehen, eine solche Schnittstelle zum [LOINC FHIR Terminology Server](https://loinc.org/fhir/) zu verwenden.
+Nichts spricht gegen Schnittstellen für Daten im anwendungsfallspezifischen Teil eines bestimmten Fragebogens. Man muss jedoch bedenken, dass solche Schnittstellen an einen bestimmten Fragebogen gebunden sind. Besitztum oder andere Mittel, die Änderungen des Fragebogens regeln, sind daher ratsam. Wir haben vorgesehen, eine solche Schnittstelle zum [LOINC FHIR Terminology Server](https://loinc.org/fhir/) zu verwenden, s.u.
 
 Das ch-lab-order Projekt befasst sich mit Transport, Workflow und Inhalt. Er basiert auf den Ressourcen von HL7 FHIR und insbesondere auf der Ressource FHIR-Fragebogen (questionnaire). FHIR spezifiziert RESTful Web Services als Transportmittel.  Eine Implementierung auf Basis von RESTful Web Services wird dringend empfohlen, ist aber nicht zwingend erforderlich. Der Workflow wird durch den Geltungsbereich des ch-lab-order Projekts angesprochen, der den gerichteten Informationsaustausch mit Anfrage und Antwort behandelt. Der Inhalt wird durch eine Reihe von obligatorisch vorgegebenen Elementen und Codes und die Möglichkeit, beides je nach Bedarf der angesprochenen Anwendungsfälle zu erweitern, definiert.
 
@@ -32,7 +34,17 @@ Das Projekt ch-lab-order beruht dem [ch-orf Implementation Guide](http://fhir.ch
 
 Fragebögen und Formulare sind im Gesundheitswesen allgegenwärtig. Sie werden zur Erfassung von Verwaltungsdaten, Antragsdaten, klinischen Informationen, Forschungsinformationen, für die Berichterstattung über die öffentliche Gesundheit verwendet - jede Art von Daten, die von den Gesundheitssystemen manipuliert werden. Sie bieten einen benutzerfreundlichen Mechanismus zur konsistenten Erfassung von Daten. In FHIR werden Formulare durch die Ressource  (Questionnaire) und ausgefüllte Formulare durch die Ressource QuestionnaireResponse dargestellt. Die Basisspezifikation von FHIR definiert diese Ressourcen, gibt jedoch keine Hinweise darauf, wie sie zu verwenden sind, und setzt auch keine minimalen Erwartungen an die Interoperation. Der SDC-Implementierungsleitfaden bietet eine Reihe von Anleitungen für die Verwendung von Questionnaire und QuestionnaireResponse.
 
-## Workflow
+## Formular Deployment und Customisation
+
+[Hier kommt ein UML Diagramm vom Typ Entity Relationship] mit der Beschreibung
+
+## Die Lab Order Panels von LOINC
+
+LOINC stellt uns den Gesamtkatalog der Laboruntersuchungnen in den den [Laboratory Order Panels](https://loinc.org/panels/category/laboratory-order-panels/) zur Verfügung. Es bestehen deren 22, welche Gruppen von Analysen zusammenfassen, entsprechend den Laboratory specialties, wie Klinische Chemie, Hämatologie oder Allergie. Auch Panels für die Qualitätskontrolle (Healthcare Effectiveness Data and Information Set - HEDIS)ein Pathologie Panel sind enthalten.
+
+Wir könnten nun die jeweiligen Panels in unsere Formulare einbauen und für die jeweiligen Laboratory Specialties zur Verfügung stellen.
+
+Wir versuchen aber einen einfacheren und direkteren Weg. Mit einem Tool als Client für den LOINC FHIR Terminology Server können wir die Panels direkt dort holen und lokal als Datei speichern. Die Informationen liegen uns damit in maschinenlesbarer Form vor und können in die Formulare integriert werden.
 
 ### Auftragsformulare
 
@@ -54,13 +66,13 @@ Ein generisches Auftrags- und Überweisungsformular ist der Ausgangspunkt. Diese
 
 * Patientendaten (Personen- und Administrationsdaten): subject
 
-* Klinische Daten: Anamnese, Befunde, Diagnose, Fragestellung
-
 * Auftragsempfänger: Organisation, Medizinisch-chemisches Labor
 
 #### Das generische Labor- und Pathologie-Auftragsformular (ch-lab-order)
 
 Das Labor- und Pathologie-Auftragsformular enthält zusätzlich zu den Daten des generischen Auftragsformulares noch weitere Datenfelder und erfüllt die Anforderungen des ch-lab-order Implementationsguides:
+
+* Klinische Daten: Anamnese, Befunde, Diagnose, Fragestellung. Sowohl Labor- wie auch Pathologie-Auftragsformulare enthalten ein Minimum an klinischen Angaben, wie Problemstellung oder Fragestellung.
 
 * Die Proben-ID (specimen-ID), welche für Labor- und Pathologie-Untersuchungen benötigt wird, ist ein wichtiger Bestandteil des Auftrages. Durch sie wird auf die dazugehörige Probe eindeutig referenziert. Der Auftraggeber erhält die Proben-ID erst als letzten Schritt im Arbeitsablauf zur Erstellung des Auftrages, damit sichergestellt ist, dass keine Probe ohne dazugehörigen Auftrag im Labor ankommt. Die Probe (Serum, Urin, Vollblut, Gewebeteil etc.) wird mit der Proben-ID in Form einer ausgedruckten Klebe-Etikette versehen. Das Labor muss zu diesem Zweck einen Service einrichten, der dem Auftraggeber die Probem-ID zukommen lässt, in dem Moment, in dem dieses den digitalen Auftrag erhält.
 
