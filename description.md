@@ -75,7 +75,7 @@ Die laborspezifischen Auftragsformulare werden in 3 Schritten erstellt:
 
 1. ORF Formular als Ausgangspunkt
 
-2. Davon abgeleitet das generische Labor- und Pathologie-Auftragsformular mit den Specialties und den Value-Sets der Analysen. Alternativ kann das generische Auftragsformular durch die Loinc Panels und deren Sub-Panels sowie den Value-Sets der Analysen automatisiert befüllt werden. 
+2. Davon abgeleitet das generische Labor- und Pathologie-Auftragsformular mit den Specialties und den Value-Sets der Analysen. Alternativ kann das generische Auftragsformular durch die Loinc Panels und deren Sub-Panels sowie den Value-Sets der Analysen automatisiert befüllt werden.
 
 3. Die Labore mappen die Analysen ihrer eigenen Kataloge auf die ValueSets der Auftragsformulare und ergänzen diese bei Bedarf mit ihrem eigenen Logo.
 
