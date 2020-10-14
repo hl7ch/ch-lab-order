@@ -1,6 +1,6 @@
 <Questionnaire
     xmlns="http://hl7.org/fhir">
-    <id value="lab-order-clinical_chemistry"/>
+    <id value="lab-order-chemogram"/>
     <meta>
         <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
     </meta>
@@ -8,14 +8,14 @@
         <status value="generated"/>
         <div
             xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for a Clinical_chemistry
+            Lab Order Questionnarie Example for a Chemogram
             <pre>todo copy text out of rendering</pre>
         </div>
     </text>
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
         <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
     </extension>
-    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-clinical_chemistry"/>
+    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-chemogram"/>
     <name value="LabOrderExample"/>
     <title value="Lab Order Example"/>
     <status value="draft"/>
@@ -23,10 +23,9 @@
     <subjectType value="Patient"/>
     <date value="2018-04-12"/>
     <publisher value="eHealth Suisse"/>
-    <!-- item Lab Order Questionnarie Example for a Clinical_chemistry-->
     <item>
         <linkId value="info"/>
-        <text value="Lab Order Questionnarie Example for a Clinical_chemistry"/>
+        <text value="Lab Order Questionnarie Example for a Chemogram"/>
         <type value="display"/>
     </item>
     <item>
@@ -381,56 +380,106 @@
             </answerOption>
         </item>
     </item>
-    <!-- item specialty, here: clinical_chemistry, 344 entries-->
+    <!-- item specialty, here: chemogram-->
     <item>
-        <linkId value="clinical_chemistry"/>
+        <linkId value="chemogram"/>
         <text value="Klinische Chemie"/>
         <type value="choice"/>
         <item>
             <linkId value="lab"/>
             <text value="Laborwerte"/>
             <type value="string"/>
-            <!-- answer option: Lipid and glucose panel-->
             <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="95126-9" />
-                <display value="Lipid and glucose panel - Serum or Plasma" />
-              </valueCoding>
-              <!-- sub answer option: Glucose-->
-              <answerOption>
                 <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="2345-7" />
-                  <display value="Glucose [Mass/volume] in Serum or Plasma" />
-              </valueCoding>         
-              </answerOption>
+                    <system value="http://loinc.org" />
+                    <code value="2345-7-2" />
+                    <display value="Glucose [Mass/volume] in Serum or Plasma" />
+                </valueCoding>
             </answerOption>
-            <!-- answer option: Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood-->
             <answerOption>
-              <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="45066-8" />
-                  <display value="Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood" />
-              </valueCoding>
-                <!-- sub answer option: Creatinin-->
-                <answerOption>
-                  <valueCoding>
+                <valueCoding>
                     <system value="http://loinc.org" />
-                    <code value="2160-0" />
-                    <display value="Creatinine [Mass/volume] in Serum or Plasma" />
-                </valueCoding>         
-                </answerOption>
-                <!-- sub answer option: Creatinin-->
-                <answerOption>
-                  <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2160-0" />
-                    <display value="Creatinine [Mass/volume] in Serum or Plasma" />
-                </valueCoding>         
-                </answerOption>
+                    <code value="33898-8" />
+                    <display value="Bilirubin" />
+                </valueCoding>
             </answerOption>
-
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="3094-0" />
+                    <display value="Harnstoff" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="57332-9" />
+                    <display value="Harnsäure" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2160-0" />
+                    <display value="Kreatinin" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="56776-8" />
+                    <display value="Amylase" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2325-9" />
+                    <display value="GGT" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="1916-6" />
+                    <display value="GOT (ASAT)" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="76625-3" />
+                    <display value="GPT (ALAT)" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="53524-5" />
+                    <display value="AP" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="49129-0" />
+                    <display value="CK gesamt" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2777-1" />
+                    <display value="Phosphat" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2276-4" />
+                    <display value="Ferritin" />
+                </valueCoding>
+            </answerOption>
             <!-- Juerg klaert code ab           
             <answerOption><valueCoding><system value="http://loinc.org" /><code value="" /><display value="Eiweiss" /></valueCoding></answerOption>
 -->

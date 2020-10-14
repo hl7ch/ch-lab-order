@@ -4,7 +4,8 @@
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
   <identifier>
-    <!-- 0..1 Identifiers assigned to this order, TODO -->
+    <!-- should be mandatory ?-->
+    <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
   </identifier>
   <status value="active"/>
   <intent value="original-order"/>
@@ -61,15 +62,22 @@
 
   <reasonCode>
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="TODO" />
+    </coding>
+    <text value="TODO Reason for Laboratory procedure, probably free text" />
   </reasonCode>
   
   <reasonReference>
     <!-- 0..* Reference(Condition|Observation|DiagnosticReport|
     DocumentReference) Explanation/Justification for service or service -->
+    <reference value="" />
   </reasonReference>
 
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="specimen/serum.xml" />
   </specimen>
 
   <insurance>
