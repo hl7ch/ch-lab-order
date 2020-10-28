@@ -81,7 +81,7 @@
   </specimen>
 
   <insurance>
-    <!-- 0..* Reference(Coverage|ClaimResponse) Associated insurance coverage -->
+    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
   </insurance>
 
 </ServiceRequest>

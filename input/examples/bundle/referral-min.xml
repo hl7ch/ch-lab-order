@@ -78,14 +78,14 @@
             </Composition>
         </resource>
     </entry>
-    <!-- end 1st Emtry Composition-->
+    <!-- ch-core-Patient -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/Patient/FranzMuster"/>
 
         <resource>
             <Patient
                 xmlns="http://hl7.org/fhir">
-                <id value="FranzMuster"/>
+                <id value="HansGuggindieluft"/>
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2019-04-01T20:14:17.451+00:00"/>
@@ -213,6 +213,7 @@
             </Patient>
         </resource>
     </entry>
+    <!--  practitioner -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/Practitioner/AgparMarc"/>
 
@@ -236,9 +237,9 @@
             </Practitioner>
         </resource>
     </entry>
+    <!-- questionnaire -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/Questionnaire/referral-min"/>
-
         <resource>
             <Questionnaire
                 xmlns="http://hl7.org/fhir">
@@ -519,6 +520,7 @@
             </Questionnaire>
         </resource>
     </entry>
+    <!-- questionnaireResponse -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/QuestionnaireResponse/referral-min"/>
 
@@ -651,6 +653,7 @@
             </QuestionnaireResponse>
         </resource>
     </entry>
+    <!-- serviceRequest -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/referral-min"/>
         <resource>

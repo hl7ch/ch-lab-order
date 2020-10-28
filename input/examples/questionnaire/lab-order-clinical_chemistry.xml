@@ -12,10 +12,13 @@
             <pre>todo copy text out of rendering</pre>
         </div>
     </text>
+    <!-- http://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire-targetStructureMap.html -->
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
         <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
     </extension>
     <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-clinical_chemistry"/>
+    <identifier><!-- 0..* Identifier Additional identifier for the questionnaire --></identifier>
+    <version value="[string]"/><!-- 0..1 Business version of the questionnaire -->
     <name value="LabOrderExample"/>
     <title value="Lab Order Example"/>
     <status value="draft"/>
