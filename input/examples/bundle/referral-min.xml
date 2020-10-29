@@ -80,8 +80,7 @@
     </entry>
     <!-- ch-core-Patient -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Patient/FranzMuster"/>
-
+        <fullUrl value="http://test.fhir.ch/r4/Patient/HansGuggindieluft"/>
         <resource>
             <Patient
                 xmlns="http://hl7.org/fhir">
@@ -665,7 +664,7 @@
                 <status value="active"/>
                 <intent value="original-order"/>
                 <subject>
-                    <reference value="Patient/FranzMuster"/>
+                    <reference value="Patient/HansGuggindieluft"/>
                 </subject>
                 <requester>
                     <reference value="Practitioner/AgparMarc"/>

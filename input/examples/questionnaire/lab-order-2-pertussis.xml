@@ -1,6 +1,6 @@
 <Questionnaire
     xmlns="http://hl7.org/fhir">
-    <id value="lab-order-chemogram"/>
+    <id value="lab-order-2-pertussis.xml"/>
     <meta>
         <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
     </meta>
@@ -15,7 +15,7 @@
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
         <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
     </extension>
-    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-pertussis"/>
+    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-2-pertussis"/>
     <name value="LabOrderExample"/>
     <title value="Lab Order Example"/>
     <status value="draft"/>
@@ -380,7 +380,7 @@
             </answerOption>
         </item>
     </item>
-    <!-- item specialty, here: chemogram-->
+    <!-- item specialty, here: microbiology-->
     <item>
         <linkId value="mikrobiology"/>
         <text value="Mikrobiologie"/>
@@ -398,6 +398,7 @@
             </answerOption>
         </item>
     </item>
+    <!-- item specialty, here: hematology-->
     <item>
       <linkId value="hematology"/>
       <text value="Hämatologie"/>
@@ -415,22 +416,23 @@
           </answerOption>
       </item>
   </item>
+  <!-- item specialty, here: clinical chemistry-->
   <item>
-    <linkId value="infection desease"/>
+    <linkId value="clinical chemistry"/>
     <text value="Klinische Chemie"/>
     <type value="choice"/>
-        <!-- CRP C reactive Protein normal method -->
-        <item>
-          <linkId value="lab"/>
-          <text value="Laborwerte"/>
-          <type value="string"/>
-          <answerOption>
-            <valueCoding>
-              <system value="http://loinc.org" />
-              <code value="1988-5" />
-              <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
-            </valueCoding>
-          </answerOption>
-        </item>
-</item>
+      <!-- CRP C reactive Protein normal method -->
+      <item>
+        <linkId value="lab"/>
+        <text value="Laborwerte"/>
+        <type value="string"/>
+        <answerOption>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="1988-5" />
+            <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
+          </valueCoding>
+        </answerOption>
+      </item>
+  </item>
 </Questionnaire>

@@ -1,6 +1,6 @@
 <Questionnaire
   xmlns="http://hl7.org/fhir">
-  <id value="lab-order-1-tvt"/>
+  <id value="lab-order-3-gyn"/>
   <meta>
       <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
@@ -8,14 +8,14 @@
       <status value="generated"/>
       <div
           xmlns="http://www.w3.org/1999/xhtml">
-          Lab Order Questionnarie Example for a Hematology
+          Lab Order Questionnaire Example for preventive gynecologic screening
           <pre>todo copy text out of rendering</pre>
       </div>
   </text>
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
       <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
   </extension>
-  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-hematology"/>
+  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-3-gyn"/>
   <name value="LabOrderExample"/>
   <title value="Lab Order Example"/>
   <status value="draft"/>
@@ -24,29 +24,28 @@
   <date value="2018-04-12"/>
   <publisher value="eHealth Suisse"/>
   <item>
-        <linkId value="info"/>
-        <text value="Lab Order Questionnarie Example for TVT"/>
-        <type value="display"/>
+      <linkId value="info"/>
+      <text value="Lab Order Questionnarie Example for preventive gynecologic screening"/>
+      <type value="display"/>
   </item>
-  <!-- Auftrag -->
   <item>
-        <linkId value="order"/>
-        <text value="Auftrag"/>
-        <type value="group"/>
-        <item>
-            <linkId value="order.date"/>
-            <text value="Auftrags-Datum" />
-            <type value="date"/>
-        </item>
+      <linkId value="order"/>
+      <text value="Auftrag"/>
+      <type value="group"/>
+      <item>
+          <linkId value="order.date"/>
+          <text value="Auftrags-Datum" />
+          <type value="date"/>
+      </item>
   </item>
-  <!-- Auftraggeber -->
+  <!-- item orderer-->
   <item>
         <linkId value="orderer"/>
         <text value="Auftraggeber"/>
         <type value="group"/>
         <item>
             <linkId value="orderer.author"/>
-            <text value="Author"/>
+            <text value="Autor"/>
             <type value="group"/>
             <item>
                 <linkId value="orderer.author.visum"/>
@@ -270,7 +269,7 @@
             </item>
         </item>
   </item>
-  <!-- Receiver -->
+  <!-- item receiver-->
   <item>
         <linkId value="receiver"/>
         <text value="Receiver"/>
@@ -331,7 +330,7 @@
             <type value="string"/>
         </item>
   </item>
-  <!-- Patient -->
+  <!-- item patient-->
   <item>
         <linkId value="patient"/>
         <text value="Patient"/>
@@ -381,10 +380,10 @@
             </answerOption>
         </item>
   </item>
- <!-- Blutbild inkl. Differenzierung -->
+  <!-- item specialty, here: cytology cervical smear-->
   <item>
-        <linkId value="hematology"/>
-        <text value="Hematology"/>
+        <linkId value="cytology"/>
+        <text value="Cytology"/>
         <type value="choice"/>
         <item>
             <linkId value="lab"/>
@@ -393,114 +392,65 @@
             <answerOption>
                 <valueCoding>
                     <system value="http://loinc.org" />
-                    <code value="24360-0" />
-                    <display value="Hemoglobin and Hematocrit panel - Blood" />
+                    <code value="86662-4" />
+                    <display value="Pap smear tests - FPAR 2.0 set" />
                 </valueCoding>
             </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="43113-0" />
-                    <display value="Hemoglobin electrophoresis panel in Blood" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-              <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="57021-8" />
-                  <display value="CBC W Auto Differential panel - Blood" />
-              </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="58410-2" />
-                    <display value="CBC panel - Blood by Automated count" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="57023-4" />
-                    <display value="Auto Differential panel - Blood" />
-                </valueCoding>
-            </answerOption>           
         </item>
   </item>
- <!-- D-Dimer -->
+  <!-- item specialty, here: HPV Test-->
   <item>
-    <linkId value="coagulation"/>
-    <text value="Coagulation"/>
+    <linkId value="hpvtests"/>
+    <text value="HPV tests - FPAR 2.0 set"/>
     <type value="choice"/>
     <item>
         <linkId value="lab"/>
         <text value="Laborwerte"/>
         <type value="string"/>
         <answerOption>
-          <valueCoding>
+            <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="14503-7" />
+                <display value="Human papilloma virus 16+18 Ag [Presence] in Cervix" />
+            </valueCoding>
+        </answerOption>
+    </item>
+</item>
+  <!-- item specialty, here: Urin Analysis Combur-9 -->
+  <item>
+      <linkId value="urin"/>
+      <text value="Urin"/>
+      <type value="choice"/>
+      <item>
+          <linkId value="lab"/>
+          <text value="Laborwerte"/>
+          <type value="string"/>
+          <answerOption>
+              <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="50556-0" />
+                  <display value="Urinalysis dipstick panel - Urine by Automated test strip" />
+              </valueCoding>
+          </answerOption>
+      </item>
+  </item>
+  <!-- item specialty, here: clinical chemistry-->
+  <item>
+    <linkId value="pregnancy"/>
+    <text value="Schwangerschaftsvorsorge"/>
+    <type value="choice"/>
+        <!-- Rotes BB, Diff BB, Hepatitis B, Rubella, AB0 Rhesus -->
+        <item>
+          <linkId value="lab"/>
+          <text value="Laborwerte"/>
+          <type value="string"/>
+          <answerOption>
+            <valueCoding>
               <system value="http://loinc.org" />
-              <code value="55398-2" />
-              <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
-          </valueCoding>
-        </answerOption>
-    </item>
-  </item>
-  <!-- CRP C reactive Protein-->
-  <item>
-    <linkId value="clinical_chemistry"/>
-    <text value="Klinische Chemie"/>
-    <type value="choice"/>
-    <!-- CRP C reactive Protein normal method -->
-    <item>
-        <linkId value="lab"/>
-        <text value="Laborwerte"/>
-        <type value="string"/>
-        <answerOption>
-          <!-- diese Option wird am häufigsten gewählt: -->
-          <initialSelected value="true" />
-          <valueCoding>
-            <system value="http://loinc.org" />
-            <code value="1988-5" />
-            <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
-          </valueCoding>
-        </answerOption>
-    </item>
-    <item>
-      <linkId value="lab"/>
-      <text value="Laborwerte"/>
-      <type value="string"/>
-      <answerOption>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="76485-2" />
-          <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
-        </valueCoding>
-      </answerOption>
-    </item>
-    <!-- CRP C reactive Protein High sensitivity method-->
-    <item>
-      <linkId value="lab"/>
-      <text value="Laborwerte"/>
-      <type value="string"/>
-      <answerOption>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="30522-7" />
-          <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
-        </valueCoding>
-      </answerOption>
-    </item>
-    <item>
-      <linkId value="lab"/>
-      <text value="Laborwerte"/>
-      <type value="string"/>
-      <answerOption>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="76486-0" />
-          <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
-        </valueCoding>
-      </answerOption>
-    </item>
-  </item>
+              <code value="24364-2" />
+              <display value="Obstetric 1996 panel – Serum and Blood" />
+            </valueCoding>
+          </answerOption>
+        </item>
+</item>
 </Questionnaire>

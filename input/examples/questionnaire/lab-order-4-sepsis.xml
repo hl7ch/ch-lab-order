@@ -1,6 +1,6 @@
 <Questionnaire
   xmlns="http://hl7.org/fhir">
-  <id value="lab-order-1-tvt"/>
+  <id value="lab-order-4-sepsis"/>
   <meta>
       <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
@@ -15,7 +15,7 @@
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
       <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
   </extension>
-  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-hematology"/>
+  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-4-sepsis"/>
   <name value="LabOrderExample"/>
   <title value="Lab Order Example"/>
   <status value="draft"/>
@@ -25,7 +25,7 @@
   <publisher value="eHealth Suisse"/>
   <item>
         <linkId value="info"/>
-        <text value="Lab Order Questionnarie Example for TVT"/>
+        <text value="Lab Order Questionnarie Example for microbiologic study"/>
         <type value="display"/>
   </item>
   <!-- Auftrag -->
@@ -427,10 +427,10 @@
             </answerOption>           
         </item>
   </item>
- <!-- D-Dimer -->
+ <!-- Blutkultur -->
   <item>
-    <linkId value="coagulation"/>
-    <text value="Coagulation"/>
+    <linkId value="microbiology"/>
+    <text value="Mikrobiologie"/>
     <type value="choice"/>
     <item>
         <linkId value="lab"/>
@@ -439,11 +439,24 @@
         <answerOption>
           <valueCoding>
               <system value="http://loinc.org" />
-              <code value="55398-2" />
-              <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
+              <code value="90423-5" />
+              <display value="Microorganism preliminary growth detection panel - Blood by Culture" />
           </valueCoding>
         </answerOption>
     </item>
+    <!-- Keimidentifikation und Antibiogramm-->
+    <item>
+      <linkId value="lab"/>
+      <text value="Laborwerte"/>
+      <type value="string"/>
+      <answerOption>
+        <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="85421-6" />
+            <display value="Bacterial identification and susceptibility panel - Isolate" />
+        </valueCoding>
+      </answerOption>
+  </item>
   </item>
   <!-- CRP C reactive Protein-->
   <item>
