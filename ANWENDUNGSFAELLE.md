@@ -27,17 +27,17 @@ Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LR
 
 ## Fallbeispiel 3: Gynäkologische Jahreskontrolle
 
-Die MPA der Gynäkologie Praxis Dr. Pap bereitet die Konsultationen des nächsten Tages vor. Da die Praxis nur ein minimales eigenes Labor betreibt, werden gewisse Patientinnen vor dem Besuchstermin ins nahe gelegene Ambulatorium des Labors Pipette geschickt, so auch die junge Patientin Frau Rubella. Die MPA verordnet in ihrer Praxis-Software für die Patientin Rubella die mit dem Labor vereinbarten Standard-Analysen für die gynäkologische Jahreskontrolle. Dazu gehört auch die Blutentnahme für die Serothek für allfällige Nachverordnungen.
+Die MPA der Gynäkologie Praxis Dr. Pap bereitet die Konsultationen des nächsten Tages vor. Da die Praxis nur ein minimales eigenes Labor betreibt, werden gewisse Patientinnen vor dem Besuchstermin ins nahe gelegene Ambulatorium des Labors Pipette geschickt, so auch die junge Patientin Frau Rubella. Die MPA verordnet in ihrer Praxis-Software für die Patientin Rubella die mit dem Labor vereinbarten Standard-Analysen für die gynäkologische 3-Jahreskontrolle. Dazu gehört auch die Blutentnahme für die Serothek für allfällige Nachverordnungen.
 Das Labor übermittelt die Resultate spätestens 90 Minuten nach der Blutentnahme in die Praxis. Dr. Pap verordnet während der Konsultation folgende Aufträge:
 
-* Gynäkologische Zytologie: Pap-Abstrich - falls indiziert soll auch der Nachweis und die Typisierung von HPV (Humane Papillomaviren) durchgeführt werden.
+* Gynäkologische Zervix Zytologie: Pap-Abstrich - falls indiziert soll auch der Nachweis und die Typisierung von HPV (Humane Papillomaviren) durchgeführt werden.
  Entnahmematerial gemäss Angaben des Labors.
  Die zytologische Untersuchung wird im Labor Pipette durchgeführt. Die allfällige Typisierung führt das Labor Pipette nicht selber durch.
 * Urin-Teilstatus (Combur9 Test): Wird durch die MPA in der Praxis durchgeführt: folgende Parameter werden untersucht: ph, Leukozyten, Erythrozyten, Nitrit, Protein, Glucose, Ketone, Urobilinogen, Bilirubin (halbquantitative Untersuchungen, Resultate werden wahrscheinlich von Hand ins Praxis-Laborsystem eingetragen)
 * Urin-Bakteriologie: Entnahmematerial gemäss Angaben des Labors
 Allgemeine Bakt, inkl. Sprosspilze ans Labor Pipette
 Die Übermittlung des Auftrags wird durch die MPA ausgelöst (Entnahmezeitpunkt)
-* Nachverordnung "Screening vor Schwangerschaft": Alle Untersuchungen können aus den vorgängig im Ambulatorium entnommenen Materialien (Serum, EDTA-Blut) durchgeführt werden
+* Nachverordnung "Screening vor Schwangerschaft": Alle Untersuchungen können aus den vorgängig im Ambulatorium entnommenen Materialien (Serum, EDTA-Blut) durchgeführt werden (Hepatitis-Bc Antikörper, HIV 1+2 (Ak+p24), Röteln IgG, Lues-/Syphilis-Suchtest)
 * Mammographie: Auftrag für das Röntgeninstitut Dr. Curie.
 
 Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LREP-3_GynaekologischeJahreskontrolle.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-3_GynaekologischeJahreskontrolle.xml)
@@ -59,5 +59,7 @@ Die Arbeitsmedizinische Vorsorge (AMV) der SUVA sendet dem Labor monatlich eine 
 * Anzahl Arbeitnehmende für das Biologische Monitoring
 * durchzuführende Untersuchungen (z.B. Arsen, Blei, Quecksilber, Mandelsäure)
 Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen Arbeitnehmenden. Das Labor bedruckt die Auftragsformulare mit der Betriebsnummer und sendet den Betrieben die notwendige Anzahl Urinbecher und Auftragsformulare zu. Im Betrieb werden Auftragsformulare und Urinbecher mit den von der AMV gelieferten Etiketten versehen und an die Arbeitnehmenden abgegeben. Die Proben inkl. Auftragsformular werden vom Betrieb ans Labor gesendet.
+
+[Biologisches Monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
 
 Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LREP-5_BiologischesMonitoringSuva.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-5_BiologischesMonitoringSuva.xml)
