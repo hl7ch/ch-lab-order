@@ -14,11 +14,11 @@
     <timestamp value="2019-04-01T20:18:41.341+00:00"/>
     <!-- 1st Entry: Composistion-->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Composition/referral-min"/>
+        <fullUrl value="http://test.fhir.ch/r4/Composition/referral-min-1-tvt"/>
         <resource>
             <Composition
                 xmlns="http://hl7.org/fhir">
-                <id value="referral-min"/>
+                <id value="referral-min-1-tvt"/>
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2019-04-01T20:18:41.341+00:00"/>
@@ -42,18 +42,18 @@
                     <text value="Referral min"/>
                 </type>
                 <subject>
-                    <reference value="http://test.fhir.ch/r4/Patient/FranzMuster"/>
+                    <reference value="http://test.fhir.ch/r4/Patient/HansGuggindieluft"/>
                 </subject>
                 <date value="2019-03-31T11:46:09+02:00"/>
                 <author>
-                    <reference value="Practitioner/AgparMarc"/>
+                    <reference value="Practitioner/MarcMustermann"/>
                 </author>
                 <title value="Referral min"/>
                 <attester>
                     <mode value="professional"/>
                     <time value="2010-03-12T11:46:09+02:00"/>
                     <party>
-                        <reference value="Practitioner/AgparMarc"/>
+                        <reference value="Practitioner/MarcMustermann"/>
                     </party>
                 </attester>
                 <section>
@@ -66,10 +66,10 @@
                         </div>
                     </text>
                     <entry>
-                        <reference value="Questionnaire/referral-min"/>
+                        <reference value="Questionnaire/lab-order-1-tvt"/>
                     </entry>
                     <entry>
-                        <reference value="QuestionnaireResponse/referral-min"/>
+                        <reference value="QuestionnaireResponse/lab-order-response-1-tvt"/>
                     </entry>
                     <entry>
                         <reference value="ServiceRequest/referral-min"/>

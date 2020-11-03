@@ -28,7 +28,7 @@
     <text value="Lab Order Questionnarie Example for biological Monitoring"/>
     <type value="display"/>
   </item>
-  <!-- Auftrag -->
+  <!-- item order -->
   <item>
     <linkId value="order"/>
     <text value="Auftrag"/>
@@ -39,7 +39,7 @@
       <type value="date"/>
     </item>
   </item>
-  <!-- Auftraggeber -->
+  <!-- item orderer-->
   <item>
         <linkId value="orderer"/>
         <text value="Auftraggeber"/>
@@ -270,7 +270,7 @@
             </item>
         </item>
   </item>
-  <!-- Receiver -->
+  <!-- item receiver-->
   <item>
         <linkId value="receiver"/>
         <text value="Receiver"/>
@@ -331,7 +331,7 @@
             <type value="string"/>
         </item>
   </item>
-  <!-- Patient -->
+  <!-- item patient-->
   <item>
         <linkId value="patient"/>
         <text value="Patient"/>
@@ -381,7 +381,7 @@
             </answerOption>
         </item>
   </item>
- <!-- Blutbild inkl. Differenzierung -->
+ <!-- Auto Differential panel - Blood -->
   <item>
     <linkId value="hematology"/>
     <text value="Hematology"/>

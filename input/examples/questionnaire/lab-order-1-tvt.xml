@@ -8,7 +8,7 @@
       <status value="generated"/>
       <div
           xmlns="http://www.w3.org/1999/xhtml">
-          Lab Order Questionnarie Example for a Hematology
+          Lab Order Questionnarie Example for TVT
           <pre>todo copy text out of rendering</pre>
       </div>
   </text>
@@ -23,12 +23,13 @@
   <subjectType value="Patient"/>
   <date value="2018-04-12"/>
   <publisher value="eHealth Suisse"/>
+  <!-- item Lab Order Questionnarie Example for TVT -->
   <item>
         <linkId value="info"/>
         <text value="Lab Order Questionnarie Example for TVT"/>
         <type value="display"/>
   </item>
-  <!-- Auftrag -->
+  <!-- item order -->
   <item>
         <linkId value="order"/>
         <text value="Auftrag"/>
@@ -39,7 +40,7 @@
             <type value="date"/>
         </item>
   </item>
-  <!-- Auftraggeber -->
+  <!-- item orderer -->
   <item>
         <linkId value="orderer"/>
         <text value="Auftraggeber"/>
@@ -270,7 +271,7 @@
             </item>
         </item>
   </item>
-  <!-- Receiver -->
+  <!-- item receiver -->
   <item>
         <linkId value="receiver"/>
         <text value="Receiver"/>
@@ -331,7 +332,7 @@
             <type value="string"/>
         </item>
   </item>
-  <!-- Patient -->
+  <!-- patient -->
   <item>
         <linkId value="patient"/>
         <text value="Patient"/>
@@ -381,7 +382,7 @@
             </answerOption>
         </item>
   </item>
- <!-- Blutbild inkl. Differenzierung -->
+ <!-- Auto Differential panel - Blood -->
   <item>
         <linkId value="hematology"/>
         <text value="Hematology"/>

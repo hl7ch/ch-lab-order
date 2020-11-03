@@ -25,9 +25,10 @@
     <publisher value="eHealth Suisse"/>
     <item>
         <linkId value="info"/>
-        <text value="Lab Order Questionnarie Example for a Chemogram"/>
+        <text value="Lab Order Questionnarie Example for Pertussis"/>
         <type value="display"/>
     </item>
+    <!-- item Lab Order Questionnarie Example for Pertussis-->
     <item>
         <linkId value="order"/>
         <text value="Auftrag"/>

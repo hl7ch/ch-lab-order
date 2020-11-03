@@ -23,11 +23,13 @@
   <subjectType value="Patient"/>
   <date value="2018-04-12"/>
   <publisher value="eHealth Suisse"/>
+  <!-- item Lab Order Questionnarie Example for preventive gynecologic screening -->
   <item>
       <linkId value="info"/>
       <text value="Lab Order Questionnarie Example for preventive gynecologic screening"/>
       <type value="display"/>
   </item>
+  <!-- item order -->
   <item>
       <linkId value="order"/>
       <text value="Auftrag"/>
@@ -434,7 +436,7 @@
           </answerOption>
       </item>
   </item>
-  <!-- item specialty, here: clinical chemistry-->
+  <!-- item specialty, here: Obstetric 1996 panel-->
   <item>
     <linkId value="pregnancy"/>
     <text value="Schwangerschaftsvorsorge"/>
