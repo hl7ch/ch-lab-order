@@ -96,6 +96,58 @@
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     </resource>
    -->
+
+   <!-- EXAMPLE RESOURES -->
+   <!-- ################ -->
+   <!-- Bundle -->
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-min"/>
+      </reference>
+      <name value="referral-min"/>
+      <description value="Example Bundle for min referral/order"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-1-tvt"/>
+      </reference>
+      <name value="referral-1-tvt"/>
+      <description value="Example Bundle for referral/order for a TVT"/>
+    </resource>
+
+    <!-- <resource>
+      <reference>
+        <reference value="Bundle/referral-2-pertussis"/>
+      </reference>
+      <name value="referral-2-pertussis"/>
+      <description value="Example Bundle for referral/order for a Pertussis"/>
+    </resource> -->
+
+    <!-- <resource>
+      <reference>
+        <reference value="Bundle/referral-3-gyn"/>
+      </reference>
+      <name value="referral-3-gyn"/>
+      <description value="Example Bundle for referral/order for a GYN"/>
+    </resource> -->
+
+    <!-- <resource>
+      <reference>
+        <reference value="Bundle/referral-4-sepsis"/>
+      </reference>
+      <name value="referral-4-sepsis"/>
+      <description value="Example Bundle for referral/order for a Sepsis"/>
+    </resource> -->
+
+    <!-- <resource>
+      <reference>
+        <reference value="Bundle/referral-5-biol-monit"/>
+      </reference>
+      <name value="referral-5-biol-monit"/>
+      <description value="Example Bundle for referral/order for a Biol-Monit"/>
+    </resource> -->
+
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
