@@ -24,36 +24,39 @@ Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-o
 ## Prerequisites
 
 * Oracle JDK: <https://fedoraproject.org/wiki/JDK_on_Fedora>
-* IG Publisher: <https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar>
 
 ### Installation of JDK Oracle for Fedora 31
 
-```
-$ cat /etc/fedora-release   or $ cat /usr/lib/os-release
-```
+```bash
+cat /etc/fedora-release   or $ cat /usr/lib/os-release
 Fedora release 31 (Thirty One)
-
-```
-$ java -version
-```
+java -version
 java version "1.8.0_231"
 Java(TM) SE Runtime Environment (build 1.8.0_231-b11)
 Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
+```
 
 ### IG Publisher
 
 Look at <https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation>
+Get the IG Publisher at <https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar>
 
 Running in workspace/ch-lab-order/ in command line mode:
+Make sure you use the latest version of publisher.
 
-```
-$ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini
+```bash
+java --version
+openjdk 11.0.8 2020-07-14
+OpenJDK Runtime Environment 18.9 (build 11.0.8+10)
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.8+10, mixed mode, sharing)
+
+java -jar input-cache/publisher.jar -ig ig.ini
 ```
 
 if Terminology server not available:
 
-```
-$ java -jar input-cache/org.hl7.fhir.publisher.jar -ig ig.ini -tx n/a
+```bash
+java -jar input-cache/publisher.jar -ig ig.ini -tx n/a
 ```
 
 Checks folders, installs hl7.fhir.r4.core#4.0.1, builds IG
@@ -76,9 +79,9 @@ after running IG publisher:
 
 * add the following two lines:
 
+  ```bash
   source 'https://rubygems.org'
 
-  ```
   gem 'github-pages', group: :jekyll_plugins
   ```
 
@@ -109,54 +112,65 @@ look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
 ## Installation of environment on mac
 
 1. Install Homebrew
-```
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
 
-2. Install ruby for current user (do not install globally)
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+
+2. Install ruby for  user (do not install globally)
+
 3. And add it to your bash profile
-```
-$ brew install ruby
 
-$ echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
-```
+    ```bash
+    brew install ruby
+    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+    ```
 
-3. Relaunch terminal and check install path and version
-```
-$ which ruby
+4. Relaunch terminal and check install path and version
 
-$ ruby -v
-```
+    ```bash
+    which ruby
+    ruby -v
+    ```
 
-4. Install Jeykll and add your path file
-```
-$ gem install --user-install bundler jekyll
+5. Install Jeykll and add your path file
 
-$ echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
-```
-_Important:_ X.X are the first two Numbers of the version checked previously in step 3.
+    ```bash
+    gem install --user-install bundler jekyll
+    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
+    ```
+  
+    _Important:_ X.X are the first two Numbers of the version checked previously in step 3.
 
-5. Check if gem path points to correct directory
-```
-$ gem env
-```
+6. Check if gem path points to correct directory
 
-6. Download IG Publisher
-7. Copy .jar file into main directory of your project
-8. Execute .jar file with
-```
-$ java -jar publisher.jar -ig ig.ini
-```
+    ```bash
+    gem env
+    ```
 
-9. Let the pages be generated ♺
+7. Download IG Publisher
+
+8. Copy .jar file into main directory of your project
+
+9. Execute .jar file with
+
+    ```bash
+    java -jar publisher.jar -ig ig.ini
+    ```
+
+10. Let the pages be generated ♺
 
 ## Worflow for Repository
+
 The process is a simplified adaption of [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/).
 
 ### Branching
+
 The project has two locked branches:
-- `master`: The master branch only contains the source code of the LATEST STABLE release.
-- `develop`: This branch is the mainbranch for creating the feature branches. The develop branch does not contain untested code!
+
+* `master`: The master branch only contains the source code of the LATEST STABLE release.
+
+* `develop`: This branch is the mainbranch for creating the feature branches. The develop branch does not contain untested code!
 
 For every feature or issue in the github repo create a sepparate branch. The branch should be named with the pattern `[ISSUE_ID]-[ISSUE_NAME]`. Whereas the `[ISSUE_ID]` could be something like `#10` and the `[ISSUE_NAME]` could be `create-worflow-documentation`. So the final branch name would be `#10-create-worflow-documentation`.
 
@@ -192,6 +206,11 @@ HL7 FHIR Implementation guide: 'http://hl7.org/fhir/uv/sdc/2018Sep/index.html'
 
 Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 
+[Laboratory ask at order entry panel](https://loinc.org/89543-3)
+[Universal Lab Orders Value Set from LOINC](https://loinc.org/file-access/download-id/9825/)
+
 ### Order and Referral by Form (ORF)
 
 'http://build.fhir.org/ig/ahdis/ch-orf/'
+
+[LOINC Document Ontology](https://loinc.org/document-ontology/)

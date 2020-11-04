@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Patient xmlns="http://hl7.org/fhir">
-  <id value="FranzMuster"/>
+  <id value="HansGuggindieluft"/>
   <meta>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
   </meta>
@@ -13,7 +13,7 @@
         <b>Generated Narrative with Details</b>
       </p>
       <p>
-        <b>id</b>: FranzMuster
+        <b>id</b>: HansGuggindieluft
       </p>
       <p>
         <b>meta</b>: 
@@ -22,16 +22,16 @@
         <b>identifier</b>: 012/08.111111
       </p>
       <p>
-        <b>name</b>: Franz Muster 
+        <b>name</b>: Hans Guggindieluft 
       </p>
       <p>
         <b>gender</b>: MALE
       </p>
       <p>
-        <b>birthDate</b>: Jan 27, 1995
+        <b>birthDate</b>: Jan 01, 1981
       </p>
       <p>
-        <b>maritalStatus</b>: in eingetragener Partnerschaft 
+        <b>maritalStatus</b>: verheiratet 
         <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code &#39;6&#39; = &#39;6&#39;, given as &#39;in eingetragener Partnerschaft&#39;})</span>
       </p>
       <h3>Communications</h3>
@@ -58,8 +58,9 @@
   -->
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
     <valueAddress>
-      <city value="Paris"/>
-      <country value="Frankreich"/>
+      <city value="Köniz"/>
+      <state value="BE" />
+      <country value="Schweiz"/>
     </valueAddress>
   </extension>
   <!-- 
@@ -85,20 +86,20 @@
   </extension>
   -->
   <identifier>
-    <system value="urn:oid:2.16.756.5.30.999999.1"/>
-    <value value="012/08.111111"/>
+    <system value="urn:oid:2.16.756.5.30.999900.1"/>
+    <value value="012/08.111112"/>
   </identifier>
   <name>
-    <family value="Muster"/>
-    <given value="Franz"/>
+    <family value="Guggindieluft"/>
+    <given value="Hans"/>
   </name>
   <gender value="male"/>
-  <birthDate value="1995-01-27"/>
+  <birthDate value="1981-01-01"/>
   <maritalStatus>
     <coding>
       <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
       <code value="6"/>
-      <display value="in eingetragener Partnerschaft"/>
+      <display value="verheiratet"/>
     </coding>
   </maritalStatus>
   <communication>

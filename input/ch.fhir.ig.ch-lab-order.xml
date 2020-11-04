@@ -14,7 +14,7 @@
   <title value="CH-LAB-ORDER"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2019-07-02"/>
+  <date value="2020-09-03"/> <!-- last changed -->
   <publisher value="HL7 Switzerland"/>
   <contact>
     <name value="HL7 Switzerland"/>
@@ -23,38 +23,86 @@
       <value value="https://www.hl7.ch/"/>
     </telecom>
   </contact>
+    <!-- responsible for this Implementation Guide-->
+  <contact>
+    <name value="Marcel Hanselmann"/>
+    <telecom>
+      <system value="email"/>
+      <value value="marcel.hanselmann@bluewin.ch"/>
+    </telecom>
+  </contact>
+
+  <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="CH"/>
     </coding>
   </jurisdiction>
-  <copyright value="CC-BY-SA-4.0"/>
-  <packageId value="ch.fhir.ig.ch-lab-order"/>
+  <copyright value="CC-BY-SA-4.0"/> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
+  <packageId value="ch.fhir.ig.ch-lab-order"/> <!-- NPM package name-->
   <license value="CC-BY-SA-4.0"/>
   <fhirVersion value="4.0.1"/>
-  <dependsOn>
+
+  <!-- dependencies from other IG's-->
+  <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
     <packageId value="ch.fhir.ig.ch-orf"/>
-    <version value="current"/>
+    <version value="0.9.1"/>
   </dependsOn>
+
+  <!--  -->
+  <dependsOn id="chcore">
+    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
+    <packageId value="ch.fhir.ig.ch-core"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  
+  
+  <!-- Patients, Organisations and Practitioners must conform CH-core-->
+  <global>  
+    <type value="Patient"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
+    <type value="Organisation"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
+    <type value="Practitioner"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+  </global>
+
   <definition>
-    <!-- References to examples -->
+    <grouping>
+      <name value="CHCoreCompositionEPR"/>
+    </grouping>
+
+  <!--
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-min"/>
+      </reference>
+      <name value="ServiceRequest"/>
+      <description value="Lab Order"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
+    </resource>
+  -->
+  
+  <!-- Resources -->
+  <!-- References to examples: 
     <resource>
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
       <name value="Zuweisung"/>
       <description value="Example for Composition"/>
-      <exampleCanonical value="StructureDefinition/ch-lab-order-composition"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     </resource>
+   -->
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
       <name value="FranzMuster"/>
-      <description value="Example for Patient"/>
-      <exampleCanonical value="StructureDefinition/ch-lab-order-patient"/>
+      <description value="Example for EPR-Patient"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
     </resource>
 
     <!-- References to code systems -->
@@ -66,12 +114,8 @@
     </resource>
 
     <!-- References to structure definitions -->
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
+    
+  
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-patient"/>

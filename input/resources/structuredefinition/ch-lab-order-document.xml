@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="structuredefinition/ch-lab-order-document"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
+    <version value="0.1.0"/>
+    <name value="CHLabOrderCompositionClinicalchemistry"/>
+    <title value="CH LAB ORDER Composition Profile"/>
+    <status value="draft"/>
+    <date value="2020-01-13T00:00:00+00:00"/>
+    <publisher value="HL7 Switzerland"/>
+    <contact>
+        <name value="HL7 Switzerland"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.hl7.ch/"/>
+        </telecom>
+    </contact>
+    <description value="Structure Definition of Laboratory Order"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CH"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Composition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ch-orf-composition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Composition">
+            <path value="Composition"/>
+            <short value="A set of resources composed into a single coherent lab order 
+                  form document with clinical attestation"/>
+            <definition value="A set of healthcare-related information that is assembled
+                  together into a single logical package that provides a single coherent
+                  statement of meaning, establishes its own context and that has clinical
+                  attestation with regard to who is making the statement. A Composition 
+                  defines the structure and narrative content necessary for a document.
+                  However, a Composition alone does not constitute a document. Rather, the
+                  Composition must be the first entry in a Bundle where Bundle.type=document, 
+                  and any other resources referenced from Composition must be included as
+                  subsequent entries in the Bundle (for example Patient, Practitioner,
+                  Encounter, etc.)."/>
+                  <comment value="While the focus of this specification is on patient-
+                  specific clinical statements, this resource can also apply to other 
+                  healthcare-related statements such as study protocol designs, healthcare 
+                  invoices and other activities that are not necessarily patient-specific or
+                  clinical."/>
+        </element>
+        <element id="Composition.language">
+          <path value="Composition.language"/>
+          <short value="Language of the document"/>
+       </element>
+        <element id="Composition.subject">
+            <path value="Composition.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+            </type>
+        </element>
+        <element id="Composition.subject.reference">
+            <path value="Composition.subject.reference"/>
+            <min value="1"/>
+        </element>
+    </differential>
+</StructureDefinition>

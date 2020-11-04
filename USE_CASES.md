@@ -61,7 +61,7 @@ Hinweis: Diese Kapitel werden von anderen Spezifikationen (CDA-CH und CDA-CH-VAC
 
 ## UC 7: Befunde mit zusätzlichen Angaben zur Probe
 
-Bei gewissen Untersuchungen reichen Auftrag und Probe alleine nicht aus, um das Laborresultat zu bestimmen. In solchen Fällen müssen Beobachtungen zur Probenentnahme an das Labor geliefert werden. Als Beispiel sei hier der 24-Stunden-Urintest erwähnt. Dazu muss dem Labor die, während einer bestimmten Zeitdauer gesammelte Urinmenge bekannt sein. Das Labor dokumentiert die, bei Testdurchführung bekannten Werte im Laborbefund, um dem Empfänger eine korrekte Interpretation des Laborresultats ermöglichen zu können.
+Bei gewissen Untersuchungen reichen Auftrag und Probe alleine nicht aus, um das Laborresultat zu bestimmen. In solchen Fällen müssen Beobachtungen zur Probenentnahme an das Labor geliefert werden. Als Beispiel sei hier der 24-Stunden-Urintest erwähnt. Dazu muss dem Labor die während einer bestimmten Zeitdauer gesammelte Urinmenge bekannt sein. Das Labor dokumentiert die bei Testdurchführung bekannten Werte im Laborbefund, um dem Empfänger eine korrekte Interpretation des Laborresultats ermöglichen zu können.
 Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
 
 * Bestimmte Zeitdauer: Specimen Collection - effectiveTime (als Intervall mit low und high) angeben oder mit einer entryRelationship eine entsprechende observation (13362-9 - Collection duration of Urine) angeben.
