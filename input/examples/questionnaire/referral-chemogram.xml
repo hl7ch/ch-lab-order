@@ -1,47 +1,45 @@
 <Questionnaire
-  xmlns="http://hl7.org/fhir">
-  <id value="lab-order-3-gyn"/>
-  <meta>
-      <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
-  </meta>
-  <text>
-      <status value="generated"/>
-      <div
-          xmlns="http://www.w3.org/1999/xhtml">
-          Lab Order Questionnaire Example for preventive gynecologic screening
-          <pre>todo copy text out of rendering</pre>
-      </div>
-  </text>
-  <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
-      <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
-  </extension>
-  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-3-gyn"/>
-  <name value="LabOrderExample"/>
-  <title value="Lab Order Example"/>
-  <status value="draft"/>
-  <experimental value="true" />
-  <subjectType value="Patient"/>
-  <date value="2018-04-12"/>
-  <publisher value="eHealth Suisse"/>
-  <!-- item Lab Order Questionnarie Example for preventive gynecologic screening -->
-  <item>
-      <linkId value="info"/>
-      <text value="Lab Order Questionnarie Example for preventive gynecologic screening"/>
-      <type value="display"/>
-  </item>
-  <!-- item order -->
-  <item>
-      <linkId value="order"/>
-      <text value="Auftrag"/>
-      <type value="group"/>
-      <item>
-          <linkId value="order.date"/>
-          <text value="Auftrags-Datum" />
-          <type value="date"/>
-      </item>
-  </item>
-  <!-- item orderer-->
-  <item>
+    xmlns="http://hl7.org/fhir">
+    <id value="referral-chemogram"/>
+    <meta>
+        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            Lab Order Questionnarie Example for a Chemogram
+            <pre>todo copy text out of rendering</pre>
+        </div>
+    </text>
+    <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
+        <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
+    </extension>
+    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-chemogram"/>
+    <name value="LabOrderExample"/>
+    <title value="Lab Order Example"/>
+    <status value="draft"/>
+    <experimental value="true" />
+    <subjectType value="Patient"/>
+    <date value="2018-04-12"/>
+    <publisher value="eHealth Suisse"/>
+    <item>
+        <linkId value="info"/>
+        <text value="Lab Order Questionnarie Example for a Chemogram"/>
+        <type value="display"/>
+    </item>
+    <item>
+        <linkId value="order"/>
+        <text value="Auftrag"/>
+        <type value="group"/>
+        <item>
+            <linkId value="order.date"/>
+            <text value="Auftrags-Datum" />
+            <type value="date"/>
+        </item>
+    </item>
+    <!-- item orderer-->
+    <item>
         <linkId value="orderer"/>
         <text value="Auftraggeber"/>
         <type value="group"/>
@@ -270,9 +268,9 @@
                 <type value="string"/>
             </item>
         </item>
-  </item>
-  <!-- item receiver-->
-  <item>
+    </item>
+    <!-- item receiver-->
+    <item>
         <linkId value="receiver"/>
         <text value="Receiver"/>
         <type value="group"/>
@@ -331,9 +329,9 @@
             <text value="Ort"/>
             <type value="string"/>
         </item>
-  </item>
-  <!-- item patient-->
-  <item>
+    </item>
+    <!-- item patient-->
+    <item>
         <linkId value="patient"/>
         <text value="Patient"/>
         <type value="group"/>
@@ -381,11 +379,11 @@
                 <valueString value="Stat" />
             </answerOption>
         </item>
-  </item>
-  <!-- item specialty, here: cytology cervical smear-->
-  <item>
-        <linkId value="cytology"/>
-        <text value="Cytology"/>
+    </item>
+    <!-- item specialty, here: chemogram-->
+    <item>
+        <linkId value="chemogram"/>
+        <text value="Klinische Chemie"/>
         <type value="choice"/>
         <item>
             <linkId value="lab"/>
@@ -394,65 +392,167 @@
             <answerOption>
                 <valueCoding>
                     <system value="http://loinc.org" />
-                    <code value="86662-4" />
-                    <display value="Pap smear tests - FPAR 2.0 set" />
+                    <code value="2345-7-2" />
+                    <display value="Glucose [Mass/volume] in Serum or Plasma" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="33898-8" />
+                    <display value="Bilirubin" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="3094-0" />
+                    <display value="Harnstoff" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="57332-9" />
+                    <display value="Harnsäure" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2160-0" />
+                    <display value="Kreatinin" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="56776-8" />
+                    <display value="Amylase" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2325-9" />
+                    <display value="GGT" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="1916-6" />
+                    <display value="GOT (ASAT)" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="76625-3" />
+                    <display value="GPT (ALAT)" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="53524-5" />
+                    <display value="AP" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="49129-0" />
+                    <display value="CK gesamt" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2777-1" />
+                    <display value="Phosphat" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2276-4" />
+                    <display value="Ferritin" />
+                </valueCoding>
+            </answerOption>
+            <!-- Juerg klaert code ab           
+            <answerOption><valueCoding><system value="http://loinc.org" /><code value="" /><display value="Eiweiss" /></valueCoding></answerOption>
+-->
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="16615-7" />
+                    <display value="Cholesterin" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="3043-7" />
+                    <display value="Triglyceride" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2823-3" />
+                    <display value="K" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2951-2" />
+                    <display value="Na" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="17863-2" />
+                    <display value="Ca" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2572-6" />
+                    <display value="Lipase" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="2537-9" />
+                    <display value="LDH" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="27340-9" />
+                    <display value="HDL-Cholesterin" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="22748-8" />
+                    <display value="LDL-Cholesterin" />
+                </valueCoding>
+            </answerOption>
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="1751-7" />
+                    <display value="Albumin" />
                 </valueCoding>
             </answerOption>
         </item>
-  </item>
-  <!-- item specialty, here: HPV Test-->
-  <item>
-    <linkId value="hpvtests"/>
-    <text value="HPV tests - FPAR 2.0 set"/>
-    <type value="choice"/>
-    <item>
-        <linkId value="lab"/>
-        <text value="Laborwerte"/>
-        <type value="string"/>
-        <answerOption>
-            <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="14503-7" />
-                <display value="Human papilloma virus 16+18 Ag [Presence] in Cervix" />
-            </valueCoding>
-        </answerOption>
     </item>
-</item>
-  <!-- item specialty, here: Urin Analysis Combur-9 -->
-  <item>
-      <linkId value="urin"/>
-      <text value="Urin"/>
-      <type value="choice"/>
-      <item>
-          <linkId value="lab"/>
-          <text value="Laborwerte"/>
-          <type value="string"/>
-          <answerOption>
-              <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="50556-0" />
-                  <display value="Urinalysis dipstick panel - Urine by Automated test strip" />
-              </valueCoding>
-          </answerOption>
-      </item>
-  </item>
-  <!-- item specialty, here: Obstetric 1996 panel-->
-  <item>
-    <linkId value="pregnancy"/>
-    <text value="Schwangerschaftsvorsorge"/>
-    <type value="choice"/>
-        <!-- Rotes BB, Diff BB, Hepatitis B, Rubella, AB0 Rhesus -->
-        <item>
-          <linkId value="lab"/>
-          <text value="Laborwerte"/>
-          <type value="string"/>
-          <answerOption>
-            <valueCoding>
-              <system value="http://loinc.org" />
-              <code value="24364-2" />
-              <display value="Obstetric 1996 panel – Serum and Blood" />
-            </valueCoding>
-          </answerOption>
-        </item>
-</item>
 </Questionnaire>

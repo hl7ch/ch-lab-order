@@ -1,6 +1,6 @@
 <Questionnaire
     xmlns="http://hl7.org/fhir">
-    <id value="lab-order-hematology"/>
+    <id value="referral-2-pertussis.xml"/>
     <meta>
         <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
     </meta>
@@ -8,14 +8,14 @@
         <status value="generated"/>
         <div
             xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for a Hematology
+            Lab Order Questionnarie Example for blood smear and PCR
             <pre>todo copy text out of rendering</pre>
         </div>
     </text>
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
         <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
     </extension>
-    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-hematology"/>
+    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-2-pertussis"/>
     <name value="LabOrderExample"/>
     <title value="Lab Order Example"/>
     <status value="draft"/>
@@ -25,9 +25,10 @@
     <publisher value="eHealth Suisse"/>
     <item>
         <linkId value="info"/>
-        <text value="Lab Order Questionnarie Example for a Hematology"/>
+        <text value="Lab Order Questionnarie Example for Pertussis"/>
         <type value="display"/>
     </item>
+    <!-- item Lab Order Questionnarie Example for Pertussis-->
     <item>
         <linkId value="order"/>
         <text value="Auftrag"/>
@@ -38,13 +39,14 @@
             <type value="date"/>
         </item>
     </item>
+    <!-- item orderer-->
     <item>
         <linkId value="orderer"/>
         <text value="Auftraggeber"/>
         <type value="group"/>
         <item>
             <linkId value="orderer.author"/>
-            <text value="Author"/>
+            <text value="Autor"/>
             <type value="group"/>
             <item>
                 <linkId value="orderer.author.visum"/>
@@ -268,6 +270,7 @@
             </item>
         </item>
     </item>
+    <!-- item receiver-->
     <item>
         <linkId value="receiver"/>
         <text value="Receiver"/>
@@ -328,6 +331,7 @@
             <type value="string"/>
         </item>
     </item>
+    <!-- item patient-->
     <item>
         <linkId value="patient"/>
         <text value="Patient"/>
@@ -377,9 +381,10 @@
             </answerOption>
         </item>
     </item>
+    <!-- item specialty, here: microbiology-->
     <item>
-        <linkId value="hematology"/>
-        <text value="Hematology"/>
+        <linkId value="mikrobiology"/>
+        <text value="Mikrobiologie"/>
         <type value="choice"/>
         <item>
             <linkId value="lab"/>
@@ -388,42 +393,47 @@
             <answerOption>
                 <valueCoding>
                     <system value="http://loinc.org" />
-                    <code value="24360-0" />
-                    <display value="Hemoglobin and Hematocrit panel - Blood" />
+                    <code value="90441-7" />
+                    <display value="Bordetella pertussis and Bordetella parapertussis DNA panel - Nasopharynx" />
                 </valueCoding>
             </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="43113-0" />
-                    <display value="Hemoglobin electrophoresis panel in Blood" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-              <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="57021-8" />
-                  <display value="CBC W Auto Differential panel - Blood" />
-              </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="58410-2" />
-                    <display value="CBC panel - Blood by Automated count" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="57023-4" />
-                    <display value="Auto Differential panel - Blood" />
-                </valueCoding>
-            </answerOption>           
-            <!-- 
-              Juerg klaert code ab           
-            <answerOption><valueCoding><system value="http://loinc.org" /><code value="" /><display value="Eiweiss" /></valueCoding></answerOption>
-            -->
         </item>
     </item>
+    <!-- item specialty, here: hematology-->
+    <item>
+      <linkId value="hematology"/>
+      <text value="Hämatologie"/>
+      <type value="choice"/>
+      <item>
+          <linkId value="lab"/>
+          <text value="Laborwerte"/>
+          <type value="string"/>
+          <answerOption>
+              <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="24318-8" />
+                  <display value="Manual Differential panel - Blood" />
+              </valueCoding>
+          </answerOption>
+      </item>
+  </item>
+  <!-- item specialty, here: clinical chemistry-->
+  <item>
+    <linkId value="clinical chemistry"/>
+    <text value="Klinische Chemie"/>
+    <type value="choice"/>
+      <!-- CRP C reactive Protein normal method -->
+      <item>
+        <linkId value="lab"/>
+        <text value="Laborwerte"/>
+        <type value="string"/>
+        <answerOption>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="1988-5" />
+            <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
+          </valueCoding>
+        </answerOption>
+      </item>
+  </item>
 </Questionnaire>

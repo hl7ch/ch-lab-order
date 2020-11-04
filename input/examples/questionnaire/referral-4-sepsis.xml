@@ -1,38 +1,35 @@
 <Questionnaire
-    xmlns="http://hl7.org/fhir">
-    <id value="lab-order-clinical_chemistry"/>
-    <meta>
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
-    </meta>
-    <text>
-        <status value="generated"/>
-        <div
-            xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for a Clinical_chemistry
-            <pre>todo copy text out of rendering</pre>
-        </div>
-    </text>
-    <!-- http://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire-targetStructureMap.html -->
-    <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
-        <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
-    </extension>
-    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/lab-order-clinical_chemistry"/>
-    <identifier><!-- 0..* Identifier Additional identifier for the questionnaire --></identifier>
-    <version value="[string]"/><!-- 0..1 Business version of the questionnaire -->
-    <name value="LabOrderExample"/>
-    <title value="Lab Order Example"/>
-    <status value="draft"/>
-    <experimental value="true" />
-    <subjectType value="Patient"/>
-    <date value="2018-04-12"/>
-    <publisher value="eHealth Suisse"/>
-    <!-- item Lab Order Questionnarie Example for a Clinical_chemistry-->
-    <item>
+  xmlns="http://hl7.org/fhir">
+  <id value="referral-4-sepsis"/>
+  <meta>
+      <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
+  </meta>
+  <text>
+      <status value="generated"/>
+      <div
+          xmlns="http://www.w3.org/1999/xhtml">
+          Lab Order Questionnarie Example for a microbiologic study
+          <pre>todo copy text out of rendering</pre>
+      </div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
+      <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
+  </extension>
+  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-4-sepsis"/>
+  <name value="LabOrderExample"/>
+  <title value="Lab Order Example"/>
+  <status value="draft"/>
+  <experimental value="true" />
+  <subjectType value="Patient"/>
+  <date value="2018-04-12"/>
+  <publisher value="eHealth Suisse"/>
+  <item>
         <linkId value="info"/>
-        <text value="Lab Order Questionnarie Example for a Clinical_chemistry"/>
+        <text value="Lab Order Questionnarie Example for microbiologic study"/>
         <type value="display"/>
-    </item>
-    <item>
+  </item>
+  <!-- item order -->
+  <item>
         <linkId value="order"/>
         <text value="Auftrag"/>
         <type value="group"/>
@@ -41,15 +38,15 @@
             <text value="Auftrags-Datum" />
             <type value="date"/>
         </item>
-    </item>
-    <!-- item orderer-->
-    <item>
+  </item>
+  <!-- item orderer -->
+  <item>
         <linkId value="orderer"/>
         <text value="Auftraggeber"/>
         <type value="group"/>
         <item>
             <linkId value="orderer.author"/>
-            <text value="Autor"/>
+            <text value="Author"/>
             <type value="group"/>
             <item>
                 <linkId value="orderer.author.visum"/>
@@ -272,9 +269,9 @@
                 <type value="string"/>
             </item>
         </item>
-    </item>
-    <!-- item receiver-->
-    <item>
+  </item>
+  <!-- item receiver -->
+  <item>
         <linkId value="receiver"/>
         <text value="Receiver"/>
         <type value="group"/>
@@ -333,9 +330,9 @@
             <text value="Ort"/>
             <type value="string"/>
         </item>
-    </item>
-    <!-- item patient-->
-    <item>
+  </item>
+  <!-- item patient -->
+  <item>
         <linkId value="patient"/>
         <text value="Patient"/>
         <type value="group"/>
@@ -383,130 +380,140 @@
                 <valueString value="Stat" />
             </answerOption>
         </item>
-    </item>
-    <!-- item specialty, here: clinical_chemistry, 344 entries-->
-    <item>
-        <linkId value="clinical_chemistry"/>
-        <text value="Klinische Chemie"/>
+  </item>
+ <!-- Auto Differential panel - Blood -->
+  <item>
+        <linkId value="hematology"/>
+        <text value="Hematology"/>
         <type value="choice"/>
         <item>
             <linkId value="lab"/>
             <text value="Laborwerte"/>
             <type value="string"/>
-            <!-- answer option: Lipid and glucose panel-->
             <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="95126-9" />
-                <display value="Lipid and glucose panel - Serum or Plasma" />
-              </valueCoding>
-              <!-- sub answer option: Glucose-->
-              <answerOption>
                 <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="2345-7" />
-                  <display value="Glucose [Mass/volume] in Serum or Plasma" />
-              </valueCoding>         
-              </answerOption>
+                    <system value="http://loinc.org" />
+                    <code value="24360-0" />
+                    <display value="Hemoglobin and Hematocrit panel - Blood" />
+                </valueCoding>
             </answerOption>
-            <!-- answer option: Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood-->
+            <answerOption>
+                <valueCoding>
+                    <system value="http://loinc.org" />
+                    <code value="43113-0" />
+                    <display value="Hemoglobin electrophoresis panel in Blood" />
+                </valueCoding>
+            </answerOption>
             <answerOption>
               <valueCoding>
                   <system value="http://loinc.org" />
-                  <code value="45066-8" />
-                  <display value="Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood" />
+                  <code value="57021-8" />
+                  <display value="CBC W Auto Differential panel - Blood" />
               </valueCoding>
-                <!-- sub answer option: Creatinin-->
-                <answerOption>
-                  <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2160-0" />
-                    <display value="Creatinine [Mass/volume] in Serum or Plasma" />
-                </valueCoding>         
-                </answerOption>
-                <!-- sub answer option: Creatinin-->
-                <answerOption>
-                  <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2160-0" />
-                    <display value="Creatinine [Mass/volume] in Serum or Plasma" />
-                </valueCoding>         
-                </answerOption>
             </answerOption>
-
-            <!-- Juerg klaert code ab           
-            <answerOption><valueCoding><system value="http://loinc.org" /><code value="" /><display value="Eiweiss" /></valueCoding></answerOption>
--->
             <answerOption>
                 <valueCoding>
                     <system value="http://loinc.org" />
-                    <code value="16615-7" />
-                    <display value="Cholesterin" />
+                    <code value="58410-2" />
+                    <display value="CBC panel - Blood by Automated count" />
                 </valueCoding>
             </answerOption>
             <answerOption>
                 <valueCoding>
                     <system value="http://loinc.org" />
-                    <code value="3043-7" />
-                    <display value="Triglyceride" />
+                    <code value="57023-4" />
+                    <display value="Auto Differential panel - Blood" />
                 </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2823-3" />
-                    <display value="K" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2951-2" />
-                    <display value="Na" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="17863-2" />
-                    <display value="Ca" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2572-6" />
-                    <display value="Lipase" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="2537-9" />
-                    <display value="LDH" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="27340-9" />
-                    <display value="HDL-Cholesterin" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="22748-8" />
-                    <display value="LDL-Cholesterin" />
-                </valueCoding>
-            </answerOption>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="1751-7" />
-                    <display value="Albumin" />
-                </valueCoding>
-            </answerOption>
+            </answerOption>           
         </item>
+  </item>
+ <!-- Blood by Culture - Microorganism preliminary growth detection -->
+  <item>
+    <linkId value="microbiology"/>
+    <text value="Mikrobiologie"/>
+    <type value="choice"/>
+    <item>
+        <linkId value="lab"/>
+        <text value="Laborwerte"/>
+        <type value="string"/>
+        <answerOption>
+          <valueCoding>
+              <system value="http://loinc.org" />
+              <code value="90423-5" />
+              <display value="Microorganism preliminary growth detection panel - Blood by Culture" />
+          </valueCoding>
+        </answerOption>
     </item>
+    <!-- Bacterial identification and susceptibility-->
+    <item>
+      <linkId value="lab"/>
+      <text value="Laborwerte"/>
+      <type value="string"/>
+      <answerOption>
+        <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="85421-6" />
+            <display value="Bacterial identification and susceptibility panel - Isolate" />
+        </valueCoding>
+      </answerOption>
+  </item>
+  </item>
+  <!-- CRP C reactive Protein-->
+  <item>
+    <linkId value="clinical_chemistry"/>
+    <text value="Klinische Chemie"/>
+    <type value="choice"/>
+    <!-- CRP C reactive Protein normal method -->
+    <item>
+        <linkId value="lab"/>
+        <text value="Laborwerte"/>
+        <type value="string"/>
+        <answerOption>
+          <!-- diese Option wird am häufigsten gewählt: -->
+          <initialSelected value="true" />
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="1988-5" />
+            <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
+          </valueCoding>
+        </answerOption>
+    </item>
+    <item>
+      <linkId value="lab"/>
+      <text value="Laborwerte"/>
+      <type value="string"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="76485-2" />
+          <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answerOption>
+    </item>
+    <!-- CRP C reactive Protein High sensitivity method-->
+    <item>
+      <linkId value="lab"/>
+      <text value="Laborwerte"/>
+      <type value="string"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="30522-7" />
+          <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
+        </valueCoding>
+      </answerOption>
+    </item>
+    <item>
+      <linkId value="lab"/>
+      <text value="Laborwerte"/>
+      <type value="string"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="76486-0" />
+          <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
+        </valueCoding>
+      </answerOption>
+    </item>
+  </item>
 </Questionnaire>
