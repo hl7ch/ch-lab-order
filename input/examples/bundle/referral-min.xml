@@ -42,7 +42,7 @@
                     <text value="Referral min"/>
                 </type>
                 <subject>
-                    <reference value="http://test.fhir.ch/r4/Patient/FranzMuster"/>
+                    <reference value="Patient/FranzMuster"/>
                 </subject>
                 <date value="2019-03-31T11:46:09+02:00"/>
                 <author>
@@ -156,7 +156,7 @@
                         </table>
                     </div>
                 </text>
-                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeofbirth">
+                <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
                     <valueAddress>
                         <city value="Paris"/>
                         <country value="Frankreich"/>
@@ -168,7 +168,7 @@
                         <state value="BE"/>
                     </valueAddress>
                 </extension>
-                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-religion">
+                <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
                     <valueCodeableConcept>
                         <coding>
                             <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-religion"/>
