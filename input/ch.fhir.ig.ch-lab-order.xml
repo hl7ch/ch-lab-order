@@ -74,33 +74,55 @@
       <name value="CHCoreCompositionEPR"/>
     </grouping>
 
-  <!--
-    <resource>
+    <!-- <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
       </reference>
       <name value="ServiceRequest"/>
       <description value="Lab Order"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
-    </resource>
-  -->
+    </resource> -->
   
   <!-- Resources -->
-  <!-- References to examples: 
-    <resource>
+  <!-- References to EXAMPLES: -->
+  <!-- ################ -->
+    <!-- <resource>
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
       <name value="Zuweisung"/>
       <description value="Example for Composition"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
-    </resource>
-   -->
+    </resource> -->
 
-   <!-- EXAMPLE RESOURES -->
-   <!-- ################ -->
-   <!-- Bundle -->
+   <!-- Patient -->
     <resource>
+      <reference>
+        <reference value="Patient/FranzMuster" />
+      </reference>
+      <name value="FranzMuster" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/BeatBorer" />
+      </reference>
+      <name value="BeatBorer" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+   <!-- Organisation -->
+    <!-- <resource>
+      <reference>
+        <reference value="Organisation/custodian"/>
+      </reference>
+      <name value="Custodian"/>
+      <description value="Example Organisation"/>
+    </resource> -->
+
+   <!-- Bundle -->
+    <!-- <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
       </reference>
@@ -148,16 +170,8 @@
       <description value="Example Bundle for referral/order for a Biol-Monit"/>
     </resource> -->
 
-    <resource>
-      <reference>
-        <reference value="Patient/FranzMuster"/>
-      </reference>
-      <name value="FranzMuster"/>
-      <description value="Example for EPR-Patient"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
-    </resource>
-
-    <!-- References to code systems -->
+    <!-- References to CODESYSTEMS -->
+    <!-- ################ -->
     <resource>
       <reference>
         <reference value="CodeSystem/ig-example"/>
@@ -165,9 +179,8 @@
       <exampleBoolean value="false"/>
     </resource>
 
-    <!-- References to structure definitions -->
-    
-  
+    <!-- References to STRUCTUREDEFINITIONS -->
+    <!-- ################ -->
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-patient"/>
@@ -175,7 +188,8 @@
       <exampleBoolean value="false"/>
     </resource>
 
-    <!-- References to value sets -->
+    <!-- References to VALUESETS -->
+    <!-- ################ -->
     <resource>
       <reference>
         <reference value="ValueSet/ig-example"/>
@@ -183,6 +197,7 @@
       <exampleBoolean value="false"/>
     </resource>
 
+    <!-- Page content -->
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
