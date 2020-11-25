@@ -22,16 +22,16 @@
         <b>identifier</b>: 012/08.111111
       </p>
       <p>
-        <b>name</b>: Franz Muster 
+        <b>name</b>: Emil Kummer 
       </p>
       <p>
         <b>gender</b>: MALE
       </p>
       <p>
-        <b>birthDate</b>: Mai 05, 2014
+        <b>birthDate</b>: Jan 27, 1995
       </p>
       <p>
-        <b>maritalStatus</b>
+        <b>maritalStatus</b>: in eingetragener Partnerschaft 
         <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code &#39;6&#39; = &#39;6&#39;, given as &#39;in eingetragener Partnerschaft&#39;})</span>
       </p>
       <h3>Communications</h3>
@@ -58,8 +58,8 @@
   -->
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
     <valueAddress>
-      <city value="Ostermundigen"/>
-      <country value="Schweiz"/>
+      <city value="Paris"/>
+      <country value="Frankreich"/>
     </valueAddress>
   </extension>
   <!-- 
@@ -97,8 +97,8 @@
   <maritalStatus>
     <coding>
       <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
-      <code value=""/>
-      <display value=""/>
+      <code value="1"/>
+      <display value="ledig"/>
     </coding>
   </maritalStatus>
   <communication>

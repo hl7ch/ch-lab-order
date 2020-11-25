@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ch.fhir.ig.ch-lab-order"/>
+  <id value="ch.fhir.ig.ch-lab-order" />
   <text>
-    <status value="additional"/>
+    <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
       ImplementationGuide for CH-LAB-ORDER
     </div>
   </text>
-  <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order"/>
-  <version value="0.0.1"/>
-  <name value="CH_LAB_ORDER"/>
-  <title value="CH-LAB-ORDER"/>
-  <status value="active"/>
-  <experimental value="false"/>
-  <date value="2020-09-03"/> <!-- last changed -->
-  <publisher value="HL7 Switzerland"/>
+  <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order" />
+  <version value="0.0.1" />
+  <name value="CH_LAB_ORDER" />
+  <title value="CH-LAB-ORDER" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-09-03" /> <!-- last changed -->
+  <publisher value="HL7 Switzerland" />
   <contact>
-    <name value="HL7 Switzerland"/>
+    <name value="HL7 Switzerland" />
     <telecom>
-      <system value="url"/>
-      <value value="https://www.hl7.ch/"/>
+      <system value="url" />
+      <value value="https://www.hl7.ch/" />
     </telecom>
   </contact>
-    <!-- responsible for this Implementation Guide-->
+  <!-- responsible for this Implementation Guide-->
   <contact>
-    <name value="Marcel Hanselmann"/>
+    <name value="Marcel Hanselmann" />
     <telecom>
-      <system value="email"/>
-      <value value="marcel.hanselmann@bluewin.ch"/>
+      <system value="email" />
+      <value value="marcel.hanselmann@bluewin.ch" />
     </telecom>
   </contact>
 
-  <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland"/>
+  <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland" />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="CH"/>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="CH" />
     </coding>
   </jurisdiction>
-  <copyright value="CC-BY-SA-4.0"/> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
-  <packageId value="ch.fhir.ig.ch-lab-order"/> <!-- NPM package name-->
-  <license value="CC-BY-SA-4.0"/>
-  <fhirVersion value="4.0.1"/>
+  <copyright value="CC-BY-SA-4.0" /> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
+  <packageId value="ch.fhir.ig.ch-lab-order" /> <!-- NPM package name-->
+  <license value="CC-BY-SA-4.0" />
+  <fhirVersion value="4.0.1" />
 
   <dependsOn id="sdc">
-    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
-    <packageId value="hl7.fhir.uv.sdc"/>
-    <version value="2.7.0"/>
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
+    <packageId value="hl7.fhir.uv.sdc" />
+    <version value="2.7.0" />
   </dependsOn>
 
   <!-- dependencies from other IG's-->
   <dependsOn id="chorf">
-    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
-    <packageId value="ch.fhir.ig.ch-orf"/>
-    <version value="current"/> <!-- otherwise we will get sdc 2.8.0 -->
+    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf" />
+    <packageId value="ch.fhir.ig.ch-orf" />
+    <version value="current" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
   <!--  -->
   <dependsOn id="chcore">
-    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
-    <packageId value="ch.fhir.ig.ch-core"/>
-    <version value="current"/>
+    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core" />
+    <packageId value="ch.fhir.ig.ch-core" />
+    <version value="current" />
   </dependsOn>
-  
-  
+
+
   <!-- Patients, Organisations and Practitioners must conform CH-core-->
-  <global>  
-    <type value="Patient"/>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
-    <type value="Organisation"/>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
-    <type value="Practitioner"/>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+  <global>
+    <type value="Patient" />
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr" />
+    <type value="Organisation" />
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr" />
+    <type value="Practitioner" />
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr" />
   </global>
 
   <definition>
     <grouping>
-      <name value="CHCoreCompositionEPR"/>
+      <name value="CHCoreCompositionEPR" />
     </grouping>
 
     <!-- <resource>
@@ -88,10 +88,10 @@
       <description value="Lab Order"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     </resource> -->
-  
-  <!-- Resources -->
-  <!-- References to EXAMPLES: -->
-  <!-- ################ -->
+
+    <!-- Resources -->
+    <!-- References to EXAMPLES: -->
+    <!-- ################ -->
     <!-- <resource>
       <reference>
         <reference value="Composition/Zuweisung"/>
@@ -101,29 +101,11 @@
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
     </resource> -->
 
-   <!-- Patient 
-    <resource>
-      <reference>
-        <reference value="Patient/FranzMuster" />
-      </reference>
-      <name value="FranzMuster" />
-      <description value="Example for EPR-Patient" />
-    </resource>
-    -->
+    <!-- EXAMPLE RESOURES -->
+    <!-- ################ -->
+    <!-- Bundle -->
 
-   <!-- EXAMPLE RESOURES -->
-   <!-- ################ -->
-   <!-- Bundle -->
-
-    <resource>
-      <reference>
-        <reference value="Patient/BeatBorer" />
-      </reference>
-      <name value="BeatBorer" />
-      <description value="Example for EPR-Patient" />
-    </resource>
-
-   <!-- Organisation -->
+    <!-- Organisation -->
     <!-- <resource>
       <reference>
         <reference value="Organisation/custodian"/>
@@ -132,7 +114,7 @@
       <description value="Example Organisation"/>
     </resource> -->
 
-   <!-- Bundle -->
+    <!-- Bundle -->
     <!-- <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
@@ -181,84 +163,129 @@
       <description value="Example Bundle for referral/order for a Biol-Monit"/>
     </resource> -->
 
-    
-    <!-- Patient resources-->
+    <!-- Patient -->
 
     <resource>
       <reference>
-        <reference value="Patient/KlebsiellaKeller"/>
+        <reference value="Patient/BeatBorer" />
       </reference>
-      <name value="KlebsiellaKeller"/>
-      <description value="Example for EPR-Patient"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+      <name value="BeatBorer" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Patient/FranzMuster"/>
+        <reference value="Patient/EmilKummer" />
       </reference>
-      <name value="FranzMuster"/>
-      <description value="Example for EPR-Patient"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+      <name value="EmilKummer" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Patient/HansGuggindieluft"/>
+        <reference value="Patient/FranzMuster" />
       </reference>
-      <name value="HansGuggindieluft"/>
-      <description value="Example for EPR-Patient"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+      <name value="FranzMuster" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/HansGuggindieluft" />
+      </reference>
+      <name value="HansGuggindieluft" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/KlebsiellaKeller" />
+      </reference>
+      <name value="KlebsiellaKeller" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/MarinaRubella" />
+      </reference>
+      <name value="MarinaRubella" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/MonikaWegmuellerRecipient" />
+      </reference>
+      <name value="MonikaWegmuellerRecipient" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/MonikaWegmueller" />
+      </reference>
+      <name value="MonikaWegmueller" />
+      <description value="Example for EPR-Patient" />
+      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
+    </resource>
+
 
     <!-- References to code systems -->
     <resource>
       <reference>
-        <reference value="CodeSystem/ig-example"/>
+        <reference value="CodeSystem/ig-example" />
       </reference>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="false" />
     </resource>
 
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################ -->
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-lab-order-patient"/>
+        <reference value="StructureDefinition/ch-lab-order-patient" />
       </reference>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="false" />
     </resource>
 
     <!-- References to VALUESETS -->
     <!-- ################ -->
     <resource>
       <reference>
-        <reference value="ValueSet/ig-example"/>
+        <reference value="ValueSet/ig-example" />
       </reference>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="false" />
     </resource>
 
     <!-- Page content -->
     <page>
-      <nameUrl value="toc.html"/>
-      <title value="Table of Contents"/>
-      <generation value="html"/>
+      <nameUrl value="toc.html" />
+      <title value="Table of Contents" />
+      <generation value="html" />
       <page>
-        <nameUrl value="index.html"/>
-        <title value="Home"/>
-        <generation value="markdown"/>
+        <nameUrl value="index.html" />
+        <title value="Home" />
+        <generation value="markdown" />
       </page>
     </page>
     <parameter>
-      <code value="releaselabel"/>
-      <value value="CI build"/>
+      <code value="releaselabel" />
+      <value value="CI build" />
     </parameter>
     <parameter>
       <code value="path-pages" />
-      <value value="input/pages"/>
+      <value value="input/pages" />
     </parameter>
     <parameter>
-      <code value="copyrightyear"/>
-      <value value="2020+"/>
+      <code value="copyrightyear" />
+      <value value="2020+" />
     </parameter>
   </definition>
 </ImplementationGuide>
