@@ -86,7 +86,7 @@
   </extension>
   -->
   <identifier>
-    <system value="urn:oid:2.16.756.5.30.999900.1"/>
+    <system value="urn:oid:2.16.756.5.32"/>
     <value value="012/08.111114"/>
   </identifier>
   <name>
@@ -98,7 +98,7 @@
   <maritalStatus>
     <coding>
       <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
-      <code value="6"/>
+      <code value="2"/>
       <display value="verheiratet"/>
     </coding>
   </maritalStatus>

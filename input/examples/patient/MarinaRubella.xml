@@ -6,7 +6,7 @@
     <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
   </meta>
   <identifier>
-    <system value="urn:oid:2.16.756.5.30.999999.1"/>
+    <system value="urn:oid:2.16.756.5.32"/>
     <value value="012/08.111116"/>
   </identifier>
   <name>

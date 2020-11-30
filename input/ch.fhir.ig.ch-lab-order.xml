@@ -105,15 +105,7 @@
     <!-- ################ -->
     <!-- Bundle -->
 
-    <!-- Organisation -->
-    <!-- <resource>
-      <reference>
-        <reference value="Organisation/custodian"/>
-      </reference>
-      <name value="Custodian"/>
-      <description value="Example Organisation"/>
-    </resource> -->
-
+    
     <!-- Bundle -->
     <!-- <resource>
       <reference>
@@ -163,7 +155,67 @@
       <description value="Example Bundle for referral/order for a Biol-Monit"/>
     </resource> -->
 
-    <!-- Patient -->
+    <!-- Organisation -->
+
+    <!-- 
+    <resource>
+      <reference>
+        <reference value="Organization/PraxisHausarzt"/>
+      </reference>
+      <name value="Praxis Hausarzt"/>
+      <description value="Example Organisation"/>
+    </resource> 
+    -->
+
+    <!-- Practitioner -->
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/AgparMarc"/>
+      </reference>
+      <name value="Agpar Marc"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/FamilienHausarzt"/>
+      </reference>
+      <name value="Familien Hausarzt"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/HansHauser"/>
+      </reference>
+      <name value="Hans Hauser"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/MarcMustermann"/>
+      </reference>
+      <name value="Marc Mustermann"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/PeterPap"/>
+      </reference>
+      <name value="Peter Pap"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    
+
+    <!-- Patients -->
 
     <resource>
       <reference>
