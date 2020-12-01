@@ -85,11 +85,11 @@ Ein generisches Auftrags- und Überweisungsformular ist der Ausgangspunkt. Diese
 
 * Auftrags-ID
 
-* Daten des Auftraggebers (Practitioner, Organisation)
+* Daten des Auftraggebers (Practitioner, Organization)
 
 * Patientendaten (Personen- und Administrationsdaten): subject
 
-* Auftragsempfänger: Organisation, Medizinisches Labor
+* Auftragsempfänger: Organization, Medizinisches Labor
 
 * Da es für Laboraufträge oft sinnvoll ist, auch klinische Daten (Diagnose, Problemstellung, Fragestellung) zur Verfügung zu haben, können diese in der Resource ServiceRequest untergebracht werden: ServiceRequest.reasonCode und/oder ServiceRequest.supportingInfo
 
@@ -107,7 +107,7 @@ Das Labor- und Pathologie-Auftragsformular enthält zusätzlich zu den Daten des
 
 Die ch-lab-order Formulare sind von einem Form Repository öffentlich abrufbar. Das Repository liefert eine Liste der fachspezifischen Labor-Auftragsformularen (aktuell 22 Einträge, ensprechend den 22 Laboratory Order Panels). Aus der Liste können dann die benötigten Auftragsformulare ausgewählt und geholt werden. Diese enthalten noch keinerlei Value-Sets von Labor-Tests.
 
-Damit ein Laborbeauftragter generische Labor- und Pathologie-Auftragsformulare für seine eigene Organisation sichtbar zur Verfügung stellen kann, hat er die Möglichkeit, das Formular mit einem eigenen Logo zu versehen versehen (Branding), z.B. als PDF Template oder angehängte Bilddatei. Da der Implementationsguide nur auf JSON- bzw. XML Files ausgerichtet ist, wird sich das Branding ausserhalb seines Aufgabenbereichs befinden.
+Damit ein Laborbeauftragter generische Labor- und Pathologie-Auftragsformulare für seine eigene Organization sichtbar zur Verfügung stellen kann, hat er die Möglichkeit, das Formular mit einem eigenen Logo zu versehen versehen (Branding), z.B. als PDF Template oder angehängte Bilddatei. Da der Implementationsguide nur auf JSON- bzw. XML Files ausgerichtet ist, wird sich das Branding ausserhalb seines Aufgabenbereichs befinden.
 
 1. Anschliessend kann er sie mit den spezifischen Value-Sets der verschiedenen Labor-Fachrichtungen in Form von Fragebogen (Questionnaires) ausstatten (Fragebogen finden). Die Fragebogen lassen die Auswahl der gewünschten Analysen zu. Es ist vorgesehen, die Auftragsformulare direkt durch Abfrage der LOINC Laboratory Order Panels zu erstellen. Da die Labore nur ein Subset aller möglichen Analysen (sogenannter Labor-Katalog) anbieten, muss der Laborbeauftragte die gebrandeten Labor-Auftrtagsformulare entsprechend einschränken, sodass sie nur die vom Labor angebotenen Analysen beinhalten.
 

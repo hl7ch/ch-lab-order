@@ -422,7 +422,7 @@
                     </item>
                     <item>
                         <linkId value="receiver.organization"/>
-                        <text value="Organisation"/>
+                        <text value="Organization"/>
                         <type value="string"/>
                     </item>
                     <item>

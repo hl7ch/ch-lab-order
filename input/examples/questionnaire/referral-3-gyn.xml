@@ -56,7 +56,7 @@
             </item>
             <item>
                 <linkId value="orderer.author.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -111,7 +111,7 @@
             </item>
             <item>
                 <linkId value="orderer.dataenterer.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -171,7 +171,7 @@
             </item>
             <item>
                 <linkId value="orderer.notifcontactthisdoc.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -226,7 +226,7 @@
             </item>
             <item>
                 <linkId value="orderer.notifcontactresponsedoc.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>

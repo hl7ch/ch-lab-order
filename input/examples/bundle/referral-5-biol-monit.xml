@@ -50,14 +50,14 @@
         </subject>
         <date value="2019-03-31T11:46:09+02:00" />
         <author>
-          <reference value="Organisation/Suva" />
+          <reference value="Organization/Suva" />
         </author>
         <title value="Referral 5-biol-monit" />
         <attester>
           <mode value="professional" />
           <time value="2010-03-12T11:46:09+02:00" />
           <party>
-            <reference value="Organisation/Suva" />
+            <reference value="Organization/Suva" />
           </party>
         </attester>
         <section>
@@ -275,7 +275,7 @@
             </item>
             <item>
               <linkId value="orderer.author.organization" />
-              <text value="Organisation" />
+              <text value="Organization" />
               <type value="string" />
             </item>
             <item>
@@ -330,7 +330,7 @@
             </item>
             <item>
               <linkId value="orderer.dataenterer.organization" />
-              <text value="Organisation" />
+              <text value="Organization" />
               <type value="string" />
             </item>
             <item>
@@ -390,7 +390,7 @@
             </item>
             <item>
               <linkId value="orderer.notifcontactthisdoc.organization" />
-              <text value="Organisation" />
+              <text value="Organization" />
               <type value="string" />
             </item>
             <item>
@@ -445,7 +445,7 @@
             </item>
             <item>
               <linkId value="orderer.notifcontactresponsedoc.organization" />
-              <text value="Organisation" />
+              <text value="Organization" />
               <type value="string" />
             </item>
             <item>
@@ -854,7 +854,7 @@
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
-          <reference value="Organisation/Suva"/>
+          <reference value="Organization/Suva"/>
         </requester>
       
         <performerType>
@@ -869,7 +869,7 @@
         <performer>
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-          <reference value="Organisation/LaborPipette"/>
+          <reference value="Organization/LaborPipette"/>
         </performer>
       
         <locationCode>

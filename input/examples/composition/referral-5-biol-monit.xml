@@ -33,14 +33,14 @@
   </subject>
   <date value="2019-03-31T11:46:09+02:00"/>
   <author>
-      <reference value="Organisation/Suva"/>
+      <reference value="Organization/Suva"/>
   </author>
   <title value="Referral min"/>
   <attester>
       <mode value="professional"/>
       <time value="2010-03-12T11:46:09+02:00"/>
       <party>
-          <reference value="Organisation/Suva"/>
+          <reference value="Organization/Suva"/>
       </party>
   </attester>
   <section>

@@ -1,7 +1,7 @@
 <Composition xmlns="http://hl7.org/fhir">
   <id value="referral-min"/>
   <meta>
-      <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+      <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
   </meta>
   <text>
       <status value="generated"/>

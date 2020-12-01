@@ -40,7 +40,7 @@
       <mode value="professional"/>
       <time value="2010-03-12T11:46:09+02:00"/>
       <party>
-          <reference value="Organisation/RegionalspitalZug"/>
+          <reference value="Organization/RegionalspitalZug"/>
       </party>
   </attester>
   <section>

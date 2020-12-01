@@ -34,7 +34,7 @@
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="Organisation/Suva"/>
+    <reference value="Organization/Suva"/>
   </requester>
 
   <performerType>
@@ -49,7 +49,7 @@
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <reference value="Organisation/LaborPipette"/>
+    <reference value="Organization/LaborPipette"/>
   </performer>
 
   <locationCode>

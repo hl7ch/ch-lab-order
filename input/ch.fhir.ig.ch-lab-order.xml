@@ -23,6 +23,7 @@
       <value value="https://www.hl7.ch/" />
     </telecom>
   </contact>
+
   <!-- responsible for this Implementation Guide-->
   <contact>
     <name value="Marcel Hanselmann" />
@@ -33,16 +34,24 @@
   </contact>
 
   <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland" />
+
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
       <code value="CH" />
     </coding>
   </jurisdiction>
+
   <copyright value="CC-BY-SA-4.0" /> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
+
   <packageId value="ch.fhir.ig.ch-lab-order" /> <!-- NPM package name-->
+
   <license value="CC-BY-SA-4.0" />
+
   <fhirVersion value="4.0.1" />
+
+  <!-- dependencies on other IG's -->
+  <!-- ############################ -->
 
   <dependsOn id="sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
@@ -50,14 +59,12 @@
     <version value="2.7.0" />
   </dependsOn>
 
-  <!-- dependencies from other IG's-->
   <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf" />
     <packageId value="ch.fhir.ig.ch-orf" />
     <version value="current" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
-  <!--  -->
   <dependsOn id="chcore">
     <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core" />
     <packageId value="ch.fhir.ig.ch-core" />
@@ -65,47 +72,27 @@
   </dependsOn>
 
 
-  <!-- Patients, Organisations and Practitioners must conform CH-core-->
+  <!-- Patients, Organizations and Practitioners must conform CH-core-->
+  <!-- 
   <global>
     <type value="Patient" />
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr" />
-    <type value="Organisation" />
+    <type value="Organization" />
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr" />
     <type value="Practitioner" />
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr" />
   </global>
+  -->
 
   <definition>
     <grouping>
-      <name value="CHCoreCompositionEPR" />
+      <name value="CH LAB-ORDER" />
     </grouping>
-
-    <!-- <resource>
-      <reference>
-        <reference value="Bundle/referral-min"/>
-      </reference>
-      <name value="ServiceRequest"/>
-      <description value="Lab Order"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
-    </resource> -->
 
     <!-- Resources -->
     <!-- References to EXAMPLES: -->
-    <!-- ################ -->
-    <!-- <resource>
-      <reference>
-        <reference value="Composition/Zuweisung"/>
-      </reference>
-      <name value="Zuweisung"/>
-      <description value="Example for Composition"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
-    </resource> -->
+    <!-- ####################### -->
 
-    <!-- EXAMPLE RESOURES -->
-    <!-- ################ -->
-    <!-- Bundle -->
-
-    
     <!-- Bundle -->
     <!-- <resource>
       <reference>
@@ -114,15 +101,29 @@
       <name value="referral-min"/>
       <description value="Example Bundle for min referral/order"/>
     </resource>
+    -->
+    <!-- EXAMPLE RESOURES -->
+    <!-- ################ -->
 
+    <!-- 
     <resource>
       <reference>
-        <reference value="Bundle/referral-1-tvt"/>
+        <reference value="Composition/referral-min"/>
       </reference>
-      <name value="referral-1-tvt"/>
-      <description value="Example Bundle for referral/order for a TVT"/>
+      <name value="Referral minimal"/>
+      <description value="Example for Composition"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
     </resource>
-      -->
+    -->
+    <!--
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-1-tvt" />
+      </reference>
+      <name value="referral-1-tvt" />
+      <description value="Example Bundle for referral/order for a TVT" />
+    </resource>
+    -->
     <!-- <resource>
       <reference>
         <reference value="Bundle/referral-2-pertussis"/>
@@ -155,65 +156,64 @@
       <description value="Example Bundle for referral/order for a Biol-Monit"/>
     </resource> -->
 
-    <!-- Organisation -->
-
-    <!-- 
+    <!-- Organization -->
+      <!-- 
     <resource>
       <reference>
-        <reference value="Organization/PraxisHausarzt"/>
+         <reference value="Organization/Custodian"/>
       </reference>
-      <name value="Praxis Hausarzt"/>
-      <description value="Example Organisation"/>
-    </resource> 
-    -->
+      <name value="Custodian"/>
+      <description value="Example for Organization"/>
+   </resource>
+   -->
 
     <!-- Practitioner -->
 
     <resource>
       <reference>
-        <reference value="Practitioner/AgparMarc"/>
+        <reference value="Practitioner/AgparMarc" />
       </reference>
-      <name value="Agpar Marc"/>
-      <description value="Example for Practitioner"/>
-      <exampleBoolean value="true"/>
+      <name value="Agpar Marc" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Practitioner/FamilienHausarzt"/>
+        <reference value="Practitioner/FamilienHausarzt" />
       </reference>
-      <name value="Familien Hausarzt"/>
-      <description value="Example for Practitioner"/>
-      <exampleBoolean value="true"/>
+      <name value="Familien Hausarzt" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Practitioner/HansHauser"/>
+        <reference value="Practitioner/HansHauser" />
       </reference>
-      <name value="Hans Hauser"/>
-      <description value="Example for Practitioner"/>
-      <exampleBoolean value="true"/>
+      <name value="Hans Hauser" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Practitioner/MarcMustermann"/>
+        <reference value="Practitioner/MarcMustermann" />
       </reference>
-      <name value="Marc Mustermann"/>
-      <description value="Example for Practitioner"/>
-      <exampleBoolean value="true"/>
+      <name value="Marc Mustermann" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Practitioner/PeterPap"/>
+        <reference value="Practitioner/PeterPap" />
       </reference>
-      <name value="Peter Pap"/>
-      <description value="Example for Practitioner"/>
-      <exampleBoolean value="true"/>
+      <name value="Peter Pap" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
     </resource>
-    
+
 
     <!-- Patients -->
 
