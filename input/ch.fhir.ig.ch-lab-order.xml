@@ -73,7 +73,7 @@
 
 
   <!-- Patients, Organizations and Practitioners must conform CH-core-->
-  <!-- 
+
   <global>
     <type value="Patient" />
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr" />
@@ -82,7 +82,7 @@
     <type value="Practitioner" />
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr" />
   </global>
-  -->
+
 
   <definition>
     <grouping>
