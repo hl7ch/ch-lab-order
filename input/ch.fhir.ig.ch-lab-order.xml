@@ -160,12 +160,60 @@
 
     <resource>
       <reference>
-         <reference value="Organization/Custodian"/>
+        <reference value="Organization/Custodian" />
       </reference>
-      <name value="Custodian"/>
-      <description value="Example for Organization"/>
-   </resource>
+      <name value="Custodian" />
+      <description value="Example for Organization" />
+    </resource>
 
+    <resource>
+      <reference>
+        <reference value="Organization/LaborPipette" />
+      </reference>
+      <name value="Labor Pipette" />
+      <description value="Example for Laboratory Organization" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/PraxisHausarzt" />
+      </reference>
+      <name value="Praxis Hausarzt" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/RegionalspitalZugersee" />
+      </reference>
+      <name value="Regionalspital Zugersee" />
+      <description value="Example for Hospital" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/SpeiserRails" />
+      </reference>
+      <name value="Speiser Rails" />
+      <description value="Example for Manufacturer" />
+    </resource>
+   
+    <resource>
+      <reference>
+        <reference value="Organization/Spitex" />
+      </reference>
+      <name value="Spitex" />
+      <description value="Example for Spitex" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Suva" />
+      </reference>
+      <name value="SUVA" />
+      <description value="Example for Manufacturer" />
+    </resource>
+   
     <!-- Practitioner -->
 
     <resource>

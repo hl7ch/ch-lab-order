@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <Organization xmlns="http://hl7.org/fhir">
-  <id value="SpeiserRails"/>
+  <id value="SpeiserRails" />
   <meta>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr" />
   </meta>
   <identifier>
-    <system value="urn:oid:2.51.1.3"/>
-    <value value="7601000234438"/>
-    <!-- 
-    Business and Enterprise Register (BER) Unternehmens-Identifikationsnummer 
-    <system value="urn:oid:2.16.756.5.45"/>
-    <value value="" />
-    -->
-    <!--  Unique IDentification Business (UIDB) Unternehmens-Identifikationsnummer -->
-    <system value="urn:oid:2.16.756.5.45"/>
-    <value value="" />
+    <system value="urn:oid:2.16.756.5.45" />
+    <value value="76010002341000" />
   </identifier>
-  
-  <name value="SpeiserRails"/>
+  <name value="Speiser Rails" />
   <telecom>
     <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-      <valueCode value="NI"/>
+      <valueCode value="NI" />
     </extension>
   </telecom>
   <address>
-    <line value="Gleisallee 123"/>
-    <city value="Arbon"/>
-    <postalCode value="9320"/>
-    <country value="CH"/>
+    <line value="Gleisallee 123" />
+    <city value="Arbon" />
+    <postalCode value="9320" />
+    <country value="CH" />
   </address>
 </Organization>
+
+<!-- 
+Business and Enterprise Register (BER) Unternehmens-
+Identifikationsnummer 
+    <system value="urn:oid:2.16.756.5.45" />
+Unique IDentification Business (UIDB) Unternehmens-
+Identifikationsnummer
+-->
