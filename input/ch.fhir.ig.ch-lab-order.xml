@@ -157,7 +157,7 @@
     </resource> -->
 
     <!-- Organization -->
-      <!-- 
+
     <resource>
       <reference>
          <reference value="Organization/Custodian"/>
@@ -165,7 +165,6 @@
       <name value="Custodian"/>
       <description value="Example for Organization"/>
    </resource>
-   -->
 
     <!-- Practitioner -->
 
