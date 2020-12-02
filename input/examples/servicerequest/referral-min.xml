@@ -80,8 +80,10 @@
     <reference value="specimen/serum.xml" />
   </specimen>
 
+  <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage
   <insurance>
-    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
+
   </insurance>
+  -->
 
 </ServiceRequest>

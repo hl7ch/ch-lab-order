@@ -1,4 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Specimen xmlns="http://hl7.org/fhir">
+  <id value="template"/>
   <!-- from Resource: id, meta, implicitRules, and language -->
   <!-- from DomainResource: text, contained, extension, and modifierExtension -->
   <identifier><!-- 0..* This is a business identifier, not a resource identifier (see discussion) --></identifier>
