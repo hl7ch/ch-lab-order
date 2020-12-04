@@ -348,15 +348,15 @@
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
-    <!-- References to ServiceRequest 
+    <!-- References to ServiceRequest -->
     <resource>
       <reference>
-        <reference value="Bundle/referral-min" />
+        <reference value="ServiceRequest/laborder-service" />
       </reference>
-      <name value="referral-min" />
+      <name value="laborder service" />
       <description value="Example for service request" />
     </resource>
-    -->
+    
 
     <!-- References to Specimens -->
     <resource>
