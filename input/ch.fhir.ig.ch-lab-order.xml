@@ -73,6 +73,7 @@
 
 
   <!-- Patients, Organizations and Practitioners must conform CH-core -->
+  <!-- ############################################################## -->
 
   <global>
     <type value="Patient" />
@@ -89,10 +90,73 @@
       <name value="CH LAB-ORDER" />
     </grouping>
 
-    <!-- Resources -->
+    <!-- References to EXAMPLES: -->
+    <!-- ####################### -->
 
-    <!-- Bundle -->
-    <!-- <resource>
+    <!-- Reference to Bundle -->
+
+    <!--
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-min" />
+      </reference>
+      <name value="referral-1-tvt" />
+      <description value="Example Bundle for referral/order for a TVT" />
+    </resource>
+    -->
+
+    <!--
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-1-tvt" />
+      </reference>
+      <name value="referral-1-tvt" />
+      <description value="Example Bundle for referral/order for a TVT" />
+    </resource>
+    -->
+
+    <!-- 
+      <resource>
+      <reference>
+        <reference value="Bundle/referral-2-pertussis"/>
+      </reference>
+      <name value="referral-2-pertussis"/>
+      <description value="Example Bundle for referral/order for a Pertussis"/>
+    </resource>
+    -->
+
+    <!-- 
+      <resource>
+      <reference>
+        <reference value="Bundle/referral-3-gyn"/>
+      </reference>
+      <name value="referral-3-gyn"/>
+      <description value="Example Bundle for referral/order for a GYN"/>
+      </resource> 
+    -->
+
+    <!-- 
+      <resource>
+      <reference>
+        <reference value="Bundle/referral-4-sepsis"/>
+      </reference>
+      <name value="referral-4-sepsis"/>
+      <description value="Example Bundle for referral/order for a Sepsis"/>
+    </resource> 
+  -->
+
+    <!-- 
+      <resource>
+      <reference>
+        <reference value="Bundle/referral-5-biol-monit"/>
+      </reference>
+      <name value="referral-5-biol-monit"/>
+      <description value="Example Bundle for referral/order for a Biol-Monit"/>
+    </resource> 
+  -->
+
+    <!-- 
+    <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
       </reference>
@@ -100,8 +164,8 @@
       <description value="Example Bundle for min referral/order"/>
     </resource>
     -->
-    <!-- EXAMPLE RESOURES -->
-    <!-- ################ -->
+
+    <!-- Reference to Composition-->
 
     <!-- 
     <resource>
@@ -113,49 +177,11 @@
       <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
     </resource>
     -->
-    <!--
-    <resource>
-      <reference>
-        <reference value="Bundle/referral-1-tvt" />
-      </reference>
-      <name value="referral-1-tvt" />
-      <description value="Example Bundle for referral/order for a TVT" />
-    </resource>
-    -->
-    <!-- <resource>
-      <reference>
-        <reference value="Bundle/referral-2-pertussis"/>
-      </reference>
-      <name value="referral-2-pertussis"/>
-      <description value="Example Bundle for referral/order for a Pertussis"/>
-    </resource> -->
 
-    <!-- <resource>
-      <reference>
-        <reference value="Bundle/referral-3-gyn"/>
-      </reference>
-      <name value="referral-3-gyn"/>
-      <description value="Example Bundle for referral/order for a GYN"/>
-    </resource> -->
+    <!-- Reference to Coverage -->
 
-    <!-- <resource>
-      <reference>
-        <reference value="Bundle/referral-4-sepsis"/>
-      </reference>
-      <name value="referral-4-sepsis"/>
-      <description value="Example Bundle for referral/order for a Sepsis"/>
-    </resource> -->
-
-    <!-- <resource>
-      <reference>
-        <reference value="Bundle/referral-5-biol-monit"/>
-      </reference>
-      <name value="referral-5-biol-monit"/>
-      <description value="Example Bundle for referral/order for a Biol-Monit"/>
-    </resource> -->
-
-    <!-- Coverage -->
-    <!-- 
+    <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
+        Kostengutsprache, 
     <resource>
       <reference>
         <reference value="Coverage/HealthInsuranceCard" />
@@ -165,10 +191,7 @@
     </resource>
     -->
 
-    <!-- References to EXAMPLES: -->
-    <!-- ####################### -->
-
-    <!-- Organization -->
+    <!-- References to Organization -->
 
     <resource>
       <reference>
@@ -226,55 +249,7 @@
       <description value="Example for Manufacturer" />
     </resource>
 
-    <!-- Practitioner -->
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/AgparMarc" />
-      </reference>
-      <name value="Agpar Marc" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/FamilienHausarzt" />
-      </reference>
-      <name value="Familien Hausarzt" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/HansHauser" />
-      </reference>
-      <name value="Hans Hauser" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/MarcMustermann" />
-      </reference>
-      <name value="Marc Mustermann" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/PeterPap" />
-      </reference>
-      <name value="Peter Pap" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-
-    <!-- Patients -->
+    <!-- References to Patients -->
 
     <resource>
       <reference>
@@ -348,7 +323,55 @@
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
+    <!-- References to Practitioner -->
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/AgparMarc" />
+      </reference>
+      <name value="Agpar Marc" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/FamilienHausarzt" />
+      </reference>
+      <name value="Familien Hausarzt" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/HansHauser" />
+      </reference>
+      <name value="Hans Hauser" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/MarcMustermann" />
+      </reference>
+      <name value="Marc Mustermann" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/PeterPap" />
+      </reference>
+      <name value="Peter Pap" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
     <!-- References to Questionnaire -->
+
     <resource>
       <reference>
         <reference value="Questionnaire/chemogram" />
@@ -356,6 +379,16 @@
       <name value="questionnaire chemogram" />
       <description value="Example for questionnaire" />
     </resource>
+
+    <!-- References to QuestionnaireResponse 
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/chemogram" />
+      </reference>
+      <name value="questionnaire response chemogram" />
+      <description value="Example for questionnaire response" />
+    </resource>
+    -->
 
     <!-- References to ServiceRequest -->
     <resource>
@@ -365,7 +398,7 @@
       <name value="laborder service" />
       <description value="Example for service request" />
     </resource>
-    
+
 
     <!-- References to Specimens -->
     <resource>
@@ -396,7 +429,7 @@
     </resource>
 
     <!-- References to VALUESETS -->
-    <!-- ################ -->
+    <!-- ####################### -->
     <resource>
       <reference>
         <reference value="ValueSet/ig-example" />
