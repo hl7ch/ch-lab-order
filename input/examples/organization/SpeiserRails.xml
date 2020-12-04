@@ -11,9 +11,19 @@
   </identifier>
   <name value="Speiser Rails" />
   <telecom>
-    <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-      <valueCode value="NI" />
-    </extension>
+    <system value="phone"/>
+    <value value="+41412345566"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="info@speiser-rails.ch"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.speiser-rails.ch"/>
+    <use value="work"/>
   </telecom>
   <address>
     <line value="Gleisallee 123" />

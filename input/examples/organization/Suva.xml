@@ -11,9 +11,19 @@
   </identifier>
   <name value="Suva"/>
   <telecom>
-    <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-      <valueCode value="NI"/>
-    </extension>
+    <system value="phone"/>
+    <value value="+41322345566"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="info@suva.ch"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.suva.ch"/>
+    <use value="work"/>
   </telecom>
   <address>
     <line value="Löwenplatz 1"/>

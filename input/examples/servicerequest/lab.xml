@@ -1,0 +1,29 @@
+<ServiceRequest xmlns="http://hl7.org/fhir">
+
+  <id value="lab" />
+
+  <!-- 
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
+  </meta>
+  -->
+  <status value="active" />
+  <intent value="original-order" />
+  <subject>
+    <reference value="Patient/FranzMuster" />
+  </subject>
+  <requester>
+    <reference value="Practitioner/AgparMarc" />
+  </requester>
+  <performer> 
+    <reference value="Practitioner/PeterPap"/> 
+  </performer> 
+
+  <!-- Specimen, belongs to this laborder-service -->
+
+  <specimen> 
+    <reference value="Specimen/serum"/> 
+    <display value="Serum specimen"/> 
+  </specimen> 
+
+</ServiceRequest>

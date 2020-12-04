@@ -17,9 +17,19 @@
   </identifier>
   <name value="PraxisHausarzt" />
   <telecom>
-    <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-      <valueCode value="NI" />
-    </extension>
+    <system value="phone"/>
+    <value value="+41555545566"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="info@praxis-hausarzt.ch"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.praxis-hausarzt.ch"/>
+    <use value="work"/>
   </telecom>
   <address>
     <line value="Doktorgasse 2" />

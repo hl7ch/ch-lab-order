@@ -348,10 +348,19 @@
       <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
+    <!-- References to Questionnaire -->
+    <resource>
+      <reference>
+        <reference value="Questionnaire/chemogram" />
+      </reference>
+      <name value="questionnaire chemogram" />
+      <description value="Example for questionnaire" />
+    </resource>
+
     <!-- References to ServiceRequest -->
     <resource>
       <reference>
-        <reference value="ServiceRequest/laborder-service" />
+        <reference value="ServiceRequest/lab" />
       </reference>
       <name value="laborder service" />
       <description value="Example for service request" />
