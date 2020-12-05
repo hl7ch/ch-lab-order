@@ -1,12 +1,12 @@
 {
   "resourceType": "QuestionnaireResponse",
-  "id": "referral-min",
+  "id": "chemogram",
   "meta": {
     "profile": [
       "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"
     ]
   },
-  "questionnaire": "Questionnaire/referral-min",
+  "questionnaire": "Questionnaire/chemogram",
   "status": "completed",
   "item": [
     {

@@ -7,9 +7,9 @@
   </meta>
   <text>
     <status value="generated" />
-    <div>
+    <div xmlns="http://www.w3.org/1999/xhtml">
       Lab Order Questionnarie Response Example for a Chemogram
-            <pre>todo copy text out of rendering</pre>
+      <pre>todo copy text out of rendering</pre>
     </div>
   </text>
 
@@ -27,6 +27,64 @@
       <answer>
         <valueString value="123" />
       </answer>
+    </item>
+  </item>
+
+  <!-- orderer-->
+
+  <item>
+    <linkId value="orderer" />
+    <text value="Auftraggeber" />
+    <item>
+      <linkId value="orderer.author" />
+      <text value="Author" />
+      <item>
+        <linkId value="orderer.author.visum" />
+        <text value="Visum" />
+      </item>
+      <item>
+        <linkId value="orderer.author.organization" />
+        <text value="Organisation" />
+      </item>
+      <item>
+        <linkId value="orderer.author.lastname" />
+        <text value="Name" />
+        <answer>
+          <valueString value="Agpar" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="orderer.author.firstname" />
+        <text value="Vorname" />
+        <answer>
+          <valueString value="Marc" />
+        </answer>
+      </item>
+
+      <item>
+        <linkId value="orderer.author.tel" />
+        <text value="Telefon" />
+      </item>
+      <item>
+        <linkId value="orderer.author.e-mail" />
+        <text value="E-Mail" />
+      </item>
+      <item>
+        <linkId value="orderer.author.street" />
+        <text value="Strasse" />
+      </item>
+      <item>
+        <linkId value="orderer.author.postfach" />
+        <text value="Postfach" />
+      </item>
+      <item>
+        <linkId value="orderer.author.zip" />
+        <text value="PLZ" />
+      </item>
+      <item>
+        <linkId value="orderer.author.city" />
+        <text value="Ort" />
+      </item>
     </item>
   </item>
 
@@ -57,83 +115,19 @@
       </answer>
     </item>
     <item>
-      <linkId value="patient.gender" />
+      <linkId value="patient.birthdate" />
+      <text value="Geburtsdatum" />
+      <answer>
+        <valueDate value="1978-04-12" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.sex" />
       <text value="Geschlecht" />
       <answer>
-        <valueCoding>
-          <code value="male" />
-          <display value="Männlich" />
-        </valueCoding>
-      </answer>
-    </item>
-    <item>
-      <linkId value="patient.zip" />
-      <text value="PLZ" />
-      <answer>
-        <valueString value="5679" />
+        <valueString value="M" />
       </answer>
     </item>
   </item>
-  <item>
-    <linkId value="orderer" />
-    <text value="Sender" />
-    <item>
-      <linkId value="orderer.sender" />
-      <text value="Sender" />
-      <item>
-        <linkId value="orderer.sender.visum" />
-        <text value="Visum" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.organization" />
-        <text value="Bereich" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.abt" />
-        <text value="Bereich" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.lastname" />
-        <text value="Name" />
-        <answer>
-          <valueString value="Agpar" />
-        </answer>
-      </item>
-      <item>
-        <linkId value="orderer.sender.firstname" />
-        <text value="Vorname" />
-        <answer>
-          <valueString value="Marc" />
-        </answer>
-      </item>
-      <item>
-        <linkId value="orderer.sender.organization" />
-        <text value="Organisastion" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.tel" />
-        <text value="Telefon" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.e-mail" />
-        <text value="E-Mail" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.street" />
-        <text value="Strasse" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.postfach" />
-        <text value="Postfach" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.zip" />
-        <text value="PLZ" />
-      </item>
-      <item>
-        <linkId value="orderer.sender.city" />
-        <text value="Ort" />
-      </item>
-    </item>
-  </item>
+
 </QuestionnaireResponse>

@@ -380,7 +380,7 @@
       <description value="Example for questionnaire" />
     </resource>
 
-    <!-- References to QuestionnaireResponse 
+    <!-- References to QuestionnaireResponse -->
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/chemogram" />
@@ -388,7 +388,7 @@
       <name value="questionnaire response chemogram" />
       <description value="Example for questionnaire response" />
     </resource>
-    -->
+    
 
     <!-- References to ServiceRequest -->
     <resource>
