@@ -155,7 +155,8 @@
     </resource> 
   -->
 
-    <!-- 
+    <!-- Reference to Bundle-->
+    
     <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
@@ -163,25 +164,22 @@
       <name value="referral-min"/>
       <description value="Example Bundle for min referral/order"/>
     </resource>
-    -->
 
     <!-- Reference to Composition-->
 
-    <!-- 
     <resource>
       <reference>
         <reference value="Composition/referral-min"/>
       </reference>
       <name value="Referral minimal"/>
-      <description value="Example for Composition"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+      <description value="Example for Composition"/>      
     </resource>
-    -->
+
 
     <!-- Reference to Coverage -->
 
     <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
-        Kostengutsprache, 
+        Kostengutsprache, etc.
     <resource>
       <reference>
         <reference value="Coverage/HealthInsuranceCard" />
