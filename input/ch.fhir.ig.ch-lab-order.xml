@@ -375,7 +375,23 @@
         <reference value="Questionnaire/chemogram" />
       </reference>
       <name value="questionnaire chemogram" />
-      <description value="Example for questionnaire" />
+      <description value="Example for questionnaire clinical chemistry" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/hematology" />
+      </reference>
+      <name value="questionnaire hematology" />
+      <description value="Example for questionnaire hemaotolgy" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/1-tvt" />
+      </reference>
+      <name value="questionnaire chemogram" />
+      <description value="Example for questionnaire Expl. 1" />
     </resource>
 
     <!-- References to QuestionnaireResponse -->
