@@ -369,7 +369,6 @@
     </resource>
 
     <!-- References to Questionnaire -->
-
     <resource>
       <reference>
         <reference value="Questionnaire/chemogram" />
@@ -378,23 +377,8 @@
       <description value="Example for questionnaire clinical chemistry" />
     </resource>
 
-    <resource>
-      <reference>
-        <reference value="Questionnaire/hematology" />
-      </reference>
-      <name value="questionnaire hematology" />
-      <description value="Example for questionnaire hemaotolgy" />
-    </resource>
+    <!-- References to QuestionnaireResponse -->  
 
-    <resource>
-      <reference>
-        <reference value="Questionnaire/1-tvt" />
-      </reference>
-      <name value="questionnaire chemogram" />
-      <description value="Example for questionnaire Expl. 1" />
-    </resource>
-
-    <!-- References to QuestionnaireResponse -->
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/chemogram" />
@@ -402,7 +386,6 @@
       <name value="questionnaire response chemogram" />
       <description value="Example for questionnaire response" />
     </resource>
-    
 
     <!-- References to ServiceRequest -->
     <resource>

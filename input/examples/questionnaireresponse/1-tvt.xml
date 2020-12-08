@@ -1,48 +1,32 @@
-<Questionnaire xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="1-tvt" />
   <meta>
-    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      Lab Order Questionnarie Example for TVT
-      <pre>todo copy text out of rendering</pre>
-    </div>
-  </text>
-  <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
-    <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
-  </extension>
-  <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
-  <name value="LabOrderExample" />
-  <title value="Lab Order Example" />
-  <status value="draft" />
-  <experimental value="true" />
-  <subjectType value="Patient" />
-  <date value="2018-04-12" />
-  <publisher value="eHealth Suisse" />
-
-  <!-- item Lab Order Questionnaire Example for TVT -->
-  <item>
-    <linkId value="info" />
-    <text value="Lab Order Questionnarie Example for TVT" />
-    <type value="display" />
-  </item>
+  <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
+  <status value="completed" />
 
   <!-- item order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
-    <type value="group" />
     <item>
       <linkId value="order.date" />
       <text value="Auftrags-Datum" />
-      <type value="date" />
+      <answer>
+        <orderDate value="2020-01-01" />
+      </answer>
     </item>
     <item>
       <linkId value="order.number" />
       <text value="Auftrags-Nummer" />
-      <type value="string" />
+      <answer>
+        <valueString value="123" />
+      </answer>
     </item>
   </item>
 
@@ -51,8 +35,6 @@
     <linkId value="orderer" />
     <text value="Auftraggeber" />
     <type value="group" />
-
-    <!-- orderer.author-->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -108,8 +90,6 @@
         <type value="string" />
       </item>
     </item>
-
-    <!-- orderer.dataenterer-->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -170,8 +150,6 @@
         <type value="string" />
       </item>
     </item>
-
-    <!-- orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -227,8 +205,6 @@
         <type value="string" />
       </item>
     </item>
-
-    <!-- orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -285,7 +261,6 @@
       </item>
     </item>
   </item>
-
   <!-- item receiver -->
   <item>
     <linkId value="receiver" />
@@ -347,55 +322,47 @@
       <type value="string" />
     </item>
   </item>
-
   <!-- item patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
-    <type value="group" />
     <item>
       <linkId value="patient.lastname" />
-      <definition value="http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.given" />
       <text value="Name" />
-      <type value="string" />
+      <answer>
+        <valueString value="Guggindieluft" />
+      </answer>
     </item>
     <item>
       <linkId value="patient.firstname" />
-      <definition value="http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.first" />
       <text value="Vorname" />
-      <type value="string" />
+      <answer>
+        <valueString value="Hans" />
+      </answer>
     </item>
     <item>
       <linkId value="patient.pid" />
       <text value="PID (sendendes System)" />
-      <type value="string" />
-    </item>
-    <item>
-      <linkId value="patient.birthdate" />
-      <text value="Geburtsdatum" />
-      <type value="date" />
+      <answer>
+        <valueString value="012/08.111111" />
+      </answer>
     </item>
     <item>
       <linkId value="patient.sex" />
       <text value="Geschlecht" />
-      <type value="choice" />
-      <answerOption>
-        <valueString value="M" />
-      </answerOption>
-      <answerOption>
-        <valueString value="F" />
-      </answerOption>
+      <answer>
+        <valueCoding>
+          <code value="M" />
+          <display value="Männlich" />
+        </valueCoding>
+      </answer>
     </item>
     <item>
-      <linkId value="patient.amborstat" />
-      <text value="Amb/Stat" />
-      <type value="choice" />
-      <answerOption>
-        <valueString value="Amb" />
-      </answerOption>
-      <answerOption>
-        <valueString value="Stat" />
-      </answerOption>
+      <linkId value="patient.zip" />
+      <text value="PLZ" />
+      <answer>
+        <valueString value="5679" />
+      </answer>
     </item>
   </item>
 
@@ -408,41 +375,41 @@
       <linkId value="hemato-subset" />
       <text value="Hämatologie Subset" />
       <type value="string" />
-      <answerOption>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="24360-0" />
           <display value="Hemoglobin and Hematocrit panel - Blood" />
         </valueCoding>
-      </answerOption>
-      <answerOption>
+      </answer>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="43113-0" />
           <display value="Hemoglobin electrophoresis panel in Blood" />
         </valueCoding>
-      </answerOption>
-      <answerOption>
+      </answer>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="57021-8" />
           <display value="CBC W Auto Differential panel - Blood" />
         </valueCoding>
-      </answerOption>
-      <answerOption>
+      </answer>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="58410-2" />
           <display value="CBC panel - Blood by Automated count" />
         </valueCoding>
-      </answerOption>
-      <answerOption>
+      </answer>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="57023-4" />
           <display value="Auto Differential panel - Blood" />
         </valueCoding>
-      </answerOption>
+      </answer>
     </item>
   </item>
 
@@ -455,13 +422,13 @@
       <linkId value="d-dimer" />
       <text value="D-Dimer" />
       <type value="string" />
-      <answerOption>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="55398-2" />
           <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
         </valueCoding>
-      </answerOption>
+      </answer>
     </item>
   </item>
 
@@ -475,54 +442,50 @@
       <linkId value="crp-mass" />
       <text value="C-reaktives Protein Masse/Vol" />
       <type value="string" />
-      <answerOption>
-        <!-- diese Option wird am häufigsten gewählt: -->
-        <initialSelected value="true" />
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="1988-5" />
-          <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
+          <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
         </valueCoding>
-      </answerOption>
+      </answer>
     </item>
     <item>
       <linkId value="crp-mol" />
       <text value="C-reaktives Protein Mol/Vol" />
       <type value="string" />
-      <answerOption>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="76485-2" />
           <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
         </valueCoding>
-      </answerOption>
+      </answer>
     </item>
-
-    <!-- CRP C reactive Protein High sensitivity method -->
+    <!-- CRP C reactive Protein High sensitivity method-->
     <item>
       <linkId value="crphs-mass" />
       <text value="CRP Masse/Vol High sensitivity" />
       <type value="string" />
-      <answerOption>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="30522-7" />
           <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
         </valueCoding>
-      </answerOption>
+      </answer>
     </item>
     <item>
       <linkId value="crphr-mol" />
       <text value="CRP Mol/Vol High sensitivity" />
       <type value="string" />
-      <answerOption>
+      <answer>
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="76486-0" />
           <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
         </valueCoding>
-      </answerOption>
+      </answer>
     </item>
   </item>
-
-</Questionnaire>
+</QuestionnaireResponse>

@@ -16,11 +16,17 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/chemogram" />
   <status value="completed" />
 
-  <!-- order -->
-
+  <!-- item order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
+    <item>
+      <linkId value="order.date" />
+      <text value="Auftrags-Datum" />
+      <answer>
+        <valueDate value="2020-08-23" />
+      </answer>
+    </item>
     <item>
       <linkId value="order.number" />
       <text value="Auftrags-Nummer" />
@@ -60,7 +66,6 @@
           <valueString value="Marc" />
         </answer>
       </item>
-
       <item>
         <linkId value="orderer.author.tel" />
         <text value="Telefon" />
@@ -126,6 +131,178 @@
       <text value="Geschlecht" />
       <answer>
         <valueString value="M" />
+      </answer>
+    </item>
+  </item>
+
+  <!-- analytes chemogram-->
+  <item>
+    <linkId value="chemogram" />
+    <text value="Klinische Chemie" />
+    <item>
+      <linkId value="lab" />
+      <text value="Laborwerte" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2345-7" />
+          <display value="Glucose [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="33898-8" />
+          <display value="Bilirubin.conjugated+indirect [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="3094-0" />
+          <display value="Urea nitrogen [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="57332-9" />
+          <display value="Urate [Mass/volume] in 12 hour Urine" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2160-0" />
+          <display value="Creatinine [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="56776-8" />
+          <display value="Amylase S3+S4/Amylase.total in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2325-9" />
+          <display value="Gamma glutamyl transferase/Aspartate aminotransferase [Enzymatic activity ratio] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="1916-6" />
+          <display value="Aspartate aminotransferase/Alanine aminotransferase [Enzymatic activity ratio] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="76625-3" />
+          <display value="Alanine aminotransferase [Enzymatic activity/volume] in Blood" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="53524-5" />
+          <display value="Alkaline phosphatase.bile/Alkaline phosphatase.total in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="49129-0" />
+          <display value="Creatine kinase.MiMi/Creatine kinase.total in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2777-1" />
+          <display value="Phosphate [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2276-4" />
+          <display value="Ferritin [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="16615-7" />
+          <display value="Cholesterol.total/Cholesterol in LDL [Mass Ratio] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="3043-7" />
+          <display value="Triglyceride [Mass/volume] in Blood" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2823-3" />
+          <display value="Potassium [Moles/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2951-2" />
+          <display value="Sodium [Moles/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="17863-2" />
+          <display value="Calcium.ionized [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2572-6" />
+          <display value="Lipoprotein lipase [Enzymatic activity/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="2537-9" />
+          <display value="Lactate dehydrogenase 1 [Enzymatic activity/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="27340-9" />
+          <display value="Cholesterol in HDL [Presence] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="22748-8" />
+          <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="1751-7" />
+          <display value="Albumin [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
       </answer>
     </item>
   </item>
