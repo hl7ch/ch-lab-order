@@ -403,12 +403,11 @@
   <item>
     <linkId value="chemogram" />
     <text value="Klinische Chemie" />
-    <type value="group" />
+    <type value="choice" />
     <item>
-      <linkId value="analyte" />
-      <text value="Analyt" />
-      <type value="choice" />
-      <repeats value="true" />
+      <linkId value="lab" />
+      <text value="Laborwerte" />
+      <type value="string" />
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -416,7 +415,6 @@
           <display value="Glucose [Mass/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
-
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -424,7 +422,6 @@
           <display value="Bilirubin.conjugated+indirect [Mass/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
-
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -432,7 +429,6 @@
           <display value="Urea nitrogen [Mass/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
-
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
