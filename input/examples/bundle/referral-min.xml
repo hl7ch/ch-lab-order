@@ -87,33 +87,40 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
         </meta>
-        
+
         <text>
-          <status value="generated"/>
+          <status value="generated" />
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>
               <b>Generated Narrative with Details</b>
             </p>
             <p>
-              <b>id</b>: FranzMuster
+              <b>id</b>
+              : FranzMuster
             </p>
             <p>
-              <b>meta</b>: 
+              <b>meta</b>
+              :
             </p>
             <p>
-              <b>identifier</b>: 012/08.111111
+              <b>identifier</b>
+              : 012/08.111111
             </p>
             <p>
-              <b>name</b>: Franz Muster 
+              <b>name</b>
+              : Franz Muster
             </p>
             <p>
-              <b>gender</b>: MALE
+              <b>gender</b>
+              : MALE
             </p>
             <p>
-              <b>birthDate</b>: Jan 27, 1995
+              <b>birthDate</b>
+              : Jan 27, 1995
             </p>
             <p>
-              <b>maritalStatus</b>: in eingetragener Partnerschaft 
+              <b>maritalStatus</b>
+              : in eingetragener Partnerschaft
               <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code &#39;6&#39; = &#39;6&#39;, given as &#39;in eingetragener Partnerschaft&#39;})</span>
             </p>
             <h3>Communications</h3>
@@ -129,7 +136,8 @@
               </tr>
               <tr>
                 <td>*</td>
-                <td>Deutsch (Schweiz) 
+                <td>
+                  Deutsch (Schweiz)
                   <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code &#39;de-CH&#39; = &#39;German (Region=Switzerland))</span>
                 </td>
                 <td>true</td>
@@ -241,22 +249,22 @@
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
         <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/chemogram" />
-        <version value="0.9.1" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
         <status value="draft" />
         <experimental value="true" />
         <subjectType value="Patient" />
-        <date value="2018-04-12T00:00:00+02:00" />
-        <publisher value="ahdis" />
+        <date value="2018-04-12" />
+        <publisher value="eHealth Suisse" />
+      
+        <!-- item Lab Order Questionnaire Example for Chemogram -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnarie Example for a Chemogram" />
           <type value="display" />
         </item>
-
-        <!-- order-->
-
+      
+        <!-- item order-->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
@@ -266,20 +274,20 @@
             <text value="Auftrags-Datum" />
             <type value="date" />
           </item>
-
           <item>
             <linkId value="order.number" />
             <text value="Auftrags-Nummer" />
             <type value="string" />
           </item>
         </item>
-
-        <!-- orderer-->
-
+      
+        <!-- item orderer-->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
           <type value="group" />
+      
+          <!-- orderer.author-->
           <item>
             <linkId value="orderer.author" />
             <text value="Author" />
@@ -335,6 +343,8 @@
               <type value="string" />
             </item>
           </item>
+      
+          <!-- orderer.dataenterer-->
           <item>
             <linkId value="orderer.dataenterer" />
             <text value="Erfasser" />
@@ -395,6 +405,8 @@
               <type value="string" />
             </item>
           </item>
+      
+          <!-- orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
             <text value="Urgent Notification Contact for this document:" />
@@ -450,6 +462,8 @@
               <type value="string" />
             </item>
           </item>
+      
+          <!-- orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
             <text value="Urgent Notification Contact for the response of this document:" />
@@ -506,9 +520,8 @@
             </item>
           </item>
         </item>
-
-        <!-- receiver -->
-
+      
+        <!-- item receiver -->
         <item>
           <linkId value="receiver" />
           <text value="Receiver" />
@@ -569,9 +582,8 @@
             <type value="string" />
           </item>
         </item>
-
-        <!-- patient-->
-
+      
+        <!-- item patient-->
         <item>
           <linkId value="patient" />
           <text value="Patient" />
@@ -621,17 +633,18 @@
             </answerOption>
           </item>
         </item>
-
-        <!-- analytes -->
-
+      
+        <!-- analytes chemogram-->
         <item>
           <linkId value="chemogram" />
           <text value="Klinische Chemie" />
-          <type value="choice" />
+          <type value="group" />
           <item>
-            <linkId value="lab" />
-            <text value="Laborwerte" />
-            <type value="string" />
+            <linkId value="analyte" />
+            <text value="Analyt" />
+            <type value="choice" />
+            <repeats value="true" />
+            
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -639,6 +652,7 @@
                 <display value="Glucose [Mass/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -646,6 +660,7 @@
                 <display value="Bilirubin.conjugated+indirect [Mass/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -653,6 +668,7 @@
                 <display value="Urea nitrogen [Mass/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -723,7 +739,7 @@
                 <display value="Ferritin [Mass/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
-
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -797,6 +813,7 @@
           </item>
         </item>
       </Questionnaire>
+      
     </resource>
   </entry>
 
@@ -823,11 +840,17 @@
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/chemogram" />
         <status value="completed" />
 
-        <!-- order -->
-
+        <!-- item order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
+          <item>
+            <linkId value="order.date" />
+            <text value="Auftrags-Datum" />
+            <answer>
+              <valueDate value="2020-08-23" />
+            </answer>
+          </item>
           <item>
             <linkId value="order.number" />
             <text value="Auftrags-Nummer" />
@@ -838,7 +861,6 @@
         </item>
 
         <!-- orderer-->
-
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
@@ -867,7 +889,6 @@
                 <valueString value="Marc" />
               </answer>
             </item>
-
             <item>
               <linkId value="orderer.author.tel" />
               <text value="Telefon" />
@@ -896,7 +917,6 @@
         </item>
 
         <!-- patient -->
-
         <item>
           <linkId value="patient" />
           <text value="Patient" />
@@ -937,6 +957,41 @@
           </item>
         </item>
 
+        <!-- analytes chemogram-->
+        <!-- actually outcommented, waiting on response from Zulip -->
+        <item>
+          <linkId value="chemogram" />
+          <text value="Klinische Chemie" />
+
+          <item>
+            <linkId value="analyte" />
+            <text value="Analyt" />
+
+            <answer>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="2345-7" />
+                <display value="Glucose [Mass/volume] in Serum or Plasma" />
+              </valueCoding>
+            </answer>
+
+            <answer>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="33898-8" />
+                <display value="Bilirubin.conjugated+indirect [Mass/volume] in Serum or Plasma" />
+              </valueCoding>
+            </answer>
+
+            <answer>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="3094-0" />
+                <display value="Urea nitrogen [Mass/volume] in Serum or Plasma" />
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
       </QuestionnaireResponse>
     </resource>
   </entry>

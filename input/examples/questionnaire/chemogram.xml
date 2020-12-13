@@ -409,6 +409,7 @@
       <text value="Analyt" />
       <type value="choice" />
       <repeats value="true" />
+      
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />

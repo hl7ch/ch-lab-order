@@ -369,12 +369,13 @@
     </resource>
 
     <!-- References to Questionnaire -->
+
     <resource>
       <reference>
         <reference value="Questionnaire/chemogram" />
       </reference>
       <name value="questionnaire chemogram" />
-      <description value="Example for questionnaire clinical chemistry" />
+      <description value="Example for questionnaire" />
     </resource>
 
     <!-- References to QuestionnaireResponse -->  

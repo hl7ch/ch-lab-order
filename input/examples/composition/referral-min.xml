@@ -43,8 +43,9 @@
       <reference value="Practitioner/AgparMarc"/>
     </party>
   </attester>
+
   <section>
-    <title value="Chemogram"/>
+    <title value="chemogram"/>
     <entry>
       <reference value="Questionnaire/chemogram"/>
     </entry>
