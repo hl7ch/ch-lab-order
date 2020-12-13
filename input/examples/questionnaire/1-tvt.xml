@@ -126,18 +126,22 @@
       </item>
       <item>
         <linkId value="orderer.dataenterer.lastname" />
+        <text value="Name" />
+        <type value="string" />
+        <!-- 
         <code>
           <system value="http://tbd" />
           <code value="datlname" />
         </code>
-        <text value="Name" />
-        <type value="string" />
+        -->
       </item>
       <item>
         <linkId value="orderer.dataenterer.firstname" />
-        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
         <text value="Vorname" />
         <type value="string" />
+        <!-- 
+        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+        -->
       </item>
       <item>
         <linkId value="orderer.dataenterer.tel" />
@@ -403,11 +407,13 @@
   <item>
     <linkId value="hematology" />
     <text value="Hematology" />
-    <type value="choice" />
+    <type value="group" />
     <item>
       <linkId value="hemato-subset" />
       <text value="Hämatologie Subset" />
-      <type value="string" />
+      <type value="choice" />
+      <repeats value="true" />
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -450,11 +456,12 @@
   <item>
     <linkId value="coagulation" />
     <text value="Coagulation" />
-    <type value="choice" />
+    <type value="group" />
     <item>
       <linkId value="d-dimer" />
       <text value="D-Dimer" />
-      <type value="string" />
+      <type value="choice" />
+      <repeats value="true" />
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -467,28 +474,25 @@
 
   <!-- CRP C reactive Protein-->
   <item>
-    <linkId value="clinical_chemistry" />
-    <text value="Klinische Chemie" />
-    <type value="choice" />
+    <linkId value="cc" />
+    <text value="clinical chemistry" />
+    <type value="group" />
     <!-- CRP C reactive Protein normal method -->
     <item>
-      <linkId value="crp-mass" />
-      <text value="C-reaktives Protein Masse/Vol" />
-      <type value="string" />
+      <linkId value="crp" />
+      <text value="CRP" />
+      <type value="choice" />
+      <repeats value="true" />
+
       <answerOption>
-        <!-- diese Option wird am häufigsten gewählt: -->
-        <initialSelected value="true" />
+        <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="1988-5" />
           <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
-    </item>
-    <item>
-      <linkId value="crp-mol" />
-      <text value="C-reaktives Protein Mol/Vol" />
-      <type value="string" />
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -496,13 +500,9 @@
           <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
-    </item>
 
-    <!-- CRP C reactive Protein High sensitivity method -->
-    <item>
-      <linkId value="crphs-mass" />
-      <text value="CRP Masse/Vol High sensitivity" />
-      <type value="string" />
+      <!-- CRP C reactive Protein High sensitivity method -->
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -510,11 +510,7 @@
           <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
         </valueCoding>
       </answerOption>
-    </item>
-    <item>
-      <linkId value="crphr-mol" />
-      <text value="CRP Mol/Vol High sensitivity" />
-      <type value="string" />
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -524,5 +520,4 @@
       </answerOption>
     </item>
   </item>
-
 </Questionnaire>

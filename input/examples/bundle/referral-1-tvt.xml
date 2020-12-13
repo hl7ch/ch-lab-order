@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="referral-1-tvt" />
+  <id value="1-tvt" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:18:41.341+00:00" />
@@ -13,17 +13,17 @@
   <timestamp value="2019-04-01T20:18:41.341+00:00" />
   <!-- 1st Entry: Composistion-->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Composition/referral-1-tvt" />
+    <fullUrl value="http://test.fhir.ch/r4/Composition/1-tvt" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
-        <id value="referral-1-TVT" />
+        <id value="1-tvt" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
         <text>
           <status value="generated" />
           <div xmlns="http://www.w3.org/1999/xhtml">
-                    Referral 1-TVT
+                    Referral 1-tvt
                 </div>
         </text>
         <!--
@@ -43,7 +43,7 @@
                     <code value="" />
                 </coding>
             -->
-          <text value="Referral 1-TVT" />
+          <text value="Referral 1-tvt" />
         </type>
         <subject>
           <reference value="Patient/FranzMuster" />
@@ -52,7 +52,7 @@
         <author>
           <reference value="Practitioner/AgparMarc" />
         </author>
-        <title value="Referral 1-TVT" />
+        <title value="Referral 1-tvt" />
         <attester>
           <mode value="professional" />
           <time value="2010-03-12T11:46:09+02:00" />
@@ -63,13 +63,13 @@
         <section>
           <title value="Referral" />
           <entry>
-            <reference value="Questionnaire/referral-1-TVT" />
+            <reference value="Questionnaire/1-tvt" />
           </entry>
           <entry>
-            <reference value="QuestionnaireResponse/referral-1-TVT" />
+            <reference value="QuestionnaireResponse/1-tvt" />
           </entry>
           <entry>
-            <reference value="ServiceRequest/referral-1-TVT" />
+            <reference value="ServiceRequest/1-tvt" />
           </entry>
         </section>
       </Composition>
@@ -221,10 +221,10 @@
   </entry>
   <!-- questionnaire -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Questionnaire/referral-1-tvt" />
+    <fullUrl value="http://test.fhir.ch/r4/Questionnaire/1-tvt" />
     <resource>
       <Questionnaire xmlns="http://hl7.org/fhir">
-        <id value="referral-1-tvt" />
+        <id value="1-tvt" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
         </meta>
@@ -238,7 +238,7 @@
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
-        <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-1-tvt" />
+        <url value="http://fhir.ch/ig/ch-orf/Questionnaire/1-tvt" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
         <status value="draft" />
@@ -732,9 +732,9 @@
   </entry>
   <!-- serviceRequest -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/referral-1-tvt" />
+    <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/1-tvt" />
     <ServiceRequest xmlns="http://hl7.org/fhir">
-      <id value="referral-1-tvt" />
+      <id value="1-tvt" />
       <meta>
         <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
       </meta>

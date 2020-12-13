@@ -116,7 +116,7 @@
       <linkId value="patient.pid" />
       <text value="PID (sendendes System)" />
       <answer>
-        <valueString value="012/08.111111" />
+        <valueString value="012/08.111100" />
       </answer>
     </item>
     <item>

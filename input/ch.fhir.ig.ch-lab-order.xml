@@ -100,7 +100,7 @@
       <reference>
         <reference value="Bundle/referral-min" />
       </reference>
-      <name value="referral-1-tvt" />
+      <name value="1-tvt" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
     -->
@@ -108,9 +108,9 @@
     <!--
     <resource>
       <reference>
-        <reference value="Bundle/referral-1-tvt" />
+        <reference value="Bundle/1-tvt" />
       </reference>
-      <name value="referral-1-tvt" />
+      <name value="1-tvt" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
     -->
@@ -172,6 +172,14 @@
         <reference value="Composition/referral-min"/>
       </reference>
       <name value="Referral minimal"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/1-tvt"/>
+      </reference>
+      <name value="1-tvt"/>
       <description value="Example for Composition"/>      
     </resource>
 
@@ -369,7 +377,6 @@
     </resource>
 
     <!-- References to Questionnaire -->
-
     <resource>
       <reference>
         <reference value="Questionnaire/chemogram" />
@@ -378,8 +385,15 @@
       <description value="Example for questionnaire" />
     </resource>
 
-    <!-- References to QuestionnaireResponse -->  
+    <resource>
+      <reference>
+        <reference value="Questionnaire/1-tvt" />
+      </reference>
+      <name value="questionnaire 1-tvt" />
+      <description value="Example for 1-tvt" />
+    </resource>
 
+    <!-- References to QuestionnaireResponse -->  
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/chemogram" />
@@ -388,6 +402,14 @@
       <description value="Example for questionnaire response" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/1-tvt" />
+      </reference>
+      <name value="questionnaire response 1-tvt" />
+      <description value="Example for questionnaire response" />
+    </resource>
+    
     <!-- References to ServiceRequest -->
     <resource>
       <reference>
@@ -397,6 +419,15 @@
       <description value="Example for service request" />
     </resource>
 
+    <!-- 
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/1-tvt" />
+      </reference>
+      <name value="laborder 1-tvt" />
+      <description value="Example for 1-tvt request" />
+    </resource>
+    -->
 
     <!-- References to Specimens -->
     <resource>

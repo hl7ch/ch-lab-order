@@ -1,11 +1,11 @@
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
-  <id value="referral-1-tvt" />
+  <id value="1-tvt" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
   </meta>
-  <questionnaire value="Questionnaire/referral-1-tvt" />
+  <questionnaire value="Questionnaire/1-tvt" />
   <status value="completed" />
   <!-- item order -->
   <item>
