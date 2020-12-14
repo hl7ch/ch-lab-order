@@ -33,7 +33,7 @@
       <linkId value="order.number" />
       <text value="Auftrags-Nummer" />
       <answer>
-        <valueString value="123" />
+        <valueString value="12302" />
       </answer>
     </item>
   </item>
@@ -57,14 +57,14 @@
         <linkId value="orderer.author.lastname" />
         <text value="Name" />
         <answer>
-          <valueString value="Agpar" />
+          <valueString value="Hausarzt" />
         </answer>
       </item>
       <item>
         <linkId value="orderer.author.firstname" />
         <text value="Vorname" />
         <answer>
-          <valueString value="Marc" />
+          <valueString value="Fammilien" />
         </answer>
       </item>
       <item>
@@ -136,7 +136,6 @@
   </item>
 
   <!-- analytes chemogram-->
-  <!-- actually outcommented, waiting on response from Zulip -->
   <item>
     <linkId value="chemogram" />
     <text value="Klinische Chemie" />

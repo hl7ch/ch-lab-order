@@ -1,126 +1,183 @@
-<QuestionnaireResponse
-                xmlns="http://hl7.org/fhir">
-                <id value="2-pertussis"/>
-                <meta>
-                    <versionId value="1"/>
-                    <lastUpdated value="2019-04-01T20:17:53.340+00:00"/>
-                    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"/>
-                </meta>
-                <questionnaire value="Questionnaire/2-pertussis"/>
-                <status value="completed"/>
-                <item>
-                    <linkId value="order"/>
-                    <text value="Auftrag"/>
-                    <item>
-                        <linkId value="order.number"/>
-                        <text value="Auftrags-Nummer"/>
-                        <answer>
-                            <valueString value="123"/>
-                        </answer>
-                    </item>
-                </item>
-                <item>
-                    <linkId value="patient"/>
-                    <text value="Patient"/>
-                    <item>
-                        <linkId value="patient.lastname"/>
-                        <text value="Name"/>
-                        <answer>
-                            <valueString value="Muster"/>
-                        </answer>
-                    </item>
-                    <item>
-                        <linkId value="patient.firstname"/>
-                        <text value="Vorname"/>
-                        <answer>
-                            <valueString value="Franz"/>
-                        </answer>
-                    </item>
-                    <item>
-                        <linkId value="patient.pid"/>
-                        <text value="PID (sendendes System)"/>
-                        <answer>
-                            <valueString value="012/08.111111"/>
-                        </answer>
-                    </item>
-                    <item>
-                        <linkId value="patient.sex"/>
-                        <text value="Geschlecht"/>
-                        <answer>
-                            <valueCoding>
-                                <code value="M"/>
-                                <display value="Männlich"/>
-                            </valueCoding>
-                        </answer>
-                    </item>
-                    <item>
-                        <linkId value="patient.zip"/>
-                        <text value="PLZ"/>
-                        <answer>
-                            <valueString value="5679"/>
-                        </answer>
-                    </item>
-                </item>
-                <item>
-                    <linkId value="orderer"/>
-                    <text value="Sender"/>
-                    <item>
-                        <linkId value="orderer.sender"/>
-                        <text value="Sender"/>
-                        <item>
-                            <linkId value="orderer.sender.visum"/>
-                            <text value="Visum"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.bereich"/>
-                            <text value="Bereich"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.abt"/>
-                            <text value="Bereich"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.lastname"/>
-                            <text value="Name"/>
-                            <answer>
-                                <valueString value="Agpar"/>
-                            </answer>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.firstname"/>
-                            <text value="Vorname"/>
-                            <answer>
-                                <valueString value="Marc"/>
-                            </answer>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.organization"/>
-                            <text value="Organisastion"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.tel"/>
-                            <text value="Telefon"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.e-mail"/>
-                            <text value="E-Mail"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.street"/>
-                            <text value="Strasse"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.postfach"/>
-                            <text value="Postfach"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.zip"/>
-                            <text value="PLZ"/>
-                        </item>
-                        <item>
-                            <linkId value="orderer.sender.city"/>
-                            <text value="Ort"/>
-                        </item>
-                    </item>
-                </item>
-            </QuestionnaireResponse>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="2-pertussis" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      Lab Order Questionnarie Response Example for a Chemogram
+      <pre>todo copy text out of rendering</pre>
+    </div>
+  </text>
+
+  <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis" />
+  <status value="completed" />
+
+  <!-- item order -->
+  <item>
+    <linkId value="order" />
+    <text value="Auftrag" />
+    <item>
+      <linkId value="order.date" />
+      <text value="Auftrags-Datum" />
+      <answer>
+        <valueDate value="2020-08-23" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="order.number" />
+      <text value="Auftrags-Nummer" />
+      <answer>
+        <valueString value="12302" />
+      </answer>
+    </item>
+  </item>
+
+  <!-- orderer-->
+  <item>
+    <linkId value="orderer" />
+    <text value="Auftraggeber" />
+    <item>
+      <linkId value="orderer.author" />
+      <text value="Author" />
+      <item>
+        <linkId value="orderer.author.visum" />
+        <text value="Visum" />
+      </item>
+      <item>
+        <linkId value="orderer.author.organization" />
+        <text value="Organisation" />
+      </item>
+      <item>
+        <linkId value="orderer.author.lastname" />
+        <text value="Name" />
+        <answer>
+          <valueString value="Hausarzt" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="orderer.author.firstname" />
+        <text value="Vorname" />
+        <answer>
+          <valueString value="Familien" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="orderer.author.tel" />
+        <text value="Telefon" />
+      </item>
+      <item>
+        <linkId value="orderer.author.e-mail" />
+        <text value="E-Mail" />
+      </item>
+      <item>
+        <linkId value="orderer.author.street" />
+        <text value="Strasse" />
+      </item>
+      <item>
+        <linkId value="orderer.author.postfach" />
+        <text value="Postfach" />
+      </item>
+      <item>
+        <linkId value="orderer.author.zip" />
+        <text value="PLZ" />
+      </item>
+      <item>
+        <linkId value="orderer.author.city" />
+        <text value="Ort" />
+      </item>
+    </item>
+  </item>
+
+  <!-- patient -->
+  <item>
+    <linkId value="patient" />
+    <text value="Patient" />
+    <item>
+      <linkId value="patient.lastname" />
+      <text value="Name" />
+      <answer>
+        <valueString value="Kummer" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.firstname" />
+      <text value="Vorname" />
+      <answer>
+        <valueString value="Emil" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.pid" />
+      <text value="PID (sendendes System)" />
+      <answer>
+        <valueString value="012/08.111103" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.birthdate" />
+      <text value="Geburtsdatum" />
+      <answer>
+        <valueDate value="2014-05-05" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.sex" />
+      <text value="Geschlecht" />
+      <answer>
+        <valueString value="M" />
+      </answer>
+    </item>
+  </item>
+
+  <!-- item specialty, here: microbiology-->
+  <item>
+    <linkId value="microbiology" />
+    <text value="Mikrobiologie" />
+    <item>
+      <linkId value="per" />
+      <text value="Pertussis and Parapertussis DNA" />
+    </item>
+  </item>
+
+  <!-- item specialty, here: hematology-->
+  <item>
+    <linkId value="hematology" />
+    <text value="Hämatologie" />
+    <item>
+      <linkId value="blood-diff" />
+      <text value="Manual Differential panel - Blood" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="24318-8" />
+          <display value="Manual Differential panel - Blood" />
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+
+  <!-- item specialty, here: clinical chemistry-->
+  <item>
+    <linkId value="clinical chemistry" />
+    <text value="Klinische Chemie" />
+    <!-- CRP C reactive Protein normal method -->
+    <item>
+      <linkId value="crp" />
+      <text value="C-reactive Protein" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="1988-5" />
+          <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+
+</QuestionnaireResponse>

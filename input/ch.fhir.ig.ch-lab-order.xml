@@ -94,6 +94,7 @@
     <!-- ####################### -->
 
     <!-- Reference to Bundle -->
+    <!-- 
     <resource>
       <reference>
         <reference value="Bundle/referral-min" />
@@ -101,6 +102,7 @@
       <name value="referral-min" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
+    -->
 
     <resource>
       <reference>
@@ -127,7 +129,6 @@
       <description value="Example for Composition"/>      
     </resource>
 
-    <!-- 
     <resource>
       <reference>
         <reference value="Composition/2-pertussis"/>
@@ -135,7 +136,6 @@
       <name value="2-pertussis"/>
       <description value="Example for Composition"/>      
     </resource>
-    -->
 
     <!-- Reference to Coverage -->
 
@@ -345,7 +345,6 @@
       <description value="Example for 1-tvt" />
     </resource>
 
-    <!-- 
     <resource>
       <reference>
         <reference value="Questionnaire/2-pertussis" />
@@ -353,7 +352,6 @@
       <name value="questionnaire 2-pertussis" />
       <description value="Example for 2-pertussis" />
     </resource>
-    -->
 
     <!-- References to QuestionnaireResponse -->  
     <resource>
@@ -371,8 +369,7 @@
       <name value="questionnaire response 1-tvt" />
       <description value="Example for questionnaire response" />
     </resource>
-
-    <!-- 
+ 
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/2-pertussis" />
@@ -380,7 +377,6 @@
       <name value="questionnaire response 2-pertussis" />
       <description value="Example for questionnaire response" />
     </resource>
-    -->
 
     <!-- References to ServiceRequest -->
     <resource>

@@ -25,24 +25,26 @@
           <system value="" />
           <code value="" />
       </coding>
-  -->
+    -->
     <text value="2-pertussis" />
   </type>
   <subject>
     <reference value="Patient/EmilKummer" />
   </subject>
-  <date value="2019-03-31T11:46:09+02:00" />
+  <date value="2020-03-31T11:46:09+02:00" />
   <author>
     <reference value="Practitioner/FamilienHausarzt" />
   </author>
-  <title value="Referral min" />
+  <title value="Referral Pertussis" />
   <attester>
     <mode value="professional" />
-    <time value="2010-03-12T11:46:09+02:00" />
+    <time value="2020-03-12T11:46:09+02:00" />
     <party>
       <reference value="Practitioner/FamilienHausarzt" />
     </party>
   </attester>
+
+  <!-- sections -->
   <section>
     <title value="Referral" />
     <entry>
