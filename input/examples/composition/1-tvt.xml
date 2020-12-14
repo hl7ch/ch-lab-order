@@ -29,7 +29,7 @@
       <text value="Referral 1-tvt" />
   </type>
   <subject>
-      <reference value="Patient/FranzMuster"/>
+      <reference value="Patient/HansGuggindieluft"/>
   </subject>
   <date value="2019-03-31T11:46:09+02:00"/>
   <author>

@@ -103,8 +103,6 @@
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
 
-
-    <!--
     <resource>
       <reference>
         <reference value="Bundle/1-tvt" />
@@ -112,7 +110,6 @@
       <name value="1-tvt" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
-    -->
 
     <!-- 
       <resource>
@@ -174,7 +171,6 @@
       <description value="Example for Composition"/>      
     </resource>
 
-    <!-- 
     <resource>
       <reference>
         <reference value="Composition/1-tvt"/>
@@ -182,7 +178,6 @@
       <name value="1-tvt"/>
       <description value="Example for Composition"/>      
     </resource>
-    -->
 
     <!-- Reference to Coverage -->
 
@@ -418,7 +413,6 @@
       <description value="Example for service request" />
     </resource>
    
-    <!-- 
     <resource>
       <reference>
         <reference value="ServiceRequest/1-tvt" />
@@ -426,7 +420,6 @@
       <name value="laborder 1-tvt" />
       <description value="Example for 1-tvt request" />
     </resource>
-    -->
 
     <!-- References to Specimens -->
     <resource>

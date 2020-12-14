@@ -1,5 +1,5 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="lab" />
+  <id value="1-tvt" />
 
   <!-- 
   <meta>
@@ -25,10 +25,10 @@
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
-    <reference value="Patient/FranzMuster" />
+    <reference value="Patient/HansGuggindieluft" />
   </subject>
   <requester>
-    <reference value="Practitioner/AgparMarc" />
+    <reference value="Practitioner/MarcMustermann" />
   </requester>
   <performer>
     <reference value="Practitioner/PeterPap" />
@@ -40,5 +40,4 @@
     <reference value="Specimen/serum" />
     <display value="Serum specimen" />
   </specimen>
-
 </ServiceRequest>
