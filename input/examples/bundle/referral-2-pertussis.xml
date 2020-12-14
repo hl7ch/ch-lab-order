@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="referral-2-pertussis" />
+  <id value="2-pertussis" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:18:41.341+00:00" />
@@ -13,10 +13,10 @@
   <timestamp value="2019-04-01T20:18:41.341+00:00" />
   <!-- 1st Entry: Composition-->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Composition/referral-2-pertussis" />
+    <fullUrl value="http://test.fhir.ch/r4/Composition/2-pertussis" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
-        <id value="referral-2-pertussis" />
+        <id value="2-pertussis" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
@@ -63,13 +63,13 @@
         <section>
           <title value="Referral" />
           <entry>
-            <reference value="Questionnaire/referral-2-pertussis" />
+            <reference value="Questionnaire/2-pertussis" />
           </entry>
           <entry>
-            <reference value="QuestionnaireResponse/referral-2-pertussis" />
+            <reference value="QuestionnaireResponse/2-pertussis" />
           </entry>
           <entry>
-            <reference value="ServiceRequest/referral-2-pertussis" />
+            <reference value="ServiceRequest/2-pertussis" />
           </entry>
         </section>
       </Composition>
@@ -216,10 +216,10 @@
   </entry>
   <!-- questionnaire -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Questionnaire/referral-2-pertussis" />
+    <fullUrl value="http://test.fhir.ch/r4/Questionnaire/2-pertussis" />
     <resource>
       <Questionnaire xmlns="http://hl7.org/fhir">
-        <id value="referral-2-pertussis.xml" />
+        <id value="2-pertussis.xml" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
         </meta>
@@ -233,7 +233,7 @@
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
-        <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-2-pertussis" />
+        <url value="http://fhir.ch/ig/ch-orf/Questionnaire/2-pertussis" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
         <status value="draft" />
@@ -659,16 +659,16 @@
   </entry>
   <!-- questionnaireResponse -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/QuestionnaireResponse/referral-2-pertussis" />
+    <fullUrl value="http://test.fhir.ch/r4/QuestionnaireResponse/2-pertussis" />
     <resource>
       <QuestionnaireResponse xmlns="http://hl7.org/fhir">
-        <id value="referral-2-pertussis" />
+        <id value="2-pertussis" />
         <meta>
           <versionId value="1" />
           <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
         </meta>
-        <questionnaire value="Questionnaire/referral-2-pertussis" />
+        <questionnaire value="Questionnaire/2-pertussis" />
         <status value="completed" />
         <item>
           <linkId value="order" />
@@ -790,10 +790,10 @@
   </entry>
   <!-- serviceRequest -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/referral-2-pertussis" />
+    <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/2-pertussis" />
     <resource>
       <ServiceRequest xmlns="http://hl7.org/fhir">
-        <id value="referral-2-pertussis" />
+        <id value="2-pertussis" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>

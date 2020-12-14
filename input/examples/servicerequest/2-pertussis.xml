@@ -1,5 +1,5 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="referral-2-pertussis"/>
+  <id value="2-pertussis"/>
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
@@ -64,9 +64,9 @@
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
     <coding>
       <system value="http://snomed.info/sct" />
-      <code value=" 432805000 " />
+      <code value=" 772146005 " />
     </coding>
-    <text value="Suspected deep vein thrombosis (situation)" />
+    <text value="Pertussis suspected (situation)" />
   </reasonCode>
   
   <reasonReference>

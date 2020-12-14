@@ -94,7 +94,6 @@
     <!-- ####################### -->
 
     <!-- Reference to Bundle -->
-
     <resource>
       <reference>
         <reference value="Bundle/referral-min" />
@@ -110,57 +109,6 @@
       <name value="1-tvt" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
-
-    <!-- 
-      <resource>
-      <reference>
-        <reference value="Bundle/referral-2-pertussis"/>
-      </reference>
-      <name value="referral-2-pertussis"/>
-      <description value="Example Bundle for referral/order for a Pertussis"/>
-    </resource>
-    -->
-
-    <!-- 
-      <resource>
-      <reference>
-        <reference value="Bundle/referral-3-gyn"/>
-      </reference>
-      <name value="referral-3-gyn"/>
-      <description value="Example Bundle for referral/order for a GYN"/>
-      </resource> 
-    -->
-
-    <!-- 
-      <resource>
-      <reference>
-        <reference value="Bundle/referral-4-sepsis"/>
-      </reference>
-      <name value="referral-4-sepsis"/>
-      <description value="Example Bundle for referral/order for a Sepsis"/>
-    </resource> 
-  -->
-
-    <!-- 
-      <resource>
-      <reference>
-        <reference value="Bundle/referral-5-biol-monit"/>
-      </reference>
-      <name value="referral-5-biol-monit"/>
-      <description value="Example Bundle for referral/order for a Biol-Monit"/>
-    </resource> 
-  -->
-
-    <!-- Reference to Bundle-->
-    <!-- 
-    <resource>
-      <reference>
-        <reference value="Bundle/referral-min"/>
-      </reference>
-      <name value="referral-min"/>
-      <description value="Example Bundle for min referral/order"/>
-    </resource>
-    -->
 
     <!-- Reference to Composition-->
     <resource>
@@ -178,6 +126,16 @@
       <name value="1-tvt"/>
       <description value="Example for Composition"/>      
     </resource>
+
+    <!-- 
+    <resource>
+      <reference>
+        <reference value="Composition/2-pertussis"/>
+      </reference>
+      <name value="2-pertussis"/>
+      <description value="Example for Composition"/>      
+    </resource>
+    -->
 
     <!-- Reference to Coverage -->
 
@@ -387,6 +345,16 @@
       <description value="Example for 1-tvt" />
     </resource>
 
+    <!-- 
+    <resource>
+      <reference>
+        <reference value="Questionnaire/2-pertussis" />
+      </reference>
+      <name value="questionnaire 2-pertussis" />
+      <description value="Example for 2-pertussis" />
+    </resource>
+    -->
+
     <!-- References to QuestionnaireResponse -->  
     <resource>
       <reference>
@@ -403,7 +371,17 @@
       <name value="questionnaire response 1-tvt" />
       <description value="Example for questionnaire response" />
     </resource>
-    
+
+    <!-- 
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/2-pertussis" />
+      </reference>
+      <name value="questionnaire response 2-pertussis" />
+      <description value="Example for questionnaire response" />
+    </resource>
+    -->
+
     <!-- References to ServiceRequest -->
     <resource>
       <reference>
@@ -420,6 +398,16 @@
       <name value="laborder 1-tvt" />
       <description value="Example for 1-tvt request" />
     </resource>
+
+    <!-- 
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/2-pertussis" />
+      </reference>
+      <name value="laborder 2-pertussis" />
+      <description value="Example for 2-pertussis request" />
+    </resource>
+    -->
 
     <!-- References to Specimens -->
     <resource>

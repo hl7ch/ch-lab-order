@@ -77,7 +77,7 @@
     </resource>
   </entry>
 
-  <!-- ch-core-Patient -->
+  <!-- entry[1] ch-core-Patient -->
   <entry>
     <fullUrl value="http://test.fhir.ch/r4/Patient/HansGuggindieluft" />
     <resource>

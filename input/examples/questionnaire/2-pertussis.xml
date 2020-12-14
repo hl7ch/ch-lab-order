@@ -1,6 +1,6 @@
 <Questionnaire
     xmlns="http://hl7.org/fhir">
-    <id value="referral-2-pertussis.xml"/>
+    <id value="2-pertussis"/>
     <meta>
         <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
     </meta>
@@ -15,7 +15,7 @@
     <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
         <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
     </extension>
-    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-2-pertussis"/>
+    <url value="http://fhir.ch/ig/ch-orf/Questionnaire/2-pertussis"/>
     <name value="LabOrderExample"/>
     <title value="Lab Order Example"/>
     <status value="draft"/>
