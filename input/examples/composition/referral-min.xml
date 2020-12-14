@@ -45,15 +45,15 @@
   </attester>
 
   <section>
-    <title value="chemogram"/>
+    <title value="Referral"/>
     <entry>
-      <reference value="Questionnaire/chemogram"/>
+      <reference value="Questionnaire/referral-min"/>
     </entry>
     <entry>
-      <reference value="QuestionnaireResponse/chemogram"/>
+      <reference value="QuestionnaireResponse/referral-min"/>
     </entry>
     <entry>
-      <reference value="ServiceRequest/lab"/>
+      <reference value="ServiceRequest/referral-min"/>
     </entry>
   </section>
 </Composition>

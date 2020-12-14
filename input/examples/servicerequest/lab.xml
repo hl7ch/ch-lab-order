@@ -6,23 +6,39 @@
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
   -->
+  <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
+
+  <!-- should be mandatory ?
+  <identifier>
+  </identifier>
+  -->
   <status value="active" />
   <intent value="original-order" />
+  <category>
+    <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="108252007" />
+    </coding>
+    <text value="Laboratory procedure (procedure)" />
+  </category>
+  <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
+
   <subject>
     <reference value="Patient/FranzMuster" />
   </subject>
   <requester>
     <reference value="Practitioner/AgparMarc" />
   </requester>
-  <performer> 
-    <reference value="Practitioner/PeterPap"/> 
-  </performer> 
+  <performer>
+    <reference value="Practitioner/PeterPap" />
+  </performer>
 
   <!-- Specimen, belongs to this laborder-service -->
 
-  <specimen> 
-    <reference value="Specimen/serum"/> 
-    <display value="Serum specimen"/> 
-  </specimen> 
+  <specimen>
+    <reference value="Specimen/serum" />
+    <display value="Serum specimen" />
+  </specimen>
 
 </ServiceRequest>

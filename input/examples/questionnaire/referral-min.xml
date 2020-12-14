@@ -1,5 +1,5 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
-  <id value="chemogram" />
+  <id value="referral-min" />
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
@@ -13,7 +13,7 @@
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
     <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
   </extension>
-  <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/chemogram" />
+  <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/referral-min" />
   <name value="LabOrderExample" />
   <title value="Lab Order Example" />
   <status value="draft" />
@@ -403,11 +403,13 @@
   <item>
     <linkId value="chemogram" />
     <text value="Klinische Chemie" />
-    <type value="choice" />
+    <type value="group" />
     <item>
-      <linkId value="lab" />
-      <text value="Laborwerte" />
-      <type value="string" />
+      <linkId value="analyte" />
+      <text value="Analyt" />
+      <type value="choice" />
+      <repeats value="true" />
+      
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -415,6 +417,7 @@
           <display value="Glucose [Mass/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -422,6 +425,7 @@
           <display value="Bilirubin.conjugated+indirect [Mass/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
@@ -429,6 +433,7 @@
           <display value="Urea nitrogen [Mass/volume] in Serum or Plasma" />
         </valueCoding>
       </answerOption>
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />

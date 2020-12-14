@@ -52,7 +52,7 @@
           <reference value="QuestionnaireResponse/1-tvt"/>
       </entry>
       <entry>
-          <reference value="ServiceRequest/lab"/>
+          <reference value="ServiceRequest/1-tvt"/>
       </entry>
   </section>
 </Composition>

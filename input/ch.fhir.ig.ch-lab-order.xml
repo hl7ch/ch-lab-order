@@ -95,15 +95,14 @@
 
     <!-- Reference to Bundle -->
 
-    <!--
     <resource>
       <reference>
         <reference value="Bundle/referral-min" />
       </reference>
-      <name value="1-tvt" />
+      <name value="referral-min" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
-    -->
+
 
     <!--
     <resource>
@@ -156,7 +155,7 @@
   -->
 
     <!-- Reference to Bundle-->
-    
+    <!-- 
     <resource>
       <reference>
         <reference value="Bundle/referral-min"/>
@@ -164,9 +163,9 @@
       <name value="referral-min"/>
       <description value="Example Bundle for min referral/order"/>
     </resource>
+    -->
 
     <!-- Reference to Composition-->
-
     <resource>
       <reference>
         <reference value="Composition/referral-min"/>
@@ -175,6 +174,7 @@
       <description value="Example for Composition"/>      
     </resource>
 
+    <!-- 
     <resource>
       <reference>
         <reference value="Composition/1-tvt"/>
@@ -182,7 +182,7 @@
       <name value="1-tvt"/>
       <description value="Example for Composition"/>      
     </resource>
-
+    -->
 
     <!-- Reference to Coverage -->
 
@@ -198,7 +198,6 @@
     -->
 
     <!-- References to Organization -->
-
     <resource>
       <reference>
         <reference value="Organization/Custodian" />
@@ -379,9 +378,9 @@
     <!-- References to Questionnaire -->
     <resource>
       <reference>
-        <reference value="Questionnaire/chemogram" />
+        <reference value="Questionnaire/referral-min" />
       </reference>
-      <name value="questionnaire chemogram" />
+      <name value="questionnaire referral-min" />
       <description value="Example for questionnaire" />
     </resource>
 
@@ -396,9 +395,9 @@
     <!-- References to QuestionnaireResponse -->  
     <resource>
       <reference>
-        <reference value="QuestionnaireResponse/chemogram" />
+        <reference value="QuestionnaireResponse/referral-min" />
       </reference>
-      <name value="questionnaire response chemogram" />
+      <name value="questionnaire response referral-min" />
       <description value="Example for questionnaire response" />
     </resource>
 
@@ -413,12 +412,12 @@
     <!-- References to ServiceRequest -->
     <resource>
       <reference>
-        <reference value="ServiceRequest/lab" />
+        <reference value="ServiceRequest/referral-min" />
       </reference>
       <name value="laborder service" />
       <description value="Example for service request" />
     </resource>
-
+   
     <!-- 
     <resource>
       <reference>
