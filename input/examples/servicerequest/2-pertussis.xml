@@ -77,9 +77,17 @@
 
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
-    <reference value="specimen/serum.xml" />
-    <reference value="specimen/blood.xml" />
-    <reference value="specimen/blood-coag.xml" />
+    <reference value="Specimen/throat-swab" />
+  </specimen>
+
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/blood" />
+  </specimen>
+
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/serum" />
   </specimen>
 
   <insurance>

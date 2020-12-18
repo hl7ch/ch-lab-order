@@ -20,13 +20,11 @@
   </identifier>
   <status value="final" />
   <type>
-    <!-- 
-      <coding>
-          <system value="" />
-          <code value="" />
-      </coding>
-    -->
-    <text value="2-pertussis" />
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="721965002"/> 
+    </coding> 
+    <text value="Laboratory order (record artifact)" />
   </type>
   <subject>
     <reference value="Patient/EmilKummer" />

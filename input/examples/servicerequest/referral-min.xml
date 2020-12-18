@@ -35,10 +35,19 @@
   </performer>
 
   <!-- Specimen, belongs to this laborder-service -->
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/blood" />
+    <display value="Blood specimen" />
+  </specimen>
 
   <specimen>
     <reference value="Specimen/serum" />
     <display value="Serum specimen" />
   </specimen>
+
+  <note> 
+    <text value="some additional infos"/> 
+  </note> 
 
 </ServiceRequest>

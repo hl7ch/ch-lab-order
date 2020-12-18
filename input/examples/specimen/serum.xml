@@ -2,10 +2,14 @@
 
 <Specimen xmlns="http://hl7.org/fhir">
   <id value="serum" />
-  <!-- 
-    Specimen.identifier, ~Auftragsnummer? not necessarily the same as accessionIdentifier
-    Specimen.accessionIdentifier, identifier assigned by the lab when accessioning specimen
-  -->
+  <identifier>
+    <!-- 0..* This is a business identifier, not a resource identifier (see discussion) -->
+    <value value="48736-12345-75465" />
+  </identifier>
+  <accessionIdentifier>
+    <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
+    <value value="4e88a-12345-dd888" />
+  </accessionIdentifier>
   
   <status value="available" />
   <type>
@@ -31,11 +35,12 @@
   </collection> 
   <container> 
     <type> 
-      <coding> 
-        <system value="http://acme.com/labs"/> 
-        <code value="SST"/> 
-        <display value="Serum Separator Tube"/> 
-      </coding> 
+      <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="706053007" />
+        <display value="General specimen container (physical object)" />
+      </coding>
     </type> 
   </container> 
  </Specimen>

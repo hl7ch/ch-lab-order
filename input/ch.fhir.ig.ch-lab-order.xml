@@ -395,7 +395,6 @@
       <description value="Example for 1-tvt request" />
     </resource>
 
-    <!-- 
     <resource>
       <reference>
         <reference value="ServiceRequest/2-pertussis" />
@@ -403,17 +402,63 @@
       <name value="laborder 2-pertussis" />
       <description value="Example for 2-pertussis request" />
     </resource>
-    -->
 
     <!-- References to Specimens -->
     <resource>
       <reference>
-        <reference value="Specimen/serum" />
+        <reference value="Specimen/blood-bactec-plus" />
       </reference>
-      <name value="Serum" />
+      <name value="Blood Sample Bacteriology" />
       <description value="Example for Specimen" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="Specimen/blood-coag" />
+      </reference>
+      <name value="Blood Sample Coagulation" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/blood" />
+      </reference>
+      <name value="Blood Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/lsac" />
+      </reference>
+      <name value="Cerebrospinal Fluid Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/serum" />
+      </reference>
+      <name value="Serum Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/throat-swab" />
+      </reference>
+      <name value="Throat Swab" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/urin" />
+      </reference>
+      <name value="Urin Sample" />
+      <description value="Example for Specimen" />
+    </resource>
 
     <!-- References to code systems -->
     <!-- ########################## -->

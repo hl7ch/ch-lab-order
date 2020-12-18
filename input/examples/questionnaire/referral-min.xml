@@ -29,7 +29,7 @@
     <type value="display" />
   </item>
 
-  <!-- item order-->
+  <!-- item Lab Order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -46,7 +46,7 @@
     </item>
   </item>
 
-  <!-- item orderer-->
+  <!-- item orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
@@ -399,7 +399,7 @@
     </item>
   </item>
 
-  <!-- analytes chemogram-->
+  <!-- specialty, here clinical chemistry-->
   <item>
     <linkId value="chemogram" />
     <text value="Klinische Chemie" />
@@ -409,7 +409,7 @@
       <text value="Analyt" />
       <type value="choice" />
       <repeats value="true" />
-      
+
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />
