@@ -102,7 +102,6 @@
       <name value="referral-min" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
-    -->
 
     <resource>
       <reference>
@@ -111,6 +110,7 @@
       <name value="1-tvt" />
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
+    -->
 
     <!-- Reference to Composition-->
     <resource>
@@ -129,6 +129,7 @@
       <description value="Example for Composition"/>      
     </resource>
 
+
     <resource>
       <reference>
         <reference value="Composition/2-pertussis"/>
@@ -141,6 +142,15 @@
 
     <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
         Kostengutsprache, etc.
+        -->
+    <resource>
+      <reference>
+        <reference value="Coverage/CoverageFranzMuster" />
+      </reference>
+      <name value="CoverageFranzMuster" />
+      <description value="Example for Insurance Coverage" />
+    </resource>
+
     <resource>
       <reference>
         <reference value="Coverage/HealthInsuranceCard" />
@@ -148,7 +158,7 @@
       <name value="HealthInsuranceCard" />
       <description value="Example for Insurance" />
     </resource>
-    -->
+    
 
     <!-- References to Organization -->
     <resource>
@@ -294,9 +304,9 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/FamilienHausarzt" />
+        <reference value="Practitioner/PeterPresto" />
       </reference>
-      <name value="Familien Hausarzt" />
+      <name value="Peter Presto" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>

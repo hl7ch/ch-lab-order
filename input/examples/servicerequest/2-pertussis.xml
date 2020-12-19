@@ -1,14 +1,19 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="2-pertussis"/>
+  <id value="2-pertussis" />
+
+  <!-- 
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
+  -->
+  <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
+
+  <!-- should be mandatory ?
   <identifier>
-    <!-- should be mandatory ?-->
-    <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
   </identifier>
-  <status value="active"/>
-  <intent value="original-order"/>
+  -->
+  <status value="active" />
+  <intent value="original-order" />
   <category>
     <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
     <coding>
@@ -17,24 +22,13 @@
     </coding>
     <text value="Laboratory procedure (procedure)" />
   </category>
-  <priority value="urgent" />  <!-- 0..1 routine | urgent | asap | stat -->
-  
+  <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
+
   <subject>
-      <reference value="Patient/EmilKummer"/>
+    <reference value="Patient/EmilKummer" />
   </subject>
-
-  <encounter>
-    <!-- 0..1 Reference(Encounter) Encounter in which the request was created -->
-  </encounter>
-
-  <occurrence>
-    <!-- 0..1 dateTime|Period|Timing When service should occur -->
-  </occurrence>
-
   <requester>
-    <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
-    Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="Practitioner/FamilienHausarzt"/>
+    <reference value="Practitioner/PeterPresto" />
   </requester>
 
   <performerType>
@@ -49,32 +43,19 @@
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <reference value="Organization/LaborPipette"/>
+    <reference value="Organization/LaborPipette" />
   </performer>
-
-  <locationCode>
-    <!-- 0..* CodeableConcept Requested location -->
-  </locationCode>
-
-  <locationReference>
-    <!-- 0..* Reference(Location) Requested location -->
-  </locationReference>
 
   <reasonCode>
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
     <coding>
       <system value="http://snomed.info/sct" />
-      <code value=" 772146005 " />
+      <code value="772146005" />
     </coding>
     <text value="Pertussis suspected (situation)" />
   </reasonCode>
-  
-  <reasonReference>
-    <!-- 0..* Reference(Condition|Observation|DiagnosticReport|
-    DocumentReference) Explanation/Justification for service or service -->
-    <reference value="" />
-  </reasonReference>
 
+  <!-- 3 Specimens, belong to this laborder-servicerequest -->
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
     <reference value="Specimen/throat-swab" />
@@ -89,9 +70,4 @@
     <!-- 0..* Reference(Specimen) Procedure Samples -->
     <reference value="Specimen/serum" />
   </specimen>
-
-  <insurance>
-    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
-  </insurance>
-
 </ServiceRequest>

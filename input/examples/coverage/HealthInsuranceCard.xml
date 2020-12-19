@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Coverage xmlns="http://hl7.org/fhir">
-  <id value="7547E"/> 
+  <id value="HealthInsuranceCard"/> 
 
   <text> 
     <status value="generated"/> 
@@ -35,18 +35,12 @@
   </type> 
 
   <subscriber> 
-    <reference value="Patient/5"/> 
+    <reference value="Patient/FranzMuster"/> 
   </subscriber> 
 
   <beneficiary> 
-    <reference value="Patient/5"/> 
+    <reference value="Patient/FranzMuster"/> 
   </beneficiary> 
-
-  <relationship> 
-    <coding> 
-      <code value="self"/> 
-    </coding> 
-  </relationship> 
 
   <period>  
     <end value="2012-03-17"/> 

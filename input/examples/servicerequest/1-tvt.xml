@@ -30,14 +30,40 @@
   <requester>
     <reference value="Practitioner/MarcMustermann" />
   </requester>
+
+  <performerType>
+    <!-- 0..1 CodeableConcept Performer role -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="61246008" />
+    </coding>
+    <text value="Laboratory medicine specialist (occupation)" />
+  </performerType>
+
   <performer>
+    <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
+    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
     <reference value="Practitioner/PeterPap" />
   </performer>
 
-  <!-- Specimen, belongs to this laborder-service -->
+  <reasonCode>
+    <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="404223003" />
+    </coding>
+    <text value="Deep venous thrombosis of lower extremity" />
+  </reasonCode>
+
+  <!-- 2 Specimens, belong to this laborder-service -->
 
   <specimen>
     <reference value="Specimen/serum" />
     <display value="Serum specimen" />
+  </specimen>
+
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/blood" />
   </specimen>
 </ServiceRequest>

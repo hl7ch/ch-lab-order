@@ -25,29 +25,37 @@
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
-    <reference value="Patient/FranzMuster" />
+    <reference value="Patient/HansGuggindieluft" />
   </subject>
   <requester>
-    <reference value="Practitioner/AgparMarc" />
+    <reference value="Practitioner/MarcMustermann" />
   </requester>
+
+  <performerType>
+    <!-- 0..1 CodeableConcept Performer role -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="61246008" />
+    </coding>
+    <text value="Laboratory medicine specialist (occupation)" />
+  </performerType>
+
   <performer>
     <reference value="Practitioner/PeterPap" />
   </performer>
 
-  <!-- Specimen, belongs to this laborder-service -->
-  <specimen>
-    <!-- 0..* Reference(Specimen) Procedure Samples -->
-    <reference value="Specimen/blood" />
-    <display value="Blood specimen" />
-  </specimen>
+  <reasonCode>
+    <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="772146005" />
+    </coding>
+    <text value="Pertussis suspected (situation)" />
+  </reasonCode>
 
+  <!-- Specimen, belongs to this laborder-service -->
   <specimen>
     <reference value="Specimen/serum" />
     <display value="Serum specimen" />
   </specimen>
-
-  <note> 
-    <text value="some additional infos"/> 
-  </note> 
-
 </ServiceRequest>

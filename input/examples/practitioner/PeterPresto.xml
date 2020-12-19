@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Practitioner xmlns="http://hl7.org/fhir">
-  <id value="FamilienHausarzt"/>
+  <id value="PeterPresto"/>
   <meta>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
   </meta>
@@ -9,7 +9,7 @@
     <value value="7601000050701"/>
   </identifier>
   <name>
-    <family value="Hausarzt"/>
-    <given value="Familien"/>
+    <family value="Presto"/>
+    <given value="Peter"/>
   </name>
 </Practitioner>

@@ -5,10 +5,6 @@
     <profile
              value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-coverage"/>
   </meta>
-  <text>
-    <status value="generated"/>
-    <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Coverage FranzMuster</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>identifier</b>: 80756015090002647590</p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href="Patient-ElisabethBroennimannByBFH.html">Generated Summary: id: ElisabethBroennimannByBFH; Elisabeth Brönnimann-Bertholet ; ph: +41 32 321 61 11(HOME), elisabeth@broennimann.today; gender: female; birthDate: 1937-05-03; <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}, {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">verheiratet</span></a></p><p><b>payor</b>: unknown resource contained</p></div>
-  </text>
   <contained>
     <Organization>
       <id value="sanitas"/>
