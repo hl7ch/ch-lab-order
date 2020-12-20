@@ -1,6 +1,8 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="referral-min" />
   <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
   <text>

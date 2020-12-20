@@ -1,6 +1,8 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="3-gyn" />
   <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
   <text>
@@ -10,6 +12,7 @@
       <pre>todo copy text out of rendering</pre>
     </div>
   </text>
+  
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
     <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
   </extension>
@@ -55,7 +58,7 @@
     <!-- orderer.author-->
     <item>
       <linkId value="orderer.author" />
-      <text value="Autor" />
+      <text value="Author" />
       <type value="group" />
       <item>
         <linkId value="orderer.author.visum" />

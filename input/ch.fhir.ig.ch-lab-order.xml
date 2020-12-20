@@ -396,6 +396,14 @@
       <description value="Example for questionnaire response" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/3-gyn" />
+      </reference>
+      <name value="questionnaire response 3-gyn" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
     <!-- References to ServiceRequest -->
     <resource>
       <reference>

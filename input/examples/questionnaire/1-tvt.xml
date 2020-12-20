@@ -1,6 +1,8 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="1-tvt" />
   <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
   <text>
@@ -10,6 +12,7 @@
       <pre>todo copy text out of rendering</pre>
     </div>
   </text>
+
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
     <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
   </extension>
@@ -22,14 +25,14 @@
   <date value="2018-04-12" />
   <publisher value="eHealth Suisse" />
 
-  <!-- item Lab Order Questionnaire Example for TVT -->
+  <!-- item #0 Lab Order Questionnaire Example for TVT -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnarie Example for TVT" />
     <type value="display" />
   </item>
 
-  <!-- item order -->
+  <!-- item #1 order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -46,7 +49,7 @@
     </item>
   </item>
 
-  <!-- item orderer -->
+  <!-- item #2 orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
@@ -290,7 +293,7 @@
     </item>
   </item>
 
-  <!-- item receiver -->
+  <!-- item #3 receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -352,7 +355,7 @@
     </item>
   </item>
 
-  <!-- item patient -->
+  <!-- item #4 patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -403,7 +406,7 @@
     </item>
   </item>
 
-  <!-- Item lab specialty, here: hematology -->
+  <!-- Item #5 lab specialty, here: hematology -->
   <item>
     <linkId value="hematology" />
     <text value="Hematology" />
@@ -452,7 +455,7 @@
     </item>
   </item>
 
-  <!-- D-Dimer -->
+  <!-- Item #6 lab specialty, here: coagulation -->
   <item>
     <linkId value="coagulation" />
     <text value="Coagulation" />
