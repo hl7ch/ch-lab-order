@@ -1,21 +1,21 @@
 <Questionnaire
   xmlns="http://hl7.org/fhir">
-  <id value="referral-3-gyn"/>
+  <id value="5-biol-monit"/>
   <meta>
       <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   </meta>
   <text>
-      <status value="generated"/>
-      <div
-          xmlns="http://www.w3.org/1999/xhtml">
-          Lab Order Questionnaire Example for preventive gynecologic screening
-          <pre>todo copy text out of rendering</pre>
-      </div>
+    <status value="generated"/>
+    <div
+        xmlns="http://www.w3.org/1999/xhtml">
+        Lab Order Questionnarie Example for biological Monitoring
+        <pre>todo copy text out of rendering</pre>
+    </div>
   </text>
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
-      <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
+    <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
   </extension>
-  <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-3-gyn"/>
+  <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"/>
   <name value="LabOrderExample"/>
   <title value="Lab Order Example"/>
   <status value="draft"/>
@@ -23,22 +23,21 @@
   <subjectType value="Patient"/>
   <date value="2018-04-12"/>
   <publisher value="eHealth Suisse"/>
-  <!-- item Lab Order Questionnarie Example for preventive gynecologic screening -->
   <item>
-      <linkId value="info"/>
-      <text value="Lab Order Questionnarie Example for preventive gynecologic screening"/>
-      <type value="display"/>
+    <linkId value="info"/>
+    <text value="Lab Order Questionnarie Example for biological Monitoring"/>
+    <type value="display"/>
   </item>
   <!-- item order -->
   <item>
-      <linkId value="order"/>
-      <text value="Auftrag"/>
-      <type value="group"/>
-      <item>
-          <linkId value="order.date"/>
-          <text value="Auftrags-Datum" />
-          <type value="date"/>
-      </item>
+    <linkId value="order"/>
+    <text value="Auftrag"/>
+    <type value="group"/>
+    <item>
+      <linkId value="order.date"/>
+      <text value="Auftrags-Datum" />
+      <type value="date"/>
+    </item>
   </item>
   <!-- item orderer-->
   <item>
@@ -47,7 +46,7 @@
         <type value="group"/>
         <item>
             <linkId value="orderer.author"/>
-            <text value="Autor"/>
+            <text value="Author"/>
             <type value="group"/>
             <item>
                 <linkId value="orderer.author.visum"/>
@@ -382,28 +381,56 @@
             </answerOption>
         </item>
   </item>
-  <!-- item specialty, here: cytology cervical smear-->
+ <!-- Auto Differential panel - Blood -->
   <item>
-        <linkId value="cytology"/>
-        <text value="Cytology"/>
-        <type value="choice"/>
-        <item>
-            <linkId value="lab"/>
-            <text value="Laborwerte"/>
-            <type value="string"/>
-            <answerOption>
-                <valueCoding>
-                    <system value="http://loinc.org" />
-                    <code value="86662-4" />
-                    <display value="Pap smear tests - FPAR 2.0 set" />
-                </valueCoding>
-            </answerOption>
-        </item>
+    <linkId value="hematology"/>
+    <text value="Hematology"/>
+    <type value="choice"/>
+    <item>
+      <linkId value="lab"/>
+      <text value="Laborwerte"/>
+      <type value="string"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="24360-0" />
+          <display value="Hemoglobin and Hematocrit panel - Blood" />
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="43113-0" />
+          <display value="Hemoglobin electrophoresis panel in Blood" />
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="57021-8" />
+          <display value="CBC W Auto Differential panel - Blood" />
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="58410-2" />
+          <display value="CBC panel - Blood by Automated count" />
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="57023-4" />
+          <display value="Auto Differential panel - Blood" />
+        </valueCoding>
+      </answerOption>           
+    </item>
   </item>
-  <!-- item specialty, here: HPV Test-->
+  <!-- Toxicology panel blood-->
   <item>
-    <linkId value="hpvtests"/>
-    <text value="HPV tests - FPAR 2.0 set"/>
+    <linkId value="toxicology"/>
+    <text value="Toxicology"/>
     <type value="choice"/>
     <item>
         <linkId value="lab"/>
@@ -412,47 +439,24 @@
         <answerOption>
             <valueCoding>
                 <system value="http://loinc.org" />
-                <code value="14503-7" />
-                <display value="Human papilloma virus 16+18 Ag [Presence] in Cervix" />
+                <code value="29587-3" />
+                <display value="Toxicology panel - Blood" />
             </valueCoding>
         </answerOption>
-    </item>
-</item>
-  <!-- item specialty, here: Urin Analysis Combur-9 -->
-  <item>
-      <linkId value="urin"/>
-      <text value="Urin"/>
-      <type value="choice"/>
-      <item>
-          <linkId value="lab"/>
-          <text value="Laborwerte"/>
-          <type value="string"/>
-          <answerOption>
-              <valueCoding>
-                  <system value="http://loinc.org" />
-                  <code value="50556-0" />
-                  <display value="Urinalysis dipstick panel - Urine by Automated test strip" />
-              </valueCoding>
-          </answerOption>
-      </item>
-  </item>
-  <!-- item specialty, here: Obstetric 1996 panel-->
-  <item>
-    <linkId value="pregnancy"/>
-    <text value="Schwangerschaftsvorsorge"/>
-    <type value="choice"/>
-        <!-- Rotes BB, Diff BB, Hepatitis B, Rubella, AB0 Rhesus -->
-        <item>
-          <linkId value="lab"/>
-          <text value="Laborwerte"/>
-          <type value="string"/>
-          <answerOption>
+        <answerOption>
             <valueCoding>
-              <system value="http://loinc.org" />
-              <code value="24364-2" />
-              <display value="Obstetric 1996 panel – Serum and Blood" />
+                <system value="http://loinc.org" />
+                <code value="54454-4" />
+                <display value="Arsenic fractions panel - Urine" />
             </valueCoding>
-          </answerOption>
-        </item>
-</item>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+              <system value="http://loinc.org" />
+              <code value="29589-9" />
+              <display value="Heavy metals panel - Urine" />
+          </valueCoding>
+      </answerOption> 
+    </item>
+  </item>
 </Questionnaire>

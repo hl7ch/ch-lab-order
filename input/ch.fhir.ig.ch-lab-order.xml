@@ -362,6 +362,14 @@
       <name value="questionnaire 2-pertussis" />
       <description value="Example for 2-pertussis" />
     </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Questionnaire/3-gyn" />
+      </reference>
+      <name value="questionnaire 3-gyn" />
+      <description value="Example for 3-gyn" />
+    </resource>
 
     <!-- References to QuestionnaireResponse -->  
     <resource>

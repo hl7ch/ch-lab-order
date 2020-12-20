@@ -1,5 +1,5 @@
 <Composition xmlns="http://hl7.org/fhir">
-  <id value="referral-3-gyn"/>
+  <id value="3-gyn"/>
   <meta>
       <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
   </meta>
@@ -46,13 +46,13 @@
   <section>
       <title value="Referral"/>
       <entry>
-          <reference value="Questionnaire/referral-3-gyn"/>
+          <reference value="Questionnaire/3-gyn"/>
       </entry>
       <entry>
-          <reference value="QuestionnaireResponse/referral-3-gyn"/>
+          <reference value="QuestionnaireResponse/3-gyn"/>
       </entry>
       <entry>
-          <reference value="ServiceRequest/referral-3-gyn"/>
+          <reference value="ServiceRequest/3-gyn"/>
       </entry>
   </section>
 </Composition>

@@ -403,7 +403,7 @@
     </item>
   </item>
 
-  <!-- Auto Differential panel - Blood -->
+  <!-- Item lab specialty, here: hematology -->
   <item>
     <linkId value="hematology" />
     <text value="Hematology" />
