@@ -456,6 +456,15 @@
 
     <resource>
       <reference>
+        <reference value="Specimen/cervix-swab" />
+      </reference>
+      <name value="Cervix-swab Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    
+    <resource>
+      <reference>
         <reference value="Specimen/lsac" />
       </reference>
       <name value="Cerebrospinal Fluid Sample" />
