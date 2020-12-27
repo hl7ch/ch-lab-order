@@ -376,7 +376,7 @@
               <text value="Vorname" />
               <type value="string" />
               <!-- 
-              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
               -->
             </item>
             <item>
@@ -891,7 +891,7 @@
                 <valueString value="Marc" />
               </answer>
               <!-- 
-          <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+          <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
           -->
             </item>
             <item>

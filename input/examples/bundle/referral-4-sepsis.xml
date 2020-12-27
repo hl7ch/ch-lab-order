@@ -16,7 +16,7 @@
     <fullUrl value="http://test.fhir.ch/r4/Composition/referral-min" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
-        <id value="referral-4-sepis" />
+        <id value="referral-4-sepsis" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
@@ -63,13 +63,13 @@
         <section>
           <title value="Referral" />
           <entry>
-            <reference value="Questionnaire/referral-4-sepis" />
+            <reference value="Questionnaire/referral-4-sepsis" />
           </entry>
           <entry>
-            <reference value="QuestionnaireResponse/referral-4-sepis" />
+            <reference value="QuestionnaireResponse/referral-4-sepsis" />
           </entry>
           <entry>
-            <reference value="ServiceRequest/referral-4-sepis" />
+            <reference value="ServiceRequest/referral-4-sepsis" />
           </entry>
         </section>
       </Composition>
@@ -341,7 +341,7 @@
             </item>
             <item>
               <linkId value="orderer.dataenterer.firstname" />
-              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
               <text value="Vorname" />
               <type value="string" />
             </item>

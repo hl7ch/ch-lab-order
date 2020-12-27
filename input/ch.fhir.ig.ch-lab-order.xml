@@ -164,6 +164,14 @@
       <description value="Example for Composition"/>      
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="Composition/4-sepsis"/>
+      </reference>
+      <name value="4-sepsis"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
     <!-- Reference to Coverage -->
 
     <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
@@ -395,6 +403,14 @@
       </reference>
       <name value="questionnaire 3-gyn" />
       <description value="Example for 3-gyn" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/4-sepsis" />
+      </reference>
+      <name value="questionnaire 4-sepsis" />
+      <description value="Example for 4-sepsis" />
     </resource>
 
     <!-- References to QuestionnaireResponse -->  

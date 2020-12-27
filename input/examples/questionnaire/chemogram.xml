@@ -135,7 +135,7 @@
       </item>
       <item>
         <linkId value="orderer.dataenterer.firstname" />
-        <definition value="http://ahdis.ch/fhir/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+        <definition value="http://ahdis.ch/fhir/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
         <text value="Vorname" />
         <type value="string" />
       </item>

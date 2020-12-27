@@ -1,12 +1,12 @@
 <Composition xmlns="http://hl7.org/fhir">
-  <id value="referral-5-biol-monit"/>
+  <id value="5-biol-monit"/>
   <meta>
       <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
   </meta>
   <text>
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
-          Referral min
+          Referral 5-biol-monit
       </div>
   </text>
   <!--
@@ -20,14 +20,24 @@
   </identifier>
   <status value="final"/>
   <type>
-  <!-- 
-      <coding>
-          <system value="" />
-          <code value="" />
-      </coding>
-  -->
-      <text value="Referral min" />
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721963009" />
+    </coding>
+    <text value="Order (record artifact)" />
   </type>
+  <!-- Publisher says: "Keiner der angegebenen Codes ist im Valueset 
+    http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, 
+    und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) 
+    (Codes = http://snomed.info/sct#721963009)""
+  -->
+  <category> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="721965002"/> 
+      <display value="Laboratory order (record artifact)"/> 
+    </coding> 
+  </category> 
   <subject>
       <reference value="Patient/BeatBorer"/>
   </subject>
@@ -35,7 +45,7 @@
   <author>
       <reference value="Organization/Suva"/>
   </author>
-  <title value="Referral min"/>
+  <title value="Referral 5-biol-monit"/>
   <attester>
       <mode value="professional"/>
       <time value="2010-03-12T11:46:09+02:00"/>
@@ -43,16 +53,18 @@
           <reference value="Organization/Suva"/>
       </party>
   </attester>
+
+   <!-- sections -->
   <section>
       <title value="Referral"/>
       <entry>
-          <reference value="Questionnaire/referral-5-biol-monit"/>
+          <reference value="Questionnaire/5-biol-monit"/>
       </entry>
       <entry>
-          <reference value="QuestionnaireResponse/referral-5-biol-monit"/>
+          <reference value="QuestionnaireResponse/5-biol-monit"/>
       </entry>
       <entry>
-          <reference value="ServiceRequest/referral-5-biol-monit"/>
+          <reference value="ServiceRequest/5-biol-monit"/>
       </entry>
   </section>
 </Composition>
