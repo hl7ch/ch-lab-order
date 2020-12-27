@@ -1,12 +1,16 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="referral-min"/>
+  <id value="5-biol.monit"/>
+
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
+
+  <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
+
+  <!-- should be mandatory ?
   <identifier>
-    <!-- should be mandatory ?-->
-    <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
   </identifier>
+  -->
   <status value="active"/>
   <intent value="original-order"/>
   <category>
@@ -22,15 +26,6 @@
   <subject>
       <reference value="Patient/BeatBorer"/>
   </subject>
-
-  <encounter>
-    <!-- 0..1 Reference(Encounter) Encounter in which the request was created -->
-  </encounter>
-
-  <occurrence>
-    <!-- 0..1 dateTime|Period|Timing When service should occur -->
-  </occurrence>
-
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
@@ -48,17 +43,9 @@
 
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <reference value="Organization/LaborPipette"/>
+    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer TODO: Organisation -->
+    <reference value="Practitioner/PeterPap" />
   </performer>
-
-  <locationCode>
-    <!-- 0..* CodeableConcept Requested location -->
-  </locationCode>
-
-  <locationReference>
-    <!-- 0..* Reference(Location) Requested location -->
-  </locationReference>
 
   <reasonCode>
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
@@ -69,20 +56,19 @@
     <text value="Toxicology (qualifier value)" />
   </reasonCode>
   
-  <reasonReference>
-    <!-- 0..* Reference(Condition|Observation|DiagnosticReport|
-    DocumentReference) Explanation/Justification for service or service -->
-    <reference value="" />
-  </reasonReference>
+  <insurance>
+    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
+    <reference value="Coverage/HealthInsuranceCard" />
+  </insurance>
 
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
-    <reference value="specimen/urin" />
-    <reference value="specimen/blood" />
+    <reference value="Specimen/blood" />
   </specimen>
 
-  <insurance>
-    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
-  </insurance>
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/urin" />
+  </specimen>
 
 </ServiceRequest>
