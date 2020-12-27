@@ -1,11 +1,10 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="1-tvt" />
+  <id value="3-gyn" />
 
-  <!-- 
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
-  -->
+
   <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
 
   <!-- should be mandatory ?
@@ -22,15 +21,15 @@
     </coding>
     <text value="Laboratory procedure (procedure)" />
   </category>
-  <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
+  <priority value="routine" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
-    <reference value="Patient/HansGuggindieluft" />
+    <reference value="Patient/MarinaRubella" />
   </subject>
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="Practitioner/MarcMustermann" />
+    <reference value="Practitioner/PeterPap" />
   </requester>
 
   <performerType>
@@ -45,6 +44,7 @@
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
+    <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
     <reference value="Practitioner/PeterPap" />
   </performer>
 
@@ -52,20 +52,34 @@
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
     <coding>
       <system value="http://snomed.info/sct" />
-      <code value="404223003" />
+      <code value="702601001" />
     </coding>
-    <text value="Deep venous thrombosis of lower extremity" />
+    <text value="Routine gynecologic examination (procedure)" />
   </reasonCode>
 
-  <!-- 2 Specimens, belong to this laborder-service -->
+  <insurance>
+    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
+    <reference value="Coverage/HealthInsuranceCard" />
+  </insurance>
 
   <specimen>
-    <reference value="Specimen/serum" />
-    <display value="Serum specimen" />
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/cervix-swab" />
   </specimen>
 
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
     <reference value="Specimen/blood" />
   </specimen>
+
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/serum" />
+  </specimen>
+
+  <specimen>
+    <!-- 0..* Reference(Specimen) Procedure Samples -->
+    <reference value="Specimen/urin" />
+  </specimen>
+
 </ServiceRequest>

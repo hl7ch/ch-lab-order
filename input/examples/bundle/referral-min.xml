@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="referral-min" />
   <meta>
@@ -12,7 +14,7 @@
   <type value="document" />
   <timestamp value="2019-04-01T20:18:41.341+00:00" />
 
-  <!-- #0 Entry: Composistion-->
+  <!-- #0 entry Composition-->
   <entry>
     <fullUrl value="http://test.fhir.ch/r4/Composition/referral-min" />
     <resource>
@@ -24,45 +26,50 @@
         <text>
           <status value="generated" />
           <div xmlns="http://www.w3.org/1999/xhtml">
-                Referral referral-min
+                Referral min
             </div>
         </text>
-        <!--
-        <extension url="">
-            <valueString value="" />
-        </extension>
-        -->
         <identifier>
           <system value="http://test.fhir.ch/id/uuid" />
           <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
         </identifier>
         <status value="final" />
         <type>
-          <!-- 
-            <coding>
-                <system value="" />
-                <code value="" />
-            </coding>
-        -->
-          <text value="Referral referral-min" />
+          <coding>
+            <system value="urn:oid:2.16.756.5.30.1.127.3.4" />
+            <code value="2161000195103" />
+            <display value="Imaging order (record articact)" />
+          </coding>
         </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="721963009" />
+            <display value="Order (record artifact)" />
+          </coding>
+        </category>
         <subject>
-          <reference value="Patient/HansGuggindieluft" />
+          <reference value="Patient/FranzMuster" />
         </subject>
         <date value="2019-03-31T11:46:09+02:00" />
         <author>
           <reference value="Practitioner/MarcMustermann" />
         </author>
-        <title value="Referral referral-min" />
-        <attester>
-          <mode value="professional" />
-          <time value="2010-03-12T11:46:09+02:00" />
-          <party>
-            <reference value="Practitioner/MarcMustermann" />
-          </party>
-        </attester>
+        <title value="Referral min" />
         <section>
           <title value="Referral" />
+          <text>
+            <status value="generated" />
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              Referral min
+            </div>
+          </text>
+          <entry>
+            <reference value="Patient/FranzMuster" />
+          </entry>
+          <entry>
+            <reference value="Practitioner/MarcMustermann" />
+          </entry>
           <entry>
             <reference value="Questionnaire/referral-min" />
           </entry>
@@ -77,127 +84,26 @@
     </resource>
   </entry>
 
+
   <!-- entry[1] ch-core-Patient -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Patient/HansGuggindieluft" />
+    <fullUrl value="http://test.fhir.ch/r4/Patient/FranzMuster" />
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
-        <id value="HansGuggindieluft" />
+        <id value="FranzMuster" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
         </meta>
-        <!-- 
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>
-              <b>Generated Narrative with Details</b>
-            </p>
-            <p>
-              <b>id</b>: HansGuggindieluft
-            </p>
-            <p>
-              <b>meta</b>: 
-            </p>
-            <p>
-              <b>identifier</b>: 012/08.111111
-            </p>
-            <p>
-              <b>name</b>: Hans Guggindieluft 
-            </p>
-            <p>
-              <b>gender</b>: MALE
-            </p>
-            <p>
-              <b>birthDate</b>: Jan 01, 1981
-            </p>
-            <p>
-              <b>maritalStatus</b>: verheiratet 
-              <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code &#39;6&#39; = &#39;6&#39;, given as &#39;in eingetragener Partnerschaft&#39;})</span>
-            </p>
-            <h3>Communications</h3>
-            <table class="grid">
-              <tr>
-                <td>-</td>
-                <td>
-                  <b>Language</b>
-                </td>
-                <td>
-                  <b>Preferred</b>
-                </td>
-              </tr>
-              <tr>
-                <td>*</td>
-                <td>Deutsch (Schweiz) 
-                  <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code &#39;de-CH&#39; = &#39;German (Region=Switzerland))</span>
-                </td>
-                <td>true</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        -->
-        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
-          <valueAddress>
-            <city value="Köniz" />
-            <state value="BE" />
-            <country value="Schweiz" />
-          </valueAddress>
-        </extension>
-        <!-- 
-        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
-          <valueAddress>
-            <city value="Köniz"/>
-            <state value="BE"/>
-          </valueAddress>
-        </extension>
-        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-religion">
-          <valueCodeableConcept>
-            <coding>
-              <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-religion"/>
-              <code value="111"/>
-              <display value="evangelisch-reformierte (protestantische) Kirche"/>
-            </coding>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
-              <code value="1077"/>
-              <display value="Protestant"/>
-            </coding>
-          </valueCodeableConcept>
-        </extension>
-        -->
-        <identifier>
-          <system value="urn:oid:2.16.756.5.32" />
-          <value value="012/08.111114" />
-        </identifier>
         <name>
-          <family value="Guggindieluft" />
-          <given value="Hans" />
+          <family value="Muster" />
+          <given value="Franz" />
         </name>
-        <gender value="male" />
-        <birthDate value="1981-01-01" />
-        <maritalStatus>
-          <coding>
-            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus" />
-            <code value="2" />
-            <display value="verheiratet" />
-          </coding>
-        </maritalStatus>
-        <communication>
-          <language>
-            <coding>
-              <system value="urn:ietf:bcp:47" />
-              <code value="de-CH" />
-            </coding>
-            <text value="Deutsch (Schweiz)" />
-          </language>
-          <preferred value="true" />
-        </communication>
+        <birthDate value="1970-03-14" />
       </Patient>
     </resource>
   </entry>
 
-  <!--  practitioner -->
+  <!--  entry[2] practitioner -->
   <entry>
     <fullUrl value="http://test.fhir.ch/r4/Practitioner/MarcMustermann" />
     <resource>
@@ -206,10 +112,6 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
         </meta>
-        <identifier>
-          <system value="urn:oid:2.51.1.3" />
-          <value value="7601000050702" />
-        </identifier>
         <name>
           <family value="Mustermann" />
           <given value="Marc" />
@@ -218,1040 +120,203 @@
     </resource>
   </entry>
 
-  <!-- questionnaire -->
+  <!-- entry[3] questionnaire -->
   <entry>
     <fullUrl value="http://test.fhir.ch/r4/Questionnaire/referral-min" />
     <resource>
       <Questionnaire xmlns="http://hl7.org/fhir">
         <id value="referral-min" />
-        <meta>
-          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
-        </meta>
         <text>
-          <status value="generated" />
+          <status value="additional" />
           <div xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for TVT
-            <pre>todo copy text out of rendering</pre>
+            <pre>radio button für geschlecht horizontal, required Element, textbox für untersuchung, Checkboxen mit optional Textangaben, Angabe von mehreren Beilagen</pre>
           </div>
         </text>
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
-        <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/referral-min" />
-        <name value="LabOrderExample" />
-        <title value="Lab Order Example" />
+        <url value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-min" />
+        <name value="ORFReferralMinimial" />
+        <title value="ORF Referral Minimial" />
         <status value="draft" />
         <experimental value="true" />
         <subjectType value="Patient" />
-        <date value="2018-04-12" />
+        <date value="2020-12-17" />
         <publisher value="eHealth Suisse" />
 
-        <!-- item Lab Order Questionnaire Example for TVT -->
-        <item>
-          <linkId value="info" />
-          <text value="Lab Order Questionnarie Example for TVT" />
-          <type value="display" />
-        </item>
-
-        <!-- item order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
           <type value="group" />
           <item>
-            <linkId value="order.date" />
-            <text value="Auftrags-Datum" />
-            <type value="date" />
-          </item>
-          <item>
             <linkId value="order.number" />
             <text value="Auftrags-Nummer" />
             <type value="string" />
+            <required value="true" />
           </item>
         </item>
 
-        <!-- item orderer -->
-        <item>
-          <linkId value="orderer" />
-          <text value="Auftraggeber" />
-          <type value="group" />
-
-          <!-- orderer.author-->
-          <item>
-            <linkId value="orderer.author" />
-            <text value="Author" />
-            <type value="group" />
-            <item>
-              <linkId value="orderer.author.visum" />
-              <text value="Visum" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.organization" />
-              <text value="Organization" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.lastname" />
-              <text value="Name" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.firstname" />
-              <text value="Vorname" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.tel" />
-              <text value="Telefon" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.e-mail" />
-              <text value="E-Mail" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.street" />
-              <text value="Strasse" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.postfach" />
-              <text value="Postfach" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.zip" />
-              <text value="PLZ" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.author.city" />
-              <text value="Ort" />
-              <type value="string" />
-            </item>
-          </item>
-
-          <!-- orderer.dataenterer-->
-          <item>
-            <linkId value="orderer.dataenterer" />
-            <text value="Erfasser" />
-            <type value="group" />
-            <item>
-              <linkId value="orderer.dataenterer.visum" />
-              <text value="Visum" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.organization" />
-              <text value="Organization" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.lastname" />
-              <text value="Name" />
-              <type value="string" />
-              <!-- 
-              <code>
-                <system value="http://tbd" />
-                <code value="datlname" />
-              </code>
-              -->
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.firstname" />
-              <text value="Vorname" />
-              <type value="string" />
-              <!-- 
-              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
-              -->
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.tel" />
-              <text value="Telefon" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.e-mail" />
-              <text value="E-Mail" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.street" />
-              <text value="Strasse" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.postfach" />
-              <text value="Postfach" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.zip" />
-              <text value="PLZ" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.city" />
-              <text value="Ort" />
-              <type value="string" />
-            </item>
-          </item>
-
-          <!-- orderer.notcontactthisdoc -->
-          <item>
-            <linkId value="orderer.notcontactthisdoc" />
-            <text value="Urgent Notification Contact for this document:" />
-            <type value="group" />
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.visum" />
-              <text value="Visum" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.organization" />
-              <text value="Organization" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.lastname" />
-              <text value="Name" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.firstname" />
-              <text value="Vorname" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.tel" />
-              <text value="Telefon" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.e-mail" />
-              <text value="E-Mail" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.street" />
-              <text value="Strasse" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.postfach" />
-              <text value="Postfach" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.zip" />
-              <text value="PLZ" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.city" />
-              <text value="Ort" />
-              <type value="string" />
-            </item>
-          </item>
-
-          <!-- orderer.notcontactresponsedoc -->
-          <item>
-            <linkId value="orderer.notcontactresponsedoc" />
-            <text value="Urgent Notification Contact for the response of this document:" />
-            <type value="group" />
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.visum" />
-              <text value="Visum" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.organization" />
-              <text value="Organization" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.lastname" />
-              <text value="Name" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.firstname" />
-              <text value="Vorname" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.tel" />
-              <text value="Telefon" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.e-mail" />
-              <text value="E-Mail" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.street" />
-              <text value="Strasse" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.postfach" />
-              <text value="Postfach" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.zip" />
-              <text value="PLZ" />
-              <type value="string" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.city" />
-              <text value="Ort" />
-              <type value="string" />
-            </item>
-          </item>
-        </item>
-
-        <!-- item receiver -->
-        <item>
-          <linkId value="receiver" />
-          <text value="Receiver" />
-          <type value="group" />
-          <item>
-            <linkId value="receiver.visum" />
-            <text value="Visum" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.bereich" />
-            <text value="Bereich" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.abt" />
-            <text value="Bereich" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.lastname" />
-            <text value="Name" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.firstname" />
-            <text value="Vorname" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.tel" />
-            <text value="Telefon" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.e-mail" />
-            <text value="E-Mail" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.cstreet" />
-            <text value="Strasse" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.postfach" />
-            <text value="Postfach" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.zip" />
-            <text value="PLZ" />
-            <type value="string" />
-          </item>
-          <item>
-            <linkId value="receiver.city" />
-            <text value="Ort" />
-            <type value="string" />
-          </item>
-        </item>
-
-        <!-- item patient -->
         <item>
           <linkId value="patient" />
+          <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
           <text value="Patient" />
           <type value="group" />
           <item>
-            <linkId value="patient.lastname" />
-            <definition value="http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.given" />
+            <linkId value="patient.familyname" />
+            <!-- don't know how to go deeper (Patient name coud repeat and HumanName is a type should reference something like #Patient.name[use="offical"].family -->
+            <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.name" />
+            <code>
+              <system value="http://fhir.ch/ig/ch-orf/CodeSystem/minimaldataset" />
+              <code value="Patient.name.family" />
+            </code>
             <text value="Name" />
             <type value="string" />
+            <required value="true" />
           </item>
           <item>
-            <linkId value="patient.firstname" />
-            <definition value="http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.first" />
+            <linkId value="patient.givenname" />
+            <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.name" />
+            <code>
+              <system value="http://fhir.ch/ig/ch-orf/CodeSystem/minimaldataset" />
+              <code value="Patient.name.given" />
+            </code>
             <text value="Vorname" />
             <type value="string" />
-          </item>
-          <item>
-            <linkId value="patient.pid" />
-            <text value="PID (sendendes System)" />
-            <type value="string" />
+            <required value="true" />
           </item>
           <item>
             <linkId value="patient.birthdate" />
             <text value="Geburtsdatum" />
             <type value="date" />
-          </item>
-          <item>
-            <linkId value="patient.sex" />
-            <text value="Geschlecht" />
-            <type value="choice" />
-            <answerOption>
-              <valueString value="M" />
-            </answerOption>
-            <answerOption>
-              <valueString value="F" />
-            </answerOption>
-          </item>
-          <item>
-            <linkId value="patient.amborstat" />
-            <text value="Amb/Stat" />
-            <type value="choice" />
-            <answerOption>
-              <valueString value="Amb" />
-            </answerOption>
-            <answerOption>
-              <valueString value="Stat" />
-            </answerOption>
+            <required value="true" />
           </item>
         </item>
 
-        <!-- Auto Differential panel - Blood -->
         <item>
-          <linkId value="hematology" />
-          <text value="Hematology" />
+          <linkId value="orderer" />
+          <text value="Auftraggeber" />
           <type value="group" />
           <item>
-            <linkId value="hemato-subset" />
-            <text value="Hämatologie Subset" />
-            <type value="choice" />
-            <repeats value="true" />
-
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="24360-0" />
-                <display value="Hemoglobin and Hematocrit panel - Blood" />
-              </valueCoding>
-            </answerOption>
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="43113-0" />
-                <display value="Hemoglobin electrophoresis panel in Blood" />
-              </valueCoding>
-            </answerOption>
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="57021-8" />
-                <display value="CBC W Auto Differential panel - Blood" />
-              </valueCoding>
-            </answerOption>
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="58410-2" />
-                <display value="CBC panel - Blood by Automated count" />
-              </valueCoding>
-            </answerOption>
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="57023-4" />
-                <display value="Auto Differential panel - Blood" />
-              </valueCoding>
-            </answerOption>
-          </item>
-        </item>
-
-        <!-- D-Dimer -->
-        <item>
-          <linkId value="coagulation" />
-          <text value="Coagulation" />
-          <type value="group" />
-          <item>
-            <linkId value="d-dimer" />
-            <text value="D-Dimer" />
-            <type value="choice" />
-            <repeats value="true" />
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="55398-2" />
-                <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
-              </valueCoding>
-            </answerOption>
-          </item>
-        </item>
-
-        <!-- CRP C reactive Protein-->
-        <item>
-          <linkId value="cc" />
-          <text value="clinical chemistry" />
-          <type value="group" />
-          <!-- CRP C reactive Protein normal method -->
-          <item>
-            <linkId value="crp" />
-            <text value="CRP" />
-            <type value="choice" />
-            <repeats value="true" />
-
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="1988-5" />
-                <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
-              </valueCoding>
-              <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
-            </answerOption>
-
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="76485-2" />
-                <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
-              </valueCoding>
-            </answerOption>
-
-            <!-- CRP C reactive Protein High sensitivity method -->
-
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="30522-7" />
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
-              </valueCoding>
-            </answerOption>
-
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="76486-0" />
-                <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
-              </valueCoding>
-            </answerOption>
+            <linkId value="orderer.author" />
+            <text value="Verantwortlicher" />
+            <type value="group" />
+            <item>
+              <linkId value="orderer.author.organization" />
+              <text value="Organisation" />
+              <type value="string" />
+            </item>
+            <item>
+              <linkId value="orderer.author.familyname" />
+              <text value="Name" />
+              <type value="string" />
+            </item>
+            <item>
+              <linkId value="orderer.author.givenname" />
+              <text value="Vorname" />
+              <type value="string" />
+            </item>
           </item>
         </item>
       </Questionnaire>
     </resource>
   </entry>
 
-  <!-- questionnaireresponse -->
+  <!-- entry[4] questionnaireresponse -->
   <entry>
     <fullUrl value="http://test.fhir.ch/r4/QuestionnaireResponse/referral-min" />
     <resource>
       <QuestionnaireResponse xmlns="http://hl7.org/fhir">
         <id value="referral-min" />
         <meta>
-          <versionId value="1" />
-          <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
         </meta>
-        <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Response Example for a Chemogram
-            <pre>todo copy text out of rendering</pre>
-          </div>
-        </text>
-
-        <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/referral-min" />
+        <questionnaire value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-min" />
         <status value="completed" />
-
-        <!-- item Lab Order Questionnaireresponse Example for TVT -->
-        <item>
-          <linkId value="info" />
-          <text value="Lab Order Questionnareresponse Example for TVT" />
-        </item>
-
-        <!-- item order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
           <item>
-            <linkId value="order.date" />
-            <text value="Auftrags-Datum" />
-            <answer>
-              <valueDate value="2020-01-01" />
-            </answer>
-          </item>
-          <item>
             <linkId value="order.number" />
             <text value="Auftrags-Nummer" />
             <answer>
-              <valueString value="12301" />
+              <valueString value="123" />
             </answer>
           </item>
         </item>
-
-        <!-- item orderer -->
-        <item>
-          <linkId value="orderer" />
-          <text value="Auftraggeber" />
-
-          <!-- orderer.author -->
-          <item>
-            <linkId value="orderer.author" />
-            <text value="Author" />
-            <item>
-              <linkId value="orderer.author.visum" />
-              <text value="Visum" />
-            </item>
-            <item>
-              <linkId value="orderer.author.organization" />
-              <text value="Organization" />
-            </item>
-            <item>
-              <linkId value="orderer.author.lastname" />
-              <text value="Name" />
-            </item>
-            <item>
-              <linkId value="orderer.author.firstname" />
-              <text value="Vorname" />
-            </item>
-            <item>
-              <linkId value="orderer.author.tel" />
-              <text value="Telefon" />
-            </item>
-            <item>
-              <linkId value="orderer.author.e-mail" />
-              <text value="E-Mail" />
-            </item>
-            <item>
-              <linkId value="orderer.author.street" />
-              <text value="Strasse" />
-            </item>
-            <item>
-              <linkId value="orderer.author.postfach" />
-              <text value="Postfach" />
-            </item>
-            <item>
-              <linkId value="orderer.author.zip" />
-              <text value="PLZ" />
-            </item>
-            <item>
-              <linkId value="orderer.author.city" />
-              <text value="Ort" />
-            </item>
-          </item>
-
-          <!-- orderer.dataenterer -->
-          <item>
-            <linkId value="orderer.dataenterer" />
-            <text value="Erfasser" />
-            <item>
-              <linkId value="orderer.dataenterer.visum" />
-              <text value="Visum" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.organization" />
-              <text value="Organization" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.lastname" />
-              <text value="Name" />
-              <answer>
-                <valueString value="Mustermann" />
-                <!-- 
-            <valueCoding>
-              <system value="http://tbd" />
-              <code value="datlname" />
-            </valueCoding>
-            -->
-              </answer>
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.firstname" />
-              <text value="Vorname" />
-              <answer>
-                <valueString value="Marc" />
-              </answer>
-              <!-- 
-          <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
-          -->
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.tel" />
-              <text value="Telefon" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.e-mail" />
-              <text value="E-Mail" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.street" />
-              <text value="Strasse" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.postfach" />
-              <text value="Postfach" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.zip" />
-              <text value="PLZ" />
-            </item>
-            <item>
-              <linkId value="orderer.dataenterer.city" />
-              <text value="Ort" />
-            </item>
-          </item>
-
-          <!-- orderer.notcontactthisdoc -->
-          <item>
-            <linkId value="orderer.notcontactthisdoc" />
-            <text value="Urgent Notification Contact for this document:" />
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.visum" />
-              <text value="Visum" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.organization" />
-              <text value="Organization" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.lastname" />
-              <text value="Name" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.firstname" />
-              <text value="Vorname" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.tel" />
-              <text value="Telefon" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.e-mail" />
-              <text value="E-Mail" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.street" />
-              <text value="Strasse" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.postfach" />
-              <text value="Postfach" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.zip" />
-              <text value="PLZ" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactthisdoc.city" />
-              <text value="Ort" />
-            </item>
-          </item>
-
-          <!-- orderer.notcontactresponsedoc -->
-          <item>
-            <linkId value="orderer.notcontactresponsedoc" />
-            <text value="Urgent Notification Contact for the response of this document:" />
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.visum" />
-              <text value="Visum" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.organization" />
-              <text value="Organization" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.lastname" />
-              <text value="Name" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.firstname" />
-              <text value="Vorname" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.tel" />
-              <text value="Telefon" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.e-mail" />
-              <text value="E-Mail" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.street" />
-              <text value="Strasse" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.postfach" />
-              <text value="Postfach" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.zip" />
-              <text value="PLZ" />
-            </item>
-            <item>
-              <linkId value="orderer.notifcontactresponsedoc.city" />
-              <text value="Ort" />
-            </item>
-          </item>
-        </item>
-
-        <!-- item receiver -->
-        <item>
-          <linkId value="receiver" />
-          <text value="Receiver" />
-          <item>
-            <linkId value="receiver.visum" />
-            <text value="Visum" />
-          </item>
-          <item>
-            <linkId value="receiver.bereich" />
-            <text value="Bereich" />
-          </item>
-          <item>
-            <linkId value="receiver.abt" />
-            <text value="Bereich" />
-          </item>
-          <item>
-            <linkId value="receiver.lastname" />
-            <text value="Name" />
-          </item>
-          <item>
-            <linkId value="receiver.firstname" />
-            <text value="Vorname" />
-          </item>
-          <item>
-            <linkId value="receiver.tel" />
-            <text value="Telefon" />
-          </item>
-          <item>
-            <linkId value="receiver.e-mail" />
-            <text value="E-Mail" />
-          </item>
-          <item>
-            <linkId value="receiver.cstreet" />
-            <text value="Strasse" />
-          </item>
-          <item>
-            <linkId value="receiver.postfach" />
-            <text value="Postfach" />
-          </item>
-          <item>
-            <linkId value="receiver.zip" />
-            <text value="PLZ" />
-          </item>
-          <item>
-            <linkId value="receiver.city" />
-            <text value="Ort" />
-          </item>
-        </item>
-
-        <!-- item patient -->
         <item>
           <linkId value="patient" />
           <text value="Patient" />
           <item>
-            <linkId value="patient.lastname" />
+            <linkId value="patient.familyname" />
             <text value="Name" />
             <answer>
-              <valueString value="Guggindieluft" />
+              <valueString value="Muster" />
             </answer>
           </item>
           <item>
-            <linkId value="patient.firstname" />
+            <linkId value="patient.givenname" />
             <text value="Vorname" />
             <answer>
-              <valueString value="Hans" />
-            </answer>
-          </item>
-          <item>
-            <linkId value="patient.pid" />
-            <text value="PID (sendendes System)" />
-            <answer>
-              <valueString value="012/08.111101" />
+              <valueString value="Franz" />
             </answer>
           </item>
           <item>
             <linkId value="patient.birthdate" />
             <text value="Geburtsdatum" />
             <answer>
-              <valueDate value="1978-04-12" />
-            </answer>
-          </item>
-          <item>
-            <linkId value="patient.sex" />
-            <text value="Geschlecht" />
-            <answer>
-              <valueString value="M" />
+              <valueDate value="1995-01-27" />
             </answer>
           </item>
         </item>
-
-        <!-- Auto Differential panel - Blood -->
         <item>
-          <linkId value="hematology" />
-          <text value="Hematology" />
+          <linkId value="orderer" />
+          <text value="Auftraggeber" />
           <item>
-            <linkId value="hemato-subset" />
-            <text value="Hämatologie Subset" />
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="24360-0" />
-                <display value="Hemoglobin and Hematocrit panel - Blood" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="43113-0" />
-                <display value="Hemoglobin electrophoresis panel in Blood" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="57021-8" />
-                <display value="CBC W Auto Differential panel - Blood" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="58410-2" />
-                <display value="CBC panel - Blood by Automated count" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="57023-4" />
-                <display value="Auto Differential panel - Blood" />
-              </valueCoding>
-            </answer>
-          </item>
-        </item>
-
-        <!-- D-Dimer -->
-        <item>
-          <linkId value="coagulation" />
-          <text value="Coagulation" />
-          <item>
-            <linkId value="d-dimer" />
-            <text value="D-Dimer" />
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="55398-2" />
-                <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
-              </valueCoding>
-            </answer>
-          </item>
-        </item>
-
-        <!-- CRP C reactive Protein-->
-        <item>
-          <linkId value="cc" />
-          <text value="clinical chemistry" />
-
-          <!-- CRP C reactive Protein normal method -->
-          <item>
-            <linkId value="crp" />
-            <text value="CRP" />
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="1988-5" />
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
-              </valueCoding>
-            </answer>
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="76485-2" />
-                <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
-              </valueCoding>
-            </answer>
-
-            <!-- CRP C reactive Protein High sensitivity method-->
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="30522-7" />
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
-              </valueCoding>
-            </answer>
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="76486-0" />
-                <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
-              </valueCoding>
-            </answer>
+            <linkId value="orderer.author" />
+            <text value="Verantwortlicher" />
+            <item>
+              <linkId value="orderer.author.organization" />
+              <text value="Organisation" />
+              <answer>
+                <valueString value="RegionalspitalZugersee" />
+              </answer>
+            </item>
+            <item>
+              <linkId value="orderer.author.familyname" />
+              <text value="Name" />
+              <answer>
+                <valueString value="Mustermann" />
+              </answer>
+            </item>
+            <item>
+              <linkId value="orderer.author.givenname" />
+              <text value="Vorname" />
+              <answer>
+                <valueString value="Marc" />
+              </answer>
+            </item>
           </item>
         </item>
       </QuestionnaireResponse>
     </resource>
-
   </entry>
-  <!-- serviceRequest -->
+
+  <!-- entry[5] serviceRequest -->
   <entry>
     <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/referral-min" />
     <resource>
-      
       <ServiceRequest xmlns="http://hl7.org/fhir">
         <id value="referral-min" />
-
-        <!-- 
-      <meta>
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
-      </meta>
-      -->
-        <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-
-        <!-- should be mandatory ?
-      <identifier>
-      </identifier>
-      -->
         <status value="active" />
         <intent value="original-order" />
-        <category>
-          <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
-          <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="108252007" />
-          </coding>
-          <text value="Laboratory procedure (procedure)" />
-        </category>
-        <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
-
         <subject>
-          <reference value="Patient/HansGuggindieluft" />
+          <reference value="Patient/FranzMuster" />
         </subject>
         <requester>
           <reference value="Practitioner/MarcMustermann" />
         </requester>
-        <performer>
-          <reference value="Practitioner/PeterPap" />
-        </performer>
-
-        <!-- Specimen, belongs to this laborder-service -->
-
-        <specimen>
-          <reference value="Specimen/serum" />
-          <display value="Serum specimen" />
-        </specimen>
       </ServiceRequest>
     </resource>
   </entry>
+
 </Bundle>

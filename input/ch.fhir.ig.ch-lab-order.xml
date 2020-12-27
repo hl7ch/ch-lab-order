@@ -94,21 +94,40 @@
     <!-- ####################### -->
 
     <!-- Reference to Bundle -->
+
     <!-- 
     <resource>
       <reference>
         <reference value="Bundle/referral-min" />
       </reference>
-      <name value="referral-min" />
-      <description value="Example Bundle for referral/order for a TVT" />
+      <name value="Referral referral-min" />
+      <description value="Example Bundle for referral/order for minimal Referral" />
     </resource>
 
     <resource>
       <reference>
         <reference value="Bundle/1-tvt" />
       </reference>
-      <name value="1-tvt" />
+      <name value="Referral 1-tvt" />
       <description value="Example Bundle for referral/order for a TVT" />
+    </resource>
+
+   
+    <resource>
+      <reference>
+        <reference value="Bundle/2-pertussis" />
+      </reference>
+      <name value="Referral 2-pertussis" />
+      <description value="Example Bundle for referral/order for Pertussis investigation" />
+    </resource>
+  
+     
+    <resource>
+      <reference>
+        <reference value="Bundle/3-gyn" />
+      </reference>
+      <name value="Referreal 3-gyn" />
+      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
     </resource>
     -->
 
@@ -129,12 +148,19 @@
       <description value="Example for Composition"/>      
     </resource>
 
-
     <resource>
       <reference>
         <reference value="Composition/2-pertussis"/>
       </reference>
       <name value="2-pertussis"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/3-gyn"/>
+      </reference>
+      <name value="3-gyn"/>
       <description value="Example for Composition"/>      
     </resource>
 
@@ -427,6 +453,14 @@
       </reference>
       <name value="laborder 2-pertussis" />
       <description value="Example for 2-pertussis request" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/3-gyn" />
+      </reference>
+      <name value="laborder 3-gyn" />
+      <description value="Example for 3-gyn request" />
     </resource>
 
     <!-- References to Specimens -->
