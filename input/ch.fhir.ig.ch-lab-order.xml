@@ -172,6 +172,14 @@
       <description value="Example for Composition"/>      
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="Composition/5-biol-monit"/>
+      </reference>
+      <name value="5-biol-monit"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
     <!-- Reference to Coverage -->
 
     <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
@@ -513,10 +521,10 @@
 
     <resource>
       <reference>
-        <reference value="ServiceRequest/5-biol.monit" />
+        <reference value="ServiceRequest/5-biol-monit" />
       </reference>
-      <name value="laborder 5-biol.monit" />
-      <description value="Example for 5-biol.monit request" />
+      <name value="laborder 5-biol-monit" />
+      <description value="Example for 5-biol-monit request" />
     </resource>
 
     <!-- References to Specimens -->
