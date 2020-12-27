@@ -446,6 +446,14 @@
       <description value="Example for questionnaire response" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/4-sepsis" />
+      </reference>
+      <name value="questionnaire response 4-sepsis" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
     <!-- References to ServiceRequest -->
     <resource>
       <reference>
@@ -477,6 +485,14 @@
       </reference>
       <name value="laborder 3-gyn" />
       <description value="Example for 3-gyn request" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/4-sepsis" />
+      </reference>
+      <name value="laborder 4-sepsis" />
+      <description value="Example for 4-sepsis request" />
     </resource>
 
     <!-- References to Specimens -->

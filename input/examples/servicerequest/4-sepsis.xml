@@ -1,5 +1,5 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="2-pertussis" />
+  <id value="4-sepsis" />
 
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
@@ -24,12 +24,13 @@
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
-    <reference value="Patient/EmilKummer" />
+    <reference value="Patient/KlebsiellaKeller" />
   </subject>
+
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="Practitioner/PeterPresto" />
+    <reference value="Practitioner/HansHauser" />
   </requester>
 
   <performerType>
@@ -43,7 +44,7 @@
 
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer TODO: Organisation -->
+    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
     <reference value="Practitioner/PeterPap" />
   </performer>
 
@@ -51,9 +52,9 @@
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
     <coding>
       <system value="http://snomed.info/sct" />
-      <code value="772146005" />
+      <code value="870441004" />
     </coding>
-    <text value="Pertussis suspected (situation)" />
+    <text value="Screening for sepsis (procedure)" />
   </reasonCode>
 
   <insurance>
@@ -61,10 +62,9 @@
     <reference value="Coverage/HealthInsuranceCard" />
   </insurance>
 
-  <!-- 3 Specimens, belong to this laborder-servicerequest -->
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
-    <reference value="Specimen/throat-swab" />
+    <reference value="Specimen/blood-bactec-plus" />
   </specimen>
 
   <specimen>
@@ -74,6 +74,7 @@
 
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
-    <reference value="Specimen/serum" />
+    <reference value="Specimen/urin" />
   </specimen>
+
 </ServiceRequest>

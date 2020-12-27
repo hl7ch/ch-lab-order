@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
-  <id value="referral-min" />
+  <id value="4-sepsis" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
@@ -10,21 +10,21 @@
   <text>
     <status value="generated" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      Lab Order Questionnarie Response Example for a Chemogram
+      Lab Order Questionnarie Response Example for Microbiological Analyse
       <pre>todo copy text out of rendering</pre>
     </div>
   </text>
 
-  <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/referral-min" />
+  <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis" />
   <status value="completed" />
 
-  <!-- item Lab Order Questionnaireresponse Example for TVT -->
+  <!-- item #0 Lab Order Questionnaireresponse Example for Sepsis -->
   <item>
     <linkId value="info" />
-    <text value="Lab Order Questionnareresponse Example for TVT" />
+    <text value="Lab Order Questionnareresponse Example for Sepsis" />
   </item>
 
-  <!-- item order -->
+  <!-- item #1 order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -39,12 +39,12 @@
       <linkId value="order.number" />
       <text value="Auftrags-Nummer" />
       <answer>
-        <valueString value="12301" />
+        <valueString value="12304" />
       </answer>
     </item>
   </item>
 
-  <!-- item orderer -->
+  <!-- item #2 orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
@@ -111,7 +111,7 @@
         <linkId value="orderer.dataenterer.lastname" />
         <text value="Name" />
         <answer>
-          <valueString value="Mustermann" />
+          <valueString value="Apgar" />
           <!-- 
           <valueCoding>
             <system value="http://tbd" />
@@ -247,7 +247,7 @@
     </item>
   </item>
 
-  <!-- item receiver -->
+  <!-- item #3 receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -297,7 +297,7 @@
     </item>
   </item>
 
-  <!-- item patient -->
+  <!-- item #4 patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -305,21 +305,21 @@
       <linkId value="patient.lastname" />
       <text value="Name" />
       <answer>
-        <valueString value="Guggindieluft" />
+        <valueString value="Keller" />
       </answer>
     </item>
     <item>
       <linkId value="patient.firstname" />
       <text value="Vorname" />
       <answer>
-        <valueString value="Hans" />
+        <valueString value="Klebsiella" />
       </answer>
     </item>
     <item>
       <linkId value="patient.pid" />
       <text value="PID (sendendes System)" />
       <answer>
-        <valueString value="012/08.111101" />
+        <valueString value="012/08.1111104" />
       </answer>
     </item>
     <item>
@@ -333,117 +333,129 @@
       <linkId value="patient.sex" />
       <text value="Geschlecht" />
       <answer>
-        <valueString value="M" />
+        <valueString value="F" />
       </answer>
     </item>
   </item>
 
-  <!-- Auto Differential panel - Blood -->
-  <item>
-    <linkId value="hematology" />
-    <text value="Hematology" />
+    <!-- Item #5 lab specialty, here: microbiology -->
     <item>
-      <linkId value="hemato-subset" />
-      <text value="Hämatologie Subset" />
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="24360-0" />
-          <display value="Hemoglobin and Hematocrit panel - Blood" />
-        </valueCoding>
-      </answer>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="43113-0" />
-          <display value="Hemoglobin electrophoresis panel in Blood" />
-        </valueCoding>
-      </answer>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="57021-8" />
-          <display value="CBC W Auto Differential panel - Blood" />
-        </valueCoding>
-      </answer>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="58410-2" />
-          <display value="CBC panel - Blood by Automated count" />
-        </valueCoding>
-      </answer>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="57023-4" />
-          <display value="Auto Differential panel - Blood" />
-        </valueCoding>
-      </answer>
+      <linkId value="hematology" />
+      <text value="Hematology" />
+      <item>
+        <linkId value="lab" />
+        <text value="Laborwerte" />
+        
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="24360-0" />
+            <display value="Hemoglobin and Hematocrit panel - Blood" />
+          </valueCoding>
+        </answer>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="43113-0" />
+            <display value="Hemoglobin electrophoresis panel in Blood" />
+          </valueCoding>
+        </answer>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="57021-8" />
+            <display value="CBC W Auto Differential panel - Blood" />
+          </valueCoding>
+        </answer>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="58410-2" />
+            <display value="CBC panel - Blood by Automated count" />
+          </valueCoding>
+        </answer>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="57023-4" />
+            <display value="Auto Differential panel - Blood" />
+          </valueCoding>
+        </answer>
+      </item>
     </item>
-  </item>
-
-  <!-- D-Dimer -->
-  <item>
-    <linkId value="coagulation" />
-    <text value="Coagulation" />
+    <!-- Blood by Culture - Microorganism preliminary growth detection -->
     <item>
-      <linkId value="d-dimer" />
-      <text value="D-Dimer" />
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="55398-2" />
-          <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
-        </valueCoding>
-      </answer>
+      <linkId value="microbiology" />
+      <text value="Mikrobiologie" />
+      <item>
+        <linkId value="culture" />
+        <text value="Blood by Culture" />
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="90423-5" />
+            <display value="Microorganism preliminary growth detection panel - Blood by Culture" />
+          </valueCoding>
+        </answer>
+      </item>
+  
+      <!-- Bacterial identification and susceptibility-->
+      <item>
+        <linkId value="id-susc" />
+        <text value="Bacterial Identification and Susceptibility" />
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="85421-6" />
+            <display value="Bacterial identification and susceptibility panel - Isolate" />
+          </valueCoding>
+        </answer>
+      </item>
     </item>
-  </item>
-
-  <!-- CRP C reactive Protein-->
-  <item>
-    <linkId value="cc" />
-    <text value="clinical chemistry" />
-
-    <!-- CRP C reactive Protein normal method -->
+  
+    <!-- CRP C reactive Protein-->
     <item>
-      <linkId value="crp" />
-      <text value="CRP" />
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="1988-5" />
-          <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
-        </valueCoding>
-      </answer>
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="76485-2" />
-          <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
-        </valueCoding>
-      </answer>
-
-      <!-- CRP C reactive Protein High sensitivity method-->
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="30522-7" />
-          <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
-        </valueCoding>
-      </answer>
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="76486-0" />
-          <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
-        </valueCoding>
-      </answer>
+      <linkId value="cc" />
+      <text value="clinical chemistry" />
+      <!-- CRP C reactive Protein normal method -->
+      <item>
+        <linkId value="crp" />
+        <text value="CRP" />
+  
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="1988-5" />
+            <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
+          </valueCoding>
+        </answer>
+  
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="76485-2" />
+            <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
+          </valueCoding>
+        </answer>
+  
+        <!-- CRP C reactive Protein High sensitivity method -->
+  
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="30522-7" />
+            <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
+          </valueCoding>
+        </answer>
+  
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org" />
+            <code value="76486-0" />
+            <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
+          </valueCoding>
+        </answer>
+      </item>
     </item>
-  </item>
+
 </QuestionnaireResponse>
