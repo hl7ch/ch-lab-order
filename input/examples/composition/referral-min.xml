@@ -44,12 +44,14 @@
         Referral min
       </div>
     </text>
+    <!-- 
     <entry>
       <reference value="Patient/FranzMuster" />
     </entry>
     <entry>
       <reference value="Practitioner/MarcMustermann" />
     </entry>
+    -->
     <entry>
       <reference value="Questionnaire/referral-min" />
     </entry>

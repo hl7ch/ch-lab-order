@@ -95,7 +95,6 @@
 
     <!-- Reference to Bundle -->
 
-    <!-- 
     <resource>
       <reference>
         <reference value="Bundle/referral-min" />
@@ -112,7 +111,7 @@
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
 
-   
+    <!--
     <resource>
       <reference>
         <reference value="Bundle/2-pertussis" />
