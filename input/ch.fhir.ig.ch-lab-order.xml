@@ -380,6 +380,15 @@
       <exampleBoolean value="true" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="Practitioner/SimonSuva" />
+      </reference>
+      <name value="Simon Suva" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
     <!-- References to Questionnaire -->
     <resource>
       <reference>

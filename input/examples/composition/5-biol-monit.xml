@@ -43,7 +43,7 @@
   </subject>
   <date value="2019-03-31T11:46:09+02:00"/>
   <author>
-      <reference value="Organization/Suva"/>
+      <reference value="Practitioner/SimonSuva"/>
   </author>
   <title value="Referral 5-biol-monit"/>
   <attester>

@@ -6,6 +6,13 @@
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr" />
   </meta>
   <identifier>
+    <!-- 
+    Business and Enterprise Register (BER) Unternehmens-
+    Identifikationsnummer 
+        <system value="urn:oid:2.16.756.5.45" />
+    Unique IDentification Business (UIDB) Unternehmens-
+    Identifikationsnummer
+    -->
     <system value="urn:oid:2.16.756.5.45" />
     <value value="76010002341000" />
   </identifier>
@@ -32,11 +39,3 @@
     <country value="CH" />
   </address>
 </Organization>
-
-<!-- 
-Business and Enterprise Register (BER) Unternehmens-
-Identifikationsnummer 
-    <system value="urn:oid:2.16.756.5.45" />
-Unique IDentification Business (UIDB) Unternehmens-
-Identifikationsnummer
--->

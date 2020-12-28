@@ -44,7 +44,7 @@
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer TODO: Organisation -->
-    <reference value="Practitioner/PeterPap" />
+    <reference value="Practitioner/SimonSuva" />
   </performer>
 
   <reasonCode>
