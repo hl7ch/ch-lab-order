@@ -22,22 +22,17 @@
   <type>
     <coding>
       <system value="http://snomed.info/sct" />
-      <code value="721963009" />
+      <code value="721965002" />
+      <display value="Laboratory order (record artifact)" />
     </coding>
-    <text value="Order (record artifact)" />
   </type>
-  <!-- Publisher says: "Keiner der angegebenen Codes ist im Valueset 
-    http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, 
-    und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) 
-    (Codes = http://snomed.info/sct#721963009)""
-  -->
-  <category> 
-    <coding> 
-      <system value="http://snomed.info/sct"/> 
-      <code value="721965002"/> 
-      <display value="Laboratory order (record artifact)"/> 
-    </coding> 
-  </category> 
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721963009" />
+      <display value="Order (record artifact)" />
+    </coding>
+  </category>
   <subject>
       <reference value="Patient/KlebsiellaKeller"/>
   </subject>
