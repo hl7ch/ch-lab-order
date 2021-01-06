@@ -6,14 +6,22 @@
   <text>
     <status value="generated" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      Referral min
+      Referral min (Template)
       </div>
   </text>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
+    <valueIdentifier>
+      <value value="123" />
+    </valueIdentifier>
+  </extension>
+
   <identifier>
     <system value="http://test.fhir.ch/id/uuid" />
     <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
   </identifier>
   <status value="final" />
+
   <type>
     <coding>
       <system value="http://snomed.info/sct" />
@@ -21,6 +29,7 @@
       <display value="Laboratory order (record artifact)" />
     </coding>
   </type>
+
   <category>
     <coding>
       <system value="http://snomed.info/sct" />
@@ -28,14 +37,26 @@
       <display value="Order (record artifact)" />
     </coding>
   </category>
+
   <subject>
     <reference value="Patient/FranzMuster" />
   </subject>
   <date value="2019-03-31T11:46:09+02:00" />
+
   <author>
     <reference value="Practitioner/MarcMustermann" />
   </author>
   <title value="Referral min" />
+
+  <attester>
+    <mode value="professional" />
+    <time value="2010-03-12T11:46:09+02:00" />
+    <party>
+      <reference value="Practitioner/MarcMustermann" />
+    </party>
+  </attester>
+
+  <!-- sections -->
   <section>
     <title value="Referral" />
     <text>
@@ -44,12 +65,6 @@
         Referral min
       </div>
     </text>
-    <entry>
-      <reference value="Patient/FranzMuster" />
-    </entry>
-    <entry>
-      <reference value="Practitioner/MarcMustermann" />
-    </entry>
     <entry>
       <reference value="Questionnaire/referral-min" />
     </entry>
