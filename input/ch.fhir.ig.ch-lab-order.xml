@@ -328,9 +328,9 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/AgparMarc" />
+        <reference value="Practitioner/MarcApgar" />
       </reference>
-      <name value="Agpar Marc" />
+      <name value="Marc Agpar" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -604,14 +604,8 @@
 
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-patient" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <!-- References to VALUESETS -->
+    
+        <!-- References to VALUESETS -->
     <!-- ####################### -->
     <resource>
       <reference>

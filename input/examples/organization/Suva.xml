@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <Organization xmlns="http://hl7.org/fhir">
   <id value="Suva" />
   <meta>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr" />
   </meta>
   <identifier>
-    <!-- 
-    Business and Enterprise Register (BER) Unternehmens-
-    Identifikationsnummer 
-        <system value="urn:oid:2.16.756.5.45" />
-    Unique IDentification Business (UIDB) Unternehmens-
-    Identifikationsnummer
-    -->
     <system value="urn:oid:2.16.756.5.45" />
     <value value="CHE-108.955.179" />
   </identifier>
@@ -38,4 +29,11 @@
     <postalCode value="6004" />
     <country value="CH" />
   </address>
-</Organization>
+</Organization> 
+<!-- 
+Business and Enterprise Register (BER) Unternehmens-
+Identifikationsnummer 
+    <system value="urn:oid:2.16.756.5.45" />
+Unique IDentification Business (UIDB) Unternehmens-
+Identifikationsnummer
+-->
