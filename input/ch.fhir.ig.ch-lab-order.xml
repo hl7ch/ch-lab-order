@@ -111,7 +111,6 @@
       <description value="Example Bundle for referral/order for a TVT" />
     </resource>
 
-    <!--
     <resource>
       <reference>
         <reference value="Bundle/2-pertussis" />
@@ -120,7 +119,6 @@
       <description value="Example Bundle for referral/order for Pertussis investigation" />
     </resource>
   
-     
     <resource>
       <reference>
         <reference value="Bundle/3-gyn" />
@@ -128,8 +126,23 @@
       <name value="Referreal 3-gyn" />
       <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
     </resource>
-    -->
 
+    <resource>
+      <reference>
+        <reference value="Bundle/4-sepsis" />
+      </reference>
+      <name value="Referreal 4-sepsis" />
+      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Bundle/5-biol-monit" />
+      </reference>
+      <name value="Referreal 5-biol-monit" />
+      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+    </resource>
+ 
     <!-- Reference to Composition-->
     <resource>
       <reference>
@@ -180,6 +193,8 @@
     </resource>
 
     <!-- Reference to Coverage -->
+
+
 
     <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
         Kostengutsprache, etc.

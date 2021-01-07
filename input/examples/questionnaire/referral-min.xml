@@ -485,12 +485,12 @@
       <repeats value="true" />
 
       <answerOption>
-        <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="1988-5" />
           <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
         </valueCoding>
+        <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
       </answerOption>
 
       <answerOption>

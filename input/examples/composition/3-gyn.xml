@@ -59,6 +59,12 @@
   <!-- sections -->
   <section>
     <title value="Referral" />
+    <text>
+      <status value="generated" />
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        Referral 3-gyn
+      </div>
+    </text>
     <entry>
       <reference value="Questionnaire/3-gyn" />
     </entry>

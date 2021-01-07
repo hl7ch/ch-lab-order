@@ -6,8 +6,8 @@
   <text>
     <status value="generated" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-          Referral 5-biol-monit
-      </div>
+      Referral 5-biol-monit
+    </div>
   </text>
 
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
@@ -62,7 +62,7 @@
     <text>
       <status value="generated" />
       <div xmlns="http://www.w3.org/1999/xhtml">
-          Referral min
+          Referral 5-biol-monit
         </div>
     </text>
     <entry>

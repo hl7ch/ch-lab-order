@@ -12,14 +12,12 @@
   <type value="document" />
   <timestamp value="2019-04-01T20:18:41.341+00:00" />
 
-  <!-- #0 entry Composition-->
+  <!-- entry[0] Composition-->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Composition/2-pertussis" />
+    <fullUrl value="http://example.com/fhir/Composition/2-pertussis" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
         <id value="2-pertussis" />
-
-        <!--
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
@@ -29,47 +27,45 @@
             2-pertussis
           </div>
         </text>
-       
-        <extension url="">
-            <valueString value="" />
+
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
+          <valueIdentifier>
+            <value value="123" />
+          </valueIdentifier>
         </extension>
-        
+
         <identifier>
           <system value="http://test.fhir.ch/id/uuid" />
           <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
         </identifier>
-        -->
         <status value="final" />
+
         <type>
-          <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="721963009" />
-          </coding>
-          <text value="Order (record artifact)" />
-        </type>
-        <!-- Publisher says: "Keiner der angegebenen Codes ist im Valueset 
-          http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, 
-          und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) 
-          (Codes = http://snomed.info/sct#721963009)""
-        -->
-        <category>
           <coding>
             <system value="http://snomed.info/sct" />
             <code value="721965002" />
             <display value="Laboratory order (record artifact)" />
+          </coding>
+        </type>
+
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="721963009" />
+            <display value="Order (record artifact)" />
           </coding>
         </category>
 
         <subject>
           <reference value="Patient/EmilKummer" />
         </subject>
-
         <date value="2020-03-31T11:46:09+02:00" />
+
         <author>
           <reference value="Practitioner/PeterPresto" />
         </author>
-
         <title value="Referral Pertussis" />
+
         <attester>
           <mode value="professional" />
           <time value="2020-03-12T11:46:09+02:00" />
@@ -81,6 +77,12 @@
         <!-- sections -->
         <section>
           <title value="Referral" />
+          <text>
+            <status value="generated" />
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              Referral min
+            </div>
+          </text>
           <entry>
             <reference value="Questionnaire/2-pertussis" />
           </entry>
@@ -95,128 +97,79 @@
     </resource>
   </entry>
 
-  <!-- #1 entry Patient -->
+  <!-- entry[1] Patient -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Patient/HansGuggindieluft" />
+    <fullUrl value="http://example.com/fhir/Patient/EmilKummer" />
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
-        <id value="EmilKummer" />
+        <id value="EmilKummer"/>
         <meta>
-          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
         </meta>
-        <!-- 
-            <text>
-              <status value="generated"/>
-              <div xmlns="http://www.w3.org/1999/xhtml">
-                <p>
-                  <b>Generated Narrative with Details</b>
-                </p>
-                <p>
-                  <b>id</b>: EmilKummer
-                </p>
-                <p>
-                  <b>meta</b>: 
-                </p>
-                <p>
-                  <b>identifier</b>: 012/08.111111
-                </p>
-                <p>
-                  <b>name</b>: Franz Muster 
-                </p>
-                <p>
-                  <b>gender</b>: MALE
-                </p>
-                <p>
-                  <b>birthDate</b>: Mai 05, 2014
-                </p>
-                <p>
-                  <b>maritalStatus</b>
-                  <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code &#39;6&#39; = &#39;6&#39;, given as &#39;in eingetragener Partnerschaft&#39;})</span>
-                </p>
-                <h3>Communications</h3>
-                <table class="grid">
-                  <tr>
-                    <td>-</td>
-                    <td>
-                      <b>Language</b>
-                    </td>
-                    <td>
-                      <b>Preferred</b>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>*</td>
-                    <td>Deutsch (Schweiz) 
-                      <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code &#39;de-CH&#39; = &#39;German (Region=Switzerland))</span>
-                    </td>
-                    <td>true</td>
-                  </tr>
-                </table>
-              </div>
-            </text>
-            -->
+        
         <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
           <valueAddress>
-            <city value="Ostermundigen" />
-            <country value="Schweiz" />
+            <city value="Paris"/>
+            <country value="Frankreich"/>
           </valueAddress>
         </extension>
-        <!-- 
-            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
-              <valueAddress>
-                <city value="Köniz"/>
-                <state value="BE"/>
-              </valueAddress>
-            </extension>
-            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-religion">
-              <valueCodeableConcept>
-                <coding>
-                  <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-religion"/>
-                  <code value="111"/>
-                  <display value="evangelisch-reformierte (protestantische) Kirche"/>
-                </coding>
-                <coding>
-                  <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
-                  <code value="1077"/>
-                  <display value="Protestant"/>
-                </coding>
-              </valueCodeableConcept>
-            </extension>
-            -->
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
+          <valueAddress>
+            <city value="Köniz"/>
+            <state value="BE"/>
+          </valueAddress>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1041"/>
+              <display value="Roman Catholic Church"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+      
         <identifier>
-          <system value="urn:oid:2.16.756.5.30.999999.1" />
-          <value value="012/08.111111" />
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/> <!-- Medical Record Number-->
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.756.5.30.999999.1"/>
+          <value value="012/08.111102"/>
         </identifier>
+      
         <name>
-          <family value="Kummer" />
-          <given value="Emil" />
+          <family value="Kummer"/>
+          <given value="Emil"/>
         </name>
-        <gender value="male" />
-        <birthDate value="2020-05-05" />
+        <gender value="male"/>
+        <birthDate value="2020-05-05"/>
         <maritalStatus>
           <coding>
-            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus" />
-            <code value="" />
-            <display value="" />
+            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
+            <code value="1"/>
+            <display value="ledig"/>
           </coding>
         </maritalStatus>
         <communication>
           <language>
             <coding>
-              <system value="urn:ietf:bcp:47" />
-              <code value="de-CH" />
+              <system value="urn:ietf:bcp:47"/>
+              <code value="de-CH"/>
             </coding>
-            <text value="Deutsch (Schweiz)" />
+            <text value="Deutsch (Schweiz)"/>
           </language>
-          <preferred value="true" />
+          <preferred value="true"/>
         </communication>
       </Patient>
     </resource>
   </entry>
 
-  <!-- #2 practitioner -->
+  <!-- entry[2] practitioner -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Practitioner/PeterPresto" />
+    <fullUrl value="http://example.com/fhir/Practitioner/PeterPresto" />
 
     <resource>
       <Practitioner xmlns="http://hl7.org/fhir">
@@ -226,7 +179,7 @@
         </meta>
         <identifier>
           <system value="urn:oid:2.51.1.3" />
-          <value value="7601000050701" />
+          <value value="7601000050704" />
         </identifier>
         <name>
           <family value="Presto" />
@@ -236,13 +189,15 @@
     </resource>
   </entry>
 
-  <!-- #3 entry questionnaire -->
+  <!-- entry[3] questionnaire -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Questionnaire/2-pertussis" />
+    <fullUrl value="http://example.com/fhir/Questionnaire/2-pertussis" />
     <resource>
       <Questionnaire xmlns="http://hl7.org/fhir">
         <id value="2-pertussis" />
         <meta>
+          <versionId value="1" />
+          <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
         </meta>
         <text>
@@ -710,9 +665,9 @@
     </resource>
   </entry>
 
-  <!-- #4 entry questionnaireResponse -->
+  <!-- entry[4] questionnaireResponse -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/QuestionnaireResponse/2-pertussis" />
+    <fullUrl value="http://example.com/fhir/QuestionnaireResponse/2-pertussis" />
     <resource>
       <QuestionnaireResponse xmlns="http://hl7.org/fhir">
         <id value="2-pertussis" />
@@ -1163,18 +1118,17 @@
     </resource>
   </entry>
 
-  <!-- #5 entry serviceRequest -->
+  <!-- entry[5] serviceRequest -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/2-pertussis" />
+    <fullUrl value="http://example.com/fhir/ServiceRequest/2-pertussis" />
     <resource>
       <ServiceRequest xmlns="http://hl7.org/fhir">
         <id value="2-pertussis" />
 
-        <!-- 
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
-        -->
+
         <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
 
         <!-- should be mandatory ?
@@ -1197,6 +1151,8 @@
           <reference value="Patient/EmilKummer" />
         </subject>
         <requester>
+          <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
+          Patient|RelatedPerson|Device) Who/what is requesting service -->
           <reference value="Practitioner/PeterPresto" />
         </requester>
 
@@ -1212,7 +1168,8 @@
         <performer>
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-          <reference value="Organization/LaborPipette" />
+          <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
+          <reference value="Practitioner/PeterPap" />
         </performer>
 
         <reasonCode>
@@ -1223,6 +1180,11 @@
           </coding>
           <text value="Pertussis suspected (situation)" />
         </reasonCode>
+
+        <insurance>
+          <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
+          <reference value="Coverage/HealthInsuranceCard" />
+        </insurance>
 
         <!-- 3 Specimens, belong to this laborder-servicerequest -->
         <specimen>

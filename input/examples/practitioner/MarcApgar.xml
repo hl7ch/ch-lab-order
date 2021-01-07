@@ -13,7 +13,7 @@
     </name>
     <telecom>
       <system value="email"/>
-      <value value="agpar.marc@spitalseeblick.ch"/>
+      <value value="marc.apgar@spitalseeblick.ch"/>
       <use value="work"/>
   </telecom>
 </Practitioner> 

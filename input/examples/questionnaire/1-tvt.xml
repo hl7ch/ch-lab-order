@@ -139,11 +139,11 @@
         -->
       </item>
       <item>
-        <linkId value="orderer.dataenterer.firstname" />
-        <text value="Vorname" />
-        <type value="string" />
-        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
-      </item>
+        <linkId value="orderer.dataenterer.firstname"/>
+        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first"/>
+        <text value="Vorname"/>
+        <type value="string"/>
+    </item>
       <item>
         <linkId value="orderer.dataenterer.tel" />
         <text value="Telefon" />
