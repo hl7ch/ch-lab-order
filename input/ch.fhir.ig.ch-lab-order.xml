@@ -266,7 +266,6 @@
       </reference>
       <name value="BeatBorer" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -275,7 +274,6 @@
       </reference>
       <name value="EmilKummer" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -284,7 +282,6 @@
       </reference>
       <name value="FranzMuster" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -293,7 +290,6 @@
       </reference>
       <name value="HansGuggindieluft" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -302,7 +298,6 @@
       </reference>
       <name value="KlebsiellaKeller" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -311,7 +306,6 @@
       </reference>
       <name value="MarinaRubella" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -320,7 +314,6 @@
       </reference>
       <name value="MonikaWegmuellerRecipient" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <resource>
@@ -329,7 +322,6 @@
       </reference>
       <name value="MonikaWegmueller" />
       <description value="Example for EPR-Patient" />
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient" />
     </resource>
 
     <!-- References to Practitioner -->
