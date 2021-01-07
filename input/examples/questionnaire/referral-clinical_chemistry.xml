@@ -32,6 +32,7 @@
         <text value="Lab Order Questionnarie Example for a Clinical_chemistry"/>
         <type value="display"/>
     </item>
+    <!-- item order-->
     <item>
         <linkId value="order"/>
         <text value="Auftrag"/>
@@ -388,11 +389,12 @@
     <item>
         <linkId value="clinical_chemistry"/>
         <text value="Klinische Chemie"/>
-        <type value="choice"/>
+        <type value="group"/>
         <item>
             <linkId value="lab"/>
             <text value="Laborwerte"/>
-            <type value="string"/>
+            <type value="choice"/>
+            <repeats value="true" />
             <!-- answer option: Lipid and glucose panel-->
             <answerOption>
               <valueCoding>

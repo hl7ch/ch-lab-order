@@ -43,8 +43,9 @@
 
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer TODO: Organisation -->
-    <reference value="Practitioner/SimonSuva" />
+    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
+    <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
+    <reference value="Practitioner/PeterPap" />
   </performer>
 
   <reasonCode>
