@@ -16,13 +16,13 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
   <status value="completed" />
 
-  <!-- item #0 Lab Order Questionnaireresponse Example for TVT -->
+  <!-- item[0] Lab Order Questionnaireresponse Example for TVT -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnareresponse Example for TVT" />
   </item>
 
-  <!-- item #1 order -->
+  <!-- item[1] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -42,12 +42,12 @@
     </item>
   </item>
 
-  <!-- item #2 orderer -->
+  <!-- item[2] orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
 
-    <!-- orderer.author -->
+    <!-- item[2.0] orderer.author -->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -93,7 +93,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer -->
+    <!-- item[2.1] orderer.dataenterer -->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -152,7 +152,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -198,7 +198,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -245,7 +245,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver -->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -295,7 +295,7 @@
     </item>
   </item>
 
-  <!-- item #4 patient -->
+  <!-- item[4] patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -336,7 +336,7 @@
     </item>
   </item>
 
-  <!-- Item #5 lab specialty, here: Biological Monitoring -->
+  <!-- Item[5] lab specialty, here: hematology -->
   <item>
     <linkId value="hematology" />
     <text value="Hematology" />
@@ -381,7 +381,7 @@
     </item>
   </item>
 
-  <!-- Item #6 Toxicology panel blood-->
+  <!-- item[6]  lab specialty Toxicology, Toxicology panel blood-->
   <item>
     <linkId value="toxicology" />
     <text value="Toxicology" />

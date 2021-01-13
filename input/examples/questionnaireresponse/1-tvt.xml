@@ -18,13 +18,13 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
   <status value="completed" />
 
-  <!-- item #0 Lab Order Questionnaireresponse Example for TVT -->
+  <!-- item[0] Lab Order Questionnaireresponse Example for TVT -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnareresponse Example for TVT" />
   </item>
 
-  <!-- item #1 order -->
+  <!-- item[1] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -44,12 +44,12 @@
     </item>
   </item>
 
-  <!-- item #2 orderer -->
+  <!-- item[2] orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
 
-    <!-- orderer.author -->
+    <!-- item[2.0] orderer.author -->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -95,7 +95,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer -->
+    <!-- item[2.1] orderer.dataenterer -->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -154,7 +154,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -200,7 +200,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -247,7 +247,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver -->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -297,7 +297,7 @@
     </item>
   </item>
 
-  <!-- item #4 patient -->
+  <!-- item[4] patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -338,7 +338,7 @@
     </item>
   </item>
 
-  <!-- item #5 Auto Differential panel - Blood -->
+  <!-- item[5] Specialty Hematology Auto Differential panel - Blood -->
   <item>
     <linkId value="hematology" />
     <text value="Hematology" />
@@ -384,7 +384,7 @@
     </item>
   </item>
 
-  <!-- item #6 D-Dimer -->
+  <!-- item[6] Specialty Coagulation D-Dimer -->
   <item>
     <linkId value="coagulation" />
     <text value="Coagulation" />
@@ -402,12 +402,12 @@
     </item>
   </item>
 
-  <!-- item #7 CRP C reactive Protein-->
+  <!-- item[7] Clinical chemistry: CRP C reactive Protein-->
   <item>
     <linkId value="cc" />
     <text value="clinical chemistry" />
 
-    <!-- CRP C reactive Protein normal method -->
+    <!-- item[7.0] CRP C reactive Protein normal method -->
     <item>
       <linkId value="crp" />
       <text value="CRP" />
@@ -417,31 +417,6 @@
           <system value="http://loinc.org" />
           <code value="1988-5" />
           <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
-        </valueCoding>
-      </answer>
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="76485-2" />
-          <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
-        </valueCoding>
-      </answer>
-
-      <!-- CRP C reactive Protein High sensitivity method-->
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="30522-7" />
-          <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
-        </valueCoding>
-      </answer>
-
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="76486-0" />
-          <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
         </valueCoding>
       </answer>
     </item>

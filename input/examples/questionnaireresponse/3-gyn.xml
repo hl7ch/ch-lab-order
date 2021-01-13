@@ -16,13 +16,13 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn" />
   <status value="completed" />
 
-  <!-- item #0 Lab Order Questionnaireresponse Example for Gynecology and Obstrics -->
+  <!-- item[0] Lab Order Questionnaireresponse Example for Gynecology and Obstrics -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnareresponse Example for Gynecology and Obstrics" />
   </item>
 
-  <!-- item #1 order -->
+  <!-- item[1] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -42,12 +42,12 @@
     </item>
   </item>
 
-  <!-- item #2 orderer -->
+  <!-- item[2] orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
 
-    <!-- orderer.author -->
+    <!-- item[2.0] orderer.author -->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -93,7 +93,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer -->
+    <!-- item[2.1] orderer.dataenterer -->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -152,7 +152,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -198,7 +198,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -245,7 +245,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver -->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -295,7 +295,7 @@
     </item>
   </item>
 
-  <!-- item #4 patient -->
+  <!-- item[4] patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -337,65 +337,64 @@
     </item>
     -->
   </item>
-  
-    <!-- item #5 lab specialty, here: Cytology and Microbiology-->
+
+  <!-- item[5] lab specialty, here: Cytology and Microbiology-->
+  <item>
+    <linkId value="cytology" />
+    <text value="Cytology and Microbiology" />
     <item>
-      <linkId value="cytology" />
-      <text value="Cytology and Microbiology" />
-      <item>
-        <linkId value="cervicalSmear" />
-        <text value="Cervical Smear" />
-  
-        <answer>
-          <valueCoding>
-            <system value="http://loinc.org" />
-            <code value="86662-4" />
-            <display value="Pap smear tests - FPAR 2.0 set" />
-          </valueCoding>
-        </answer>
-        <answer>
-          <valueCoding>
-            <system value="http://loinc.org" />
-            <code value="14503-7" />
-            <display value="Human papilloma virus 16+18 Ag [Presence] in Cervix" />
-          </valueCoding>
-        </answer>
-      </item>
+      <linkId value="cervicalSmear" />
+      <text value="Cervical Smear" />
+
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="86662-4" />
+          <display value="Pap smear tests - FPAR 2.0 set" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="14503-7" />
+          <display value="Human papilloma virus 16+18 Ag [Presence] in Cervix" />
+        </valueCoding>
+      </answer>
     </item>
-  
-    <!-- item #6 lab specialty, here: Urin Analysis -->
+  </item>
+
+  <!-- item[6] lab specialty, here: Urin Analysis -->
+  <item>
+    <linkId value="urin" />
+    <text value="Urin" />
     <item>
-      <linkId value="urin" />
-      <text value="Urin" />
-      <item>
-        <linkId value="combur9" />
-        <text value="Combur-9" />
-        <answer>
-          <valueCoding>
-            <system value="http://loinc.org" />
-            <code value="50556-0" />
-            <display value="Urinalysis dipstick panel - Urine by Automated test strip" />
-          </valueCoding>
-        </answer>
-      </item>
+      <linkId value="combur9" />
+      <text value="Combur-9" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="50556-0" />
+          <display value="Urinalysis dipstick panel - Urine by Automated test strip" />
+        </valueCoding>
+      </answer>
     </item>
-  
-    <!-- item #7 lab specialty, here: Obstetrical Panels-->
+  </item>
+
+  <!-- item[7] lab specialty, here: Obstetrical Panels-->
+  <item>
+    <linkId value="obstetricalPanels" />
+    <text value="Schwangerschaftsvorsorge" />
+    <!-- Rotes BB, Diff BB, Hepatitis B, Rubella, AB0 Rhesus -->
     <item>
-      <linkId value="obstetricalPanels" />
-      <text value="Schwangerschaftsvorsorge" />
-      <!-- Rotes BB, Diff BB, Hepatitis B, Rubella, AB0 Rhesus -->
-      <item>
-        <linkId value="obstetric" />
-        <text value="Obstetric 1996 panel – Serum and Blood" />
-        <answer>
-          <valueCoding>
-            <system value="http://loinc.org" />
-            <code value="24364-2" />
-            <display value="Obstetric 1996 Pnl Ser+Bld" />
-          </valueCoding>
-        </answer>
-      </item>
+      <linkId value="obstetric" />
+      <text value="Obstetric 1996 panel – Serum and Blood" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="24364-2" />
+          <display value="Obstetric 1996 Pnl Ser+Bld" />
+        </valueCoding>
+      </answer>
     </item>
-  
+  </item>
 </QuestionnaireResponse>

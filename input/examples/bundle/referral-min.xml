@@ -194,7 +194,9 @@
     </resource>
   </entry>
 
-  <!-- entry[3] questionnaire -->
+  <!-- TODO entry[3] organisation -->
+
+  <!-- entry[4] questionnaire -->
   <entry>
     <fullUrl value="http://example.com/fhir/Questionnaire/referral-min" />
     <resource>
@@ -724,7 +726,7 @@
     </resource>
   </entry>
 
-  <!-- entry[4] questionnaireresponse -->
+  <!-- entry[5] questionnaireresponse -->
   <entry>
     <fullUrl value="http://example.com/fhir/QuestionnaireResponse/referral-min" />
     <resource>
@@ -1178,7 +1180,7 @@
     </resource>
   </entry>
 
-  <!-- entry[5] serviceRequest -->
+  <!-- entry[6] serviceRequest -->
   <entry>
     <fullUrl value="http://example.com/fhir/ServiceRequest/referral-min" />
     <resource>
@@ -1244,5 +1246,23 @@
       </ServiceRequest>
     </resource>
   </entry>
-
+  <signature>
+    <type> 
+      <system value="urn:iso-astm:E1762-95:2013"/> 
+      <code value="1.2.840.10065.1.12.1.1"/> 
+      <display value="Author's Signature"/> 
+    </type> 
+    <when value="2015-08-31T07:42:33+10:00"/> 
+    <who> 
+      <reference value="Practitioner/MarcMustermann"/> 
+    </who> 
+    <onBehalfOf> 
+      <reference value="Organization/PraxisHausarzt"/> 
+    </onBehalfOf> 
+    <!--    a real document would typically have an digital signature, but
+      the publishing tools are not yet setup to produce a valid digital
+      signature. For now, an image of a signature    -->
+    <sigFormat value="image/jpg"/> 
+    <data value="/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7" />
+  </signature>
 </Bundle>

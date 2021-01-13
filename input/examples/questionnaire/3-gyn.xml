@@ -25,14 +25,14 @@
   <date value="2018-04-12" />
   <publisher value="eHealth Suisse" />
 
-  <!-- item #0 Lab Order Questionnarie Example for preventive gynecologic screening -->
+  <!-- item[0] Lab Order Questionnarie Example for preventive gynecologic screening -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnarie Example for preventive gynecologic screening" />
     <type value="display" />
   </item>
 
-  <!-- item #1 order -->
+  <!-- item[1] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -49,13 +49,13 @@
     </item>
   </item>
 
-  <!-- item #2 orderer-->
+  <!-- item[2] orderer-->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
     <type value="group" />
 
-    <!-- orderer.author-->
+    <!-- item[2.0] orderer.author-->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -112,7 +112,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer-->
+    <!-- item[2.1] orderer.dataenterer-->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -176,7 +176,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -233,7 +233,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -291,7 +291,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver-->
+  <!-- item[3] receiver-->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -353,7 +353,7 @@
     </item>
   </item>
 
-  <!-- item #4 patient-->
+  <!-- item[4] patient-->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -404,7 +404,7 @@
     </item>
   </item>
 
-  <!-- item #5 lab specialty, here: Cytology and Microbiology-->
+  <!-- item[5] lab specialty, here: Cytology and Microbiology-->
   <item>
     <linkId value="cytology" />
     <text value="Cytology and Microbiology" />
@@ -432,7 +432,7 @@
     </item>
   </item>
 
-  <!-- item #6 lab specialty, here: Urin Analysis -->
+  <!-- item[6] lab specialty, here: Urin Analysis -->
   <item>
     <linkId value="urin" />
     <text value="Urin" />
@@ -452,7 +452,7 @@
     </item>
   </item>
 
-  <!-- item #7 lab specialty, here: Obstetrical Panels-->
+  <!-- item[7] lab specialty, here: Obstetrical Panels-->
   <item>
     <linkId value="obstetricalPanels" />
     <text value="Schwangerschaftsvorsorge" />

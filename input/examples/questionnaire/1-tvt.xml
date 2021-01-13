@@ -25,14 +25,14 @@
   <date value="2018-04-12" />
   <publisher value="eHealth Suisse" />
 
-  <!-- item #0 Lab Order Questionnaire Example for TVT -->
+  <!-- item[0] Lab Order Questionnaire Example for TVT -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnarie Example for TVT" />
     <type value="display" />
   </item>
 
-  <!-- item #1 order -->
+  <!-- item[1] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -49,13 +49,13 @@
     </item>
   </item>
 
-  <!-- item #2 orderer -->
+  <!-- item[2] orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
     <type value="group" />
 
-    <!-- orderer.author-->
+    <!-- item[2.0] orderer.author-->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -112,7 +112,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer-->
+    <!-- item[2.1] orderer.dataenterer-->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -139,11 +139,11 @@
         -->
       </item>
       <item>
-        <linkId value="orderer.dataenterer.firstname"/>
-        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first"/>
-        <text value="Vorname"/>
-        <type value="string"/>
-    </item>
+        <linkId value="orderer.dataenterer.firstname" />
+        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+        <text value="Vorname" />
+        <type value="string" />
+      </item>
       <item>
         <linkId value="orderer.dataenterer.tel" />
         <text value="Telefon" />
@@ -176,7 +176,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -233,7 +233,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -291,7 +291,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver -->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -353,7 +353,7 @@
     </item>
   </item>
 
-  <!-- item #4 patient -->
+  <!-- item[4] patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -404,7 +404,7 @@
     </item>
   </item>
 
-  <!-- Item #5 lab specialty, here: hematology -->
+  <!-- item[5] lab specialty, here: hematology -->
   <item>
     <linkId value="hematology" />
     <text value="Hematology" />
@@ -453,7 +453,7 @@
     </item>
   </item>
 
-  <!-- Item #6 lab specialty, here: coagulation -->
+  <!-- item[6] lab specialty, here: coagulation -->
   <item>
     <linkId value="coagulation" />
     <text value="Coagulation" />
@@ -473,11 +473,12 @@
     </item>
   </item>
 
-  <!-- CRP C reactive Protein-->
+  <!-- item[7] lab specialty, here: clinical chemistry -->
   <item>
     <linkId value="cc" />
     <text value="clinical chemistry" />
     <type value="group" />
+
     <!-- CRP C reactive Protein normal method -->
     <item>
       <linkId value="crp" />
@@ -486,12 +487,12 @@
       <repeats value="true" />
 
       <answerOption>
-        <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
         <valueCoding>
           <system value="http://loinc.org" />
           <code value="1988-5" />
           <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
         </valueCoding>
+        <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
       </answerOption>
 
       <answerOption>
@@ -503,7 +504,6 @@
       </answerOption>
 
       <!-- CRP C reactive Protein High sensitivity method -->
-
       <answerOption>
         <valueCoding>
           <system value="http://loinc.org" />

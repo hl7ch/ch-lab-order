@@ -22,7 +22,7 @@
     <text value="Lab Order Questionnaire Example for Pertussis" />
   </item>
 
-  <!-- item #1 Lab Order -->
+  <!-- item[0] Lab Order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -42,13 +42,13 @@
     </item>
   </item>
 
-  <!-- item #2 orderer -->
+  <!-- item[1] orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
 
 
-    <!-- item #2.0 orderer.author -->
+    <!-- item[2.0] orderer.author -->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -105,7 +105,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer-->
+    <!-- item[2.1] orderer.dataenterer-->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -171,7 +171,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -228,7 +228,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -286,7 +286,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver -->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -348,7 +348,7 @@
     </item>
   </item>
 
-  <!-- #4 patient -->
+  <!-- item[4] patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -389,12 +389,12 @@
     </item>
   </item>
 
-  <!-- item #5 specialty, here: microbiology -->
+  <!-- item[5] specialty, here: microbiology -->
   <item>
     <linkId value="microbiology" />
     <text value="Mikrobiologie" />
 
-    <!-- item #5.0 -->
+    <!-- item[5.0] -->
     <item>
       <linkId value="per" />
       <text value="Pertussis and Parapertussis DNA" />
@@ -408,7 +408,7 @@
     </item>
   </item>
 
-  <!-- item #6 specialty, here: hematology-->
+  <!-- item[6] specialty, here: hematology-->
   <item>
     <linkId value="hematology" />
     <text value="Hämatologie" />
@@ -425,7 +425,7 @@
     </item>
   </item>
 
-  <!-- item #7 specialty, here: clinical chemistry-->
+  <!-- item[7] specialty, here: clinical chemistry-->
   <item>
     <linkId value="clinical chemistry" />
     <text value="Klinische Chemie" />

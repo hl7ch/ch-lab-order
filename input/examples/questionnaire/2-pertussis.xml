@@ -24,14 +24,14 @@
   <date value="2020-08-23" />
   <publisher value="eHealth Suisse" />
 
-  <!-- item #0 Lab Order Questionnarie Example for Pertussis -->
+  <!-- item[0] Lab Order Questionnarie Example for Pertussis -->
   <item>
     <linkId value="info" />
     <text value="Lab Order Questionnarie Example for Pertussis" />
     <type value="display" />
   </item>
 
-  <!-- item #1 Lab Order -->
+  <!-- item[1] Lab Order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -48,13 +48,13 @@
     </item>
   </item>
 
-  <!-- item #2 orderer -->
+  <!-- item[2] orderer -->
   <item>
     <linkId value="orderer" />
     <text value="Auftraggeber" />
     <type value="group" />
 
-    <!-- item #2.0 orderer.author -->
+    <!-- item[2.0] orderer.author -->
     <item>
       <linkId value="orderer.author" />
       <text value="Author" />
@@ -111,7 +111,7 @@
       </item>
     </item>
 
-    <!-- orderer.dataenterer-->
+    <!-- item[2.1] orderer.dataenterer-->
     <item>
       <linkId value="orderer.dataenterer" />
       <text value="Erfasser" />
@@ -173,7 +173,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactthisdoc -->
+    <!-- item[2.2] orderer.notcontactthisdoc -->
     <item>
       <linkId value="orderer.notcontactthisdoc" />
       <text value="Urgent Notification Contact for this document:" />
@@ -230,7 +230,7 @@
       </item>
     </item>
 
-    <!-- orderer.notcontactresponsedoc -->
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
     <item>
       <linkId value="orderer.notcontactresponsedoc" />
       <text value="Urgent Notification Contact for the response of this document:" />
@@ -288,7 +288,7 @@
     </item>
   </item>
 
-  <!-- item #3 receiver -->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="receiver" />
     <text value="Receiver" />
@@ -350,7 +350,7 @@
     </item>
   </item>
 
-  <!-- item #4 patient-->
+  <!-- item[4] patient -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -401,13 +401,13 @@
     </item>
   </item>
 
-  <!-- item #5 specialty, here: microbiology-->
+  <!-- item[5] specialty, here: microbiology-->
   <item>
     <linkId value="microbiology" />
     <text value="Mikrobiologie" />
     <type value="group" />
 
-    <!-- item #5.0 PCR for Pertussis/Parapertussis-->
+    <!-- item[5.1] PCR for Pertussis/Parapertussis-->
     <item>
       <linkId value="per" />
       <text value="Pertussis and Parapertussis DNA" />
@@ -423,13 +423,13 @@
     </item>
   </item>
 
-  <!-- item #6 specialty, here: hematology-->
+  <!-- item[6] specialty, here: hematology-->
   <item>
     <linkId value="hematology" />
     <text value="Hämatologie" />
     <type value="group" />
 
-    <!-- item #6.0 -->
+    <!-- item[6.0 Diff Bld] -->
     <item>
       <linkId value="blood-diff" />
       <text value="Manual Differential panel - Blood" />
@@ -445,12 +445,13 @@
     </item>
   </item>
 
-  <!-- item #7 specialty, here: clinical chemistry-->
+  <!-- item[7] specialty, here: clinical chemistry-->
   <item>
     <linkId value="clinical chemistry" />
     <text value="Klinische Chemie" />
     <type value="group" />
-    <!-- CRP C reactive Protein normal method -->
+
+    <!-- item[7.1] CRP C reactive Protein normal method -->
     <item>
       <linkId value="crp" />
       <text value="C-reactive Protein" />
