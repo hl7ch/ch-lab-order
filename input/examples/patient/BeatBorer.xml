@@ -6,8 +6,8 @@
    
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
     <valueAddress>
-      <city value="Paris"/>
-      <country value="Frankreich"/>
+      <city value="Lausanne"/>
+      <country value="Schweiz"/>
     </valueAddress>
   </extension>
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
