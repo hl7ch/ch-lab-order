@@ -17,29 +17,29 @@
     <fullUrl value="http://example.com/fhir/Composition/referral-min" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
-        <id value="4-sepsis" />
+        <id value="4-sepsis"/>
         <meta>
-          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
+            <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
         </meta>
         <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
+            <status value="generated"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">
                 Referral 4-sepsis
             </div>
         </text>
-
+      
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
           <valueIdentifier>
             <value value="123" />
           </valueIdentifier>
         </extension>
-
+      
         <identifier>
-          <system value="http://test.fhir.ch/id/uuid" />
-          <value value="26d3dff7-ab05-4737-a49c-5eccd3359504" />
+            <system value="http://test.fhir.ch/id/uuid"/>
+            <value value="26d3dff7-ab05-4737-a49c-5eccd3359504"/>
         </identifier>
-        <status value="final" />
-
+        <status value="final"/>
+      
         <type>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -47,7 +47,7 @@
             <display value="Laboratory order (record artifact)" />
           </coding>
         </type>
-
+      
         <category>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -55,43 +55,43 @@
             <display value="Order (record artifact)" />
           </coding>
         </category>
-
+      
         <subject>
-          <reference value="Patient/KlebsiellaKeller" />
+            <reference value="Patient/KlebsiellaKeller"/>
         </subject>
-        <date value="2019-03-31T11:46:09+02:00" />
-
+        <date value="2019-03-31T11:46:09+02:00"/>
+      
         <author>
-          <reference value="Practitioner/HansHauser" />
+            <reference value="Practitioner/HansHauser"/>
         </author>
-        <title value="Referral 4-sepsis" />
-
+        <title value="Referral 4-sepsis"/>
+      
         <attester>
-          <mode value="professional" />
-          <time value="2010-03-12T11:46:09+02:00" />
-          <party>
-            <reference value="Organization/RegionalspitalZugersee" />
-          </party>
+            <mode value="professional"/>
+            <time value="2010-03-12T11:46:09+02:00"/>
+            <party>
+                <reference value="Organization/RegionalspitalZugersee"/>
+            </party>
         </attester>
-
+      
         <!-- sections -->
         <section>
-          <title value="Referral" />
-          <text>
-            <status value="generated" />
-            <div xmlns="http://www.w3.org/1999/xhtml">
+            <title value="Referral"/>
+            <text>
+              <status value="generated" />
+              <div xmlns="http://www.w3.org/1999/xhtml">
                 Referral 4-sepsis
               </div>
-          </text>
-          <entry>
-            <reference value="Questionnaire/4-sepsis" />
-          </entry>
-          <entry>
-            <reference value="QuestionnaireResponse/4-sepsis" />
-          </entry>
-          <entry>
-            <reference value="ServiceRequest/4-sepsis" />
-          </entry>
+            </text>
+            <entry>
+                <reference value="Questionnaire/4-sepsis"/>
+            </entry>
+            <entry>
+                <reference value="QuestionnaireResponse/4-sepsis"/>
+            </entry>
+            <entry>
+                <reference value="ServiceRequest/4-sepsis"/>
+            </entry>
         </section>
       </Composition>
     </resource>
@@ -245,7 +245,7 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-
+      
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
@@ -257,15 +257,15 @@
         <subjectType value="Patient" />
         <date value="2018-04-12" />
         <publisher value="eHealth Suisse" />
-
-        <!-- item #0 Lab Order Questionnaire Example for Sepsis -->
+      
+        <!-- item[0] Lab Order Questionnaire Example for Sepsis -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnarie Example for microbiologic study" />
           <type value="display" />
         </item>
-
-        <!-- item #1 order -->
+      
+        <!-- item[1] order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
@@ -281,14 +281,14 @@
             <type value="string" />
           </item>
         </item>
-
-        <!-- item #2 orderer -->
+      
+        <!-- item[2] orderer -->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
           <type value="group" />
-
-          <!-- orderer.author-->
+      
+          <!-- item[2.0] orderer.author-->
           <item>
             <linkId value="orderer.author" />
             <text value="Author" />
@@ -344,8 +344,8 @@
               <type value="string" />
             </item>
           </item>
-
-          <!-- orderer.dataenterer-->
+      
+          <!-- item[2.1] orderer.dataenterer-->
           <item>
             <linkId value="orderer.dataenterer" />
             <text value="Erfasser" />
@@ -372,11 +372,11 @@
               -->
             </item>
             <item>
-              <linkId value="orderer.dataenterer.firstname" />
-              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
-              <text value="Vorname" />
-              <type value="string" />
-            </item>
+              <linkId value="orderer.dataenterer.firstname"/>
+              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first"/>
+              <text value="Vorname"/>
+              <type value="string"/>
+          </item>
             <item>
               <linkId value="orderer.dataenterer.tel" />
               <text value="Telefon" />
@@ -408,8 +408,8 @@
               <type value="string" />
             </item>
           </item>
-
-          <!-- orderer.notcontactthisdoc -->
+      
+          <!-- item[2.2] orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
             <text value="Urgent Notification Contact for this document:" />
@@ -465,8 +465,8 @@
               <type value="string" />
             </item>
           </item>
-
-          <!-- orderer.notcontactresponsedoc -->
+      
+          <!-- item[2.3] orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
             <text value="Urgent Notification Contact for the response of this document:" />
@@ -523,8 +523,8 @@
             </item>
           </item>
         </item>
-
-        <!-- item #3 receiver -->
+      
+        <!-- item[3] receiver -->
         <item>
           <linkId value="receiver" />
           <text value="Receiver" />
@@ -585,8 +585,8 @@
             <type value="string" />
           </item>
         </item>
-
-        <!-- item #4 patient -->
+      
+        <!-- item[4] patient -->
         <item>
           <linkId value="patient" />
           <text value="Patient" />
@@ -636,8 +636,8 @@
             </answerOption>
           </item>
         </item>
-
-        <!-- Item #5 lab specialty, here: microbiology -->
+      
+        <!-- item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
           <text value="Hematology" />
@@ -647,7 +647,7 @@
             <text value="Laborwerte" />
             <type value="choice" />
             <repeats value="true" />
-
+            
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -685,7 +685,8 @@
             </answerOption>
           </item>
         </item>
-        <!-- Blood by Culture - Microorganism preliminary growth detection -->
+      
+        <!-- item[6] Blood by Culture - Microorganism preliminary growth detection -->
         <item>
           <linkId value="microbiology" />
           <text value="Mikrobiologie" />
@@ -694,7 +695,7 @@
             <linkId value="culture" />
             <text value="Blood by Culture" />
             <type value="choice" />
-            <repeats value="true" />
+            <repeats value="true"/>
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -703,13 +704,13 @@
               </valueCoding>
             </answerOption>
           </item>
-
+      
           <!-- Bacterial identification and susceptibility-->
           <item>
             <linkId value="id-susc" />
             <text value="Bacterial Identification and Susceptibility" />
             <type value="choice" />
-            <repeats value="true" />
+            <repeats value="true"/>
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -719,8 +720,8 @@
             </answerOption>
           </item>
         </item>
-
-        <!-- CRP C reactive Protein-->
+      
+        <!-- item[7] clinical chemistry -->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
@@ -731,7 +732,7 @@
             <text value="CRP" />
             <type value="choice" />
             <repeats value="true" />
-
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -740,7 +741,7 @@
               </valueCoding>
               <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
             </answerOption>
-
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -748,9 +749,9 @@
                 <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
-
+      
             <!-- CRP C reactive Protein High sensitivity method -->
-
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -758,7 +759,7 @@
                 <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
               </valueCoding>
             </answerOption>
-
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -790,16 +791,16 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-
+      
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis" />
         <status value="completed" />
-
+      
         <!-- item #0 Lab Order Questionnaireresponse Example for Sepsis -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnareresponse Example for Sepsis" />
         </item>
-
+      
         <!-- item #1 order -->
         <item>
           <linkId value="order" />
@@ -819,12 +820,12 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item #2 orderer -->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
-
+      
           <!-- orderer.author -->
           <item>
             <linkId value="orderer.author" />
@@ -870,7 +871,7 @@
               <text value="Ort" />
             </item>
           </item>
-
+      
           <!-- orderer.dataenterer -->
           <item>
             <linkId value="orderer.dataenterer" />
@@ -929,7 +930,7 @@
               <text value="Ort" />
             </item>
           </item>
-
+      
           <!-- orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
@@ -975,7 +976,7 @@
               <text value="Ort" />
             </item>
           </item>
-
+      
           <!-- orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
@@ -1022,7 +1023,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item #3 receiver -->
         <item>
           <linkId value="receiver" />
@@ -1072,7 +1073,7 @@
             <text value="Ort" />
           </item>
         </item>
-
+      
         <!-- item #4 patient -->
         <item>
           <linkId value="patient" />
@@ -1113,127 +1114,127 @@
             </answer>
           </item>
         </item>
-
-        <!-- Item #5 lab specialty, here: microbiology -->
-        <item>
-          <linkId value="hematology" />
-          <text value="Hematology" />
+      
+          <!-- Item #5 lab specialty, here: microbiology -->
           <item>
-            <linkId value="lab" />
-            <text value="Laborwerte" />
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="24360-0" />
-                <display value="Hemoglobin and Hematocrit panel - Blood" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="43113-0" />
-                <display value="Hemoglobin electrophoresis panel in Blood" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="57021-8" />
-                <display value="CBC W Auto Differential panel - Blood" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="58410-2" />
-                <display value="CBC panel - Blood by Automated count" />
-              </valueCoding>
-            </answer>
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="57023-4" />
-                <display value="Auto Differential panel - Blood" />
-              </valueCoding>
-            </answer>
+            <linkId value="hematology" />
+            <text value="Hematology" />
+            <item>
+              <linkId value="lab" />
+              <text value="Laborwerte" />
+              
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="24360-0" />
+                  <display value="Hemoglobin and Hematocrit panel - Blood" />
+                </valueCoding>
+              </answer>
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="43113-0" />
+                  <display value="Hemoglobin electrophoresis panel in Blood" />
+                </valueCoding>
+              </answer>
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="57021-8" />
+                  <display value="CBC W Auto Differential panel - Blood" />
+                </valueCoding>
+              </answer>
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="58410-2" />
+                  <display value="CBC panel - Blood by Automated count" />
+                </valueCoding>
+              </answer>
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="57023-4" />
+                  <display value="Auto Differential panel - Blood" />
+                </valueCoding>
+              </answer>
+            </item>
           </item>
-        </item>
-        <!-- Blood by Culture - Microorganism preliminary growth detection -->
-        <item>
-          <linkId value="microbiology" />
-          <text value="Mikrobiologie" />
+          <!-- Blood by Culture - Microorganism preliminary growth detection -->
           <item>
-            <linkId value="culture" />
-            <text value="Blood by Culture" />
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="90423-5" />
-                <display value="Microorganism preliminary growth detection panel - Blood by Culture" />
-              </valueCoding>
-            </answer>
+            <linkId value="microbiology" />
+            <text value="Mikrobiologie" />
+            <item>
+              <linkId value="culture" />
+              <text value="Blood by Culture" />
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="90423-5" />
+                  <display value="Microorganism preliminary growth detection panel - Blood by Culture" />
+                </valueCoding>
+              </answer>
+            </item>
+        
+            <!-- Bacterial identification and susceptibility-->
+            <item>
+              <linkId value="id-susc" />
+              <text value="Bacterial Identification and Susceptibility" />
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="85421-6" />
+                  <display value="Bacterial identification and susceptibility panel - Isolate" />
+                </valueCoding>
+              </answer>
+            </item>
           </item>
-
-          <!-- Bacterial identification and susceptibility-->
+        
+          <!-- CRP C reactive Protein-->
           <item>
-            <linkId value="id-susc" />
-            <text value="Bacterial Identification and Susceptibility" />
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="85421-6" />
-                <display value="Bacterial identification and susceptibility panel - Isolate" />
-              </valueCoding>
-            </answer>
+            <linkId value="cc" />
+            <text value="clinical chemistry" />
+            <!-- CRP C reactive Protein normal method -->
+            <item>
+              <linkId value="crp" />
+              <text value="CRP" />
+        
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="1988-5" />
+                  <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
+                </valueCoding>
+              </answer>
+        
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="76485-2" />
+                  <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
+                </valueCoding>
+              </answer>
+        
+              <!-- CRP C reactive Protein High sensitivity method -->
+        
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="30522-7" />
+                  <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
+                </valueCoding>
+              </answer>
+        
+              <answer>
+                <valueCoding>
+                  <system value="http://loinc.org" />
+                  <code value="76486-0" />
+                  <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
+                </valueCoding>
+              </answer>
+            </item>
           </item>
-        </item>
-
-        <!-- CRP C reactive Protein-->
-        <item>
-          <linkId value="cc" />
-          <text value="clinical chemistry" />
-          <!-- CRP C reactive Protein normal method -->
-          <item>
-            <linkId value="crp" />
-            <text value="CRP" />
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="1988-5" />
-                <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
-              </valueCoding>
-            </answer>
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="76485-2" />
-                <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
-              </valueCoding>
-            </answer>
-
-            <!-- CRP C reactive Protein High sensitivity method -->
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="30522-7" />
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
-              </valueCoding>
-            </answer>
-
-            <answer>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="76486-0" />
-                <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
-              </valueCoding>
-            </answer>
-          </item>
-        </item>
-
+      
       </QuestionnaireResponse>
     </resource>
   </entry>
@@ -1244,13 +1245,13 @@
     <resource>
       <ServiceRequest xmlns="http://hl7.org/fhir">
         <id value="4-sepsis" />
-
+      
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
-
+      
         <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-
+      
         <!-- should be mandatory ?
         <identifier>
         </identifier>
@@ -1266,17 +1267,17 @@
           <text value="Laboratory procedure (procedure)" />
         </category>
         <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
-
+      
         <subject>
           <reference value="Patient/KlebsiellaKeller" />
         </subject>
-
+      
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
           <reference value="Practitioner/HansHauser" />
         </requester>
-
+      
         <performerType>
           <!-- 0..1 CodeableConcept Performer role -->
           <coding>
@@ -1285,14 +1286,14 @@
           </coding>
           <text value="Laboratory medicine specialist (occupation)" />
         </performerType>
-
+      
         <performer>
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
           <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
           <reference value="Practitioner/PeterPap" />
         </performer>
-
+      
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1301,27 +1302,27 @@
           </coding>
           <text value="Screening for sepsis (procedure)" />
         </reasonCode>
-
+      
         <insurance>
           <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
           <reference value="Coverage/HealthInsuranceCard" />
         </insurance>
-
+      
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood-bactec-plus" />
         </specimen>
-
+      
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
         </specimen>
-
+      
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/urin" />
         </specimen>
-
+      
       </ServiceRequest>
     </resource>
   </entry>

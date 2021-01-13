@@ -27,19 +27,19 @@
             2-pertussis
           </div>
         </text>
-
+      
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
           <valueIdentifier>
             <value value="123" />
           </valueIdentifier>
         </extension>
-
+      
         <identifier>
           <system value="http://test.fhir.ch/id/uuid" />
           <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
         </identifier>
         <status value="final" />
-
+      
         <type>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -47,7 +47,7 @@
             <display value="Laboratory order (record artifact)" />
           </coding>
         </type>
-
+      
         <category>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -55,17 +55,17 @@
             <display value="Order (record artifact)" />
           </coding>
         </category>
-
+      
         <subject>
           <reference value="Patient/EmilKummer" />
         </subject>
         <date value="2020-03-31T11:46:09+02:00" />
-
+      
         <author>
           <reference value="Practitioner/PeterPresto" />
         </author>
         <title value="Referral Pertussis" />
-
+      
         <attester>
           <mode value="professional" />
           <time value="2020-03-12T11:46:09+02:00" />
@@ -73,7 +73,7 @@
             <reference value="Practitioner/PeterPresto" />
           </party>
         </attester>
-
+      
         <!-- sections -->
         <section>
           <title value="Referral" />
@@ -196,7 +196,7 @@
     <fullUrl value="http://example.com/fhir/Questionnaire/2-pertussis" />
     <resource>
       <Questionnaire xmlns="http://hl7.org/fhir">
-        <id value="2-pertussis" />
+        <id value="1-tvt" />
         <meta>
           <versionId value="1" />
           <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
@@ -205,30 +205,31 @@
         <text>
           <status value="generated" />
           <div xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for blood smear and PCR
+            Lab Order Questionnarie Example for TVT
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
+      
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
-        <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis" />
+        <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
         <status value="draft" />
         <experimental value="true" />
         <subjectType value="Patient" />
-        <date value="2020-08-23" />
+        <date value="2018-04-12" />
         <publisher value="eHealth Suisse" />
-
-        <!-- item #0 Lab Order Questionnarie Example for Pertussis -->
+      
+        <!-- item[0] Lab Order Questionnaire Example for TVT -->
         <item>
           <linkId value="info" />
-          <text value="Lab Order Questionnarie Example for Pertussis" />
+          <text value="Lab Order Questionnarie Example for TVT" />
           <type value="display" />
         </item>
-
-        <!-- item #1 Lab Order -->
+      
+        <!-- item[1] order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
@@ -244,14 +245,14 @@
             <type value="string" />
           </item>
         </item>
-
-        <!-- item #2 orderer -->
+      
+        <!-- item[2] orderer -->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
           <type value="group" />
-
-          <!-- item #2.0 orderer.author -->
+      
+          <!-- item[2.0] orderer.author-->
           <item>
             <linkId value="orderer.author" />
             <text value="Author" />
@@ -307,8 +308,8 @@
               <type value="string" />
             </item>
           </item>
-
-          <!-- orderer.dataenterer-->
+      
+          <!-- item[2.1] orderer.dataenterer-->
           <item>
             <linkId value="orderer.dataenterer" />
             <text value="Erfasser" />
@@ -325,16 +326,18 @@
             </item>
             <item>
               <linkId value="orderer.dataenterer.lastname" />
+              <text value="Name" />
+              <type value="string" />
+              <!-- TODO
               <code>
                 <system value="http://tbd" />
                 <code value="datlname" />
               </code>
-              <text value="Name" />
-              <type value="string" />
+              -->
             </item>
             <item>
               <linkId value="orderer.dataenterer.firstname" />
-              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
+              <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
               <text value="Vorname" />
               <type value="string" />
             </item>
@@ -369,8 +372,8 @@
               <type value="string" />
             </item>
           </item>
-
-          <!-- orderer.notcontactthisdoc -->
+      
+          <!-- item[2.2] orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
             <text value="Urgent Notification Contact for this document:" />
@@ -426,8 +429,8 @@
               <type value="string" />
             </item>
           </item>
-
-          <!-- orderer.notcontactresponsedoc -->
+      
+          <!-- item[2.3] orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
             <text value="Urgent Notification Contact for the response of this document:" />
@@ -484,8 +487,8 @@
             </item>
           </item>
         </item>
-
-        <!-- item #3 receiver -->
+      
+        <!-- item[3] receiver -->
         <item>
           <linkId value="receiver" />
           <text value="Receiver" />
@@ -546,8 +549,8 @@
             <type value="string" />
           </item>
         </item>
-
-        <!-- item #4 patient-->
+      
+        <!-- item[4] patient -->
         <item>
           <linkId value="patient" />
           <text value="Patient" />
@@ -597,71 +600,123 @@
             </answerOption>
           </item>
         </item>
-
-        <!-- item #5 specialty, here: microbiology-->
-        <item>
-          <linkId value="microbiology" />
-          <text value="Mikrobiologie" />
-          <type value="group" />
-
-          <!-- item #5.0 PCR for Pertussis/Parapertussis-->
-          <item>
-            <linkId value="per" />
-            <text value="Pertussis and Parapertussis DNA" />
-            <type value="choice" />
-            <repeats value="true" />
-            <answerOption>
-              <valueCoding>
-                <system value="http://loinc.org" />
-                <code value="90441-7" />
-                <display value="B pert+parapert DNA Pnl Nph" />
-              </valueCoding>
-            </answerOption>
-          </item>
-        </item>
-
-        <!-- item #6 specialty, here: hematology-->
+      
+        <!-- item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
-          <text value="Hämatologie" />
+          <text value="Hematology" />
           <type value="group" />
-
-          <!-- item #6.0 -->
           <item>
-            <linkId value="blood-diff" />
-            <text value="Manual Differential panel - Blood" />
+            <linkId value="hemato-subset" />
+            <text value="Hämatologie Subset" />
+            <type value="choice" />
+            <repeats value="true" />
+      
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="24360-0" />
+                <display value="Hemoglobin and Hematocrit panel - Blood" />
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="43113-0" />
+                <display value="Hemoglobin electrophoresis panel in Blood" />
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="57021-8" />
+                <display value="CBC W Auto Differential panel - Blood" />
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="58410-2" />
+                <display value="CBC panel - Blood by Automated count" />
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="57023-4" />
+                <display value="Auto Differential panel - Blood" />
+              </valueCoding>
+            </answerOption>
+          </item>
+        </item>
+      
+        <!-- item[6] lab specialty, here: coagulation -->
+        <item>
+          <linkId value="coagulation" />
+          <text value="Coagulation" />
+          <type value="group" />
+          <item>
+            <linkId value="d-dimer" />
+            <text value="D-Dimer" />
             <type value="choice" />
             <repeats value="true" />
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
-                <code value="24318-8" />
-                <display value="Manual diff Bld" />
+                <code value="55398-2" />
+                <display value="Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" />
               </valueCoding>
             </answerOption>
           </item>
         </item>
-
-        <!-- item #7 specialty, here: clinical chemistry-->
+      
+        <!-- item[7] lab specialty, here: clinical chemistry -->
         <item>
-          <linkId value="clinical chemistry" />
-          <text value="Klinische Chemie" />
+          <linkId value="cc" />
+          <text value="clinical chemistry" />
           <type value="group" />
+      
           <!-- CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
-            <text value="C-reactive Protein" />
+            <text value="CRP" />
             <type value="choice" />
             <repeats value="true" />
+      
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
                 <code value="1988-5" />
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
+                <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
+              </valueCoding>
+              <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
+            </answerOption>
+      
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="76485-2" />
+                <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
+              </valueCoding>
+            </answerOption>
+      
+            <!-- CRP C reactive Protein High sensitivity method -->
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="30522-7" />
+                <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
+              </valueCoding>
+            </answerOption>
+      
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org" />
+                <code value="76486-0" />
+                <display value="C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method" />
               </valueCoding>
             </answerOption>
           </item>
-
         </item>
       </Questionnaire>
     </resource>
@@ -1126,13 +1181,13 @@
     <resource>
       <ServiceRequest xmlns="http://hl7.org/fhir">
         <id value="2-pertussis" />
-
+      
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
-
+      
         <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-
+      
         <!-- should be mandatory ?
         <identifier>
         </identifier>
@@ -1148,7 +1203,7 @@
           <text value="Laboratory procedure (procedure)" />
         </category>
         <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
-
+      
         <subject>
           <reference value="Patient/EmilKummer" />
         </subject>
@@ -1157,7 +1212,7 @@
           Patient|RelatedPerson|Device) Who/what is requesting service -->
           <reference value="Practitioner/PeterPresto" />
         </requester>
-
+      
         <performerType>
           <!-- 0..1 CodeableConcept Performer role -->
           <coding>
@@ -1166,14 +1221,14 @@
           </coding>
           <text value="Laboratory medicine specialist (occupation)" />
         </performerType>
-
+      
         <performer>
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
           <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
           <reference value="Practitioner/PeterPap" />
         </performer>
-
+      
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1182,23 +1237,23 @@
           </coding>
           <text value="Pertussis suspected (situation)" />
         </reasonCode>
-
+      
         <insurance>
           <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
           <reference value="Coverage/HealthInsuranceCard" />
         </insurance>
-
+      
         <!-- 3 Specimens, belong to this laborder-servicerequest -->
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/throat-swab" />
         </specimen>
-
+      
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
         </specimen>
-
+      
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/serum" />
