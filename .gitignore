@@ -5,3 +5,6 @@ template/**
 .vscode/**
 resources/implementationguide/ig-*.*
 org.hl7.*.jar
+publisher.jar
+publisher.jar.bak
+ch.fhir.ig.ch-orf.xml

@@ -1,68 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="structuredefinition/ch-lab-order-document"/>
-    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
-    <version value="0.1.0"/>
-    <name value="CHLabOrderCompositionClinicalchemistry"/>
-    <title value="CH LAB ORDER Composition Profile"/>
+    <id value="ch-orf-document"/>
+    <url value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document"/>
+    <version value="0.9.0"/>
+    <name value="CHORFDocument"/>
+    <title value="CH ORF Document"/>
     <status value="draft"/>
-    <date value="2020-01-13T00:00:00+00:00"/>
-    <publisher value="HL7 Switzerland"/>
+    <date value="2019-01-30"/>
+    <publisher value="eHealth Suisse"/>
     <contact>
-        <name value="HL7 Switzerland"/>
+        <name value="eHealth Suisse"/>
         <telecom>
             <system value="url"/>
-            <value value="https://www.hl7.ch/"/>
+            <value value="https://www.e-health-suisse.ch/"/>
         </telecom>
     </contact>
-    <description value="Structure Definition of Laboratory Order"/>
+    <contact>
+        <name value="Oliver Egger"/>
+        <telecom>
+            <system value="email"/>
+            <value value="oliver.egger@ahdis.ch"/>
+        </telecom>
+    </contact>
+    <description value="Profile on Document for CH ORF"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="CH"/>
         </coding>
     </jurisdiction>
+    <copyright value="CC-BY-SA-4.0"/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
-    <type value="Composition"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ch-orf-composition"/>
-    <derivation value="constraint"/>
+    <type value="Bundle"/>
+    <baseDefinition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-document"/>
+    <derivation value="constraint" />
     <differential>
-        <element id="Composition">
-            <path value="Composition"/>
-            <short value="A set of resources composed into a single coherent lab order 
-                  form document with clinical attestation"/>
-            <definition value="A set of healthcare-related information that is assembled
-                  together into a single logical package that provides a single coherent
-                  statement of meaning, establishes its own context and that has clinical
-                  attestation with regard to who is making the statement. A Composition 
-                  defines the structure and narrative content necessary for a document.
-                  However, a Composition alone does not constitute a document. Rather, the
-                  Composition must be the first entry in a Bundle where Bundle.type=document, 
-                  and any other resources referenced from Composition must be included as
-                  subsequent entries in the Bundle (for example Patient, Practitioner,
-                  Encounter, etc.)."/>
-                  <comment value="While the focus of this specification is on patient-
-                  specific clinical statements, this resource can also apply to other 
-                  healthcare-related statements such as study protocol designs, healthcare 
-                  invoices and other activities that are not necessarily patient-specific or
-                  clinical."/>
+        <element id="Bundle">
+            <path value="Bundle"/>
         </element>
-        <element id="Composition.language">
-          <path value="Composition.language"/>
-          <short value="Language of the document"/>
-       </element>
-        <element id="Composition.subject">
-            <path value="Composition.subject"/>
+        <element id="Bundle.type">
+            <path value="Bundle.type"/>
+            <fixedCode value="document"/>
+        </element>
+        <element id="Bundle.total">
+            <path value="Bundle.total"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Bundle.link">
+            <path value="Bundle.link"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Bundle.entry">
+            <path value="Bundle.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resource"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="4"/>
+        </element>
+        <element id="Bundle.entry:Composition">
+            <path value="Bundle.entry"/>
+            <sliceName value="Composition"/>
+            <short value="Composition"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Bundle.entry:Composition.fullUrl">
+            <path value="Bundle.entry.fullUrl"/>
+        </element>
+        <element id="Bundle.entry:Composition.resource">
+            <path value="Bundle.entry.resource"/>
+            <min value="1"/>
             <type>
-                <code value="Reference"/>
-                <targetProfile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+                <code value="Resource"/>
+                <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
             </type>
         </element>
-        <element id="Composition.subject.reference">
-            <path value="Composition.subject.reference"/>
+        <element id="Bundle.entry:Questionnaire">
+            <path value="Bundle.entry"/>
+            <sliceName value="ChOrfQuestionnaire"/>
+            <short value="Questionnaire"/>
             <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Bundle.entry:Questionnaire.fullUrl">
+            <path value="Bundle.entry.fullUrl"/>
+        </element>
+        <element id="Bundle.entry:Questionnaire.resource">
+            <path value="Bundle.entry.resource"/>
+            <min value="1"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"/>
+            </type>
+        </element>
+        <element id="Bundle.entry:QuestionnaireResponse">
+            <path value="Bundle.entry"/>
+            <sliceName value="ChOrfQuestionnaireResponse"/>
+            <short value="QuestionnaireResponse"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Bundle.entry:QuestionnaireResponse.fullUrl">
+            <path value="Bundle.entry.fullUrl"/>
+        </element>
+        <element id="Bundle.entry:QuestionnaireResponse.resource">
+            <path value="Bundle.entry.resource"/>
+            <min value="1"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"/>
+            </type>
+        </element>
+        <element id="Bundle.entry:ServiceRequest">
+            <path value="Bundle.entry"/>
+            <sliceName value="ChOrfServiceRequest"/>
+            <short value="ServiceRequest"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Bundle.entry:ServiceRequest.fullUrl">
+            <path value="Bundle.entry.fullUrl"/>
+        </element>
+        <element id="Bundle.entry:ServiceRequest.resource">
+            <path value="Bundle.entry.resource"/>
+            <max value="1"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
+            </type>
         </element>
     </differential>
 </StructureDefinition>

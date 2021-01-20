@@ -1,157 +1,656 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ch.fhir.ig.ch-lab-order"/>
+  <id value="ch.fhir.ig.ch-lab-order" />
   <text>
-    <status value="additional"/>
+    <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
       ImplementationGuide for CH-LAB-ORDER
     </div>
   </text>
-  <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order"/>
-  <version value="0.0.1"/>
-  <name value="CH_LAB_ORDER"/>
-  <title value="CH-LAB-ORDER"/>
-  <status value="active"/>
-  <experimental value="false"/>
-  <date value="2020-09-03"/> <!-- last changed -->
-  <publisher value="HL7 Switzerland"/>
+  <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order" />
+  <version value="0.0.1" />
+  <name value="CH_LAB_ORDER" />
+  <title value="CH-LAB-ORDER" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-09-03" /> <!-- last changed -->
+  <publisher value="HL7 Switzerland" />
   <contact>
-    <name value="HL7 Switzerland"/>
+    <name value="HL7 Switzerland" />
     <telecom>
-      <system value="url"/>
-      <value value="https://www.hl7.ch/"/>
-    </telecom>
-  </contact>
-    <!-- responsible for this Implementation Guide-->
-  <contact>
-    <name value="Marcel Hanselmann"/>
-    <telecom>
-      <system value="email"/>
-      <value value="marcel.hanselmann@bluewin.ch"/>
+      <system value="url" />
+      <value value="https://www.hl7.ch/" />
     </telecom>
   </contact>
 
-  <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland"/>
+  <!-- responsible for this Implementation Guide-->
+  <contact>
+    <name value="Marcel Hanselmann" />
+    <telecom>
+      <system value="email" />
+      <value value="marcel.hanselmann@bluewin.ch" />
+    </telecom>
+  </contact>
+
+  <description value="ImplementationGuide to generate form templates for Laboratory Order in Switzerland" />
+
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="CH"/>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="CH" />
     </coding>
   </jurisdiction>
-  <copyright value="CC-BY-SA-4.0"/> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
-  <packageId value="ch.fhir.ig.ch-lab-order"/> <!-- NPM package name-->
-  <license value="CC-BY-SA-4.0"/>
-  <fhirVersion value="4.0.1"/>
 
-  <!-- dependencies from other IG's-->
+  <copyright value="CC-BY-SA-4.0" /> <!-- https://creativecommons.org/licenses/by-sa/4.0/deed.de-->
+
+  <packageId value="ch.fhir.ig.ch-lab-order" /> <!-- NPM package name-->
+
+  <license value="CC-BY-SA-4.0" />
+
+  <fhirVersion value="4.0.1" />
+
+  <!-- dependencies on other IG's -->
+  <!-- ############################ -->
+
+  <dependsOn id="sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
+    <packageId value="hl7.fhir.uv.sdc" />
+    <version value="2.7.0" />
+  </dependsOn>
+
   <dependsOn id="chorf">
-    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
-    <packageId value="ch.fhir.ig.ch-orf"/>
-    <version value="0.9.1"/>
+    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf" />
+    <packageId value="ch.fhir.ig.ch-orf" />
+    <version value="current" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
-  <!--  -->
   <dependsOn id="chcore">
-    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
-    <packageId value="ch.fhir.ig.ch-core"/>
-    <version value="1.0.0"/>
+    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core" />
+    <packageId value="ch.fhir.ig.ch-core" />
+    <version value="current" />
   </dependsOn>
-  
-  
-  <!-- Patients, Organisations and Practitioners must conform CH-core-->
-  <global>  
-    <type value="Patient"/>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
-    <type value="Organisation"/>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
-    <type value="Practitioner"/>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+
+
+  <!-- Patients, Organizations and Practitioners must conform CH-core -->
+  <!-- ############################################################## -->
+
+  <global>
+    <type value="Patient" />
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr" />
+    <type value="Organization" />
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr" />
+    <type value="Practitioner" />
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr" />
   </global>
+
 
   <definition>
     <grouping>
-      <name value="CHCoreCompositionEPR"/>
+      <name value="CH LAB-ORDER" />
     </grouping>
 
-  <!--
+    <!-- References to EXAMPLES: -->
+    <!-- ####################### -->
+
+    <!-- Reference to Bundle -->
+
     <resource>
       <reference>
-        <reference value="Bundle/referral-min"/>
+        <reference value="Bundle/referral-min" />
       </reference>
-      <name value="ServiceRequest"/>
-      <description value="Lab Order"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
+      <name value="Referral referral-min" />
+      <description value="Example Bundle for referral/order for minimal Referral" />
     </resource>
-  -->
+
+    <resource>
+      <reference>
+        <reference value="Bundle/1-tvt" />
+      </reference>
+      <name value="Referral 1-tvt" />
+      <description value="Example Bundle for referral/order for a TVT" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Bundle/2-pertussis" />
+      </reference>
+      <name value="Referral 2-pertussis" />
+      <description value="Example Bundle for referral/order for Pertussis investigation" />
+    </resource>
   
-  <!-- Resources -->
-  <!-- References to examples: 
     <resource>
       <reference>
-        <reference value="Composition/Zuweisung"/>
+        <reference value="Bundle/3-gyn" />
       </reference>
-      <name value="Zuweisung"/>
-      <description value="Example for Composition"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document"/>
+      <name value="Referreal 3-gyn" />
+      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
     </resource>
-   -->
+
     <resource>
       <reference>
-        <reference value="Patient/FranzMuster"/>
+        <reference value="Bundle/4-sepsis" />
       </reference>
-      <name value="FranzMuster"/>
-      <description value="Example for EPR-Patient"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-patient"/>
+      <name value="Referreal 4-sepsis" />
+      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Bundle/5-biol-monit" />
+      </reference>
+      <name value="Referreal 5-biol-monit" />
+      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+    </resource>
+ 
+    <!-- Reference to Composition-->
+    <resource>
+      <reference>
+        <reference value="Composition/referral-min"/>
+      </reference>
+      <name value="Referral minimal"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/1-tvt"/>
+      </reference>
+      <name value="1-tvt"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/2-pertussis"/>
+      </reference>
+      <name value="2-pertussis"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/3-gyn"/>
+      </reference>
+      <name value="3-gyn"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/4-sepsis"/>
+      </reference>
+      <name value="4-sepsis"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Composition/5-biol-monit"/>
+      </reference>
+      <name value="5-biol-monit"/>
+      <description value="Example for Composition"/>      
+    </resource>
+
+    <!-- Reference to Coverage -->
+
+
+
+    <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
+        Kostengutsprache, etc.
+        -->
+    <resource>
+      <reference>
+        <reference value="Coverage/CoverageFranzMuster" />
+      </reference>
+      <name value="CoverageFranzMuster" />
+      <description value="Example for Insurance Coverage" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Coverage/HealthInsuranceCard" />
+      </reference>
+      <name value="HealthInsuranceCard" />
+      <description value="Example for Insurance" />
+    </resource>
+    
+
+    <!-- References to Organization -->
+    <resource>
+      <reference>
+        <reference value="Organization/Custodian" />
+      </reference>
+      <name value="Custodian" />
+      <description value="Example for Organization" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/LaborPipette" />
+      </reference>
+      <name value="Labor Pipette" />
+      <description value="Example for Laboratory Organization" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/PraxisHausarzt" />
+      </reference>
+      <name value="Praxis Hausarzt" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/RegionalspitalZugersee" />
+      </reference>
+      <name value="Regionalspital Zugersee" />
+      <description value="Example for Hospital" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/SpeiserRails" />
+      </reference>
+      <name value="Speiser Rails" />
+      <description value="Example for Manufacturer" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Spitex" />
+      </reference>
+      <name value="Spitex" />
+      <description value="Example for Spitex" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Suva" />
+      </reference>
+      <name value="SUVA" />
+      <description value="Example for Manufacturer" />
+    </resource>
+
+    <!-- References to Patients -->
+
+    <resource>
+      <reference>
+        <reference value="Patient/BeatBorer" />
+      </reference>
+      <name value="BeatBorer" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/EmilKummer" />
+      </reference>
+      <name value="EmilKummer" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/FranzMuster" />
+      </reference>
+      <name value="FranzMuster" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/HansGuggindieluft" />
+      </reference>
+      <name value="HansGuggindieluft" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/KlebsiellaKeller" />
+      </reference>
+      <name value="KlebsiellaKeller" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/MarinaRubella" />
+      </reference>
+      <name value="MarinaRubella" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/MonikaWegmuellerRecipient" />
+      </reference>
+      <name value="MonikaWegmuellerRecipient" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/MonikaWegmueller" />
+      </reference>
+      <name value="MonikaWegmueller" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+
+    <!-- References to Practitioner -->
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/MarcApgar" />
+      </reference>
+      <name value="Marc Agpar" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/PeterPresto" />
+      </reference>
+      <name value="Peter Presto" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/HansHauser" />
+      </reference>
+      <name value="Hans Hauser" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/MarcMustermann" />
+      </reference>
+      <name value="Marc Mustermann" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/PeterPap" />
+      </reference>
+      <name value="Peter Pap" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/SimonSuva" />
+      </reference>
+      <name value="Simon Suva" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <!-- References to Questionnaire -->
+    <resource>
+      <reference>
+        <reference value="Questionnaire/referral-min" />
+      </reference>
+      <name value="questionnaire referral-min" />
+      <description value="Example for questionnaire" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/1-tvt" />
+      </reference>
+      <name value="questionnaire 1-tvt" />
+      <description value="Example for 1-tvt" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/2-pertussis" />
+      </reference>
+      <name value="questionnaire 2-pertussis" />
+      <description value="Example for 2-pertussis" />
+    </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Questionnaire/3-gyn" />
+      </reference>
+      <name value="questionnaire 3-gyn" />
+      <description value="Example for 3-gyn" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/4-sepsis" />
+      </reference>
+      <name value="questionnaire 4-sepsis" />
+      <description value="Example for 4-sepsis" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/5-biol-monit" />
+      </reference>
+      <name value="questionnaire 5-biol-monit" />
+      <description value="Example for 5-biol-monit" />
+    </resource>
+
+    <!-- References to QuestionnaireResponse -->  
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/referral-min" />
+      </reference>
+      <name value="questionnaire response referral-min" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/1-tvt" />
+      </reference>
+      <name value="questionnaire response 1-tvt" />
+      <description value="Example for questionnaire response" />
+    </resource>
+ 
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/2-pertussis" />
+      </reference>
+      <name value="questionnaire response 2-pertussis" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/3-gyn" />
+      </reference>
+      <name value="questionnaire response 3-gyn" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/4-sepsis" />
+      </reference>
+      <name value="questionnaire response 4-sepsis" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/5-biol-monit" />
+      </reference>
+      <name value="questionnaire response 5-biol-monit" />
+      <description value="Example for questionnaire response" />
+    </resource>
+
+    <!-- References to ServiceRequest -->
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/referral-min" />
+      </reference>
+      <name value="laborder service" />
+      <description value="Example for service request" />
+    </resource>
+   
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/1-tvt" />
+      </reference>
+      <name value="laborder 1-tvt" />
+      <description value="Example for 1-tvt request" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/2-pertussis" />
+      </reference>
+      <name value="laborder 2-pertussis" />
+      <description value="Example for 2-pertussis request" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/3-gyn" />
+      </reference>
+      <name value="laborder 3-gyn" />
+      <description value="Example for 3-gyn request" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/4-sepsis" />
+      </reference>
+      <name value="laborder 4-sepsis" />
+      <description value="Example for 4-sepsis request" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/5-biol-monit" />
+      </reference>
+      <name value="laborder 5-biol-monit" />
+      <description value="Example for 5-biol-monit request" />
+    </resource>
+
+    <!-- References to Specimens -->
+    <resource>
+      <reference>
+        <reference value="Specimen/blood-bactec-plus" />
+      </reference>
+      <name value="Blood Sample Bacteriology" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/blood-coag" />
+      </reference>
+      <name value="Blood Sample Coagulation" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/blood" />
+      </reference>
+      <name value="Blood Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/cervix-swab" />
+      </reference>
+      <name value="Cervix-swab Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    
+    <resource>
+      <reference>
+        <reference value="Specimen/lsac" />
+      </reference>
+      <name value="Cerebrospinal Fluid Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/serum" />
+      </reference>
+      <name value="Serum Sample" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/throat-swab" />
+      </reference>
+      <name value="Throat Swab" />
+      <description value="Example for Specimen" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Specimen/urin" />
+      </reference>
+      <name value="Urin Sample" />
+      <description value="Example for Specimen" />
     </resource>
 
     <!-- References to code systems -->
+    <!-- ########################## -->
     <resource>
       <reference>
-        <reference value="CodeSystem/ig-example"/>
+        <reference value="CodeSystem/ig-example" />
       </reference>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="false" />
     </resource>
 
-    <!-- References to structure definitions -->
+    <!-- References to STRUCTUREDEFINITIONS -->
+    <!-- ################################## -->
     
-  
+        <!-- References to VALUESETS -->
+    <!-- ####################### -->
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-lab-order-patient"/>
+        <reference value="ValueSet/ig-example" />
       </reference>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="false" />
     </resource>
 
-    <!-- References to value sets -->
-    <resource>
-      <reference>
-        <reference value="ValueSet/ig-example"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-
+    <!-- Page content -->
     <page>
-      <nameUrl value="toc.html"/>
-      <title value="Table of Contents"/>
-      <generation value="html"/>
+      <nameUrl value="toc.html" />
+      <title value="Table of Contents" />
+      <generation value="html" />
       <page>
-        <nameUrl value="index.html"/>
-        <title value="Home"/>
-        <generation value="markdown"/>
+        <nameUrl value="index.html" />
+        <title value="Home" />
+        <generation value="markdown" />
       </page>
     </page>
     <parameter>
-      <code value="releaselabel"/>
-      <value value="CI build"/>
+      <code value="releaselabel" />
+      <value value="CI build" />
     </parameter>
     <parameter>
       <code value="path-pages" />
-      <value value="input/pages"/>
+      <value value="input/pages" />
     </parameter>
     <parameter>
-      <code value="copyrightyear"/>
-      <value value="2020+"/>
+      <code value="copyrightyear" />
+      <value value="2020+" />
     </parameter>
   </definition>
 </ImplementationGuide>

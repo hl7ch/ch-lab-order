@@ -1,11 +1,11 @@
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
-  <id value="referral-1-tvt" />
+  <id value="1-tvt" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
   </meta>
-  <questionnaire value="Questionnaire/referral-1-tvt" />
+  <questionnaire value="Questionnaire/1-tvt" />
   <status value="completed" />
   <!-- item order -->
   <item>
@@ -40,7 +40,7 @@
       </item>
       <item>
         <linkId value="orderer.author.organization" />
-        <text value="Organisation" />
+        <text value="Organization" />
         <type value="string" />
       </item>
       <item>
@@ -95,7 +95,7 @@
       </item>
       <item>
         <linkId value="orderer.dataenterer.organization" />
-        <text value="Organisation" />
+        <text value="Organization" />
         <type value="string" />
       </item>
       <item>
@@ -109,7 +109,7 @@
       </item>
       <item>
         <linkId value="orderer.dataenterer.firstname" />
-        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first" />
+        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
         <text value="Vorname" />
         <type value="string" />
       </item>
@@ -155,7 +155,7 @@
       </item>
       <item>
         <linkId value="orderer.notifcontactthisdoc.organization" />
-        <text value="Organisation" />
+        <text value="Organization" />
         <type value="string" />
       </item>
       <item>
@@ -210,7 +210,7 @@
       </item>
       <item>
         <linkId value="orderer.notifcontactresponsedoc.organization" />
-        <text value="Organisation" />
+        <text value="Organization" />
         <type value="string" />
       </item>
       <item>

@@ -1,0 +1,14 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="SimonSuva"/>
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.51.1.3"/>
+    <value value="7601000050705"/>
+  </identifier>
+  <name>
+    <family value="Suva"/>
+    <given value="Simon"/>
+  </name>
+</Practitioner>

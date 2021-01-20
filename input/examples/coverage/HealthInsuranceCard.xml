@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="HealthInsuranceCard"/> 
+
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the European Health Insurance Card</div> 
+  </text> 
+
+  <identifier> 
+    <system value="http://ehic.com/insurer/123456789/member"/> 
+    <value value="A123456780"/> 
+  </identifier> 
+
+  <!-- hier bräuchte es wohl eine Anpassung für die Schweiz für alle möglichen Kostenträger.
+    Krankenversicherer: 
+    Krankenversicherer: https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-aufsicht/bakv/Zugelassene-krankenversicherer/zugelassenen-krankenversicherer-010420.pdf.download.pdf/Zugelassene%20Krankenversicherer_1_04_2020.pdf
+    Unfallversicherer: 
+      Privatversicherer: https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-aufsicht/unfallversicherung/liste-unfallversicherer.pdf.download.pdf/liste-unfallversicherer-d-f-i.pdf
+      SUVA: Agenturen: https://www.suva.ch/de-ch/die-suva/ueber-uns/agenturen-und-adressen#m-contact-search__{AF1D2E1F-E11D-4B51-8355-C5419ECD3163}=u-name:Agentur
+    Militärversicherung: https://www.suva.ch/de-ch/die-suva/ueber-uns/agenturen-und-adressen#m-contact-search__{AF1D2E1F-E11D-4B51-8355-C5419ECD3163}=u-name:Milit%C3%A4rversicherung
+    Invalidenversicherung: Die IV-Stellen sind kantonal organisiert: https://www.ahv-iv.ch/de/Kontakte/IV-Stellen. Sie sind durchnummeriert
+    Sozialämter: Wahrscheinlich muss man auch die Sozialämter hier aufführen.
+  -->
+
+  <status value="active"/> 
+
+  <type> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/> 
+      <code value="EHCPOL"/> 
+      <display value="extended healthcare"/> 
+    </coding> 
+  </type> 
+
+  <subscriber> 
+    <reference value="Patient/FranzMuster"/> 
+  </subscriber> 
+
+  <beneficiary> 
+    <reference value="Patient/FranzMuster"/> 
+  </beneficiary> 
+
+  <period>  
+    <end value="2012-03-17"/> 
+  </period> 
+
+  <payor> 
+    <identifier> 
+      <system value="http://ehic.com/insurer"/> 
+      <value value="123456789"/> 
+    </identifier> 
+  </payor> 
+
+  <!-- siehe oben Identifier -->
+
+</Coverage> 

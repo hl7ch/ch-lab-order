@@ -53,7 +53,7 @@
             </item>
             <item>
                 <linkId value="orderer.author.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -108,7 +108,7 @@
             </item>
             <item>
                 <linkId value="orderer.dataenterer.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -122,7 +122,7 @@
             </item>
             <item>
                 <linkId value="orderer.dataenterer.firstname"/>
-                <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first"/>
+                <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first"/>
                 <text value="Vorname"/>
                 <type value="string"/>
             </item>
@@ -168,7 +168,7 @@
             </item>
             <item>
                 <linkId value="orderer.notifcontactthisdoc.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -223,7 +223,7 @@
             </item>
             <item>
                 <linkId value="orderer.notifcontactresponsedoc.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>

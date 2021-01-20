@@ -1,0 +1,400 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="3-gyn" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      Lab Order Questionnarie Response Example for Gynecology and Obstrics
+      <pre>todo copy text out of rendering</pre>
+    </div>
+  </text>
+
+  <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn" />
+  <status value="completed" />
+
+  <!-- item[0] Lab Order Questionnaireresponse Example for Gynecology and Obstrics -->
+  <item>
+    <linkId value="info" />
+    <text value="Lab Order Questionnareresponse Example for Gynecology and Obstrics" />
+  </item>
+
+  <!-- item[1] order -->
+  <item>
+    <linkId value="order" />
+    <text value="Auftrag" />
+    <item>
+      <linkId value="order.date" />
+      <text value="Auftrags-Datum" />
+      <answer>
+        <valueDate value="2020-01-01" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="order.number" />
+      <text value="Auftrags-Nummer" />
+      <answer>
+        <valueString value="12303" />
+      </answer>
+    </item>
+  </item>
+
+  <!-- item[2] orderer -->
+  <item>
+    <linkId value="orderer" />
+    <text value="Auftraggeber" />
+
+    <!-- item[2.0] orderer.author -->
+    <item>
+      <linkId value="orderer.author" />
+      <text value="Author" />
+      <item>
+        <linkId value="orderer.author.visum" />
+        <text value="Visum" />
+      </item>
+      <item>
+        <linkId value="orderer.author.organization" />
+        <text value="Organization" />
+      </item>
+      <item>
+        <linkId value="orderer.author.lastname" />
+        <text value="Name" />
+      </item>
+      <item>
+        <linkId value="orderer.author.firstname" />
+        <text value="Vorname" />
+      </item>
+      <item>
+        <linkId value="orderer.author.tel" />
+        <text value="Telefon" />
+      </item>
+      <item>
+        <linkId value="orderer.author.e-mail" />
+        <text value="E-Mail" />
+      </item>
+      <item>
+        <linkId value="orderer.author.street" />
+        <text value="Strasse" />
+      </item>
+      <item>
+        <linkId value="orderer.author.postfach" />
+        <text value="Postfach" />
+      </item>
+      <item>
+        <linkId value="orderer.author.zip" />
+        <text value="PLZ" />
+      </item>
+      <item>
+        <linkId value="orderer.author.city" />
+        <text value="Ort" />
+      </item>
+    </item>
+
+    <!-- item[2.1] orderer.dataenterer -->
+    <item>
+      <linkId value="orderer.dataenterer" />
+      <text value="Erfasser" />
+      <item>
+        <linkId value="orderer.dataenterer.visum" />
+        <text value="Visum" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.organization" />
+        <text value="Organization" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.lastname" />
+        <text value="Name" />
+        <answer>
+          <valueString value="Pap" />
+          <!-- 
+          <valueCoding>
+            <system value="http://tbd" />
+            <code value="datlname" />
+          </valueCoding>
+          -->
+        </answer>
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.firstname" />
+        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
+        <text value="Vorname" />
+        <answer>
+          <valueString value="Peter" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.tel" />
+        <text value="Telefon" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.e-mail" />
+        <text value="E-Mail" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.street" />
+        <text value="Strasse" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.postfach" />
+        <text value="Postfach" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.zip" />
+        <text value="PLZ" />
+      </item>
+      <item>
+        <linkId value="orderer.dataenterer.city" />
+        <text value="Ort" />
+      </item>
+    </item>
+
+    <!-- item[2.2] orderer.notcontactthisdoc -->
+    <item>
+      <linkId value="orderer.notcontactthisdoc" />
+      <text value="Urgent Notification Contact for this document:" />
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.visum" />
+        <text value="Visum" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.organization" />
+        <text value="Organization" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.lastname" />
+        <text value="Name" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.firstname" />
+        <text value="Vorname" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.tel" />
+        <text value="Telefon" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.e-mail" />
+        <text value="E-Mail" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.street" />
+        <text value="Strasse" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.postfach" />
+        <text value="Postfach" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.zip" />
+        <text value="PLZ" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactthisdoc.city" />
+        <text value="Ort" />
+      </item>
+    </item>
+
+    <!-- item[2.3] orderer.notcontactresponsedoc -->
+    <item>
+      <linkId value="orderer.notcontactresponsedoc" />
+      <text value="Urgent Notification Contact for the response of this document:" />
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.visum" />
+        <text value="Visum" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.organization" />
+        <text value="Organization" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.lastname" />
+        <text value="Name" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.firstname" />
+        <text value="Vorname" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.tel" />
+        <text value="Telefon" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.e-mail" />
+        <text value="E-Mail" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.street" />
+        <text value="Strasse" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.postfach" />
+        <text value="Postfach" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.zip" />
+        <text value="PLZ" />
+      </item>
+      <item>
+        <linkId value="orderer.notifcontactresponsedoc.city" />
+        <text value="Ort" />
+      </item>
+    </item>
+  </item>
+
+  <!-- item[3] receiver -->
+  <item>
+    <linkId value="receiver" />
+    <text value="Receiver" />
+    <item>
+      <linkId value="receiver.visum" />
+      <text value="Visum" />
+    </item>
+    <item>
+      <linkId value="receiver.bereich" />
+      <text value="Bereich" />
+    </item>
+    <item>
+      <linkId value="receiver.abt" />
+      <text value="Bereich" />
+    </item>
+    <item>
+      <linkId value="receiver.lastname" />
+      <text value="Name" />
+    </item>
+    <item>
+      <linkId value="receiver.firstname" />
+      <text value="Vorname" />
+    </item>
+    <item>
+      <linkId value="receiver.tel" />
+      <text value="Telefon" />
+    </item>
+    <item>
+      <linkId value="receiver.e-mail" />
+      <text value="E-Mail" />
+    </item>
+    <item>
+      <linkId value="receiver.cstreet" />
+      <text value="Strasse" />
+    </item>
+    <item>
+      <linkId value="receiver.postfach" />
+      <text value="Postfach" />
+    </item>
+    <item>
+      <linkId value="receiver.zip" />
+      <text value="PLZ" />
+    </item>
+    <item>
+      <linkId value="receiver.city" />
+      <text value="Ort" />
+    </item>
+  </item>
+
+  <!-- item[4] patient -->
+  <item>
+    <linkId value="patient" />
+    <text value="Patient" />
+    <item>
+      <linkId value="patient.lastname" />
+      <text value="Name" />
+      <answer>
+        <valueString value="Rubella" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.firstname" />
+      <text value="Vorname" />
+      <answer>
+        <valueString value="Marina" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.pid" />
+      <text value="PID (sendendes System)" />
+      <answer>
+        <valueString value="012/08.111103" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.sex" />
+      <text value="Geschlecht" />
+      <answer>
+        <valueString value="F" />
+      </answer>
+    </item>
+    <!-- 
+    <item>
+      <linkId value="patient.zip" />
+      <text value="PLZ" />
+      <answer>
+        <valueString value="5679" />
+      </answer>
+    </item>
+    -->
+  </item>
+
+  <!-- item[5] lab specialty, here: Cytology and Microbiology-->
+  <item>
+    <linkId value="cytology" />
+    <text value="Cytology and Microbiology" />
+    <item>
+      <linkId value="cervicalSmear" />
+      <text value="Cervical Smear" />
+
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="86662-4" />
+          <display value="Pap smear tests - FPAR 2.0 set" />
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="14503-7" />
+          <display value="Human papilloma virus 16+18 Ag [Presence] in Cervix" />
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+
+  <!-- item[6] lab specialty, here: Urin Analysis -->
+  <item>
+    <linkId value="urin" />
+    <text value="Urin" />
+    <item>
+      <linkId value="combur9" />
+      <text value="Combur-9" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="50556-0" />
+          <display value="Urinalysis dipstick panel - Urine by Automated test strip" />
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+
+  <!-- item[7] lab specialty, here: Obstetrical Panels-->
+  <item>
+    <linkId value="obstetricalPanels" />
+    <text value="Schwangerschaftsvorsorge" />
+    <!-- Rotes BB, Diff BB, Hepatitis B, Rubella, AB0 Rhesus -->
+    <item>
+      <linkId value="obstetric" />
+      <text value="Obstetric 1996 panel – Serum and Blood" />
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org" />
+          <code value="24364-2" />
+          <display value="Obstetric 1996 Pnl Ser+Bld" />
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+</QuestionnaireResponse>

@@ -32,6 +32,7 @@
         <text value="Lab Order Questionnarie Example for a Clinical_chemistry"/>
         <type value="display"/>
     </item>
+    <!-- item order-->
     <item>
         <linkId value="order"/>
         <text value="Auftrag"/>
@@ -58,7 +59,7 @@
             </item>
             <item>
                 <linkId value="orderer.author.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -113,7 +114,7 @@
             </item>
             <item>
                 <linkId value="orderer.dataenterer.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -127,7 +128,7 @@
             </item>
             <item>
                 <linkId value="orderer.dataenterer.firstname"/>
-                <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/QRFDataEntryPerson#Practitioner.name.first"/>
+                <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first"/>
                 <text value="Vorname"/>
                 <type value="string"/>
             </item>
@@ -173,7 +174,7 @@
             </item>
             <item>
                 <linkId value="orderer.notifcontactthisdoc.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -228,7 +229,7 @@
             </item>
             <item>
                 <linkId value="orderer.notifcontactresponsedoc.organization"/>
-                <text value="Organisation"/>
+                <text value="Organization"/>
                 <type value="string"/>
             </item>
             <item>
@@ -388,11 +389,12 @@
     <item>
         <linkId value="clinical_chemistry"/>
         <text value="Klinische Chemie"/>
-        <type value="choice"/>
+        <type value="group"/>
         <item>
             <linkId value="lab"/>
             <text value="Laborwerte"/>
-            <type value="string"/>
+            <type value="choice"/>
+            <repeats value="true" />
             <!-- answer option: Lipid and glucose panel-->
             <answerOption>
               <valueCoding>

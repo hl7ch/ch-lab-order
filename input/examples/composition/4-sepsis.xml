@@ -1,0 +1,78 @@
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="4-sepsis"/>
+  <meta>
+      <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+  </meta>
+  <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+          Referral 4-sepsis
+      </div>
+  </text>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
+    <valueIdentifier>
+      <value value="123" />
+    </valueIdentifier>
+  </extension>
+
+  <identifier>
+      <system value="http://test.fhir.ch/id/uuid"/>
+      <value value="26d3dff7-ab05-4737-a49c-5eccd3359504"/>
+  </identifier>
+  <status value="final"/>
+
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721965002" />
+      <display value="Laboratory order (record artifact)" />
+    </coding>
+  </type>
+
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721963009" />
+      <display value="Order (record artifact)" />
+    </coding>
+  </category>
+
+  <subject>
+      <reference value="Patient/KlebsiellaKeller"/>
+  </subject>
+  <date value="2019-03-31T11:46:09+02:00"/>
+
+  <author>
+      <reference value="Practitioner/HansHauser"/>
+  </author>
+  <title value="Referral 4-sepsis"/>
+
+  <attester>
+      <mode value="professional"/>
+      <time value="2010-03-12T11:46:09+02:00"/>
+      <party>
+          <reference value="Organization/RegionalspitalZugersee"/>
+      </party>
+  </attester>
+
+  <!-- sections -->
+  <section>
+      <title value="Referral"/>
+      <text>
+        <status value="generated" />
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          Referral 4-sepsis
+        </div>
+      </text>
+      <entry>
+          <reference value="Questionnaire/4-sepsis"/>
+      </entry>
+      <entry>
+          <reference value="QuestionnaireResponse/4-sepsis"/>
+      </entry>
+      <entry>
+          <reference value="ServiceRequest/4-sepsis"/>
+      </entry>
+  </section>
+</Composition>

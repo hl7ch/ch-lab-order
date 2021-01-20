@@ -1,12 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Specimen xmlns="http://hl7.org/fhir">
+  <id value="throat-swab" />
   <!-- from Resource: id, meta, implicitRules, and language -->
   <!-- from DomainResource: text, contained, extension, and modifierExtension -->
-  <identifier><!-- 0..* This is a business identifier, not a resource identifier (see discussion) --></identifier>
+  <identifier>
+    <!-- 0..* This is a business identifier, not a resource identifier (see discussion) -->
+    <value value="48736-15394-75465" />
+  </identifier>
   <accessionIdentifier>
     <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
+    <value value="4e88a-bc987-dd888" />
   </accessionIdentifier>
-  <status value="[code]"/><!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
-  <type> 
+  <status value="available" /> <!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
+  <type>
     <!--   
     Type is a loosely defined field because there is such a lot of variation in how it is used.
     The principal variation is how much information that could be represented elsewhere is also
@@ -19,46 +26,65 @@
     coding: TODO look at [https://www.hl7.org/fhir/conceptmap-example-specimen-type.html] and 
     the example below
     -->
-    <coding> 
-      <system value="http://snomed.info/sct"/> 
-      <code value="258529004"/> 
-      <display value="Throat swab (specimen)"/> 
-    </coding> 
-  </type> 
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="258529004" />
+      <display value="Throat swab (specimen)" />
+    </coding>
+  </type>
   <subject>
     <!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This 
       may be from patient(s), from a location (e.g., the source of an environmental sample), or a
       sampling of a substance or a device -->
+    <reference value="Patient/FranzMuster" />
   </subject>
-  <receivedTime value="[dateTime]"/><!-- 0..1 The time when specimen was received for processing -->
-  <parent><!-- 0..* Reference(Specimen) Specimen from which this specimen originated --></parent>
-  <request><!-- 0..* Reference(ServiceRequest) Why the specimen was collected --></request>
-  <collection>  <!-- 0..1 Collection details -->
-   <collector><!-- 0..1 Reference(Practitioner|PractitionerRole) Who collected the specimen --></collector>
-   <collected><!-- 0..1 dateTime|Period Collection time --></collected>
-   <duration><!-- 0..1 Duration How long it took to collect specimen --></duration>
-   <quantity><!-- 0..1 Quantity(SimpleQuantity) The quantity of specimen collected --></quantity>
-   <method><!-- 0..1 CodeableConcept Technique used to perform collection --></method>
-   <bodySite><!-- 0..1 CodeableConcept Anatomical collection site --></bodySite>
-   <fastingStatus><!-- 0..1 CodeableConcept|Duration Whether or how long patient abstained from food and/or drink --></fastingStatus>
+  <receivedTime value="2020-08-16T16:40:17Z" /> <!-- 0..1 The time when specimen was received for processing -->
+
+  <request>
+    <reference value="ServiceRequest/referral-min" />
+  </request>
+  <collection>
+    <!-- 0..1 Collection details -->
+    <collector>
+      <!-- 0..1 Reference(Practitioner|PractitionerRole) Who collected the specimen -->
+      <reference value="Practitioner/MarcMustermann" />
+    </collector>
+    <collectedDateTime value="2020-08-16T06:40:17Z" />
+    <method>
+      <!-- 0..1 CodeableConcept Technique used to perform collection -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="418932006" />
+        <display value="Oral swab (specimen)" />
+      </coding>
+    </method>
+    <bodySite>
+      <!-- 0..1 CodeableConcept Anatomical collection site -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="264231000" />
+        <display value="Entire throat (surface region of neck) (body structure)" />
+      </coding>
+    </bodySite>
   </collection>
-  <processing>  <!-- 0..* Processing and processing step details -->
-   <description value="[string]"/><!-- 0..1 Textual description of procedure -->
-   <procedure><!-- 0..1 CodeableConcept Indicates the treatment step  applied to the specimen --></procedure>
-   <additive><!-- 0..* Reference(Substance) Material used in the processing step --></additive>
-   <time><!-- 0..1 dateTime|Period Date and time of specimen processing --></time>
-  </processing>
-  <container>  <!-- 0..* Direct container of specimen (tube/slide, etc.) -->
-   <identifier><!-- 0..* Identifier Id for the container --></identifier>
-   <description value="[ESwab 486C tubes Copan]"/><!-- 0..1 Textual description of the container -->
-   <type>
-     <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
-  </type>
-   <capacity><!-- 0..1 Quantity(SimpleQuantity) Container volume or size -->
-  </capacity>
-   <specimenQuantity><!-- 0..1 Quantity(SimpleQuantity) Quantity of specimen within container --></specimenQuantity>
-   <additive><!-- 0..1 CodeableConcept|Reference(Substance) Additive associated with container --></additive>
+  <container>
+    <!-- 0..* Direct container of specimen (tube/slide, etc.) -->
+    <identifier>
+      <value value="4e88a-bc987-dd888-12345" />
+    </identifier>
+    <!-- 0..1 Textual description of the container -->
+    <!-- 'https://www.copanusa.com/wp-content/uploads/2019/07/LBM-ESwab-051519.pdf'-->
+    <description value="ESwab 486C tubes Copan" />
+    <type>
+      <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="706053007" />
+        <display value="General specimen container (physical object)" />
+      </coding>
+    </type>
   </container>
-  <condition><!-- 0..* CodeableConcept State of the specimen --></condition>
-  <note><!-- 0..* Annotation Comments --></note>
- </Specimen>
+  <note> 
+    <text value="Some notes to Sample"/> 
+  </note> 
+</Specimen>

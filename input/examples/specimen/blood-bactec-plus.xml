@@ -1,39 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Specimen xmlns="http://hl7.org/fhir">
+  <id value="blood-bactec-plus" />
   <!-- from Resource: id, meta, implicitRules, and language -->
   <!-- from DomainResource: text, contained, extension, and modifierExtension -->
-  <identifier><!-- 0..* Identifier External Identifier --></identifier>
+  <identifier>
+    <!-- 0..* This is a business identifier, not a resource identifier (see discussion) -->
+    <value value="88888-15394-75465" />
+  </identifier>
   <accessionIdentifier>
     <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
+    <value value="77777-bc987-dd888" />
   </accessionIdentifier>
-  <status value="[code]"/><!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
-  <type> 
-    <coding> 
+  <status value="available" /> <!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
+  <type>
+    <!--   
+    Type is a loosely defined field because there is such a lot of variation in how it is used.
+    The principal variation is how much information that could be represented elsewhere is also
+    represented here. For instance, here's some possible types:
+      lithium heparin plasma   (+ .container.additive) (e.g. SNOMED CT 446272009)
+      transfusion bag of blood (+ container.type)
+      Peritoneal lavage        (+ collection.bodySite)
+    If the type includes other fields, it would be normal not to populate the other fields.
+    Note that this practice is so widespread that it's pointless to try and stop it. Possible
+    coding: TODO look at [https://www.hl7.org/fhir/conceptmap-example-specimen-type.html] and 
+    the example below
+    -->
+    <coding>
       <system value="http://snomed.info/sct"/> 
       <code value="119297000"/> 
-      <display value="Blood"/> 
-    </coding> 
-  </type> 
-  <subject><!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device --></subject>
-  <receivedTime value="[dateTime]"/><!-- 0..1 The time when specimen was received for processing -->
-  <parent><!-- 0..* Reference(Specimen) Specimen from which this specimen originated --></parent>
-  <request><!-- 0..* Reference(ServiceRequest) Why the specimen was collected --></request>
-  <collection>  <!-- 0..1 Collection details -->
-   <collector><!-- 0..1 Reference(Practitioner|PractitionerRole) Who collected the specimen --></collector>
-   <collected><!-- 0..1 dateTime|Period Collection time --></collected>
-   <duration><!-- 0..1 Duration How long it took to collect specimen --></duration>
-   <quantity><!-- 0..1 Quantity(SimpleQuantity) The quantity of specimen collected --></quantity>
-   <method><!-- 0..1 CodeableConcept Technique used to perform collection --></method>
-   <bodySite><!-- 0..1 CodeableConcept Anatomical collection site --></bodySite>
-   <fastingStatus><!-- 0..1 CodeableConcept|Duration Whether or how long patient abstained from food and/or drink --></fastingStatus>
-  </collection>
-  <processing>  <!-- 0..* Processing and processing step details -->
-   <description value="[string]"/><!-- 0..1 Textual description of procedure -->
-   <procedure><!-- 0..1 CodeableConcept Indicates the treatment step  applied to the specimen --></procedure>
-   <additive><!-- 0..* Reference(Substance) Material used in the processing step --></additive>
-   <time><!-- 0..1 dateTime|Period Date and time of specimen processing --></time>
-  </processing>
+      <display value="Blood sample"/> 
+    </coding>
+  </type>
+  <subject>
+    <!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This 
+      may be from patient(s), from a location (e.g., the source of an environmental sample), or a
+      sampling of a substance or a device -->
+    <reference value="Patient/FranzMuster" />
+  </subject>
+  <receivedTime value="2020-08-16T16:40:17Z" /> <!-- 0..1 The time when specimen was received for processing -->
+
+  <request>
+    <reference value="ServiceRequest/referral-min" />
+  </request>
+  <collection> 
+    <collector> 
+      <reference value="Practitioner/MarcMustermann"/> 
+    </collector> 
+    <collectedDateTime value="2015-08-16T06:40:17Z"/> 
+  </collection> 
   <container>  <!-- 0..* Direct container of specimen (tube/slide, etc.) -->
     <identifier><!-- 0..* Identifier Id for the container -->
+      <value value="4e88a-bc987-dd888-00000-bact" />
     </identifier>
     <description value="Sarstedt Blutkultur-Adapter Universal"/><!-- 0..1 Textual description of the container -->
     <type>
@@ -44,21 +62,14 @@
         <display value="Blood collection Luer adaptor"/> 
       </coding>
     </type>
-    <capacity>
-      <!-- 0..1 Quantity(SimpleQuantity) Container volume or size -->
-    </capacity>
-    <specimenQuantity><!-- 0..1 Quantity(SimpleQuantity) Quantity of specimen within container -->
-    </specimenQuantity>
-    <additive>
+
+    <additiveCodeableConcept>
       <!-- 0..1 CodeableConcept|Reference(Substance) Additive associated with container -->
       <coding> 
         <system value="http://terminology.hl7.org/CodeSystem/v2-0371"/> 
         <code value="BACTM"/> 
         <display value="Bacterial Transport medium"/> 
       </coding>
-    </additive>
+    </additiveCodeableConcept>
   </container>
-  <condition><!-- 0..* CodeableConcept State of the specimen -->
-  </condition>
-  <note><!-- 0..* Annotation Comments --></note>
- </Specimen>
+</Specimen>

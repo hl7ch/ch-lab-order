@@ -11,19 +11,20 @@ Ein Patient erscheint am 09.03.2016 in der Arztpraxis bei Dr. med. Mustermann. E
 Der Arzt führt selber das Blutbild und die CRP-Bestimmung mittels Point of care Diagnostik durch, die D-Dimer-Diagnostik wird als Quantitative Diagnostik in einem externen Einsendelabor verordnet. Zur Gewinnung der Probe wird eine Blutentnahme im Liegen durchgeführt (1 EDTA-Röhrchen, 1 Citrat-Röhrchen). Der Auftrag wird an das externe Labor übermittelt und die Probe wird mittels telefonisch geordertem Kurier in das externe Versandlabor geschickt. Die Resultate der internen Point of Care-Diagnostik (Blutbild und CRP) werden im Laborblatt des Patienten in der Arztpraxis-Software eingetragen (händisch oder über lokal installierte elektronische Schnittstellen). Es erfolgt daher eine Verordnung des Arztes an den Patienten zur Selbstverabreichung eines thrombosehemmenden Mittels.
 Die Resultate des Einsendelabors treffen am gleichen Abend elektronisch beim Hausarzt ein und werden ebenfalls im Laborblatt des Patienten eingetragen. Durch den Einsatz des vorliegenden Austauschformats kann dieser Prozess vollautomatisch erfolgen. Nach telefonischer Rückfrage des Arztes beim Einsendelabor auf Grund eines grenzwertigen D-Dimer-Befundes erfolgt die Auskunft, dass mittels D-Dimer in dieser Situation eine tiefe Venenthrombose nicht ausgeschlossen werden kann und es erfolgt daher eine telefonische Wiedereinbestellung des Patienten am nächsten Tag zur Durchführung einer Sonographie der Beine.
 
-Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht:
-[CDA-CH-LREP-1_VerdachtAufTiefeVenenthrombose.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-1_VerdachtAufTiefeVenenthrombose.xml)
+TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
+[1-tvt.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-1_VerdachtAufTiefeVenenthrombose.xml)
 
 ## Fallbeispiel 2: Verdacht auf Keuchhusten
 
 Fallbeispiel 2: Verdacht auf Keuchhusten
 Zu diesem Fallbeispiel befinden sich im Whitepaper[1], Anhang 8.7 konkrete Beispieldokumente. Die « Abbildung 2 » im Whitepaper[1] zeigt das zu diesem Fallbeispiel gehörende Use Case Diagramm.
 
-Eine Mutter sucht mit ihrem 6-jährigen Sohn Emil Kummer, geb. 5. Mai 2014, den Hausarzt auf, weil das Kind seit zwei Wochen zunehmend hustet, mit krampfartigen Hustenanfällen, und Fieber hat. Die MPA der Arztpraxis misst das Fieber, macht bereits eine Fingerkuppen-Blutentnahme beim Sohn, bestimmt das CRP und fertigt einen Blutausstrich an. Der Arzt vermutet einen viralen Infekt, möchte aber Keuchhusten ausschliessen, obwohl das Kind dagegen geimpft ist. Da er wegen eines Notfalles unter Zeitdruck ist, möchte er den dazu nötigen Rachenabstrich nicht selbst durchführen, sondern bittet die Mutter, das Kind ins nahegelegene Labor zu begleiten, um den Abstrich in Ruhe anfertigen zu lassen.
-Er erstellt einen Laborauftrag zur Durchführung einer Pertussis-PCR im Rachenabstrich des Kindes und gibt den Auftrag der Mutter mit. Die Mutter selbst ist nicht sicher, ob sie selbst gegen Keuchhusten geimpft ist. Demzufolge nimmt der Hausarzt FamilienHausarzt die Pertussis-Impfung bei ihr gleich vor und empfiehlt, dasselbe beim Kindsvater und bei den Grosseltern durchzuführen. Die MPA hat inzwischen den Blutausstrich des Sohnes im Mikroskop angeschaut und findet ausgesprochen viele reaktive Lymphozyten, die ihr verdächtig erscheinen. Sie ist unsicher und fragt den Arzt, welcher den Auftrag gibt, die Blutausstriche des Kindes der Mutter mitzugeben und ebenfalls im Labor genauer untersuchen zu lassen.
+Eine Mutter sucht mit ihrem 6-jährigen Sohn Emil Kummer, geb. 5. Mai 2014, den Hausarzt Peter Presto auf, weil das Kind seit zwei Wochen zunehmend hustet, mit krampfartigen Hustenanfällen, und Fieber hat. Die MPA der Arztpraxis misst das Fieber, macht bereits eine Fingerkuppen-Blutentnahme beim Sohn, bestimmt das CRP und fertigt einen Blutausstrich an. Der Arzt vermutet einen viralen Infekt, möchte aber Keuchhusten ausschliessen, obwohl das Kind dagegen geimpft ist. Da er wegen eines Notfalles unter Zeitdruck ist, möchte er den dazu nötigen Rachenabstrich nicht selbst durchführen, sondern bittet die Mutter, das Kind ins nahegelegene Labor zu begleiten, um den Abstrich in Ruhe anfertigen zu lassen.
+Er erstellt einen Laborauftrag zur Durchführung einer Pertussis-PCR im Rachenabstrich des Kindes und gibt den Auftrag der Mutter mit. Die Mutter selbst ist nicht sicher, ob sie selbst gegen Keuchhusten geimpft ist. Demzufolge nimmt der Hausarzt Peter Presto die Pertussis-Impfung bei ihr gleich vor und empfiehlt, dasselbe beim Kindsvater und bei den Grosseltern durchzuführen. Die MPA hat inzwischen den Blutausstrich des Sohnes im Mikroskop angeschaut und findet ausgesprochen viele reaktive Lymphozyten, die ihr verdächtig erscheinen. Sie ist unsicher und fragt den Arzt, welcher den Auftrag gibt, die Blutausstriche des Kindes der Mutter mitzugeben und ebenfalls im Labor genauer untersuchen zu lassen.
 Die Mutter findet sich mit ihrem Sohn im Labor ein, wo auf Grund des Untersuchungsauftrages des Arztes vorerst die Identität des Sohnes festgestellt wird. Anschliessend wird im Blutentnahmeraum des Labors beim Kind ein Rachenabstrich sowie eine Venenpunktion cubital rechts durchgeführt und zusammen mit den mitgebrachten Blutausstrichen und dem Untersuchungsauftrag des Arztes ins Labor weitergegeben.
 
-Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LREP-2_VerdachtAufKeuchhusten.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-2_VerdachtAufKeuchhusten.xml)
+TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
+[2-pertussis.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-2_Keuchhusten.xml)
 
 ## Fallbeispiel 3: Gynäkologische Jahreskontrolle
 
@@ -40,7 +41,8 @@ Die Übermittlung des Auftrags wird durch die MPA ausgelöst (Entnahmezeitpunkt)
 * Nachverordnung "Screening vor Schwangerschaft": Alle Untersuchungen können aus den vorgängig im Ambulatorium entnommenen Materialien (Serum, EDTA-Blut) durchgeführt werden (Hepatitis-Bc Antikörper, HIV 1+2 (Ak+p24), Röteln IgG, Lues-/Syphilis-Suchtest)
 * Mammographie: Auftrag für das Röntgeninstitut Dr. Curie.
 
-Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LREP-3_GynaekologischeJahreskontrolle.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-3_GynaekologischeJahreskontrolle.xml)
+TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
+[3-gyn.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-3_GynaekolJahreskontrolle.xml)
 
 ## Fallbeispiel 4: Verdacht auf eine Sepsis
 
@@ -48,7 +50,8 @@ Die Patientin Klebsiella Keller, geb. 12. 12. 1975, ist schon seit längerer Zei
 Alle fünf Proben werden im externen Labor Pipette weiter bearbeitet. Dort werden in allen Materialien Keime nachgewiesen und dann mittels Massenspektrometrie identifiziert. In den vier Blutkulturflaschen konnten die Erreger „Klebsiella pneumoniae“ und „Escherichia coli“ nachgewiesen werden, in einer aeroben Flasche noch zusätzlich das Bakterium „Streptococcus mitis“. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen.
 Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert den behandelnden Arzt regelmässig über die verschiedenen Teilresultate.
 
-Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LREP-4_VerdachtAufSepsis.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-4_VerdachtAufSepsis.xml)
+TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
+[4-sepsis.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-4_Sepsis.xml)
 
 ## Fallbeispiel 5: Sammelauftrag „Biologisches Monitoring SUVA“
 
@@ -62,4 +65,5 @@ Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen
 
 [Biologisches Monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
 
-Dazu passendes CDA Beispiel, welches dieser Spezifikation entspricht: [CDA-CH-LREP-5_BiologischesMonitoringSuva.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborbefund/v1.0/CDA-CH-LREP-5_BiologischesMonitoringSuva.xml)
+TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
+[5-biol-monit.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-5_BiologischesMonitoring.xml)
