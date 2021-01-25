@@ -29,7 +29,7 @@
       <display value="Laboratory order (record artifact)" />
     </coding>
   </type>
-
+  
   <category>
     <coding>
       <system value="http://snomed.info/sct" />

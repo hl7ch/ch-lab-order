@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <Specimen xmlns="http://hl7.org/fhir">
   <id value="blood-bactec-plus" />
   <!-- from Resource: id, meta, implicitRules, and language -->
   <!-- from DomainResource: text, contained, extension, and modifierExtension -->
   <identifier>
-    <!-- 0..* This is a business identifier, not a resource identifier (see discussion) -->
+    <!-- 0..* This is a business identifier, not a resource identifier (see discussion) 
+    Questionnaire.item[1].order.number
+    -->
     <value value="88888-15394-75465" />
   </identifier>
   <accessionIdentifier>
-    <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
+    <!-- 1..1 Identifier Identifier assigned by the lab, can be present if known -->
     <value value="77777-bc987-dd888" />
   </accessionIdentifier>
   <status value="available" /> <!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->

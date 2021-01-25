@@ -6,9 +6,9 @@
   </meta>
 
   <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-
-  <!-- should be mandatory ?
+  <!-- This is a business identifier, not a resource identifier, should be mandatory ?
   <identifier>
+    could be the Questionnaire.item[1].order.number
   </identifier>
   -->
   <status value="active" />

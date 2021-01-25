@@ -43,7 +43,7 @@
       <type value="date" />
     </item>
     <item>
-      <linkId value="order.number" />
+      <linkId value="order.number" /> <!-- all Specimens should be referenced on this Number -->
       <text value="Auftrags-Nummer" />
       <type value="string" />
     </item>

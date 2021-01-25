@@ -44,7 +44,8 @@
     </item>
     <item>
       <linkId value="order.number" />
-      <text value="Auftrags-Nummer" />
+      <text value="Auftrags-Nummer" /> 
+      <!-- could be the Number provided by the Laboratory in the Moment of Order Acceptance -->
       <type value="string" />
     </item>
   </item>

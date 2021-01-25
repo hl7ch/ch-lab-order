@@ -44,7 +44,7 @@ LOINC bietet 2 Möglichkeiten für ein Ordnungssystem:
   |--------------|---------------------
   | 18717-9      | Blood bank studies
   | 18719-5      | Chemistry studies
-  | 18723-7       | Hematology studies
+  | 18723-7      | Hematology studies
 
 * LOINC Laboratory order panels: Diese sind speziell für die Verordnung von Laboruntersuchungen konzipiert und fassen die Laboruntersuchungen zu Gruppen (Fachausdruck: Panel) zusammen, von denen es aber immer noch 1473 gibt. Diese Panels werden dann wiederum zu 22 Gruppen zusammengefasst, die den traditionellen Laboratory Spezialties entsprechen. Die beiden grössten Gruppen, die Chemistry Panels und die Microbiology Panels, enthalten so je ca. 350 Child-Panels, die dann wiederum mehrere Laboranalysen beinhalten. Ein gutes Beispiel, das häufige Risikofaktoren zusammenfasst, ist das 'Lipid and Glucose panel - Serum or Plasma', ein Block von 6 Analysen (Glucose und div. Cholesterin etc.), das nebst den Laboruntersuchungen noch einen Quotienten bildet und die Zeit nach der letzten Mahlzeit erfasst.
 
@@ -97,9 +97,9 @@ Ein generisches Auftrags- und Überweisungsformular ist der Ausgangspunkt. Diese
 
 Das Labor- und Pathologie-Auftragsformular enthält zusätzlich zu den Daten des generischen Auftragsformulares noch weitere Datenfelder und erfüllt die Anforderungen des ch-lab-order Implementationsguides:
 
-* Klinische Daten: Anamnese, Befunde, Diagnose, Fragestellung. Sowohl Labor- wie auch Pathologie-Auftragsformulare enthalten ein Minimum an klinischen Angaben, wie Problemstellung oder Fragestellung.
+* Sowohl Labor- wie auch Pathologie-Auftragsformulare enthalten ein Minimum an klinischen Angaben, wie Problemstellung oder Fragestellung. Diese Angaben können aus einem ValueSet von 2000 Konzepten aus SNOMED CT codiert mitgeliefert werden. Falls ausführlichere klinische Angaben Sinn machen, kann unter Reason Reference oder supportingInfo auch auf weitere Ressourcen (Condition, Observation, Diagnostic Report, DocumentReference) referenziert werden.
 
-* Die Proben-ID (specimen-ID), welche für Labor- und Pathologie-Untersuchungen benötigt wird, ist ein wichtiger Bestandteil des Auftrages. Durch sie wird auf die dazugehörige Probe eindeutig referenziert. Der Auftraggeber erhält die Proben-ID erst als letzten Schritt im Arbeitsablauf zur Erstellung des Auftrages, damit sichergestellt ist, dass keine Probe ohne dazugehörigen Auftrag im Labor ankommt. Die Probe (Serum, Urin, Vollblut, Gewebeteil etc.) wird mit der Proben-ID in Form einer ausgedruckten Klebe-Etikette versehen. Das Labor muss zu diesem Zweck einen Service einrichten, der dem Auftraggeber die Probem-ID zukommen lässt, in dem Moment, in dem dieses den digitalen Auftrag erhält.
+* Die Proben-ID (Specimen.id) und der Business identifier (), welche für Labor- und Pathologie-Untersuchungen benötigt wird, ist ein wichtiger Bestandteil des Auftrages. Durch sie wird auf die dazugehörige Probe eindeutig referenziert. Der Auftraggeber erhält die Proben-ID erst als letzten Schritt im Arbeitsablauf zur Erstellung des Auftrages, damit sichergestellt ist, dass keine Probe ohne dazugehörigen Auftrag im Labor ankommt. Die Probe (Serum, Urin, Vollblut, Gewebeteil etc.) wird mit der Proben-ID in Form einer ausgedruckten Klebe-Etikette versehen. Das Labor muss zu diesem Zweck einen Service einrichten, der dem Auftraggeber die Probem-ID zukommen lässt, in dem Moment, in dem dieses den digitalen Auftrag erhält.
 
 * Fachrichtungs-ID, gestützt auf die [LOINC Laboratory Order Panels](https://loinc.org/panels/category/laboratory-order-panels/), aktuell 22 Panels, die LOINC speziell für den Laborauftrag zur Verfügung stellt. Alternativ könnten auch die Kategorien der [Laboratory studies (set)](https://loinc.org/26436-6/), die sich über den loinc [Terminologie Server](https://fhir.loinc.org/CodeSystem/$lookup?system=http://loinc.org&code=26436-6) auffinden lassen, verwendet werden. Spezifische Fragebogen der Laborfachrichtung lassen sich hier einbauen (3. Schritt)
 
