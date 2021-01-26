@@ -54,7 +54,7 @@
       <system value="http://snomed.info/sct" />
       <code value="404223003" />
     </coding>
-    <text value="Deep venous thrombosis of lower extremity" />
+    <text value="Deep venous thrombosis of lower extremity (procedure)" />
   </reasonCode>
 
   <insurance>
