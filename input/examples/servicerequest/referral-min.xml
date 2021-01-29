@@ -27,7 +27,7 @@
     <reference value="Patient/HansGuggindieluft" />
   </subject>
   <requester>
-    <reference value="Practitioner/MarcMustermann" />
+    <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
   </requester>
 
   <performerType>
@@ -40,7 +40,7 @@
   </performerType>
 
   <performer>
-    <reference value="Practitioner/PeterPap" />
+    <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
   </performer>
 
   <reasonCode>

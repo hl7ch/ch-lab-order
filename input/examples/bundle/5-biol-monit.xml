@@ -27,19 +27,13 @@
             Referral 5-biol-monit
           </div>
         </text>
-      
-        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
-          <valueIdentifier>
-            <value value="123" />
-          </valueIdentifier>
-        </extension>
-      
+
         <identifier>
           <system value="http://test.fhir.ch/id/uuid" />
           <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
         </identifier>
         <status value="final" />
-      
+
         <type>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -47,7 +41,7 @@
             <display value="Laboratory order (record artifact)" />
           </coding>
         </type>
-      
+
         <category>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -55,17 +49,17 @@
             <display value="Order (record artifact)" />
           </coding>
         </category>
-      
+
         <subject>
           <reference value="Patient/BeatBorer" />
         </subject>
         <date value="2019-03-31T11:46:09+02:00" />
-      
+
         <author>
-          <reference value="Practitioner/SimonSuva" />
+          <reference value="PractitionerRole/PauloPorcelliniSuva" />
         </author>
         <title value="Referral 5-biol-monit" />
-      
+
         <attester>
           <mode value="professional" />
           <time value="2010-03-12T11:46:09+02:00" />
@@ -73,7 +67,7 @@
             <reference value="Organization/Suva" />
           </party>
         </attester>
-      
+
         <!-- sections -->
         <section>
           <title value="Referral" />
@@ -169,10 +163,10 @@
 
   <!--  entry[2] practitioner -->
   <entry>
-    <fullUrl value="http://example.com/fhir/Practitioner/SimonSuva" />
+    <fullUrl value="http://example.com/fhir/Practitioner/PauloPorcellini" />
     <resource>
       <Practitioner xmlns="http://hl7.org/fhir">
-        <id value="SimonSuva" />
+        <id value="PauloPorcellini" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr" />
         </meta>
@@ -181,14 +175,14 @@
           <value value="7601000050705" />
         </identifier>
         <name>
-          <family value="Suva" />
-          <given value="Simon" />
+          <family value="Porcellini" />
+          <given value="Paulo" />
         </name>
       </Practitioner>
     </resource>
   </entry>
 
-  <!--  entry[3] organizaation -->
+  <!--  entry[3] organization -->
   <entry>
     <fullUrl value="http://example.com/fhir/Organization/Suva" />
     <resource>
@@ -223,11 +217,30 @@
           <postalCode value="6004" />
           <country value="CH" />
         </address>
-      </Organization> 
+      </Organization>
     </resource>
   </entry>
 
-  <!-- entry[4] questionnaire -->
+  <!-- entry[4] practitionerrole -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/PauloPorcelliniSuva" />
+    <resource>
+      <PractitionerRole xmlns="http://hl7.org/fhir">
+        <id value="PauloPorcelliniSuva" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+        </meta>
+        <practitioner>
+          <reference value="Practitioner/PauloPorcellini" />
+        </practitioner>
+        <organization>
+          <reference value="Organization/Suva" />
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+
+  <!-- entry[5] questionnaire -->
   <entry>
     <fullUrl value="http://example.com/fhir/Questionnaire/5-biol-monit" />
     <resource>
@@ -245,7 +258,7 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
@@ -257,14 +270,14 @@
         <subjectType value="Patient" />
         <date value="2018-04-12" />
         <publisher value="eHealth Suisse" />
-      
+
         <!-- item[0] Lab Order Questionnaire Example for Biological Monitoring -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnarie Example for Biological Monitoring" />
           <type value="display" />
         </item>
-      
+
         <!-- item[1] order -->
         <item>
           <linkId value="order" />
@@ -281,13 +294,13 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[2] orderer-->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
           <type value="group" />
-      
+
           <!-- item[2.0] orderer.author-->
           <item>
             <linkId value="orderer.author" />
@@ -344,7 +357,7 @@
               <type value="string" />
             </item>
           </item>
-      
+
           <!-- item[2.1] orderer.dataenterer-->
           <item>
             <linkId value="orderer.dataenterer" />
@@ -408,7 +421,7 @@
               <type value="string" />
             </item>
           </item>
-      
+
           <!-- item[2.2] orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
@@ -465,7 +478,7 @@
               <type value="string" />
             </item>
           </item>
-      
+
           <!-- item[2.3] orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
@@ -523,7 +536,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[3] receiver-->
         <item>
           <linkId value="receiver" />
@@ -585,7 +598,7 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[4] patient-->
         <item>
           <linkId value="patient" />
@@ -636,7 +649,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[5] lab specialty, here: Biological Monitoring -->
         <item>
           <linkId value="hematology" />
@@ -684,7 +697,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[6] Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />
@@ -722,7 +735,7 @@
     </resource>
   </entry>
 
-  <!-- entry[5] questionnaireresponse -->
+  <!-- entry[6] questionnaireresponse -->
   <entry>
     <fullUrl value="http://example.com/fhir/QuestionnaireResponse/5-biol-monit" />
     <resource>
@@ -740,16 +753,16 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
         <status value="completed" />
-      
+
         <!-- item[0] Lab Order Questionnaireresponse Example for TVT -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnareresponse Example for TVT" />
         </item>
-      
+
         <!-- item[1] order -->
         <item>
           <linkId value="order" />
@@ -769,12 +782,12 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[2] orderer -->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
-      
+
           <!-- item[2.0] orderer.author -->
           <item>
             <linkId value="orderer.author" />
@@ -820,7 +833,7 @@
               <text value="Ort" />
             </item>
           </item>
-      
+
           <!-- item[2.1] orderer.dataenterer -->
           <item>
             <linkId value="orderer.dataenterer" />
@@ -879,7 +892,7 @@
               <text value="Ort" />
             </item>
           </item>
-      
+
           <!-- item[2.2] orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
@@ -925,7 +938,7 @@
               <text value="Ort" />
             </item>
           </item>
-      
+
           <!-- item[2.3] orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
@@ -972,7 +985,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[3] receiver -->
         <item>
           <linkId value="receiver" />
@@ -1022,7 +1035,7 @@
             <text value="Ort" />
           </item>
         </item>
-      
+
         <!-- item[4] patient -->
         <item>
           <linkId value="patient" />
@@ -1063,7 +1076,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- Item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
@@ -1108,7 +1121,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[6]  lab specialty Toxicology, Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />
@@ -1143,25 +1156,25 @@
     </resource>
   </entry>
 
-  <!-- entry[6] serviceRequest -->
+  <!-- entry[7] serviceRequest -->
   <entry>
     <fullUrl value="http://example.com/fhir/ServiceRequest/5-biol-monit" />
     <resource>
       <ServiceRequest xmlns="http://hl7.org/fhir">
-        <id value="5-biol-monit"/>
-      
+        <id value="5-biol-monit" />
+
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
-      
+
         <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-      
+
         <!-- should be mandatory ?
         <identifier>
         </identifier>
         -->
-        <status value="active"/>
-        <intent value="original-order"/>
+        <status value="active" />
+        <intent value="original-order" />
         <category>
           <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
           <coding>
@@ -1170,17 +1183,17 @@
           </coding>
           <text value="Laboratory procedure (procedure)" />
         </category>
-        <priority value="urgent" />  <!-- 0..1 routine | urgent | asap | stat -->
-        
+        <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
+
         <subject>
-            <reference value="Patient/BeatBorer"/>
+          <reference value="Patient/BeatBorer" />
         </subject>
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
-          <reference value="Organization/Suva"/>
+          <reference value="PractitionerRole/PauloPorcelliniSuva" />
         </requester>
-      
+
         <performerType>
           <!-- 0..1 CodeableConcept Performer role -->
           <coding>
@@ -1189,14 +1202,14 @@
           </coding>
           <text value="Laboratory medicine specialist (occupation)" />
         </performerType>
-      
+
         <performer>
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
           <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-          <reference value="Practitioner/PeterPap" />
+          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
         </performer>
-      
+
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1205,22 +1218,22 @@
           </coding>
           <text value="Toxicology (qualifier value)" />
         </reasonCode>
-        
+
         <insurance>
           <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
           <reference value="Coverage/HealthInsuranceCard" />
         </insurance>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/urin" />
         </specimen>
-      
+
       </ServiceRequest>
     </resource>
   </entry>

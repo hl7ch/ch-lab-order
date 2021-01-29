@@ -29,7 +29,7 @@
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="Practitioner/PeterPap" />
+    <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
   </requester>
 
   <performerType>
@@ -45,7 +45,7 @@
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
     <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-    <reference value="Practitioner/PeterPap" />
+    <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
   </performer>
 
   <reasonCode>

@@ -121,16 +121,6 @@
         <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver" />
       </type>
     </element>
-    <element id="Composition.extension:visitNumber">
-      <path value="Composition.extension" />
-      <sliceName value="visitNumber" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber" />
-      </type>
-    </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
       <short value="Identifier for this composition" />

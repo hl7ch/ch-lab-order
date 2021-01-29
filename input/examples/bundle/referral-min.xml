@@ -27,9 +27,9 @@
             Referral min (Template)
             </div>
         </text>
-
-        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-placerorderid">
           <valueIdentifier>
+            <system value="http://www.example.ch/orderiddomain" />
             <value value="123" />
           </valueIdentifier>
         </extension>
@@ -62,17 +62,9 @@
         <date value="2019-03-31T11:46:09+02:00" />
 
         <author>
-          <reference value="Practitioner/MarcMustermann" />
+          <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
         </author>
         <title value="Referral min" />
-
-        <attester>
-          <mode value="professional" />
-          <time value="2010-03-12T11:46:09+02:00" />
-          <party>
-            <reference value="Practitioner/MarcMustermann" />
-          </party>
-        </attester>
 
         <!-- sections -->
         <section>
@@ -194,7 +186,44 @@
     </resource>
   </entry>
 
-  <!-- TODO entry[3] organisation -->
+  <!-- entry[3] organization -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Organization/GruppenpraxisOlten" />
+    <resource>
+      <Organization xmlns="http://hl7.org/fhir">
+        <id value="GruppenpraxisOlten" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization" />
+        </meta>
+        <name value="Gruppenpraxis Olten" />
+        <address>
+          <line value="Gerbergasse 12" />
+          <city value="Olten" />
+          <postalCode value="4600" />
+          <country value="CH" />
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+
+  <!-- entry[4] practitionerrole -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxisOlten" />
+    <resource>
+      <PractitionerRole xmlns="http://hl7.org/fhir">
+        <id value="MarcMustermannGruppenpraxisOlten" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+        </meta>
+        <practitioner>
+          <reference value="Practitioner/MarcMustermann" />
+        </practitioner>
+        <organization>
+          <reference value="Organization/GruppenpraxisOlten" />
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
 
   <!-- entry[4] questionnaire -->
   <entry>
@@ -1213,7 +1242,7 @@
           <reference value="Patient/HansGuggindieluft" />
         </subject>
         <requester>
-          <reference value="Practitioner/MarcMustermann" />
+          <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
         </requester>
 
         <performerType>
@@ -1226,7 +1255,7 @@
         </performerType>
 
         <performer>
-          <reference value="Practitioner/PeterPap" />
+          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
         </performer>
 
         <reasonCode>
@@ -1247,22 +1276,22 @@
     </resource>
   </entry>
   <signature>
-    <type> 
-      <system value="urn:iso-astm:E1762-95:2013"/> 
-      <code value="1.2.840.10065.1.12.1.1"/> 
-      <display value="Author's Signature"/> 
-    </type> 
-    <when value="2015-08-31T07:42:33+10:00"/> 
-    <who> 
-      <reference value="Practitioner/MarcMustermann"/> 
-    </who> 
-    <onBehalfOf> 
-      <reference value="Organization/PraxisHausarzt"/> 
-    </onBehalfOf> 
+    <type>
+      <system value="urn:iso-astm:E1762-95:2013" />
+      <code value="1.2.840.10065.1.12.1.1" />
+      <display value="Author's Signature" />
+    </type>
+    <when value="2015-08-31T07:42:33+10:00" />
+    <who>
+      <reference value="Practitioner/MarcMustermann" />
+    </who>
+    <onBehalfOf>
+      <reference value="Organization/PraxisHausarzt" />
+    </onBehalfOf>
     <!--    a real document would typically have an digital signature, but
       the publishing tools are not yet setup to produce a valid digital
       signature. For now, an image of a signature    -->
-    <sigFormat value="image/jpg"/> 
+    <sigFormat value="image/jpg" />
     <data value="/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7" />
   </signature>
 </Bundle>

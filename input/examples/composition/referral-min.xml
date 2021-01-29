@@ -9,9 +9,9 @@
       Referral min (Template)
       </div>
   </text>
-
-  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-placerorderid">
     <valueIdentifier>
+      <system value="http://www.example.ch/orderiddomain" />
       <value value="123" />
     </valueIdentifier>
   </extension>
@@ -44,17 +44,9 @@
   <date value="2019-03-31T11:46:09+02:00" />
 
   <author>
-    <reference value="Practitioner/MarcMustermann" />
+    <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
   </author>
   <title value="Referral min" />
-
-  <attester>
-    <mode value="professional" />
-    <time value="2010-03-12T11:46:09+02:00" />
-    <party>
-      <reference value="Practitioner/MarcMustermann" />
-    </party>
-  </attester>
 
   <!-- sections -->
   <section>

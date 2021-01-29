@@ -242,6 +242,14 @@
 
     <resource>
       <reference>
+        <reference value="Organization/GruppenpraxisOlten" />
+      </reference>
+      <name value="Gruppenpraxis Olten" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Organization/RegionalspitalZugersee" />
       </reference>
       <name value="Regionalspital Zugersee" />
@@ -342,18 +350,9 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/MarcApgar" />
+        <reference value="Practitioner/EvaErlenmeyer" />
       </reference>
-      <name value="Marc Agpar" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/PeterPresto" />
-      </reference>
-      <name value="Peter Presto" />
+      <name value="Eva Erlenmeyer" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -378,6 +377,15 @@
 
     <resource>
       <reference>
+        <reference value="Practitioner/PauloPorcellini" />
+      </reference>
+      <name value="Paulo Porcellini" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Practitioner/PeterPap" />
       </reference>
       <name value="Peter Pap" />
@@ -387,11 +395,67 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/SimonSuva" />
+        <reference value="Practitioner/PeterPresto" />
       </reference>
-      <name value="Simon Suva" />
+      <name value="Peter Presto" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
+    </resource>
+
+    <!-- References to PractitionerRole -->
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+      </reference>
+      <name value="Eva Erlenmeyer Labor Pipette (performer)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/HansHauserRegionalspitalZugersee"/>
+      </reference>
+      <name value="Hans Hauser Regionalspital Zugersee (4-sepsis)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten"/>
+      </reference>
+      <name value="Marc Mustermann at Gruppenpraxis Olten (1-tvt, Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+      </reference>
+      <name value="Paulo Porcellini Suva (5-biol-monit)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/PeterPapGruppenpraxisOlten"/>
+      </reference>
+      <name value="Peter Pap Gruppenpraxis Olten (3-gyn)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten"/>
+      </reference>
+      <name value="Marc Mustermann at Gruppenpraxis Olten (2-pertussis)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
     </resource>
 
     <!-- References to Questionnaire -->
