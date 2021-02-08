@@ -7,6 +7,8 @@
     <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
     <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
   </meta>
+
+  <!-- extensions -->
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
     <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle" />
   </extension>
@@ -35,6 +37,7 @@
       <expression value="%Bundle.entry[0].resource.author.resolve().ofType(Practitioner)" />
     </valueExpression>
   </extension>
+
   <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/referral-min" />
   <name value="ORFReferralMinimial" />
   <title value="ORF Referral Minimial" />
@@ -44,7 +47,7 @@
   <date value="2020-12-17" />
   <publisher value="eHealth Suisse" />
 
-  <!-- Auftrag -->
+  <!-- item[0] order: referral-min Questionnaire Example -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -97,7 +100,7 @@
     </item>
   </item>
 
-  <!-- Request Receiver: Person/organization who receives the request -->
+  <!-- item[1] Request Receiver: Person/organization who receives the request -->
   <item>
     <linkId value="receiverRequest" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
@@ -239,7 +242,7 @@
     </item>
   </item>
 
-  <!-- Patient: The principle target of a particular Form Content is one patient -->
+  <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
   <item>
     <linkId value="patient" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
@@ -394,6 +397,7 @@
     </item>
   </item>
 
+  <!-- item[3] orderer, orderer.author-->
   <item>
     <linkId value="orderer" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
@@ -666,7 +670,7 @@
     </item>
   </item>
 
-  <!-- Response Receiver: Person/organization who receives the response -->
+  <!-- item[4] Response Receiver: Person/organization who receives the response -->
   <item>
     <linkId value="receiverResponse" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />

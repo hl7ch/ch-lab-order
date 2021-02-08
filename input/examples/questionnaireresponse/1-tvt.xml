@@ -18,323 +18,484 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
   <status value="completed" />
 
-  <!-- item[0] Lab Order Questionnaireresponse Example for TVT -->
-  <item>
-    <linkId value="info" />
-    <text value="Lab Order Questionnareresponse Example for TVT" />
-  </item>
-
-  <!-- item[1] order -->
+  <!-- item[0] order: referral-min Questionnaire Example -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
     <item>
-      <linkId value="order.date" />
-      <text value="Auftrags-Datum" />
+      <linkId value="order.placerOrderId" />
+      <text value="Auftragsnummer des Auftraggebers" />
       <answer>
-        <valueDate value="2020-01-01" />
+        <valueString value="123" />
       </answer>
     </item>
     <item>
-      <linkId value="order.number" />
-      <text value="Auftrags-Nummer" />
+      <linkId value="order.fillerOrderId" />
+      <text value="Auftragsnummer des Auftragsempfängers" />
+    </item>
+    <item>
+      <linkId value="order.precedentDocumentId" />
+      <text value="ID des Vorgängerdokuments" />
+    </item>
+    <item>
+      <linkId value="order.dateTime" />
+      <text value="Auftragszeitpunkt" />
       <answer>
-        <valueString value="12301" />
+        <valueDateTime value="2019-03-31T11:46:09+02:00" />
       </answer>
     </item>
   </item>
 
-  <!-- item[2] orderer -->
+  <!-- item[1] Request Receiver: Person/organization who receives the request -->
+  <item>
+    <linkId value="receiverRequest" />
+    <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+    <text value="Auftragsempfänger" />
+    <item>
+      <linkId value="receiverRequest.practitioner" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+      <text value="Auftragsempfangende Person" />
+      <item>
+        <linkId value="receiverRequest.practitioner.familyName" />
+        <text value="Name" />
+        <answer>
+          <valueString value="Röntgen" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.practitioner.givenName" />
+        <text value="Vorname" />
+        <answer>
+          <valueString value="Hans" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.practitioner.title" />
+        <text value="Titel" />
+        <answer>
+          <valueString value="Dr. med." />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.practitioner.gln" />
+        <text value="GLN" />
+        <answer>
+          <valueString value="7601000066878" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.practitioner.phone" />
+        <text value="Telefon" />
+        <answer>
+          <valueString value="044 412 00 99" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.practitioner.email" />
+        <text value="E-Mail" />
+        <answer>
+          <valueString value="hans.roentgen@kantonsspital.ch" />
+        </answer>
+      </item>
+    </item>
+    <item>
+      <linkId value="receiverRequest.organization" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization" />
+      <text value="Auftragsempfangende Organisation" />
+      <item>
+        <linkId value="receiverRequest.organization.name" />
+        <text value="Name der Organisation" />
+        <answer>
+          <valueString value="Kantonsspital" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.organization.streetAddressLine" />
+        <text value="Strasse, Hausnummer, Postfach etc." />
+        <answer>
+          <valueString value="Kantonsstrasse 14" />
+        </answer>
+        <answer>
+          <valueString value="Postfach 14" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.organization.postalCode" />
+        <text value="PLZ" />
+        <answer>
+          <valueString value="8000" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.organization.city" />
+        <text value="Ort" />
+        <answer>
+          <valueString value="Zürich" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverRequest.organization.country" />
+        <text value="Land" />
+        <answer>
+          <valueString value="Schweiz" />
+        </answer>
+      </item>
+    </item>
+  </item>
+
+  <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
+  <item>
+    <linkId value="patient" />
+    <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
+    <text value="Patient" />
+    <item>
+      <linkId value="patient.familyName" />
+      <text value="Name" />
+      <answer>
+        <valueString value="Musterfrau" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.givenName" />
+      <text value="Vorname" />
+      <answer>
+        <valueString value="Erika" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.localPid" />
+      <text value="Lokale Patienten-ID" />
+      <answer>
+        <valueString value="11.22.33.4567" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.birthDate" />
+      <text value="Geburtsdatum" />
+      <answer>
+        <valueDate value="1970-03-14" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.gender" />
+      <text value="Geschlecht" />
+      <answer>
+        <valueCoding>
+          <system value="http://hl7.org/fhir/administrative-gender" />
+          <code value="female" />
+          <display value="Female" />
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.phone" />
+      <text value="Telefon" />
+      <answer>
+        <valueString value="079 979 79 79" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.email" />
+      <text value="E-Mail" />
+      <answer>
+        <valueString value="erika@musterfrau.ch" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.streetAddressLine" />
+      <text value="Strasse, Hausnummer, Postfach etc." />
+      <answer>
+        <valueString value="Musterweg" />
+      </answer>
+      <answer>
+        <valueString value="6a" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.postalCode" />
+      <text value="PLZ" />
+      <answer>
+        <valueString value="8000" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.city" />
+      <text value="Ort" />
+      <answer>
+        <valueString value="Zürich" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient.country" />
+      <text value="Land" />
+      <answer>
+        <valueString value="Schweiz" />
+      </answer>
+    </item>
+  </item>
+
+  <!-- item[3] orderer, orderer.author-->
   <item>
     <linkId value="orderer" />
+    <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
     <text value="Auftraggeber" />
-
-    <!-- item[2.0] orderer.author -->
+    <!-- Author: The person/organization responsible for Form Content -->
     <item>
       <linkId value="orderer.author" />
-      <text value="Author" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+      <text value="Verantwortlicher" />
       <item>
-        <linkId value="orderer.author.visum" />
-        <text value="Visum" />
+        <linkId value="orderer.author.practitioner" />
+        <text value="Verantwortliche Person" />
+        <item>
+          <linkId value="orderer.author.practitioner.familyName" />
+          <text value="Name" />
+          <answer>
+            <valueString value="Meier" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.practitioner.givenName" />
+          <text value="Vorname" />
+          <answer>
+            <valueString value="Sabine" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.practitioner.title" />
+          <text value="Titel" />
+          <answer>
+            <valueString value="Dr. med." />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.practitioner.gln" />
+          <text value="GLN" />
+          <answer>
+            <valueString value="7601000034321" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.practitioner.phone" />
+          <text value="Telefon" />
+          <answer>
+            <valueString value="044 333 22 11" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.practitioner.email" />
+          <text value="E-Mail" />
+          <answer>
+            <valueString value="sabine.meier@praxisseeblick.ch" />
+          </answer>
+        </item>
       </item>
       <item>
         <linkId value="orderer.author.organization" />
-        <text value="Organization" />
-      </item>
-      <item>
-        <linkId value="orderer.author.lastname" />
-        <text value="Name" />
-      </item>
-      <item>
-        <linkId value="orderer.author.firstname" />
-        <text value="Vorname" />
-      </item>
-      <item>
-        <linkId value="orderer.author.tel" />
-        <text value="Telefon" />
-      </item>
-      <item>
-        <linkId value="orderer.author.e-mail" />
-        <text value="E-Mail" />
-      </item>
-      <item>
-        <linkId value="orderer.author.street" />
-        <text value="Strasse" />
-      </item>
-      <item>
-        <linkId value="orderer.author.postfach" />
-        <text value="Postfach" />
-      </item>
-      <item>
-        <linkId value="orderer.author.zip" />
-        <text value="PLZ" />
-      </item>
-      <item>
-        <linkId value="orderer.author.city" />
-        <text value="Ort" />
+        <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization" />
+        <text value="Verantwortliche Organisation" />
+        <item>
+          <linkId value="orderer.author.organization.name" />
+          <text value="Name der Organisation" />
+          <answer>
+            <valueString value="Praxis Seeblick" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.organization.streetAddressLine" />
+          <text value="Strasse, Hausnummer, Postfach etc." />
+          <answer>
+            <valueString value="Seestrasse 133" />
+          </answer>
+          <answer>
+            <valueString value="Haus C" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.organization.postalCode" />
+          <text value="PLZ" />
+          <answer>
+            <valueString value="8000" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.organization.city" />
+          <text value="Ort" />
+          <answer>
+            <valueString value="Zürich" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.author.organization.country" />
+          <text value="Land" />
+          <answer>
+            <valueString value="Schweiz" />
+          </answer>
+        </item>
       </item>
     </item>
-
-    <!-- item[2.1] orderer.dataenterer -->
+    <!-- Data Entry Person: The person who has typed/filled in the Form Content. -->
     <item>
       <linkId value="orderer.dataenterer" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
       <text value="Erfasser" />
       <item>
-        <linkId value="orderer.dataenterer.visum" />
-        <text value="Visum" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.organization" />
-        <text value="Organization" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.lastname" />
-        <text value="Name" />
-        <answer>
-          <valueString value="Mustermann" />
-          <!-- 
-          <valueCoding>
-            <system value="http://tbd" />
-            <code value="datlname" />
-          </valueCoding>
-          -->
-        </answer>
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.firstname" />
-        <definition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ChOrfDataEntryPerson#Practitioner.name.first" />
-        <text value="Vorname" />
-        <answer>
-          <valueString value="Marc" />
-        </answer>
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.tel" />
-        <text value="Telefon" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.e-mail" />
-        <text value="E-Mail" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.street" />
-        <text value="Strasse" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.postfach" />
-        <text value="Postfach" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.zip" />
-        <text value="PLZ" />
-      </item>
-      <item>
-        <linkId value="orderer.dataenterer.city" />
-        <text value="Ort" />
+        <linkId value="orderer.dataenterer.practitioner" />
+        <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+        <text value="Erfassende Person" />
+        <item>
+          <linkId value="orderer.dataenterer.practitioner.familyName" />
+          <text value="Name" />
+          <answer>
+            <valueString value="Boss" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.dataenterer.practitioner.givenName" />
+          <text value="Vorname" />
+          <answer>
+            <valueString value="Stabilo" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.dataenterer.practitioner.phone" />
+          <text value="Telefon" />
+          <answer>
+            <valueString value="044 333 22 12" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.dataenterer.practitioner.email" />
+          <text value="E-Mail" />
+          <answer>
+            <valueString value="stabilo.boss@praxisseeblick.ch" />
+          </answer>
+        </item>
       </item>
     </item>
-
-    <!-- item[2.2] orderer.notcontactthisdoc -->
+    <!-- Urgent Notification Contact for this document (request) -->
     <item>
-      <linkId value="orderer.notcontactthisdoc" />
-      <text value="Urgent Notification Contact for this document:" />
+      <linkId value="orderer.notificationContactRequest" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+      <text value="Benachrichtigungskontakt für die Anfrage" />
       <item>
-        <linkId value="orderer.notifcontactthisdoc.visum" />
-        <text value="Visum" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.organization" />
-        <text value="Organization" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.lastname" />
-        <text value="Name" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.firstname" />
-        <text value="Vorname" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.tel" />
-        <text value="Telefon" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.e-mail" />
-        <text value="E-Mail" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.street" />
-        <text value="Strasse" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.postfach" />
-        <text value="Postfach" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.zip" />
-        <text value="PLZ" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactthisdoc.city" />
-        <text value="Ort" />
+        <linkId value="orderer.notificationContactRequest.practitioner" />
+        <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+        <text value="Zu benachrichtigende Person" />
+        <item>
+          <linkId value="orderer.notificationContactRequest.practitioner.familyName" />
+          <text value="Name" />
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactRequest.practitioner.givenName" />
+          <text value="Vorname" />
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactRequest.practitioner.title" />
+          <text value="Titel" />
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactRequest.practitioner.phone" />
+          <text value="Telefon" />
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactRequest.practitioner.email" />
+          <text value="E-Mail" />
+        </item>
       </item>
     </item>
-
-    <!-- item[2.3] orderer.notcontactresponsedoc -->
+    <!-- Urgent Notification Contact for the Response to this document -->
     <item>
-      <linkId value="orderer.notcontactresponsedoc" />
-      <text value="Urgent Notification Contact for the response of this document:" />
+      <linkId value="orderer.notificationContactResponse" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+      <text value="Benachrichtigungskontakt für die Antwort" />
       <item>
-        <linkId value="orderer.notifcontactresponsedoc.visum" />
-        <text value="Visum" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.organization" />
-        <text value="Organization" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.lastname" />
-        <text value="Name" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.firstname" />
-        <text value="Vorname" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.tel" />
-        <text value="Telefon" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.e-mail" />
-        <text value="E-Mail" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.street" />
-        <text value="Strasse" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.postfach" />
-        <text value="Postfach" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.zip" />
-        <text value="PLZ" />
-      </item>
-      <item>
-        <linkId value="orderer.notifcontactresponsedoc.city" />
-        <text value="Ort" />
+        <linkId value="orderer.notificationContactResponse.practitioner" />
+        <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+        <text value="Zu benachrichtigende Person" />
+        <item>
+          <linkId value="orderer.notificationContactResponse.practitioner.familyName" />
+          <text value="Name" />
+          <answer>
+            <valueString value="Müller" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactResponse.practitioner.givenName" />
+          <text value="Vorname" />
+          <answer>
+            <valueString value="Peter" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactResponse.practitioner.title" />
+          <text value="Titel" />
+          <answer>
+            <valueString value="Dr. med." />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactResponse.practitioner.phone" />
+          <text value="Telefon" />
+          <answer>
+            <valueString value="044 333 22 13" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="orderer.notificationContactResponse.practitioner.email" />
+          <text value="E-Mail" />
+          <answer>
+            <valueString value="peter.mueller@praxisseeblick.ch" />
+          </answer>
+        </item>
       </item>
     </item>
   </item>
 
-  <!-- item[3] receiver -->
+  <!-- item[4] Response Receiver: Person/organization who receives the response -->
   <item>
-    <linkId value="receiver" />
-    <text value="Receiver" />
+    <linkId value="receiverResponse" />
+    <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+    <text value="Rückmeldungsempfänger" />
     <item>
-      <linkId value="receiver.visum" />
-      <text value="Visum" />
-    </item>
-    <item>
-      <linkId value="receiver.bereich" />
-      <text value="Bereich" />
-    </item>
-    <item>
-      <linkId value="receiver.abt" />
-      <text value="Bereich" />
-    </item>
-    <item>
-      <linkId value="receiver.lastname" />
-      <text value="Name" />
-    </item>
-    <item>
-      <linkId value="receiver.firstname" />
-      <text value="Vorname" />
-    </item>
-    <item>
-      <linkId value="receiver.tel" />
-      <text value="Telefon" />
-    </item>
-    <item>
-      <linkId value="receiver.e-mail" />
-      <text value="E-Mail" />
-    </item>
-    <item>
-      <linkId value="receiver.cstreet" />
-      <text value="Strasse" />
-    </item>
-    <item>
-      <linkId value="receiver.postfach" />
-      <text value="Postfach" />
-    </item>
-    <item>
-      <linkId value="receiver.zip" />
-      <text value="PLZ" />
-    </item>
-    <item>
-      <linkId value="receiver.city" />
-      <text value="Ort" />
-    </item>
-  </item>
-
-  <!-- item[4] patient -->
-  <item>
-    <linkId value="patient" />
-    <text value="Patient" />
-    <item>
-      <linkId value="patient.lastname" />
-      <text value="Name" />
-      <answer>
-        <valueString value="Guggindieluft" />
-      </answer>
-    </item>
-    <item>
-      <linkId value="patient.firstname" />
-      <text value="Vorname" />
-      <answer>
-        <valueString value="Hans" />
-      </answer>
-    </item>
-    <item>
-      <linkId value="patient.pid" />
-      <text value="PID (sendendes System)" />
-      <answer>
-        <valueString value="012/08.111101" />
-      </answer>
-    </item>
-    <item>
-      <linkId value="patient.birthdate" />
-      <text value="Geburtsdatum" />
-      <answer>
-        <valueDate value="1978-04-12" />
-      </answer>
-    </item>
-    <item>
-      <linkId value="patient.sex" />
-      <text value="Geschlecht" />
-      <answer>
-        <valueString value="M" />
-      </answer>
+      <linkId value="receiverResponse.practitioner" />
+      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+      <text value="Rückmeldungsempfangende Person" />
+      <item>
+        <linkId value="receiverResponse.practitioner.familyName" />
+        <text value="Name" />
+        <answer>
+          <valueString value="Spezialist" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverResponse.practitioner.givenName" />
+        <text value="Vorname" />
+        <answer>
+          <valueString value="Gian Luca" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverResponse.practitioner.title" />
+        <text value="Titel" />
+        <answer>
+          <valueString value="Prof. Dr. med." />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverResponse.practitioner.phone" />
+        <text value="Telefon" />
+        <answer>
+          <valueString value="044 987 65 21" />
+        </answer>
+      </item>
+      <item>
+        <linkId value="receiverResponse.practitioner.email" />
+        <text value="E-Mail" />
+        <answer>
+          <valueString value="gian-luca.spezialist@gruppenpraxis.ch" />
+        </answer>
+      </item>
     </item>
   </item>
 

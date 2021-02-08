@@ -7,6 +7,8 @@
   </meta>
   <questionnaire value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-min" />
   <status value="completed" />
+
+  <!-- item[0] order: referral-min Questionnaire Example -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -34,7 +36,7 @@
     </item>
   </item>
 
-  <!-- Request Receiver: Person/organization who receives the request -->
+ <!-- item[1] Request Receiver: Person/organization who receives the request -->
   <item>
     <linkId value="receiverRequest" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
@@ -131,7 +133,7 @@
     </item>
   </item>
 
-  <!-- Patient: The principle target of a particular Form Content is one patient -->
+  <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
   <item>
     <linkId value="patient" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
@@ -222,6 +224,7 @@
     </item>
   </item>
 
+  <!-- item[3] orderer, orderer.author-->
   <item>
     <linkId value="orderer" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
@@ -439,7 +442,7 @@
     </item>
   </item>
 
-  <!-- Response Receiver: Person/organization who receives the response -->
+   <!-- item[4] Response Receiver: Person/organization who receives the response -->
   <item>
     <linkId value="receiverResponse" />
     <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
@@ -486,50 +489,4 @@
     </item>
   </item>
 
-  <!-- Response Receiver: Person/organization who receives the response -->
-  <item>
-    <linkId value="receiverResponse" />
-    <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
-    <text value="Rückmeldungsempfänger" />
-    <item>
-      <linkId value="receiverResponse.practitioner" />
-      <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
-      <text value="Rückmeldungsempfangende Person" />
-      <item>
-        <linkId value="receiverResponse.practitioner.familyName" />
-        <text value="Name" />
-        <answer>
-          <valueString value="Spezialist" />
-        </answer>
-      </item>
-      <item>
-        <linkId value="receiverResponse.practitioner.givenName" />
-        <text value="Vorname" />
-        <answer>
-          <valueString value="Gian Luca" />
-        </answer>
-      </item>
-      <item>
-        <linkId value="receiverResponse.practitioner.title" />
-        <text value="Titel" />
-        <answer>
-          <valueString value="Prof. Dr. med." />
-        </answer>
-      </item>
-      <item>
-        <linkId value="receiverResponse.practitioner.phone" />
-        <text value="Telefon" />
-        <answer>
-          <valueString value="044 987 65 21" />
-        </answer>
-      </item>
-      <item>
-        <linkId value="receiverResponse.practitioner.email" />
-        <text value="E-Mail" />
-        <answer>
-          <valueString value="gian-luca.spezialist@gruppenpraxis.ch" />
-        </answer>
-      </item>
-    </item>
-  </item>
 </QuestionnaireResponse>
