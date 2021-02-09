@@ -6,6 +6,8 @@
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
+    <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
+    <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
   </meta>
   <text>
     <status value="generated" />
@@ -14,9 +16,37 @@
       <pre>todo copy text out of rendering</pre>
     </div>
   </text>
+
+  <!-- extensions -->
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
-    <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
+    <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle" />
   </extension>
+  <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext">
+    <extension url="name">
+      <valueId value="Bundle" />
+    </extension>
+    <extension url="type">
+      <valueCode value="Bundle" />
+    </extension>
+    <extension url="description">
+      <valueString value="The Bundle that is to be used to pre-populate the form" />
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+    <valueExpression>
+      <name value="Patient" />
+      <language value="text/fhirpath" />
+      <expression value="%Bundle.entry[0].resource.subject.resolve()" />
+    </valueExpression>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/variable">
+    <valueExpression>
+      <name value="Orderer" />
+      <language value="text/fhirpath" />
+      <expression value="%Bundle.entry[0].resource.author.resolve().ofType(Practitioner)" />
+    </valueExpression>
+  </extension>
+
   <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis" />
   <name value="LabOrderExample" />
   <title value="Lab Order Example" />

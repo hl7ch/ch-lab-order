@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-orf-urgentnoficationcontactforrequest"/>
-    <url value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforrequest"/>
+    <id value="ch-lab-order-urgentnoficationcontactforrequest"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforrequest"/>
     <version value="0.9.0"/>
     <name value="CHORFUrgentNotificiationContactForRequest"/>
     <title value="CH ORF Urgent Notification Contact For Request Extension"/>
@@ -56,7 +57,7 @@
             <type>
                 <code value="uri"/>
             </type>
-            <fixedUri value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforrequest"/>
+            <fixedUri value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforrequest"/>
         </element>
         <element id="Extension.valueReference">
             <path value="Extension.valueReference"/>
@@ -67,7 +68,7 @@
             <max value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner"/>
+                <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
             </type>
         </element>
     </differential>

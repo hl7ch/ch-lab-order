@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-orf-questionnaireresponse"/>
-    <url value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"/>
+    <id value="ch-lab-order-questionnaireresponse"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-questionnaireresponse"/>
     <version value="0.9.0"/>
     <name value="CHORFQuestionnaireResponse"/>
     <title value="CH ORF QuestionnaireResponse"/>
@@ -39,6 +40,7 @@
     <differential>
         <element id="QuestionnaireResponse">
             <path value="QuestionnaireResponse"/>
+            <short value="CH ORF QuestionnaireResponse"/>
         </element>
         <element id="QuestionnaireResponse.identifier">
             <path value="QuestionnaireResponse.identifier"/>            
