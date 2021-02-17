@@ -118,7 +118,7 @@
       <name value="Referral 2-pertussis" />
       <description value="Example Bundle for referral/order for Pertussis investigation" />
     </resource>
-  
+
     <resource>
       <reference>
         <reference value="Bundle/3-gyn" />
@@ -142,58 +142,57 @@
       <name value="Referreal 5-biol-monit" />
       <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
     </resource>
- 
+
     <!-- Reference to Composition-->
     <resource>
       <reference>
-        <reference value="Composition/referral-min"/>
+        <reference value="Composition/referral-min" />
       </reference>
-      <name value="Referral minimal"/>
-      <description value="Example for Composition"/>      
+      <name value="Referral minimal" />
+      <description value="Example for Composition" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Composition/1-tvt"/>
+        <reference value="Composition/1-tvt" />
       </reference>
-      <name value="1-tvt"/>
-      <description value="Example for Composition"/>      
+      <name value="1-tvt" />
+      <description value="Example for Composition" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Composition/2-pertussis"/>
+        <reference value="Composition/2-pertussis" />
       </reference>
-      <name value="2-pertussis"/>
-      <description value="Example for Composition"/>      
+      <name value="2-pertussis" />
+      <description value="Example for Composition" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Composition/3-gyn"/>
+        <reference value="Composition/3-gyn" />
       </reference>
-      <name value="3-gyn"/>
-      <description value="Example for Composition"/>      
+      <name value="3-gyn" />
+      <description value="Example for Composition" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Composition/4-sepsis"/>
+        <reference value="Composition/4-sepsis" />
       </reference>
-      <name value="4-sepsis"/>
-      <description value="Example for Composition"/>      
+      <name value="4-sepsis" />
+      <description value="Example for Composition" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="Composition/5-biol-monit"/>
+        <reference value="Composition/5-biol-monit" />
       </reference>
-      <name value="5-biol-monit"/>
-      <description value="Example for Composition"/>      
+      <name value="5-biol-monit" />
+      <description value="Example for Composition" />
     </resource>
 
     <!-- Reference to Coverage -->
-
 
 
     <!-- Jürg will study existing standards of Coverage: Forum für Datensaustausch,
@@ -214,7 +213,7 @@
       <name value="HealthInsuranceCard" />
       <description value="Example for Insurance" />
     </resource>
-    
+
 
     <!-- References to Organization -->
     <resource>
@@ -238,6 +237,14 @@
         <reference value="Organization/PraxisHausarzt" />
       </reference>
       <name value="Praxis Hausarzt" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/GruppenpraxisOlten" />
+      </reference>
+      <name value="Gruppenpraxis Olten" />
       <description value="Example for group practice" />
     </resource>
 
@@ -343,18 +350,9 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/MarcApgar" />
+        <reference value="Practitioner/EvaErlenmeyer" />
       </reference>
-      <name value="Marc Agpar" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/PeterPresto" />
-      </reference>
-      <name value="Peter Presto" />
+      <name value="Eva Erlenmeyer" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -379,6 +377,15 @@
 
     <resource>
       <reference>
+        <reference value="Practitioner/PauloPorcellini" />
+      </reference>
+      <name value="Paulo Porcellini" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Practitioner/PeterPap" />
       </reference>
       <name value="Peter Pap" />
@@ -388,11 +395,67 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/SimonSuva" />
+        <reference value="Practitioner/PeterPresto" />
       </reference>
-      <name value="Simon Suva" />
+      <name value="Peter Presto" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
+    </resource>
+
+    <!-- References to PractitionerRole -->
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+      </reference>
+      <name value="Eva Erlenmeyer Labor Pipette (performer)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/HansHauserRegionalspitalZugersee"/>
+      </reference>
+      <name value="Hans Hauser Regionalspital Zugersee (4-sepsis)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten"/>
+      </reference>
+      <name value="Marc Mustermann at Gruppenpraxis Olten (1-tvt, Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+      </reference>
+      <name value="Paulo Porcellini Suva (5-biol-monit)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/PeterPapGruppenpraxisOlten"/>
+      </reference>
+      <name value="Peter Pap Gruppenpraxis Olten (3-gyn)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten"/>
+      </reference>
+      <name value="Marc Mustermann at Gruppenpraxis Olten (2-pertussis)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
     </resource>
 
     <!-- References to Questionnaire -->
@@ -419,7 +482,7 @@
       <name value="questionnaire 2-pertussis" />
       <description value="Example for 2-pertussis" />
     </resource>
-    
+
     <resource>
       <reference>
         <reference value="Questionnaire/3-gyn" />
@@ -444,7 +507,7 @@
       <description value="Example for 5-biol-monit" />
     </resource>
 
-    <!-- References to QuestionnaireResponse -->  
+    <!-- References to QuestionnaireResponse -->
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/referral-min" />
@@ -460,7 +523,7 @@
       <name value="questionnaire response 1-tvt" />
       <description value="Example for questionnaire response" />
     </resource>
- 
+
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/2-pertussis" />
@@ -501,7 +564,7 @@
       <name value="laborder service" />
       <description value="Example for service request" />
     </resource>
-   
+
     <resource>
       <reference>
         <reference value="ServiceRequest/1-tvt" />
@@ -575,7 +638,7 @@
       <description value="Example for Specimen" />
     </resource>
 
-    
+
     <resource>
       <reference>
         <reference value="Specimen/lsac" />
@@ -619,8 +682,15 @@
 
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
-    
-        <!-- References to VALUESETS -->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-lab-order-composition" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
+
+    <!-- References to VALUESETS -->
     <!-- ####################### -->
     <resource>
       <reference>

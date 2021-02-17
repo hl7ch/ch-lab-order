@@ -2,7 +2,7 @@
 
 ## Fallbeispiel 1: Verdacht auf tiefe Venenthrombose
 
-Ein Patient erscheint am 09.03.2016 in der Arztpraxis bei Dr. med. Mustermann. Er identifiziert sich mündlich über seine Stammdaten als Hans Guggindieluft, 01.01.1981. Er berichtet über unklare Beinschmerzen im linken Unterschenkel sowie gleichzeitig aufgetretene atemabhängige Schmerzen und Husten. Der Arzt führt die Anamnese und körperliche Untersuchung durch und verordnet folgende Laborparameter:
+Ein Patient erscheint am 09.03.2016 in der Gruppenpraxis Olten bei Dr. med. Mustermann. Er identifiziert sich mündlich über seine Stammdaten als Hans Guggindieluft, 01.01.1981. Er berichtet über unklare Beinschmerzen im linken Unterschenkel sowie gleichzeitig aufgetretene atemabhängige Schmerzen und Husten. Der Arzt führt die Anamnese und körperliche Untersuchung durch und verordnet folgende Laborparameter:
 
 * Blutbild inkl. Differenzierung
 * CRP
@@ -19,7 +19,7 @@ TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
 Fallbeispiel 2: Verdacht auf Keuchhusten
 Zu diesem Fallbeispiel befinden sich im Whitepaper[1], Anhang 8.7 konkrete Beispieldokumente. Die « Abbildung 2 » im Whitepaper[1] zeigt das zu diesem Fallbeispiel gehörende Use Case Diagramm.
 
-Eine Mutter sucht mit ihrem 6-jährigen Sohn Emil Kummer, geb. 5. Mai 2014, den Hausarzt Peter Presto auf, weil das Kind seit zwei Wochen zunehmend hustet, mit krampfartigen Hustenanfällen, und Fieber hat. Die MPA der Arztpraxis misst das Fieber, macht bereits eine Fingerkuppen-Blutentnahme beim Sohn, bestimmt das CRP und fertigt einen Blutausstrich an. Der Arzt vermutet einen viralen Infekt, möchte aber Keuchhusten ausschliessen, obwohl das Kind dagegen geimpft ist. Da er wegen eines Notfalles unter Zeitdruck ist, möchte er den dazu nötigen Rachenabstrich nicht selbst durchführen, sondern bittet die Mutter, das Kind ins nahegelegene Labor zu begleiten, um den Abstrich in Ruhe anfertigen zu lassen.
+Eine Mutter sucht mit ihrem 6-jährigen Sohn Emil Kummer, geb. 5. Mai 2014, den Hausarzt Peter Presto der Gruppenpraxis Olten auf, weil das Kind seit zwei Wochen zunehmend hustet, mit krampfartigen Hustenanfällen, und Fieber hat. Die MPA der Arztpraxis misst das Fieber, macht bereits eine Fingerkuppen-Blutentnahme beim Sohn, bestimmt das CRP und fertigt einen Blutausstrich an. Der Arzt vermutet einen viralen Infekt, möchte aber Keuchhusten ausschliessen, obwohl das Kind dagegen geimpft ist. Da er wegen eines Notfalles unter Zeitdruck ist, möchte er den dazu nötigen Rachenabstrich nicht selbst durchführen, sondern bittet die Mutter, das Kind ins nahegelegene Labor zu begleiten, um den Abstrich in Ruhe anfertigen zu lassen.
 Er erstellt einen Laborauftrag zur Durchführung einer Pertussis-PCR im Rachenabstrich des Kindes und gibt den Auftrag der Mutter mit. Die Mutter selbst ist nicht sicher, ob sie selbst gegen Keuchhusten geimpft ist. Demzufolge nimmt der Hausarzt Peter Presto die Pertussis-Impfung bei ihr gleich vor und empfiehlt, dasselbe beim Kindsvater und bei den Grosseltern durchzuführen. Die MPA hat inzwischen den Blutausstrich des Sohnes im Mikroskop angeschaut und findet ausgesprochen viele reaktive Lymphozyten, die ihr verdächtig erscheinen. Sie ist unsicher und fragt den Arzt, welcher den Auftrag gibt, die Blutausstriche des Kindes der Mutter mitzugeben und ebenfalls im Labor genauer untersuchen zu lassen.
 Die Mutter findet sich mit ihrem Sohn im Labor ein, wo auf Grund des Untersuchungsauftrages des Arztes vorerst die Identität des Sohnes festgestellt wird. Anschliessend wird im Blutentnahmeraum des Labors beim Kind ein Rachenabstrich sowie eine Venenpunktion cubital rechts durchgeführt und zusammen mit den mitgebrachten Blutausstrichen und dem Untersuchungsauftrag des Arztes ins Labor weitergegeben.
 
@@ -28,7 +28,7 @@ TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
 
 ## Fallbeispiel 3: Gynäkologische Jahreskontrolle
 
-Die MPA der Gynäkologie Praxis Dr. Peter Pap bereitet die Konsultationen des nächsten Tages vor. Da die Praxis nur ein minimales eigenes Labor betreibt, werden gewisse Patientinnen vor dem Besuchstermin ins nahe gelegene Ambulatorium des Labors Pipette geschickt, so auch die junge Patientin Frau Marina Rubella, geb. 8. 8. 1992. Die MPA verordnet in ihrer Praxis-Software für die Patientin Rubella die mit dem Labor vereinbarten Standard-Analysen für die gynäkologische 3-Jahreskontrolle. Dazu gehört auch die Blutentnahme für die Serothek für allfällige Nachverordnungen.
+Die MPA der Gynäkologie in der Gruppenpraxis Olten, Dr. Peter Pap bereitet die Konsultationen des nächsten Tages vor. Da die Praxis nur ein minimales eigenes Labor betreibt, werden gewisse Patientinnen vor dem Besuchstermin ins nahe gelegene Ambulatorium des Labors Pipette geschickt, so auch die junge Patientin Frau Marina Rubella, geb. 8. 8. 1992. Die MPA verordnet in ihrer Praxis-Software für die Patientin Rubella die mit dem Labor vereinbarten Standard-Analysen für die gynäkologische 3-Jahreskontrolle. Dazu gehört auch die Blutentnahme für die Serothek für allfällige Nachverordnungen.
 Das Labor übermittelt die Resultate spätestens 90 Minuten nach der Blutentnahme in die Praxis. Dr. Pap verordnet während der Konsultation folgende Aufträge:
 
 * Gynäkologische Zervix Zytologie: Pap-Abstrich - falls indiziert soll auch der Nachweis und die Typisierung von HPV (Humane Papillomaviren) durchgeführt werden.
@@ -46,9 +46,9 @@ TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
 
 ## Fallbeispiel 4: Verdacht auf eine Sepsis
 
-Die Patientin Klebsiella Keller, geb. 12. 12. 1975, ist schon seit längerer Zeit im Regionalspital Zugersee. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da ein Verdacht auf eine Sepsis besteht, wird der Patientin am Morgen Blut für eine Blutkultur entnommen. 30 Minuten später wird nochmals eine aerobe und eine anaerobe Blutkultur angelegt, sowie eine Urinprobe gewonnen.
+Die Patientin Klebsiella Keller, geb. 12. 12. 1975, ist schon seit längerer Zeit im Regionalspital Zugersee. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da ein Verdacht auf eine Sepsis besteht, ordnet der zuständige Oberarzt, Dr. Hans Hauser, an, dass ihr  am Morgen Blut für eine Blutkultur entnommen wird. 30 Minuten später wird nochmals eine aerobe und eine anaerobe Blutkultur angelegt, sowie eine Urinprobe gewonnen.
 Alle fünf Proben werden im externen Labor Pipette weiter bearbeitet. Dort werden in allen Materialien Keime nachgewiesen und dann mittels Massenspektrometrie identifiziert. In den vier Blutkulturflaschen konnten die Erreger „Klebsiella pneumoniae“ und „Escherichia coli“ nachgewiesen werden, in einer aeroben Flasche noch zusätzlich das Bakterium „Streptococcus mitis“. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen.
-Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert den behandelnden Arzt regelmässig über die verschiedenen Teilresultate.
+Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmässig über die verschiedenen Teilresultate.
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
 [4-sepsis.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-4_Sepsis.xml)

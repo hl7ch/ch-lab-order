@@ -28,12 +28,6 @@
             </div>
         </text>
       
-        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber">
-          <valueIdentifier>
-            <value value="123" />
-          </valueIdentifier>
-        </extension>
-      
         <identifier>
           <system value="http://test.fhir.ch/id/uuid" />
           <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
@@ -62,7 +56,7 @@
         <date value="2020-03-31T11:46:09+02:00" />
       
         <author>
-          <reference value="Practitioner/PeterPap" />
+          <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
         </author>
         <title value="Referral 3-gyn" />
       
@@ -193,9 +187,46 @@
     </resource>
   </entry>
 
-  <!-- TODO entry[] organisation -->
+  <!-- entry[3] organisation -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Organization/GruppenpraxisOlten" />
+    <resource>
+      <Organization xmlns="http://hl7.org/fhir">
+        <id value="GruppenpraxisOlten" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization" />
+        </meta>
+        <name value="Gruppenpraxis Olten" />
+        <address>
+          <line value="Gerbergasse 12" />
+          <city value="Olten" />
+          <postalCode value="4600" />
+          <country value="CH" />
+        </address>
+      </Organization>
+    </resource>
+  </entry>
 
-  <!-- entry[3] questionnaire -->
+  <!-- entry[4] practitionerrole-->
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxisOlten" />
+    <resource>
+      <PractitionerRole xmlns="http://hl7.org/fhir">
+        <id value="PeterPapGruppenpraxisOlten" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+        </meta>
+        <practitioner>
+          <reference value="Practitioner/PeterPap" />
+        </practitioner>
+        <organization>
+          <reference value="Organization/GruppenpraxisOlten" />
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+
+  <!-- entry[5] questionnaire -->
   <entry>
     <fullUrl value="http://example.com/fhir/Questionnaire/3-gyn" />
     <resource>
@@ -677,7 +708,7 @@
     </resource>
   </entry>
 
-  <!-- entry[4] questionnaireResponse -->
+  <!-- entry[6] questionnaireResponse -->
   <entry>
     <fullUrl value="http://example.com/fhir/QuestionnaireResponse/3-gyn" />
     <resource>
@@ -1084,7 +1115,7 @@
     </resource>
   </entry>
   
-  <!-- entry[5] serviceRequest -->
+  <!-- entry[7] serviceRequest -->
   <entry>
     <fullUrl value="http://example.com/fhir/ServiceRequest/3-gyn" />
     <resource>
@@ -1119,7 +1150,7 @@
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
-          <reference value="Practitioner/PeterPap" />
+          <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
         </requester>
       
         <performerType>
@@ -1135,7 +1166,7 @@
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
           <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-          <reference value="Practitioner/PeterPap" />
+          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
         </performer>
       
         <reasonCode>

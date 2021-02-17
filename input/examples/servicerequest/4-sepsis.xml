@@ -6,9 +6,9 @@
   </meta>
 
   <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-
-  <!-- should be mandatory ?
+  <!-- This is a business identifier, not a resource identifier, should be mandatory ?
   <identifier>
+    could be the Questionnaire.item[1].order.number
   </identifier>
   -->
   <status value="active" />
@@ -30,7 +30,7 @@
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="Practitioner/HansHauser" />
+    <reference value="PractitionerRole/HansHauserRegionalspitalZugersee" />
   </requester>
 
   <performerType>
@@ -46,7 +46,7 @@
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
     <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-    <reference value="Practitioner/PeterPap" />
+    <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
   </performer>
 
   <reasonCode>

@@ -1,5 +1,5 @@
 <Practitioner xmlns="http://hl7.org/fhir">
-  <id value="SimonSuva"/>
+  <id value="PauloPorcellini"/>
   <meta>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
   </meta>
@@ -8,7 +8,7 @@
     <value value="7601000050705"/>
   </identifier>
   <name>
-    <family value="Suva"/>
-    <given value="Simon"/>
+    <family value="Porcellini"/>
+    <given value="Paulo"/>
   </name>
 </Practitioner>

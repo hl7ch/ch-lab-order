@@ -14,7 +14,7 @@
 
   <!-- entry[0] Composition => table of content -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Composition/1-tvt" />
+    <fullUrl value="http://example.com/fhir/Composition/1-tvt" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
         <id value="1-tvt" />
@@ -27,43 +27,39 @@
                 Referral 1-tvt
             </div>
         </text>
-        <!--
-        <extension url="">
-            <valueString value="" />
-        </extension>
-        -->
+
         <identifier>
           <system value="http://test.fhir.ch/id/uuid" />
           <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
         </identifier>
         <status value="final" />
+
         <type>
-          <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="721963009" />
-          </coding>
-          <text value="Order (record artifact)" />
-        </type>
-        <!-- Publisher says: "Keiner der angegebenen Codes ist im Valueset 
-          http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, 
-          und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) 
-          (Codes = http://snomed.info/sct#721963009)
-        -->
-        <category>
           <coding>
             <system value="http://snomed.info/sct" />
             <code value="721965002" />
             <display value="Laboratory order (record artifact)" />
           </coding>
+        </type>
+
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="721963009" />
+            <display value="Order (record artifact)" />
+          </coding>
         </category>
+
         <subject>
           <reference value="Patient/HansGuggindieluft" />
         </subject>
         <date value="2019-03-31T11:46:09+02:00" />
+
         <author>
-          <reference value="Practitioner/MarcMustermann" />
+          <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
         </author>
         <title value="Referral 1-tvt" />
+
         <attester>
           <mode value="professional" />
           <time value="2010-03-12T11:46:09+02:00" />
@@ -75,6 +71,12 @@
         <!-- sections -->
         <section>
           <title value="Referral" />
+          <text>
+            <status value="generated" />
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              Referral 1-tvt
+            </div>
+          </text>
           <entry>
             <reference value="Questionnaire/1-tvt" />
           </entry>
@@ -91,7 +93,7 @@
 
   <!-- entry[1] ch-core-Patient -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Patient/HansGuggindieluft" />
+    <fullUrl value="http://example.com/fhir/Patient/HansGuggindieluft" />
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
         <id value="HansGuggindieluft" />
@@ -211,7 +213,7 @@
 
   <!--  entry[2] practitioner -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Practitioner/MarcMustermann" />
+    <fullUrl value="http://example.com/fhir/Practitioner/MarcMustermann" />
     <resource>
       <Practitioner xmlns="http://hl7.org/fhir">
         <id value="MarcMustermann" />
@@ -230,11 +232,48 @@
     </resource>
   </entry>
 
-  <!-- TODO entry[] organisation -->
-
-  <!-- entry[3] questionnaire -->
+  <!-- entry[3] organization -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/Questionnaire/1-tvt" />
+    <fullUrl value="http://example.com/fhir/Organization/GruppenpraxisOlten" />
+    <resource>
+      <Organization xmlns="http://hl7.org/fhir">
+        <id value="GruppenpraxisOlten" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization" />
+        </meta>
+        <name value="Gruppenpraxis Olten" />
+        <address>
+          <line value="Gerbergasse 12" />
+          <city value="Olten" />
+          <postalCode value="4600" />
+          <country value="CH" />
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+
+  <!-- entry[4] practitionerrole -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxisOlten" />
+    <resource>
+      <PractitionerRole xmlns="http://hl7.org/fhir">
+        <id value="MarcMustermannGruppenpraxisOlten" />
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
+        </meta>
+        <practitioner>
+          <reference value="Practitioner/MarcMustermann" />
+        </practitioner>
+        <organization>
+          <reference value="Organization/GruppenpraxisOlten" />
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+
+  <!-- entry[5] questionnaire -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Questionnaire/1-tvt" />
     <resource>
       <Questionnaire xmlns="http://hl7.org/fhir">
         <id value="1-tvt" />
@@ -250,7 +289,7 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/map-orf" />
         </extension>
@@ -262,14 +301,14 @@
         <subjectType value="Patient" />
         <date value="2018-04-12" />
         <publisher value="eHealth Suisse" />
-      
+
         <!-- item[0] Lab Order Questionnaire Example for TVT -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnarie Example for TVT" />
           <type value="display" />
         </item>
-      
+
         <!-- item[1] order -->
         <item>
           <linkId value="order" />
@@ -286,13 +325,13 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[2] orderer -->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
           <type value="group" />
-      
+
           <!-- item[2.0] orderer.author-->
           <item>
             <linkId value="orderer.author" />
@@ -349,7 +388,7 @@
               <type value="string" />
             </item>
           </item>
-      
+
           <!-- item[2.1] orderer.dataenterer-->
           <item>
             <linkId value="orderer.dataenterer" />
@@ -413,7 +452,7 @@
               <type value="string" />
             </item>
           </item>
-      
+
           <!-- item[2.2] orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
@@ -470,7 +509,7 @@
               <type value="string" />
             </item>
           </item>
-      
+
           <!-- item[2.3] orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
@@ -528,7 +567,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[3] receiver -->
         <item>
           <linkId value="receiver" />
@@ -590,7 +629,7 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[4] patient -->
         <item>
           <linkId value="patient" />
@@ -641,7 +680,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
@@ -652,7 +691,7 @@
             <text value="Hämatologie Subset" />
             <type value="choice" />
             <repeats value="true" />
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -690,7 +729,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[6] lab specialty, here: coagulation -->
         <item>
           <linkId value="coagulation" />
@@ -710,20 +749,20 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[7] lab specialty, here: clinical chemistry -->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
           <type value="group" />
-      
+
           <!-- CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
             <text value="CRP" />
             <type value="choice" />
             <repeats value="true" />
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -732,7 +771,7 @@
               </valueCoding>
               <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
             </answerOption>
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -740,7 +779,7 @@
                 <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
-      
+
             <!-- CRP C reactive Protein High sensitivity method -->
             <answerOption>
               <valueCoding>
@@ -749,7 +788,7 @@
                 <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
               </valueCoding>
             </answerOption>
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -763,9 +802,9 @@
     </resource>
   </entry>
 
-  <!-- entry[4] questionnaireresponse -->
+  <!-- entry[6] questionnaireresponse -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/QuestionnaireResponse/1-tvt" />
+    <fullUrl value="http://example.com/fhir/QuestionnaireResponse/1-tvt" />
     <resource>
       <QuestionnaireResponse xmlns="http://hl7.org/fhir">
         <id value="1-tvt" />
@@ -781,16 +820,16 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
         <status value="completed" />
-      
+
         <!-- item[0] Lab Order Questionnaireresponse Example for TVT -->
         <item>
           <linkId value="info" />
           <text value="Lab Order Questionnareresponse Example for TVT" />
         </item>
-      
+
         <!-- item[1] order -->
         <item>
           <linkId value="order" />
@@ -810,12 +849,12 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[2] orderer -->
         <item>
           <linkId value="orderer" />
           <text value="Auftraggeber" />
-      
+
           <!-- item[2.0] orderer.author -->
           <item>
             <linkId value="orderer.author" />
@@ -861,7 +900,7 @@
               <text value="Ort" />
             </item>
           </item>
-      
+
           <!-- item[2.1] orderer.dataenterer -->
           <item>
             <linkId value="orderer.dataenterer" />
@@ -920,7 +959,7 @@
               <text value="Ort" />
             </item>
           </item>
-      
+
           <!-- item[2.2] orderer.notcontactthisdoc -->
           <item>
             <linkId value="orderer.notcontactthisdoc" />
@@ -966,7 +1005,7 @@
               <text value="Ort" />
             </item>
           </item>
-      
+
           <!-- item[2.3] orderer.notcontactresponsedoc -->
           <item>
             <linkId value="orderer.notcontactresponsedoc" />
@@ -1013,7 +1052,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[3] receiver -->
         <item>
           <linkId value="receiver" />
@@ -1063,7 +1102,7 @@
             <text value="Ort" />
           </item>
         </item>
-      
+
         <!-- item[4] patient -->
         <item>
           <linkId value="patient" />
@@ -1104,7 +1143,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[5] Specialty Hematology Auto Differential panel - Blood -->
         <item>
           <linkId value="hematology" />
@@ -1112,7 +1151,7 @@
           <item>
             <linkId value="hemato-subset" />
             <text value="Hämatologie Subset" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1150,7 +1189,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[6] Specialty Coagulation D-Dimer -->
         <item>
           <linkId value="coagulation" />
@@ -1158,7 +1197,7 @@
           <item>
             <linkId value="d-dimer" />
             <text value="D-Dimer" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1168,17 +1207,17 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[7] Clinical chemistry: CRP C reactive Protein-->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
-      
+
           <!-- item[7.0] CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
             <text value="CRP" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1192,19 +1231,19 @@
     </resource>
   </entry>
 
-  <!-- entry[5] serviceRequest -->
+  <!-- entry[7] serviceRequest -->
   <entry>
-    <fullUrl value="http://test.fhir.ch/r4/ServiceRequest/1-tvt" />
+    <fullUrl value="http://example.com/fhir/ServiceRequest/1-tvt" />
     <resource>
       <ServiceRequest xmlns="http://hl7.org/fhir">
         <id value="1-tvt" />
-      
+
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
-      
+
         <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-      
+
         <!-- should be mandatory ?
         <identifier>
         </identifier>
@@ -1220,16 +1259,16 @@
           <text value="Laboratory procedure (procedure)" />
         </category>
         <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
-      
+
         <subject>
           <reference value="Patient/HansGuggindieluft" />
         </subject>
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
-          <reference value="Practitioner/MarcMustermann" />
+          <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
         </requester>
-      
+
         <performerType>
           <!-- 0..1 CodeableConcept Performer role -->
           <coding>
@@ -1238,14 +1277,14 @@
           </coding>
           <text value="Laboratory medicine specialist (occupation)" />
         </performerType>
-      
+
         <performer>
           <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
           CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
           <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-          <reference value="Practitioner/PeterPap" />
+          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
         </performer>
-      
+
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1254,19 +1293,19 @@
           </coding>
           <text value="Deep venous thrombosis of lower extremity" />
         </reasonCode>
-      
+
         <insurance>
           <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
           <reference value="Coverage/HealthInsuranceCard" />
         </insurance>
-      
+
         <!-- 2 Specimens, belong to this laborder-service -->
-      
+
         <specimen>
           <reference value="Specimen/serum" />
           <display value="Serum specimen" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
