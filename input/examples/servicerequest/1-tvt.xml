@@ -11,8 +11,13 @@
   <identifier>
   </identifier>
   -->
+  
   <status value="active" />
+  <!-- draft | active | on-hold | revoked | completed | entered-in-error | unknown -->
+
   <intent value="original-order" />
+  <!-- proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option -->
+
   <category>
     <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
     <coding>
@@ -21,6 +26,7 @@
     </coding>
     <text value="Laboratory procedure (procedure)" />
   </category>
+
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
@@ -63,7 +69,6 @@
   </insurance>
 
   <!-- 2 Specimens, belong to this laborder-service -->
-
   <specimen>
     <reference value="Specimen/serum" />
     <display value="Serum specimen" />
