@@ -242,6 +242,14 @@
 
     <resource>
       <reference>
+        <reference value="Organization/PraxisSeeblick" />
+      </reference>
+      <name value="Praxis Seeblick" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Organization/GruppenpraxisOlten" />
       </reference>
       <name value="Gruppenpraxis Olten" />
@@ -286,7 +294,7 @@
       <reference>
         <reference value="Patient/BeatBorer" />
       </reference>
-      <name value="BeatBorer" />
+      <name value="Beat Borer" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -294,7 +302,15 @@
       <reference>
         <reference value="Patient/EmilKummer" />
       </reference>
-      <name value="EmilKummer" />
+      <name value="Emil Kummer" />
+      <description value="Example for EPR-Patient" />
+    </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Patient/ErikaMusterfrau" />
+      </reference>
+      <name value="Erika Musterfrau" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -310,7 +326,7 @@
       <reference>
         <reference value="Patient/HansGuggindieluft" />
       </reference>
-      <name value="HansGuggindieluft" />
+      <name value="Hans Guggindieluft" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -318,7 +334,7 @@
       <reference>
         <reference value="Patient/KlebsiellaKeller" />
       </reference>
-      <name value="KlebsiellaKeller" />
+      <name value="Klebsiella Keller" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -326,7 +342,7 @@
       <reference>
         <reference value="Patient/MarinaRubella" />
       </reference>
-      <name value="MarinaRubella" />
+      <name value="Marina Rubella" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -334,7 +350,7 @@
       <reference>
         <reference value="Patient/MonikaWegmuellerRecipient" />
       </reference>
-      <name value="MonikaWegmuellerRecipient" />
+      <name value="Monika Wegmueller Recipient" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -342,7 +358,7 @@
       <reference>
         <reference value="Patient/MonikaWegmueller" />
       </reference>
-      <name value="MonikaWegmueller" />
+      <name value="Monika Wegmueller" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -356,6 +372,15 @@
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/GianLucaSpezialist" />
+      </reference>
+      <name value="Gian Luca Spezialist" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>    
 
     <resource>
       <reference>
@@ -383,6 +408,15 @@
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Practitioner/PeterMueller" />
+      </reference>
+      <name value="Peter Mueller" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
 
     <resource>
       <reference>
@@ -401,6 +435,24 @@
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Practitioner/SabineMeier" />
+      </reference>
+      <name value="Sabine Meier" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/StabiloBoss" />
+      </reference>
+      <name value="Stabilo Boss" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
 
     <!-- References to PractitionerRole -->
 
@@ -409,6 +461,15 @@
         <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
       </reference>
       <name value="Eva Erlenmeyer Labor Pipette (performer)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/GianLucaSpezialistGruppenpraxis"/>
+      </reference>
+      <name value="Gian Luca Spezialist Gruppenpraxis"/>
       <description value="Example for PractitionerRole"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -442,6 +503,15 @@
 
     <resource>
       <reference>
+        <reference value="PractitionerRole/PeterMuellerPraxisSeeblick"/>
+      </reference>
+      <name value="Peter Mueller Praxis Seeblick"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="PractitionerRole/PeterPapGruppenpraxisOlten"/>
       </reference>
       <name value="Peter Pap Gruppenpraxis Olten (3-gyn)"/>
@@ -454,6 +524,24 @@
         <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten"/>
       </reference>
       <name value="Marc Mustermann at Gruppenpraxis Olten (2-pertussis)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/SabineMeierPraxisSeeblick"/>
+      </reference>
+      <name value="Sabine Meier Praxis Seeblick"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/StabiloBossPraxisSeeblick"/>
+      </reference>
+      <name value="Stabilo Boss Praxis Seeblick"/>
       <description value="Example for PractitionerRole"/>
       <exampleBoolean value="true"/>
     </resource>
