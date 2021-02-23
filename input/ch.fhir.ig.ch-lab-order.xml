@@ -401,6 +401,15 @@
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Practitioner/NotificationContactSabineMeier" />
+      </reference>
+      <name value="Notification Contact Sabine Meier" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
 
     <resource>
       <reference>
@@ -434,6 +443,24 @@
         <reference value="Practitioner/PeterPresto" />
       </reference>
       <name value="Peter Presto" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/ResponseReceiverGianLucaSpezialist" />
+      </reference>
+      <name value="Response Receiver Gian Luca Spezialist" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/ResponseReceiverSabineMeier" />
+      </reference>
+      <name value="Response Receiver Sabine Meier" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -496,6 +523,15 @@
 
     <resource>
       <reference>
+        <reference value="PractitionerRole/NotificationContactPraxisSeeblick" />
+      </reference>
+      <name value="Notification Contact PraxisSeeblick" />
+      <description value="Example for PractitionerRole" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="PractitionerRole/PauloPorcelliniSuva" />
       </reference>
       <name value="Paulo Porcellini Suva (5-biol-monit)" />
@@ -526,6 +562,24 @@
         <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten" />
       </reference>
       <name value="Marc Mustermann at Gruppenpraxis Olten (2-pertussis)" />
+      <description value="Example for PractitionerRole" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" />
+      </reference>
+      <name value="Response Receiver Gruppenpraxis" />
+      <description value="Example for PractitionerRole" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/ResponseReceiverPraxisSeeblick" />
+      </reference>
+      <name value="Response Receiver Praxis Seeblick" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
