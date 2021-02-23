@@ -8,7 +8,7 @@
   <questionnaire value="http://fhir.ch/ig/ch-orf/Questionnaire/referral-min" />
   <status value="completed" />
 
-  <!-- item[0] order: referral-min Questionnaire Example -->
+  <!-- item[0] order: referral-min QuestionnaireResponse Example -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -27,6 +27,7 @@
       <linkId value="order.precedentDocumentId" />
       <text value="ID des Vorgängerdokuments" />
     </item>
+    <!-- 
     <item>
       <linkId value="order.dateTime" />
       <text value="Auftragszeitpunkt" />
@@ -34,6 +35,7 @@
         <valueDateTime value="2019-03-31T11:46:09+02:00" />
       </answer>
     </item>
+    -->
   </item>
 
  <!-- item[1] Request Receiver: Person/organization who receives the request -->

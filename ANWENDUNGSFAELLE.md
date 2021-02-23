@@ -8,11 +8,15 @@ Ein Patient erscheint am 09.03.2016 in der Gruppenpraxis Olten bei Dr. med. Must
 * CRP
 * D-Dimer
 
-Der Arzt führt selber das Blutbild und die CRP-Bestimmung mittels Point of care Diagnostik durch, die D-Dimer-Diagnostik wird als Quantitative Diagnostik in einem externen Einsendelabor verordnet. Zur Gewinnung der Probe wird eine Blutentnahme im Liegen durchgeführt (1 EDTA-Röhrchen, 1 Citrat-Röhrchen). Der Auftrag wird an das externe Labor übermittelt und die Probe wird mittels telefonisch geordertem Kurier in das externe Versandlabor geschickt. Die Resultate der internen Point of Care-Diagnostik (Blutbild und CRP) werden im Laborblatt des Patienten in der Arztpraxis-Software eingetragen (händisch oder über lokal installierte elektronische Schnittstellen). Es erfolgt daher eine Verordnung des Arztes an den Patienten zur Selbstverabreichung eines thrombosehemmenden Mittels.
+Der Arzt führt selber das Blutbild und die CRP-Bestimmung mittels Point of care Diagnostik durch, die D-Dimer-Diagnostik wird als Quantitative Diagnostik in einem externen Einsendelabor verordnet. Zur Gewinnung der Probe wird eine Blutentnahme im Liegen durchgeführt (1 EDTA-Röhrchen, 2 Citrat-Röhrchen zu 5 ml). Der Auftrag wird an das externe Labor übermittelt und die Probe wird mittels telefonisch geordertem Kurier in das externe Versandlabor geschickt. Die Resultate der internen Point of Care-Diagnostik (Blutbild und CRP) werden im Laborblatt des Patienten in der Arztpraxis-Software eingetragen (händisch oder über lokal installierte elektronische Schnittstellen). Es erfolgt daher eine Verordnung des Arztes an den Patienten zur Selbstverabreichung eines thrombosehemmenden Mittels.
 Die Resultate des Einsendelabors treffen am gleichen Abend elektronisch beim Hausarzt ein und werden ebenfalls im Laborblatt des Patienten eingetragen. Durch den Einsatz des vorliegenden Austauschformats kann dieser Prozess vollautomatisch erfolgen. Nach telefonischer Rückfrage des Arztes beim Einsendelabor auf Grund eines grenzwertigen D-Dimer-Befundes erfolgt die Auskunft, dass mittels D-Dimer in dieser Situation eine tiefe Venenthrombose nicht ausgeschlossen werden kann und es erfolgt daher eine telefonische Wiedereinbestellung des Patienten am nächsten Tag zur Durchführung einer Sonographie der Beine.
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
 [1-tvt.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-1_VerdachtAufTiefeVenenthrombose.xml)
+
+Da es sich um eine primäre Beinvenenthrombose handelt, sendet Frau Dr. Eva Erlenmeier vom Labor Pipette ein Feedback an Dr. Mustermann, mit der Empfehlung, ein Thrombophilie-Screening durchzuführen, welches folgende Analysen enthält:
+Quick, aPTT, Fibrinogen, Antithrombin (funkt.), Thrombinzeit I 2.5 NIH/ml, APC Resistenz, D-Dimere, Protein C, (aPTT Methode), Protein S-Antigen
+Die Analysen können direkt von den mitgeschickten Proben der Citrat-Röhrchen erfolgen.
 
 ## Fallbeispiel 2: Verdacht auf Keuchhusten
 
