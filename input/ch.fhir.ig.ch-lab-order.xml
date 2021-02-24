@@ -55,16 +55,17 @@
   <!-- dependencies on other IG's -->
   <!-- ############################ -->
 
-  <dependsOn id="sdc">
-    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
-    <packageId value="hl7.fhir.uv.sdc" />
-    <version value="2.7.0" />
-  </dependsOn>
-
   <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf" />
     <packageId value="ch.fhir.ig.ch-orf" />
     <version value="current" /> <!-- otherwise we will get sdc 2.8.0 -->
+  </dependsOn>
+
+
+  <dependsOn id="sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
+    <packageId value="hl7.fhir.uv.sdc" />
+    <version value="2.7.0" />
   </dependsOn>
 
   <dependsOn id="chcore">
@@ -73,6 +74,11 @@
     <version value="current" />
   </dependsOn>
 
+  <dependsOn id="cheprterm">
+    <uri value="http://fhir.ch/ig/ch-epr-term/ImplementationGuide/ch.fhir.ig.ch-epr-term" />
+    <packageId value="ch.fhir.ig.ch-epr-term" />
+    <version value="2.0.4" />
+  </dependsOn>
 
   <!-- Patients, Organizations and Practitioners must conform CH-core -->
   <!-- ############################################################## -->
@@ -401,7 +407,7 @@
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
-    
+
     <resource>
       <reference>
         <reference value="Practitioner/NotificationContactSabineMeier" />
@@ -839,7 +845,7 @@
       </reference>
       <exampleBoolean value="false" />
     </resource>
-    
+
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-document" />
@@ -860,7 +866,7 @@
       </reference>
       <exampleBoolean value="false" />
     </resource>
-    
+
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-precedentdocument" />
@@ -881,7 +887,7 @@
       </reference>
       <exampleBoolean value="false" />
     </resource>
-    
+
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-requestreceiver" />
@@ -902,7 +908,7 @@
       </reference>
       <exampleBoolean value="false" />
     </resource>
-    
+
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-urgentnoficationcontactforrequest" />

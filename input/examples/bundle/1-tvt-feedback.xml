@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="1-tvt" />
+  <id value="1-tvt-feedback" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:18:41.341+00:00" />
@@ -7,17 +7,17 @@
   </meta>
   <identifier>
     <system value="http://test.fhir.ch/id/uuid" />
-    <value value="26d3dff7-ab05-4737-a49c-5eccd33595f8" />
+    <value value="26d3dff7-ab05-4737-a49c-XXXXXXXXXXXXXX" /> <!-- assigned by the system -->
   </identifier>
   <type value="document" />
-  <timestamp value="2019-04-01T20:18:41.341+00:00" />
+  <timestamp value="2019-04-02T20:18:41.341+00:00" /> <!-- assigned by the system -->
 
   <!-- entry[0] Composition => table of content -->
   <entry>
     <fullUrl value="http://example.com/fhir/Composition/1-tvt" />
     <resource>
       <Composition xmlns="http://hl7.org/fhir">
-        <id value="1-tvt" />
+        <id value="1-tvt-feedback" />
         <meta>
           <versionId value="1" />
           <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
@@ -27,7 +27,7 @@
         
         <text>
           <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml"> Referral 1-tvt </div>
+          <div xmlns="http://www.w3.org/1999/xhtml"> 1-tvt Feedback</div>
         </text>
 
         <identifier>
@@ -72,11 +72,11 @@
 
         <!-- sections -->
         <section>
-          <title value="Referral" />
+          <title value="1-tvt Feedback" />
           <text>
             <status value="generated" />
             <div xmlns="http://www.w3.org/1999/xhtml">
-              Referral 1-tvt
+              1-tvt Feddback
             </div>
           </text>
           <entry>
@@ -842,7 +842,7 @@
             <text value="Auftragsnummer des Auftragsempfängers" />
           </item>
           <item>
-            <linkId value="order.precedentDocumentId" />
+            <linkId value="" /> <!-- order.precedentDocumentId-->
             <text value="ID des Vorgängerdokuments" />
           </item>
           <item>

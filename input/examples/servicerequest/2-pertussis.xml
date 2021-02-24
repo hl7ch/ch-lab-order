@@ -30,6 +30,7 @@
   <intent value="original-order" />
   <category>
     <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
+    <!-- Value Set http://hl7.org/fhir/ValueSet/servicerequest-category -->
     <coding>
       <system value="http://snomed.info/sct" />
       <code value="108252007" />
