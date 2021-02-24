@@ -1,60 +1,41 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="referral-min" />
-
+  <id value="referral-min"/>
   <meta>
-    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
+      <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
-
-  <!-- 0..1 Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller. TODO -->
-
-  <!-- should be mandatory ?
   <identifier>
+      <type>
+          <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PLAC"/>
+              <display value="Placer Identifier"/>
+          </coding>
+      </type>
+      <system value="urn:oid:1.3.4.5.6.7"/>
+      <value value="123"/>
   </identifier>
-  -->
-  <status value="active" />
-  <intent value="original-order" />
-  <category>
-    <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="108252007" />
-    </coding>
-    <text value="Laboratory procedure (procedure)" />
-  </category>
-  <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
-
+  <!--<identifier>
+      <type>
+          <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="FILL"/>
+              <display value="Filler Identifier"/>
+          </coding>
+      </type>
+      <system value="urn:oid:7.6.5.4.3.2"/>
+      <value value="765432"/>
+  </identifier>-->
+  
+  <status value="active"/>
+  <intent value="original-order"/>
+  <priority value="routine"/>
   <subject>
-    <reference value="Patient/HansGuggindieluft" />
+      <reference value="Patient/ErikaMusterfrau"/>
   </subject>
   <requester>
-    <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
+      <reference value="PractitionerRole/SabineMeierPraxisSeeblick"/>
   </requester>
-
-  <performerType>
-    <!-- 0..1 CodeableConcept Performer role -->
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="61246008" />
-    </coding>
-    <text value="Laboratory medicine specialist (occupation)" />
-  </performerType>
-
   <performer>
-    <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
+      <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
   </performer>
-
-  <reasonCode>
-    <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="772146005" />
-    </coding>
-    <text value="Pertussis suspected (situation)" />
-  </reasonCode>
-
-  <!-- Specimen, belongs to this laborder-service -->
-  <specimen>
-    <reference value="Specimen/serum" />
-    <display value="Serum specimen" />
-  </specimen>
 </ServiceRequest>
