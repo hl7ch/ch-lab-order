@@ -1,14 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Composition xmlns="http://hl7.org/fhir">
   <id value="1-tvt" />
   <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+    <source value="#AOvDxhC0zhsHQDK9" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   </meta>
   <text>
     <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-          Referral 1-tvt
-      </div>
+    <div xmlns="http://www.w3.org/1999/xhtml"> Referral 1-tvt </div>
   </text>
+
+  <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+    <extension url="enterer">
+      <!-- https://github.com/hl7ch/ch-core/issues/91 Reference to PractitionerRole, not only Practitioner
+         falls das so nicht umgesetzt werden kann, muss der Text auf der Home-Seite vom ORF noch angepasst werden -->
+      <!--<valueReference>
+        <reference value="PractitionerRole/StabiloBossPraxisSeeblick"/>
+    </valueReference>-->
+      <valueReference>
+        <reference value="Practitioner/StabiloBoss" />
+      </valueReference>
+    </extension>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/NotificationContactPraxisSeeblick" />
+    </valueReference>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="PractitionerRole/ResponseReceiverPraxisSeeblick" />
+    </valueReference>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" />
+    </valueReference>
+  </extension>
 
   <identifier>
     <system value="http://test.fhir.ch/id/uuid" />
