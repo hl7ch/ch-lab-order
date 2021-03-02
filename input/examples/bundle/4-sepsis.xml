@@ -335,8 +335,8 @@
                         <expression value="" />
                     </valueExpression>
                 </extension>-->
-            <linkId value="order.precedentDocumentId" />
-            <text value="ID des Vorgängerdokuments" />
+            <linkId value="order.precedentDocumentIdentifier" />
+            <text value="Identifier des Vorgängerdokuments" />
             <type value="string" />
           </item>
           <item>
@@ -1167,8 +1167,8 @@
             <text value="Auftragsnummer des Auftragsempfängers" />
           </item>
           <item>
-            <linkId value="order.precedentDocumentId" />
-            <text value="ID des Vorgängerdokuments" />
+            <linkId value="order.precedentDocumentIdentifier" />
+            <text value="Identifier des Vorgängerdokuments" />
           </item>
           <item>
             <linkId value="order.dateTime" />
