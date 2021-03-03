@@ -4,8 +4,8 @@
     <id value="ch-lab-order-questionnaireresponse"/>
     <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-questionnaireresponse"/>
     <version value="0.9.0"/>
-    <name value="CHORFQuestionnaireResponse"/>
-    <title value="CH ORF QuestionnaireResponse"/>
+    <name value="CH LAB-ORDER QuestionnaireResponse"/>
+    <title value="CH LAB-ORDER QuestionnaireResponse"/>
     <status value="draft"/>
     <date value="2019-01-30"/>
     <publisher value="eHealth Suisse"/>
@@ -23,7 +23,7 @@
             <value value="oliver.egger@ahdis.ch"/>
         </telecom>
     </contact>
-    <description value="Profile on QuestionnaireResponse for CH ORF"/>
+    <description value="Profile on QuestionnaireResponse for CH LAB-ORDER"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

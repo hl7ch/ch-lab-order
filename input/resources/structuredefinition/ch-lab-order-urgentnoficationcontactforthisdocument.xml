@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-lab-order-urgentnoficationcontactforrequest"/>
-    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforrequest"/>
+    <id value="ch-lab-order-urgentnoficationcontactforthisdocument"/>
+    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforthisdocument"/>
     <version value="0.9.0"/>
-    <name value="CHORFUrgentNotificiationContactForRequest"/>
-    <title value="CH ORF Urgent Notification Contact For Request Extension"/>
+    <name value="CH LAB-ORDER UrgentNotificiationContactForRequest"/>
+    <title value="CH LAB-ORDER Urgent Notification Contact For Request Extension"/>
     <status value="draft"/>
     <date value="2019-02-05"/>
     <publisher value="eHealth Suisse"/>
@@ -57,7 +57,7 @@
             <type>
                 <code value="uri"/>
             </type>
-            <fixedUri value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforrequest"/>
+            <fixedUri value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforthisdocument"/>
         </element>
         <element id="Extension.valueReference">
             <path value="Extension.valueReference"/>

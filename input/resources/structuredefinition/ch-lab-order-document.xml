@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ch-lab-order-document" />
-  <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document" />
+  <url value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document" />
   <version value="0.9.0" />
   <name value="CHORFDocument" />
   <title value="CH ORF Document" />
@@ -41,6 +41,19 @@
     <element id="Bundle">
       <path value="Bundle" />
       <short value="CH ORF Bundle" />
+    </element>
+    <element id="Bundle.identifier">
+      <path value="Bundle.identifier" />
+      <short value="Document Identifier" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.identifier.system">
+      <path value="Bundle.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.identifier.value">
+      <path value="Bundle.identifier.value" />
+      <min value="1" />
     </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
@@ -82,7 +95,7 @@
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition" />
+        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
       </type>
     </element>
     <element id="Bundle.entry:Questionnaire">
@@ -100,7 +113,7 @@
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-questionnaire" />
+        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
       </type>
     </element>
     <element id="Bundle.entry:QuestionnaireResponse">
@@ -118,7 +131,7 @@
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-questionnaireresponse" />
+        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
       </type>
     </element>
     <element id="Bundle.entry:ServiceRequest">
@@ -137,7 +150,7 @@
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest" />
+        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
       </type>
     </element>
   </differential>
