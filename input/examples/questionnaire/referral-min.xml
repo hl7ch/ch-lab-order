@@ -2,6 +2,8 @@
   <id value="referral-min" />
 
   <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
     <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
     <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
@@ -51,6 +53,8 @@
     <text value="Auftrag" />
     <type value="group" />
     <required value="true" />
+
+    <!-- item[0,1] Order Placer OrderID-->
     <item>
       <!--<extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression">
               <valueExpression>
@@ -62,6 +66,8 @@
       <text value="Auftragsnummer des Auftraggebers" />
       <type value="string" />
     </item>
+
+    <!-- item[0,2] Order Placer OrderID Domain-->
     <item>
       <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
         <valueBoolean value="true" />
@@ -70,6 +76,8 @@
       <text value="Identifier Domain der Auftragsnummer des Auftraggebers" />
       <type value="string" />
     </item>
+
+    <!-- item[0,3] Order Filler OrderID-->
     <item>
       <!--<extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression">
               <valueExpression>
@@ -81,6 +89,8 @@
       <text value="Auftragsnummer des Auftragsempfängers" />
       <type value="string" />
     </item>
+
+    <!-- item[0,4] Order Filler OrderID Domain-->
     <item>
       <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
         <valueBoolean value="true" />
@@ -89,6 +99,8 @@
       <text value="Identifier Domain der Auftragsnummer des Auftragsempfängers" />
       <type value="string" />
     </item>
+
+    <!-- item[0,5] Order Precedent Document Identifier-->
     <item>
       <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
         <valueBoolean value="true" />
@@ -98,12 +110,14 @@
       <type value="string" />
     </item>
 
-    <!-- Urgent Notification Contact for this document -->
+    <!-- item[0,6] Urgent Notification Contact for this document -->
     <item>
       <linkId value="order.notificationContactDocument" />
       <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
       <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
       <type value="group" />
+
+      <!-- item[0,6,0] Urgent Notification Contact for this document -->
       <item>
         <linkId value="order.notificationContactDocument.practitioner" />
         <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
@@ -136,7 +150,8 @@
         </item>
       </item>
     </item>
-    <!-- Urgent Notification Contact for the Response to this document -->
+
+    <!-- item[0,7] Urgent Notification Contact for the Response to this document -->
     <item>
       <linkId value="order.notificationContactDocumentResponse" />
       <definition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
@@ -174,6 +189,8 @@
         </item>
       </item>
     </item>
+
+    <!-- item[0,8] Order Priority -->
     <item>
       <linkId value="order.priority" />
       <text value="Auftragspriorität" />
