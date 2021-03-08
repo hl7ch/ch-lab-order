@@ -132,7 +132,7 @@
         <reference value="Bundle/3-gyn" />
       </reference>
       <name value="Referreal 3-gyn" />
-      <description value="Example Bundle for referral/order preventive gynaecological check-up" />
+      <description value="Example Bundle for referral/order for preventive gynaecological check-up" />
     </resource>
 
     <resource>
@@ -622,7 +622,7 @@
         <reference value="Questionnaire/1-tvt" />
       </reference>
       <name value="questionnaire 1-tvt" />
-      <description value="Example for Questionnaire due to suspected deep vein thrombosis" />
+      <description value="Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -630,7 +630,7 @@
         <reference value="Questionnaire/2-pertussis" />
       </reference>
       <name value="questionnaire 2-pertussis" />
-      <description value="Example for Questionnaire for Pertussis Investigation" />
+      <description value="Example for Laboratory Order Questionnaire for Pertussis Investigation" />
     </resource>
 
     <resource>
@@ -638,7 +638,7 @@
         <reference value="Questionnaire/3-gyn" />
       </reference>
       <name value="questionnaire 3-gyn" />
-      <description value="Example for Questionnaire for gynaecological check-up" />
+      <description value="Example for Laboratory Order Questionnaire for gynaecological check-up" />
     </resource>
 
     <resource>
@@ -646,7 +646,7 @@
         <reference value="Questionnaire/4-sepsis" />
       </reference>
       <name value="questionnaire 4-sepsis" />
-      <description value="Example for Questionnaire Sepsis Investigation" />
+      <description value="Example for Laboratory Order Questionnaire for Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -654,7 +654,7 @@
         <reference value="Questionnaire/5-biol-monit" />
       </reference>
       <name value="questionnaire 5-biol-monit" />
-      <description value="Example for Questionnaire for toxicological Monitoring" />
+      <description value="Example for Laboratory Order Questionnaire for toxicological Monitoring" />
     </resource>
 
     <!-- References to QuestionnaireResponses -->
@@ -671,7 +671,7 @@
         <reference value="QuestionnaireResponse/1-tvt" />
       </reference>
       <name value="questionnaire response 1-tvt" />
-      <description value="Example for Questionnaire Response due to suspected deep vein thrombosis" />
+      <description value="Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -679,7 +679,7 @@
         <reference value="QuestionnaireResponse/2-pertussis" />
       </reference>
       <name value="questionnaire response 2-pertussis" />
-      <description value="Example Questionnaire Response Laboratory Order for Pertussis Investigation" />
+      <description value="Example Laboratory Order Questionnaire Response for Pertussis Investigation" />
     </resource>
 
     <resource>
@@ -687,7 +687,7 @@
         <reference value="QuestionnaireResponse/3-gyn" />
       </reference>
       <name value="questionnaire response 3-gyn" />
-      <description value="Example for Questionnaire response for preventive gynecological check-up" />
+      <description value="Example for Laboratory Order Questionnaire response for preventive gynecological check-up" />
     </resource>
 
     <resource>
@@ -695,7 +695,7 @@
         <reference value="QuestionnaireResponse/4-sepsis" />
       </reference>
       <name value="questionnaire response 4-sepsis" />
-      <description value="Example for Questionnaire response for Sepsis Investigation" />
+      <description value="Example for Laboratory Order Questionnaire response for Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -703,7 +703,7 @@
         <reference value="QuestionnaireResponse/5-biol-monit" />
       </reference>
       <name value="questionnaire response 5-biol-monit" />
-      <description value="Example for questionnaire response for toxicological Monitoring" />
+      <description value="Example for Laboratory Order Questionnaire response for toxicological Monitoring" />
     </resource>
 
     <!-- References to ServiceRequests -->
