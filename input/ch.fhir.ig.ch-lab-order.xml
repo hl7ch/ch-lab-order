@@ -116,7 +116,7 @@
         <reference value="Bundle/1-tvt" />
       </reference>
       <name value="Referral 1-tvt" />
-      <description value="Example Bundle for referral/order for a TVT" />
+      <description value="Example Bundle for referral/order due to suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -132,7 +132,7 @@
         <reference value="Bundle/3-gyn" />
       </reference>
       <name value="Referreal 3-gyn" />
-      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+      <description value="Example Bundle for referral/order preventive gynaecological check-up" />
     </resource>
 
     <resource>
@@ -140,7 +140,7 @@
         <reference value="Bundle/4-sepsis" />
       </reference>
       <name value="Referreal 4-sepsis" />
-      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+      <description value="Example Bundle for referral/order for Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -148,7 +148,7 @@
         <reference value="Bundle/5-biol-monit" />
       </reference>
       <name value="Referreal 5-biol-monit" />
-      <description value="Example Bundle for referral/order for Gyn/Obstetrics" />
+      <description value="Example Bundle for referral/order for toxicological Monitoring" />
     </resource>
 
     <!-- Reference to Compositions-->
@@ -157,7 +157,7 @@
         <reference value="Composition/referral-min" />
       </reference>
       <name value="Referral minimal" />
-      <description value="Example for Composition" />
+      <description value="Generic Example for Composition" />
     </resource>
 
     <resource>
@@ -165,7 +165,7 @@
         <reference value="Composition/1-tvt" />
       </reference>
       <name value="1-tvt" />
-      <description value="Example for Composition" />
+      <description value="Example for Composition: suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -173,7 +173,7 @@
         <reference value="Composition/2-pertussis" />
       </reference>
       <name value="2-pertussis" />
-      <description value="Example for Composition" />
+      <description value="Example for Composition: Pertussis investigation" />
     </resource>
 
     <resource>
@@ -181,7 +181,7 @@
         <reference value="Composition/3-gyn" />
       </reference>
       <name value="3-gyn" />
-      <description value="Example for Composition" />
+      <description value="Example for Composition: Preventive gynaecological check-up" />
     </resource>
 
     <resource>
@@ -189,7 +189,7 @@
         <reference value="Composition/4-sepsis" />
       </reference>
       <name value="4-sepsis" />
-      <description value="Example for Composition" />
+      <description value="Example for Composition: Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -197,7 +197,7 @@
         <reference value="Composition/5-biol-monit" />
       </reference>
       <name value="5-biol-monit" />
-      <description value="Example for Composition" />
+      <description value="Example for Composition: toxicological Monitoring" />
     </resource>
 
     <!-- Reference to Coverages -->
@@ -614,7 +614,7 @@
         <reference value="Questionnaire/referral-min" />
       </reference>
       <name value="questionnaire referral-min" />
-      <description value="Example for questionnaire" />
+      <description value="Generic Example for questionnaire" />
     </resource>
 
     <resource>
@@ -622,7 +622,7 @@
         <reference value="Questionnaire/1-tvt" />
       </reference>
       <name value="questionnaire 1-tvt" />
-      <description value="Example for 1-tvt" />
+      <description value="Example for Questionnaire due to suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -630,7 +630,7 @@
         <reference value="Questionnaire/2-pertussis" />
       </reference>
       <name value="questionnaire 2-pertussis" />
-      <description value="Example for 2-pertussis" />
+      <description value="Example for Questionnaire for Pertussis Investigation" />
     </resource>
 
     <resource>
@@ -638,7 +638,7 @@
         <reference value="Questionnaire/3-gyn" />
       </reference>
       <name value="questionnaire 3-gyn" />
-      <description value="Example for 3-gyn" />
+      <description value="Example for Questionnaire for gynaecological check-up" />
     </resource>
 
     <resource>
@@ -646,7 +646,7 @@
         <reference value="Questionnaire/4-sepsis" />
       </reference>
       <name value="questionnaire 4-sepsis" />
-      <description value="Example for 4-sepsis" />
+      <description value="Example for Questionnaire Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -654,7 +654,7 @@
         <reference value="Questionnaire/5-biol-monit" />
       </reference>
       <name value="questionnaire 5-biol-monit" />
-      <description value="Example for 5-biol-monit" />
+      <description value="Example for Questionnaire for toxicological Monitoring" />
     </resource>
 
     <!-- References to QuestionnaireResponses -->
@@ -663,7 +663,7 @@
         <reference value="QuestionnaireResponse/referral-min" />
       </reference>
       <name value="questionnaire response referral-min" />
-      <description value="Example for questionnaire response" />
+      <description value="General Questionnaire Response" />
     </resource>
 
     <resource>
@@ -671,7 +671,7 @@
         <reference value="QuestionnaireResponse/1-tvt" />
       </reference>
       <name value="questionnaire response 1-tvt" />
-      <description value="Example for questionnaire response" />
+      <description value="Example for Questionnaire Response due to suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -679,7 +679,7 @@
         <reference value="QuestionnaireResponse/2-pertussis" />
       </reference>
       <name value="questionnaire response 2-pertussis" />
-      <description value="Example for questionnaire response" />
+      <description value="Example Questionnaire Response Laboratory Order for Pertussis Investigation" />
     </resource>
 
     <resource>
@@ -687,7 +687,7 @@
         <reference value="QuestionnaireResponse/3-gyn" />
       </reference>
       <name value="questionnaire response 3-gyn" />
-      <description value="Example for questionnaire response" />
+      <description value="Example for Questionnaire response for preventive gynecological check-up" />
     </resource>
 
     <resource>
@@ -695,7 +695,7 @@
         <reference value="QuestionnaireResponse/4-sepsis" />
       </reference>
       <name value="questionnaire response 4-sepsis" />
-      <description value="Example for questionnaire response" />
+      <description value="Example for Questionnaire response for Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -703,7 +703,7 @@
         <reference value="QuestionnaireResponse/5-biol-monit" />
       </reference>
       <name value="questionnaire response 5-biol-monit" />
-      <description value="Example for questionnaire response" />
+      <description value="Example for questionnaire response for toxicological Monitoring" />
     </resource>
 
     <!-- References to ServiceRequests -->
@@ -712,7 +712,7 @@
         <reference value="ServiceRequest/referral-min" />
       </reference>
       <name value="laborder service" />
-      <description value="Example for service request" />
+      <description value="Example for general service request" />
     </resource>
 
     <resource>
@@ -720,7 +720,7 @@
         <reference value="ServiceRequest/1-tvt" />
       </reference>
       <name value="laborder 1-tvt" />
-      <description value="Example for 1-tvt request" />
+      <description value="Example for Service Request due to suspected deep vein thrombosis" />
     </resource>
 
     <resource>
@@ -728,7 +728,7 @@
         <reference value="ServiceRequest/2-pertussis" />
       </reference>
       <name value="laborder 2-pertussis" />
-      <description value="Example for 2-pertussis request" />
+      <description value="Example for Service Request for Pertussis Investigation" />
     </resource>
 
     <resource>
@@ -736,7 +736,7 @@
         <reference value="ServiceRequest/3-gyn" />
       </reference>
       <name value="laborder 3-gyn" />
-      <description value="Example for 3-gyn request" />
+      <description value="Example for Service Request for preventive gynaecological check-up" />
     </resource>
 
     <resource>
@@ -744,7 +744,7 @@
         <reference value="ServiceRequest/4-sepsis" />
       </reference>
       <name value="laborder 4-sepsis" />
-      <description value="Example for 4-sepsis request" />
+      <description value="Example for Service Request for Sepsis Investigation" />
     </resource>
 
     <resource>
@@ -752,7 +752,7 @@
         <reference value="ServiceRequest/5-biol-monit" />
       </reference>
       <name value="laborder 5-biol-monit" />
-      <description value="Example for 5-biol-monit request" />
+      <description value="Example for Service Request for toxicological Monitoring" />
     </resource>
 
     <!-- References to Specimens -->
@@ -761,7 +761,7 @@
         <reference value="Specimen/blood-bactec-plus" />
       </reference>
       <name value="Blood Sample Bacteriology" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen for bacteriological Examination" />
     </resource>
 
     <resource>
@@ -769,7 +769,7 @@
         <reference value="Specimen/blood-coag" />
       </reference>
       <name value="Blood Sample Coagulation" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen for haemostatic Examination" />
     </resource>
 
     <resource>
@@ -777,7 +777,7 @@
         <reference value="Specimen/blood" />
       </reference>
       <name value="Blood Sample" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen for Haematological Examination" />
     </resource>
 
     <resource>
@@ -785,7 +785,7 @@
         <reference value="Specimen/cervix-swab" />
       </reference>
       <name value="Cervix-swab Sample" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen of Cervix Swab" />
     </resource>
 
 
@@ -794,7 +794,7 @@
         <reference value="Specimen/lsac" />
       </reference>
       <name value="Cerebrospinal Fluid Sample" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen of Cerebrospinal Fluid" />
     </resource>
 
     <resource>
@@ -802,7 +802,7 @@
         <reference value="Specimen/serum" />
       </reference>
       <name value="Serum Sample" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen of Serum" />
     </resource>
 
     <resource>
@@ -810,7 +810,7 @@
         <reference value="Specimen/throat-swab" />
       </reference>
       <name value="Throat Swab" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen of Throat Swab" />
     </resource>
 
     <resource>
@@ -818,7 +818,7 @@
         <reference value="Specimen/urin" />
       </reference>
       <name value="Urin Sample" />
-      <description value="Example for Specimen" />
+      <description value="Example for Specimen of Urin" />
     </resource>
 
     <!-- References to code systems -->
