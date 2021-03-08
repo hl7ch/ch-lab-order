@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="ch-lab-order-composition"/>
     <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
     <version value="0.9.0"/>
-    <name value="CH LAB-ORDER Composition"/>
+    <name value="CHLAB-ORDERComposition"/>
     <title value="CH LAB-ORDER Composition"/>
     <status value="draft"/>
     <date value="2019-01-30"/>
