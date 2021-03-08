@@ -12,7 +12,7 @@ Der Arzt führt selber das Blutbild und die CRP-Bestimmung mittels Point of care
 Die Resultate des Einsendelabors treffen am gleichen Abend elektronisch beim Hausarzt ein und werden ebenfalls im Laborblatt des Patienten eingetragen. Durch den Einsatz des vorliegenden Austauschformats kann dieser Prozess vollautomatisch erfolgen. Nach telefonischer Rückfrage des Arztes beim Einsendelabor auf Grund eines grenzwertigen D-Dimer-Befundes erfolgt die Auskunft, dass mittels D-Dimer in dieser Situation eine tiefe Venenthrombose nicht ausgeschlossen werden kann und es erfolgt daher eine telefonische Wiedereinbestellung des Patienten am nächsten Tag zur Durchführung einer Sonographie der Beine.
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
-[1-tvt.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-1_VerdachtAufTiefeVenenthrombose.xml)
+[1-tvt.xml](https://github.com/hl7ch/ch-lab-order/tree/25-create-structure-definitions/input/examples/bundle/1-tvt.xml)
 
 Da es sich um eine primäre Beinvenenthrombose handelt, sendet Frau Dr. Eva Erlenmeier vom Labor Pipette ein Feedback an Dr. Mustermann, mit der Empfehlung, ein Thrombophilie-Screening durchzuführen, welches folgende Analysen enthält:
 Quick, aPTT, Fibrinogen, Antithrombin (funkt.), Thrombinzeit I 2.5 NIH/ml, APC Resistenz, D-Dimere, Protein C, (aPTT Methode), Protein S-Antigen
@@ -28,7 +28,7 @@ Er erstellt einen Laborauftrag zur Durchführung einer Pertussis-PCR im Rachenab
 Die Mutter findet sich mit ihrem Sohn im Labor ein, wo auf Grund des Untersuchungsauftrages des Arztes vorerst die Identität des Sohnes festgestellt wird. Anschliessend wird im Blutentnahmeraum des Labors beim Kind ein Rachenabstrich sowie eine Venenpunktion cubital rechts durchgeführt und zusammen mit den mitgebrachten Blutausstrichen und dem Untersuchungsauftrag des Arztes ins Labor weitergegeben.
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
-[2-pertussis.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-2_Keuchhusten.xml)
+[2-pertussis.xml](https://github.com/hl7ch/ch-lab-order/tree/25-create-structure-definitions/input/examples/bundle/2-pertussis.xml)
 
 ## Fallbeispiel 3: Gynäkologische Jahreskontrolle
 
@@ -46,7 +46,7 @@ Die Übermittlung des Auftrags wird durch die MPA ausgelöst (Entnahmezeitpunkt)
 * Mammographie: Auftrag für das Röntgeninstitut Dr. Curie.
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
-[3-gyn.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-3_GynaekolJahreskontrolle.xml)
+[3-gyn.xml](https://github.com/hl7ch/ch-lab-order/tree/25-create-structure-definitions/input/examples/bundle/3-gyn.xml)
 
 ## Fallbeispiel 4: Verdacht auf eine Sepsis
 
@@ -55,7 +55,7 @@ Alle fünf Proben werden im externen Labor Pipette weiter bearbeitet. Dort werde
 Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmässig über die verschiedenen Teilresultate.
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
-[4-sepsis.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-4_Sepsis.xml)
+[4-sepsis.xml](https://github.com/hl7ch/ch-lab-order/tree/25-create-structure-definitions/input/examples/bundle/4-sepsis.xml)
 
 ## Fallbeispiel 5: Sammelauftrag „Biologisches Monitoring SUVA“
 
@@ -70,4 +70,4 @@ Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen
 [Biologisches Monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
 
 TODO: Dazu passendes FHIR Beispiel, welches dieser Spezifikation entspricht:
-[5-biol-monit.xml](https://svn.code.sf.net/p/hl7ch/code/trunk/projects/eHealthSuisse/eLaborauftrag/v1.0/FHIR-5_BiologischesMonitoring.xml)
+[5-biol-monit.xml](https://github.com/hl7ch/ch-lab-order/tree/25-create-structure-definitions/input/examples/bundle/5-biol-monit.xml)
