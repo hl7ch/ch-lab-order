@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="HansHauserRegionalspitalZugersee"/>
+    <id value="SabineMeierKantonsspital"/>
     <meta>
         <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
     </meta>
     <practitioner>
-        <reference value="Practitioner/HansHauser"/>
+        <reference value="Practitioner/SabineMeier"/>
     </practitioner>
     <organization>
-        <reference value="Organization/RegionalspitalZugersee"/>
+        <reference value="Organization/Kantonsspital"/>
     </organization>
-</PractitionerRole> 
+</PractitionerRole>

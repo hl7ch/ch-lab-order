@@ -11,7 +11,7 @@
   <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order" />
   <version value="0.0.1" />
   <name value="CH_LAB_ORDER" />
-  <title value="CH-LAB-ORDER" />
+  <title value="CH-LAB-ORDER (R4)" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-09-03" /> <!-- last changed -->
@@ -105,14 +105,6 @@
 
     <resource>
       <reference>
-        <reference value="Bundle/referral-min" />
-      </reference>
-      <name value="Referral referral-min" />
-      <description value="Example Bundle for referral/order for minimal Referral" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="Bundle/1-tvt" />
       </reference>
       <name value="Referral 1-tvt" />
@@ -152,13 +144,6 @@
     </resource>
 
     <!-- Reference to Compositions-->
-    <resource>
-      <reference>
-        <reference value="Composition/referral-min" />
-      </reference>
-      <name value="Referral minimal" />
-      <description value="Generic Example for Composition" />
-    </resource>
 
     <resource>
       <reference>
@@ -224,12 +209,29 @@
 
 
     <!-- References to Organizations -->
+
     <resource>
       <reference>
-        <reference value="Organization/Custodian" />
+        <reference value="Organization/Arztpraxis" />
       </reference>
-      <name value="Custodian" />
-      <description value="Example for Organization" />
+      <name value="Arztpraxis" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Gruppenpraxis" />
+      </reference>
+      <name value="Praxis Seeblick" />
+      <description value="Example for group practice" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/Kantonsspital" />
+      </reference>
+      <name value="Kantonsspital" />
+      <description value="Example for Hospital" />
     </resource>
 
     <resource>
@@ -242,38 +244,6 @@
 
     <resource>
       <reference>
-        <reference value="Organization/PraxisHausarzt" />
-      </reference>
-      <name value="Praxis Hausarzt" />
-      <description value="Example for group practice" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Organization/PraxisSeeblick" />
-      </reference>
-      <name value="Praxis Seeblick" />
-      <description value="Example for group practice" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Organization/GruppenpraxisOlten" />
-      </reference>
-      <name value="Gruppenpraxis Olten" />
-      <description value="Example for group practice" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Organization/RegionalspitalZugersee" />
-      </reference>
-      <name value="Regionalspital Zugersee" />
-      <description value="Example for Hospital" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="Organization/SpeiserRails" />
       </reference>
       <name value="Speiser Rails" />
@@ -282,18 +252,10 @@
 
     <resource>
       <reference>
-        <reference value="Organization/Spitex" />
-      </reference>
-      <name value="Spitex" />
-      <description value="Example for Spitex" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="Organization/Suva" />
       </reference>
       <name value="SUVA" />
-      <description value="Example for Manufacturer" />
+      <description value="Example for Insurance" />
     </resource>
 
     <!-- References to Patients -->
@@ -311,14 +273,6 @@
         <reference value="Patient/EmilKummer" />
       </reference>
       <name value="Emil Kummer" />
-      <description value="Example for EPR-Patient" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Patient/ErikaMusterfrau" />
-      </reference>
-      <name value="Erika Musterfrau" />
       <description value="Example for EPR-Patient" />
     </resource>
 
@@ -354,22 +308,6 @@
       <description value="Example for EPR-Patient" />
     </resource>
 
-    <resource>
-      <reference>
-        <reference value="Patient/MonikaWegmuellerRecipient" />
-      </reference>
-      <name value="Monika Wegmueller Recipient" />
-      <description value="Example for EPR-Patient" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Patient/MonikaWegmueller" />
-      </reference>
-      <name value="Monika Wegmueller" />
-      <description value="Example for EPR-Patient" />
-    </resource>
-
     <!-- References to Practitioners -->
 
     <resource>
@@ -377,24 +315,6 @@
         <reference value="Practitioner/EvaErlenmeyer" />
       </reference>
       <name value="Eva Erlenmeyer" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/GianLucaSpezialist" />
-      </reference>
-      <name value="Gian Luca Spezialist" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/HansHauser" />
-      </reference>
-      <name value="Hans Hauser" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -410,27 +330,9 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/NotificationContactSabineMeier" />
-      </reference>
-      <name value="Notification Contact Sabine Meier" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="Practitioner/PauloPorcellini" />
       </reference>
       <name value="Paulo Porcellini" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/PeterMueller" />
-      </reference>
-      <name value="Peter Mueller" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -455,15 +357,6 @@
 
     <resource>
       <reference>
-        <reference value="Practitioner/ResponseReceiverGianLucaSpezialist" />
-      </reference>
-      <name value="Response Receiver Gian Luca Spezialist" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="Practitioner/ResponseReceiverSabineMeier" />
       </reference>
       <name value="Response Receiver Sabine Meier" />
@@ -476,15 +369,6 @@
         <reference value="Practitioner/SabineMeier" />
       </reference>
       <name value="Sabine Meier" />
-      <description value="Example for Practitioner" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Practitioner/StabiloBoss" />
-      </reference>
-      <name value="Stabilo Boss" />
       <description value="Example for Practitioner" />
       <exampleBoolean value="true" />
     </resource>
@@ -502,39 +386,23 @@
 
     <resource>
       <reference>
-        <reference value="PractitionerRole/GianLucaSpezialistGruppenpraxis" />
+        <reference value="PractitionerRole/MarcMustermannArztpraxis" />
       </reference>
-      <name value="Gian Luca Spezialist Gruppenpraxis" />
+      <name value="Marc Mustermann at Arztpraxis  (1-tvt, Referral minimal)" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
 
+    <!-- 
     <resource>
       <reference>
-        <reference value="PractitionerRole/HansHauserRegionalspitalZugersee" />
+        <reference value="PractitionerRole/NotificationContactEvaErlenmeyerLaborPipette" />
       </reference>
-      <name value="Hans Hauser Regionalspital Zugersee (4-sepsis)" />
+      <name value="Eva Erlenmeyer Labor Pipette (performer)" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
-
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
-      </reference>
-      <name value="Marc Mustermann at Gruppenpraxis Olten (1-tvt, Referral minimal)" />
-      <description value="Example for PractitionerRole" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/NotificationContactPraxisSeeblick" />
-      </reference>
-      <name value="Notification Contact PraxisSeeblick" />
-      <description value="Example for PractitionerRole" />
-      <exampleBoolean value="true" />
-    </resource>
+    -->
 
     <resource>
       <reference>
@@ -547,75 +415,32 @@
 
     <resource>
       <reference>
-        <reference value="PractitionerRole/PeterMuellerPraxisSeeblick" />
+        <reference value="PractitionerRole/PeterPapGruppenpraxis" />
       </reference>
-      <name value="Peter Mueller Praxis Seeblick" />
+      <name value="Peter Pap Gruppenpraxis  (3-gyn)" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
+        <reference value="PractitionerRole/PeterPrestoGruppenpraxis" />
       </reference>
-      <name value="Peter Pap Gruppenpraxis Olten (3-gyn)" />
+      <name value="Peter Presto at Gruppenpraxis  (2-pertussis)" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten" />
+        <reference value="PractitionerRole/SabineMeierKantonsspital" />
       </reference>
-      <name value="Marc Mustermann at Gruppenpraxis Olten (2-pertussis)" />
-      <description value="Example for PractitionerRole" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" />
-      </reference>
-      <name value="Response Receiver Gruppenpraxis" />
-      <description value="Example for PractitionerRole" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/ResponseReceiverPraxisSeeblick" />
-      </reference>
-      <name value="Response Receiver Praxis Seeblick" />
-      <description value="Example for PractitionerRole" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/SabineMeierPraxisSeeblick" />
-      </reference>
-      <name value="Sabine Meier Praxis Seeblick" />
-      <description value="Example for PractitionerRole" />
-      <exampleBoolean value="true" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="PractitionerRole/StabiloBossPraxisSeeblick" />
-      </reference>
-      <name value="Stabilo Boss Praxis Seeblick" />
+      <name value="Sabine Meier Kantonsspital" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
 
     <!-- References to Questionnaires -->
-    <resource>
-      <reference>
-        <reference value="Questionnaire/referral-min" />
-      </reference>
-      <name value="questionnaire referral-min" />
-      <description value="Generic Example for questionnaire" />
-    </resource>
 
     <resource>
       <reference>
@@ -658,13 +483,6 @@
     </resource>
 
     <!-- References to QuestionnaireResponses -->
-    <resource>
-      <reference>
-        <reference value="QuestionnaireResponse/referral-min" />
-      </reference>
-      <name value="questionnaire response referral-min" />
-      <description value="General Questionnaire Response" />
-    </resource>
 
     <resource>
       <reference>
@@ -707,13 +525,6 @@
     </resource>
 
     <!-- References to ServiceRequests -->
-    <resource>
-      <reference>
-        <reference value="ServiceRequest/referral-min" />
-      </reference>
-      <name value="laborder service" />
-      <description value="Example for general service request" />
-    </resource>
 
     <resource>
       <reference>
@@ -753,6 +564,14 @@
       </reference>
       <name value="laborder 5-biol-monit" />
       <description value="Example for Service Request for toxicological Monitoring" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/lab" />
+      </reference>
+      <name value="laborder lab" />
+      <description value="Example for generic Service Request" />
     </resource>
 
     <!-- References to Specimens -->
@@ -905,6 +724,8 @@
       <exampleBoolean value="false" />
     </resource>
 
+    
+
     <!-- Page content -->
     <page>
       <nameUrl value="toc.html" />
@@ -913,6 +734,22 @@
       <page>
         <nameUrl value="index.html" />
         <title value="Home" />
+        <generation value="markdown" />
+      </page>
+
+      <page>
+        <nameUrl value="usecase-german.html" />
+        <title value="Anwendungsfälle" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="profiles.html" />
+        <title value="Profiles" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="terminology.html" />
+        <title value="Terminology" />
         <generation value="markdown" />
       </page>
     </page>

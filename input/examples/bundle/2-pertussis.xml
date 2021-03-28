@@ -56,7 +56,7 @@
         <date value="2020-03-31T11:46:09+02:00" />
 
         <author>
-          <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten" />
+          <reference value="PractitionerRole/PeterPrestoGruppenpraxis" />
         </author>
         <title value="Referral 2-pertussis" />
 
@@ -184,10 +184,10 @@
 
   <!-- entry[3] organisation -->
   <entry>
-    <fullUrl value="http://example.com/fhir/Organization/GruppenpraxisOlten" />
+    <fullUrl value="http://example.com/fhir/Organization/Gruppenpraxis" />
     <resource>
       <Organization xmlns="http://hl7.org/fhir">
-        <id value="GruppenpraxisOlten" />
+        <id value="Gruppenpraxis" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization" />
         </meta>
@@ -204,10 +204,10 @@
 
   <!-- entry[4] practitionerrole -->
   <entry>
-    <fullUrl value="http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxisOlten" />
+    <fullUrl value="http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis" />
     <resource>
       <PractitionerRole xmlns="http://hl7.org/fhir">
-        <id value="PeterPrestoGruppenpraxisOlten" />
+        <id value="PeterPrestoGruppenpraxis" />
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole" />
         </meta>
@@ -215,7 +215,7 @@
           <reference value="Practitioner/PeterPresto" />
         </practitioner>
         <organization>
-          <reference value="Organization/GruppenpraxisOlten" />
+          <reference value="Organization/Gruppenpraxis" />
         </organization>
       </PractitionerRole>
     </resource>
@@ -1304,7 +1304,7 @@
                 <linkId value="orderer.author.practitioner.email" />
                 <text value="E-Mail" />
                 <answer>
-                  <valueString value="sabine.meier@praxisseeblick.ch" />
+                  <valueString value="sabine.meier@gruppenpraxis.ch" />
                 </answer>
               </item>
             </item>
@@ -1386,7 +1386,7 @@
                 <linkId value="orderer.dataenterer.practitioner.email" />
                 <text value="E-Mail" />
                 <answer>
-                  <valueString value="stabilo.boss@praxisseeblick.ch" />
+                  <valueString value="stabilo.boss@gruppenpraxis.ch" />
                 </answer>
               </item>
             </item>
@@ -1463,7 +1463,7 @@
                 <linkId value="orderer.notificationContactResponse.practitioner.email" />
                 <text value="E-Mail" />
                 <answer>
-                  <valueString value="peter.mueller@praxisseeblick.ch" />
+                  <valueString value="peter.mueller@gruppenpraxis.ch" />
                 </answer>
               </item>
             </item>
@@ -1511,7 +1511,7 @@
               <linkId value="receiverResponse.practitioner.email" />
               <text value="E-Mail" />
               <answer>
-                <valueString value="sabine.meier@praxisseeblick.ch" />
+                <valueString value="sabine.meier@gruppenpraxis.ch" />
               </answer>
             </item>
           </item>
@@ -1610,7 +1610,7 @@
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
-          <reference value="PractitionerRole/PeterPrestoGruppenpraxisOlten" />
+          <reference value="PractitionerRole/PeterPrestoGruppenpraxis" />
         </requester>
 
         <performerType>

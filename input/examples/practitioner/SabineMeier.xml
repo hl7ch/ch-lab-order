@@ -26,7 +26,7 @@
     </telecom>
     <telecom>
         <system value="email"/>
-        <value value="sabine.meier@praxisseeblick.ch"/>
+        <value value="sabine.meier@gruppenpraxis.ch"/>
         <use value="work"/>
     </telecom>
 </Practitioner> 

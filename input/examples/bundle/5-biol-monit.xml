@@ -1366,7 +1366,7 @@
                 <linkId value="orderer.author.practitioner.email" />
                 <text value="E-Mail" />
                 <answer>
-                  <valueString value="sabine.meier@praxisseeblick.ch" />
+                  <valueString value="sabine.meier@gruppenpraxis.ch" />
                 </answer>
               </item>
             </item>
@@ -1448,7 +1448,7 @@
                 <linkId value="orderer.dataenterer.practitioner.email" />
                 <text value="E-Mail" />
                 <answer>
-                  <valueString value="stabilo.boss@praxisseeblick.ch" />
+                  <valueString value="stabilo.boss@gruppenpraxis.ch" />
                 </answer>
               </item>
             </item>
@@ -1525,7 +1525,7 @@
                 <linkId value="orderer.notificationContactResponse.practitioner.email" />
                 <text value="E-Mail" />
                 <answer>
-                  <valueString value="peter.mueller@praxisseeblick.ch" />
+                  <valueString value="peter.mueller@gruppenpraxis.ch" />
                 </answer>
               </item>
             </item>
@@ -1573,7 +1573,7 @@
               <linkId value="receiverResponse.practitioner.email" />
               <text value="E-Mail" />
               <answer>
-                <valueString value="sabine.meier@praxisseeblick.ch" />
+                <valueString value="sabine.meier@gruppenpraxis.ch" />
               </answer>
             </item>
           </item>

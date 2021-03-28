@@ -20,7 +20,7 @@
   </subject>
   <!-- 
   <request> 
-    <reference value="ServiceRequest/referral-min"/> 
+    <reference value="ServiceRequest/lab"/> 
   </request> 
   -->
   <collection>

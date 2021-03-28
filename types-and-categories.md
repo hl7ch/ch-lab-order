@@ -17,6 +17,7 @@ SCTID: 721966001 | Pathology order (record artifact) | DocumentEntry.typeCode
 ## In Service Request
 
 category: Laboratory procedure (procedure)  SCTID 108252007
-category: Anforderung von Labor Resultaten
+
+category: Anforderung von Labor Resultaten  neuer DocumentEntry.typeCode
 
 Wenn category = Laboratory procedure (procedure) => Specimen 1..n

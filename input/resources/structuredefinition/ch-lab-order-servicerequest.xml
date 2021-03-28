@@ -34,12 +34,14 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="ServiceRequest"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
     <derivation value="constraint" />
     <differential>
         <element id="ServiceRequest">
             <path value="ServiceRequest"/>
         </element>
+
+        <!-- 
         <element id="ServiceRequest.identifier">
             <path value="ServiceRequest.identifier"/>
             <slicing>
@@ -119,5 +121,12 @@
                 <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
             </type>
         </element>
+        -->
+
+        <element id="ServiceRequest.category">
+          <path value="ServiceRequest.category" />
+          <short value="Classification of Service Request: exam or result "/>
+        </element>
+
     </differential>
 </StructureDefinition>

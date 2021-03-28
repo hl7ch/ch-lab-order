@@ -13,36 +13,33 @@
     <div xmlns="http://www.w3.org/1999/xhtml"> Referral 3-gyn </div>
   </text>
 
+  <!-- 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
-      <!-- https://github.com/hl7ch/ch-core/issues/91 Reference to PractitionerRole, not only Practitioner
-         falls das so nicht umgesetzt werden kann, muss der Text auf der Home-Seite vom ORF noch angepasst werden -->
-      <!--<valueReference>
-        <reference value="PractitionerRole/StabiloBossPraxisSeeblick"/>
-    </valueReference>-->
       <valueReference>
-        <reference value="Practitioner/StabiloBoss" /> <!-- TODO-->
+        <reference value="PractitionerRole/PeterPapGruppenpraxis" /> 
       </valueReference>
     </extension>
   </extension>
   
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
     <valueReference>
-      <reference value="PractitionerRole/NotificationContactPraxisSeeblick" /> <!-- TODO-->
+      <reference value="PractitionerRole/NotificationContactEvaErlenmeyerLaborPipette" /> 
     </valueReference>
   </extension>
 
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
     <valueReference>
-      <reference value="PractitionerRole/ResponseReceiverPraxisSeeblick" /> <!-- TODO-->
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
     </valueReference>
   </extension>
 
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
     <valueReference>
-      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> <!-- TODO-->
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
     </valueReference>
   </extension>
+  -->
 
   <status value="final" />
 
@@ -68,7 +65,7 @@
   <date value="2020-03-31T11:46:09+02:00" />
 
   <author>
-    <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
+    <reference value="PractitionerRole/PeterPapGruppenpraxis" />
   </author>
   <title value="Referral 3-gyn" />
 

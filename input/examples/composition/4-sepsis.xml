@@ -13,36 +13,33 @@
       <div xmlns="http://www.w3.org/1999/xhtml"> Referral 4-sepsis </div>
   </text>
 
+  <!-- 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
-      <!-- https://github.com/hl7ch/ch-core/issues/91 Reference to PractitionerRole, not only Practitioner
-         falls das so nicht umgesetzt werden kann, muss der Text auf der Home-Seite vom ORF noch angepasst werden -->
-      <!--<valueReference>
-        <reference value="PractitionerRole/StabiloBossPraxisSeeblick"/>
-    </valueReference>-->
       <valueReference>
-        <reference value="Practitioner/StabiloBoss" /> <!-- TODO-->
+        <reference value="PractitionerRole/SabineMeierKantonsspital" /> 
       </valueReference>
     </extension>
   </extension>
   
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
     <valueReference>
-      <reference value="PractitionerRole/NotificationContactPraxisSeeblick" /> <!-- TODO-->
+      <reference value="PractitionerRole/NotificationContactEvaErlenmeyerLaborPipette" />
     </valueReference>
   </extension>
 
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
     <valueReference>
-      <reference value="PractitionerRole/ResponseReceiverPraxisSeeblick" /> <!-- TODO-->
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
     </valueReference>
   </extension>
 
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
     <valueReference>
-      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> <!-- TODO-->
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
     </valueReference>
   </extension>
+  -->
 
   <status value="final"/>
 
@@ -68,7 +65,7 @@
   <date value="2019-03-31T11:46:09+02:00"/>
 
   <author>
-      <reference value="PractitionerRole/HansHauserRegionalspitalZugersee"/>
+      <reference value="PractitionerRole/SabineMeierKantonsspital"/>
   </author>
   <title value="Referral 4-sepsis"/>
 
@@ -76,7 +73,7 @@
       <mode value="professional"/>
       <time value="2010-03-12T11:46:09+02:00"/>
       <party>
-          <reference value="Organization/RegionalspitalZugersee"/>
+          <reference value="Organization/Kantonsspital"/>
       </party>
   </attester>
 

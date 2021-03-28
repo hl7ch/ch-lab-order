@@ -3,7 +3,7 @@
 <Practitioner xmlns="http://hl7.org/fhir">
   <id value="ResponseReceiverSabineMeier" />
   <meta>
-    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforresponse" />
   </meta>
   <name>
     <use value="official" />
@@ -22,7 +22,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="sabine.meier@praxisseeblick.ch" />
+    <value value="sabine.meier@gruppenpraxis.ch" />
     <use value="work" />
   </telecom>
 </Practitioner> 
