@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-lab-order-servicerequest"/>
-    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest"/>
-    <version value="0.9.0"/>
-    <name value="CHLAB-ORDERServiceRequest"/>
-    <title value="CH LAB-ORDER ServiceRequest"/>
-    <status value="draft"/>
-    <date value="2019-02-05"/>
-    <publisher value="eHealth Suisse"/>
-    <contact>
-        <name value="eHealth Suisse"/>
-        <telecom>
-            <system value="url"/>
-            <value value="https://www.e-health-suisse.ch/"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Oliver Egger"/>
-        <telecom>
-            <system value="email"/>
-            <value value="oliver.egger@ahdis.ch"/>
-        </telecom>
-    </contact>
-    <description value="Profile on ServiceRequest for CH LAB-ORDER"/>
-    <jurisdiction>
-        <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="CH"/>
-        </coding>
-    </jurisdiction>
-    <copyright value="CC-BY-SA-4.0"/>
-    <fhirVersion value="4.0.1"/>
-    <kind value="resource"/>
-    <abstract value="false"/>
-    <type value="ServiceRequest"/>
-    <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
-    <derivation value="constraint" />
-    <differential>
-        <element id="ServiceRequest">
-            <path value="ServiceRequest"/>
-        </element>
+  <id value="ch-lab-order-servicerequest" />
+  <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest" />
+  <version value="0.9.0" />
+  <name value="CHLAB-ORDERServiceRequest" />
+  <title value="CH LAB-ORDER ServiceRequest" />
+  <status value="draft" />
+  <date value="2019-02-05" />
+  <publisher value="eHealth Suisse" />
+  <contact>
+    <name value="eHealth Suisse" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.e-health-suisse.ch/" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Oliver Egger" />
+    <telecom>
+      <system value="email" />
+      <value value="oliver.egger@ahdis.ch" />
+    </telecom>
+  </contact>
+  <description value="Profile on ServiceRequest for CH LAB-ORDER" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="CH" />
+    </coding>
+  </jurisdiction>
+  <copyright value="CC-BY-SA-4.0" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest">
+      <path value="ServiceRequest" />
+    </element>
 
-        <!-- 
+    <!-- 
         <element id="ServiceRequest.identifier">
             <path value="ServiceRequest.identifier"/>
             <slicing>
@@ -123,10 +123,41 @@
         </element>
         -->
 
-        <element id="ServiceRequest.category">
-          <path value="ServiceRequest.category" />
-          <short value="Classification of Service Request: exam or result "/>
-        </element>
+    
+    <!-- einschränken auf 2 categories:
+         SCTID: 108252007 	Laboratory procedure
+         SCTID: 721981007   Diagnostic studies report (record artifact)
+    -->
+    <!-- setting up the slicing -->
+    <element>
+      <path value="ServiceRequest.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="labproc" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="studyreport" />
+        </discriminator>
+      </slicing>
+      <!-- net cardinality rules -->
+      <min value="1" />
+      <max value="1" />
+    </element>
 
-    </differential>
+    <!-- first slice: Laboratory procedure -->
+    <element>
+      <path value="ServiceRequest.category.labproc" />
+      <max value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="108252007" />
+          <display value="Laboratory procedure" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+
+  </differential>
 </StructureDefinition>
