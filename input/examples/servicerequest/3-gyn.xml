@@ -27,7 +27,11 @@
   </identifier>-->
 
   <status value="active" />
+  <!-- draft | active | on-hold | revoked | completed | entered-in-error | unknown -->
+
   <intent value="original-order" />
+  <!-- proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option -->
+
   <category>
     <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
     <!-- Value Set http://hl7.org/fhir/ValueSet/servicerequest-category -->
@@ -37,6 +41,7 @@
     </coding>
     <text value="Laboratory procedure (procedure)" />
   </category>
+
   <priority value="routine" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
@@ -60,7 +65,6 @@
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
     <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
   </performer>
 

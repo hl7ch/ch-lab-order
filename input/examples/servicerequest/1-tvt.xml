@@ -65,7 +65,6 @@
   <performer>
     <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
     CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
     <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
   </performer>
 
@@ -93,4 +92,5 @@
     <!-- 0..* Reference(Specimen) Procedure Samples -->
     <reference value="Specimen/blood" />
   </specimen>
+  
 </ServiceRequest>
