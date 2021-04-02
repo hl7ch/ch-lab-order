@@ -724,6 +724,13 @@
       <exampleBoolean value="false" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="ValueSet/servicerequest-categories" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
     
 
     <!-- Page content -->

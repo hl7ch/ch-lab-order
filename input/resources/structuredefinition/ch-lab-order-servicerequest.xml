@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-lab-order-servicerequest"/>
-    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest"/>
-    <version value="0.9.0"/>
-    <name value="CHLAB-ORDERServiceRequest"/>
-    <title value="CH LAB-ORDER ServiceRequest"/>
-    <status value="draft"/>
-    <date value="2019-02-05"/>
-    <publisher value="eHealth Suisse"/>
-    <contact>
-        <name value="eHealth Suisse"/>
-        <telecom>
-            <system value="url"/>
-            <value value="https://www.e-health-suisse.ch/"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Oliver Egger"/>
-        <telecom>
-            <system value="email"/>
-            <value value="oliver.egger@ahdis.ch"/>
-        </telecom>
-    </contact>
-    <description value="Profile on ServiceRequest for CH LAB-ORDER"/>
-    <jurisdiction>
-        <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="CH"/>
-        </coding>
-    </jurisdiction>
-    <copyright value="CC-BY-SA-4.0"/>
-    <fhirVersion value="4.0.1"/>
-    <kind value="resource"/>
-    <abstract value="false"/>
-    <type value="ServiceRequest"/>
-    <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
-    <derivation value="constraint" />
-    <differential>
-        <element id="ServiceRequest">
-            <path value="ServiceRequest"/>
-        </element>
+  <id value="ch-lab-order-servicerequest" />
+  <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest" />
+  <version value="0.9.0" />
+  <name value="CHLAB-ORDERServiceRequest" />
+  <title value="CH LAB-ORDER ServiceRequest" />
+  <status value="draft" />
+  <date value="2019-02-05" />
+  <publisher value="eHealth Suisse" />
+  <contact>
+    <name value="eHealth Suisse" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.e-health-suisse.ch/" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Oliver Egger" />
+    <telecom>
+      <system value="email" />
+      <value value="oliver.egger@ahdis.ch" />
+    </telecom>
+  </contact>
+  <description value="Profile on ServiceRequest for CH LAB-ORDER" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="CH" />
+    </coding>
+  </jurisdiction>
+  <copyright value="CC-BY-SA-4.0" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest">
+      <path value="ServiceRequest" />
+    </element>
 
-        <!-- 
+    <!-- 
         <element id="ServiceRequest.identifier">
             <path value="ServiceRequest.identifier"/>
             <slicing>
@@ -124,10 +124,19 @@
         </element>
         -->
 
-        <element id="ServiceRequest.category">
-          <path value="ServiceRequest.category" />
-          <short value="Classification of Service Request: exam or result "/>
-        </element>
+    <element id="ServiceRequest.category">
+      <path value="ServiceRequest.category" />
+      <short value="Classification of Service Request: exam, result or second opinion " />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DocumentC80Class" /> <!-- Document Class Value Set (LOINC)-->
+        </extension>
+        <strength value="required" />
+        <description value="High-level kind of a clinical document at a macro level." />
+        <valueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode" />
+      </binding>
+    </element>
 
-    </differential>
+  </differential>
 </StructureDefinition>
