@@ -1,10 +1,12 @@
 # Actors
 
+[TODO] muss noch korrigiert werden, Daten von den ressourcen übernehmen
+
 ## Fallbeispiel 1
 
 Patient:  Guggindieluft Hans  Geburtsdatum:  1. Januar 1981
 Leidensweg 10
-9999 Specimendorf
+9999 Breitenbach
 Tel privat: +41.32.685.12.34
 Tel Geschäft: +41.32.123.77.88
 Mail Geschäft: hans.guggindieluft@sampledomain.ch
@@ -36,18 +38,19 @@ Autor:
 Einsendelabor Pipette
 LIS am 9. März 2016
 Laborstrasse 23
-9999 Analyzerstadt
-Tel Geschäft: +41.58.656.78.89
-Mail Geschäft: pipette@einsendelabor.ch
+4600 Olten
+Tel Geschäft: +41223345566
+Mail Geschäft: info@labor-pipette.ch
 
 ## Fallbeispiel 2
 
-Patient:  Schellen Ursli  Geburtsdatum:  15. Februar 2012
+Patient:  
+Emil Kummer
+Geburtsdatum: 15. Februar 2014
 Leidensweg 10
-9999 Specimendorf
+9999 Köniz
 Tel privat: +41.32.685.12.34
-Tel Geschäft: +41.32.123.77.88
-Mail Geschäft: Ursli.Schellen@sampledomain.ch
+
 ID Patient:  
 2.999:  3541
 Erstellt am:  15. März 2018  Geschlecht:  männlich
@@ -70,9 +73,11 @@ Rest gleich
 
 ## Fallbeispiel 4
 
-Patient:  Keller Klebsiella  Geburtsdatum:  15. Februar 2012
+Patient:
+Keller Klebsiella
+Geburtsdatum:  12. Dezember. 1975
 Leidensweg 10
-9999 Specimendorf
+2222 Lenzburg
 Tel privat: +41.32.685.12.34
 Tel Geschäft: +41.32.123.77.88
 Mail Geschäft: klebsiella.keller@sampledomain.ch

@@ -65,6 +65,7 @@ Bei gewissen Untersuchungen reichen Auftrag und Probe alleine nicht aus, um das 
 Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
 
 * Bestimmte Zeitdauer: Specimen Collection - effectiveTime (als Intervall mit low und high) angeben oder mit einer entryRelationship eine entsprechende observation (13362-9 - Collection duration of Urine) angeben.
+
 * Gesammelte Urinmenge: Specimen Collection - mit einer entryRelationship eine entsprechende observation (19153-6 - Volume in Urine collected for unspecified duration) angeben.
 
 ## UC 8: Befunde mit genauen Angaben zu Test-Kit und Analyzer
@@ -73,6 +74,7 @@ In gewissen Situationen ist es wichtig, dass der Empfänger weiss, mit welchem T
 Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
 
 * Test-Kit: Participant (Body, laboratory device) - scopingEntity: Nummer, Art und Hersteller des Test-Kits
+
 * Analyzer: Participant (Body, laboratory device) - playingDevice: Name und Model des Analyzers
 
 ## UC 9: Sammelaufträge

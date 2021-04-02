@@ -126,7 +126,7 @@
 
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
-      <short value="Classification of Service Request: exam, result or second opinion " />
+      <short value="Classification of Service Request: exam, result or second opinion" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">

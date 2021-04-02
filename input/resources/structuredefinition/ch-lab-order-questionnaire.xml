@@ -35,13 +35,15 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Questionnaire" />
-  <baseDefinition value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
+  <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
   <derivation value="constraint" />
   <differential>
     <element id="Questionnaire">
       <path value="Questionnaire" />
       <short value="CH LAB ORDER Questionnaire" />
     </element>
+
+    <!-- 
     <element id="Questionnaire.extension:targetStructureMap">
       <path value="Questionnaire.extension" />
       <sliceName value="targetStructureMap" />
@@ -106,5 +108,7 @@
         <map value=".code" />
       </mapping>
     </element>
+
+    -->
   </differential>
 </StructureDefinition>

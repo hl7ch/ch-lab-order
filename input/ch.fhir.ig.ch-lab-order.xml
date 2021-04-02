@@ -731,7 +731,6 @@
       <exampleBoolean value="false" />
     </resource>
 
-    
 
     <!-- Page content -->
     <page>
@@ -745,10 +744,21 @@
       </page>
 
       <page>
-        <nameUrl value="usecase-german.html" />
-        <title value="Anwendungsfälle" />
+        <nameUrl value="usecase-english.html" />
+        <title value="Case Studies in English" />
         <generation value="markdown" />
       </page>
+      <page>
+        <nameUrl value="usecase-german.html" />
+        <title value="Case Studies in German" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="usecase-french.html" />
+        <title value="Case Studies in French" />
+        <generation value="markdown" />
+      </page>
+
       <page>
         <nameUrl value="profiles.html" />
         <title value="Profiles" />
