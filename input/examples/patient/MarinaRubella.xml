@@ -38,8 +38,25 @@
   </identifier>
 
   <name>
-    <family value="Rubella"/>
-    <given value="Marina"/>
+    <use value="official"/>
+    <family value="Rubella">
+      <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name">
+        <valueCode value="officialName"/>
+      </extension>
+    </family>
+    <given value="Marina">
+      <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-firstname">
+        <valueCode value="officialFirstName"/>
+      </extension>
+    </given>
+  </name>
+  <name>
+    <use value="maiden"/>
+    <family value="Meier">
+      <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name">
+        <valueCode value="originalName"/>
+      </extension>
+    </family>
   </name>
   <gender value="female"/>
   <birthDate value="1992-08-08"/>
