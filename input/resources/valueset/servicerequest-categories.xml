@@ -26,16 +26,16 @@
     <include>
       <system value="http://snomed.info/sct" />
       <concept>
-        <code value="108252007" />
-        <display value="Laboratory procedure" />
+        <code value="721963009" />
+        <display value="Order (record artifact)" />
       </concept>
       <concept>
-        <code value="721981007" />
-        <display value="Diagnostic studies report (record artifact)" />
+        <code value="419891008" />
+        <display value="Record artifact (record artifact)" />
       </concept>
       <concept>
         <code value="371545006" />
-        <display value="Confirmatory consultation report (record artifact)" />
+        <display value="Confirmatory consultation report (record artifact)" /> <!-- 2nd opinion-->
       </concept>
     </include>
   </compose>

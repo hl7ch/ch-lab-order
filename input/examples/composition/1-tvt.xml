@@ -13,12 +13,11 @@
     <div xmlns="http://www.w3.org/1999/xhtml"> Referral 1-tvt </div>
   </text>
 
-
-
   <status value="final" />
   <!-- preliminary | final | amended | entered-in-error -->
   <!-- vorläufig | final | geändert | irrtümlich eingegeben -->
 
+  <!-- DocumentEntry.type for Lab: -->
   <type>
     <coding>
       <system value="http://snomed.info/sct" />
@@ -26,6 +25,21 @@
       <display value="Laboratory order (record artifact)" />
     </coding>
   </type>
+  <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+    Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27)
+    721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
+  -->
+
+  <!-- DocumentEntry.type for Pathology: 
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721966001" />
+      <display value="Pathology order (record artifact)" />
+    </coding>
+  </type>
+  -->
+
   <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
     Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27)
     721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
