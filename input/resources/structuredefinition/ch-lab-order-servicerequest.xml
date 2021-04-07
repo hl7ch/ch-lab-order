@@ -126,7 +126,7 @@
 
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
-      <short value="Classification of Service Request: exam, result or second opinion" />
+      <short value="Classification of Service Request: order of lab-test, request for test-results or request for second opinion" />
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -134,7 +134,7 @@
         </extension>
         <strength value="required" />
         <description value="High-level kind of a clinical document at a macro level." />
-        <valueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode" />
+        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/servicerequest-categories" />
       </binding>
     </element>
 
