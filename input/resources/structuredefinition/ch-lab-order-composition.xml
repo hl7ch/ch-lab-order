@@ -1,44 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="ch-lab-order-composition"/>
-    <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition"/>
-    <version value="0.9.0"/>
-    <name value="CHLAB-ORDERComposition"/>
-    <title value="CH LAB-ORDER Composition"/>
-    <status value="draft"/>
-    <date value="2019-01-30"/>
-    <publisher value="eHealth Suisse"/>
-    <contact>
-        <name value="eHealth Suisse"/>
-        <telecom>
-            <system value="url"/>
-            <value value="https://www.e-health-suisse.ch/"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Oliver Egger"/>
-        <telecom>
-            <system value="email"/>
-            <value value="oliver.egger@ahdis.ch"/>
-        </telecom>
-    </contact>
-    <description value="Profile on Composition for CH LAB-ORDER"/>
-    <jurisdiction>
-        <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="CH"/>
-        </coding>
-    </jurisdiction>
-    <copyright value="CC-BY-SA-4.0"/>
-    <fhirVersion value="4.0.1"/>
-    <kind value="resource"/>
-    <abstract value="false"/>
-    <type value="Composition"/>
+  <id value="ch-lab-order-composition" />
+  <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition" />
+  <version value="0.9.0" />
+  <name value="CHLAB-ORDERComposition" />
+  <title value="CH LAB-ORDER Composition" />
+  <status value="draft" />
+  <date value="2019-01-30" />
+  <publisher value="eHealth Suisse" />
+  <contact>
+    <name value="eHealth Suisse" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.e-health-suisse.ch/" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Oliver Egger" />
+    <telecom>
+      <system value="email" />
+      <value value="oliver.egger@ahdis.ch" />
+    </telecom>
+  </contact>
+  <description value="Profile on Composition for CH LAB-ORDER" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="CH" />
+    </coding>
+  </jurisdiction>
+  <copyright value="CC-BY-SA-4.0" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
 
-    <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
-    <derivation value="constraint" />
-    <!-- 
+  <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
+  <derivation value="constraint" />
+
+  <differential>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <short value="Precise type of clinical document" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.typeCode" />
+      </binding>
+    </element>
+
+    <element id="Composition.category">
+      <path value="Composition.category" />
+      <short value="Order Document" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.classCode" />
+      </binding>
+    </element>
+    
+  </differential>
+
+  <!-- 
     <differential>
         <element id="Composition">
             <path value="Composition"/>

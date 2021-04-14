@@ -731,6 +731,20 @@
       <exampleBoolean value="false" />
     </resource>
 
+    <resource>
+      <reference>
+        <reference value="ValueSet/DocumentEntry.typeCode" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ValueSet/DocumentEntry.classCode" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
 
     <!-- Page content -->
     <page>

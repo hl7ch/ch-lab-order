@@ -41,7 +41,7 @@
   -->
 
   <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
-    Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27)
+    Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27c)
     721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
   -->
 
