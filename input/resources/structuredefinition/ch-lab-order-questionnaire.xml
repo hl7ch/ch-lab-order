@@ -35,7 +35,11 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Questionnaire" />
-  <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
+  <baseDefinition value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
+
+  <!-- evtl. "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap" ? 
+    "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
+  -->
   <derivation value="constraint" />
   <differential>
     <element id="Questionnaire">
