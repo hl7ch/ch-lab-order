@@ -17,7 +17,7 @@
   </contact>
   <description value="ch-lab-order defines 3 Kinds of Service Request Categories:
                       order of lab-test, 
-                      request of lab-results, 
+                      request of lab-results and order of supplementary analyses, 
                       request of 2nd option" />
   <jurisdiction>
     <coding>
@@ -38,12 +38,15 @@
         <!-- children:  422680004 | Battery entry (record artifact) |
                         726737008 | Comment on laboratory result (record artifact) |
                         726736004 | Interpretation of laboratory result (record artifact) |
+                        funktioniert so wohl nicht, Jürg wird sich noch etwas überlegen
         -->
       </concept>
       <concept>
         <code value="371545006" />
         <display value="Confirmatory consultation report (record artifact)" />
-        <!-- 2nd opinion, is not in DocumentEntry.classCode -->
+        <!-- 2nd opinion, is not in DocumentEntry.classCode 
+        braucht es wohl nicht im Laborbereich
+        -->
       </concept>
     </include>
   </compose>
