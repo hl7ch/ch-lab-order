@@ -321,6 +321,15 @@
 
     <resource>
       <reference>
+        <reference value="Practitioner/HansHauser" />
+      </reference>
+      <name value="Hans Hauser" />
+      <description value="Example for Practitioner" />
+      <exampleBoolean value="true" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Practitioner/MarcMustermann" />
       </reference>
       <name value="Marc Mustermann" />
