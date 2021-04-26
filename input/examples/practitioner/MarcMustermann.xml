@@ -1,14 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Practitioner xmlns="http://hl7.org/fhir">
-    <id value="MarcMustermann"/>
-    <meta>
-        <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner"/>
-    </meta>
-    <identifier>
-        <system value="urn:oid:2.51.1.3"/>
-        <value value="7601000050702"/>
-    </identifier>
-    <name>
-        <family value="Mustermann"/>
-        <given value="Marc"/>
-    </name>
+  <id value="MarcMustermann" />
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.51.1.3" />
+    <value value="7601000050702" />
+  </identifier>
+  <name>
+    <use value="official" />
+    <family value="Mustermann" />
+    <given value="Marc" />
+    <prefix value="Dr. med.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC" />
+      </extension>
+    </prefix>
+  </name>
+  <telecom>
+    <system value="phone" />
+    <value value="033 333 22 11" />
+    <use value="work" />
+  </telecom>
+  <telecom>
+    <system value="email" />
+    <value value="marc.mustermann@gruppenpraxis.ch" />
+    <use value="work" />
+  </telecom>
+
 </Practitioner>

@@ -5,13 +5,40 @@
     <meta>
         <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization"/>
     </meta>
+    <identifier>
+      <system value="urn:oid:2.51.1.3" />
+      <value value="7601000235500" />
+    </identifier>
     <name value="Kantonsspital"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+41 45 334 55 66"/>
+      <use value="work"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@kantonsspital.zug.ch"/>
+      <use value="work"/>
+    </telecom>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.kanstonsspital.zug.ch"/>
+      <use value="work"/>
+    </telecom>
     <address>
         <use value="work"/>
-        <line value="Kantonsstrasse 14"/>
+        <line value="Seestrasse 14"/>
         <line value="Postfach 14"/>
-        <city value="Zürich"/>
+        <city value="Zug"/>
         <postalCode value="8000"/>
         <country value="Schweiz"/>
     </address>
 </Organization> 
+
+<!-- 
+Business and Enterprise Register (BER) Unternehmens-
+Identifikationsnummer 
+<system value="urn:oid:2.16.756.5.45" />
+Unique IDentification Business (UIDB) Unternehmens-
+Identifikationsnummer
+-->

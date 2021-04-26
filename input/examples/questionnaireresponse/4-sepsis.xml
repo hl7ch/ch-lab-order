@@ -23,14 +23,14 @@
     <linkId value="order" />
     <text value="Auftrag" />
     <item>
-      <linkId value="order.placerOrderId" />
+      <linkId value="order.placerOrderIdentifier" />
       <text value="Auftragsnummer des Auftraggebers" />
       <answer>
         <valueString value="123" />
       </answer>
     </item>
     <item>
-      <linkId value="order.fillerOrderId" />
+      <linkId value="order.IdentifiefillerOrderIdentifierr" />
       <text value="Auftragsnummer des Auftragsempfängers" />
     </item>
     <item>

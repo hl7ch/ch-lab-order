@@ -52,7 +52,7 @@
   <experimental value="true" />
   <subjectType value="Patient" />
   <date value="2018-04-12" />
-  <publisher value="eHealth Suisse" />
+  <publisher value="HL7 Switzerland" />
 
   <!-- item[0] order: referral-min Questionnaire Example -->
   <item>
@@ -67,7 +67,7 @@
                   <expression value="%Bundle.entry[0].resource.extension.where(url=&#39;http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-visitnumber&#39;).valueIdentifier.value" />
               </valueExpression>
           </extension>-->
-      <linkId value="order.placerOrderId" />
+      <linkId value="order.placerOrderIdentifier" />
       <text value="Auftragsnummer des Auftraggebers" />
       <type value="string" />
     </item>
@@ -78,7 +78,7 @@
                   <expression value="" />
               </valueExpression>
           </extension>-->
-      <linkId value="order.fillerOrderId" />
+      <linkId value="order.IdentifiefillerOrderIdentifierr" />
       <text value="Auftragsnummer des Auftragsempfängers" />
       <type value="string" />
     </item>

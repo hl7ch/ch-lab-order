@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
-  <id value="2-pertussis" />
+  <id value="order-referral-form" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
@@ -10,12 +10,12 @@
   <text>
     <status value="generated" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      Lab Order Questionnarie Response Example Pertussis
+      Lab Order Questionnarie Response Example for a Chemogram
       <pre>todo copy text out of rendering</pre>
     </div>
   </text>
 
-  <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis" />
+  <questionnaire value="http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form" />
   <status value="completed" />
 
   <!-- item[0] order, order-referral-form QuestionnaireResponse -->
@@ -34,6 +34,20 @@
       <text value="Identifier Domain der Auftragsnummer des Auftraggebers" />
       <answer>
         <valueString value="urn:oid:1.3.4.5.6.7" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="order.fillerOrderIdentifier" />
+      <text value="Auftragsnummer des Auftragsempfängers" />
+      <answer>
+        <valueString value="456" />
+      </answer>
+    </item>
+    <item>
+      <linkId value="order.fillerOrderIdentifierDomain" />
+      <text value="Identifier Domain der Auftragsnummer des Auftragsempfängers" />
+      <answer>
+        <valueString value="urn:oid:7.8.9.10.11" />
       </answer>
     </item>
     <item>
@@ -60,28 +74,28 @@
           <linkId value="order.notificationContactDocument.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Erlenmeyer" />
+            <valueString value="Röntgen" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Eva" />
+            <valueString value="Hans" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="032 412 00 11" />
+            <valueString value="044 412 00 99" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="eva.erlenmeyer@labor-pipette.ch" />
+            <valueString value="hans.roentgen@kantonsspital.ch" />
           </answer>
         </item>
       </item>
@@ -103,28 +117,28 @@
           <linkId value="order.notificationContactDocumentResponse.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Preso" />
+            <valueString value="Meier" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Peter" />
+            <valueString value="Sabine" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="032 333 22 11" />
+            <valueString value="044 333 22 11" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="peter.presto@arztpraxis.ch" />
+            <valueString value="sabine.meier@praxisseeblick.ch" />
           </answer>
         </item>
       </item>
@@ -159,35 +173,35 @@
         <linkId value="receiver.practitioner.familyName" />
         <text value="Name" />
         <answer>
-          <valueString value="Presto" />
+          <valueString value="Röntgen" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.practitioner.givenName" />
         <text value="Vorname" />
         <answer>
-          <valueString value="Peter" />
+          <valueString value="Hans" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.practitioner.gln" />
         <text value="GLN" />
         <answer>
-          <valueString value="7601000050703" />
+          <valueString value="7601000066878" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.practitioner.phone" />
         <text value="Telefon" />
         <answer>
-          <valueString value="+41322552525" />
+          <valueString value="044 412 00 99" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.practitioner.email" />
         <text value="E-Mail" />
         <answer>
-          <valueString value="peter.presto@arztpraxis.ch" />
+          <valueString value="hans.roentgen@kantonsspital.ch" />
         </answer>
       </item>
     </item>
@@ -198,38 +212,38 @@
         <linkId value="receiver.organization.name" />
         <text value="Name der Organisation" />
         <answer>
-          <valueString value="Arztpraxis" />
+          <valueString value="Kantonsspital" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.organization.streetAddressLine" />
         <text value="Strasse, Hausnummer, Postfach etc." />
         <answer>
-          <valueString value="Doktorgasse 2" />
+          <valueString value="Kantonsstrasse 14" />
         </answer>
         <answer>
-          <valueString value="Postfach 44" />
+          <valueString value="Postfach 14" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.organization.postalCode" />
         <text value="PLZ" />
         <answer>
-          <valueString value="3254" />
+          <valueString value="8000" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.organization.city" />
         <text value="Ort" />
         <answer>
-          <valueString value="Messen" />
+          <valueString value="Zürich" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.organization.country" />
         <text value="Land" />
         <answer>
-          <valueString value="Switzerland" />
+          <valueString value="Schweiz" />
         </answer>
       </item>
     </item>
@@ -243,35 +257,35 @@
       <linkId value="patient.familyName" />
       <text value="Name" />
       <answer>
-        <valueString value="Kummer" />
+        <valueString value="Musterfrau" />
       </answer>
     </item>
     <item>
       <linkId value="patient.maidenName" />
       <text value="Ledigname" />
       <answer>
-        <valueString value="Bering" /> <!-- @value kann nicht leer sein -->
+        <valueString value="Ledigname" />
       </answer>
     </item>
     <item>
       <linkId value="patient.givenName" />
       <text value="Vorname" />
       <answer>
-        <valueString value="Emil" />
+        <valueString value="Erika" />
       </answer>
     </item>
     <item>
       <linkId value="patient.localPid" />
       <text value="Lokale Patienten-ID" />
       <answer>
-        <valueString value="012/08.111102" />
+        <valueString value="11.22.33.4567" />
       </answer>
     </item>
     <item>
       <linkId value="patient.birthDate" />
       <text value="Geburtsdatum" />
       <answer>
-        <valueDate value="2014-05-05" />
+        <valueDate value="1970-03-14" />
       </answer>
     </item>
     <item>
@@ -280,7 +294,7 @@
       <answer>
         <valueCoding>
           <system value="http://hl7.org/fhir/administrative-gender" />
-          <code value="male" />
+          <code value="female" />
         </valueCoding>
       </answer>
     </item>
@@ -288,14 +302,14 @@
       <linkId value="patient.phone" />
       <text value="Telefon" />
       <answer>
-        <valueString value="079 989 89 89" />
+        <valueString value="079 979 79 79" />
       </answer>
     </item>
     <item>
       <linkId value="patient.email" />
       <text value="E-Mail" />
       <answer>
-        <valueString value="vera.kummer@example.ch" />
+        <valueString value="erika@musterfrau.ch" />
       </answer>
     </item>
     <item>
@@ -579,59 +593,4 @@
       </item>
     </item>
   </item>
-
-  <!-- item[5] specialty, here: microbiology -->
-  <item>
-    <linkId value="microbiology" />
-    <text value="Mikrobiologie" />
-
-    <!-- item[5.0] -->
-    <item>
-      <linkId value="per" />
-      <text value="Pertussis and Parapertussis DNA" />
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="90441-7" />
-          <display value="B pert+parapert DNA Pnl Nph" />
-        </valueCoding>
-      </answer>
-    </item>
-  </item>
-
-  <!-- item[6] specialty, here: hematology-->
-  <item>
-    <linkId value="hematology" />
-    <text value="Hämatologie" />
-    <item>
-      <linkId value="blood-diff" />
-      <text value="Manual Differential panel - Blood" />
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="24318-8" />
-          <display value="Manual diff Bld" />
-        </valueCoding>
-      </answer>
-    </item>
-  </item>
-
-  <!-- item[7] specialty, here: clinical chemistry-->
-  <item>
-    <linkId value="clinical chemistry" />
-    <text value="Klinische Chemie" />
-    <!-- CRP C reactive Protein normal method -->
-    <item>
-      <linkId value="crp" />
-      <text value="C-reactive Protein" />
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org" />
-          <code value="1988-5" />
-          <display value="C reactive protein [Mass/volume] in Serum or Plasma" />
-        </valueCoding>
-      </answer>
-    </item>
-  </item>
-
 </QuestionnaireResponse>

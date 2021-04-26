@@ -265,7 +265,7 @@
         <reference value="Patient/BeatBorer" />
       </reference>
       <name value="Beat Borer" />
-      <description value="Example for EPR-Patient" />
+      <description value="Example for CH-Core-Patient" />
     </resource>
 
     <resource>
@@ -273,7 +273,7 @@
         <reference value="Patient/EmilKummer" />
       </reference>
       <name value="Emil Kummer" />
-      <description value="Example for EPR-Patient" />
+      <description value="Example for CH-Core-Patient" />
     </resource>
 
     <resource>
@@ -281,7 +281,7 @@
         <reference value="Patient/FranzMuster" />
       </reference>
       <name value="FranzMuster" />
-      <description value="Example for EPR-Patient" />
+      <description value="Example for CH-Core-Patient" />
     </resource>
 
     <resource>
@@ -289,7 +289,7 @@
         <reference value="Patient/HansGuggindieluft" />
       </reference>
       <name value="Hans Guggindieluft" />
-      <description value="Example for EPR-Patient" />
+      <description value="Example for CH-Core-Patient" />
     </resource>
 
     <resource>
@@ -297,7 +297,7 @@
         <reference value="Patient/KlebsiellaKeller" />
       </reference>
       <name value="Klebsiella Keller" />
-      <description value="Example for EPR-Patient" />
+      <description value="Example for CH-Core-Patient" />
     </resource>
 
     <resource>
@@ -305,7 +305,7 @@
         <reference value="Patient/MarinaRubella" />
       </reference>
       <name value="Marina Rubella" />
-      <description value="Example for EPR-Patient" />
+      <description value="Example for CH-Core-Patient" />
     </resource>
 
     <!-- References to Practitioners -->
@@ -452,6 +452,14 @@
 
     <resource>
       <reference>
+        <reference value="Questionnaire/order-referral-form" />
+      </reference>
+      <name value="questionnaire Order Referral Form" />
+      <description value="Example for Laboratory Order Questionnaire: Sample" />
+    </resource>
+    
+    <resource>
+      <reference>
         <reference value="Questionnaire/1-tvt" />
       </reference>
       <name value="questionnaire 1-tvt" />
@@ -491,6 +499,14 @@
     </resource>
 
     <!-- References to QuestionnaireResponses -->
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/order-referral-form" />
+      </reference>
+      <name value="questionnaire response Order Referral Form" />
+      <description value="Example for Laboratory Order QuestionnaireResponse: Sample" />
+    </resource>
 
     <resource>
       <reference>

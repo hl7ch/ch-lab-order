@@ -58,13 +58,13 @@ group OrderItems(source src : BackboneElement, target bundle: Bundle, target com
                                                                                    value.value=(item.answer.valueString) "order.placerOrderIdentifier"; 
   src.item as item where (linkId.value = 'order.placerOrderIdentifierDomain' and answer.exists()) -> serviceRequest.identifier as value share placer, 
                                                                                    value.system=(item.answer.valueString) "order.placerOrderIdentifierDomain"; 
-  src.item as item where (linkId.value = 'order.fillerOrderIdentifier' and answer.exists()) -> serviceRequest.identifier as value share filler, 
+  src.item as item where (linkId.value = 'order.IdentifiefillerOrderIdentifier' and answer.exists()) -> serviceRequest.identifier as value share filler, 
                                                                                    value.type as type, type.coding as coding,
                                                                                    coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203',
                                                                                    coding.code = 'FILL',
-                                                                                   value.value=(item.answer.valueString) "order.fillerOrderIdentifier"; 
-  src.item as item where (linkId.value = 'order.fillerOrderIdentifierDomain' and answer.exists()) -> serviceRequest.identifier as value share filler, 
-                                                                                   value.system=(item.answer.valueString) "order.fillerOrderIdentifierDomain"; 
+                                                                                   value.value=(item.answer.valueString) "order.IdentifiefillerOrderIdentifier"; 
+  src.item as item where (linkId.value = 'order.IdentifiefillerOrderIdentifierDomain' and answer.exists()) -> serviceRequest.identifier as value share filler, 
+                                                                                   value.system=(item.answer.valueString) "order.IdentifiefillerOrderIdentifierDomain"; 
 
   src.item as item where (linkId.value = 'order.dateTime' and answer.exists()) -> serviceRequest.authoredOn = (item.answer.value);
 

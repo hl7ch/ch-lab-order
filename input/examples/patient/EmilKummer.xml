@@ -42,7 +42,7 @@
     <given value="Emil"/>
   </name>
   <gender value="male"/>
-  <birthDate value="2014-02-05"/>
+  <birthDate value="2014-05-05"/>
   <maritalStatus>
     <coding>
       <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>

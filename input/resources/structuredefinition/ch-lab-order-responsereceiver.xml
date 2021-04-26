@@ -8,9 +8,9 @@
   <title value="CH LAB-ORDER Response Receiver Extension" />
   <status value="draft" />
   <date value="2019-03-19" />
-  <publisher value="eHealth Suisse" />
+  <publisher value="HL7 Switzerland" />
   <contact>
-    <name value="eHealth Suisse" />
+    <name value="HL7 Switzerland" />
     <telecom>
       <system value="url" />
       <value value="https://www.e-health-suisse.ch/" />

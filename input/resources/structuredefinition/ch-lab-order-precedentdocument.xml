@@ -8,9 +8,9 @@
   <title value="CH LAB-ORDER Precedent Document Extension"/>
   <status value="draft"/>
   <date value="2019-02-05"/>
-  <publisher value="eHealth Suisse"/>
+  <publisher value="HL7 Switzerland"/>
   <contact>
-      <name value="eHealth Suisse"/>
+      <name value="HL7 Switzerland"/>
       <telecom>
           <system value="url"/>
           <value value="https://www.e-health-suisse.ch/"/>

@@ -302,7 +302,7 @@
         <experimental value="true" />
         <subjectType value="Patient" />
         <date value="2018-04-12" />
-        <publisher value="eHealth Suisse" />
+        <publisher value="HL7 Switzerland" />
 
         <!-- item[0] Lab Order Questionnaire Example for TVT -->
         <item>
@@ -831,14 +831,14 @@
           <linkId value="order" />
           <text value="Auftrag" />
           <item>
-            <linkId value="order.placerOrderId" />
+            <linkId value="order.placerOrderIdentifier" />
             <text value="Auftragsnummer des Auftraggebers" />
             <answer>
               <valueString value="123" />
             </answer>
           </item>
           <item>
-            <linkId value="order.fillerOrderId" />
+            <linkId value="order.IdentifiefillerOrderIdentifierr" />
             <text value="Auftragsnummer des Auftragsempfängers" />
           </item>
           <item>

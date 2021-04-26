@@ -8,9 +8,9 @@
   <title value="CH LAB-ORDER ServiceRequest" />
   <status value="draft" />
   <date value="2019-02-05" />
-  <publisher value="eHealth Suisse" />
+  <publisher value="HL7 Switzerland" />
   <contact>
-    <name value="eHealth Suisse" />
+    <name value="HL7 Switzerland" />
     <telecom>
       <system value="url" />
       <value value="https://www.e-health-suisse.ch/" />
@@ -73,9 +73,9 @@
             <path value="ServiceRequest.identifier.value" />
             <min value="1" />
         </element>
-        <element id="ServiceRequest.identifier:fillerOrderId">
+        <element id="ServiceRequest.identifier:IdentifiefillerOrderIdentifierr">
             <path value="ServiceRequest.identifier" />
-            <sliceName value="fillerOrderId" />
+            <sliceName value="IdentifiefillerOrderIdentifierr" />
             <short value="Filler Order Id"/>
             <patternIdentifier>
                 <type>
@@ -86,10 +86,10 @@
                 </type>
             </patternIdentifier>
         </element>
-        <element id="ServiceRequest.identifier:fillerOrderId.system">
+        <element id="ServiceRequest.identifier:IdentifiefillerOrderIdentifierr.system">
             <path value="ServiceRequest.identifier.system" />
         </element>
-        <element id="ServiceRequest.identifier:fillerOrderId.value">
+        <element id="ServiceRequest.identifier:IdentifiefillerOrderIdentifierr.value">
             <path value="ServiceRequest.identifier.value" />
             <min value="1" />
         </element>
