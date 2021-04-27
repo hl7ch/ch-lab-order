@@ -1,9 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Patient xmlns="http://hl7.org/fhir">
   <id value="EmilKummer"/>
   <meta>
     <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
   </meta>
-  
+
+  <!-- additional Text -->
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <b>id</b>: EmilKummer
+      </p>
+      <p>
+        <b>meta</b>: 
+      </p>
+      <p>
+        <b>identifier</b>: 012/08.111112
+      </p>
+      <p>
+        <b>name</b>: Emil Kummer
+      </p>
+      <p>
+        <b>gender</b>: MALE
+      </p>
+      <p>
+        <b>birthDate</b>: May 05, 2014
+      </p>
+      <p>
+        <b>maritalStatus</b>: ledig 
+        <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span>
+      </p>
+      <h3>Communications</h3>
+      <table class="grid">
+        <tr>
+          <td>-</td>
+          <td>
+            <b>Language</b>
+          </td>
+          <td>
+            <b>Preferred</b>
+          </td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Deutsch (Schweiz) 
+            <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Switzerland))</span>
+          </td>
+          <td>true</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+
+  <!-- extensions -->
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
     <valueAddress>
       <city value="Paris"/>
@@ -26,6 +76,7 @@
     </valueCodeableConcept>
   </extension>
 
+   <!-- Identifier and Name of Patient -->
   <identifier>
     <type>
       <coding>
@@ -34,13 +85,17 @@
       </coding>
     </type>
     <system value="urn:oid:2.16.756.5.30.999999.1"/>
-    <value value="012/08.111102"/>
+    <value value="012/08.111112"/>
   </identifier>
 
   <name>
     <family value="Kummer"/>
     <given value="Emil"/>
   </name>
+
+  <!-- telecom -->
+
+  <!-- gender, birthDate, maritial status -->
   <gender value="male"/>
   <birthDate value="2014-05-05"/>
   <maritalStatus>
@@ -50,6 +105,8 @@
       <display value="ledig"/>
     </coding>
   </maritalStatus>
+
+  <!-- communication, language-->
   <communication>
     <language>
       <coding>

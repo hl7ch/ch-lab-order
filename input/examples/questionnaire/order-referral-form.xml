@@ -1495,7 +1495,7 @@
   </jurisdiction>
   <copyright value="CC-BY-SA-4.0" />
 
-  <!-- item[0] order-referral-form Questionnaire Example: order -->
+  <!-- item[0] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -1642,7 +1642,7 @@
     </item>
   </item>
 
-  <!-- item[1] order-referral-form Questionnaire Example: receiver, Person/organization who receives the request -->
+  <!-- item[1] patient -->
   <item>
     <linkId value="receiver" />
     <text value="Empfänger" />
@@ -1715,7 +1715,7 @@
     </item>
   </item>
 
-  <!-- item[2] order-referral-form Questionnaire Example: Patient: The principle target of a particular Form Content is one patient-->
+  <!-- item[2] sender -->
   <item>
     <linkId value="patient" />
     <text value="Patient" />
@@ -1805,7 +1805,7 @@
     </item>
   </item>
 
-  <!-- item[3] sender, sender.author-->
+  <!-- item[3] receiver -->
   <item>
     <linkId value="sender" />
     <text value="Absender" />

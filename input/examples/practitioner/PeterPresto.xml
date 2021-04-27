@@ -8,7 +8,24 @@
     <value value="7601000050704"/>
   </identifier>
   <name>
-    <family value="Presto"/>
-    <given value="Peter"/>
+    <use value="official" />
+    <family value="Presto" />
+    <given value="Peter" />
+    <prefix value="Dr. med.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC" />
+      </extension>
+    </prefix>
   </name>
+
+  <telecom>
+    <system value="phone" />
+    <value value="032 333 22 33" />
+    <use value="work" />
+  </telecom>
+  <telecom>
+    <system value="email" />
+    <value value="marc.mustermann@gruppenpraxis.ch" />
+    <use value="work" />
+  </telecom>
 </Practitioner>

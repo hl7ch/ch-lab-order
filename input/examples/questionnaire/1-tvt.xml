@@ -491,7 +491,7 @@
     </item>
   </item>
 
-  <!-- item[4] Response Receiver: Person/organization who receives the response -->
+  <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
   <item>
     <linkId value="receiverCopies" />
     <text value="Kopieempfänger" />

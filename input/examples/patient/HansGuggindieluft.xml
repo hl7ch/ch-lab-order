@@ -29,7 +29,7 @@
       </p>
       <p>
         <b>maritalStatus</b>: unverheiratet 
-        <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span>
+        <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span>
       </p>
       <h3>Communications</h3>
       <table class="grid">
