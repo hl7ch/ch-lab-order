@@ -13,9 +13,15 @@
   </text>
   <identifier>
     <system value="urn:oid:2.16.756.5.45" />
-    <value value="76010002341000" />
+    <value value="CHE-108.444.179" />
+    <!-- 
+      Business and Enterprise Register (BER) Unternehmens-
+      Identifikationsnummer 
+      <system value="urn:oid:2.16.756.5.45" />
+      Unique IDentification Business (UIDB) Unternehmens-
+      Identifikationsnummer
+    -->
   </identifier>
-  <name value="Speiser Rails" />
 
   <telecom>
     <system value="phone"/>
@@ -39,11 +45,3 @@
     <country value="CH" />
   </address>
 </Organization>
-
-<!-- 
-Business and Enterprise Register (BER) Unternehmens-
-Identifikationsnummer 
-    <system value="urn:oid:2.16.756.5.45" />
-Unique IDentification Business (UIDB) Unternehmens-
-Identifikationsnummer
--->

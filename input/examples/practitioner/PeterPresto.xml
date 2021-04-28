@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Practitioner xmlns="http://hl7.org/fhir">
   <id value="PeterPresto"/>
   <meta>
@@ -14,6 +16,7 @@
     <prefix value="Dr. med.">
       <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
         <valueCode value="AC" />
+        <!-- Academic	Indicates that a prefix like "Dr." or a suffix like "M.D." or "Ph.D." is an academic title. -->
       </extension>
     </prefix>
   </name>

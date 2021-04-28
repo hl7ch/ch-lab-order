@@ -16,6 +16,7 @@
     <value value="7601000241111" />
   </identifier>
   <name value="Gruppenpraxis Olten" />
+  
   <telecom>
     <system value="phone"/>
     <value value="+41555556677"/>
