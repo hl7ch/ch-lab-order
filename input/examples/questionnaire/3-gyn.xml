@@ -56,7 +56,7 @@
   <date value="2018-04-12" />
   <publisher value="HL7 Switzerland" />
 
-  <!-- item[0] 1-tvt Questionnaire Example: order -->
+  <!-- item[0] Questionnaire Example: order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -203,7 +203,7 @@
     </item>
   </item>
 
-  <!-- item[1] 1-tvt Receiver: Person/organization who receives the request -->
+  <!-- item[1] Receiver: Person/organization who receives the request -->
   <item>
     <linkId value="receiver" />
     <text value="Empfänger" />
@@ -450,7 +450,7 @@
       <type value="group" />
       <item>
         <linkId value="sender.dataenterer.practitioner" />
-        <text value="Erfassende Person" />
+        <text value="Erfassende Person, z.B. Praxisassistentin" />
         <type value="group" />
         <item>
           <linkId value="sender.dataenterer.practitioner.familyName" />
@@ -476,14 +476,14 @@
     </item>
   </item>
 
-  <!-- item[4] Response Receiver: Person/organization who receives the response -->
+  <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
   <item>
     <linkId value="receiverCopies" />
     <text value="Kopieempfänger" />
     <type value="group" />
     <item>
       <linkId value="receiverCopy" />
-      <text value="Kopieempfangende Organisation oder Person" />
+      <text value="Kopieempfangende Person, hier die Patientin selber" />
       <type value="group" />
       <repeats value="true" />
       <item>

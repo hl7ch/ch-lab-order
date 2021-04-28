@@ -7,7 +7,7 @@
   </meta>
   <identifier>
     <system value="urn:oid:2.51.1.3" />
-    <value value="7601000034321" />
+    <value value="7601000034821" />
   </identifier>
   <name>
     <use value="official" />
@@ -28,7 +28,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="sabine.meier@gruppenpraxis.ch" />
+    <value value="sabine.meier@praxis.ch" />
     <use value="work" />
   </telecom>
 </Practitioner> 

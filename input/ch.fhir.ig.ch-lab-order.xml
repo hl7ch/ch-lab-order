@@ -215,7 +215,7 @@
         <reference value="Organization/Arztpraxis" />
       </reference>
       <name value="Arztpraxis" />
-      <description value="Example for group practice" />
+      <description value="Example for practice" />
     </resource>
 
     <resource>
@@ -240,6 +240,14 @@
       </reference>
       <name value="Labor Pipette" />
       <description value="Example for Laboratory Organization" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/PraxisSeeblick" />
+      </reference>
+      <name value="Praxis Seeblick" />
+      <description value="Example for practice" />
     </resource>
 
     <resource>

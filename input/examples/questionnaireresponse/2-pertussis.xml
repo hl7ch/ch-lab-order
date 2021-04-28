@@ -18,7 +18,7 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis" />
   <status value="completed" />
 
-    <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
+  <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -149,6 +149,8 @@
   <item>
     <linkId value="receiver" />
     <text value="Empfänger" />
+
+    <!-- item[1][0] receiver Practitioner who receives order -->
     <item>
       <linkId value="receiver.practitioner" />
       <text value="Empfangende Person" />
@@ -195,6 +197,8 @@
         </answer>
       </item>
     </item>
+
+    <!-- item[1][1] receiver Organization which receives order -->
     <item>
       <linkId value="receiver.organization" />
       <text value="Empfangende Organisation" />
@@ -202,14 +206,14 @@
         <linkId value="receiver.organization.name" />
         <text value="Name der Organisation" />
         <answer>
-          <valueString value="Arztpraxis" />
+          <valueString value="Labor Pipette" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.organization.streetAddressLine" />
         <text value="Strasse, Hausnummer, Postfach etc." />
         <answer>
-          <valueString value="Doktorgasse 2" />
+          <valueString value="Laborstrasse 23" />
         </answer>
         <answer>
           <valueString value="Postfach 44" />
@@ -219,14 +223,14 @@
         <linkId value="receiver.organization.postalCode" />
         <text value="PLZ" />
         <answer>
-          <valueString value="3254" />
+          <valueString value="4600" />
         </answer>
       </item>
       <item>
         <linkId value="receiver.organization.city" />
         <text value="Ort" />
         <answer>
-          <valueString value="Messen" />
+          <valueString value="Olten" />
         </answer>
       </item>
       <item>

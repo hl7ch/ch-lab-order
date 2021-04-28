@@ -18,7 +18,7 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis" />
   <status value="completed" />
 
-  <!-- item[0] order, order-referral-form QuestionnaireResponse -->
+  <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -43,6 +43,8 @@
         <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
       </answer>
     </item>
+
+    <!-- item[0][4]order.notificationContactDocument-->
     <item>
       <linkId value="order.notificationContactDocument" />
       <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
@@ -86,6 +88,8 @@
         </item>
       </item>
     </item>
+
+    <!-- item[0][5]order.notificationContactDocumentResponse-->
     <item>
       <linkId value="order.notificationContactDocumentResponse" />
       <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument" />
@@ -145,6 +149,8 @@
   <item>
     <linkId value="receiver" />
     <text value="Empfänger" />
+
+    <!-- item[1][0] receiver Practitioner who receives Order -->
     <item>
       <linkId value="receiver.practitioner" />
       <text value="Empfangende Person" />
@@ -191,6 +197,8 @@
         </answer>
       </item>
     </item>
+
+    <!-- item[1][1] receiver Organization which receives Order -->
     <item>
       <linkId value="receiver.organization" />
       <text value="Empfangende Organisation" />
@@ -338,6 +346,8 @@
     <item>
       <linkId value="sender.author" />
       <text value="Verantwortlicher" />
+
+      <!-- item[3][0][0] sender, sender.author.practitioner -->
       <item>
         <linkId value="sender.author.practitioner" />
         <text value="Verantwortliche Person" />
@@ -384,6 +394,8 @@
           </answer>
         </item>
       </item>
+
+      <!-- item[3][0][1] sender, sender.author.organization -->
       <item>
         <linkId value="sender.author.organization" />
         <text value="Verantwortliche Organisation" />
@@ -391,7 +403,7 @@
           <linkId value="sender.author.organization.name" />
           <text value="Name der Organisation" />
           <answer>
-            <valueString value="Kantonsspital" />
+            <valueString value="Kantonsspital Zug" />
           </answer>
         </item>
         <item>
@@ -427,38 +439,40 @@
         </item>
       </item>
     </item>
+
+    <!-- item[3][1][0] sender, sender.dataenterer -->
     <item>
       <linkId value="sender.dataenterer" />
       <text value="Erfasser" />
       <item>
         <linkId value="sender.dataenterer.practitioner" />
-        <text value="Erfassende Person" />
+        <text value="Erfassende Person, z.B. Gesundheitsfachperson" />
         <item>
           <linkId value="sender.dataenterer.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Boss" />
+            <valueString value="Egger" />
           </answer>
         </item>
         <item>
           <linkId value="sender.dataenterer.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Stabilo" />
+            <valueString value="Daniela" />
           </answer>
         </item>
         <item>
           <linkId value="sender.dataenterer.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="044 333 22 12" />
+            <valueString value="044 333 55 12" />
           </answer>
         </item>
         <item>
           <linkId value="sender.dataenterer.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="stabilo.boss@praxisseeblick.ch" />
+            <valueString value="daniela.egger@kantonsspital.zug.ch" />
           </answer>
         </item>
       </item>
@@ -469,9 +483,11 @@
   <item>
     <linkId value="receiverCopies" />
     <text value="Kopieempfänger" />
+
+    <!-- item[4][0] receiver Copy Organization-->
     <item>
       <linkId value="receiverCopy" />
-      <text value="Kopieempfangende Organisation oder Person" />
+      <text value="Kopieempfangende Organisation oder Person, z.B. Vormund" />
       <item>
         <linkId value="receiverCopy.organization.name" />
         <text value="Name der Organisation" />
@@ -517,57 +533,57 @@
     </item>
     <item>
       <linkId value="receiverCopy" />
-      <text value="Kopieempfangende Organisation oder Person" />
+      <text value="Kopieempfangende Organisation oder Person, z.B. Vormund" />
       <item>
         <linkId value="receiverCopy.familyName" />
         <text value="Name" />
         <answer>
-          <valueString value="Musterfrau" />
+          <valueString value="Costalla" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.givenName" />
         <text value="Vorname" />
         <answer>
-          <valueString value="Erika" />
+          <valueString value="Maria" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.phone" />
         <text value="Telefon" />
         <answer>
-          <valueString value="079 979 79 79" />
+          <valueString value="079 979 80 80" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.email" />
         <text value="E-Mail" />
         <answer>
-          <valueString value="erika@musterfrau.ch" />
+          <valueString value="maria.costella@redwin.ch" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.streetAddressLine" />
         <text value="Strasse, Hausnummer, Postfach etc." />
         <answer>
-          <valueString value="Musterweg" />
+          <valueString value="Fliederweg" />
         </answer>
         <answer>
-          <valueString value="6a" />
+          <valueString value="78" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.postalCode" />
         <text value="PLZ" />
         <answer>
-          <valueString value="8000" />
+          <valueString value="6415" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.city" />
         <text value="Ort" />
         <answer>
-          <valueString value="Zürich" />
+          <valueString value="Arth" />
         </answer>
       </item>
       <item>
@@ -579,6 +595,8 @@
       </item>
     </item>
   </item>
+
+
   <!-- Item #5 lab specialty, here: microbiology -->
   <item>
     <linkId value="hematology" />

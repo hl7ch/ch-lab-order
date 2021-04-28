@@ -155,7 +155,7 @@
     </item>
   </item>
 
-  <!-- item[1] receiver, Person/organization who receives the response -->
+  <!-- item[1] receiver, Person/organization who receives order -->
   <item>
     <linkId value="receiver" />
     <text value="Empfänger" />
