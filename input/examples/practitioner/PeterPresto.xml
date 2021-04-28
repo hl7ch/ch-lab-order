@@ -28,7 +28,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="marc.mustermann@gruppenpraxis.ch" />
+    <value value="peter.presto@arztpraxis.ch" />
     <use value="work" />
   </telecom>
 </Practitioner>

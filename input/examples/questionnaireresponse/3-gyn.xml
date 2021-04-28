@@ -19,7 +19,7 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn" />
   <status value="completed" />
 
-  <!-- item[0] order, order-referral-form QuestionnaireResponse -->
+    <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -61,28 +61,28 @@
           <linkId value="order.notificationContactDocument.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Pap" />
+            <valueString value="Erlenmeyer" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Peter" />
+            <valueString value="Eva" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="032 333 22 331" />
+            <valueString value="033 444 55 66" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="peter.pap@gruppenpraxis.ch" />
+            <valueString value="eva.erlenmeyer@labor-pipette.ch" />
           </answer>
         </item>
       </item>
@@ -104,28 +104,28 @@
           <linkId value="order.notificationContactDocumentResponse.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Erlenmeyer" />
+            <valueString value="Pap" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Eva" />
+            <valueString value="Peter" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="033 444 55 66" />
+            <valueString value="032 333 22 40" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="eva.erlenmeyer@labor-pipette.ch" />
+            <valueString value="peter.pap@gruppenpraxis.ch" />
           </answer>
         </item>
       </item>

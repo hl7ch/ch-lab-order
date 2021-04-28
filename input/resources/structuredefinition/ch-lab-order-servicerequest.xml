@@ -134,6 +134,13 @@
         <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/servicerequest-categories" />
       </binding>
     </element>
-
+    <element id="ServiceRequest.specimen">
+      <path value="ServiceRequest.specimen" />
+      <short value="Must be present, if order is request for test" />
+      <!-- TODO, mit Oliver oder Michaela abklären, ob dieses Verhalten mit Condition abzubilden ist 
+      <min value="1" />
+      <max value="*" />
+      -->
+    </element>
   </differential>
 </StructureDefinition>

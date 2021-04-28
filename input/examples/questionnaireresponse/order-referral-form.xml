@@ -18,7 +18,7 @@
   <questionnaire value="http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form" />
   <status value="completed" />
 
-  <!-- item[0] order, order-referral-form QuestionnaireResponse -->
+  <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />

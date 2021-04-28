@@ -18,7 +18,7 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis" />
   <status value="completed" />
 
-  <!-- item[0] order, order-referral-form QuestionnaireResponse -->
+    <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
@@ -43,6 +43,8 @@
         <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
       </answer>
     </item>
+
+    <!-- item[0][4]order.notificationContactDocument-->
     <item>
       <linkId value="order.notificationContactDocument" />
       <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
@@ -60,21 +62,21 @@
           <linkId value="order.notificationContactDocument.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Erlenmeyer" />
+            <valueString value="Presto" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Eva" />
+            <valueString value="Peter" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocument.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="032 412 00 11" />
+            <valueString value="032 333 22 33" />
           </answer>
         </item>
         <item>
@@ -86,6 +88,8 @@
         </item>
       </item>
     </item>
+
+    <!-- item[0][5]order.notificationContactDocumentResponse-->
     <item>
       <linkId value="order.notificationContactDocumentResponse" />
       <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument" />
@@ -103,28 +107,28 @@
           <linkId value="order.notificationContactDocumentResponse.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Preso" />
+            <valueString value="Erlenmeyer" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Peter" />
+            <valueString value="Eva" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="032 333 22 11" />
+            <valueString value="033 444 55 66" />
           </answer>
         </item>
         <item>
           <linkId value="order.notificationContactDocumentResponse.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="peter.presto@arztpraxis.ch" />
+            <valueString value="eva.erlenmeyer@labor-pipette.ch" />
           </answer>
         </item>
       </item>
@@ -141,7 +145,7 @@
     </item>
   </item>
 
-  <!-- item[1] receiver, Person/organization who receives the response -->
+  <!-- item[1] receiver, Person/organization who receives order -->
   <item>
     <linkId value="receiver" />
     <text value="Empfänger" />
@@ -352,14 +356,14 @@
           <linkId value="sender.author.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Meier" />
+            <valueString value="Presto" />
           </answer>
         </item>
         <item>
           <linkId value="sender.author.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Sabine" />
+            <valueString value="Peter" />
           </answer>
         </item>
         <item>
@@ -373,14 +377,14 @@
           <linkId value="sender.author.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="044 333 22 11" />
+            <valueString value="032 333 22 33" />
           </answer>
         </item>
         <item>
           <linkId value="sender.author.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="sabine.meier@praxisseeblick.ch" />
+            <valueString value="peter.presto@arztpraxis.ch" />
           </answer>
         </item>
       </item>
@@ -437,28 +441,28 @@
           <linkId value="sender.dataenterer.practitioner.familyName" />
           <text value="Name" />
           <answer>
-            <valueString value="Boss" />
+            <valueString value="Presto" />
           </answer>
         </item>
         <item>
           <linkId value="sender.dataenterer.practitioner.givenName" />
           <text value="Vorname" />
           <answer>
-            <valueString value="Stabilo" />
+            <valueString value="Peter" />
           </answer>
         </item>
         <item>
           <linkId value="sender.dataenterer.practitioner.phone" />
           <text value="Telefon" />
           <answer>
-            <valueString value="044 333 22 12" />
+            <valueString value="032 333 22 33" />
           </answer>
         </item>
         <item>
           <linkId value="sender.dataenterer.practitioner.email" />
           <text value="E-Mail" />
           <answer>
-            <valueString value="stabilo.boss@praxisseeblick.ch" />
+            <valueString value="peter.presto@arztpraxis.ch" />
           </answer>
         </item>
       </item>
@@ -476,7 +480,7 @@
         <linkId value="receiverCopy.organization.name" />
         <text value="Name der Organisation" />
         <answer>
-          <valueString value="Praxis Seeblick" />
+          <valueString value="Gruppenpraxis" />
         </answer>
       </item>
       <item>
@@ -490,28 +494,28 @@
         <linkId value="receiverCopy.familyName" />
         <text value="Name" />
         <answer>
-          <valueString value="Meier" />
+          <valueString value="Hauser" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.givenName" />
         <text value="Vorname" />
         <answer>
-          <valueString value="Sabine" />
+          <valueString value="Hans" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.phone" />
         <text value="Telefon" />
         <answer>
-          <valueString value="044 333 22 11" />
+          <valueString value="038 888 22 11" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.email" />
         <text value="E-Mail" />
         <answer>
-          <valueString value="sabine.meier@praxisseeblick.ch" />
+          <valueString value="hans.hauser@gruppenpraxis.ch" />
         </answer>
       </item>
     </item>
@@ -522,14 +526,14 @@
         <linkId value="receiverCopy.familyName" />
         <text value="Name" />
         <answer>
-          <valueString value="Musterfrau" />
+          <valueString value="Kummer" />
         </answer>
       </item>
       <item>
         <linkId value="receiverCopy.givenName" />
         <text value="Vorname" />
         <answer>
-          <valueString value="Erika" />
+          <valueString value="Claudia" />
         </answer>
       </item>
       <item>
@@ -543,7 +547,7 @@
         <linkId value="receiverCopy.email" />
         <text value="E-Mail" />
         <answer>
-          <valueString value="erika@musterfrau.ch" />
+          <valueString value="claudia.kummer@redwin.ch" />
         </answer>
       </item>
       <item>

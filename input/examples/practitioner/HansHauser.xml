@@ -28,7 +28,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="hans.hauser@kantonsspital.zug.ch" />
+    <value value="hans.hauser@gruppenpraxis.ch" />
     <use value="work" />
   </telecom>
 </Practitioner>
