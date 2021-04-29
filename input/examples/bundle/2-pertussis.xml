@@ -1083,7 +1083,7 @@
               <linkId value="receiver.organization.country" />
               <text value="Land" />
               <answer>
-                <valueString value="Switzerland" />
+                <valueString value="Schweiz" />
               </answer>
             </item>
           </item>

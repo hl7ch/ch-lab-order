@@ -45,7 +45,7 @@
         <tr>
           <td>*</td>
           <td>Italienisch (Schweiz) 
-            <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Switzerland))</span>
+            <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span>
           </td>
           <td>true</td>
         </tr>

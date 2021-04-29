@@ -902,11 +902,11 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-
+      
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
         <status value="completed" />
-
-        <!-- item[0] order, order-referral-form QuestionnaireResponse -->
+      
+        <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
@@ -931,6 +931,8 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
+      
+          <!-- item[0][4]order.notificationContactDocument-->
           <item>
             <linkId value="order.notificationContactDocument" />
             <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
@@ -974,6 +976,8 @@
               </item>
             </item>
           </item>
+      
+          <!-- item[0][5]order.notificationContactDocumentResponse-->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
             <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument" />
@@ -1028,11 +1032,12 @@
             </answer>
           </item>
         </item>
-
-        <!-- item[1] receiver, Person/organization who receives the response -->
+      
+        <!-- item[1] receiver, here only the Organization receives the response -->
         <item>
           <linkId value="receiver" />
           <text value="Empfänger" />
+          <!-- 
           <item>
             <linkId value="receiver.practitioner" />
             <text value="Empfangende Person" />
@@ -1079,6 +1084,7 @@
               </answer>
             </item>
           </item>
+          -->
           <item>
             <linkId value="receiver.organization" />
             <text value="Empfangende Organisation" />
@@ -1086,43 +1092,43 @@
               <linkId value="receiver.organization.name" />
               <text value="Name der Organisation" />
               <answer>
-                <valueString value="Suva" />
+                <valueString value="LaborPipette" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.organization.streetAddressLine" />
               <text value="Strasse, Hausnummer, Postfach etc." />
               <answer>
-                <valueString value="Löwenplatz 1" />
+                <valueString value="Laborstrasse 23" />
               </answer>
               <answer>
-                <valueString value="Postfach 44" />
+                <valueString value="Postfach 3344" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.organization.postalCode" />
               <text value="PLZ" />
               <answer>
-                <valueString value="6004" />
+                <valueString value="4600" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.organization.city" />
               <text value="Ort" />
               <answer>
-                <valueString value="Luzern" />
+                <valueString value="Olten" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.organization.country" />
               <text value="Land" />
               <answer>
-                <valueString value="Switzerland" />
+                <valueString value="Schweiz" />
               </answer>
             </item>
           </item>
         </item>
-
+      
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1214,11 +1220,11 @@
             <linkId value="patient.country" />
             <text value="Land" />
             <answer>
-              <valueString value="Switzerland" />
+              <valueString value="Schweiz" />
             </answer>
           </item>
         </item>
-
+      
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1317,7 +1323,7 @@
           </item>
           <item>
             <linkId value="sender.dataenterer" />
-            <text value="Erfasser" />
+            <text value="Erfasser" /> <!-- same as author -->
             <item>
               <linkId value="sender.dataenterer.practitioner" />
               <text value="Erfassende Person" />
@@ -1352,7 +1358,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -1467,7 +1473,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- Item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
@@ -1512,7 +1518,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[6]  lab specialty Toxicology, Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />

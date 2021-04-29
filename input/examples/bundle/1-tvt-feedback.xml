@@ -145,7 +145,7 @@
               <tr>
                 <td>*</td>
                 <td>Deutsch (Schweiz) 
-                  <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code &#39;de-CH&#39; = &#39;German (Region=Switzerland))</span>
+                  <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code &#39;de-CH&#39; = &#39;German (Region=Schweiz))</span>
                 </td>
                 <td>true</td>
               </tr>
