@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ch-lab-order-composition" />
-  <url value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
+  <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition" />
   <version value="0.9.0" />
-  <name value="CHORFComposition" />
-  <title value="CH ORF Composition" />
+  <name value="CHLAB-ORDERComposition" />
+  <title value="CH LAB-ORDER Composition" />
   <status value="draft" />
   <date value="2019-01-30" />
-  <publisher value="eHealth Suisse" />
+  <publisher value="HL7 Switzerland" />
   <contact>
-    <name value="eHealth Suisse" />
+    <name value="HL7 Switzerland" />
     <telecom>
       <system value="url" />
       <value value="https://www.e-health-suisse.ch/" />
@@ -22,7 +23,7 @@
       <value value="oliver.egger@ahdis.ch" />
     </telecom>
   </contact>
-  <description value="Profile on Composition for CH ORF" />
+  <description value="Profile on Composition for CH LAB-ORDER" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -34,103 +35,110 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
-  <baseDefinition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition" />
+
+  <baseDefinition value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   <derivation value="constraint" />
+
   <differential>
-    <element id="Composition">
-      <path value="Composition" />
-    </element>
-    <element id="Composition.text">
-      <path value="Composition.text" />
-      <short value="CH LAB-ORDER Composition" />
-      <min value="1" />
-    </element>
-    <element id="Composition.extension">
-      <path value="Composition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Composition.extension:precedentDocument">
-      <path value="Composition.extension" />
-      <sliceName value="precedentDocument" />
-      <short value="Identifier of the document which precedes this document in a thread" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-precedentdocument" />
-      </type>
-    </element>
-    <element id="Composition.extension:dataEntryPerson">
-      <path value="Composition.extension" />
-      <sliceName value="dataEntryPerson" />
-      <short value="The person who has typed/filled in the form content" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-dataentryperson" />
-      </type>
-    </element>
-    <element id="Composition.extension:urgentNoficationContactForRequest">
-      <path value="Composition.extension" />
-      <sliceName value="urgentNoficationContactForRequest" />
-      <short value="An information recipient to notify for urgent matters" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforrequest" />
-      </type>
-    </element>
-    <element id="Composition.extension:urgentNoficationContactForResponse">
-      <path value="Composition.extension" />
-      <sliceName value="urgentNoficationContactForResponse" />
-      <short value="An information recipient to notify for urgent matters about the response" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforresponse" />
-      </type>
-    </element>
-    <element id="Composition.extension:requestReceiver">
-      <path value="Composition.extension" />
-      <sliceName value="requestReceiver" />
-      <short value="Person who receives the request" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-requestreceiver" />
-      </type>
-    </element>
-    <element id="Composition.extension:responseReceiver">
-      <path value="Composition.extension" />
-      <sliceName value="responseReceiver" />
-      <short value="Person who receives the response" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver" />
-      </type>
-    </element>
-    <element id="Composition.identifier">
-      <path value="Composition.identifier" />
-      <short value="Identifier for this composition" />
-      <min value="1" />
-    </element>
-    <element id="Composition.status">
-      <path value="Composition.status" />
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <short value="Precise type of clinical document" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.typeCode" />
+      </binding>
     </element>
 
-    <!-- 
+    <element id="Composition.category">
+      <path value="Composition.category" />
+      <short value="Order Document" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.classCode" />
+      </binding>
+    </element>
+    
+  </differential>
+
+  <!-- 
+    <differential>
+        <element id="Composition">
+            <path value="Composition"/>
+        </element>
+
+        <element id="Composition.text">
+            <path value="Composition.text"/>
+            <short value="Narrative text of the composition"/>
+            <min value="1"/>
+        </element>
+        <element id="Composition.extension">
+            <path value="Composition.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="Composition.extension:precedentDocument">
+            <path value="Composition.extension" />
+            <sliceName value="precedentDocument" />
+            <short value="Identifier of the document which precedes this document in a thread"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension" />
+                <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-precedentdocument" />
+            </type>
+        </element>
+        <element id="Composition.extension:dataEnterer">
+            <path value="Composition.extension"/>
+            <sliceName value="dataEnterer"/>
+            <short value="The person/organization who has typed/filled in the form content"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"/>
+            </type>
+        </element>
+        <element id="Composition.extension:urgentNoficationContactForThisDocument">
+            <path value="Composition.extension" />
+            <sliceName value="urgentNoficationContactForThisDocument" />
+            <short value="An information recipient to notify for urgent matters"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension" />
+                <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactforthisdocument" />
+            </type>
+        </element>
+        <element id="Composition.extension:urgentNoficationContactForTheResponseToThisDocument">
+            <path value="Composition.extension" />
+            <sliceName value="urgentNoficationContactForTheResponseToThisDocument" />
+            <short value="An information recipient to notify for urgent matters about the response"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension" />
+                <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-urgentnoficationcontactfortheresponsetothisdocument" />
+            </type>
+        </element>
+        <element id="Composition.extension:responseReceiver">
+            <path value="Composition.extension" />
+            <sliceName value="responseReceiver" />
+            <short value="Person/organization who receives the response"/>
+            <min value="0"/>
+            <max value="*"/>
+            <type>
+                <code value="Extension" />
+                <profile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-responsereceiver" />
+            </type>
+        </element>
+        <element id="Composition.status">
+            <path value="Composition.status"/>
+        </element>
         <element id="Composition.type">
             <path value="Composition.type"/>
             <short value="Precise type of clinical document"/>
@@ -149,120 +157,96 @@
                 <valueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"/>
             </binding>
         </element>
-        -->
+        <element id="Composition.subject">
+            <path value="Composition.subject"/>
+            <short value="Patient as the principle target of a particular form content"/>
+        </element>
+        <element id="Composition.date">
+            <path value="Composition.date"/>
+            <short value="Composition editing time"/>
+        </element>
+        <element id="Composition.author">
+            <path value="Composition.author"/>
+            <short value="The person/organization responsible for the form content"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
+            </type>
+        </element>      
+        <element id="Composition.title">
+            <path value="Composition.title"/>
+            <short value="Meaningful title"/>
+        </element>
+         
 
-    <element id="Composition.type">
-      <path value="Composition.type" />
-      <short value="Laboratory order document" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="721965002" />
-          <display value="Laboratory order (record artifact)" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Composition.category">
-      <path value="Composition.category" />
-      <short value="Order document" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="721963009" />
-          <display value="Order (record artifact)" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
+        <element id="Composition.section">
+            <path value="Composition.section"/>
+            <min value="1"/>
+        </element>
+        <element id="Composition.section.title">
+            <path value="Composition.section.title"/>
+            <min value="1"/>
+        </element>
 
-    <element id="Composition.subject">
-      <path value="Composition.subject" />
-      <short value="Patient as the principle target of a particular form content" />
-      <min value="1" />
-    </element>
-    <element id="Composition.date">
-      <path value="Composition.date" />
-      <short value="Composition editing time" />
-    </element>
-    <element id="Composition.author">
-      <path value="Composition.author" />
-      <short value="The person responsible for the form content" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner" />
-      </type>
-    </element>
-    <element id="Composition.title">
-      <path value="Composition.title" />
-      <short value="Meaningful title" />
-    </element>
-    <element id="Composition.section">
-      <path value="Composition.section" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-    </element>
+        <element id="Composition.section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="3"/>
+        </element>
 
-    <element id="Composition.section.entry">
-      <path value="Composition.section.entry" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="3" />
-    </element>
+        <element id="Composition.section.entry:ChLab-orderQuestionnaire">
+            <path value="Composition.section.entry"/>
+            <sliceName value="ChLab-orderQuestionnaire"/>
+            <short value="Questionnaire"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-questionnaire"/>
+            </type>
+        </element>
+        <element id="Composition.section.entry:ChLab-orderQuestionnaire.reference">
+            <path value="Composition.section.entry.reference"/>
+            <min value="1"/>
+        </element>
 
-    <element id="Composition.section.entry:ChOrfQuestionnaire">
-      <path value="Composition.section.entry" />
-      <sliceName value="ChOrfQuestionnaire" />
-      <short value="Questionnaire" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire" />
-      </type>
-    </element>
-    <element id="Composition.section.entry:ChOrfQuestionnaire.reference">
-      <path value="Composition.section.entry.reference" />
-      <min value="1" />
-    </element>
+        <element id="Composition.section.entry:ChLab-orderQuestionnaireResponse">
+            <path value="Composition.section.entry"/>
+            <sliceName value="ChLab-orderQuestionnaireResponse"/>
+            <short value="QuestionnaireResponse"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-questionnaireresponse"/>
+            </type>
+        </element>
+        <element id="Composition.section.entry:ChLab-orderQuestionnaireResponse.reference">
+            <path value="Composition.section.entry.reference"/>
+            <min value="1"/>
+        </element>
 
-    <element id="Composition.section.entry:ChOrfQuestionnaireResponse">
-      <path value="Composition.section.entry" />
-      <sliceName value="ChOrfQuestionnaireResponse" />
-      <short value="QuestionnaireResponse" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
-      </type>
-    </element>
-    <element id="Composition.section.entry:ChOrfQuestionnaireResponse.reference">
-      <path value="Composition.section.entry.reference" />
-      <min value="1" />
-    </element>
-
-    <element id="Composition.section.entry:ChOrfServiceRequest">
-      <path value="Composition.section.entry" />
-      <sliceName value="ChOrfServiceRequest" />
-      <short value="ServiceRequest" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
-      </type>
-    </element>
-    <element id="Composition.section.entry:ChOrfServiceRequest.reference">
-      <path value="Composition.section.entry.reference" />
-      <min value="1" />
-    </element>
-  </differential>
+        <element id="Composition.section.entry:ChLab-orderServiceRequest">
+            <path value="Composition.section.entry"/>
+            <sliceName value="ChLab-orderServiceRequest"/>
+            <short value="ServiceRequest"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest"/>
+            </type>
+        </element>
+        <element id="Composition.section.entry:ChLab-orderServiceRequest.reference">
+            <path value="Composition.section.entry.reference"/>
+            <min value="1"/>
+        </element> 
+    </differential>
+    -->
 </StructureDefinition>

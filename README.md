@@ -14,7 +14,7 @@ Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-o
 
 ## Swiss Laboratory professional societies
 
-* FAMH --The medical Laboratories of Switzerland <https://www.famh.ch/>
+* FAMH --The medical Laboratories of Schweiz <https://www.famh.ch/>
 * SULM SULM Swiss Union of Laboratory Medicine <https://sulm.ch/d/>
 * SSAI Swiss Society for Allergologie and Immunology <https://ssai.ch/>
 * SSCC Swiss Society for Clinical Chemistry <http://www.sscc.ch/>

@@ -41,7 +41,7 @@
   <receivedTime value="2020-08-16T16:40:17Z" /> <!-- 0..1 The time when specimen was received for processing -->
 
   <request>
-    <reference value="ServiceRequest/referral-min" />
+    <reference value="ServiceRequest/lab" />
   </request>
   <collection>
     <!-- 0..1 Collection details -->

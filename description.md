@@ -1,4 +1,4 @@
-# Projekt Laborverordnung oder ch-lab-order
+# Projekt Laborauftrag oder ch-lab-order
 
 ## Ausgangslage
 

@@ -1,6 +1,6 @@
 # Actors
 
-## Fallbeispiel 1
+## Fallbeispiel 1 1-tvt
 
 Patient:  Guggindieluft Hans  Geburtsdatum:  1. Januar 1981
 Leidensweg 10
@@ -8,29 +8,28 @@ Leidensweg 10
 Tel privat: +41.32.685.12.34
 Tel Geschäft: +41.32.123.77.88
 Mail Geschäft: hans.guggindieluft@sampledomain.ch
-ID Patient:  
-2.999:  2132
+Identifier:  012/08.111111 <!-- Medical Record Number-->
 Erstellt am:  9. März 2016  Geschlecht:  männlich
 
 Empfänger:  
 Praxis Dr. med. Mustermann
 Doktorgasse 2
 8888 Musterhausen
-Tel Geschäft: +41.32.234.55.66
+Tel Geschäft: 033 333 22 11
 
 Absender:  
 Praxis Dr. med. Mustermann
 Doktorgasse 2
 8888 Musterhausen
-Tel Geschäft: +41.32.234.55.66
+Tel Geschäft: 033 333 22 11
 
 Autor:  
 Praxis Dr. med. Mustermann
 Heidi Sticht am 9. März 2016
 Doktorgasse 2
 8888 Musterhausen
-Tel Geschäft: +41.32.234.55.66
-Mail Geschäft: praxis@drmustermann.ch
+Tel Geschäft: 033 333 22 11
+Mail Geschäft: marc.mustermann@gruppenpraxis.ch
 
 Autor:  
 Einsendelabor Pipette
@@ -39,6 +38,10 @@ Laborstrasse 23
 9999 Analyzerstadt
 Tel Geschäft: +41.58.656.78.89
 Mail Geschäft: pipette@einsendelabor.ch
+
+Untersuchungen:
+Blutbild, CRP intern
+D-Dimer extern
 
 ## Fallbeispiel 2
 

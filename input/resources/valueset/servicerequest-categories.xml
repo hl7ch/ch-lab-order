@@ -1,0 +1,53 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="servicerequest-categories" />
+  <url value="http://fhir.ch/ig/ch-lab-order/ValueSet/servicerequest-categories" />
+  <version value="0.1.0" />
+  <name value="ServiceRequestCategories" />
+  <title value="Service Request Categories for Questionnaires" />
+  <status value="draft" />
+  <experimental value="true" />
+  <date value="2019-04-02" />
+  <publisher value="HL7 Switzerland" />
+  <contact>
+    <name value="HL7 Switzerland" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.hl7.ch/" />
+    </telecom>
+  </contact>
+  <description value="ch-lab-order defines 3 Kinds of Service Request Categories:
+                      order of lab-test, 
+                      request of lab-results and order of supplementary analyses, 
+                      request of 2nd option" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="CH" />
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct" />
+      <concept>
+        <code value="721963009" />
+        <display value="Order (record artifact)" />
+      </concept>
+      <concept>
+        <code value="419891008" />
+        <display value="Record artifact (record artifact)" />
+        <!-- children:  422680004 | Battery entry (record artifact) |
+                        726737008 | Comment on laboratory result (record artifact) |
+                        726736004 | Interpretation of laboratory result (record artifact) |
+                        funktioniert so wohl nicht, Jürg wird sich noch etwas überlegen
+        -->
+      </concept>
+      <concept>
+        <code value="371545006" />
+        <display value="Confirmatory consultation report (record artifact)" />
+        <!-- 2nd opinion, is not in DocumentEntry.classCode 
+        braucht es wohl nicht im Laborbereich
+        -->
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
