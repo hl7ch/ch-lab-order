@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="5-biol-monit" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+    <source value="#AOvDxhC0zhsHQDK9" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml"> Referral 5-biol-monit </div>
+  </text>
+
+  <!-- 
+  <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+    <extension url="enterer">
+      <valueReference>
+        <reference value="PractitionerRole/PauloPorcelliniSuva" /> 
+      </valueReference>
+    </extension>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/NotificationContactEvaErlenmeyerLaborPipette" />
+    </valueReference>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
+    </valueReference>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
+    </valueReference>
+  </extension>
+  -->
+
+  <status value="final" />
+
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721965002" />
+      <display value="Laboratory order (record artifact)" />
+    </coding>
+  </type>
+
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721963009" />
+      <display value="Order (record artifact)" />
+    </coding>
+  </category>
+
+  <subject>
+    <reference value="Patient/BeatBorer" />
+  </subject>
+  <date value="2019-03-31T11:46:09+02:00" />
+
+  <author>
+    <reference value="PractitionerRole/PauloPorcelliniSuva" />
+  </author>
+  <title value="Referral 5-biol-monit" />
+
+  <attester>
+    <mode value="professional" />
+    <time value="2010-03-12T11:46:09+02:00" />
+    <party>
+      <reference value="Organization/Suva" />
+    </party>
+  </attester>
+
+  <!-- sections -->
+  <section>
+    <title value="Referral" />
+    <text>
+      <status value="generated" />
+      <div xmlns="http://www.w3.org/1999/xhtml">
+          Referral 5-biol-monit
+        </div>
+    </text>
+    <entry>
+      <reference value="Questionnaire/5-biol-monit" />
+    </entry>
+    <entry>
+      <reference value="QuestionnaireResponse/5-biol-monit" />
+    </entry>
+    <entry>
+      <reference value="ServiceRequest/5-biol-monit" />
+    </entry>
+  </section>
+</Composition>

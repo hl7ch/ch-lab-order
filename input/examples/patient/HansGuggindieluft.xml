@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="HansGuggindieluft"/>
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
+  </meta>
+  
+  <!-- additional Text -->
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <b>id</b>: HansGuggindieluft
+      </p>
+      <p>
+        <b>meta</b>: 
+      </p>
+      <p>
+        <b>identifier</b>: 012/08.111111
+      </p>
+      <p>
+        <b>name</b>: Hans Guggindieluft 
+      </p>
+      <p>
+        <b>gender</b>: MALE
+      </p>
+      <p>
+        <b>birthDate</b>: Jan 01, 1981
+      </p>
+      <p>
+        <b>maritalStatus</b>: unverheiratet 
+        <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span>
+      </p>
+      <h3>Communications</h3>
+      <table class="grid">
+        <tr>
+          <td>-</td>
+          <td>
+            <b>Language</b>
+          </td>
+          <td>
+            <b>Preferred</b>
+          </td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Deutsch (Schweiz) 
+            <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span>
+          </td>
+          <td>true</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  
+  <!-- extensions -->
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+    <valueAddress>
+      <city value="Zürich"/>
+      <country value="Schweiz"/>
+    </valueAddress>
+  </extension>
+  <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
+    <valueAddress>
+      <city value="Breitenbach"/>
+      <state value="BL"/>
+    </valueAddress>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+        <code value="1007"/>
+        <display value="Atheism"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+
+  <!-- Identifier and Name of Patient -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/> <!-- Medical Record Number-->
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.756.5.30.999999.1"/>
+    <value value="012/08.111111"/>
+  </identifier>
+
+  <name>
+    <family value="Guggindieluft"/>
+    <given value="Hans"/>
+  </name>
+
+  <!-- telecom -->
+  <telecom>
+    <system value="phone"/>
+    <value value="079 979 79 79"/>
+    <use value="home"/>
+  </telecom>
+  
+  <telecom>
+    <system value="email"/>
+    <value value="hans.guggindieluft@example.ch"/>
+  </telecom>
+
+  <!-- gender, birthDate, maritial status -->
+  <gender value="male"/>
+  <birthDate value="1981-01-01"/>
+  <maritalStatus>
+    <coding>
+      <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
+      <code value="5"/>
+      <display value="unverheiratet"/>
+    </coding>
+  </maritalStatus>
+
+  <!-- communication, language, https://tools.ietf.org/html/bcp47 -->
+  <communication>
+    <language>
+      <coding>
+        <system value="urn:ietf:bcp:47"/>
+        <code value="de-CH"/>
+      </coding>
+      <text value="Deutsch (Schweiz)"/>
+    </language>
+    <preferred value="true"/>
+  </communication>
+</Patient>

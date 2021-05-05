@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="1-tvt" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+    <source value="#AOvDxhC0zhsHQDK9" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml"> Referral 1-tvt </div>
+  </text>
+
+  <status value="final" />
+  <!-- preliminary | final | amended | entered-in-error -->
+  <!-- vorläufig | final | geändert | irrtümlich eingegeben -->
+
+  <!-- DocumentEntry.type for Lab: -->
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721965002" />
+      <display value="Laboratory order (record artifact)" />
+    </coding>
+  </type>
+  <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+    Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27)
+    721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
+  -->
+
+  <!-- DocumentEntry.type for Pathology: 
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721966001" />
+      <display value="Pathology order (record artifact)" />
+    </coding>
+  </type>
+  -->
+
+  <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+    Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27c)
+    721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
+  -->
+
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721963009" />
+      <display value="Order (record artifact)" />
+    </coding>
+  </category>
+  <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+    Value Set: DocumentEntry.classCode (OID: 2.16.756.5.30.1.127.3.10.1.3)
+    721963009 Order (record artifact) 2.16.840.1.113883.6.96
+  -->
+
+  <subject>
+    <reference value="Patient/HansGuggindieluft" />
+  </subject>
+  <date value="2019-03-31T11:46:09+02:00" />
+
+  <author>
+    <reference value="PractitionerRole/MarcMustermannArztpraxis" />
+  </author>
+  <title value="Referral 1-tvt" />
+
+  <attester>
+    <mode value="professional" />
+    <time value="2010-03-12T11:46:09+02:00" />
+    <party>
+      <reference value="Practitioner/MarcMustermann" />
+    </party>
+  </attester>
+
+  <!-- sections -->
+  <section>
+    <title value="Referral" />
+    <text>
+      <status value="generated" />
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        Referral 1-tvt
+      </div>
+    </text>
+    <entry>
+      <reference value="Questionnaire/1-tvt" />
+    </entry>
+    <entry>
+      <reference value="QuestionnaireResponse/1-tvt" />
+    </entry>
+    <entry>
+      <reference value="ServiceRequest/1-tvt" />
+    </entry>
+  </section>
+</Composition>

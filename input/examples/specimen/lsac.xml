@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="lsac" />
+  <!-- from Resource: id, meta, implicitRules, and language -->
+  <!-- from DomainResource: text, contained, extension, and modifierExtension -->
+  <identifier>
+    <!-- 0..* This is a business identifier, not a resource identifier (see discussion) -->
+    <value value="48736-22222-75465" />
+  </identifier>
+  <accessionIdentifier>
+    <!-- 1..1 Identifier Identifier assigned by the lab, must be present -->
+    <value value="4e88a-11111-dd888" />
+  </accessionIdentifier>
+  <status value="available" /> <!-- 0..1 available | unavailable | unsatisfactory | entered-in-error -->
+  <type>
+    <!--   
+    Type is a loosely defined field because there is such a lot of variation in how it is used.
+    The principal variation is how much information that could be represented elsewhere is also
+    represented here. For instance, here's some possible types:
+      lithium heparin plasma   (+ .container.additive) (e.g. SNOMED CT 446272009)
+      transfusion bag of blood (+ container.type)
+      Peritoneal lavage        (+ collection.bodySite)
+    If the type includes other fields, it would be normal not to populate the other fields.
+    Note that this practice is so widespread that it's pointless to try and stop it. Possible
+    coding: TODO look at [https://www.hl7.org/fhir/conceptmap-example-specimen-type.html] and 
+    the example below
+    -->
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="258450006" />
+      <display value="Cerebrospinal fluid sample" />
+    </coding>
+  </type>
+  <subject>
+    <!-- 0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This 
+      may be from patient(s), from a location (e.g., the source of an environmental sample), or a
+      sampling of a substance or a device -->
+    <reference value="Patient/FranzMuster" />
+  </subject>
+  <receivedTime value="2020-08-16T16:40:17Z" /> <!-- 0..1 The time when specimen was received for processing -->
+
+  <request>
+    <reference value="ServiceRequest/lab" />
+  </request>
+  <collection>
+    <!-- 0..1 Collection details -->
+    <collector>
+      <!-- 0..1 Reference(Practitioner|PractitionerRole) Who collected the specimen -->
+      <reference value="Practitioner/MarcMustermann" />
+    </collector>
+    <collectedDateTime value="2020-08-16T06:40:17Z" />
+    <method>
+      <!-- 0..1 CodeableConcept Technique used to perform collection -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="277762005" />
+        <display value="Lumbar puncture (procedure)" />
+      </coding>
+    </method>
+  </collection>
+  <container>
+    <!-- 0..* Direct container of specimen (tube/slide, etc.) 
+      4 containers are preferred for CS-Fuid examens
+    -->
+    <identifier>
+      <value value="4e88a-bc987-dd888-12345-cc" />
+    </identifier>
+    <!-- 0..1 Textual description of the container -->
+    <!-- 'https://www.copanusa.com/wp-content/uploads/2019/07/LBM-ESwab-051519.pdf'-->
+    <description value="Container for Chemistry" />
+    <type>
+      <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="706053007" />
+        <display value="General specimen container (physical object)" />
+      </coding>
+    </type>
+  </container>
+  <container>
+    <!-- 0..* Direct container of specimen (tube/slide, etc.) -->
+    <identifier>
+      <value value="4e88a-bc987-dd888-12345-mic" />
+    </identifier>
+    <!-- 0..1 Textual description of the container -->
+    <!-- 'https://www.copanusa.com/wp-content/uploads/2019/07/LBM-ESwab-051519.pdf'-->
+    <description value="Container for Microbiology" />
+    <type>
+      <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="706053007" />
+        <display value="General specimen container (physical object)" />
+      </coding>
+    </type>
+  </container>
+  <container>
+    <!-- 0..* Direct container of specimen (tube/slide, etc.) 
+      4 containers are preferred for CS-Fuid examens
+    -->
+    <identifier>
+      <value value="4e88a-bc987-dd888-12345-cyt" />
+    </identifier>
+    <!-- 0..1 Textual description of the container -->
+    <!-- 'https://www.copanusa.com/wp-content/uploads/2019/07/LBM-ESwab-051519.pdf'-->
+    <description value="Container for Cytology" />
+    <type>
+      <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="706053007" />
+        <display value="General specimen container (physical object)" />
+      </coding>
+    </type>
+  </container>
+  <container>
+    <!-- 0..* Direct container of specimen (tube/slide, etc.) -->
+    <identifier>
+      <value value="4e88a-bc987-dd888-12345-other" />
+    </identifier>
+    <!-- 0..1 Textual description of the container -->
+    <!-- 'https://www.copanusa.com/wp-content/uploads/2019/07/LBM-ESwab-051519.pdf'-->
+    <description value="Container for other Examens, VDRL, electrophoresis/immunofixation" />
+    <type>
+      <!-- 0..1 CodeableConcept Kind of container directly associated with specimen -->
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="706053007" />
+        <display value="General specimen container (physical object)" />
+      </coding>
+    </type>
+  </container>
+  <note> 
+    <text value="e.g. Priority of exams"/> 
+  </note> 
+</Specimen>
