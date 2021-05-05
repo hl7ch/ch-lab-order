@@ -672,4 +672,78 @@
       </answerOption>
     </item>
   </item>
+
+  <!-- item[8] consent -->
+  <item>
+    <linkId value="consent" />
+    <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.supportingInfo" />
+    <text value="Einverständniserklärung" />
+    <type value="group" />
+    <item>
+      <linkId value="consent.treatment" />
+      <text value="Einverständnis des Patienten zur Behandlung" />
+      <type value="string" />
+    </item>
+    <item>
+      <linkId value="consent.patientPrivacy" />
+      <text value="Einverständnis des Patienten zum Datenschutz" />
+      <type value="string" />
+    </item>
+    <item>
+      <linkId value="consent.research" />
+      <text value="Einverständnis des Patienten zur Forschung" />
+      <type value="string" />
+    </item>
+    <item>
+      <linkId value="consent.advancedCareDirective" />
+      <text value="Patientenverfügung" />
+      <type value="string" />
+    </item>
+  </item>
+  <!-- item[9] coverage -->
+  <item>
+    <linkId value="coverage" />
+    <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.insurance" />
+    <text value="Kostenträger" />
+    <type value="group" />
+    
+    <item>
+      <linkId value="coverage.uvg" />
+      <text value="Unfallversicherung (nach UVG)" />
+      <type value="string" />
+    </item>
+
+    <item>
+      <linkId value="coverage.kvg" />
+      <text value="Grundversicherung (nach KVG)" />
+      <type value="string" />
+    </item>
+    <item>
+      <linkId value="coverage.vvg" />
+      <text value="Zusatzversicherung (nach VVG)" />
+      <type value="string" />
+    </item>
+    <item>
+      <linkId value="coverage.vvgOther" />
+      <text value="Andere (nach VVG)" />
+      <type value="string" />
+    </item>
+
+  </item>
+  
+
+  <!-- item[10] previousResult  -->
+  <item>
+    <linkId value="previousResult" />
+    <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.supportingInfo" />
+    <text value="Vorheriges Untersuchungsresultat" />
+    <type value="group" />
+    <item>
+      <linkId value="previousResult.result" />
+      <text value="Untersuchungsresultat" />
+      <type value="string" />
+      <repeats value="true" />
+    </item>
+  </item>
+ 
 </Questionnaire>
