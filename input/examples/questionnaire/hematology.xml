@@ -22,7 +22,7 @@
     <experimental value="true" />
     <subjectType value="Patient"/>
     <date value="2018-04-12"/>
-    <publisher value="eHealth Suisse"/>
+    <publisher value="HL7 Switzerland"/>
     <item>
         <linkId value="info"/>
         <text value="Lab Order Questionnarie Example for a Hematology"/>

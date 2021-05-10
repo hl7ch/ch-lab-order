@@ -1,19 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Composition xmlns="http://hl7.org/fhir">
   <id value="4-sepsis"/>
   <meta>
-      <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+    <versionId value="1" />
+    <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+    <source value="#AOvDxhC0zhsHQDK9" />
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   </meta>
   <text>
       <status value="generated"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">
-          Referral 4-sepsis
-      </div>
+      <div xmlns="http://www.w3.org/1999/xhtml"> Referral 4-sepsis </div>
   </text>
 
-  <identifier>
-      <system value="http://test.fhir.ch/id/uuid"/>
-      <value value="26d3dff7-ab05-4737-a49c-5eccd3359504"/>
-  </identifier>
+  <!-- 
+  <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+    <extension url="enterer">
+      <valueReference>
+        <reference value="PractitionerRole/SabineMeierKantonsspital" /> 
+      </valueReference>
+    </extension>
+  </extension>
+  
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/NotificationContactEvaErlenmeyerLaborPipette" />
+    </valueReference>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
+    </valueReference>
+  </extension>
+
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
+    </valueReference>
+  </extension>
+  -->
+
   <status value="final"/>
 
   <type>
@@ -38,7 +65,7 @@
   <date value="2019-03-31T11:46:09+02:00"/>
 
   <author>
-      <reference value="PractitionerRole/HansHauserRegionalspitalZugersee"/>
+      <reference value="PractitionerRole/SabineMeierKantonsspital"/>
   </author>
   <title value="Referral 4-sepsis"/>
 
@@ -46,7 +73,7 @@
       <mode value="professional"/>
       <time value="2010-03-12T11:46:09+02:00"/>
       <party>
-          <reference value="Organization/RegionalspitalZugersee"/>
+          <reference value="Organization/Kantonsspital"/>
       </party>
   </attester>
 

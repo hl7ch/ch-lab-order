@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="order-referral-form" />
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+            Order-Referral-Form
+        </div>
+  </text>
+
+  <!-- extensions , same persons as 1-tvt -->
+  <!-- data entry person 
+  <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+    <extension url="enterer">
+      <valueReference>
+        <reference value="Practitioner/MarcMustermann" />
+      </valueReference>
+    </extension>
+  </extension>
+  -->
+
+  <!-- ch-orf-urgentnoficationcontactforthisdocument, Eva Erlenmeyer 
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+    </valueReference>
+  </extension>
+  -->
+
+  <!-- ch-orf-urgentnoficationcontactfortheresponsetothisdocument, referring doctor: Practitioner/MarcMustermann 
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/NotificationContactSabineMeier" />
+    </valueReference>
+  </extension>
+  -->
+
+  <!-- ch-orf-responsereceiver,  
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+    <valueReference>
+      <reference value="Organization/" />
+    </valueReference>
+  </extension>
+  -->
+
+  <status value="final" />
+  <type>
+    <coding>
+      <system value="urn:oid:2.16.756.5.30.1.127.3.4" />
+      <code value="2161000195103" />
+      <display value="Imaging order (record articact)" />
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="721963009" />
+      <display value="Order (record artifact)" />
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/ErikaMusterfrau" />
+  </subject>
+  <date value="2019-03-31T11:46:09+02:00" />
+  <author>
+    <reference value="PractitionerRole/SabineMeierPraxisSeeblick" />
+  </author>
+  <title value="Order-Referral-Form" />
+  <section>
+    <title value="Order-Referral-Form" />
+    <text>
+      <status value="generated" />
+      <div xmlns="http://www.w3.org/1999/xhtml">
+                Order-Referral-Form
+            </div>
+    </text>
+    <entry>
+      <reference value="Questionnaire/order-referral-form" />
+    </entry>
+    <entry>
+      <reference value="QuestionnaireResponse/order-referral-form" />
+    </entry>
+    <entry>
+      <reference value="ServiceRequest/order-referral-form" />
+    </entry>
+  </section>
+</Composition>
