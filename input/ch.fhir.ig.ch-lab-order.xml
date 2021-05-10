@@ -701,13 +701,6 @@
 
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-lab-order-document" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ch-lab-order-precedentdocument" />
       </reference>
       <exampleBoolean value="false" />

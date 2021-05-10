@@ -8,38 +8,30 @@
     <source value="#AOvDxhC0zhsHQDK9" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml"> Referral 5-biol-monit </div>
-  </text>
 
-  <!-- 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
       <valueReference>
-        <reference value="PractitionerRole/PauloPorcelliniSuva" /> 
+        <reference value="PractitionerRole/PauloPorcelliniSuva" />
       </valueReference>
     </extension>
   </extension>
 
-  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
     <valueReference>
-      <reference value="PractitionerRole/NotificationContactEvaErlenmeyerLaborPipette" />
+      <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
     </valueReference>
   </extension>
-
-  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
     <valueReference>
-      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
+      <reference value="Organization/Gruppenpraxis" />
     </valueReference>
   </extension>
-
-  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver">
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
     <valueReference>
-      <reference value="PractitionerRole/ResponseReceiverGruppenpraxis" /> 
+      <reference value="Organization/SpeiserRails" />
     </valueReference>
   </extension>
-  -->
 
   <status value="final" />
 
