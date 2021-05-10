@@ -19,21 +19,33 @@
       <Composition xmlns="http://hl7.org/fhir">
         <id value="3-gyn" />
         <meta>
+          <versionId value="1" />
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+          <source value="#AOvDxhC0zhsHQDK9" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
-        <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
-                Referral 3-gyn
-            </div>
-        </text>
-      
-        <identifier>
-          <system value="http://test.fhir.ch/id/uuid" />
-          <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
-        </identifier>
+
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/PeterPapGruppenpraxis" />
+            </valueReference>
+          </extension>
+        </extension>
+
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis" />
+          </valueReference>
+        </extension>
+
         <status value="final" />
-      
+
         <type>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -41,7 +53,7 @@
             <display value="Laboratory order (record artifact)" />
           </coding>
         </type>
-      
+
         <category>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -49,17 +61,17 @@
             <display value="Order (record artifact)" />
           </coding>
         </category>
-      
+
         <subject>
           <reference value="Patient/MarinaRubella" />
         </subject>
         <date value="2020-03-31T11:46:09+02:00" />
-      
+
         <author>
           <reference value="PractitionerRole/PeterPapGruppenpraxis" />
         </author>
         <title value="Referral 3-gyn" />
-      
+
         <attester>
           <mode value="professional" />
           <time value="2010-03-12T11:46:09+02:00" />
@@ -67,7 +79,7 @@
             <reference value="Practitioner/PeterPap" />
           </party>
         </attester>
-      
+
         <!-- sections -->
         <section>
           <title value="Referral" />
@@ -96,83 +108,83 @@
     <fullUrl value="http://example.com/fhir/Patient/MarinaRubella" />
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
-        <id value="MarinaRubella"/>
+        <id value="MarinaRubella" />
         <meta>
-          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
         </meta>
-      
+
         <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
           <valueAddress>
-            <city value="Mendrisio"/>
-            <country value="Schweiz"/>
+            <city value="Mendrisio" />
+            <country value="Schweiz" />
           </valueAddress>
         </extension>
         <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
           <valueAddress>
-            <city value="Airolo"/>
-            <state value="TI"/>
+            <city value="Airolo" />
+            <state value="TI" />
           </valueAddress>
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
           <valueCodeableConcept>
             <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
-              <code value="1077"/>
-              <display value="Protestant"/>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation" />
+              <code value="1077" />
+              <display value="Protestant" />
             </coding>
           </valueCodeableConcept>
         </extension>
-      
+
         <identifier>
           <type>
             <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-              <code value="MR"/> <!-- Medical Record Number-->
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="MR" /> <!-- Medical Record Number-->
             </coding>
           </type>
-          <system value="urn:oid:2.16.756.5.30.999999.1"/>
-          <value value="012/08.111106"/>
+          <system value="urn:oid:2.16.756.5.30.999999.1" />
+          <value value="012/08.111106" />
         </identifier>
-      
+
         <name>
-          <use value="official"/>
+          <use value="official" />
           <family value="Rubella">
             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name">
-              <valueCode value="officialName"/>
+              <valueCode value="officialName" />
             </extension>
           </family>
           <given value="Marina">
             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-firstname">
-              <valueCode value="officialFirstName"/>
+              <valueCode value="officialFirstName" />
             </extension>
           </given>
         </name>
         <name>
-          <use value="maiden"/>
+          <use value="maiden" />
           <family value="Meier">
             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name">
-              <valueCode value="originalName"/>
+              <valueCode value="originalName" />
             </extension>
           </family>
         </name>
-        <gender value="female"/>
-        <birthDate value="1992-08-08"/>
+        <gender value="female" />
+        <birthDate value="1992-08-08" />
         <maritalStatus>
           <coding>
-            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
-            <code value="2"/>
-            <display value="verheiratet"/>
+            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus" />
+            <code value="2" />
+            <display value="verheiratet" />
           </coding>
         </maritalStatus>
         <communication>
           <language>
             <coding>
-              <system value="urn:ietf:bcp:47"/>
-              <code value="it-CH"/>
+              <system value="urn:ietf:bcp:47" />
+              <code value="it-CH" />
             </coding>
-            <text value="Italienisch (Schweiz)"/>
+            <text value="Italienisch (Schweiz)" />
           </language>
-          <preferred value="true"/>
+          <preferred value="true" />
         </communication>
       </Patient>
     </resource>
@@ -263,7 +275,7 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <!-- extensions -->
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle" />
@@ -293,7 +305,7 @@
             <expression value="%Bundle.entry[0].resource.author.resolve().ofType(Practitioner)" />
           </valueExpression>
         </extension>
-      
+
         <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
@@ -302,7 +314,7 @@
         <subjectType value="Patient" />
         <date value="2018-04-12" />
         <publisher value="HL7 Switzerland" />
-      
+
         <!-- item[0] Questionnaire Example: order -->
         <item>
           <linkId value="order" />
@@ -327,7 +339,7 @@
             <text value="Auftragsnummer des Auftragsempfängers" />
             <type value="string" />
           </item>
-      
+
           <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
               <valueBoolean value="true" />
@@ -449,7 +461,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[1] Receiver: Person/organization who receives the request -->
         <item>
           <linkId value="receiver" />
@@ -522,7 +534,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
         <item>
           <linkId value="patient" />
@@ -612,7 +624,7 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -722,7 +734,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -786,7 +798,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[5] lab specialty, here: Cytology and Microbiology-->
         <item>
           <linkId value="cytology" />
@@ -797,7 +809,7 @@
             <text value="Cervical Smear" />
             <type value="choice" />
             <repeats value="true" />
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -814,7 +826,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[6] lab specialty, here: Urin Analysis -->
         <item>
           <linkId value="urin" />
@@ -834,7 +846,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[7] lab specialty, here: Obstetrical Panels-->
         <item>
           <linkId value="obstetricalPanels" />
@@ -877,11 +889,11 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn" />
         <status value="completed" />
-      
-          <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
+
+        <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
@@ -906,7 +918,7 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
-      
+
           <!-- item[0][4]order.notificationContactDocument-->
           <item>
             <linkId value="order.notificationContactDocument" />
@@ -951,7 +963,7 @@
               </item>
             </item>
           </item>
-      
+
           <!-- item[0][5]order.notificationContactDocumentResponse-->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
@@ -1007,12 +1019,12 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[1] receiver, Person/organization who receives the Order -->
         <item>
           <linkId value="receiver" />
           <text value="Empfänger" />
-      
+
           <!-- item[1][0] receiver Practitioner who receives Order -->
           <item>
             <linkId value="receiver.practitioner" />
@@ -1060,7 +1072,7 @@
               </answer>
             </item>
           </item>
-      
+
           <!-- item[1][1] receiver Organization which receives Order -->
           <item>
             <linkId value="receiver.organization" />
@@ -1105,7 +1117,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1201,7 +1213,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1209,7 +1221,7 @@
           <item>
             <linkId value="sender.author" />
             <text value="Verantwortlicher" />
-      
+
             <!-- item[3][0][0] sender, sender.author.practitioner -->
             <item>
               <linkId value="sender.author.practitioner" />
@@ -1257,7 +1269,7 @@
                 </answer>
               </item>
             </item>
-      
+
             <!-- item[3][0][1] sender, sender.author.organization -->
             <item>
               <linkId value="sender.author.organization" />
@@ -1302,7 +1314,7 @@
               </item>
             </item>
           </item>
-      
+
           <!-- item[3][1][0] sender, sender.dataenterer -->
           <item>
             <linkId value="sender.dataenterer" />
@@ -1341,7 +1353,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -1456,7 +1468,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[5] lab specialty, here: Cytology and Microbiology-->
         <item>
           <linkId value="cytology" />
@@ -1464,7 +1476,7 @@
           <item>
             <linkId value="cervicalSmear" />
             <text value="Cervical Smear" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1481,7 +1493,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[6] lab specialty, here: Urin Analysis -->
         <item>
           <linkId value="urin" />
@@ -1498,7 +1510,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[7] lab specialty, here: Obstetrical Panels-->
         <item>
           <linkId value="obstetricalPanels" />
@@ -1519,7 +1531,7 @@
       </QuestionnaireResponse>
     </resource>
   </entry>
-  
+
   <!-- entry[7] serviceRequest -->
   <entry>
     <fullUrl value="http://example.com/fhir/ServiceRequest/3-gyn" />
@@ -1529,6 +1541,7 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
+
         <identifier>
           <type>
             <coding>
@@ -1540,24 +1553,24 @@
           <system value="urn:oid:1.3.4.5.6.7" />
           <value value="123" />
         </identifier>
-        <!--<identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                    <code value="FILL"/>
-                    <display value="Filler Identifier"/>
-                </coding>
-            </type>
-            <system value="urn:oid:7.6.5.4.3.2"/>
-            <value value="765432"/>
-        </identifier>-->
-      
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="FILL" />
+              <display value="Filler Identifier" />
+            </coding>
+          </type>
+          <system value="urn:oid:7.8.9.10.11" />
+          <value value="456" />
+        </identifier>
+
         <status value="active" />
         <!-- draft | active | on-hold | revoked | completed | entered-in-error | unknown -->
-      
+
         <intent value="original-order" />
         <!-- proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option -->
-      
+
         <category>
           <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
           <!-- Value Set http://hl7.org/fhir/ValueSet/servicerequest-category -->
@@ -1567,9 +1580,9 @@
           </coding>
           <text value="Laboratory procedure (procedure)" />
         </category>
-      
+
         <priority value="routine" /> <!-- 0..1 routine | urgent | asap | stat -->
-      
+
         <subject>
           <reference value="Patient/MarinaRubella" />
         </subject>
@@ -1578,22 +1591,7 @@
           Patient|RelatedPerson|Device) Who/what is requesting service -->
           <reference value="PractitionerRole/PeterPapGruppenpraxis" />
         </requester>
-      
-        <performerType>
-          <!-- 0..1 CodeableConcept Performer role -->
-          <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="61246008" />
-          </coding>
-          <text value="Laboratory medicine specialist (occupation)" />
-        </performerType>
-      
-        <performer>
-          <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-          CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
-        </performer>
-      
+
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1602,32 +1600,32 @@
           </coding>
           <text value="Routine gynecologic examination (procedure)" />
         </reasonCode>
-      
+
         <insurance>
           <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
           <reference value="Coverage/HealthInsuranceCard" />
         </insurance>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/cervix-swab" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/serum" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/urin" />
         </specimen>
-      
+
       </ServiceRequest>
     </resource>
   </entry>

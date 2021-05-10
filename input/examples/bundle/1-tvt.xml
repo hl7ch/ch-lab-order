@@ -19,21 +19,36 @@
       <Composition xmlns="http://hl7.org/fhir">
         <id value="1-tvt" />
         <meta>
+          <versionId value="1" />
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+          <source value="#AOvDxhC0zhsHQDK9" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
-        <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
-                Referral 1-tvt
-            </div>
-        </text>
 
-        <identifier>
-          <system value="http://test.fhir.ch/id/uuid" />
-          <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
-        </identifier>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/MarcMustermannArztpraxis" />
+            </valueReference>
+          </extension>
+        </extension>
+
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis" />
+          </valueReference>
+        </extension>
+
         <status value="final" />
+        <!-- preliminary | final | amended | entered-in-error -->
+        <!-- vorläufig | final | geändert | irrtümlich eingegeben -->
 
+        <!-- DocumentEntry.type for Lab: -->
         <type>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -41,6 +56,25 @@
             <display value="Laboratory order (record artifact)" />
           </coding>
         </type>
+        <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+          Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27)
+          721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
+        -->
+
+        <!-- DocumentEntry.type for Pathology: 
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="721966001" />
+            <display value="Pathology order (record artifact)" />
+          </coding>
+        </type>
+        -->
+
+        <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+          Value Set: DocumentEntry.typeCode (OID: 2.16.756.5.30.1.127.3.10.1.27c)
+          721965002 Laboratory order (record artifact) 2.16.840.1.113883.6.96
+        -->
 
         <category>
           <coding>
@@ -49,6 +83,10 @@
             <display value="Order (record artifact)" />
           </coding>
         </category>
+        <!-- Metadaten für den Austausch medizinischer Daten, Anhang 3
+          Value Set: DocumentEntry.classCode (OID: 2.16.756.5.30.1.127.3.10.1.3)
+          721963009 Order (record artifact) 2.16.840.1.113883.6.96
+        -->
 
         <subject>
           <reference value="Patient/HansGuggindieluft" />
@@ -969,10 +1007,10 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
         <status value="completed" />
-      
+
         <!-- item[0] order, order-referral-form QuestionnaireResponse -->
         <item>
           <linkId value="order" />
@@ -1095,7 +1133,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[1] receiver, Person/organization who receives the response -->
         <item>
           <linkId value="receiver" />
@@ -1189,7 +1227,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1285,7 +1323,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1419,7 +1457,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -1534,7 +1572,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[5] Specialty Hematology Auto Differential panel - Blood -->
         <item>
           <linkId value="hematology" />
@@ -1542,7 +1580,7 @@
           <item>
             <linkId value="hemato-subset" />
             <text value="Hämatologie Subset" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1580,7 +1618,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[6] Specialty Coagulation D-Dimer -->
         <item>
           <linkId value="coagulation" />
@@ -1588,7 +1626,7 @@
           <item>
             <linkId value="d-dimer" />
             <text value="D-Dimer" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1598,17 +1636,17 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[7] Clinical chemistry: CRP C reactive Protein-->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
-      
+
           <!-- item[7.0] CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
             <text value="CRP" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1631,6 +1669,7 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
+
         <identifier>
           <type>
             <coding>
@@ -1642,17 +1681,17 @@
           <system value="urn:oid:1.3.4.5.6.7" />
           <value value="123" />
         </identifier>
-        <!--<identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                    <code value="FILL"/>
-                    <display value="Filler Identifier"/>
-                </coding>
-            </type>
-            <system value="urn:oid:7.6.5.4.3.2"/>
-            <value value="765432"/>
-        </identifier>-->
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="FILL" />
+              <display value="Filler Identifier" />
+            </coding>
+          </type>
+          <system value="urn:oid:7.8.9.10.11" />
+          <value value="456" />
+        </identifier>
 
         <status value="active" />
         <!-- draft | active | on-hold | revoked | completed | entered-in-error | unknown -->
@@ -1681,22 +1720,6 @@
           <reference value="PractitionerRole/MarcMustermannArztpraxis" />
         </requester>
 
-        <performerType>
-          <!-- 0..1 CodeableConcept Performer role -->
-          <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="61246008" />
-          </coding>
-          <text value="Laboratory medicine specialist (occupation)" />
-        </performerType>
-
-        <performer>
-          <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-          CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-          <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
-        </performer>
-
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1721,6 +1744,7 @@
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
         </specimen>
+
       </ServiceRequest>
     </resource>
   </entry>

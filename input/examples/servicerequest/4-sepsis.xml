@@ -49,7 +49,7 @@
   <requester>
     <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
     Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="PractitionerRole/SabineMeierKantonsspital" />
+    <reference value="PractitionerRole/HansHauserKantonsspital" />
   </requester>
 
   <reasonCode>

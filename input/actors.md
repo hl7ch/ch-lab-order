@@ -83,25 +83,25 @@ ID Patient:
 2.999:  23541654
 Erstellt am:  16. März 2018  Geschlecht:  weiblich
 
-Empfänger:  Regionalspital Zugersee
+Empfänger:  Kantonsspital Zug
 Spitalstr. 23
 8888 Musterhausen
 Tel Geschäft: +41.32.211.11.11
-Absender:  Regionalspital Zugersee
+Absender:  Kantonsspital Zug
 Spitalstr. 23
 8888 Musterhausen
 Tel Geschäft: +41.32.211.11.11
-Autor:  Regionalspital Zugersee
+Autor:  Kantonsspital Zug
 Dr. med. Theo Klug am 16. März 2018
 Spitalstr. 23
 8888 Musterhausen
 Tel Geschäft: +41.32.211.11.11
-Mail Geschäft: info@regionalspital-zugersee.ch
+Mail Geschäft: info@kantonsspital-zug.ch
 Spitalstr. 23
 8888 Musterhausen
 Tel Geschäft: +41.32.211.11.11
 Fax Geschäft: +41.32.211.11.54
-Web Geschäft: //www.regionalspital-zugersee.ch
+Web Geschäft: //www.kantonsspital-zug.ch
 Autor:  Labor Pipette
 LIS am 15. März 2018
 Laborstrasse 23
