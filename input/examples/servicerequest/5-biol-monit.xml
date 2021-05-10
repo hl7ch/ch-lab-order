@@ -52,22 +52,6 @@
     <reference value="PractitionerRole/PauloPorcelliniSuva"/>
   </requester>
 
-  <performerType>
-    <!-- 0..1 CodeableConcept Performer role -->
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="61246008" />
-    </coding>
-    <text value="Laboratory medicine specialist (occupation)" />
-  </performerType>
-
-  <performer>
-    <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-    <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
-  </performer>
-
   <reasonCode>
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
     <coding>
