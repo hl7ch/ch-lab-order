@@ -5,10 +5,16 @@
   <meta>
     <versionId value="1" />
     <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
-    <source value="#AOvDxhC0zhsHQDK9" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        Order-Referral-Form|1-tvt
+    </div>
+  </text>
 
+  <!-- extension date enterer-->
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
       <valueReference>
@@ -17,14 +23,32 @@
     </extension>
   </extension>
 
+  <!-- extension urgentnoficationcontactforthisdocument, urgentnoficationcontactfortheresponsetothisdocument-->
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+    </valueReference>
+  </extension>
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/MarcMustermannArztpraxis" />
+    </valueReference>
+  </extension>
+  <!-- extension  receiver -->
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
     <valueReference>
       <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
     </valueReference>
   </extension>
+  <!-- extension copy receiver, 0..n-->
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
     <valueReference>
       <reference value="Organization/Gruppenpraxis" />
+    </valueReference>
+  </extension>
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+    <valueReference>
+      <reference value="Patient/HansGuggindieluft" />
     </valueReference>
   </extension>
 
@@ -80,15 +104,7 @@
   <author>
     <reference value="PractitionerRole/MarcMustermannArztpraxis" />
   </author>
-  <title value="Referral 1-tvt" />
-
-  <attester>
-    <mode value="professional" />
-    <time value="2010-03-12T11:46:09+02:00" />
-    <party>
-      <reference value="Practitioner/MarcMustermann" />
-    </party>
-  </attester>
+  <title value="Order-Referral-Form 1-tvt" />
 
   <!-- sections -->
   <section>
@@ -96,7 +112,7 @@
     <text>
       <status value="generated" />
       <div xmlns="http://www.w3.org/1999/xhtml">
-        Referral 1-tvt
+        Order-Referral-Form 1-tvt
       </div>
     </text>
     <entry>
