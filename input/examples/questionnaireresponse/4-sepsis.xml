@@ -446,7 +446,7 @@
       <text value="Erfasser" />
       <item>
         <linkId value="sender.dataenterer.practitioner" />
-        <text value="Erfassende Person, z.B. Gesundheitsfachperson" />
+        <text value="Erfassende Person" />
         <item>
           <linkId value="sender.dataenterer.practitioner.familyName" />
           <text value="Name" />
@@ -487,7 +487,7 @@
     <!-- item[4][0] receiver Copy Organization-->
     <item>
       <linkId value="receiverCopy" />
-      <text value="Kopieempfangende Organisation oder Person, z.B. Vormund" />
+      <text value="Kopieempfangende Organisation oder Person" />
       <item>
         <linkId value="receiverCopy.organization.name" />
         <text value="Name der Organisation" />
@@ -533,7 +533,7 @@
     </item>
     <item>
       <linkId value="receiverCopy" />
-      <text value="Kopieempfangende Organisation oder Person, z.B. Vormund" />
+      <text value="Kopieempfangende Organisation oder Person" />
       <item>
         <linkId value="receiverCopy.familyName" />
         <text value="Name" />

@@ -21,10 +21,16 @@
         <meta>
           <versionId value="1" />
           <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
-          <source value="#AOvDxhC0zhsHQDK9" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
+        <text>
+          <status value="generated" />
+          <div xmlns="http://www.w3.org/1999/xhtml">
+              Order-Referral-Form|4-sepsis
+          </div>
+        </text>
 
+        <!-- extension date enterer-->
         <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
           <extension url="enterer">
             <valueReference>
@@ -33,16 +39,35 @@
           </extension>
         </extension>
 
+        <!-- extension urgentnoficationcontactforthisdocument, urgentnoficationcontactfortheresponsetothisdocument-->
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/HansHauserKantonsspital" />
+          </valueReference>
+        </extension>
+        <!-- extension  receiver -->
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
           <valueReference>
             <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
           </valueReference>
         </extension>
+        <!-- extension copy receiver, 0..n-->
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
           <valueReference>
             <reference value="Organization/Gruppenpraxis" />
           </valueReference>
         </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Patient/KlebsiellaKeller" />
+          </valueReference>
+        </extension>
+
         <status value="final" />
 
         <type>
@@ -71,21 +96,13 @@
         </author>
         <title value="Referral 4-sepsis" />
 
-        <attester>
-          <mode value="professional" />
-          <time value="2010-03-12T11:46:09+02:00" />
-          <party>
-            <reference value="Organization/Kantonsspital" />
-          </party>
-        </attester>
-
         <!-- sections -->
         <section>
           <title value="Referral" />
           <text>
             <status value="generated" />
             <div xmlns="http://www.w3.org/1999/xhtml">
-                Referral 4-sepsis
+              Order-Referral-Form 4-sepsis
               </div>
           </text>
           <entry>
@@ -949,10 +966,10 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-
+      
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis" />
         <status value="completed" />
-
+      
         <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
         <item>
           <linkId value="order" />
@@ -978,7 +995,7 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
-
+      
           <!-- item[0][4]order.notificationContactDocument-->
           <item>
             <linkId value="order.notificationContactDocument" />
@@ -1023,7 +1040,7 @@
               </item>
             </item>
           </item>
-
+      
           <!-- item[0][5]order.notificationContactDocumentResponse-->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
@@ -1079,12 +1096,12 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[1] receiver, Person/organization who receives the response -->
         <item>
           <linkId value="receiver" />
           <text value="Empfänger" />
-
+      
           <!-- item[1][0] receiver Practitioner who receives Order -->
           <item>
             <linkId value="receiver.practitioner" />
@@ -1132,7 +1149,7 @@
               </answer>
             </item>
           </item>
-
+      
           <!-- item[1][1] receiver Organization which receives Order -->
           <item>
             <linkId value="receiver.organization" />
@@ -1177,7 +1194,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1273,7 +1290,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1281,7 +1298,7 @@
           <item>
             <linkId value="sender.author" />
             <text value="Verantwortlicher" />
-
+      
             <!-- item[3][0][0] sender, sender.author.practitioner -->
             <item>
               <linkId value="sender.author.practitioner" />
@@ -1329,7 +1346,7 @@
                 </answer>
               </item>
             </item>
-
+      
             <!-- item[3][0][1] sender, sender.author.organization -->
             <item>
               <linkId value="sender.author.organization" />
@@ -1374,14 +1391,14 @@
               </item>
             </item>
           </item>
-
+      
           <!-- item[3][1][0] sender, sender.dataenterer -->
           <item>
             <linkId value="sender.dataenterer" />
             <text value="Erfasser" />
             <item>
               <linkId value="sender.dataenterer.practitioner" />
-              <text value="Erfassende Person, z.B. Gesundheitsfachperson" />
+              <text value="Erfassende Person" />
               <item>
                 <linkId value="sender.dataenterer.practitioner.familyName" />
                 <text value="Name" />
@@ -1413,16 +1430,16 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
           <text value="Kopieempfänger" />
-
+      
           <!-- item[4][0] receiver Copy Organization-->
           <item>
             <linkId value="receiverCopy" />
-            <text value="Kopieempfangende Organisation oder Person, z.B. Vormund" />
+            <text value="Kopieempfangende Organisation oder Person" />
             <item>
               <linkId value="receiverCopy.organization.name" />
               <text value="Name der Organisation" />
@@ -1468,7 +1485,7 @@
           </item>
           <item>
             <linkId value="receiverCopy" />
-            <text value="Kopieempfangende Organisation oder Person, z.B. Vormund" />
+            <text value="Kopieempfangende Organisation oder Person" />
             <item>
               <linkId value="receiverCopy.familyName" />
               <text value="Name" />
@@ -1530,8 +1547,8 @@
             </item>
           </item>
         </item>
-
-
+      
+      
         <!-- Item #5 lab specialty, here: microbiology -->
         <item>
           <linkId value="hematology" />
@@ -1539,7 +1556,7 @@
           <item>
             <linkId value="lab" />
             <text value="Laborwerte" />
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1592,7 +1609,7 @@
               </valueCoding>
             </answer>
           </item>
-
+      
           <!-- Bacterial identification and susceptibility-->
           <item>
             <linkId value="id-susc" />
@@ -1606,7 +1623,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- CRP C reactive Protein-->
         <item>
           <linkId value="cc" />
@@ -1615,7 +1632,7 @@
           <item>
             <linkId value="crp" />
             <text value="CRP" />
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1623,7 +1640,7 @@
                 <display value="C reactive protein [Mass/Volume] in Serum or Plasma" />
               </valueCoding>
             </answer>
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1631,9 +1648,9 @@
                 <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
               </valueCoding>
             </answer>
-
+      
             <!-- CRP C reactive Protein High sensitivity method -->
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1641,7 +1658,7 @@
                 <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
               </valueCoding>
             </answer>
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1651,7 +1668,7 @@
             </answer>
           </item>
         </item>
-
+      
       </QuestionnaireResponse>
     </resource>
   </entry>
@@ -1665,7 +1682,7 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
-      
+
         <identifier>
           <type>
             <coding>
@@ -1682,13 +1699,13 @@
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
               <code value="FILL" />
-              <display value="Filler Identifier"/>
+              <display value="Filler Identifier" />
             </coding>
           </type>
           <system value="urn:oid:7.8.9.10.11" />
           <value value="456" />
         </identifier>
-        
+
         <status value="active" />
         <intent value="original-order" />
         <category>
@@ -1701,17 +1718,17 @@
           <text value="Laboratory procedure (procedure)" />
         </category>
         <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
-      
+
         <subject>
           <reference value="Patient/KlebsiellaKeller" />
         </subject>
-      
+
         <requester>
           <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
           Patient|RelatedPerson|Device) Who/what is requesting service -->
           <reference value="PractitionerRole/HansHauserKantonsspital" />
         </requester>
-      
+
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
           <coding>
@@ -1720,27 +1737,27 @@
           </coding>
           <text value="Screening for sepsis (procedure)" />
         </reasonCode>
-      
+
         <insurance>
           <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
           <reference value="Coverage/HealthInsuranceCard" />
         </insurance>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood-bactec-plus" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/blood" />
         </specimen>
-      
+
         <specimen>
           <!-- 0..* Reference(Specimen) Procedure Samples -->
           <reference value="Specimen/urin" />
         </specimen>
-      
+
       </ServiceRequest>
     </resource>
   </entry>

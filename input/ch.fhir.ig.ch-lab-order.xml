@@ -466,14 +466,6 @@
       <name value="questionnaire hematology" />
       <description value="Example for Sample Laboratory Order Questionnaire in Hematology" />
     </resource>
-
-    <resource>
-      <reference>
-        <reference value="Questionnaire/order-referral-form" />
-      </reference>
-      <name value="questionnaire Order Referral Form" />
-      <description value="Example for Laboratory Order Questionnaire: Sample" />
-    </resource>
     
     <resource>
       <reference>

@@ -14,6 +14,7 @@
     </div>
   </text>
 
+  <!-- extension date enterer-->
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
       <valueReference>
@@ -22,16 +23,35 @@
     </extension>
   </extension>
 
+  <!-- extension urgentnoficationcontactforthisdocument, urgentnoficationcontactfortheresponsetothisdocument-->
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+    </valueReference>
+  </extension>
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+    <valueReference>
+      <reference value="PractitionerRole/HansHauserKantonsspital" />
+    </valueReference>
+  </extension>
+  <!-- extension  receiver -->
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
     <valueReference>
       <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
     </valueReference>
   </extension>
+  <!-- extension copy receiver, 0..n-->
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
     <valueReference>
       <reference value="Organization/Gruppenpraxis" />
     </valueReference>
   </extension>
+  <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+    <valueReference>
+      <reference value="Patient/KlebsiellaKeller" />
+    </valueReference>
+  </extension>
+
   <status value="final" />
 
   <type>
