@@ -31,15 +31,7 @@
   
   <status value="active" />
   <intent value="original-order" />
-  <category>
-    <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
-    <!-- Value Set http://hl7.org/fhir/ValueSet/servicerequest-category -->
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="108252007" />
-    </coding>
-    <text value="Laboratory procedure (procedure)" />
-  </category>
+
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
@@ -66,6 +58,7 @@
     <reference value="Coverage/HealthInsuranceCard" />
   </insurance>
 
+  <!-- 3 Specimens belong to this lab-order servicerequest -->
   <specimen>
     <!-- 0..* Reference(Specimen) Procedure Samples -->
     <reference value="Specimen/blood-bactec-plus" />
