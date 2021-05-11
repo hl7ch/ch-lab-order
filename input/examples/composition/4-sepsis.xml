@@ -5,9 +5,14 @@
   <meta>
     <versionId value="1" />
     <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
-    <source value="#AOvDxhC0zhsHQDK9" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        Order-Referral-Form|4-sepsis
+    </div>
+  </text>
 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
@@ -55,21 +60,13 @@
   </author>
   <title value="Referral 4-sepsis" />
 
-  <attester>
-    <mode value="professional" />
-    <time value="2010-03-12T11:46:09+02:00" />
-    <party>
-      <reference value="Organization/Kantonsspital" />
-    </party>
-  </attester>
-
   <!-- sections -->
   <section>
     <title value="Referral" />
     <text>
       <status value="generated" />
       <div xmlns="http://www.w3.org/1999/xhtml">
-          Referral 4-sepsis
+        Order-Referral-Form 4-sepsis
         </div>
     </text>
     <entry>
