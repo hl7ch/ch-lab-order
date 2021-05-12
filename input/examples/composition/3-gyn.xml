@@ -5,9 +5,15 @@
   <meta>
     <versionId value="1" />
     <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
-    <source value="#AOvDxhC0zhsHQDK9" />
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
   </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        Order-Referral-Form|3-gyn
+    </div>
+  </text>
+
 
   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
     <extension url="enterer">
@@ -16,6 +22,7 @@
       </valueReference>
     </extension>
   </extension>
+
 
   <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
     <valueReference>
@@ -55,14 +62,6 @@
     <reference value="PractitionerRole/PeterPapGruppenpraxis" />
   </author>
   <title value="Referral 3-gyn" />
-
-  <attester>
-    <mode value="professional" />
-    <time value="2010-03-12T11:46:09+02:00" />
-    <party>
-      <reference value="Practitioner/PeterPap" />
-    </party>
-  </attester>
 
   <!-- sections -->
   <section>
