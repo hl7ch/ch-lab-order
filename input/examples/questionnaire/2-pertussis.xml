@@ -9,13 +9,6 @@
     <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
     <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
   </meta>
-  <text>
-    <status value="generated" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      Lab Order Questionnarie Example Pertussis for blood smear and PCR
-      <pre>todo copy text out of rendering</pre>
-    </div>
-  </text>
 
   <!-- extensions -->
   <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">

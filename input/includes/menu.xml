@@ -22,6 +22,31 @@
       </li>
     </ul>
   </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+      Questionnaire
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Questionnaire-1-tvt.html">Tiefe Venenthrombose</a>
+      </li>
+      <li>
+        <a href="Questionnaire-2-pertussis.html">Pertussis</a>
+      </li>
+      <li>
+        <a href="Questionnaire-3-gyn.html">Gynäkologische Vorsorge</a>
+      </li>
+      <li>
+        <a href="Questionnaire-4-sepsis.html">Sepsis</a>
+      </li>
+      <li>
+        <a href="Questionnaire-5-biol-monit.html">Biologisches Monitoring</a>
+      </li>
+    </ul>
+  </li>
+
   <li>
     <a href="profiles.html">Profiles</a>
   </li>
