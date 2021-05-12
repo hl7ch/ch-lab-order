@@ -1,5 +1,6 @@
 <ServiceRequest xmlns="http://hl7.org/fhir">
-  <id value="lab" />
+  <id value="referral-min" />
+
   <meta>
     <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
   </meta>
@@ -29,30 +30,22 @@
 
 
   <status value="active" />
-  <!-- draft | active | on-hold | revoked | completed | entered-in-error | unknown -->
-
   <intent value="original-order" />
-  <!-- proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option -->
-
   <category>
     <!-- 0..* Classification of service, Service Request Category Codes (Example) -->
-    <!-- Value Set http://hl7.org/fhir/ValueSet/servicerequest-category -->
     <coding>
       <system value="http://snomed.info/sct" />
       <code value="108252007" />
     </coding>
     <text value="Laboratory procedure (procedure)" />
   </category>
-
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->
 
   <subject>
     <reference value="Patient/HansGuggindieluft" />
   </subject>
   <requester>
-    <!-- 0..1 Reference(Practitioner|PractitionerRole|Organization|
-    Patient|RelatedPerson|Device) Who/what is requesting service -->
-    <reference value="PractitionerRole/MarcMustermannArztpraxis" />
+    <reference value="PractitionerRole/MarcMustermannGruppenpraxisOlten" />
   </requester>
 
   <performerType>
@@ -65,29 +58,21 @@
   </performerType>
 
   <performer>
-    <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-    CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-    <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-    <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+    <reference value="PractitionerRole/PeterPapGruppenpraxisOlten" />
   </performer>
 
   <reasonCode>
     <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->
     <coding>
       <system value="http://snomed.info/sct" />
-      <code value="404223003" />
+      <code value="772146005" />
     </coding>
-    <text value="Deep venous thrombosis of lower extremity" />
+    <text value="Pertussis suspected (situation)" />
   </reasonCode>
 
-  <insurance>
-    <!-- 0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage -->
-    <reference value="Coverage/HealthInsuranceCard" />
-  </insurance>
-
+  <!-- Specimen, belongs to this laborder-service -->
   <specimen>
     <reference value="Specimen/serum" />
     <display value="Serum specimen" />
   </specimen>
-
 </ServiceRequest>

@@ -19,19 +19,36 @@
       <Composition xmlns="http://hl7.org/fhir">
         <id value="5-biol-monit" />
         <meta>
+          <versionId value="1" />
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
+          <source value="#AOvDxhC0zhsHQDK9" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
-        <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            Referral 5-biol-monit
-          </div>
-        </text>
 
-        <identifier>
-          <system value="http://test.fhir.ch/id/uuid" />
-          <value value="26d3dff7-ab05-4737-a49c-5eccd33595f7" />
-        </identifier>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/PauloPorcelliniSuva" />
+            </valueReference>
+          </extension>
+        </extension>
+
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/SpeiserRails" />
+          </valueReference>
+        </extension>
+
         <status value="final" />
 
         <type>
@@ -260,7 +277,7 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <!-- extensions -->
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle" />
@@ -290,7 +307,7 @@
             <expression value="%Bundle.entry[0].resource.author.resolve().ofType(Practitioner)" />
           </valueExpression>
         </extension>
-      
+
         <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
@@ -299,7 +316,7 @@
         <subjectType value="Patient" />
         <date value="2018-04-12" />
         <publisher value="HL7 Switzerland" />
-      
+
         <contact>
           <name value="HL7 Switzerland" />
           <telecom>
@@ -314,7 +331,7 @@
           </coding>
         </jurisdiction>
         <copyright value="CC-BY-SA-4.0" />
-      
+
         <!-- item[0] 5-biol-monit Questionnaire Example: order -->
         <item>
           <linkId value="order" />
@@ -339,7 +356,7 @@
             <text value="Auftragsnummer des Auftragsempfängers" />
             <type value="string" />
           </item>
-      
+
           <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
               <valueBoolean value="true" />
@@ -461,7 +478,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[1] 5-biol-monit Receiver: Person/organization who receives the request -->
         <item>
           <linkId value="receiver" />
@@ -534,7 +551,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
         <item>
           <linkId value="patient" />
@@ -624,7 +641,7 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -734,7 +751,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] Response Receiver: Person/organization who receives the response -->
         <item>
           <linkId value="receiverCopies" />
@@ -798,7 +815,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[5] lab specialty, here: Biological Monitoring -->
         <item>
           <linkId value="hematology" />
@@ -846,7 +863,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[6] Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />
@@ -902,10 +919,10 @@
             <pre>todo copy text out of rendering</pre>
           </div>
         </text>
-      
+
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
         <status value="completed" />
-      
+
         <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
         <item>
           <linkId value="order" />
@@ -931,7 +948,7 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
-      
+
           <!-- item[0][4]order.notificationContactDocument-->
           <item>
             <linkId value="order.notificationContactDocument" />
@@ -976,7 +993,7 @@
               </item>
             </item>
           </item>
-      
+
           <!-- item[0][5]order.notificationContactDocumentResponse-->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
@@ -1032,7 +1049,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[1] receiver, here only the Organization receives the response -->
         <item>
           <linkId value="receiver" />
@@ -1128,7 +1145,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1224,7 +1241,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1358,7 +1375,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -1473,7 +1490,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- Item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
@@ -1518,7 +1535,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[6]  lab specialty Toxicology, Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />
@@ -1562,6 +1579,7 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest" />
         </meta>
+
         <identifier>
           <type>
             <coding>
@@ -1573,17 +1591,18 @@
           <system value="urn:oid:1.3.4.5.6.7" />
           <value value="123" />
         </identifier>
-        <!--<identifier>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                    <code value="FILL"/>
-                    <display value="Filler Identifier"/>
-                </coding>
-            </type>
-            <system value="urn:oid:7.6.5.4.3.2"/>
-            <value value="765432"/>
-        </identifier>-->
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="FILL" />
+              <display value="Filler Identifier" />
+            </coding>
+          </type>
+          <system value="urn:oid:7.8.9.10.11" />
+          <value value="456" />
+        </identifier>
+
 
         <status value="active" />
         <intent value="original-order" />
@@ -1606,22 +1625,6 @@
           Patient|RelatedPerson|Device) Who/what is requesting service -->
           <reference value="PractitionerRole/PauloPorcelliniSuva" />
         </requester>
-
-        <performerType>
-          <!-- 0..1 CodeableConcept Performer role -->
-          <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="61246008" />
-          </coding>
-          <text value="Laboratory medicine specialist (occupation)" />
-        </performerType>
-
-        <performer>
-          <!-- 0..* Reference(Practitioner|PractitionerRole|Organization|
-          CareTeam|HealthcareService|Patient|Device|RelatedPerson) Requested performer -->
-          <!--<reference value="Organization/LaborPipette" /> braucht Anpassung bei ORF!! -->
-          <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
-        </performer>
 
         <reasonCode>
           <!-- 0..* CodeableConcept Explanation/Justification for procedure or service -->

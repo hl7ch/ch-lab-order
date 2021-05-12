@@ -450,9 +450,9 @@
 
     <resource>
       <reference>
-        <reference value="PractitionerRole/SabineMeierKantonsspital" />
+        <reference value="PractitionerRole/HansHauserKantonsspital" />
       </reference>
-      <name value="Sabine Meier Kantonsspital" />
+      <name value="Hans Hauser Kantonsspital" />
       <description value="Example for PractitionerRole" />
       <exampleBoolean value="true" />
     </resource>
@@ -465,14 +465,6 @@
       </reference>
       <name value="questionnaire hematology" />
       <description value="Example for Sample Laboratory Order Questionnaire in Hematology" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="Questionnaire/order-referral-form" />
-      </reference>
-      <name value="questionnaire Order Referral Form" />
-      <description value="Example for Laboratory Order Questionnaire: Sample" />
     </resource>
     
     <resource>
@@ -701,60 +693,10 @@
 
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-lab-order-document" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-precedentdocument" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-questionnaire" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-questionnaireresponse" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-responsereceiver" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ch-lab-order-servicerequest" />
       </reference>
       <exampleBoolean value="false" />
     </resource>
-
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-urgentnoficationcontactfortheresponsetothisdocument" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-lab-order-urgentnoficationcontactforthisdocument" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
 
     <!-- References to VALUESETS -->
     <!-- ####################### -->
