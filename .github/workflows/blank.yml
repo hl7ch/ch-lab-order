@@ -35,4 +35,6 @@ jobs:
     - name: Markdown Linting Action
       uses: avto-dev/markdown-lint@v1.1.0
       with:
+        rules: '/lint/rules/markdown.js'
+        config: '/lint/config/markdown.yml'
         args: '*.md'
