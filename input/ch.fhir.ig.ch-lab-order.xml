@@ -11,7 +11,7 @@
   <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order" />
   <version value="0.0.1" />
   <name value="CH_LAB_ORDER" />
-  <title value="CH-LAB-ORDER (R4)" />
+  <title value="CH LAB-order (R4)" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-09-03" /> <!-- last changed -->
@@ -675,13 +675,7 @@
 
     <!-- References to code systems -->
     <!-- ########################## -->
-    <resource>
-      <reference>
-        <reference value="CodeSystem/ig-example" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
+    
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
     <resource>
@@ -700,12 +694,6 @@
 
     <!-- References to VALUESETS -->
     <!-- ####################### -->
-    <resource>
-      <reference>
-        <reference value="ValueSet/ig-example" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
 
     <resource>
       <reference>
