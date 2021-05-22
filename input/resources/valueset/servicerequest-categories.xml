@@ -28,7 +28,8 @@
                       RequestForMonitPG" />
   <!-- Monitoring explanation: Monit24hBP: 24 h Blutdruck, Monit24hECG: 24 h EKG, Monit7dECG: 7 Tage EKG
        MonitPO: nächtliche Pulsoxymetrie, MonitPG: Polygrafie
-  -->
+       
+  TODO Anpassen der Concepts, sobald ValueSet vorhanden-->
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
