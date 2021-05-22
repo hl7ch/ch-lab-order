@@ -681,7 +681,7 @@
 
     <resource>
       <reference>
-        <reference value="ValueSet/servicerequest-categories" />
+        <reference value="ValueSet/ServiceRequest.categories" />
       </reference>
       <exampleBoolean value="false" />
     </resource>

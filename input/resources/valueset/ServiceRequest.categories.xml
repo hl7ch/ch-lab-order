@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="servicerequest-categories" />
-  <url value="http://fhir.ch/ig/ch-lab-order/ValueSet/servicerequest-categories" />
+  <id value="ServiceRequest.categories" />
+  <url value="http://fhir.ch/ig/ch-lab-order/ValueSet/ServiceRequest.categories" />
   <version value="0.1.0" />
   <name value="ServiceRequestCategories" />
   <title value="Service Request Categories for Questionnaires" />
