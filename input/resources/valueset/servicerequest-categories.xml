@@ -15,10 +15,20 @@
       <value value="https://www.hl7.ch/" />
     </telecom>
   </contact>
-  <description value="ch-lab-order defines 3 Kinds of Service Request Categories:
-                      order of lab-test, 
-                      request of lab-results and order of supplementary analyses, 
-                      request of 2nd option" />
+  <description value="ch-lab-order defines 10 Kinds of Service Request Categories:
+                      RequestForLabExam, 
+                      RequestForAdditionalExam,
+                      RequestForPrecedentReport,
+                      RequestForPrecedentReportAndImages,
+                      RequestFor2ndOpinion,
+                      RequestForMonit24hBP,
+                      RequestForMonit24hECG,
+                      RequestForMonit7dECG,
+                      RequestForMonitPO,
+                      RequestForMonitPG" />
+  <!-- Monitoring explanation: Monit24hBP: 24 h Blutdruck, Monit24hECG: 24 h EKG, Monit7dECG: 7 Tage EKG
+       MonitPO: nächtliche Pulsoxymetrie, MonitPG: Polygrafie
+  -->
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -27,7 +37,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://snomed.info/sct" />
+      <system value="http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories"/>
       <concept>
         <code value="721963009" />
         <display value="Order (record artifact)" />
