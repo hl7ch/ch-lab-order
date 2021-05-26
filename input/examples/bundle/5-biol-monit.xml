@@ -270,18 +270,15 @@
           <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
           <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
         </meta>
-        <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for biological Monitoring
-            <pre>todo copy text out of rendering</pre>
-          </div>
-        </text>
-
+      
         <!-- extensions -->
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle" />
         </extension>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap">
+          <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"/>
+        </extension>
+        
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext">
           <extension url="name">
             <valueId value="Bundle" />
@@ -293,30 +290,17 @@
             <valueString value="The Bundle that is to be used to pre-populate the form" />
           </extension>
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/variable">
-          <valueExpression>
-            <name value="Patient" />
-            <language value="text/fhirpath" />
-            <expression value="%Bundle.entry[0].resource.subject.resolve()" />
-          </valueExpression>
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/variable">
-          <valueExpression>
-            <name value="Orderer" />
-            <language value="text/fhirpath" />
-            <expression value="%Bundle.entry[0].resource.author.resolve().ofType(Practitioner)" />
-          </valueExpression>
-        </extension>
-
+      
         <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
+        <version value="0.9.1" />
         <name value="LabOrderExample" />
         <title value="Lab Order Example" />
-        <status value="draft" />
-        <experimental value="true" />
+        <status value="active" />
+      
         <subjectType value="Patient" />
-        <date value="2018-04-12" />
+        <date value="2020-12-17" />
         <publisher value="HL7 Switzerland" />
-
+      
         <contact>
           <name value="HL7 Switzerland" />
           <telecom>
@@ -331,13 +315,30 @@
           </coding>
         </jurisdiction>
         <copyright value="CC-BY-SA-4.0" />
-
+      
         <!-- item[0] 5-biol-monit Questionnaire Example: order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
           <type value="group" />
           <required value="true" />
+          <item>
+            <linkId value="order.title" />
+            <text value="Titel" />
+            <type value="string" />
+          </item>
+          <item>
+            <linkId value="order.type" />
+            <text value="Typ" />
+            <type value="choice" />
+            <answerValueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode" />
+          </item>
+          <item>
+            <linkId value="order.category" />
+            <text value="Kategorie" />
+            <type value="choice" />
+            <answerValueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode" />
+          </item>
           <item>
             <linkId value="order.placerOrderIdentifier" />
             <text value="Auftragsnummer des Auftraggebers" />
@@ -352,16 +353,15 @@
             <type value="string" />
           </item>
           <item>
-            <linkId value="order.IdentifiefillerOrderIdentifier" />
+            <linkId value="order.fillerOrderIdentifier" />
             <text value="Auftragsnummer des Auftragsempfängers" />
             <type value="string" />
           </item>
-
           <item>
             <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
               <valueBoolean value="true" />
             </extension>
-            <linkId value="order.IdentifiefillerOrderIdentifierDomain" />
+            <linkId value="order.fillerOrderIdentifierDomain" />
             <text value="Identifier Domain der Auftragsnummer des Auftragsempfängers" />
             <type value="string" />
           </item>
@@ -451,7 +451,7 @@
               <valueCoding>
                 <system value="http://hl7.org/fhir/request-priority" />
                 <code value="routine" />
-                <display value="Routine" />
+                <display value="Die Anfrage hat normale Priorität." />
               </valueCoding>
               <initialSelected value="true" />
             </answerOption>
@@ -459,26 +459,26 @@
               <valueCoding>
                 <system value="http://hl7.org/fhir/request-priority" />
                 <code value="urgent" />
-                <display value="Urgent" />
+                <display value="Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal." />
               </valueCoding>
             </answerOption>
             <answerOption>
               <valueCoding>
                 <system value="http://hl7.org/fhir/request-priority" />
                 <code value="asap" />
-                <display value="ASAP" />
+                <display value="Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend." />
               </valueCoding>
             </answerOption>
             <answerOption>
               <valueCoding>
                 <system value="http://hl7.org/fhir/request-priority" />
                 <code value="stat" />
-                <display value="STAT" />
+                <display value="Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall." />
               </valueCoding>
             </answerOption>
           </item>
         </item>
-
+      
         <!-- item[1] 5-biol-monit Receiver: Person/organization who receives the request -->
         <item>
           <linkId value="receiver" />
@@ -551,7 +551,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
         <item>
           <linkId value="patient" />
@@ -641,7 +641,7 @@
             <type value="string" />
           </item>
         </item>
-
+      
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -751,8 +751,8 @@
             </item>
           </item>
         </item>
-
-        <!-- item[4] Response Receiver: Person/organization who receives the response -->
+      
+        <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
           <text value="Kopieempfänger" />
@@ -815,7 +815,7 @@
             </item>
           </item>
         </item>
-
+        
         <!-- item[5] lab specialty, here: Biological Monitoring -->
         <item>
           <linkId value="hematology" />
@@ -863,7 +863,7 @@
             </answerOption>
           </item>
         </item>
-
+      
         <!-- item[6] Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />
@@ -912,17 +912,10 @@
           <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
         </meta>
-        <text>
-          <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            Lab Order Questionnarie Example for Biological Monitoring
-            <pre>todo copy text out of rendering</pre>
-          </div>
-        </text>
-
+      
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
         <status value="completed" />
-
+      
         <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
         <item>
           <linkId value="order" />
@@ -948,7 +941,7 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
-
+      
           <!-- item[0][4]order.notificationContactDocument-->
           <item>
             <linkId value="order.notificationContactDocument" />
@@ -993,7 +986,7 @@
               </item>
             </item>
           </item>
-
+      
           <!-- item[0][5]order.notificationContactDocumentResponse-->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
@@ -1049,7 +1042,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[1] receiver, here only the Organization receives the response -->
         <item>
           <linkId value="receiver" />
@@ -1145,7 +1138,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1241,7 +1234,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1375,7 +1368,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -1490,7 +1483,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- Item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
@@ -1535,7 +1528,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[6]  lab specialty Toxicology, Toxicology panel blood-->
         <item>
           <linkId value="toxicology" />

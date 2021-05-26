@@ -11,7 +11,7 @@
   <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order" />
   <version value="0.0.1" />
   <name value="CH_LAB_ORDER" />
-  <title value="CH-LAB-ORDER (R4)" />
+  <title value="CH LAB-Order (R4)" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-09-03" /> <!-- last changed -->
@@ -461,14 +461,6 @@
 
     <resource>
       <reference>
-        <reference value="Questionnaire/hematology" />
-      </reference>
-      <name value="questionnaire hematology" />
-      <description value="Example for Sample Laboratory Order Questionnaire in Hematology" />
-    </resource>
-    
-    <resource>
-      <reference>
         <reference value="Questionnaire/1-tvt" />
       </reference>
       <name value="questionnaire 1-tvt" />
@@ -508,14 +500,6 @@
     </resource>
 
     <!-- References to QuestionnaireResponses -->
-
-    <resource>
-      <reference>
-        <reference value="QuestionnaireResponse/order-referral-form" />
-      </reference>
-      <name value="questionnaire response Order Referral Form" />
-      <description value="Example for Laboratory Order QuestionnaireResponse: Sample" />
-    </resource>
 
     <resource>
       <reference>
@@ -675,13 +659,7 @@
 
     <!-- References to code systems -->
     <!-- ########################## -->
-    <resource>
-      <reference>
-        <reference value="CodeSystem/ig-example" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
-
+    
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
     <resource>
@@ -700,16 +678,10 @@
 
     <!-- References to VALUESETS -->
     <!-- ####################### -->
-    <resource>
-      <reference>
-        <reference value="ValueSet/ig-example" />
-      </reference>
-      <exampleBoolean value="false" />
-    </resource>
 
     <resource>
       <reference>
-        <reference value="ValueSet/servicerequest-categories" />
+        <reference value="ValueSet/ServiceRequest.categories" />
       </reference>
       <exampleBoolean value="false" />
     </resource>
