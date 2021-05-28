@@ -29,7 +29,7 @@
               Order-Referral-Form|4-sepsis
           </div>
         </text>
-
+      
         <!-- extension date enterer-->
         <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
           <extension url="enterer">
@@ -38,7 +38,7 @@
             </valueReference>
           </extension>
         </extension>
-
+      
         <!-- extension urgentnoficationcontactforthisdocument, urgentnoficationcontactfortheresponsetothisdocument-->
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
           <valueReference>
@@ -67,9 +67,9 @@
             <reference value="Patient/KlebsiellaKeller" />
           </valueReference>
         </extension>
-
+      
         <status value="final" />
-
+      
         <type>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -77,7 +77,7 @@
             <display value="Laboratory order (record artifact)" />
           </coding>
         </type>
-
+      
         <category>
           <coding>
             <system value="http://snomed.info/sct" />
@@ -85,25 +85,32 @@
             <display value="Order (record artifact)" />
           </coding>
         </category>
-
+      
         <subject>
           <reference value="Patient/KlebsiellaKeller" />
         </subject>
         <date value="2019-03-31T11:46:09+02:00" />
-
+      
         <author>
           <reference value="PractitionerRole/HansHauserKantonsspital" />
         </author>
         <title value="Referral 4-sepsis" />
-
+      
         <!-- sections -->
         <section>
-          <title value="Referral" />
+          <title value="Order-Referral-Form 4-sepsis" />
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
           <text>
             <status value="generated" />
             <div xmlns="http://www.w3.org/1999/xhtml">
               Order-Referral-Form 4-sepsis
-              </div>
+            </div>
           </text>
           <entry>
             <reference value="Questionnaire/4-sepsis" />
