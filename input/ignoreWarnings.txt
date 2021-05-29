@@ -1,12 +1,18 @@
 == Suppressed Messages ==
 
 # Allow German display values or clearer descriptions for the questionnaire
-Display Name for http://hl7.org/fhir/administrative-gender#female should be one of 'Female' instead of 'Weiblich' for 'http://hl7.org/fhir/administrative-gender#female'
-Display Name for http://hl7.org/fhir/administrative-gender#male should be one of 'Male' instead of 'Männlich' for 'http://hl7.org/fhir/administrative-gender#male'
-Display Name for http://hl7.org/fhir/administrative-gender#other should be one of 'Other' instead of 'Anderes' for 'http://hl7.org/fhir/administrative-gender#other'
-Display Name for http://hl7.org/fhir/request-priority#routine should be one of 'Routine' instead of 'Die Anfrage hat normale Priorität.' for 'http://hl7.org/fhir/request-priority#routine'
-Display Name for http://hl7.org/fhir/request-priority#urgent should be one of 'Urgent' instead of 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' for 'http://hl7.org/fhir/request-priority#urgent'
-Display Name for http://hl7.org/fhir/request-priority#asap should be one of 'ASAP' instead of 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' for 'http://hl7.org/fhir/request-priority#asap'
-Display Name for http://hl7.org/fhir/request-priority#stat should be one of 'STAT' instead of 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' for 'http://hl7.org/fhir/request-priority#stat'
-The display "Ja" is not a valid display for the code {http://snomed.info/sct}373066001 - should be one of ["Yes (qualifier value)",Yes] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#373066001'
-The display "Nein" is not a valid display for the code {http://snomed.info/sct}373067005 - should be one of ["No (qualifier value)",No] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#373067005'
+
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#routine sollte einer von 'Routine' anstelle von 'Die Anfrage hat normale Priorität.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#routine"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#urgent sollte einer von 'Urgent' anstelle von 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#urgent"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#asap sollte einer von 'ASAP' anstelle von 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#asap"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#stat sollte einer von 'STAT' anstelle von 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#stat"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#routine sollte einer von 'Routine' anstelle von 'Die Anfrage hat normale Priorität.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#routine"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#urgent sollte einer von 'Urgent' anstelle von 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#urgent"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#asap sollte einer von 'ASAP' anstelle von 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#asap"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#stat sollte einer von 'STAT' anstelle von 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#stat"
+
+# Allow SCT Codes instead of hl7.org/fhir/ValueSet/doc-typecodes
+Keiner der angegebenen Codes ist im Valueset http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://snomed.info/sct#721965002)
+
+# Allow rm-CH Code
+Der angegebene Wert ("rm-CH") ist nicht im Valueset http://hl7.org/fhir/ValueSet/languages (http://hl7.org/fhir/ValueSet/languages, und es wird empfohlen, einen Code aus diesem Valueset zu verwenden) (error message = The code provided (urn:ietf:bcp:47#rm-CH) is not valid in the value set 'CommonLanguages' (from http://tx.fhir.org/r4))

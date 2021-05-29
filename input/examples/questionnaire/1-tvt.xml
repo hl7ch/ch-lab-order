@@ -675,7 +675,7 @@
   <!-- item[8] consent -->
   <item>
     <linkId value="consent" />
-    <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.supportingInfo" />
+    <definition value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo" />
     <text value="Einverständniserklärung" />
     <type value="group" />
     <item>
@@ -702,7 +702,7 @@
   <!-- item[9] coverage -->
   <item>
     <linkId value="coverage" />
-    <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.insurance" />
+    <definition value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance" />
     <text value="Kostenträger" />
     <type value="group" />
     
@@ -734,7 +734,7 @@
   <!-- item[10] previousResult  -->
   <item>
     <linkId value="previousResult" />
-    <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.supportingInfo" />
+    <definition value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo" />
     <text value="Vorheriges Untersuchungsresultat" />
     <type value="group" />
     <item>
