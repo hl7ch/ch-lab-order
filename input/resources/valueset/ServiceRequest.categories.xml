@@ -38,19 +38,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://build.fhir.org/ig/hl7ch/ch-lab-order/ValueSet-ServiceRequest.categories.html"/>
-      <concept>
-        <code value="RequestForLabExam" />
-        <display value="Anforderung Laboruntersuchung" />
-      </concept>
-      <concept>
-        <code value="RequestForAdditionalExam" />
-        <display value="Anforderung von zusätzlichen Laboruntersuchungen" />
-      </concept>
-      <concept>
-        <code value="RequestForPrecedentReport" />
-        <display value="Anforderung vorangehender Laborberichte" />
-      </concept>
+      <system value="http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories"/>
     </include>
   </compose>
 </ValueSet>

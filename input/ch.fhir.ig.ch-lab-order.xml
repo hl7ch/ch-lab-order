@@ -700,6 +700,16 @@
       <exampleBoolean value="false" />
     </resource>
 
+    <!-- References to CODESYSTEMS -->
+    <!-- ####################### -->
+
+    <resource>
+      <reference>
+        <reference value="CodeSystem/ServiceRequest.categories" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
 
     <!-- Page content -->
     <page>
