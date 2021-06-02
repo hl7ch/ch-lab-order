@@ -4,7 +4,7 @@
   <id value="ch-lab-order-servicerequest" />
   <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest" />
   <version value="0.9.0" />
-  <name value="CHLAB-ORDERServiceRequest" />
+  <name value="ChLabOrderServiceRequest" />
   <title value="CH LAB-ORDER ServiceRequest" />
   <status value="draft" />
   <date value="2019-02-05" />
@@ -131,7 +131,7 @@
       <binding>
         <strength value="required" />
         <description value="High-level kind of a clinical document at a macro level." />
-        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/servicerequest-categories" />
+        <valueSet value="http://fhir.ch/ig/ch-lab-order/ValueSet/ServiceRequest.categories" />
       </binding>
     </element>
     <element id="ServiceRequest.specimen">
