@@ -38,26 +38,18 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories"/>
+      <system value="http://build.fhir.org/ig/hl7ch/ch-lab-order/ValueSet-ServiceRequest.categories.html"/>
       <concept>
-        <code value="721963009" />
-        <display value="Order (record artifact)" />
+        <code value="RequestForLabExam" />
+        <display value="Anforderung Laboruntersuchung" />
       </concept>
       <concept>
-        <code value="419891008" />
-        <display value="Record artifact (record artifact)" />
-        <!-- children:  422680004 | Battery entry (record artifact) |
-                        726737008 | Comment on laboratory result (record artifact) |
-                        726736004 | Interpretation of laboratory result (record artifact) |
-                        funktioniert so wohl nicht, Jürg wird sich noch etwas überlegen
-        -->
+        <code value="RequestForAdditionalExam" />
+        <display value="Anforderung von zusätzlichen Laboruntersuchungen" />
       </concept>
       <concept>
-        <code value="371545006" />
-        <display value="Confirmatory consultation report (record artifact)" />
-        <!-- 2nd opinion, is not in DocumentEntry.classCode 
-        braucht es wohl nicht im Laborbereich
-        -->
+        <code value="RequestForPrecedentReport" />
+        <display value="Anforderung vorangehender Laborberichte" />
       </concept>
     </include>
   </compose>

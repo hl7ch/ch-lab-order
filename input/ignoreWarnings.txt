@@ -1,1 +1,18 @@
 == Suppressed Messages ==
+
+# Allow German display values or clearer descriptions for the questionnaire
+
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#routine sollte einer von 'Routine' anstelle von 'Die Anfrage hat normale Priorität.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#routine"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#urgent sollte einer von 'Urgent' anstelle von 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#urgent"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#asap sollte einer von 'ASAP' anstelle von 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#asap"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#stat sollte einer von 'STAT' anstelle von 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#stat"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#routine sollte einer von 'Routine' anstelle von 'Die Anfrage hat normale Priorität.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#routine"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#urgent sollte einer von 'Urgent' anstelle von 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#urgent"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#asap sollte einer von 'ASAP' anstelle von 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#asap"
+Der Displayname fÃ¼r http://hl7.org/fhir/request-priority#stat sollte einer von 'STAT' anstelle von 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' sein. fÃ¼r "http://hl7.org/fhir/request-priority#stat"
+
+# Allow SCT Codes instead of hl7.org/fhir/ValueSet/doc-typecodes
+Keiner der angegebenen Codes ist im Valueset http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://snomed.info/sct#721965002)
+
+# Allow rm-CH Code
+Der angegebene Wert ("rm-CH") ist nicht im Valueset http://hl7.org/fhir/ValueSet/languages (http://hl7.org/fhir/ValueSet/languages, und es wird empfohlen, einen Code aus diesem Valueset zu verwenden) (error message = The code provided (urn:ietf:bcp:47#rm-CH) is not valid in the value set 'CommonLanguages' (from http://tx.fhir.org/r4))

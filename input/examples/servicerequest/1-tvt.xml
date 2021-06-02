@@ -29,8 +29,8 @@
     <coding>
       <system
               value="http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories"/>
-      <code value="721963009"/>
-      <display value="Imaging Request"/>
+      <code value="RequestForLabExam"/>
+      <display value="Anforderung Laboruntersuchung"/>
     </coding>
   </category>
   <priority value="urgent" /> <!-- 0..1 routine | urgent | asap | stat -->

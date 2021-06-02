@@ -21,10 +21,10 @@
         <meta>
           <versionId value="1" />
           <lastUpdated value="2021-02-18T17:04:38.520+00:00" />
-          <source value="#AOvDxhC0zhsHQDK9" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition" />
         </meta>
 
+        <!-- extension data enterer-->
         <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
           <extension url="enterer">
             <valueReference>
@@ -33,14 +33,32 @@
           </extension>
         </extension>
 
+        <!-- extension urgentnoficationcontactforthisdocument, urgentnoficationcontactfortheresponsetothisdocument-->
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/MarcMustermannArztpraxis" />
+          </valueReference>
+        </extension>
+        <!-- extension  receiver -->
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
           <valueReference>
             <reference value="PractitionerRole/EvaErlenmeyerLaborPipette" />
           </valueReference>
         </extension>
+        <!-- extension copy receiver, 0..n-->
         <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
           <valueReference>
             <reference value="Organization/Gruppenpraxis" />
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Patient/HansGuggindieluft" />
           </valueReference>
         </extension>
 
@@ -96,23 +114,22 @@
         <author>
           <reference value="PractitionerRole/MarcMustermannArztpraxis" />
         </author>
-        <title value="Referral 1-tvt" />
-
-        <attester>
-          <mode value="professional" />
-          <time value="2010-03-12T11:46:09+02:00" />
-          <party>
-            <reference value="Practitioner/MarcMustermann" />
-          </party>
-        </attester>
+        <title value="Order-Referral-Form 1-tvt" />
 
         <!-- sections -->
         <section>
-          <title value="Referral" />
+          <title value="Order-Referral-Form 1-tvt" />
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="93037-0" />
+              <display value="Portable medical order form" />
+            </coding>
+          </code>
           <text>
             <status value="generated" />
             <div xmlns="http://www.w3.org/1999/xhtml">
-              Referral 1-tvt
+              Order-Referral-Form 1-tvt
             </div>
           </text>
           <entry>
@@ -322,16 +339,16 @@
           <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" />
           <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract" />
         </meta>
-      
+
         <!-- extensions -->
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
           <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle" />
         </extension>
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap">
-          <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"/>
+          <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr" />
         </extension>
-      
-      
+
+
         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext">
           <extension url="name">
             <valueId value="Bundle" />
@@ -343,13 +360,13 @@
             <valueString value="The Bundle that is to be used to pre-populate the form" />
           </extension>
         </extension>
-      
+
         <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
         <version value="0.9.1" />
         <name value="LabOrderFormExample" />
         <title value="Lab Order Form Example" />
         <status value="active" />
-      
+
         <subjectType value="Patient" />
         <date value="2020-12-17" />
         <publisher value="HL7 Switzerland" />
@@ -367,7 +384,7 @@
           </coding>
         </jurisdiction>
         <copyright value="CC-BY-SA-4.0" />
-      
+
         <!-- item[0] 1-tvt Questionnaire Example: order -->
         <item>
           <linkId value="order" />
@@ -530,7 +547,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[1] 1-tvt Receiver: Person/organization who receives the request -->
         <item>
           <linkId value="receiver" />
@@ -603,7 +620,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] Patient: The principle target of a particular Form Content is one patient -->
         <item>
           <linkId value="patient" />
@@ -693,7 +710,7 @@
             <type value="string" />
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -803,7 +820,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] receiverCopies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
@@ -867,7 +884,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[5] lab specialty, here: hematology -->
         <item>
           <linkId value="hematology" />
@@ -878,7 +895,7 @@
             <text value="Hämatologie Subset" />
             <type value="choice" />
             <repeats value="true" />
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -916,7 +933,7 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[6] lab specialty, here: coagulation -->
         <item>
           <linkId value="coagulation" />
@@ -936,20 +953,20 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[7] lab specialty, here: clinical chemistry -->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
           <type value="group" />
-      
+
           <!-- CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
             <text value="CRP" />
             <type value="choice" />
             <repeats value="true" />
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -958,7 +975,7 @@
               </valueCoding>
               <initialSelected value="true" /> <!-- diese Option wird am häufigsten gewählt: -->
             </answerOption>
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -966,7 +983,7 @@
                 <display value="C reactive protein [Moles/volume] in Serum or Plasma" />
               </valueCoding>
             </answerOption>
-      
+
             <!-- CRP C reactive Protein High sensitivity method -->
             <answerOption>
               <valueCoding>
@@ -975,7 +992,7 @@
                 <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method" />
               </valueCoding>
             </answerOption>
-      
+
             <answerOption>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -985,11 +1002,11 @@
             </answerOption>
           </item>
         </item>
-      
+
         <!-- item[8] consent -->
         <item>
           <linkId value="consent" />
-          <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.supportingInfo" />
+          <definition value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo" />
           <text value="Einverständniserklärung" />
           <type value="group" />
           <item>
@@ -1016,16 +1033,16 @@
         <!-- item[9] coverage -->
         <item>
           <linkId value="coverage" />
-          <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.insurance" />
+          <definition value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance" />
           <text value="Kostenträger" />
           <type value="group" />
-          
+
           <item>
             <linkId value="coverage.uvg" />
             <text value="Unfallversicherung (nach UVG)" />
             <type value="string" />
           </item>
-      
+
           <item>
             <linkId value="coverage.kvg" />
             <text value="Grundversicherung (nach KVG)" />
@@ -1041,14 +1058,14 @@
             <text value="Andere (nach VVG)" />
             <type value="string" />
           </item>
-      
+
         </item>
-        
-      
+
+
         <!-- item[10] previousResult  -->
         <item>
           <linkId value="previousResult" />
-          <definition value="http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-servicerequest#ServiceRequest.supportingInfo" />
+          <definition value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo" />
           <text value="Vorheriges Untersuchungsresultat" />
           <type value="group" />
           <item>
@@ -1058,7 +1075,7 @@
             <repeats value="true" />
           </item>
         </item>
-       
+
       </Questionnaire>
     </resource>
   </entry>
@@ -1074,10 +1091,10 @@
           <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
         </meta>
-      
+
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
         <status value="completed" />
-      
+
         <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
         <item>
           <linkId value="order" />
@@ -1103,7 +1120,7 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
-      
+
           <!-- item[0][4]order.notificationContactDocument-->
           <item>
             <linkId value="order.notificationContactDocument" />
@@ -1148,7 +1165,7 @@
               </item>
             </item>
           </item>
-      
+
           <!-- item[0][5]order.notificationContactDocumentResponse-->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
@@ -1204,12 +1221,12 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[1] receiver, Person/organization who receives the Order -->
         <item>
           <linkId value="receiver" />
           <text value="Empfänger" />
-      
+
           <!-- item[1][0] receiver Practitioner who receives Order -->
           <item>
             <linkId value="receiver.practitioner" />
@@ -1257,7 +1274,7 @@
               </answer>
             </item>
           </item>
-      
+
           <!-- item[1][1] receiver Organization which receives Order -->
           <item>
             <linkId value="receiver.organization" />
@@ -1302,7 +1319,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1398,7 +1415,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1406,7 +1423,7 @@
           <item>
             <linkId value="sender.author" />
             <text value="Verantwortlicher" />
-      
+
             <!-- item[3][0][0] sender, sender.author.practitioner -->
             <item>
               <linkId value="sender.author.practitioner" />
@@ -1454,7 +1471,7 @@
                 </answer>
               </item>
             </item>
-      
+
             <!-- item[3][0][1] sender, sender.author.organization -->
             <item>
               <linkId value="sender.author.organization" />
@@ -1499,7 +1516,7 @@
               </item>
             </item>
           </item>
-      
+
           <!-- item[3][1][0] sender, sender.dataenterer -->
           <item>
             <linkId value="sender.dataenterer" />
@@ -1538,12 +1555,12 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[4] receiver Copies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
           <text value="Kopieempfänger" />
-      
+
           <!-- item[4][0] receiver Copy Organization-->
           <item>
             <linkId value="receiverCopy" />
@@ -1655,7 +1672,7 @@
             </item>
           </item>
         </item>
-      
+
         <!-- item[5] Specialty Hematology Auto Differential panel - Blood -->
         <item>
           <linkId value="hematology" />
@@ -1663,7 +1680,7 @@
           <item>
             <linkId value="hemato-subset" />
             <text value="Hämatologie Subset" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1701,7 +1718,7 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[6] Specialty Coagulation D-Dimer -->
         <item>
           <linkId value="coagulation" />
@@ -1709,7 +1726,7 @@
           <item>
             <linkId value="d-dimer" />
             <text value="D-Dimer" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1719,17 +1736,17 @@
             </answer>
           </item>
         </item>
-      
+
         <!-- item[7] Clinical chemistry: CRP C reactive Protein-->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
-      
+
           <!-- item[7.0] CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
             <text value="CRP" />
-      
+
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
