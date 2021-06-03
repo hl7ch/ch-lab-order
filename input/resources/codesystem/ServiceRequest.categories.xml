@@ -1,10 +1,9 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="ServiceRequest.categories" />
-
   <url value="http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories" />
   <version value="0.1.0" />
   <name value="ChLabOrderServiceRequestCategories" />
-  <title value="Requested Service" />
+  <title value="Service Request Categories Code System for Questionnaires" />
   <status value="active" />
   <date value="2021-06-01T10:21:46+00:00" />
   <publisher value="HL7 Switzerland" />
@@ -26,11 +25,15 @@
                       RequestForMonit7dECG,
                       RequestForMonitPO,
                       RequestForMonitPG" />
-  <!-- Monitoring explanation: Monit24hBP: 24 h Blutdruck, Monit24hECG: 24 h EKG, Monit7dECG: 7 Tage EKG
-       MonitPO: nächtliche Pulsoxymetrie, MonitPG: Polygrafie
-       
-  TODO Anpassen der Concepts, sobald ValueSet vorhanden-->
-  
+
+  <!--  Monitoring explanation: 
+        Monit24hBP: 24 h Blutdruck, 
+        Monit24hECG: 24 h EKG,   
+        Monit7dECG: 7 Tage EKG,
+        MonitPO: nächtliche Pulsoxymetrie,
+        MonitPG: Polygrafie
+  -->
+
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
