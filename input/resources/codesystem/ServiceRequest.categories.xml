@@ -3,7 +3,7 @@
   <url value="http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories" />
   <version value="0.1.0" />
   <name value="ChLabOrderServiceRequestCategories" />
-  <title value="Service Request Categories Code System for Questionnaires" />
+  <title value="Service Request Categories for Questionnaires" />
   <status value="active" />
   <date value="2021-06-01T10:21:46+00:00" />
   <publisher value="HL7 Switzerland" />
@@ -14,25 +14,7 @@
       <value value="https://www.hl7.ch" />
     </telecom>
   </contact>
-  <description value="ch-lab-order defines 10 Kinds of Service Request Categories:
-                      RequestForLabExam, 
-                      RequestForAdditionalExam,
-                      RequestForPrecedentReport,
-                      RequestForPrecedentReportAndImages,
-                      RequestFor2ndOpinion,
-                      RequestForMonit24hBP,
-                      RequestForMonit24hECG,
-                      RequestForMonit7dECG,
-                      RequestForMonitPO,
-                      RequestForMonitPG" />
-
-  <!--  Monitoring explanation: 
-        Monit24hBP: 24 h Blutdruck, 
-        Monit24hECG: 24 h EKG,   
-        Monit7dECG: 7 Tage EKG,
-        MonitPO: nächtliche Pulsoxymetrie,
-        MonitPG: Polygrafie
-  -->
+  <description value="ch-lab-order defines 10 different Kinds of Service Request" />
 
   <jurisdiction>
     <coding>
@@ -40,16 +22,17 @@
       <code value="CH" />
     </coding>
   </jurisdiction>
+  
   <copyright value="CC-BY-SA-4.0" />
   <content value="complete" />
   <count value="10" />
   <concept>
     <code value="RequestForLabExam" />
-    <display value="Anforderung Laboruntersuchung" />
+    <display value="Anforderung von Laboruntersuchungen" />
   </concept>
   <concept>
     <code value="RequestForAdditionalExam" />
-    <display value="Anforderung von zusätzlichen Laboruntersuchungen" />
+    <display value="Anforderung von zusätzlichen Laboruntersuchungen bei derselben Probe" />
   </concept>
   <concept>
     <code value="RequestForPrecedentReport" />
@@ -57,30 +40,30 @@
   </concept>
   <concept>
     <code value="RequestForPrecedentReportAndImages" />
-    <display value="Anforderung Laboruntersuchung" />
+    <display value="Anforderung vorangehender Bilddokumente" />
   </concept>
   <concept>
     <code value="RequestFor2ndOpinion" />
-    <display value="Anforderung von zusätzlichen Laboruntersuchungen" />
+    <display value="Anforderung einer Zweitmeinung" />
   </concept>
   <concept>
     <code value="RequestForMonit24hBP" />
-    <display value="Anforderung vorangehender Laborberichte" />
+    <display value="Anforderung von Monitoring 24 h Blutdruckmessung" />
   </concept>
   <concept>
     <code value="RequestForMonit24hECG" />
-    <display value="Anforderung Laboruntersuchung" />
+    <display value="Anforderung von Monitoring 24 h EKG" />
   </concept>
   <concept>
     <code value="RequestForMonit7dECG" />
-    <display value="Anforderung von zusätzlichen Laboruntersuchungen" />
+    <display value="Anforderung von Monitoring 7 Tage EKG" />
   </concept>
   <concept>
     <code value="RequestForMonitPO" />
-    <display value="Anforderung vorangehender Laborberichte" />
+    <display value="Anforderung von Monitoring nächtliche Pulsoxymetrie" />
   </concept>
   <concept>
     <code value="RequestForMonitPG" />
-    <display value="Anforderung vorangehender Laborberichte" />
+    <display value="Anforderung von Monitoring nächtliche Polygrafie" />
   </concept>
 </CodeSystem>

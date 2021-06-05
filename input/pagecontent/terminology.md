@@ -1,17 +1,7 @@
-# Terminology
-
-## ValueSets
+### ValueSets
 
 {% include list-simple-valuesets.xhtml %}
 
-## Code Systems
+### Code Systems
 
 {% include list-simple-codesystems.xhtml %}
-
-  <!-- ## ConceptMaps
-    {% include list-simple-conceptmaps.xhtml %}
-  -->
-
-  <!-- ## NamingSystems
-    {% include list-simple-namingsystems.xhtml %}
-  -->
