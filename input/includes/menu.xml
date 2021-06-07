@@ -5,20 +5,39 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-      Use Case
+      Case Studies
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="usecase-english.html">Englisch</a>
+        <a href="casestudies-english.html">Englisch</a>
       </li>
       <li>
-        <a href="usecase-german.html">German</a>
+        <a href="casestudies-german.html">German</a>
       </li>
       <li>
-        <a href="usecase-french.html">Français</a>
+        <a href="casestudies-french.html">Français</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+      Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases-english.html">Englisch</a>
+      </li>
+      <li>
+        <a href="usecases-german.html">German</a>
+      </li>
+      <li>
+        <a href="usecases-french.html">Français</a>
       </li>
     </ul>
   </li>

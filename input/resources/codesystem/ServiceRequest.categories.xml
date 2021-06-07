@@ -29,41 +29,51 @@
   <concept>
     <code value="RequestForLabExam" />
     <display value="Anforderung von Laboruntersuchungen" />
+    <definition value="Electronic ordering of laboratory tests and/or panels" />
   </concept>
   <concept>
     <code value="RequestForAdditionalExam" />
     <display value="Anforderung von zusätzlichen Laboruntersuchungen bei derselben Probe" />
+    <definition value="Electronic ordering of additional laboratory tests for referenced specimen" />
   </concept>
   <concept>
     <code value="RequestForPrecedentReport" />
     <display value="Anforderung vorangehender Laborberichte" />
+    <definition value="Electronic ordering of laboratory diagnositic reports" />
   </concept>
   <concept>
     <code value="RequestForPrecedentReportAndImages" />
     <display value="Anforderung vorangehender Bilddokumente" />
+    <definition value="Electronic ordering of laboratory images" />
   </concept>
   <concept>
     <code value="RequestFor2ndOpinion" />
     <display value="Anforderung einer Zweitmeinung" />
+    <definition value="Electronic ordering of 2nd opinion" />
   </concept>
   <concept>
     <code value="RequestForMonit24hBP" />
     <display value="Anforderung von Monitoring 24 h Blutdruckmessung" />
+    <definition value="Electronic ordering of 24 Blood Pressure Monitoring" />
   </concept>
   <concept>
     <code value="RequestForMonit24hECG" />
     <display value="Anforderung von Monitoring 24 h EKG" />
+    <definition value="Electronic ordering of 24 Blood Pressure Monitoring" />
   </concept>
   <concept>
     <code value="RequestForMonit7dECG" />
     <display value="Anforderung von Monitoring 7 Tage EKG" />
+    <definition value="Electronic ordering of 24 EKG Monitoring" />
   </concept>
   <concept>
     <code value="RequestForMonitPO" />
     <display value="Anforderung von Monitoring nächtliche Pulsoxymetrie" />
+    <definition value="Electronic ordering of nocturnal Puls Oximetry Monitoring" />
   </concept>
   <concept>
     <code value="RequestForMonitPG" />
     <display value="Anforderung von Monitoring nächtliche Polygrafie" />
+    <definition value="Electronic ordering of nocturnal Sleep Polygraphy" />
   </concept>
 </CodeSystem>

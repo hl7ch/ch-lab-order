@@ -289,7 +289,7 @@
         <reference value="Patient/FranzMuster" />
       </reference>
       <name value="FranzMuster" />
-      <description value="Example for CH-Core-Patient" />
+      <description value="Example for CH-Core-Patient, used in coverage" />
     </resource>
 
     <resource>
@@ -332,7 +332,7 @@
         <reference value="Practitioner/HansHauser" />
       </reference>
       <name value="Hans Hauser" />
-      <description value="Example for Practitioner" />
+      <description value="Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis" />
       <exampleBoolean value="true" />
     </resource>
 
@@ -350,7 +350,7 @@
         <reference value="Practitioner/PauloPorcellini" />
       </reference>
       <name value="Paulo Porcellini" />
-      <description value="Specialist for Occupational Medicine, works an SUVA, refers to 5-tvt" />
+      <description value="Specialist for Occupational Medicine, works at SUVA, refers to 5-tvt" />
       <exampleBoolean value="true" />
     </resource>
 
@@ -723,18 +723,34 @@
       </page>
 
       <page>
-        <nameUrl value="usecase-english.html" />
+        <nameUrl value="casestudies-english.html" />
         <title value="Case Studies in English" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="usecase-german.html" />
+        <nameUrl value="casestudies-german.html" />
         <title value="Case Studies in German" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="usecase-french.html" />
+        <nameUrl value="casestudies-french.html" />
         <title value="Case Studies in French" />
+        <generation value="markdown" />
+      </page>
+
+      <page>
+        <nameUrl value="usecases-english.html" />
+        <title value="Use Cases in English" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="usecases-german.html" />
+        <title value="Use Cases in German" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="usecases-french.html" />
+        <title value="Use Cases in French" />
         <generation value="markdown" />
       </page>
 
