@@ -61,10 +61,7 @@
           <language value="it-CH" />
           <value value="Prescrizione di analisi" />
         </designation>
-        <designation>
-          <language value="rm-CH" />
-          <value value="Incumbensa da consultaziun" />
-        </designation>
+        
         <designation>
           <language value="en-US" />
           <value value="Order" />

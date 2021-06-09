@@ -1,12 +1,57 @@
 == Suppressed Messages ==
 
-# Allow German display values or clearer descriptions for the questionnaire
+# Build Errors: icon-q-coding.png, see https://github.com/hl7ch/ch-orf/issues/26
+The image source 'icon-q-coding.png' cannot be resolved
 
-The Implementation Guide contains no examples for this profile
+# Build Errors: Options, see https://github.com/hl7ch/ch-orf/issues/8
+The link 'null#item.order.priority' for "4 options" cannot be resolved
+The link 'null#item.patient.gender' for "3 options" cannot be resolved
+The link 'null#item.requestedEncounter.class' for "3 options" cannot be resolved
+The link 'null#item.requestedEncounter.desiredAccommodation' for "3 options" cannot be resolved
+The link 'null#item.appointment.status' for "3 options" cannot be resolved
+
+The link 'null#item.hemato-subset' for "5 options" cannot be resolved
+The link 'null#item.d-dimer' for "1 option" cannot be resolved
+The link 'null#item.crp' for "4 options" cannot be resolved
+The link 'null#item.per' for "1 option" cannot be resolved
+The link 'null#item.blood-diff' for "1 option" cannot be resolved
+The link 'null#item.crp' for "1 option" cannot be resolved
+The link 'null#item.cervicalSmear' for "2 options" cannot be resolved
+The link 'null#item.combur9' for "1 option" cannot be resolved
+The link 'null#item.obstetric' for "1 option" cannot be resolved
+The link 'null#item.lab' for "5 options" cannot be resolved
+The link 'null#item.culture' for "1 option" cannot be resolved
+The link 'null#item.id-susc' for "1 option" cannot be resolved
+The link 'null#item.crp' for "4 options" cannot be resolved
+The link 'null#item.lab' for "5 options" cannot be resolved
+The link 'null#item.tox' for "3 options" cannot be resolved
+
+# Build Errors: valueset-diagnostic-requests.html, see https://github.com/hl7ch/ch-orf/issues/7
+The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+
+
+# Allow German display values or clearer descriptions for the questionnaire
 
 Display Name for http://hl7.org/fhir/request-priority#routine should be one of 'Routine' instead of 'Die Anfrage hat normale Priorität.' for 'http://hl7.org/fhir/request-priority#routine'
 Display Name for http://hl7.org/fhir/request-priority#urgent should be one of 'Urgent' instead of 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' for 'http://hl7.org/fhir/request-priority#urgent'
 Display Name for http://hl7.org/fhir/request-priority#asap should be one of 'ASAP' instead of 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' for 'http://hl7.org/fhir/request-priority#asap'
 Display Name for http://hl7.org/fhir/request-priority#stat should be one of 'STAT' instead of 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' for 'http://hl7.org/fhir/request-priority#stat'
 
+Display Name for http://hl7.org/fhir/administrative-gender#male should be one of 'Male' instead of 'Männlich' for 'http://hl7.org/fhir/administrative-gender#male'
+Display Name for http://hl7.org/fhir/administrative-gender#female should be one of 'Female' instead of 'Weiblich' for 'http://hl7.org/fhir/administrative-gender#female'
+Display Name for http://hl7.org/fhir/administrative-gender#other should be one of 'Other' instead of 'Anderes' for 'http://hl7.org/fhir/administrative-gender#other'
+
 The display "Clinical presentation" is not a valid display for the code {http://loinc.org}55108-5 - should be one of ["Clinical presentation Document","Clinical presentation Doc"] (from http://tx.fhir.org/r4) for 'http://loinc.org#55108-5'
+
+
+# Using SCT CodeSystem instead of LOINC CodeSystem
+
+None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#721965002)
+
+# Using own CodeSystem
+
+Code System URI 'http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories' is unknown so the code cannot be validated
+
+# missing examples
+
+The Implementation Guide contains no examples for this profile

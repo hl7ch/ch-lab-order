@@ -328,7 +328,7 @@
         <valueCoding>
           <system value="http://hl7.org/fhir/administrative-gender" />
           <code value="male" />
-          <display value="Male" />
+          <display value="Männlich" />
         </valueCoding>
         <initialSelected value="true" />
       </answerOption>
@@ -336,14 +336,14 @@
         <valueCoding>
           <system value="http://hl7.org/fhir/administrative-gender" />
           <code value="female" />
-          <display value="Female" />
+          <display value="Weiblich" />
         </valueCoding>
       </answerOption>
       <answerOption>
         <valueCoding>
           <system value="http://hl7.org/fhir/administrative-gender" />
           <code value="other" />
-          <display value="Other" />
+          <display value="Anderes" />
         </valueCoding>
       </answerOption>
     </item>
@@ -730,7 +730,6 @@
 
   </item>
   
-
   <!-- item[10] previousResult  -->
   <item>
     <linkId value="previousResult" />

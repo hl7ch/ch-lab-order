@@ -5,7 +5,7 @@
   <url value="http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest" />
   <version value="0.9.0" />
   <name value="ChLabOrderServiceRequest" />
-  <title value="CH LAB-ORDER ServiceRequest" />
+  <title value="CH LAB-Order ServiceRequest" />
   <status value="draft" />
   <date value="2019-02-05" />
   <publisher value="HL7 Switzerland" />
@@ -23,7 +23,7 @@
       <value value="oliver.egger@ahdis.ch" />
     </telecom>
   </contact>
-  <description value="Profile on ServiceRequest for CH LAB-ORDER" />
+  <description value="Definition for ServiceRequest in the context of CH LAB-Order" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
