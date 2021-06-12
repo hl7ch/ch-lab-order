@@ -914,10 +914,12 @@
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit" />
         <status value="completed" />
       
-        <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
+        <!-- item[0] order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
+      
+          <!-- item[0][0]order.placerOrderIdentifier-->
           <item>
             <linkId value="order.placerOrderIdentifier" />
             <text value="Auftragsnummer des Auftraggebers" />
@@ -925,6 +927,8 @@
               <valueString value="123" />
             </answer>
           </item>
+      
+          <!-- item[0][1]order.placerOrderIdentifierDomain -->
           <item>
             <linkId value="order.placerOrderIdentifierDomain" />
             <text value="Identifier Domain der Auftragsnummer des Auftraggebers" />
@@ -932,6 +936,8 @@
               <valueString value="urn:oid:1.3.4.5.6.7" />
             </answer>
           </item>
+      
+          <!-- item[0][2]order.precedentDocumentIdentifier -->
           <item>
             <linkId value="order.precedentDocumentIdentifier" />
             <text value="Identifier des Vorgängerdokuments" />
@@ -940,7 +946,7 @@
             </answer>
           </item>
       
-          <!-- item[0][4]order.notificationContactDocument-->
+          <!-- item[0][3]order.notificationContactDocument -->
           <item>
             <linkId value="order.notificationContactDocument" />
             <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
@@ -1029,6 +1035,8 @@
               </item>
             </item>
           </item>
+      
+          <!-- item[0][5]order.priority -->
           <item>
             <linkId value="order.priority" />
             <text value="Auftragspriorität" />
@@ -1041,11 +1049,12 @@
           </item>
         </item>
       
-        <!-- item[1] receiver, here only the Organization receives the response -->
+        <!-- item[1] receiver -->
         <item>
           <linkId value="receiver" />
           <text value="Empfänger" />
-          <!-- 
+      
+          <!-- item[1][0] receiver Practitioner who receives Order -->
           <item>
             <linkId value="receiver.practitioner" />
             <text value="Empfangende Person" />
@@ -1060,39 +1069,40 @@
               <linkId value="receiver.practitioner.familyName" />
               <text value="Name" />
               <answer>
-                <valueString value="Porcellini" />
+                <valueString value="Erlenmeyer" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.practitioner.givenName" />
               <text value="Vorname" />
               <answer>
-                <valueString value="Paulo" />
+                <valueString value="Eva" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.practitioner.gln" />
               <text value="GLN" />
               <answer>
-                <valueString value="7601000050705" />
+                <valueString value="7601000050703" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.practitioner.phone" />
               <text value="Telefon" />
               <answer>
-                <valueString value="036 336 22 33" />
+                <valueString value="+41322552525" />
               </answer>
             </item>
             <item>
               <linkId value="receiver.practitioner.email" />
               <text value="E-Mail" />
               <answer>
-                <valueString value="paulo.porcellini@suva.ch" />
+                <valueString value="eva.erlenmeyer@labor-pipette.ch" />
               </answer>
             </item>
           </item>
-          -->
+      
+          <!-- item[1][1] receiver Organization which receives Order -->
           <item>
             <linkId value="receiver.organization" />
             <text value="Empfangende Organisation" />

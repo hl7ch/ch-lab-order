@@ -155,57 +155,7 @@
         <meta>
           <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient" />
         </meta>
-        <!-- 
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>
-              <b>Generated Narrative with Details</b>
-            </p>
-            <p>
-              <b>id</b>: HansGuggindieluft
-            </p>
-            <p>
-              <b>meta</b>: 
-            </p>
-            <p>
-              <b>identifier</b>: 012/08.111111
-            </p>
-            <p>
-              <b>name</b>: Hans Guggindieluft 
-            </p>
-            <p>
-              <b>gender</b>: MALE
-            </p>
-            <p>
-              <b>birthDate</b>: Jan 01, 1981
-            </p>
-            <p>
-              <b>maritalStatus</b>: verheiratet 
-              <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code &#39;6&#39; = &#39;6&#39;, given as &#39;in eingetragener Partnerschaft&#39;})</span>
-            </p>
-            <h3>Communications</h3>
-            <table class="grid">
-              <tr>
-                <td>-</td>
-                <td>
-                  <b>Language</b>
-                </td>
-                <td>
-                  <b>Preferred</b>
-                </td>
-              </tr>
-              <tr>
-                <td>*</td>
-                <td>Deutsch (Schweiz) 
-                  <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code &#39;de-CH&#39; = &#39;German (Region=Schweiz))</span>
-                </td>
-                <td>true</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        -->
+        
         <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
           <valueAddress>
             <city value="Köniz" />
@@ -1091,14 +1041,16 @@
           <lastUpdated value="2019-04-01T20:17:53.340+00:00" />
           <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse" />
         </meta>
-
+      
         <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
         <status value="completed" />
-
-        <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
+      
+        <!-- item[0] order -->
         <item>
           <linkId value="order" />
           <text value="Auftrag" />
+      
+          <!-- item[0][0]order.placerOrderIdentifier-->
           <item>
             <linkId value="order.placerOrderIdentifier" />
             <text value="Auftragsnummer des Auftraggebers" />
@@ -1106,6 +1058,8 @@
               <valueString value="123" />
             </answer>
           </item>
+      
+          <!-- item[0][1]order.placerOrderIdentifierDomain -->
           <item>
             <linkId value="order.placerOrderIdentifierDomain" />
             <text value="Identifier Domain der Auftragsnummer des Auftraggebers" />
@@ -1113,6 +1067,8 @@
               <valueString value="urn:oid:1.3.4.5.6.7" />
             </answer>
           </item>
+      
+          <!-- item[0][2]order.precedentDocumentIdentifier -->
           <item>
             <linkId value="order.precedentDocumentIdentifier" />
             <text value="Identifier des Vorgängerdokuments" />
@@ -1120,8 +1076,8 @@
               <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187" />
             </answer>
           </item>
-
-          <!-- item[0][4]order.notificationContactDocument-->
+      
+          <!-- item[0][3]order.notificationContactDocument -->
           <item>
             <linkId value="order.notificationContactDocument" />
             <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
@@ -1165,8 +1121,8 @@
               </item>
             </item>
           </item>
-
-          <!-- item[0][5]order.notificationContactDocumentResponse-->
+      
+          <!-- item[0][4]order.notificationContactDocumentResponse -->
           <item>
             <linkId value="order.notificationContactDocumentResponse" />
             <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument" />
@@ -1210,6 +1166,8 @@
               </item>
             </item>
           </item>
+      
+          <!-- item[0][5]order.priority -->
           <item>
             <linkId value="order.priority" />
             <text value="Auftragspriorität" />
@@ -1221,12 +1179,12 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[1] receiver, Person/organization who receives the Order -->
         <item>
           <linkId value="receiver" />
           <text value="Empfänger" />
-
+      
           <!-- item[1][0] receiver Practitioner who receives Order -->
           <item>
             <linkId value="receiver.practitioner" />
@@ -1274,7 +1232,7 @@
               </answer>
             </item>
           </item>
-
+      
           <!-- item[1][1] receiver Organization which receives Order -->
           <item>
             <linkId value="receiver.organization" />
@@ -1319,7 +1277,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[2] patient -->
         <item>
           <linkId value="patient" />
@@ -1415,7 +1373,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[3] sender, sender.author-->
         <item>
           <linkId value="sender" />
@@ -1423,7 +1381,7 @@
           <item>
             <linkId value="sender.author" />
             <text value="Verantwortlicher" />
-
+      
             <!-- item[3][0][0] sender, sender.author.practitioner -->
             <item>
               <linkId value="sender.author.practitioner" />
@@ -1471,7 +1429,7 @@
                 </answer>
               </item>
             </item>
-
+      
             <!-- item[3][0][1] sender, sender.author.organization -->
             <item>
               <linkId value="sender.author.organization" />
@@ -1516,7 +1474,7 @@
               </item>
             </item>
           </item>
-
+      
           <!-- item[3][1][0] sender, sender.dataenterer -->
           <item>
             <linkId value="sender.dataenterer" />
@@ -1555,12 +1513,12 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[4] receiver Copies, e.g. Patient, other HC-Organisation -->
         <item>
           <linkId value="receiverCopies" />
           <text value="Kopieempfänger" />
-
+      
           <!-- item[4][0] receiver Copy Organization-->
           <item>
             <linkId value="receiverCopy" />
@@ -1672,7 +1630,7 @@
             </item>
           </item>
         </item>
-
+      
         <!-- item[5] Specialty Hematology Auto Differential panel - Blood -->
         <item>
           <linkId value="hematology" />
@@ -1680,7 +1638,7 @@
           <item>
             <linkId value="hemato-subset" />
             <text value="Hämatologie Subset" />
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1718,7 +1676,7 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[6] Specialty Coagulation D-Dimer -->
         <item>
           <linkId value="coagulation" />
@@ -1726,7 +1684,7 @@
           <item>
             <linkId value="d-dimer" />
             <text value="D-Dimer" />
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
@@ -1736,17 +1694,17 @@
             </answer>
           </item>
         </item>
-
+      
         <!-- item[7] Clinical chemistry: CRP C reactive Protein-->
         <item>
           <linkId value="cc" />
           <text value="clinical chemistry" />
-
+      
           <!-- item[7.0] CRP C reactive Protein normal method -->
           <item>
             <linkId value="crp" />
             <text value="CRP" />
-
+      
             <answer>
               <valueCoding>
                 <system value="http://loinc.org" />
