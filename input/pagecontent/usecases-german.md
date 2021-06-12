@@ -1,10 +1,30 @@
-### Use Case 1: Auftrag im herkömmlichen Sinne  --TODO alle use cases durchgehen!!!
+### Use Case 1: Auftrag im herkömmlichen Sinne
 
-Es handelt sich dabei um einen Use Case, in welchem der Auftraggeber (z.B. Arzt) beim Labor verschiedene Untersuchungen bestellt . Dabei sendet der Auftraggeber den Auftrag und das Probenmaterial an das Labor, und dieses sendet die Resultate an den Auftraggeber zurück. Diese Resultate können auch gestaffelt als Teilresultate zu verschiedenen Zeitpunkten erfolgen.
+Es handelt sich dabei um einen Use Case, in welchem der Auftraggeber (z.B. Arzt) beim Labor verschiedene Untersuchungen bestellt. Dazu sendet er einen Auftrag und das zugehörige Probenmaterial an das Labor, damit dieses den Auftrag ausführen kann [1-tvt].
+Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
+
+Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende Angaben enthält:
+
+* Auftrag mit Auftragsnummer und Identifikations-Domäne des Auftraggebers, allfällige Identifikation eines vorangehenden Dokumentes
 
 Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
 
-* Angaben zum Probenmaterial: Specimen Collection und Participant (Body, specimen collection)
+* Angaben zum Auftrag
+* Angaben zum zum Auftragsempfänger
+* Angaben zum Patienten
+* Angaben zum Auftraggeber
+* Angaben zu allfälligen Empfängern einer Resultate-Kopie
+* Angaben zur Labor-Sparte
+* Angaben zu den verlangten Untersuchungen
+
+* Angaben zum Dokumenten Typ [DocumentEntry.typeCode] und zum Dokumenten Klasse [DocumentEntry.classCode]
+* Angaben zum Patienten: Patient
+
+* Angaben zum Probenmaterial,Specimen
+  * Type: zum Beispiel Serum, Vollblut, Liquor
+  * Subject:Verweis auf den  Patienten mit collector und collectionDateTime
+  * Collection: Entnahmestelle, Entnahme-Zeitpunkt
+  * Behälter, Gefäss: Type
 * Angaben zum Probeneingang beim Labor: Specimen Received
 * Umgang mit Teilresultaten: Laboratory Report Data Processing Entry - statusCode:
   * completed: alle erwarteten Ergebnisse sind vorhanden und endgültig.
