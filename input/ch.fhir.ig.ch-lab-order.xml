@@ -61,7 +61,7 @@
     <version value="current" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
-
+<!-- 
   <dependsOn id="sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
     <packageId value="hl7.fhir.uv.sdc" />
@@ -79,6 +79,7 @@
     <packageId value="ch.fhir.ig.ch-epr-term" />
     <version value="2.0.4" />
   </dependsOn>
+-->
 
   <!-- Patients, Organizations and Practitioners must conform CH-core -->
   <!-- ############################################################## -->
