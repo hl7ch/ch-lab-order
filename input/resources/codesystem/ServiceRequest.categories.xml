@@ -25,7 +25,7 @@
   
   <copyright value="CC-BY-SA-4.0" />
   <content value="complete" />
-  <count value="10" />
+  <count value="11" />
   <concept>
     <code value="RequestForLabExam" />
     <display value="Anforderung von Laboruntersuchungen" />
@@ -50,6 +50,11 @@
     <code value="RequestFor2ndOpinion" />
     <display value="Anforderung einer Zweitmeinung" />
     <definition value="Electronic ordering of 2nd opinion" />
+  </concept>
+  <concept>
+    <code value="ProposalForAdditionalExam" />
+    <display value="Vorschlag für weitere Untersuchungen" />
+    <definition value="Electronic proposal for additional exam" />
   </concept>
   <concept>
     <code value="RequestForMonit24hBP" />
