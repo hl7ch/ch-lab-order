@@ -48,7 +48,9 @@ This use case corresponds to example 5-biol-monit. In order to assess the exposu
 
 Examples are:
 
-* Occupational medicine: ordering laboratory tests on several patients
+* Occupational medicine: ordering laboratory tests on a group of workers
+  * ServiceRequest.subject refers to a group
+  * ServiceRequest.specimen refers to several samples (0 .. *)
 * Food industry: investigation on employee hygiene (e.g. salmonella contamination)
 * Police investigations
 

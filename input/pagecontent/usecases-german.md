@@ -48,7 +48,9 @@ Dieser Use Case entspricht dem Beispiel 5-biol-monit. Um die Gefährdung von Arb
 
 Beispiele dazu sind:
 
-* Arbeitsmedizin: Bestellung von Laboruntersuchungen zu mehreren Patienten
+* Arbeitsmedizin: Bestellung von Laboruntersuchungen zu einer Arbeitergruppe
+  * ServiceRequest.subject referenziet auf eine Gruppe
+  * ServiceRequest.specimen referenziert auf mehrere Proben (0 .. *)
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
