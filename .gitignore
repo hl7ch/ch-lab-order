@@ -8,9 +8,4 @@ org.hl7.*.jar
 publisher.jar
 publisher.jar.bak
 ch.fhir.ig.ch-orf.xml
-Actors.md
-ANWENDUNGSFAELLE-dt.*
-ANWENDUNGSFAELLE.md
-description.md
-managment summary de.md
-types-and-categories.md
+archiv/**
