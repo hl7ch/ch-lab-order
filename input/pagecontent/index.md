@@ -1,3 +1,8 @@
+<div markdown="1" class="stu-note">
+This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. 
+Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+</div>
+
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
 
 Note: This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
@@ -7,7 +12,7 @@ This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is base
 It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires <http://build.fhir.org/ig/HL7/sdc/index.html> and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
 There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested. Many laboratories also offer services for monitoring vital signs, such as blood pressure, ECG, pulse, which can be ordered.
 
-### Managment Summary
+### Management Summary
 
 Customers of laboratories want to create their orders as efficiently and correctly as possible with the help of order forms. For this purpose, the laboratories provide forms that meet the following requirements:
 
