@@ -11,13 +11,13 @@ There are some enhancements to the general Order and Referral implementation gui
 
 Customers of laboratories want to create their orders as efficiently and correctly as possible with the help of order forms. For this purpose, the laboratories provide forms that meet the following requirements:
 
-1. the form should be able to be processed in their own informatics system (practice system, clinic system).
+1. The form should be able to be processed in their own informatics system (practice system, clinic system).
 
-2. pre-filled fields with information about the client, the patient, the commissioned laboratory, should facilitate the order process.
+2. Pre-filled fields with information about the client, the patient, the commissioned laboratory, should facilitate the order process.
 
-3. a Catalog (StructureDefinition Catalog) with the references of the examinations (Reference CatalogEntry) offered by the laboratory may be available. In order for the customer to be able to orientate himself in the abundance of possible examinations, it may be possible to search within laboratory specialties (Laboratory Order Panels). This part of the ordering process is here out of scope.
+3. A Catalog (StructureDefinition Catalog) with the references of the examinations (Reference CatalogEntry) offered by the laboratory may be available. In order for the customer to be able to orientate himself in the abundance of possible examinations, it may be possible to search within laboratory specialties (Laboratory Order Panels). This part of the ordering process is here out of scope.
 
-4. sample properties (specimen), type of sample, vessel, etc., preanalytical specifications must be specified, and the customer must be able to provide additional information (e.g. oxygen flow rate, time of last meal, 24 h urine volume,). Parts of these informations can also be provided in a Catalog.
+4. Sample properties (specimen), type of sample, vessel, etc., preanalytical specifications must be specified, and the customer must be able to provide additional information (e.g. oxygen flow rate, time of last meal, 24 h urine volume,). Parts of these informations can also be provided in a Catalog.
 
 5. The order document should also cover other use cases. For example, a subsequent prescription of analyses on the same sample is foreseen, a common use case. It is also envisaged that the laboratory physician can make suggestions to the client for useful additional examinations, based on the original order.
 
