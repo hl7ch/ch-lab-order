@@ -1,57 +1,74 @@
-### Use Case 1: Auftrag im herkömmlichen Sinne  --TODO alle use cases durchgehen!!!
+### Use Case 1: Auftrag im herkömmlichen Sinne
 
-Es handelt sich dabei um einen Use Case, in welchem der Auftraggeber (z.B. Arzt) beim Labor verschiedene Untersuchungen bestellt . Dabei sendet der Auftraggeber den Auftrag und das Probenmaterial an das Labor, und dieses sendet die Resultate an den Auftraggeber zurück. Diese Resultate können auch gestaffelt als Teilresultate zu verschiedenen Zeitpunkten erfolgen.
+Der Auftraggeber (z.B. Arzt) benötigt für die weitere Diagnostik verschiedene Labor-Untersuchungen. Dazu erstellt er in seinem Praxisinformationssystem ein Auftragsdokument mit den nötigen Angaben zu Patient, Labor-Test, Proben usw. Das notwendige Probenmaterial (Serum, Urin, Liquor) wird in entsprechenden Behältern gesammelt und dem Auftragsdokument eindeutig zugeordnet (Specimen.identifier, Specimen.container.identifier). Proben können im eigenen Labor untersucht werden, oder sie müssen via Post oder Kurier ins externe Labor verschickt werden. Dort weist ihnen das Laborinformationssystem einen eigenen Identifier (Specimen.accessionIdentifier) zu.
 
-Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
+Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende Angaben enthält:
 
-* Angaben zum Probenmaterial: Specimen Collection und Participant (Body, specimen collection)
-* Angaben zum Probeneingang beim Labor: Specimen Received
-* Umgang mit Teilresultaten: Laboratory Report Data Processing Entry - statusCode:
-  * completed: alle erwarteten Ergebnisse sind vorhanden und endgültig.
-  * active: die Untersuchungen laufen noch. Einige Resultate sind noch ausstehend.
-  * aborted: die Untersuchungen mussten abgebrochen werden. Einige Resultate können vorhanden sein.
-* Endgültiger Befund: Ein Befund ist endgültig, wenn er kein Laboratory Report Data Processing Entry mit statusCode='active' enthält.
+* Metadaten des Auftrages
+* Angaben zum Auftrag (order)
+* Angaben zum zum Auftragsempfänger (receiver)
+* Angaben zum Patienten
+* Angaben zum Auftraggeber (sender)
+* Angaben zu allfälligen Empfängern einer Resultate-Kopie (receiverCopies)
+* Angaben zur Labor-Sparte (lab specialty)
+* Angaben zu den verlangten Untersuchungen
 
-### Use Case 2: Auftrag mit externer Phlebotomie Station
+* Angaben zum Probenmaterial,Specimen
+  * Type: zum Beispiel Serum, Vollblut, Liquor
+  * Subject:Verweis auf den Patienten
+  * Collection: Angaben zur Entnahme, Entnahme-Zeitpunkt, Menge, Methode, Entnahmestelle (z.B. rechter Arm), Nüchternperiode
+  * Behälter, Gefäss: Identifier, Type
+  * und anderes mehr
 
-Dieser Use Case unterscheidet sich vom vorhergehenden Use Case dadurch, dass das Probenmaterial nicht beim Auftraggeber sondern bei einer externen Phlebotomie Station bereitgestellt wird (z.B. Blutentnahme). [2-pertussis.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/2-pertussis.xml)
+* Angaben zum angeforderten Service
+  * Servicerequest.category ist RequestForLabExam
+  * Fragestellung, Untersuchungsgrund (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
+  * Kostenträger (Krankenkasse, Unfallversicherung usw.)
+  * und anderes mehr
 
-Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
+Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
 
-* Blutentnahme in Phlebotomie Station: Specimen Collection - performer: Damit kann angegeben werden, wer die Probe entnommen hat.
+### Use Case 2: Anfordern von zusätzlichen Unteresuchungen der gleichen Probe
+
+Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere Test mit der gleichen Probe gewünscht werden. So kann im Beispiel 1-tvt eine venöse Thrombophilie vermutet werden, sodass weitere Laboruntersuchungen hereditäre Ursachen, wie Faktor-V-Leiden-Mutaion, Prothrombin-Genmutation, Antithrombinmangel usw. auffinden können.
+
+* Angaben zum angeforderten Service
+  * Servicerequest.category ist RequestForAdditionalExam
+
+### Use Case 3: Anfordern von vorhandenen Laborresultaten und Bildern
+
+Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.B. um den Verlauf von Prostata-spezifische Antigen (PSA) zu beurteilen.
+
+* Angaben zum angeforderten Service
+  * Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
   
-### Use Case 3: Anfordern von Befundkopien
+### Use Case 4: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
-Wenn zu einer bestimmten Fragestellung eines bestimmten Patienten bereits Untersuchungen vorliegen, kommt es nicht selten vor, dass die Resultate / Befunde auch von nachbehandelnden Ärzten angefordert werden. Es kann der ursprüngliche Laborauftrag dazu verwendet werden. Nur ändert in diesem Zusammenhang die ServiceRequest.Category von "RequestForLabExam" zu "RequestForPrecedentReport". Ein allenfalls notwendiges Einverständnis des Patienten kann in ServiceRequest.supportingInfo hinterlegt werden. Es wird Auftraggeber erstellt in diesem Fall keinen herkömmlichen Auftrag und es in diesem Fall kein Probenmaterial an das Labor gesendet. Der Auftraggeber bestellt lediglich die Befunde zu einem früheren Auftrag.
-Beispiel: Der Hausarzt bestellt Befunde, zu einem Auftrag, der vom Spital in Auftrag gegeben worden ist, weil der Spitalaustrittsbericht noch nicht vorliegt und der Patient bereits beim Hausarzt in Nachbehandlung ist. Dieser Use Case löst im Labor einen administrativen Prozess aus.
-Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
+Dieser Use Case entspricht dem Beispiel 5-biol-monit. Um die Gefährdung von Arbeitern gegenüber chemischen Stoffen zu beurteilen werden Messungen am Arbeitsplatz ergänzt durch arbeitsmedizinische Vorsorgeuntersuchungen. Es können die toxischen Arbeitsstoffe selbst oder deren Metaboliten im Serum oder Urin bestimmt werden. Der Auftrag wird vom Arbeitsmediziner der Firma oder der Versicherung veranlasst. Dabei muss die Problematik der Mitarbeiterfluktuationen im Auge behalten werden.
 
-* Befundkopie: Wird im eLaborbefund nicht gekennzeichnet. Der nachbehandelnde Arzt erhält das gleiche, unveränderte Dokument so wie es ursprünglich ausgeliefert worden ist.
-* Einverständnis des Patienten: Das Einholen des Einverständnisses ist  Bestandteil des ServiceRequest.consent und kann im Questionnaire abgefragt werden.
-* Kein herkömmlicher/früherer Auftrag: Das Auftragsverfahren ist nicht Bestandteil des eLaborbefunds. Im Laborbefund wird mit \<CDA-CH-ORDR\> auf den Original-Auftrag verwiesen.
-  
-### Use Case 4: Anfordern von zusätzlichen Untersuchungen aus derselben Probe
+Beispiele dazu sind:
 
-Manchmal ergibt sich aus Testresultaten die Notwendigkeit, weitere Untersuchungen der schon im Labor vorhandenen Probe zu veranlassen.
-ServiceRequest.categories - RequestForAdditionalExam
+* Arbeitsmedizin: Bestellung von Laboruntersuchungen zu einer Arbeitergruppe
+  * ServiceRequest.subject referenziet auf eine Gruppe
+  * ServiceRequest.specimen referenziert auf mehrere Proben (0 .. *)
+* Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
+* Polizeiliche Untersuchungen
 
-### Use Case 5: Anfordern von Bildern
+Beispieldokument: [5-biol-monit.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/5-biol-monit.xml). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
-Einzelne Laborresultate werden als Grafik zurückgeliefert (z.B. Blutbild, Pathologie-Slides, Serum-Elektrophorese). Die elektronische Befundanforderung muss also auch die Integration oder Referenzierung von Multimediadateien unterstützen.
+### Use Case 5: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
-* ServiceRequest.categories - RequestForPrecedentReportAndImages
+Nach Erhalt des Laborauftrages und dessen Bearbeitung kann sich die Situation ergeben, dass der Laborarzt dem Author des Auftrages Vorschläge für weitere oder alternative Untersuchungen machen möchte. Er kann dazu das erhaltene Auftragsdokument verwenden, durch sein Informationssystem die Personendaten von Sender und Receiver austauschen, und mit den Vorschlägen zu weiteren oder alternativen Laboruntersuchungen zurückschicken.
 
-### Use Case 6: Befunde mit weiteren Daten zum Gesundheitszustand des Patienten
+* ServiceRequest.category: ProposalForAdditionalExam
 
-ServiceRequest.reasonCode und ServiceRequest.reasonReference
-Wenn dies für die Interpretation der, im Laborbefund genannten Laborresultate von besonderem Interesse ist, müssen weitere Daten zum Gesundheitszustand des Patienten im Laborbefund aufgenommen werden können. Insbesondere Körpertemperatur, Grösse, Gewicht und Gestationsalter.
+### Use Case 6: Befunde und weiteren Daten zum Gesundheitszustand des Patienten
 
-* Körpertemperatur, Grösse, Gewicht: Können als Vitalzeichen in der Coded Vital Signs Section dokumentiert werden.
-* Gestationsalter: Kann in der Coded Results Section dokumentiert werden.
+Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, müssen weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können. Es handelt sich dabei um vorhandene Befunde, medizische Berichte und Dokumente
 
-Hinweis: Diese Kapitel werden von anderen Spezifikationen (CDA-CH und CDA-CH-VACD) gepflegt und im vorliegenden Austauschformat nicht weiter spezifiziert.
+* ServiceRequest.reasonCode ServiceRequest.reasonReference
 
-### Use Case 7: Befunde mit zusätzlichen Angaben zur Probe
+### Use Case 7: Angaben zur Probe, Präanalytik
 
 Bei gewissen Untersuchungen reichen Auftrag und Probe alleine nicht aus, um das Laborresultat zu bestimmen. In solchen Fällen müssen Beobachtungen zur Probenentnahme an das Labor geliefert werden. Als Beispiel sei hier die Bestimmung der Creatinin-Clearance im 24 h Urin erwähnt. Dazu muss dem Labor die während einer bestimmten Zeitdauer gesammelte Urinmenge bekannt sein. Der Auftraggeben übermittelt dazu dem Labor das Urinvolumen, sowie eine Probe des Urins und des Serums.
 
@@ -65,37 +82,25 @@ Ein weiteres Beispiel ist der Synacthen(ACTH) Funktionstest, bei dem eine basale
 
 * Zweite Serum-Probe 60 Minuten später: Specimen.collection.collected[collectedDateTime]
 
-### Use Case 8: Zusätzliche Angaben zum Kontext
+### Use Case 8: Zusätzliche Angaben zum Kontext der Probe
 
 Bei Blutgas-Analysen ist die dem Patienten verabreichte Sauerstoffmenge manchmal von Belang
 
 * ServiceRequest.supportingInfo, z.Bsp. O2 4 Liter/Min.
 
-### Use Case 9: Auftraggeber wählt die Analysen oder Analysen-Panel aus einem Katalog
+### Use Case 9: Anfordern von Monitoring-Untersuchungen
 
-Die Labore stellen ihren Kunden eine Auswahl von Laboruntersuchungen zu Verfügung, welche sie in einem Katalog vorhalten. Dabei kann es sich um Einzeluntersuchungen handeln, wie zum Beispiel Na Serum, oder um eine Kollektion von Untersuchungen, wie zum Beispiel Na, K und Cl im Serum handeln. Dazu möchte der Kunde auch wissen, welche Vorgaben zur Probe das Labor macht: Transport-Temperatur, minimale Probenmenge, Art des Transportgefässes etc.
+Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab.
 
-* Composition - CatalogHeader profile
+* ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG
 
-* PlanDefinition
+### Use Case 10: Auftraggeber wählt die Analysen oder Analysen-Panel aus einem Katalog
 
-  * SpecimenDefinition
-  
-  * ActivityDefinition - ObservationResultRequirement - ObservationDefinition
+Dieser Use Case bewegt sich ausserhalb des Bereiches dieses Implementationsguides, obschon er ein wesentlicher Bestandteil von jeder Laborverordnunbg darstellt. Auftraggeber brauchen die Auswahl der Laboruntersuchungen, die das Labor auch wirklich zur Verfügung stellen kann. Ausserdem brauchen sie Orientierung in der Vielzahl von möglichen Untersuchungen in den verschiedenen Sparten, sowie Vorgaben für das präanalytische Vorgehen, Vorgaben für die richtigen Gefässe und Transportmedien, für die Minimalvolumen der Proben usw. Eine zukünftigen Version sollte diese Möglichkeit bieten.
 
-### Use Case 9: Sammelaufträge
+Die Labore stellen dazu ihren Kunden einen Katalog von derjenigen Laboruntersuchungen zu Verfügung, welche sie zur Verfügung stellen können. Dabei kann es sich um Einzeluntersuchungen handeln, wie zum Beispiel Natriumkonzentration im Serum, oder um eine Kollektion von Untersuchungen, wie zum Beispiel Na, K und Cl im Serum handeln. Häufig in Form eines Laborhandbuches machen sie die Vorgaben zu Transport-Temperatur, minimale Probenmenge, Art des Transportgefässes usw. zugänglich.
 
-Bei Sammelaufträgen (z.B. [5-biol-monit.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/5-biol-monit.xml)) werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert. Beispiele dazu sind:
+Es wird dazu verschiedene Typen von Katalogeinträgen (CatalogEntries) geben: Einzel-Analysen, Mehrfach-Analysen (panels), Proben-Gefässe, präanalytische Vorbedingungen.
+Der einzelne Datensatz einer Laboruntersuchung oder einer Probe lässt sich als mittels der Resource CatalogEntry abbilden. Eine Composition mit einem Profile for Catalog ist dann das Document, das den Katalog darstellt und repräsentiert die Gesamtheit der enthaltenen CatalogEntries. Dabei ist wichtig, dass der Catalog immer den aktuellen Gegebenheiten des Labors entspricht, und beispielsweise sofort neue Laboruntersuchungen oder veränderte Vorgaben der Präanalytik aufnehmen kann.
 
-* Suva Arbeitsmedizin: Bestellung von Laboruntersuchungen zu mehreren Patienten
-* Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
-* Polizeiliche Untersuchungen
-
-Dabei muss insbesondere die Problematik der Mitarbeiterfluktuationen gelöst werden:
-
-* Personen, für welche Tests angefordert sind arbeiten nicht mehr beim Auftraggeber
-* Es sind Proben zu Personen eingetroffen, die nicht im Auftrag sind (neue Mitarbeiter)
-Umsetzung der daraus entstehenden Anforderungen in der normativen Spezifikation:
-
-* Untersuchungen zu mehreren Patienten: ein eLaborbefund enthält Informationen zum Gesundheitszustand genau eines Patienten. Bei Sammelaufträgen wird für jeden Patienten ein eigener eLaborbefund erstellt. Alle eLaborbefund verweisen aber mit \<CDA-CH-ORDR\> auf den gleichen (Sammel-)Auftrag.
-* Problematik der Mitarbeiterfluktuationen: Ist nicht Bestandteil des eLaborbefunds. Für Personen, die nicht mehr beim Auftraggeber arbeiten wird kein eLaborbefund erstellt. Für neue Mitarbeiter werden eLaborbefunde erstellt.
+[StructureDefinition:Catalog] <http://hl7.org/fhir/catalog.html>

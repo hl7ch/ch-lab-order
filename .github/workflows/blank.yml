@@ -31,8 +31,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        
-    - name: Markdown Linting Action
-      uses: avto-dev/markdown-lint@v1.1.0
-      with:
-        args: '*.md'
+    

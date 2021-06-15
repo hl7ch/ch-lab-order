@@ -11,10 +11,12 @@
   <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt" />
   <status value="completed" />
 
-  <!-- item[0] order, order.placerOrderIdentifier, order.fillerOrderIdentifier -->
+  <!-- item[0] order -->
   <item>
     <linkId value="order" />
     <text value="Auftrag" />
+
+    <!-- item[0][0]order.placerOrderIdentifier-->
     <item>
       <linkId value="order.placerOrderIdentifier" />
       <text value="Auftragsnummer des Auftraggebers" />
@@ -22,6 +24,8 @@
         <valueString value="123" />
       </answer>
     </item>
+
+    <!-- item[0][1]order.placerOrderIdentifierDomain -->
     <item>
       <linkId value="order.placerOrderIdentifierDomain" />
       <text value="Identifier Domain der Auftragsnummer des Auftraggebers" />
@@ -29,6 +33,8 @@
         <valueString value="urn:oid:1.3.4.5.6.7" />
       </answer>
     </item>
+
+    <!-- item[0][2]order.precedentDocumentIdentifier -->
     <item>
       <linkId value="order.precedentDocumentIdentifier" />
       <text value="Identifier des Vorgängerdokuments" />
@@ -37,7 +43,7 @@
       </answer>
     </item>
 
-    <!-- item[0][4]order.notificationContactDocument-->
+    <!-- item[0][3]order.notificationContactDocument -->
     <item>
       <linkId value="order.notificationContactDocument" />
       <text value="Dringender Benachrichtigungskontakt für dieses Dokument" />
@@ -82,7 +88,7 @@
       </item>
     </item>
 
-    <!-- item[0][5]order.notificationContactDocumentResponse-->
+    <!-- item[0][4]order.notificationContactDocumentResponse -->
     <item>
       <linkId value="order.notificationContactDocumentResponse" />
       <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument" />
@@ -126,6 +132,8 @@
         </item>
       </item>
     </item>
+
+    <!-- item[0][5]order.priority -->
     <item>
       <linkId value="order.priority" />
       <text value="Auftragspriorität" />
