@@ -1,6 +1,8 @@
-### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
+<div markdown="1" class="stu-note">
+This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/) until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+</div>
 
-Note: This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
 
 This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is based on CH_ORF (v0.9.1 STU Draft) Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH-EPR Term.
 
