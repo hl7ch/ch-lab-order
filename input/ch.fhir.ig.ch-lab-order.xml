@@ -58,7 +58,7 @@
   <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf" />
     <packageId value="ch.fhir.ig.ch-orf" />
-    <version value="0.10.0" /> <!-- otherwise we will get sdc 2.8.0 -->
+    <version value="0.1.0" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
 <!-- 
