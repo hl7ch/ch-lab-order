@@ -1,5 +1,5 @@
 <div markdown="1" class="stu-note">
-This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. 
+This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight.
 Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
 </div>
 
@@ -7,10 +7,14 @@ Please add your feedback via the ‘Propose a change’-link in the footer on th
 
 Note: This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
 
-This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is based on CH_ORF (v0.9.1 STU Draft) Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH-EPR Term.
+This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is based on CH_ORF (v0.9.1 STU Draft) Order & Referral by Form - Implementation Guide (CH:ORF) [ORF](http://fhir.ch/ig/ch-orf/index.html), which refers on the CH Core Profiles of Switzerland and on CH-EPR Term.
 
-It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires <http://build.fhir.org/ig/HL7/sdc/index.html> and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
+It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](http://build.fhir.org/ig/HL7/sdc/index.html) and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
 There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested. Many laboratories also offer services for monitoring vital signs, such as blood pressure, ECG, pulse, which can be ordered.
+
+#### Download
+
+You can download this Implementation Guide in [NPM-format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](https://fhir.ch/ig/ch-lab-order/package.tgz).
 
 ### Management Summary
 
