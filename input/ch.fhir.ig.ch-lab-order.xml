@@ -14,7 +14,7 @@
   <title value="CH LAB-Order (R4)" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2021-06-15" /> <!-- last changed -->
+  <date value="2021-06-16" /> <!-- last changed -->
   <publisher value="HL7 Switzerland" />
   <contact>
     <name value="HL7 Switzerland" />
@@ -58,7 +58,7 @@
   <dependsOn id="chorf">
     <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf" />
     <packageId value="ch.fhir.ig.ch-orf" />
-    <version value="current" /> <!-- otherwise we will get sdc 2.8.0 -->
+    <version value="0.10.0" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
 <!-- 
@@ -777,7 +777,7 @@
     </page>
     <parameter>
       <code value="releaselabel" />
-      <value value="CI build" />
+      <value value="STU 1 Ballot" />
     </parameter>
     <parameter>
       <code value="path-pages" />
@@ -785,7 +785,7 @@
     </parameter>
     <parameter>
       <code value="copyrightyear" />
-      <value value="2020+" />
+      <value value="2021+" />
     </parameter>
   </definition>
 </ImplementationGuide>
