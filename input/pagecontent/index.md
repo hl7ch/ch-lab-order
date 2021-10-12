@@ -4,7 +4,7 @@ This implementation guide is under STU ballot by [HL7 Switzerland](https://www.h
 
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
 
-This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is based on CH_ORF (v0.9.1 STU Draft) Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH-EPR Term.
+This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
 
 It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires <http://build.fhir.org/ig/HL7/sdc/index.html> and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
 There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested. Many laboratories also offer services for monitoring vital signs, such as blood pressure, ECG, pulse, which can be ordered.
