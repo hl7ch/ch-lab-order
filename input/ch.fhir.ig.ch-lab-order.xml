@@ -663,6 +663,14 @@
     
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-lab-order-document" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-composition" />
