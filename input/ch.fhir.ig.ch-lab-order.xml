@@ -666,14 +666,14 @@
 
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-lab-order-document" />
+        <reference value="StructureDefinition/ch-lab-order-composition" />
       </reference>
       <exampleBoolean value="false" />
     </resource>
 
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-lab-order-composition" />
+        <reference value="StructureDefinition/ch-lab-order-document" />
       </reference>
       <exampleBoolean value="false" />
     </resource>
@@ -684,6 +684,8 @@
       </reference>
       <exampleBoolean value="false" />
     </resource>
+
+    
 
     <!-- References to VALUESETS -->
     <!-- ####################### -->
