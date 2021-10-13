@@ -7,40 +7,31 @@
 GET {{host}}/metadata HTTP/1.1
 Accept: application/fhir+xml
 
-### 1. POST OrfQrToBundle.map
+### 1. POST LabQrToBundle.map
 POST {{host}}/StructureMap HTTP/1.1
 Accept: application/fhir+xml;fhirVersion=4.0
 Content-Type: text/fhir-mapping
 
-< ./input/maps/OrfQrToBundle.map
+< ./input/maps/LabOrderQrToBundle.map
 
 
-### 2. Transform referra-min to ORF Bundle
-POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle
+### 2. Transform lab-order to Bundle
+POST {{host}}/StructureMap/$transform?source=http://fhir.ch/ig/ch-lab-order/StructureMap/LabOrderQrToBundle
 Accept: application/fhir+xml;fhirVersion=4.0
 Content-Type: application/fhir+xml;fhirVersion=4.0
 
-< ./input/examples/questionnaireresponse/referral-min.xml
+< ./input/examples/questionnaireresponse/1-tvt.xml
 
 
-
-#### Put questionnaire to Brians server
-PUT https://sqlonfhir-r4.azurewebsites.net/fhir/Questionnaire/referral-min HTTP/1.1
+### 3. Check Questionnaire on server
+GET {{host}}/Questionnaire/1-tvt
 Accept: application/fhir+xml;fhirVersion=4.0
 Content-Type: application/fhir+xml;fhirVersion=4.0
 
-< ./input/examples/questionnaire/referral-min.xml
 
-#### Put prepopulation data to Brians server
-PUT https://sqlonfhir-r4.azurewebsites.net/fhir/Bundle/referral-min HTTP/1.1
+### 2. Put Questionnaire on server
+POST {{host}}/Questionnaire
 Accept: application/fhir+xml;fhirVersion=4.0
 Content-Type: application/fhir+xml;fhirVersion=4.0
 
-< ./input/examples/Bundle/referral-min.xml
-
-
-
-# see rendering
-http://smartqedit4.azurewebsites.net/Questionnaire/Index
-
-
+< ./input/examples/questionnaire/1-tvt.xml
