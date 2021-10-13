@@ -1,0 +1,21 @@
+Instance: PraxisSeeblick
+InstanceOf: CHCoreOrganization
+Title: "Praxis Seeblick"
+Description: "Example for practice"
+Usage: #definition
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000235520"
+* name = "Arztpraxis Messen"
+* telecom[0].system = #phone
+* telecom[=].value = "44 567 78 90"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "info@praxis-seeblick.ch"
+* telecom[=].use = #work
+* telecom[+].system = #url
+* telecom[=].value = "http://www.praxis-seeblick.ch"
+* telecom[=].use = #work
+* address.line = "Waldstrasse 66"
+* address.city = "Cham"
+* address.postalCode = "6330"
+* address.country = "CH"
