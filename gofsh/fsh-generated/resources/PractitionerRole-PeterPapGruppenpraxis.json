@@ -1,0 +1,15 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "PeterPapGruppenpraxis",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/PeterPap"
+  },
+  "organization": {
+    "reference": "Organization/Gruppenpraxis"
+  }
+}

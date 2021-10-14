@@ -1,0 +1,106 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ch-lab-order-servicerequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Care Provision"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest",
+  "version": "0.9.0",
+  "name": "ChLabOrderServiceRequest",
+  "title": "CH LAB-Order ServiceRequest",
+  "status": "draft",
+  "date": "2019-02-05",
+  "publisher": "HL7 Switzerland",
+  "contact": [
+    {
+      "name": "HL7 Switzerland",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.hl7.ch/"
+        }
+      ]
+    },
+    {
+      "name": "Marcel Hanselmann",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "hanselmann48@gmail.com"
+        }
+      ]
+    }
+  ],
+  "description": "Definition for ServiceRequest in the context of CH LAB-Order",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CH",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "copyright": "CC-BY-SA-4.0",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "quick",
+      "uri": "http://siframework.org/cqf",
+      "name": "Quality Improvement and Clinical Knowledge (QUICK)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "short": "Classification of Service Request: order of lab-test, request for test-results or request for second opinion",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.ch/ig/ch-lab-order/ValueSet/ServiceRequest.categories",
+          "description": "High-level kind of a clinical document at a macro level."
+        }
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "short": "Must be present, if order is request for test"
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "resourceType": "Composition",
+  "id": "1-tvt",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2021-02-18T17:04:38.520+00:00"
+  },
+  "section": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "93037-0",
+            "display": "Portable medical order form"
+          }
+        ]
+      },
+      "title": "Order-Referral-Form 1-tvt",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order-Referral-Form 1-tvt</div>"
+      },
+      "entry": [
+        {
+          "reference": "Questionnaire/1-tvt"
+        },
+        {
+          "reference": "QuestionnaireResponse/1-tvt"
+        },
+        {
+          "reference": "ServiceRequest/1-tvt"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "enterer",
+          "valueReference": {
+            "reference": "MarcMustermannArztpraxis"
+          }
+        }
+      ],
+      "url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
+    },
+    {
+      "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument",
+      "valueReference": {
+        "reference": "EvaErlenmeyerLaborPipette"
+      }
+    },
+    {
+      "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument",
+      "valueReference": {
+        "reference": "MarcMustermannArztpraxis"
+      }
+    },
+    {
+      "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver",
+      "valueReference": {
+        "reference": "EvaErlenmeyerLaborPipette"
+      }
+    },
+    {
+      "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+      "valueReference": {
+        "reference": "Gruppenpraxis"
+      }
+    },
+    {
+      "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+      "valueReference": {
+        "reference": "HansGuggindieluft"
+      }
+    }
+  ],
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "code": "721965002",
+        "system": "http://snomed.info/sct",
+        "display": "Laboratory order (record artifact)"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "721963009",
+          "system": "http://snomed.info/sct",
+          "display": "Order (record artifact)"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "HansGuggindieluft"
+  },
+  "date": "2019-03-31T11:46:09+02:00",
+  "author": [
+    {
+      "reference": "MarcMustermannArztpraxis"
+    }
+  ],
+  "title": "Order-Referral-Form 1-tvt"
+}

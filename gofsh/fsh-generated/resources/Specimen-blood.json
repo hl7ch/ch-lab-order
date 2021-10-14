@@ -1,0 +1,36 @@
+{
+  "resourceType": "Specimen",
+  "id": "blood",
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "code": "119297000",
+        "system": "http://snomed.info/sct",
+        "display": "Blood sample"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/BeatBorer"
+  },
+  "collection": {
+    "collector": {
+      "reference": "Practitioner/MarcMustermann"
+    },
+    "collectedDateTime": "2015-08-16T06:40:17Z"
+  },
+  "container": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "706053007",
+            "system": "http://snomed.info/sct",
+            "display": "General specimen container (physical object)"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "resourceType": "Specimen",
+  "id": "blood-bactec-plus",
+  "identifier": [
+    {
+      "value": "88888-15394-75465"
+    }
+  ],
+  "accessionIdentifier": {
+    "value": "77777-bc987-dd888"
+  },
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "code": "119297000",
+        "system": "http://snomed.info/sct",
+        "display": "Blood sample"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/FranzMuster"
+  },
+  "receivedTime": "2020-08-16T16:40:17Z",
+  "request": [
+    {
+      "reference": "ServiceRequest/lab"
+    }
+  ],
+  "collection": {
+    "collector": {
+      "reference": "Practitioner/MarcMustermann"
+    },
+    "collectedDateTime": "2015-08-16T06:40:17Z"
+  },
+  "container": [
+    {
+      "identifier": [
+        {
+          "value": "4e88a-bc987-dd888-00000-bact"
+        }
+      ],
+      "description": "Sarstedt Blutkultur-Adapter Universal",
+      "type": {
+        "coding": [
+          {
+            "code": "702120003",
+            "system": "http://snomed.info/sct",
+            "display": "Blood collection Luer adaptor"
+          }
+        ]
+      },
+      "additiveCodeableConcept": {
+        "coding": [
+          {
+            "code": "BACTM",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0371",
+            "display": "Bacterial Transport medium"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType": "Specimen",
+  "id": "urin",
+  "identifier": [
+    {
+      "value": "11111-15394-75465"
+    }
+  ],
+  "accessionIdentifier": {
+    "value": "22222-bc987-dd888"
+  },
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "code": "122575003",
+        "system": "http://snomed.info/sct",
+        "display": "Urine sample"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/FranzMuster"
+  },
+  "receivedTime": "2020-08-16T16:40:17Z",
+  "request": [
+    {
+      "reference": "ServiceRequest/lab"
+    }
+  ],
+  "collection": {
+    "collector": {
+      "reference": "Practitioner/MarcMustermann"
+    },
+    "collectedDateTime": "2020-08-16T06:40:17Z"
+  },
+  "container": [
+    {
+      "identifier": [
+        {
+          "value": "4e88a-bc987-dd888-12345-urin"
+        }
+      ],
+      "description": "Uriswab™ : Urine Collection System",
+      "type": {
+        "coding": [
+          {
+            "code": "706053007",
+            "system": "http://snomed.info/sct",
+            "display": "General specimen container (physical object)"
+          }
+        ]
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Specimen is grossly lipemic"
+    }
+  ]
+}

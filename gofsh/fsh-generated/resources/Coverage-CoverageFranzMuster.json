@@ -1,0 +1,32 @@
+{
+  "resourceType": "Coverage",
+  "id": "CoverageFranzMuster",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-coverage"
+    ],
+    "source": "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
+  },
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "sanitas",
+      "name": "Sanitas"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.756.5.30.1.123.100.1.1.1",
+      "value": "80756015090002640000"
+    }
+  ],
+  "status": "active",
+  "beneficiary": {
+    "reference": "Patient/FranzMuster"
+  },
+  "payor": [
+    {
+      "reference": "#sanitas"
+    }
+  ]
+}
