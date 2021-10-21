@@ -1,0 +1,313 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "93037-0",
+  "display" : "Portable medical order form"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Portable medical order form",
+  "code" : "93037-0",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "55108-5",
+  "display" : "Clinical presentation"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Clinical presentation Document",
+  "code" : "55108-5",
+  "system" : "http://loinc.org",
+  "severity" : "warning",
+  "error" : "The display \"Clinical presentation\" is not a valid display for the code {http://loinc.org}55108-5 - should be one of ['Clinical presentation Document', 'Clinical presentation Doc', '临床文档型' (zh-CN), '临床文档' (zh-CN), '文档' (zh-CN), '文书' (zh-CN), '医疗文书' (zh-CN), '临床医疗文书 医疗服务对象' (zh-CN), '客户' (zh-CN), '病人' (zh-CN), '病患' (zh-CN), '病号' (zh-CN), '超系统 - 病人 发现是一个原子型临床观察指标，并不是作为印象的概括陈述。体格检查、病史、系统检查及其他此类观察指标的属性均为发现。它们的标尺对于编码型发现可能是名义型，而对于叙述型文本之中所报告的发现，则可能是叙述型。' (zh-CN), '发现物' (zh-CN), '所见' (zh-CN), '结果' (zh-CN), '结论 文档.其他' (zh-CN), '杂项类文档' (zh-CN), '其他文档 时刻' (zh-CN), '随机' (zh-CN), '随意' (zh-CN), '瞬间 杂项' (zh-CN), '杂项类' (zh-CN), '杂项试验' (zh-CN), 'Documentazione miscellanea Miscellanea Osservazione paziente Punto nel tempo (episodio)' (it-IT), 'Документ Точка во времени' (ru-RU), 'Момент' (ru-RU), '' (ru-RU)] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "24360-0",
+  "display" : "Hemoglobin and Hematocrit panel - Blood"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Hemoglobin and Hematocrit panel - Blood",
+  "code" : "24360-0",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "43113-0",
+  "display" : "Hemoglobin electrophoresis panel in Blood"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Hemoglobin electrophoresis panel in Blood",
+  "code" : "43113-0",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "57021-8",
+  "display" : "CBC W Auto Differential panel - Blood"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "CBC W Auto Differential panel - Blood",
+  "code" : "57021-8",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "58410-2",
+  "display" : "CBC panel - Blood by Automated count"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "CBC panel - Blood by Automated count",
+  "code" : "58410-2",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "57023-4",
+  "display" : "Auto Differential panel - Blood"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Auto Differential panel - Blood",
+  "code" : "57023-4",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "55398-2",
+  "display" : "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
+  "code" : "55398-2",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "1988-5",
+  "display" : "C reactive protein [Mass/Volume] in Serum or Plasma"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "C reactive protein [Mass/volume] in Serum or Plasma",
+  "code" : "1988-5",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "76485-2",
+  "display" : "C reactive protein [Moles/volume] in Serum or Plasma"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "C reactive protein [Moles/volume] in Serum or Plasma",
+  "code" : "76485-2",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "30522-7",
+  "display" : "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method",
+  "code" : "30522-7",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "76486-0",
+  "display" : "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method",
+  "code" : "76486-0",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "90441-7",
+  "display" : "B pert+parapert DNA Pnl Nph"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Bordetella pertussis and Bordetella parapertussis DNA panel - Nasopharynx",
+  "code" : "90441-7",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "24318-8",
+  "display" : "Manual diff Bld"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Manual Differential panel - Blood",
+  "code" : "24318-8",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "1988-5",
+  "display" : "C reactive protein [Mass/volume] in Serum or Plasma"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "C reactive protein [Mass/volume] in Serum or Plasma",
+  "code" : "1988-5",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "86662-4",
+  "display" : "Pap smear tests - FPAR 2.0 set"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Pap smear tests - FPAR 2.0 set",
+  "code" : "86662-4",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "14503-7",
+  "display" : "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Human papilloma virus 16+18 Ag [Presence] in Cervix",
+  "code" : "14503-7",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "50556-0",
+  "display" : "Urinalysis dipstick panel - Urine by Automated test strip"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Urinalysis dipstick panel - Urine by Automated test strip",
+  "code" : "50556-0",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "24364-2",
+  "display" : "Obstetric 1996 Pnl Ser+Bld"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Obstetric 1996 panel - Serum and Blood",
+  "code" : "24364-2",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "90423-5",
+  "display" : "Microorganism preliminary growth detection panel - Blood by Culture"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Microorganism preliminary growth detection panel - Blood by Culture",
+  "code" : "90423-5",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "85421-6",
+  "display" : "Bacterial identification and susceptibility panel - Isolate"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Bacterial identification and susceptibility panel - Isolate",
+  "code" : "85421-6",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "29587-3",
+  "display" : "Toxicology panel - Blood"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Toxicology panel - Blood",
+  "code" : "29587-3",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "54454-4",
+  "display" : "Arsenic fractions panel - Urine"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Arsenic fractions panel - Urine",
+  "code" : "54454-4",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "29589-9",
+  "display" : "Heavy metals panel - Urine"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Heavy metals panel - Urine",
+  "code" : "29589-9",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

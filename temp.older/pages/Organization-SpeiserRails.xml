@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="SpeiserRails"/>
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: CHE-108.444.179</p><p><b>telecom</b>: <a href="tel:+41412345566">+41412345566</a>, <a href="mailto:info@speiser-rails.ch">info@speiser-rails.ch</a>, <a href="http://www.speiser-rails.ch">http://www.speiser-rails.ch</a></p><p><b>address</b>: Gleisallee 123 Arbon 9320 CH </p></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.756.5.45"/>
+    <value value="CHE-108.444.179"/>
+  </identifier>
+  <telecom>
+    <system value="phone"/>
+    <value value="+41412345566"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="info@speiser-rails.ch"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.speiser-rails.ch"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <line value="Gleisallee 123"/>
+    <city value="Arbon"/>
+    <postalCode value="9320"/>
+    <country value="CH"/>
+  </address>
+</Organization>

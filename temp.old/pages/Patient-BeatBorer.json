@@ -1,0 +1,99 @@
+{
+  "resourceType": "Patient",
+  "id": "BeatBorer",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b>id</b>: BeatBorer\n      </p>\n      <p>\n        <b>meta</b>: \n      </p>\n      <p>\n        <b>identifier</b>: 012/08.111115\n      </p>\n      <p>\n        <b>name</b>: Beat Borer \n      </p>\n      <p>\n        <b>gender</b>: MALE\n      </p>\n      <p>\n        <b>birthDate</b>: Jun 06, 1986\n      </p>\n      <p>\n        <b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span>\n      </p>\n      <h3>Communications</h3>\n      <table class=\"grid\">\n        <tr>\n          <td>-</td>\n          <td>\n            <b>Language</b>\n          </td>\n          <td>\n            <b>Preferred</b>\n          </td>\n        </tr>\n        <tr>\n          <td>*</td>\n          <td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span>\n          </td>\n          <td>true</td>\n        </tr>\n      </table>\n    </div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+      "valueAddress": {
+        "city": "Lausanne",
+        "country": "Schweiz"
+      }
+    },
+    {
+      "url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin",
+      "valueAddress": {
+        "city": "Köniz",
+        "state": "BE"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
+            "code": "1077",
+            "display": "Protestant"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          }
+        ]
+      },
+      "system": "urn:oid:2.16.756.5.30.999999.1",
+      "value": "012/08.111115"
+    }
+  ],
+  "name": [
+    {
+      "family": "Borer",
+      "given": [
+        "Beat"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+41 36 123 45 67",
+      "use": "home"
+    },
+    {
+      "system": "email",
+      "value": "beat.borer@example.ch"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1986-06-06",
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus",
+        "code": "2",
+        "display": "verheiratet"
+      }
+    ]
+  },
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "de-CH"
+          }
+        ],
+        "text": "Deutsch (Schweiz)"
+      },
+      "preferred": true
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="1-tvt"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-04-01T20:18:41.341+00:00"/>
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2019-04-01T20:18:41.341+00:00"/>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Composition/1-tvt"/>
+    <resource>
+      <Composition>
+        <id value="1-tvt"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div>Laboratory Order</div></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Patient/HansGuggindieluft"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/HansGuggindieluft"/>
+        </subject>
+        <date value="2019-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+        </author>
+        <title value="Order-Referral-Form 1-tvt"/>
+        <section>
+          <title value="Order-Referral-Form 1-tvt"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Order-Referral-Form 1-tvt</div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/1-tvt"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/1-tvt"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/1-tvt"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Patient/HansGuggindieluft"/>
+    <resource>
+      <Patient>
+        <id value="HansGuggindieluft"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>Birth Place</b>: Köniz BE Schweiz </p><p><b>identifier</b>: id: 012/08.111114</p><p><b>name</b>: Hans Guggindieluft </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1981-01-01</p><p><b>maritalStatus</b>: <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}">verheiratet</span></p><h3>Communications</h3><table class="grid"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td><span title="Codes: {urn:ietf:bcp:47 de-CH}">Deutsch (Schweiz)</span></td><td>true</td></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+          <valueAddress>
+            <city value="Köniz"/>
+            <state value="BE"/>
+            <country value="Schweiz"/>
+          </valueAddress>
+        </extension>
+        <identifier>
+          <system value="urn:oid:2.16.756.5.32"/>
+          <value value="012/08.111114"/>
+        </identifier>
+        <name>
+          <family value="Guggindieluft"/>
+          <given value="Hans"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1981-01-01"/>
+        <maritalStatus>
+          <coding>
+            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
+            <code value="2"/>
+            <display value="verheiratet"/>
+          </coding>
+        </maritalStatus>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47"/>
+              <code value="de-CH"/>
+            </coding>
+            <text value="Deutsch (Schweiz)"/>
+          </language>
+          <preferred value="true"/>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Practitioner/MarcMustermann"/>
+    <resource>
+      <Practitioner>
+        <id value="MarcMustermann"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 7601000050702</p><p><b>name</b>: Marc Mustermann </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.51.1.3"/>
+          <value value="7601000050702"/>
+        </identifier>
+        <name>
+          <family value="Mustermann"/>
+          <given value="Marc"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Organization/Gruppenpraxis"/>
+    <resource>
+      <Organization>
+        <id value="Gruppenpraxis"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>name</b>: Gruppenpraxis Olten</p><p><b>address</b>: Gerbergasse 12 Olten 4600 CH </p></div>
+        </text>
+        <name value="Gruppenpraxis Olten"/>
+        <address>
+          <line value="Gerbergasse 12"/>
+          <city value="Olten"/>
+          <postalCode value="4600"/>
+          <country value="CH"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"/>
+    <resource>
+      <PractitionerRole>
+        <id value="MarcMustermannArztpraxis"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href="#Practitioner_MarcMustermann">See above (Practitioner/MarcMustermann)</a></p><p><b>organization</b>: <a href="#Organization_Gruppenpraxis">See above (Organization/Gruppenpraxis)</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/MarcMustermann"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/Gruppenpraxis"/>
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Questionnaire/1-tvt"/>
+    <resource>
+      <Composition>
+        <id value="1-tvt"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div>Laboratory Order</div></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Patient/HansGuggindieluft"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/HansGuggindieluft"/>
+        </subject>
+        <date value="2019-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+        </author>
+        <title value="Order-Referral-Form 1-tvt"/>
+        <section>
+          <title value="Order-Referral-Form 1-tvt"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Order-Referral-Form 1-tvt</div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/1-tvt"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/1-tvt"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/1-tvt"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/QuestionnaireResponse/1-tvt"/>
+    <resource>
+      <Composition>
+        <id value="1-tvt"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div>Laboratory Order</div></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Patient/HansGuggindieluft"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/HansGuggindieluft"/>
+        </subject>
+        <date value="2019-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+        </author>
+        <title value="Order-Referral-Form 1-tvt"/>
+        <section>
+          <title value="Order-Referral-Form 1-tvt"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Order-Referral-Form 1-tvt</div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/1-tvt"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/1-tvt"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/1-tvt"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/ServiceRequest/1-tvt"/>
+    <resource>
+      <ServiceRequest>
+        <id value="1-tvt"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Placer Identifier: 123, Filler Identifier: 456</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>category</b>: <span title="Codes: {http://snomed.info/sct 108252007}">Laboratory procedure (procedure)</span></p><p><b>priority</b>: urgent</p><p><b>subject</b>: <a href="#Patient_HansGuggindieluft">See above (Patient/HansGuggindieluft)</a></p><p><b>requester</b>: <a href="#PractitionerRole_MarcMustermannArztpraxis">See above (PractitionerRole/MarcMustermannArztpraxis)</a></p><p><b>reasonCode</b>: <span title="Codes: {http://snomed.info/sct 404223003}">Deep venous thrombosis of lower extremity</span></p><p><b>insurance</b>: <a href="Coverage-HealthInsuranceCard.html">Generated Summary: id: A123456780; status: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}">extended healthcare</span>; period: ?ngen-2? --&gt; 2012-03-17</a></p><p><b>specimen</b>: </p><ul><li><a href="Specimen-serum.html">Serum specimen. Generated Summary: id: 48736-12345-75465; id: 4e88a-12345-dd888; status: available; <span title="Codes: {http://snomed.info/sct 119364003}">Serum specimen (specimen)</span></a></li><li><a href="Specimen-blood.html">Generated Summary: status: available; <span title="Codes: {http://snomed.info/sct 119297000}">Blood sample</span></a></li></ul></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PLAC"/>
+              <display value="Placer Identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.3.4.5.6.7"/>
+          <value value="123"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="FILL"/>
+              <display value="Filler Identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:7.8.9.10.11"/>
+          <value value="456"/>
+        </identifier>
+        <status value="active"/>
+        <intent value="original-order"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+          </coding>
+          <text value="Laboratory procedure (procedure)"/>
+        </category>
+        <priority value="urgent"/>
+        <subject>
+          <reference value="Patient/HansGuggindieluft"/>
+        </subject>
+        <requester>
+          <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+        </requester>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="404223003"/>
+          </coding>
+          <text value="Deep venous thrombosis of lower extremity"/>
+        </reasonCode>
+        <insurance>
+          <reference value="Coverage/HealthInsuranceCard"/>
+        </insurance>
+        <specimen>
+          <reference value="Specimen/serum"/>
+          <display value="Serum specimen"/>
+        </specimen>
+        <specimen>
+          <reference value="Specimen/blood"/>
+        </specimen>
+      </ServiceRequest>
+    </resource>
+  </entry>
+</Bundle>

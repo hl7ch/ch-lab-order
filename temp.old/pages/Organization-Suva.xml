@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Suva"/>
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Suva Hauptsitz</p>
+    </div>
+  </text>
+<!--  
+      Business and Enterprise Register (BER) Unternehmens-
+      Identifikationsnummer 
+      <system value="urn:oid:2.16.756.5.45" />
+      Unique IDentification Business (UIDB) Unternehmens-
+      Identifikationsnummer
+     -->
+  <identifier>
+    <system value="urn:oid:2.16.756.5.45"/>
+    <value value="CHE-108.955.179"/>
+  </identifier>
+  <name value="Suva"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+41322345566"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="info@suva.ch"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.suva.ch"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <line value="Löwenplatz 1"/>
+    <city value="Luzern"/>
+    <postalCode value="6004"/>
+    <country value="CH"/>
+  </address>
+</Organization>

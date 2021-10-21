@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="urin"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 11111-15394-75465</p><p><b>accessionIdentifier</b>: id: 22222-bc987-dd888</p><p><b>status</b>: available</p><p><b>type</b>: <span title="Codes: {http://snomed.info/sct 122575003}">Urine sample</span></p><p><b>subject</b>: <a href="Patient-FranzMuster.html">Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}">in eingetragener Partnerschaft</span></a></p><p><b>receivedTime</b>: Aug 16, 2020, 6:40:17 PM</p><p><b>request</b>: <a href="ServiceRequest-lab.html">Generated Summary: Placer Identifier: 123, Filler Identifier: 456; status: active; intent: original-order; <span title="Codes: {http://snomed.info/sct 108252007}">Laboratory procedure (procedure)</span>; priority: urgent; <span title="Codes: {http://snomed.info/sct 61246008}">Laboratory medicine specialist (occupation)</span>; <span title="Codes: {http://snomed.info/sct 404223003}">Deep venous thrombosis of lower extremity</span></a></p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td><a href="Practitioner-MarcMustermann.html">Generated Summary: id: 7601000050702; Marc Mustermann (OFFICIAL); Phone: 033 333 22 11, marc.mustermann@gruppenpraxis.ch</a></td><td>Aug 16, 2020, 8:40:17 AM</td></tr></table><h3>Containers</h3><table class="grid"><tr><td>-</td><td><b>Identifier</b></td><td><b>Description</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>id: 4e88a-bc987-dd888-12345-urin</td><td>Uriswab&trade; : Urine Collection System</td><td><span title="Codes: {http://snomed.info/sct 706053007}">General specimen container (physical object)</span></td></tr></table><p><b>note</b>: Specimen is grossly lipemic</p></div>
+  </text>
+<!--  from Resource: id, meta, implicitRules, and language  -->
+<!--  from DomainResource: text, contained, extension, and modifierExtension  -->
+  <identifier>
+  <!--  0..* This is a business identifier, not a resource identifier (see discussion)  -->
+    <value value="11111-15394-75465"/>
+  </identifier>
+  <accessionIdentifier>
+  <!--  1..1 Identifier Identifier assigned by the lab, must be present  -->
+    <value value="22222-bc987-dd888"/>
+  </accessionIdentifier>
+  <status value="available"/>
+<!--  0..1 available | unavailable | unsatisfactory | entered-in-error  -->
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="122575003"/>
+      <display value="Urine sample"/>
+    </coding>
+  </type>
+  <subject>
+  <!--  0..1 Reference(Patient|Group|Device|Substance|Location) Where the specimen came from. This 
+      may be from patient(s), from a location (e.g., the source of an environmental sample), or a
+      sampling of a substance or a device  -->
+    <reference value="Patient/FranzMuster"/>
+  </subject>
+  <receivedTime value="2020-08-16T16:40:17Z"/>
+<!--  0..1 The time when specimen was received for processing  -->
+  <request>
+    <reference value="ServiceRequest/lab"/>
+  </request>
+  <collection>
+  <!--  0..1 Collection details  -->
+    <collector>
+    <!--  0..1 Reference(Practitioner|PractitionerRole) Who collected the specimen  -->
+      <reference value="Practitioner/MarcMustermann"/>
+    </collector>
+    <collectedDateTime value="2020-08-16T06:40:17Z"/>
+  </collection>
+  <container>
+  <!--  0..* Direct container of specimen (tube/slide, etc.)  -->
+    <identifier>
+      <value value="4e88a-bc987-dd888-12345-urin"/>
+    </identifier>
+  <!--  0..1 Textual description of the container  -->
+  <!--  'https://www.copanusa.com/wp-content/uploads/2019/07/LBM-ESwab-051519.pdf' -->
+    <description value="Uriswab™ : Urine Collection System"/>
+    <type>
+    <!--  0..1 CodeableConcept Kind of container directly associated with specimen  -->
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="706053007"/>
+        <display value="General specimen container (physical object)"/>
+      </coding>
+    </type>
+  </container>
+  <note>
+    <text value="Specimen is grossly lipemic"/>
+  </note>
+</Specimen>

@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/PractitionerRole/HansHauserKantonsspital> a fhir:PractitionerRole;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "HansHauserKantonsspital"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href=\"Practitioner-HansHauser.html\">Generated Summary: id: 7601000050704; Hans Hauser (OFFICIAL); Phone: 038 888 22 11, hans.hauser@gruppenpraxis.ch</a></p><p><b>organization</b>: <a href=\"Organization-Kantonsspital.html\">Generated Summary: id: 7601000235500; name: Kantonsspital Zug; Phone: +41 45 334 55 66, info@kantonsspital.zug.ch, http://www.kanstonsspital.zug....</a></p></div>"
+  ];
+  fhir:PractitionerRole.practitioner [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/HansHauser>;
+     fhir:Reference.reference [ fhir:value "Practitioner/HansHauser" ]
+  ];
+  fhir:PractitionerRole.organization [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/Kantonsspital>;
+     fhir:Reference.reference [ fhir:value "Organization/Kantonsspital" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/PractitionerRole/HansHauserKantonsspital.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

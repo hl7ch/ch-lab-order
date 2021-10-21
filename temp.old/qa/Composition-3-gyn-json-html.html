@@ -1,0 +1,109 @@
+﻿<html>
+<head>
+  <title>Composition-3-gyn-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.id">id</a>" : "3-gyn",
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2021-02-18T17:04:38.520+00:00",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n        Order-Referral-Form|3-gyn\n    &lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "enterer",
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/PeterPapGruppenpraxis"
+          }
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/EvaErlenmeyerLaborPipette"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Gruppenpraxis"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "721965002",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Laboratory order (record artifact)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "721963009",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Order (record artifact)"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/MarinaRubella"
+  },
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.date">date</a>" : "2020-03-31T11:46:09+02:00",
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/PeterPapGruppenpraxis"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.title">title</a>" : "Referral 3-gyn",
+  "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section">section</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.title">title</a>" : "Order-Referral-Form 3-gyn",
+      "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "93037-0",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Portable medical order form"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n        Order-Referral-Form 3-gyn\n      &lt;/div&gt;"<a name="end-xhtml"></a>
+      },
+      "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Questionnaire/3-gyn"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "QuestionnaireResponse/3-gyn"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "ServiceRequest/3-gyn"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+</body>
+</html>

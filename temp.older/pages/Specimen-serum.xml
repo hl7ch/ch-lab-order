@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="serum"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 48736-12345-75465</p><p><b>accessionIdentifier</b>: id: 4e88a-12345-dd888</p><p><b>status</b>: available</p><p><b>type</b>: <span title="Codes: {http://snomed.info/sct 119364003}">Serum specimen (specimen)</span></p><p><b>subject</b>: <a href="Patient-BeatBorer.html">Generated Summary: Medical record number: 012/08.111115; Beat Borer ; Phone: +41 36 123 45 67, beat.borer@example.ch; gender: male; birthDate: 1986-06-06; <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}">verheiratet</span></a></p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td><a href="Practitioner-MarcMustermann.html">Generated Summary: id: 7601000050702; Marc Mustermann (OFFICIAL); Phone: 033 333 22 11, marc.mustermann@gruppenpraxis.ch</a></td><td>Aug 16, 2015, 8:40:17 AM</td></tr></table><h3>Containers</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td></tr><tr><td>*</td><td><span title="Codes: {http://snomed.info/sct 706053007}">General specimen container (physical object)</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <value value="48736-12345-75465"/>
+  </identifier>
+  <accessionIdentifier>
+    <value value="4e88a-12345-dd888"/>
+  </accessionIdentifier>
+  <status value="available"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="119364003"/>
+      <display value="Serum specimen (specimen)"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/BeatBorer"/>
+  </subject>
+  <collection>
+    <collector>
+      <reference value="Practitioner/MarcMustermann"/>
+    </collector>
+    <collectedDateTime value="2015-08-16T06:40:17Z"/>
+  </collection>
+  <container>
+    <type>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="706053007"/>
+        <display value="General specimen container (physical object)"/>
+      </coding>
+    </type>
+  </container>
+</Specimen>

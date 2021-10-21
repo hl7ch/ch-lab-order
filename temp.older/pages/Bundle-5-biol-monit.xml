@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="5-biol-monit"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-04-01T20:18:41.341+00:00"/>
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3359505"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2019-04-01T20:18:41.341+00:00"/>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Composition/5-biol-monit"/>
+    <resource>
+      <Composition>
+        <id value="5-biol-monit"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div>Laboratory Order</div></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/SpeiserRails"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/BeatBorer"/>
+        </subject>
+        <date value="2019-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+        </author>
+        <title value="Referral 5-biol-monit"/>
+        <section>
+          <title value="Order-Referral-Form 5-biol-monit"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Order-Referral-Form 5-biol-monit</div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/5-biol-monit"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/5-biol-monit"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/5-biol-monit"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Patient/BeatBorer"/>
+    <resource>
+      <Patient>
+        <id value="BeatBorer"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>Birth Place</b>: Paris Frankreich </p><p><b>Place of origin according to eCH-0011</b>: Köniz BE </p><p><b>religion</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1077}">Protestant</span></p><p><b>identifier</b>: Medical record number: 012/08.111101</p><p><b>name</b>: Beat Borer </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1986-06-06</p><p><b>maritalStatus</b>: <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}">verheiratet</span></p><h3>Communications</h3><table class="grid"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td><span title="Codes: {urn:ietf:bcp:47 de-CH}">Deutsch (Schweiz)</span></td><td>true</td></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+          <valueAddress>
+            <city value="Paris"/>
+            <country value="Frankreich"/>
+          </valueAddress>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
+          <valueAddress>
+            <city value="Köniz"/>
+            <state value="BE"/>
+          </valueAddress>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1077"/>
+              <display value="Protestant"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.756.5.30.999999.1"/>
+          <value value="012/08.111101"/>
+        </identifier>
+        <name>
+          <family value="Borer"/>
+          <given value="Beat"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1986-06-06"/>
+        <maritalStatus>
+          <coding>
+            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
+            <code value="2"/>
+            <display value="verheiratet"/>
+          </coding>
+        </maritalStatus>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47"/>
+              <code value="de-CH"/>
+            </coding>
+            <text value="Deutsch (Schweiz)"/>
+          </language>
+          <preferred value="true"/>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Practitioner/PauloPorcellini"/>
+    <resource>
+      <Practitioner>
+        <id value="PauloPorcellini"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 7601000050705</p><p><b>name</b>: Paulo Porcellini </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.51.1.3"/>
+          <value value="7601000050705"/>
+        </identifier>
+        <name>
+          <family value="Porcellini"/>
+          <given value="Paulo"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Organization/Suva"/>
+    <resource>
+      <Organization>
+        <id value="Suva"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: CHE-108.955.179</p><p><b>name</b>: Suva</p><p><b>telecom</b>: <a href="tel:+41322345566">+41322345566</a>, <a href="mailto:info@suva.ch">info@suva.ch</a>, <a href="http://www.suva.ch">http://www.suva.ch</a></p><p><b>address</b>: Löwenplatz 1 Luzern 6004 CH </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.756.5.45"/>
+          <value value="CHE-108.955.179"/>
+        </identifier>
+        <name value="Suva"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+41322345566"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="info@suva.ch"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="url"/>
+          <value value="http://www.suva.ch"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <line value="Löwenplatz 1"/>
+          <city value="Luzern"/>
+          <postalCode value="6004"/>
+          <country value="CH"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/PauloPorcelliniSuva"/>
+    <resource>
+      <PractitionerRole>
+        <id value="PauloPorcelliniSuva"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href="#Practitioner_PauloPorcellini">See above (Practitioner/PauloPorcellini)</a></p><p><b>organization</b>: <a href="#Organization_Suva">See above (Organization/Suva)</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/PauloPorcellini"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/Suva"/>
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/Questionnaire/5-biol-monit"/>
+    <resource>
+      <Composition>
+        <id value="5-biol-monit"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div>Laboratory Order</div></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/SpeiserRails"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/BeatBorer"/>
+        </subject>
+        <date value="2019-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+        </author>
+        <title value="Referral 5-biol-monit"/>
+        <section>
+          <title value="Order-Referral-Form 5-biol-monit"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Order-Referral-Form 5-biol-monit</div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/5-biol-monit"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/5-biol-monit"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/5-biol-monit"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/QuestionnaireResponse/5-biol-monit"/>
+    <resource>
+      <Composition>
+        <id value="5-biol-monit"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div>Laboratory Order</div></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Gruppenpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/SpeiserRails"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/BeatBorer"/>
+        </subject>
+        <date value="2019-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+        </author>
+        <title value="Referral 5-biol-monit"/>
+        <section>
+          <title value="Order-Referral-Form 5-biol-monit"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Order-Referral-Form 5-biol-monit</div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/5-biol-monit"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/5-biol-monit"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/5-biol-monit"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.com/fhir/ServiceRequest/5-biol-monit"/>
+    <resource>
+      <ServiceRequest>
+        <id value="5-biol-monit"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Placer Identifier: 123, Filler Identifier: 456</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>category</b>: <span title="Codes: {http://snomed.info/sct 108252007}">Laboratory procedure (procedure)</span></p><p><b>priority</b>: urgent</p><p><b>subject</b>: <a href="#Patient_BeatBorer">See above (Patient/BeatBorer)</a></p><p><b>requester</b>: <a href="#PractitionerRole_PauloPorcelliniSuva">See above (PractitionerRole/PauloPorcelliniSuva)</a></p><p><b>reasonCode</b>: <span title="Codes: {http://snomed.info/sct 409967009}">Toxicology (qualifier value)</span></p><p><b>insurance</b>: <a href="Coverage-HealthInsuranceCard.html">Generated Summary: id: A123456780; status: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}">extended healthcare</span>; period: ?ngen-2? --&gt; 2012-03-17</a></p><p><b>specimen</b>: </p><ul><li><a href="Specimen-blood.html">Generated Summary: status: available; <span title="Codes: {http://snomed.info/sct 119297000}">Blood sample</span></a></li><li><a href="Specimen-urin.html">Generated Summary: id: 11111-15394-75465; id: 22222-bc987-dd888; status: available; <span title="Codes: {http://snomed.info/sct 122575003}">Urine sample</span>; receivedTime: Aug 16, 2020, 6:40:17 PM; Specimen is grossly lipemic</a></li></ul></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PLAC"/>
+              <display value="Placer Identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.3.4.5.6.7"/>
+          <value value="123"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="FILL"/>
+              <display value="Filler Identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:7.8.9.10.11"/>
+          <value value="456"/>
+        </identifier>
+        <status value="active"/>
+        <intent value="original-order"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+          </coding>
+          <text value="Laboratory procedure (procedure)"/>
+        </category>
+        <priority value="urgent"/>
+        <subject>
+          <reference value="Patient/BeatBorer"/>
+        </subject>
+        <requester>
+          <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+        </requester>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="409967009"/>
+          </coding>
+          <text value="Toxicology (qualifier value)"/>
+        </reasonCode>
+        <insurance>
+          <reference value="Coverage/HealthInsuranceCard"/>
+        </insurance>
+        <specimen>
+          <reference value="Specimen/blood"/>
+        </specimen>
+        <specimen>
+          <reference value="Specimen/urin"/>
+        </specimen>
+      </ServiceRequest>
+    </resource>
+  </entry>
+</Bundle>

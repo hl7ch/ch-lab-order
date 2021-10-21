@@ -1,0 +1,19 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "PauloPorcelliniSuva",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href=\"Practitioner-PauloPorcellini.html\">Generated Summary: id: 7601000050705; Paulo Porcellini (OFFICIAL); Phone: 036 336 22 33, paulo.porcellini@suva.ch</a></p><p><b>organization</b>: <a href=\"Organization-Suva.html\">Generated Summary: id: CHE-108.955.179; name: Suva; Phone: +41322345566, info@suva.ch, http://www.suva.ch</a></p></div>"
+  },
+  "practitioner": {
+    "reference": "Practitioner/PauloPorcellini"
+  },
+  "organization": {
+    "reference": "Organization/Suva"
+  }
+}

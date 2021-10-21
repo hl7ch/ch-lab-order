@@ -1,0 +1,57 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "f3809bfe-0774-4775-b79a-5b83fda60bc9-15",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/f3809bfe-0774-4775-b79a-5b83fda60bc9-15",
+  "name" : "IntersectionDocumentEntryTypeCodeAndDocumentEntryTypeCode",
+  "title" : "Intersection of DocumentEntry.typeCode And DocumentEntry.typeCode",
+  "status" : "active",
+  "date" : "2021-10-15T15:44:18+02:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CH"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "721965002",
+        "display" : "Laboratory order (record artifact)"
+      },
+      {
+        "code" : "721966001",
+        "display" : "Pathology order (record artifact)"
+      },
+      {
+        "code" : "4241000179101",
+        "display" : "Laboratory report (record artifact)"
+      },
+      {
+        "code" : "371528001",
+        "display" : "Pathology report (record artifact)"
+      }]
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "721965002",
+      "display" : "Laborauftrag"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721966001",
+      "display" : "Pathologieauftrag"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4241000179101",
+      "display" : "Laborbericht"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371528001",
+      "display" : "Pathologiebericht"
+    }]
+  }
+}

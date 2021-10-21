@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+  <title>Coverage-CoverageFranzMuster-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage">Coverage</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CoverageFranzMuster&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://www.ti.bfh.ch/de/bachelor/medizininformatik.html&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-coverage&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: 80756015090002640000&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;beneficiary&lt;/b&gt;: &lt;a href=&quot;Patient-FranzMuster.html&quot;&gt;Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; &lt;span title=&quot;Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}&quot;&gt;in eingetragener Partnerschaft&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;payor&lt;/b&gt;: &lt;a name=&quot;sanitas&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Sanitas&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">contained</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;sanitas&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Sanitas&quot;/&gt;
+    &lt;/Organization&gt;
+  &lt;/contained&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:2.16.756.5.30.1.123.100.1.1.1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;80756015090002640000&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.beneficiary">beneficiary</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/FranzMuster&quot;/&gt;
+  &lt;/beneficiary&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/coverage.html#Coverage.payor">payor</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;#sanitas&quot;/&gt;
+  &lt;/payor&gt;
+&lt;/Coverage&gt;</code></pre>
+</body>
+</html>

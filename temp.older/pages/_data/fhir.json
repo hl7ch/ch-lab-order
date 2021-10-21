@@ -1,0 +1,60 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://fhir.ch/ig/ch-lab-order",
+  "igId": "ch.fhir.ig.ch-lab-order",
+  "igName": "CH_LAB_ORDER",
+  "packageId": "ch.fhir.ig.ch-lab-order",
+  "igVer": "0.1.0",
+  "errorCount": 38,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.6.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.6.0 (3)",
+  "totalFiles": 71,
+  "processedFiles": 74,
+  "genDate": "Thu, Oct 21, 2021 22:11+0200",
+  "genDay": "21/10/2021",
+  "ig": {
+    "id": "ch.fhir.ig.ch-lab-order",
+    "name": "CH_LAB_ORDER",
+    "title": "CH LAB-Order (R4)",
+    "url": "http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order",
+    "version": "0.1.0",
+    "status": "active",
+    "experimental": false,
+    "publisher": "HL7 Switzerland",
+    "gitstatus": "fsh-shorthand",
+    "contact": [
+      {
+        "name": "HL7 Switzerland",
+        "telecom": [
+          "https://www.hl7.ch/"
+        ]
+      },
+      {
+        "name": "Marcel Hanselmann",
+        "telecom": [
+          "marcel.hanselmann@bluewin.ch"
+        ]
+      }
+    ],
+    "date": "2021-06-16",
+    "description": "ImplementationGuide to generate form templates for Laboratory Order in Schweiz",
+    "copyright": "CC-BY-SA-4.0",
+    "fhirVersion": "4.0.1"
+  },
+  "chorf": "http://fhir.ch/ig/ch-orf",
+  "ver": {
+    "chorf": "http://fhir.ch/ig/ch-orf",
+    "ch.fhir.ig.ch-core": "http://fhir.ch/ig/ch-core",
+    "ch.fhir.ig.ch-epr-term": "http://fhir.ch/ig/ch-epr-term",
+    "ihe.formatcode.fhir": "https://build.fhir.org/ig/IHE/FormatCode/",
+    "hl7.fhir.uv.sdc": "http://hl7.org/fhir/uv/sdc/2019May"
+  },
+  "ch.fhir.ig.ch-core": "http://fhir.ch/ig/ch-core",
+  "ch.fhir.ig.ch-epr-term": "http://fhir.ch/ig/ch-epr-term",
+  "ihe.formatcode.fhir": "http://profiles.ihe.net/fhir/ihe.formatcode.fhir",
+  "hl7.fhir.uv.sdc": "http://hl7.org/fhir/uv/sdc"
+}

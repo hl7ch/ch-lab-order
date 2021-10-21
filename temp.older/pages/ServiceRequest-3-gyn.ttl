@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/ServiceRequest/3-gyn> a fhir:ServiceRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3-gyn"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Placer Identifier: 123, Filler Identifier: 456</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>priority</b>: routine</p><p><b>subject</b>: <a href=\"Patient-MarinaRubella.html\">Generated Summary: Medical record number: 012/08.111113; Marina Rubella (OFFICIAL), Meier (MAIDEN); Phone: +41 64 123 45 67, marina.rubella@example.ch; gender: female; birthDate: 1992-08-08; <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}\">verheiratet</span></a></p><p><b>requester</b>: <a href=\"PractitionerRole-PeterPapGruppenpraxis.html\">Generated Summary: </a></p><p><b>reasonCode</b>: <span title=\"Codes: {http://snomed.info/sct 702601001}\">Routine gynecologic examination (procedure)</span></p><p><b>insurance</b>: <a href=\"Coverage-HealthInsuranceCard.html\">Generated Summary: id: A123456780; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span>; period: ?ngen-2? --&gt; 2012-03-17</a></p><p><b>specimen</b>: </p><ul><li><a href=\"Specimen-cervix-swab.html\">Generated Summary: id: 48736-12345-12345; id: 4e88a-12345-aa222; status: available; <span title=\"Codes: {http://snomed.info/sct 430387006}\">Combined specimen of cytologic material from endocervix, ectocervix, and vaginal fornix (specimen)</span></a></li><li><a href=\"Specimen-blood.html\">Generated Summary: status: available; <span title=\"Codes: {http://snomed.info/sct 119297000}\">Blood sample</span></a></li><li><a href=\"Specimen-serum.html\">Generated Summary: id: 48736-12345-75465; id: 4e88a-12345-dd888; status: available; <span title=\"Codes: {http://snomed.info/sct 119364003}\">Serum specimen (specimen)</span></a></li><li><a href=\"Specimen-urin.html\">Generated Summary: id: 11111-15394-75465; id: 22222-bc987-dd888; status: available; <span title=\"Codes: {http://snomed.info/sct 122575003}\">Urine sample</span>; receivedTime: Aug 16, 2020, 6:40:17 PM; Specimen is grossly lipemic</a></li></ul></div>"
+  ];
+  fhir:ServiceRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "PLAC" ];
+         fhir:Coding.display [ fhir:value "Placer Identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:1.3.4.5.6.7" ];
+     fhir:Identifier.value [ fhir:value "123" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "FILL" ];
+         fhir:Coding.display [ fhir:value "Filler Identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:7.8.9.10.11" ];
+     fhir:Identifier.value [ fhir:value "456" ]
+  ];
+  fhir:ServiceRequest.status [ fhir:value "active"];
+  fhir:ServiceRequest.intent [ fhir:value "original-order"];
+  fhir:ServiceRequest.priority [ fhir:value "routine"];
+  fhir:ServiceRequest.subject [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/MarinaRubella>;
+     fhir:Reference.reference [ fhir:value "Patient/MarinaRubella" ]
+  ];
+  fhir:ServiceRequest.requester [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/PeterPapGruppenpraxis>;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/PeterPapGruppenpraxis" ]
+  ];
+  fhir:ServiceRequest.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:702601001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "702601001" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Routine gynecologic examination (procedure)" ]
+  ];
+  fhir:ServiceRequest.insurance [
+     fhir:index 0;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Coverage/HealthInsuranceCard>;
+     fhir:Reference.reference [ fhir:value "Coverage/HealthInsuranceCard" ]
+  ];
+  fhir:ServiceRequest.specimen [
+     fhir:index 0;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/cervix-swab>;
+     fhir:Reference.reference [ fhir:value "Specimen/cervix-swab" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/blood>;
+     fhir:Reference.reference [ fhir:value "Specimen/blood" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/serum>;
+     fhir:Reference.reference [ fhir:value "Specimen/serum" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/urin>;
+     fhir:Reference.reference [ fhir:value "Specimen/urin" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/ServiceRequest/3-gyn.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

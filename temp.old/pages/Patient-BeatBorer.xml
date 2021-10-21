@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="BeatBorer"/>
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
+  </meta>
+<!--  additional Text  -->
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <b>id</b>: BeatBorer
+      </p>
+      <p>
+        <b>meta</b>: 
+      </p>
+      <p>
+        <b>identifier</b>: 012/08.111115
+      </p>
+      <p>
+        <b>name</b>: Beat Borer 
+      </p>
+      <p>
+        <b>gender</b>: MALE
+      </p>
+      <p>
+        <b>birthDate</b>: Jun 06, 1986
+      </p>
+      <p>
+        <b>maritalStatus</b>: verheiratet 
+        <span style="background: LightGoldenRodYellow">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span>
+      </p>
+      <h3>Communications</h3>
+      <table class="grid">
+        <tr>
+          <td>-</td>
+          <td>
+            <b>Language</b>
+          </td>
+          <td>
+            <b>Preferred</b>
+          </td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Deutsch (Schweiz) 
+            <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span>
+          </td>
+          <td>true</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+<!--  extensions  -->
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+    <valueAddress>
+      <city value="Lausanne"/>
+      <country value="Schweiz"/>
+    </valueAddress>
+  </extension>
+  <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
+    <valueAddress>
+      <city value="Köniz"/>
+      <state value="BE"/>
+    </valueAddress>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+        <code value="1077"/>
+        <display value="Protestant"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+<!--  Identifier and Name of Patient -->
+  <identifier>
+    <type>
+    <!--  Medical Record Number -->
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.756.5.30.999999.1"/>
+    <value value="012/08.111115"/>
+  </identifier>
+  <name>
+    <family value="Borer"/>
+    <given value="Beat"/>
+  </name>
+<!--  telecom  -->
+  <telecom>
+    <system value="phone"/>
+    <value value="+41 36 123 45 67"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="beat.borer@example.ch"/>
+  </telecom>
+<!--  gender, birthDate, maritial status  -->
+  <gender value="male"/>
+  <birthDate value="1986-06-06"/>
+  <maritalStatus>
+    <coding>
+      <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
+      <code value="2"/>
+      <display value="verheiratet"/>
+    </coding>
+  </maritalStatus>
+<!--  communication, language  -->
+  <communication>
+    <language>
+      <coding>
+        <system value="urn:ietf:bcp:47"/>
+        <code value="de-CH"/>
+      </coding>
+      <text value="Deutsch (Schweiz)"/>
+    </language>
+    <preferred value="true"/>
+  </communication>
+</Patient>

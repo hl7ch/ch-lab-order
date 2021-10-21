@@ -1,0 +1,192 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "721963009",
+        "display" : "Order (record artifact)",
+        "designation" : [{
+          "language" : "de-CH",
+          "value" : "Untersuchungsauftrag"
+        },
+        {
+          "language" : "fr-CH",
+          "value" : "Mandat d’analyse"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Prescrizione di analisi"
+        },
+        {
+          "language" : "en-US",
+          "value" : "Order"
+        }]
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:439fe065-37e7-45c5-8eed-6d8d851b0a3b",
+    "timestamp" : "2021-10-21T20:11:27.588Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "721963009",
+      "display" : "Untersuchungsauftrag"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "721965002",
+        "display" : "Laboratory order (record artifact)",
+        "designation" : [{
+          "language" : "de-CH",
+          "value" : "Laborauftrag"
+        },
+        {
+          "language" : "fr-CH",
+          "value" : "Mandat d’analyse en laboratoire"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Richiesta di analisi di laboratorio"
+        },
+        {
+          "language" : "en-US",
+          "value" : "Laboratory Order"
+        }]
+      },
+      {
+        "code" : "721966001",
+        "display" : "Pathology order (record artifact)",
+        "designation" : [{
+          "language" : "de-CH",
+          "value" : "Pathologieauftrag"
+        },
+        {
+          "language" : "fr-CH",
+          "value" : "Mandat de rapport d’examen pathologique"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Richiesta di esame istologico"
+        },
+        {
+          "language" : "en-US",
+          "value" : "Pathology order"
+        }]
+      },
+      {
+        "code" : "4241000179101",
+        "display" : "Laboratory report (record artifact)",
+        "designation" : [{
+          "language" : "de-CH",
+          "value" : "Laborbericht"
+        },
+        {
+          "language" : "fr-CH",
+          "value" : "Rapport de laboratoire"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Referto di laboratorio"
+        },
+        {
+          "language" : "en-US",
+          "value" : "Laboratory report"
+        }]
+      },
+      {
+        "code" : "371528001",
+        "display" : "Pathology report (record artifact)",
+        "designation" : [{
+          "language" : "de-CH",
+          "value" : "Pathologiebericht"
+        },
+        {
+          "language" : "fr-CH",
+          "value" : "Rapport d’examen pathologique"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Referto istologico"
+        },
+        {
+          "language" : "en-US",
+          "value" : "Pathology report"
+        }]
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:986b35ed-d5f9-49d8-8389-a117aaaa733e",
+    "timestamp" : "2021-10-21T20:11:28.010Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20210731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "721965002",
+      "display" : "Laborauftrag"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721966001",
+      "display" : "Pathologieauftrag"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4241000179101",
+      "display" : "Laborbericht"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "371528001",
+      "display" : "Pathologiebericht"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

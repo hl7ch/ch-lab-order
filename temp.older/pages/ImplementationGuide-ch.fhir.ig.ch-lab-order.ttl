@@ -1,0 +1,1364 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ch.fhir.ig.ch-lab-order"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      ImplementationGuide for CH-LAB-ORDER\n    </div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
+  fhir:ImplementationGuide.name [ fhir:value "CH_LAB_ORDER"];
+  fhir:ImplementationGuide.title [ fhir:value "CH LAB-Order (R4)"];
+  fhir:ImplementationGuide.status [ fhir:value "active"];
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ImplementationGuide.date [ fhir:value "2021-06-16"^^xsd:date];
+  fhir:ImplementationGuide.publisher [ fhir:value "HL7 Switzerland"];
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Switzerland" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.hl7.ch/" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Marcel Hanselmann" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "marcel.hanselmann@bluewin.ch" ]
+     ]
+  ];
+  fhir:ImplementationGuide.description [ fhir:value "ImplementationGuide to generate form templates for Laboratory Order in Schweiz"];
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "CH" ]
+     ]
+  ];
+  fhir:ImplementationGuide.copyright [ fhir:value "CC-BY-SA-4.0"];
+  fhir:ImplementationGuide.packageId [ fhir:value "ch.fhir.ig.ch-lab-order"];
+  fhir:ImplementationGuide.license [ fhir:value "CC-BY-SA-4.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "chorf" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf";
+       fhir:link <http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "ch.fhir.ig.ch-orf" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.10.0" ]
+  ];
+  fhir:ImplementationGuide.global [
+     fhir:index 0;
+     fhir:ImplementationGuide.global.type [ fhir:value "Practitioner" ];
+     fhir:ImplementationGuide.global.profile [
+       fhir:value "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr";
+       fhir:link <http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr>
+     ]
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "STU 1 Ballot" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2021+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://fhir.ch/ig/ch-lab-order/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.grouping [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "CH LAB-ORDER" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Bundle/1-tvt>;
+         fhir:Reference.reference [ fhir:value "Bundle/1-tvt" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Referral 1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Bundle for referral/order due to suspected deep vein thrombosis" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Bundle/2-pertussis>;
+         fhir:Reference.reference [ fhir:value "Bundle/2-pertussis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Referral 2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Bundle for referral/order for Pertussis investigation" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Bundle/3-gyn>;
+         fhir:Reference.reference [ fhir:value "Bundle/3-gyn" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Referreal 3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Bundle for referral/order for preventive gynaecological check-up" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Bundle/4-sepsis>;
+         fhir:Reference.reference [ fhir:value "Bundle/4-sepsis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Referreal 4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Bundle for referral/order for Sepsis Investigation" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Bundle/5-biol-monit>;
+         fhir:Reference.reference [ fhir:value "Bundle/5-biol-monit" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Referreal 5-biol-monit" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Bundle for referral/order for toxicological Monitoring" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Composition/1-tvt>;
+         fhir:Reference.reference [ fhir:value "Composition/1-tvt" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Composition: Storyboard for suspected deep Vein Thrombosis" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Composition/2-pertussis>;
+         fhir:Reference.reference [ fhir:value "Composition/2-pertussis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Composition: Storyboard for Pertussis Investigation" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Composition/3-gyn>;
+         fhir:Reference.reference [ fhir:value "Composition/3-gyn" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Composition: Storyboard for Preventive Gynaecological Check-up" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Composition/4-sepsis>;
+         fhir:Reference.reference [ fhir:value "Composition/4-sepsis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Composition: Storyboard for Sepsis Investigation" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Composition/5-biol-monit>;
+         fhir:Reference.reference [ fhir:value "Composition/5-biol-monit" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "5-biol-monit" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Composition: Storyboard for Toxicological Monitoring" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Coverage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Coverage/CoverageFranzMuster>;
+         fhir:Reference.reference [ fhir:value "Coverage/CoverageFranzMuster" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CoverageFranzMuster" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Insurance Coverage" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Coverage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Coverage/HealthInsuranceCard>;
+         fhir:Reference.reference [ fhir:value "Coverage/HealthInsuranceCard" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HealthInsuranceCard" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Insurance" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/Arztpraxis>;
+         fhir:Reference.reference [ fhir:value "Organization/Arztpraxis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Arztpraxis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practice, refers to 2-pertussis and 3-gyn" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/Gruppenpraxis>;
+         fhir:Reference.reference [ fhir:value "Organization/Gruppenpraxis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Praxis Seeblick" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for group practice" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/Kantonsspital>;
+         fhir:Reference.reference [ fhir:value "Organization/Kantonsspital" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Kantonsspital" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Hospital" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/LaborPipette>;
+         fhir:Reference.reference [ fhir:value "Organization/LaborPipette" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Labor Pipette" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Laboratory Organization, refers to all Storyboards" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/PraxisSeeblick>;
+         fhir:Reference.reference [ fhir:value "Organization/PraxisSeeblick" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Praxis Seeblick" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for practice" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/SpeiserRails>;
+         fhir:Reference.reference [ fhir:value "Organization/SpeiserRails" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Speiser Rails" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Manufacturer, refers to 5-biol-monit" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/Suva>;
+         fhir:Reference.reference [ fhir:value "Organization/Suva" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "SUVA" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Insurance for occupational medicine, refers to 5-biol-monit" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/BeatBorer>;
+         fhir:Reference.reference [ fhir:value "Patient/BeatBorer" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Beat Borer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for CH-Core-Patient" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/EmilKummer>;
+         fhir:Reference.reference [ fhir:value "Patient/EmilKummer" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Emil Kummer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CH-Core-Patient, refers to 2-pertussis" ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/FranzMuster>;
+         fhir:Reference.reference [ fhir:value "Patient/FranzMuster" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FranzMuster" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for CH-Core-Patient, used in coverage" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/HansGuggindieluft>;
+         fhir:Reference.reference [ fhir:value "Patient/HansGuggindieluft" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hans Guggindieluft" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CH-Core-Patient, refers to 1-tvt" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/KlebsiellaKeller>;
+         fhir:Reference.reference [ fhir:value "Patient/KlebsiellaKeller" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Klebsiella Keller" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CH-Core-Patient, refers to 4-sepsis" ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/MarinaRubella>;
+         fhir:Reference.reference [ fhir:value "Patient/MarinaRubella" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Marina Rubella" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CH-Core-Patient, refers to 3-gyn" ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/EvaErlenmeyer>;
+         fhir:Reference.reference [ fhir:value "Practitioner/EvaErlenmeyer" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Eva Erlenmeyer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Specialist for Laboratory Medicine, works in Labor Pipette" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/HansHauser>;
+         fhir:Reference.reference [ fhir:value "Practitioner/HansHauser" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hans Hauser" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/MarcMustermann>;
+         fhir:Reference.reference [ fhir:value "Practitioner/MarcMustermann" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Marc Mustermann" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practitioner, works in Arztpraxis, refers to 1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/PauloPorcellini>;
+         fhir:Reference.reference [ fhir:value "Practitioner/PauloPorcellini" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Paulo Porcellini" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Specialist for Occupational Medicine, works at SUVA, refers to 5-tvt" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/PeterPap>;
+         fhir:Reference.reference [ fhir:value "Practitioner/PeterPap" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Peter Pap" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practitioner, works at Gruppenpraxis, refers to 3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/PeterPresto>;
+         fhir:Reference.reference [ fhir:value "Practitioner/PeterPresto" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Peter Presto" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practitioner, works at Gruppenpraxis, refers to 2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/ResponseReceiverSabineMeier>;
+         fhir:Reference.reference [ fhir:value "Practitioner/ResponseReceiverSabineMeier" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Response Receiver Sabine Meier" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practitioner, works in Kantonsspital" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/SabineMeier>;
+         fhir:Reference.reference [ fhir:value "Practitioner/SabineMeier" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sabine Meier" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Practitioner, works in Kantonsspital, refers to 4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/EvaErlenmeyerLaborPipette>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/EvaErlenmeyerLaborPipette" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Eva Erlenmeyer Labor Pipette" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractitionerRole, Specialist for Laboratory Medicine, refers to all story boards" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/MarcMustermannArztpraxis>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/MarcMustermannArztpraxis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Marc Mustermann at Arztpraxis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractitionerRole, refers to 1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/PauloPorcelliniSuva>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/PauloPorcelliniSuva" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Paulo Porcellini Suva" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractitionerRole, refers to 5-biol-monit" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/PeterPapGruppenpraxis>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/PeterPapGruppenpraxis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Peter Pap Gruppenpraxis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractitionerRole, refers to 3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/PeterPrestoGruppenpraxis>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/PeterPrestoGruppenpraxis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Peter Presto at Gruppenpraxis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractitionerRole, refers to 2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/HansHauserKantonsspital>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/HansHauserKantonsspital" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hans Hauser Kantonsspital" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractitionerRole" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/1-tvt" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire 1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis" ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/2-pertussis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire 2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire for Pertussis Investigation" ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/3-gyn" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire 3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire for gynaecological check-up" ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/4-sepsis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire 4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire for Sepsis Investigation" ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/5-biol-monit" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire 5-biol-monit" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire for toxicological Monitoring" ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "QuestionnaireResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/1-tvt>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/1-tvt" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire response 1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis" ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "QuestionnaireResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/2-pertussis>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/2-pertussis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire response 2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Laboratory Order Questionnaire Response for Pertussis Investigation" ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "QuestionnaireResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/3-gyn>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/3-gyn" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire response 3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire response for preventive gynecological check-up" ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "QuestionnaireResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/4-sepsis>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/4-sepsis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire response 4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire response for Sepsis Investigation" ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "QuestionnaireResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/5-biol-monit>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/5-biol-monit" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "questionnaire response 5-biol-monit" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Laboratory Order Questionnaire response for toxicological Monitoring" ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/1-tvt>;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/1-tvt" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "laborder 1-tvt" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Service Request due to suspected deep vein thrombosis" ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/2-pertussis>;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/2-pertussis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "laborder 2-pertussis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Service Request for Pertussis Investigation" ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/3-gyn>;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/3-gyn" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "laborder 3-gyn" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Service Request for preventive gynaecological check-up" ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/4-sepsis>;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/4-sepsis" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "laborder 4-sepsis" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Service Request for Sepsis Investigation" ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/5-biol-monit>;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/5-biol-monit" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "laborder 5-biol-monit" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Service Request for toxicological Monitoring" ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/lab>;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/lab" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "laborder lab" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for generic Service Request" ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/blood-bactec-plus>;
+         fhir:Reference.reference [ fhir:value "Specimen/blood-bactec-plus" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Blood Sample Bacteriology" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen for bacteriological Examination" ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/blood-coag>;
+         fhir:Reference.reference [ fhir:value "Specimen/blood-coag" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Blood Sample Coagulation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen for haemostatic Examination" ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/blood>;
+         fhir:Reference.reference [ fhir:value "Specimen/blood" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Blood Sample" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen for Haematological Examination" ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/cervix-swab>;
+         fhir:Reference.reference [ fhir:value "Specimen/cervix-swab" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cervix-swab Sample" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen of Cervix Swab" ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/lsac>;
+         fhir:Reference.reference [ fhir:value "Specimen/lsac" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cerebrospinal Fluid Sample" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen of Cerebrospinal Fluid" ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/serum>;
+         fhir:Reference.reference [ fhir:value "Specimen/serum" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Serum Sample" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen of Serum" ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/throat-swab>;
+         fhir:Reference.reference [ fhir:value "Specimen/throat-swab" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Throat Swab" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen of Throat Swab" ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/urin>;
+         fhir:Reference.reference [ fhir:value "Specimen/urin" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Urin Sample" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example for Specimen of Urin" ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ch-lab-order-composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH LAB-Order Composition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for Composition in the context of CH LAB-Order" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ch-lab-order-document" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH LAB-ORDER Document Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition of the bundle for the lab order document" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ch-lab-order-servicerequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH LAB-Order ServiceRequest" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for ServiceRequest in the context of CH LAB-Order" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ValueSet/ServiceRequest.categories>;
+         fhir:Reference.reference [ fhir:value "ValueSet/ServiceRequest.categories" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Service Request Categories for Questionnaires" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ch-lab-order Service Request Categories" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.typeCode>;
+         fhir:Reference.reference [ fhir:value "ValueSet/DocumentEntry.typeCode" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DocumentEntry.typeCode" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Type of document as per Annex 3 EPRO-FDHA.\n      		The code defines a document’s type (e.g. discharge report, laboratory report). Each document type should be assigned to precisely one document class." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.classCode>;
+         fhir:Reference.reference [ fhir:value "ValueSet/DocumentEntry.classCode" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DocumentEntry.classCode" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Document class as per EPRO-FDHA Annex 3" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/CodeSystem/ServiceRequest.categories>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/ServiceRequest.categories" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Service Request Categories for Questionnaires" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ch-lab-order defines 10 different Kinds of Service Request" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "casestudies-english.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Case Studies in English" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "casestudies-german.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Case Studies in German" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "casestudies-french.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Case Studies in French" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "usecases-english.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Use Cases in English" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "usecases-german.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Use Cases in German" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "usecases-french.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Use Cases in French" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 7;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "profiles.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Profiles" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 8;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "terminology.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Terminology" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/pages" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 15;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

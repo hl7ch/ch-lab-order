@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/ServiceRequest/5-biol-monit> a fhir:ServiceRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "5-biol-monit"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Placer Identifier: 123, Filler Identifier: 456</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>priority</b>: urgent</p><p><b>subject</b>: <a href=\"Patient-BeatBorer.html\">Generated Summary: Medical record number: 012/08.111115; Beat Borer ; Phone: +41 36 123 45 67, beat.borer@example.ch; gender: male; birthDate: 1986-06-06; <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}\">verheiratet</span></a></p><p><b>requester</b>: <a href=\"PractitionerRole-PauloPorcelliniSuva.html\">Generated Summary: </a></p><p><b>reasonCode</b>: <span title=\"Codes: {http://snomed.info/sct 409967009}\">Toxicology (qualifier value)</span></p><p><b>insurance</b>: <a href=\"Coverage-HealthInsuranceCard.html\">A human-readable rendering of the European Health Insurance CardGenerated Summary: id: A123456780; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span>; period: ?ngen-2? --&gt; 2012-03-17</a></p><p><b>specimen</b>: </p><ul><li><a href=\"Specimen-blood.html\">Generated Summary: status: available; <span title=\"Codes: {http://snomed.info/sct 119297000}\">Blood sample</span></a></li><li><a href=\"Specimen-urin.html\">Generated Summary: id: 11111-15394-75465; id: 22222-bc987-dd888; status: available; <span title=\"Codes: {http://snomed.info/sct 122575003}\">Urine sample</span>; receivedTime: Aug 16, 2020, 6:40:17 PM; Specimen is grossly lipemic</a></li></ul></div>"
+  ];
+  fhir:ServiceRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "PLAC" ];
+         fhir:Coding.display [ fhir:value "Placer Identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:1.3.4.5.6.7" ];
+     fhir:Identifier.value [ fhir:value "123" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "FILL" ];
+         fhir:Coding.display [ fhir:value "Filler Identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "urn:oid:7.8.9.10.11" ];
+     fhir:Identifier.value [ fhir:value "456" ]
+  ];
+  fhir:ServiceRequest.status [ fhir:value "active"];
+  fhir:ServiceRequest.intent [ fhir:value "original-order"];
+  fhir:ServiceRequest.priority [ fhir:value "urgent"];
+  fhir:ServiceRequest.subject [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/BeatBorer>;
+     fhir:Reference.reference [ fhir:value "Patient/BeatBorer" ]
+  ];
+  fhir:ServiceRequest.requester [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/PauloPorcelliniSuva>;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/PauloPorcelliniSuva" ]
+  ];
+  fhir:ServiceRequest.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:409967009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "409967009" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Toxicology (qualifier value)" ]
+  ];
+  fhir:ServiceRequest.insurance [
+     fhir:index 0;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Coverage/HealthInsuranceCard>;
+     fhir:Reference.reference [ fhir:value "Coverage/HealthInsuranceCard" ]
+  ];
+  fhir:ServiceRequest.specimen [
+     fhir:index 0;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/blood>;
+     fhir:Reference.reference [ fhir:value "Specimen/blood" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Specimen/urin>;
+     fhir:Reference.reference [ fhir:value "Specimen/urin" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/ServiceRequest/5-biol-monit.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

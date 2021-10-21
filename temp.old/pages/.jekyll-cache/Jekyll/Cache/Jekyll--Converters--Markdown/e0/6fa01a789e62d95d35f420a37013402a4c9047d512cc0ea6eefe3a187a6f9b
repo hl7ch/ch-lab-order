@@ -1,0 +1,12 @@
+I"ä<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<tr><td><a href="StructureDefinition-ch-lab-order-document.html">CH LAB-ORDER Document Profile</a> </td><td><p>Definition of the bundle for the lab order document</p>
+</td></tr>
+<tr><td><a href="StructureDefinition-ch-lab-order-composition.html">CH LAB-Order Composition</a> </td><td><p>Definition for Composition in the context of CH LAB-Order</p>
+</td></tr>
+<tr><td><a href="StructureDefinition-ch-lab-order-servicerequest.html">CH LAB-Order ServiceRequest</a> </td><td><p>Definition for ServiceRequest in the context of CH LAB-Order</p>
+</td></tr>
+
+:ET

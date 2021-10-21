@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="HealthInsuranceCard"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: A123456780</p><p><b>status</b>: active</p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}">extended healthcare</span></p><p><b>subscriber</b>: <a href="Patient-FranzMuster.html">Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}">in eingetragener Partnerschaft</span></a></p><p><b>beneficiary</b>: <a href="Patient-FranzMuster.html">Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}">in eingetragener Partnerschaft</span></a></p><p><b>period</b>: ?? --&gt; 2012-03-17</p><p><b>payor</b>: <span></span></p></div>
+  </text>
+  <identifier>
+    <system value="http://ehic.com/insurer/123456789/member"/>
+    <value value="A123456780"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="EHCPOL"/>
+      <display value="extended healthcare"/>
+    </coding>
+  </type>
+  <subscriber>
+    <reference value="Patient/FranzMuster"/>
+  </subscriber>
+  <beneficiary>
+    <reference value="Patient/FranzMuster"/>
+  </beneficiary>
+  <period>
+    <end value="2012-03-17"/>
+  </period>
+  <payor>
+    <identifier>
+      <system value="http://ehic.com/insurer"/>
+      <value value="123456789"/>
+    </identifier>
+  </payor>
+</Coverage>

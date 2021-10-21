@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Specimen/blood-coag> a fhir:Specimen;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "blood-coag"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 48736-55555-75465</p><p><b>accessionIdentifier</b>: id: 4e88a-66666-dd888</p><p><b>status</b>: available</p><p><b>type</b>: <span title=\"Codes: {http://snomed.info/sct 119297000}\">Blood sample</span></p><p><b>subject</b>: <a href=\"Patient-FranzMuster.html\">Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}\">in eingetragener Partnerschaft</span></a></p><p><b>receivedTime</b>: Aug 16, 2020, 6:40:17 PM</p><p><b>request</b>: <a href=\"ServiceRequest-lab.html\">Generated Summary: Placer Identifier: 123, Filler Identifier: 456; status: active; intent: original-order; <span title=\"Codes: {http://snomed.info/sct 108252007}\">Laboratory procedure (procedure)</span>; priority: urgent; <span title=\"Codes: {http://snomed.info/sct 61246008}\">Laboratory medicine specialist (occupation)</span>; <span title=\"Codes: {http://snomed.info/sct 404223003}\">Deep venous thrombosis of lower extremity</span></a></p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td><a href=\"Practitioner-MarcMustermann.html\">Generated Summary: id: 7601000050702; Marc Mustermann (OFFICIAL); Phone: 033 333 22 11, marc.mustermann@gruppenpraxis.ch</a></td><td>Aug 16, 2015, 8:40:17 AM</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Description</b></td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td>*</td><td>id: 4e88a-bc987-dd888-00001-bcoag</td><td>S-Monovette grün</td><td><span title=\"Codes: {http://snomed.info/sct 702120003}\">Blood collection Luer adaptor</span></td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0371 C38}\">3.8% Citrate</span></td></tr></table></div>"
+  ];
+  fhir:Specimen.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "48736-55555-75465" ]
+  ];
+  fhir:Specimen.accessionIdentifier [
+     fhir:Identifier.value [ fhir:value "4e88a-66666-dd888" ]
+  ];
+  fhir:Specimen.status [ fhir:value "available"];
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:119297000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "119297000" ];
+       fhir:Coding.display [ fhir:value "Blood sample" ]
+     ]
+  ];
+  fhir:Specimen.subject [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/FranzMuster>;
+     fhir:Reference.reference [ fhir:value "Patient/FranzMuster" ]
+  ];
+  fhir:Specimen.receivedTime [ fhir:value "2020-08-16T16:40:17Z"^^xsd:dateTime];
+  fhir:Specimen.request [
+     fhir:index 0;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/lab>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/lab" ]
+  ];
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collector [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/MarcMustermann>;
+       fhir:Reference.reference [ fhir:value "Practitioner/MarcMustermann" ]
+     ];
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2015-08-16T06:40:17Z"^^xsd:dateTime ]
+  ];
+  fhir:Specimen.container [
+     fhir:index 0;
+     fhir:Specimen.container.identifier [
+       fhir:index 0;
+       fhir:Identifier.value [ fhir:value "4e88a-bc987-dd888-00001-bcoag" ]
+     ];
+     fhir:Specimen.container.description [ fhir:value "S-Monovette grün" ];
+     fhir:Specimen.container.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:702120003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "702120003" ];
+         fhir:Coding.display [ fhir:value "Blood collection Luer adaptor" ]
+       ]
+     ];
+     fhir:Specimen.container.additiveCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0371" ];
+         fhir:Coding.code [ fhir:value "C38" ];
+         fhir:Coding.display [ fhir:value "3.8% Citrate" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Specimen/blood-coag.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

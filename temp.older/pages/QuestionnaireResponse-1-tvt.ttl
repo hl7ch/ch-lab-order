@@ -1,0 +1,760 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/1-tvt> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "1-tvt"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-04-01T20:17:53.340+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>questionnaire</b>: <a href=\"http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt\">http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt</a></p><p><b>status</b>: completed</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order</p><p><b>text</b>: Auftrag</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifier</p><p><b>text</b>: Auftragsnummer des Auftraggebers</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifierDomain</p><p><b>text</b>: Identifier Domain der Auftragsnummer des Auftraggebers</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.precedentDocumentIdentifier</p><p><b>text</b>: Identifier des Vorgängerdokuments</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocument</p><p><b>text</b>: Dringender Benachrichtigungskontakt für dieses Dokument</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocumentResponse</p><p><b>text</b>: Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.priority</p><p><b>text</b>: Auftragspriorität</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver</p><p><b>text</b>: Empfänger</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.practitioner</p><p><b>text</b>: Empfangende Person</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.organization</p><p><b>text</b>: Empfangende Organisation</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient</p><p><b>text</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.familyName</p><p><b>text</b>: Name</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.maidenName</p><p><b>text</b>: Ledigname</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.givenName</p><p><b>text</b>: Vorname</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.localPid</p><p><b>text</b>: Lokale Patienten-ID</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.birthDate</p><p><b>text</b>: Geburtsdatum</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.gender</p><p><b>text</b>: Geschlecht</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.phone</p><p><b>text</b>: Telefon</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.email</p><p><b>text</b>: E-Mail</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.streetAddressLine</p><p><b>text</b>: Strasse, Hausnummer, Postfach etc.</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.postalCode</p><p><b>text</b>: PLZ</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.city</p><p><b>text</b>: Ort</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.country</p><p><b>text</b>: Land</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender</p><p><b>text</b>: Absender</p><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.author</p><p><b>text</b>: Verantwortlicher</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.dataenterer</p><p><b>text</b>: Erfasser</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopies</p><p><b>text</b>: Kopieempfänger</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: hematology</p><p><b>text</b>: Hematology</p><blockquote><p><b>item</b></p><p><b>linkId</b>: hemato-subset</p><p><b>text</b>: Hämatologie Subset</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: coagulation</p><p><b>text</b>: Coagulation</p><blockquote><p><b>item</b></p><p><b>linkId</b>: d-dimer</p><p><b>text</b>: D-Dimer</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: cc</p><p><b>text</b>: clinical chemistry</p><blockquote><p><b>item</b></p><p><b>linkId</b>: crp</p><p><b>text</b>: CRP</p></blockquote></blockquote></div>"
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:value "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt";
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt>
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "order" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Auftrag" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.placerOrderIdentifier" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Auftragsnummer des Auftraggebers" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "123" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.placerOrderIdentifierDomain" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Identifier Domain der Auftragsnummer des Auftraggebers" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "urn:oid:1.3.4.5.6.7" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.precedentDocumentIdentifier" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Identifier des Vorgängerdokuments" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "1622f2fb-6ba3-4532-9aed-35b158def187" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Dringender Benachrichtigungskontakt für dieses Dokument" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument.practitioner" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Zu benachrichtigende Person" ];
+         fhir:QuestionnaireResponse.item.item [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument.practitioner.title" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Titel" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Dr. med." ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument.practitioner.familyName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Erlenmeyer" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument.practitioner.givenName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Eva" ]
+           ]
+         ], [
+           fhir:index 3;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument.practitioner.phone" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "033 444 55 66" ]
+           ]
+         ], [
+           fhir:index 4;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocument.practitioner.email" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "eva.erlenmeyer@labor-pipette.ch" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse.practitioner" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Zu benachrichtigende Person" ];
+         fhir:QuestionnaireResponse.item.item [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse.practitioner.title" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Titel" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Dr. med." ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse.practitioner.familyName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Mustermann" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse.practitioner.givenName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Marc" ]
+           ]
+         ], [
+           fhir:index 3;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse.practitioner.phone" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "033 444 55 66" ]
+           ]
+         ], [
+           fhir:index 4;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.notificationContactDocumentResponse.practitioner.email" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "peter.presto@arztpraxis.ch" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "order.priority" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Auftragspriorität" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/request-priority" ];
+           fhir:Coding.code [ fhir:value "routine" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Empfänger" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Empfangende Person" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner.title" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Titel" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Dr. med." ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner.familyName" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Erlenmeyer" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner.givenName" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Eva" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner.gln" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "GLN" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "7601000050703" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner.phone" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "+41322552525" ]
+         ]
+       ], [
+         fhir:index 5;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.practitioner.email" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "eva.erlenmeyer@labor-pipette.ch" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.organization" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Empfangende Organisation" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.organization.name" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Name der Organisation" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Labor Pipette" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.organization.streetAddressLine" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Strasse, Hausnummer, Postfach etc." ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Laborstrasse 23" ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Postfach 44" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.organization.postalCode" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "PLZ" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "4600" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.organization.city" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Ort" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Olten" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiver.organization.country" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Land" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Schweiz" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Patient" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.familyName" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Guggindieluft" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.maidenName" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Ledigname" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Bering" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.givenName" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Hans" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.localPid" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Lokale Patienten-ID" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "11.22.33.5678" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.birthDate" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Geburtsdatum" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueDate [ fhir:value "1981-01-01"^^xsd:date ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.gender" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Geschlecht" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/administrative-gender" ];
+           fhir:Coding.code [ fhir:value "male" ]
+         ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.phone" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "079 979 79 79" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.email" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "erika@musterfrau.ch" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.streetAddressLine" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Strasse, Hausnummer, Postfach etc." ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Musterweg" ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "6a" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.postalCode" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "PLZ" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "8000" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.city" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Ort" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Zürich" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "patient.country" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Land" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Schweiz" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Absender" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Verantwortlicher" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Verantwortliche Person" ];
+         fhir:QuestionnaireResponse.item.item [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner.title" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Titel" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Dr. med." ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner.familyName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Mustermann" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner.givenName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Marc" ]
+           ]
+         ], [
+           fhir:index 3;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner.gln" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "GLN" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "7601000034321" ]
+           ]
+         ], [
+           fhir:index 4;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner.phone" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "033 333 22 11" ]
+           ]
+         ], [
+           fhir:index 5;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.practitioner.email" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "marc.mustermann@gruppenpraxis.ch" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.organization" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Verantwortliche Organisation" ];
+         fhir:QuestionnaireResponse.item.item [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.organization.name" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Name der Organisation" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Gruppenpraxis" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.organization.streetAddressLine" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Strasse, Hausnummer, Postfach etc." ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Gerbergasse 12" ]
+           ], [
+             fhir:index 1;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Postfach 144" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.organization.postalCode" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "PLZ" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "4600" ]
+           ]
+         ], [
+           fhir:index 3;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.organization.city" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Ort" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Olten" ]
+           ]
+         ], [
+           fhir:index 4;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.author.organization.country" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Land" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Schweiz" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.dataenterer" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Erfasser" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.dataenterer.practitioner" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Erfassende Person" ];
+         fhir:QuestionnaireResponse.item.item [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.dataenterer.practitioner.familyName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Mustermann" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.dataenterer.practitioner.givenName" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Marc" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.dataenterer.practitioner.phone" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "033 333 22 11" ]
+           ]
+         ], [
+           fhir:index 3;
+           fhir:QuestionnaireResponse.item.linkId [ fhir:value "sender.dataenterer.practitioner.email" ];
+           fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+           fhir:QuestionnaireResponse.item.answer [
+             fhir:index 0;
+             fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "marc.mustermann@gruppenpraxis.ch" ]
+           ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopies" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Kopieempfänger" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Kopieempfangende Organisation oder Person" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.organization.name" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Name der Organisation" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Praxis Seeblick" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.title" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Titel" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Dr. med." ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.familyName" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Meier" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.givenName" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Sabine" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.phone" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "044 333 22 11" ]
+         ]
+       ], [
+         fhir:index 5;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.email" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "sabine.meier@praxisseeblick.ch" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Kopieempfangende Organisation oder Person" ];
+       fhir:QuestionnaireResponse.item.item [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.familyName" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Name" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Meier" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.givenName" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Vorname" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Sabine" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.phone" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Telefon" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "044 333 22 11" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.email" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "E-Mail" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "sabine.meier@praxis.ch" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.streetAddressLine" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Strasse, Hausnummer, Postfach etc." ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Musterweg" ]
+         ], [
+           fhir:index 1;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "6a" ]
+         ]
+       ], [
+         fhir:index 5;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.postalCode" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "PLZ" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "6330" ]
+         ]
+       ], [
+         fhir:index 6;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.city" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Ort" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Cham" ]
+         ]
+       ], [
+         fhir:index 7;
+         fhir:QuestionnaireResponse.item.linkId [ fhir:value "receiverCopy.country" ];
+         fhir:QuestionnaireResponse.item.text [ fhir:value "Land" ];
+         fhir:QuestionnaireResponse.item.answer [
+           fhir:index 0;
+           fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Schweiz" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "hematology" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Hematology" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "hemato-subset" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Hämatologie Subset" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:24360-0;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "24360-0" ];
+           fhir:Coding.display [ fhir:value "Hemoglobin and Hematocrit panel - Blood" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:43113-0;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "43113-0" ];
+           fhir:Coding.display [ fhir:value "Hemoglobin electrophoresis panel in Blood" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:57021-8;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "57021-8" ];
+           fhir:Coding.display [ fhir:value "CBC W Auto Differential panel - Blood" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:58410-2;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "58410-2" ];
+           fhir:Coding.display [ fhir:value "CBC panel - Blood by Automated count" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:57023-4;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "57023-4" ];
+           fhir:Coding.display [ fhir:value "Auto Differential panel - Blood" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "coagulation" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Coagulation" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "d-dimer" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "D-Dimer" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:55398-2;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "55398-2" ];
+           fhir:Coding.display [ fhir:value "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "cc" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "clinical chemistry" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "crp" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "CRP" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:1988-5;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "1988-5" ];
+           fhir:Coding.display [ fhir:value "C reactive protein [Mass/volume] in Serum or Plasma" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/1-tvt.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

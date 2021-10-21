@@ -1,0 +1,10 @@
+{
+  "url": "http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order",
+  "name": "CH_LAB_ORDER",
+  "package-id": "ch.fhir.ig.ch-lab-order",
+  "ig-ver": "0.1.0",
+  "date": "Thu, 21 Oct, 2021 10:50:24 +0200",
+  "exception": "Template based HTML file index.html is missing source file index.md",
+  "version": "4.0.1",
+  "tool": "4.6.0 (3)"
+}

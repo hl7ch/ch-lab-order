@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Specimen/cervix-swab> a fhir:Specimen;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cervix-swab"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 48736-12345-12345</p><p><b>accessionIdentifier</b>: id: 4e88a-12345-aa222</p><p><b>status</b>: available</p><p><b>type</b>: <span title=\"Codes: {http://snomed.info/sct 430387006}\">Combined specimen of cytologic material from endocervix, ectocervix, and vaginal fornix (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-MarinaRubella.html\">Generated Summary: Medical record number: 012/08.111113; Marina Rubella (OFFICIAL), Meier (MAIDEN); Phone: +41 64 123 45 67, marina.rubella@example.ch; gender: female; birthDate: 1992-08-08; <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}\">verheiratet</span></a></p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td><a href=\"Practitioner-PeterPap.html\">Generated Summary: id: 7601000050703; Peter Pap (OFFICIAL); Phone: 032 333 22 40, peter.pap@gruppenpraxis.ch</a></td><td>Aug 16, 2015, 8:40:17 AM</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td></tr></table></div>"
+  ];
+  fhir:Specimen.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "48736-12345-12345" ]
+  ];
+  fhir:Specimen.accessionIdentifier [
+     fhir:Identifier.value [ fhir:value "4e88a-12345-aa222" ]
+  ];
+  fhir:Specimen.status [ fhir:value "available"];
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:430387006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "430387006" ];
+       fhir:Coding.display [ fhir:value "Combined specimen of cytologic material from endocervix, ectocervix, and vaginal fornix (specimen)" ]
+     ]
+  ];
+  fhir:Specimen.subject [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/MarinaRubella>;
+     fhir:Reference.reference [ fhir:value "Patient/MarinaRubella" ]
+  ];
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collector [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/Practitioner/PeterPap>;
+       fhir:Reference.reference [ fhir:value "Practitioner/PeterPap" ]
+     ];
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2015-08-16T06:40:17Z"^^xsd:dateTime ]
+  ];
+  fhir:Specimen.container [
+     fhir:index 0;
+     fhir:Specimen.container.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:706053007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "706053007" ];
+         fhir:Coding.display [ fhir:value "General specimen container (physical object)" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Specimen/cervix-swab.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

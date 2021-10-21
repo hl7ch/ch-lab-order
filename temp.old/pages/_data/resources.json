@@ -1,0 +1,500 @@
+{
+  "ImplementationGuide/ch.fhir.ig.ch-lab-order": {
+    "history": false,
+    "index": 0,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/ch.fhir.ig.ch-lab-order.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order",
+    "name": "CH_LAB_ORDER",
+    "title": "CH LAB-Order (R4)",
+    "version": "0.1.0",
+    "date": "2021-06-16",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "Bundle/1-tvt": {
+    "history": false,
+    "index": 1,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/bundle/1-tvt.xml"
+  },
+  "Bundle/2-pertussis": {
+    "history": false,
+    "index": 2,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/bundle/2-pertussis.xml"
+  },
+  "Bundle/3-gyn": {
+    "history": false,
+    "index": 3,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/bundle/3-gyn.xml"
+  },
+  "Bundle/4-sepsis": {
+    "history": false,
+    "index": 4,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/bundle/4-sepsis.xml"
+  },
+  "Bundle/5-biol-monit": {
+    "history": false,
+    "index": 5,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/bundle/5-biol-monit.xml"
+  },
+  "Composition/1-tvt": {
+    "history": false,
+    "index": 6,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/composition/1-tvt.xml"
+  },
+  "Composition/2-pertussis": {
+    "history": false,
+    "index": 7,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/composition/2-pertussis.xml"
+  },
+  "Composition/3-gyn": {
+    "history": false,
+    "index": 8,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/composition/3-gyn.xml"
+  },
+  "Composition/4-sepsis": {
+    "history": false,
+    "index": 9,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/composition/4-sepsis.xml"
+  },
+  "Composition/5-biol-monit": {
+    "history": false,
+    "index": 10,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/composition/5-biol-monit.xml"
+  },
+  "Coverage/CoverageFranzMuster": {
+    "history": false,
+    "index": 11,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/coverage/CoverageFranzMuster.xml"
+  },
+  "Coverage/HealthInsuranceCard": {
+    "history": false,
+    "index": 12,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/coverage/HealthInsuranceCard.xml"
+  },
+  "Organization/Arztpraxis": {
+    "history": false,
+    "index": 13,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/Arztpraxis.xml"
+  },
+  "Organization/Gruppenpraxis": {
+    "history": false,
+    "index": 14,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/Gruppenpraxis.xml"
+  },
+  "Organization/Kantonsspital": {
+    "history": false,
+    "index": 15,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/Kantonsspital.xml"
+  },
+  "Organization/LaborPipette": {
+    "history": false,
+    "index": 16,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/LaborPipette.xml"
+  },
+  "Organization/PraxisSeeblick": {
+    "history": false,
+    "index": 17,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/PraxisSeeblick.xml"
+  },
+  "Organization/SpeiserRails": {
+    "history": false,
+    "index": 18,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/SpeiserRails.xml"
+  },
+  "Organization/Suva": {
+    "history": false,
+    "index": 19,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/organization/Suva.xml"
+  },
+  "Patient/BeatBorer": {
+    "history": false,
+    "index": 20,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/patient/BeatBorer.xml"
+  },
+  "Patient/EmilKummer": {
+    "history": false,
+    "index": 21,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/patient/EmilKummer.xml"
+  },
+  "Patient/FranzMuster": {
+    "history": false,
+    "index": 22,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/patient/FranzMuster.xml"
+  },
+  "Patient/HansGuggindieluft": {
+    "history": false,
+    "index": 23,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/patient/HansGuggindieluft.xml"
+  },
+  "Patient/KlebsiellaKeller": {
+    "history": false,
+    "index": 24,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/patient/KlebsiellaKeller.xml"
+  },
+  "Patient/MarinaRubella": {
+    "history": false,
+    "index": 25,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/patient/MarinaRubella.xml"
+  },
+  "Practitioner/EvaErlenmeyer": {
+    "history": false,
+    "index": 26,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/EvaErlenmeyer.xml"
+  },
+  "Practitioner/HansHauser": {
+    "history": false,
+    "index": 27,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/HansHauser.xml"
+  },
+  "Practitioner/MarcMustermann": {
+    "history": false,
+    "index": 28,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/MarcMustermann.xml"
+  },
+  "Practitioner/PauloPorcellini": {
+    "history": false,
+    "index": 29,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/PauloPorcellini.xml"
+  },
+  "Practitioner/PeterPap": {
+    "history": false,
+    "index": 30,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/PeterPap.xml"
+  },
+  "Practitioner/PeterPresto": {
+    "history": false,
+    "index": 31,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/PeterPresto.xml"
+  },
+  "Practitioner/ResponseReceiverSabineMeier": {
+    "history": false,
+    "index": 32,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/ResponseReceiverSabineMeier.xml"
+  },
+  "Practitioner/SabineMeier": {
+    "history": false,
+    "index": 33,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitioner/SabineMeier.xml"
+  },
+  "PractitionerRole/EvaErlenmeyerLaborPipette": {
+    "history": false,
+    "index": 34,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitionerrole/EvaErlenmeyerLaborPipette.xml"
+  },
+  "PractitionerRole/MarcMustermannArztpraxis": {
+    "history": false,
+    "index": 35,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitionerrole/MarcMustermannArztpraxis.xml"
+  },
+  "PractitionerRole/PauloPorcelliniSuva": {
+    "history": false,
+    "index": 36,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitionerrole/PauloPorcelliniSuva.xml"
+  },
+  "PractitionerRole/PeterPapGruppenpraxis": {
+    "history": false,
+    "index": 37,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitionerrole/PeterPapGruppenpraxis.xml"
+  },
+  "PractitionerRole/PeterPrestoGruppenpraxis": {
+    "history": false,
+    "index": 38,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitionerrole/PeterPrestoGruppenpraxis.xml"
+  },
+  "PractitionerRole/HansHauserKantonsspital": {
+    "history": false,
+    "index": 39,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/practitionerrole/HansHauserKantonsspital.xml"
+  },
+  "Questionnaire/1-tvt": {
+    "history": false,
+    "index": 40,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaire/1-tvt.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt",
+    "name": "LabOrderFormExample",
+    "title": "Lab Order Form Example",
+    "version": "0.1.0",
+    "date": "2020-12-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "Questionnaire/2-pertussis": {
+    "history": false,
+    "index": 41,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaire/2-pertussis.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis",
+    "name": "LabOrderExample",
+    "title": "Lab Order Example",
+    "version": "0.1.0",
+    "date": "2020-12-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "Questionnaire/3-gyn": {
+    "history": false,
+    "index": 42,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaire/3-gyn.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn",
+    "name": "LabOrderExample",
+    "title": "Lab Order Example",
+    "version": "0.1.0",
+    "date": "2020-12-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "Questionnaire/4-sepsis": {
+    "history": false,
+    "index": 43,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaire/4-sepsis.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis",
+    "name": "LabOrderExample",
+    "title": "Lab Order Example",
+    "version": "0.1.0",
+    "date": "2020-12-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "Questionnaire/5-biol-monit": {
+    "history": false,
+    "index": 44,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaire/5-biol-monit.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit",
+    "name": "LabOrderExample",
+    "title": "Lab Order Example",
+    "version": "0.1.0",
+    "date": "2020-12-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "QuestionnaireResponse/1-tvt": {
+    "history": false,
+    "index": 45,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaireresponse/1-tvt.xml"
+  },
+  "QuestionnaireResponse/2-pertussis": {
+    "history": false,
+    "index": 46,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaireresponse/2-pertussis.xml"
+  },
+  "QuestionnaireResponse/3-gyn": {
+    "history": false,
+    "index": 47,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaireresponse/3-gyn.xml"
+  },
+  "QuestionnaireResponse/4-sepsis": {
+    "history": false,
+    "index": 48,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaireresponse/4-sepsis.xml"
+  },
+  "QuestionnaireResponse/5-biol-monit": {
+    "history": false,
+    "index": 49,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/questionnaireresponse/5-biol-monit.xml"
+  },
+  "ServiceRequest/1-tvt": {
+    "history": false,
+    "index": 50,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/servicerequest/1-tvt.xml"
+  },
+  "ServiceRequest/2-pertussis": {
+    "history": false,
+    "index": 51,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/servicerequest/2-pertussis.xml"
+  },
+  "ServiceRequest/3-gyn": {
+    "history": false,
+    "index": 52,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/servicerequest/3-gyn.xml"
+  },
+  "ServiceRequest/4-sepsis": {
+    "history": false,
+    "index": 53,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/servicerequest/4-sepsis.xml"
+  },
+  "ServiceRequest/5-biol-monit": {
+    "history": false,
+    "index": 54,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/servicerequest/5-biol-monit.xml"
+  },
+  "ServiceRequest/lab": {
+    "history": false,
+    "index": 55,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/servicerequest/lab.xml"
+  },
+  "Specimen/blood-bactec-plus": {
+    "history": false,
+    "index": 56,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/blood-bactec-plus.xml"
+  },
+  "Specimen/blood-coag": {
+    "history": false,
+    "index": 57,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/blood-coag.xml"
+  },
+  "Specimen/blood": {
+    "history": false,
+    "index": 58,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/blood.xml"
+  },
+  "Specimen/cervix-swab": {
+    "history": false,
+    "index": 59,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/cervix-swab.xml"
+  },
+  "Specimen/lsac": {
+    "history": false,
+    "index": 60,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/lsac.xml"
+  },
+  "Specimen/serum": {
+    "history": false,
+    "index": 61,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/serum.xml"
+  },
+  "Specimen/throat-swab": {
+    "history": false,
+    "index": 62,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/throat-swab.xml"
+  },
+  "Specimen/urin": {
+    "history": false,
+    "index": 63,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/examples/specimen/urin.xml"
+  },
+  "StructureDefinition/ch-lab-order-composition": {
+    "history": false,
+    "index": 64,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/structuredefinition/ch-lab-order-composition.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition",
+    "name": "ChLabOrderComposition",
+    "title": "CH LAB-Order Composition",
+    "version": "0.1.0",
+    "date": "2019-01-30",
+    "status": {
+      "class": "colsd",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Draft"
+    }
+  },
+  "StructureDefinition/ch-lab-order-document": {
+    "history": false,
+    "index": 65,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/structuredefinition/ch-lab-order-document.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document",
+    "name": "CHLAB_ORDERDocument",
+    "title": "CH LAB-ORDER Document Profile",
+    "version": "0.1.0",
+    "date": "2021-10-15T15:43:54+02:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/ch-lab-order-servicerequest": {
+    "history": false,
+    "index": 66,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/structuredefinition/ch-lab-order-servicerequest.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest",
+    "name": "ChLabOrderServiceRequest",
+    "title": "CH LAB-Order ServiceRequest",
+    "version": "0.1.0",
+    "date": "2019-02-05",
+    "status": {
+      "class": "colsd",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Draft"
+    }
+  },
+  "ValueSet/ServiceRequest.categories": {
+    "history": false,
+    "index": 67,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/valueset/ServiceRequest.categories.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/ValueSet/ServiceRequest.categories",
+    "name": "ServiceRequestCategories",
+    "title": "Service Request Categories for Questionnaires",
+    "version": "0.1.0",
+    "date": "2021-06-01T10:21:46+00:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "ValueSet/DocumentEntry.typeCode": {
+    "history": false,
+    "index": 68,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/valueset/DocumentEntry.typeCode.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.typeCode",
+    "name": "DocumentEntryTypeCode",
+    "title": "DocumentEntry.typeCode",
+    "version": "0.1.0",
+    "date": "2020-07-08T16:30:23+02:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "ValueSet/DocumentEntry.classCode": {
+    "history": false,
+    "index": 69,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/valueset/DocumentEntry.classCode.xml",
+    "url": "http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.classCode",
+    "name": "DocumentEntryClassCode",
+    "title": "DocumentEntry.classCode",
+    "version": "0.1.0",
+    "date": "2020-07-08T16:30:23+02:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/ServiceRequest.categories": {
+    "history": false,
+    "index": 70,
+    "source": "/home/lpg/workspace/ch-lab/ch-lab-order/input/resources/codesystem/ServiceRequest.categories.xml",
+    "url": "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories",
+    "name": "ChLabOrderServiceRequestCategories",
+    "title": "Service Request Categories for Questionnaires",
+    "version": "0.1.0",
+    "date": "2021-06-01T10:21:46+00:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 Switzerland",
+      "link": "https://www.hl7.ch/",
+      "status": "Active"
+    }
+  }
+}

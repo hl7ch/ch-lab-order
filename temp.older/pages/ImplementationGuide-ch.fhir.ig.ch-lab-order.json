@@ -1,0 +1,1374 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ch.fhir.ig.ch-lab-order",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      ImplementationGuide for CH-LAB-ORDER\n    </div>"
+  },
+  "url": "http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order",
+  "version": "0.1.0",
+  "name": "CH_LAB_ORDER",
+  "title": "CH LAB-Order (R4)",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-06-16",
+  "publisher": "HL7 Switzerland",
+  "contact": [
+    {
+      "name": "HL7 Switzerland",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.hl7.ch/"
+        }
+      ]
+    },
+    {
+      "name": "Marcel Hanselmann",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "marcel.hanselmann@bluewin.ch"
+        }
+      ]
+    }
+  ],
+  "description": "ImplementationGuide to generate form templates for Laboratory Order in Schweiz",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CH"
+        }
+      ]
+    }
+  ],
+  "copyright": "CC-BY-SA-4.0",
+  "packageId": "ch.fhir.ig.ch-lab-order",
+  "license": "CC-BY-SA-4.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "id": "chorf",
+      "uri": "http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf",
+      "packageId": "ch.fhir.ig.ch-orf",
+      "version": "0.10.0"
+    }
+  ],
+  "global": [
+    {
+      "type": "Practitioner",
+      "profile": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"
+    }
+  ],
+  "definition": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "releaselabel"
+          },
+          {
+            "url": "value",
+            "valueString": "STU 1 Ballot"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "copyrightyear"
+          },
+          {
+            "url": "value",
+            "valueString": "2021+"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-liquid"
+          },
+          {
+            "url": "value",
+            "valueString": "template/liquid"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-liquid"
+          },
+          {
+            "url": "value",
+            "valueString": "input/liquid"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-qa"
+          },
+          {
+            "url": "value",
+            "valueString": "temp/qa"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-temp"
+          },
+          {
+            "url": "value",
+            "valueString": "temp/pages"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-output"
+          },
+          {
+            "url": "value",
+            "valueString": "output"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-suppressed-warnings"
+          },
+          {
+            "url": "value",
+            "valueString": "input/ignoreWarnings.txt"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-history"
+          },
+          {
+            "url": "value",
+            "valueString": "http://fhir.ch/ig/ch-lab-order/history.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "template-html"
+          },
+          {
+            "url": "value",
+            "valueString": "template-page.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "template-md"
+          },
+          {
+            "url": "value",
+            "valueString": "template-page-md.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-contact"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-context"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-copyright"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-jurisdiction"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-license"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-publisher"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-version"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "active-tables"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      }
+    ],
+    "grouping": [
+      {
+        "name": "CH LAB-ORDER"
+      }
+    ],
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/1-tvt"
+        },
+        "name": "Referral 1-tvt",
+        "description": "Example Bundle for referral/order due to suspected deep vein thrombosis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/2-pertussis"
+        },
+        "name": "Referral 2-pertussis",
+        "description": "Example Bundle for referral/order for Pertussis investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/3-gyn"
+        },
+        "name": "Referreal 3-gyn",
+        "description": "Example Bundle for referral/order for preventive gynaecological check-up"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/4-sepsis"
+        },
+        "name": "Referreal 4-sepsis",
+        "description": "Example Bundle for referral/order for Sepsis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/5-biol-monit"
+        },
+        "name": "Referreal 5-biol-monit",
+        "description": "Example Bundle for referral/order for toxicological Monitoring"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Composition"
+          }
+        ],
+        "reference": {
+          "reference": "Composition/1-tvt"
+        },
+        "name": "1-tvt",
+        "description": "Composition: Storyboard for suspected deep Vein Thrombosis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Composition"
+          }
+        ],
+        "reference": {
+          "reference": "Composition/2-pertussis"
+        },
+        "name": "2-pertussis",
+        "description": "Composition: Storyboard for Pertussis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Composition"
+          }
+        ],
+        "reference": {
+          "reference": "Composition/3-gyn"
+        },
+        "name": "3-gyn",
+        "description": "Composition: Storyboard for Preventive Gynaecological Check-up"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Composition"
+          }
+        ],
+        "reference": {
+          "reference": "Composition/4-sepsis"
+        },
+        "name": "4-sepsis",
+        "description": "Composition: Storyboard for Sepsis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Composition"
+          }
+        ],
+        "reference": {
+          "reference": "Composition/5-biol-monit"
+        },
+        "name": "5-biol-monit",
+        "description": "Composition: Storyboard for Toxicological Monitoring"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Coverage"
+          }
+        ],
+        "reference": {
+          "reference": "Coverage/CoverageFranzMuster"
+        },
+        "name": "CoverageFranzMuster",
+        "description": "Example for Insurance Coverage"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Coverage"
+          }
+        ],
+        "reference": {
+          "reference": "Coverage/HealthInsuranceCard"
+        },
+        "name": "HealthInsuranceCard",
+        "description": "Example for Insurance"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Arztpraxis"
+        },
+        "name": "Arztpraxis",
+        "description": "Practice, refers to 2-pertussis and 3-gyn"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Gruppenpraxis"
+        },
+        "name": "Praxis Seeblick",
+        "description": "Example for group practice"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Kantonsspital"
+        },
+        "name": "Kantonsspital",
+        "description": "Example for Hospital"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/LaborPipette"
+        },
+        "name": "Labor Pipette",
+        "description": "Laboratory Organization, refers to all Storyboards"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/PraxisSeeblick"
+        },
+        "name": "Praxis Seeblick",
+        "description": "Example for practice"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/SpeiserRails"
+        },
+        "name": "Speiser Rails",
+        "description": "Example for Manufacturer, refers to 5-biol-monit"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Suva"
+        },
+        "name": "SUVA",
+        "description": "Insurance for occupational medicine, refers to 5-biol-monit"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/BeatBorer"
+        },
+        "name": "Beat Borer",
+        "description": "Example for CH-Core-Patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/EmilKummer"
+        },
+        "name": "Emil Kummer",
+        "description": "CH-Core-Patient, refers to 2-pertussis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/FranzMuster"
+        },
+        "name": "FranzMuster",
+        "description": "Example for CH-Core-Patient, used in coverage"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/HansGuggindieluft"
+        },
+        "name": "Hans Guggindieluft",
+        "description": "CH-Core-Patient, refers to 1-tvt"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/KlebsiellaKeller"
+        },
+        "name": "Klebsiella Keller",
+        "description": "CH-Core-Patient, refers to 4-sepsis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/MarinaRubella"
+        },
+        "name": "Marina Rubella",
+        "description": "CH-Core-Patient, refers to 3-gyn"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/EvaErlenmeyer"
+        },
+        "name": "Eva Erlenmeyer",
+        "description": "Specialist for Laboratory Medicine, works in Labor Pipette",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/HansHauser"
+        },
+        "name": "Hans Hauser",
+        "description": "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/MarcMustermann"
+        },
+        "name": "Marc Mustermann",
+        "description": "Practitioner, works in Arztpraxis, refers to 1-tvt",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/PauloPorcellini"
+        },
+        "name": "Paulo Porcellini",
+        "description": "Specialist for Occupational Medicine, works at SUVA, refers to 5-tvt",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/PeterPap"
+        },
+        "name": "Peter Pap",
+        "description": "Practitioner, works at Gruppenpraxis, refers to 3-gyn",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/PeterPresto"
+        },
+        "name": "Peter Presto",
+        "description": "Practitioner, works at Gruppenpraxis, refers to 2-pertussis",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/ResponseReceiverSabineMeier"
+        },
+        "name": "Response Receiver Sabine Meier",
+        "description": "Practitioner, works in Kantonsspital",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/SabineMeier"
+        },
+        "name": "Sabine Meier",
+        "description": "Practitioner, works in Kantonsspital, refers to 4-sepsis",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/EvaErlenmeyerLaborPipette"
+        },
+        "name": "Eva Erlenmeyer Labor Pipette",
+        "description": "PractitionerRole, Specialist for Laboratory Medicine, refers to all story boards",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/MarcMustermannArztpraxis"
+        },
+        "name": "Marc Mustermann at Arztpraxis",
+        "description": "PractitionerRole, refers to 1-tvt",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/PauloPorcelliniSuva"
+        },
+        "name": "Paulo Porcellini Suva",
+        "description": "PractitionerRole, refers to 5-biol-monit",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/PeterPapGruppenpraxis"
+        },
+        "name": "Peter Pap Gruppenpraxis",
+        "description": "PractitionerRole, refers to 3-gyn",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/PeterPrestoGruppenpraxis"
+        },
+        "name": "Peter Presto at Gruppenpraxis",
+        "description": "PractitionerRole, refers to 2-pertussis",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "PractitionerRole"
+          }
+        ],
+        "reference": {
+          "reference": "PractitionerRole/HansHauserKantonsspital"
+        },
+        "name": "Hans Hauser Kantonsspital",
+        "description": "PractitionerRole",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/1-tvt"
+        },
+        "name": "questionnaire 1-tvt",
+        "description": "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/2-pertussis"
+        },
+        "name": "questionnaire 2-pertussis",
+        "description": "Example for Laboratory Order Questionnaire for Pertussis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/3-gyn"
+        },
+        "name": "questionnaire 3-gyn",
+        "description": "Example for Laboratory Order Questionnaire for gynaecological check-up"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/4-sepsis"
+        },
+        "name": "questionnaire 4-sepsis",
+        "description": "Example for Laboratory Order Questionnaire for Sepsis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/5-biol-monit"
+        },
+        "name": "questionnaire 5-biol-monit",
+        "description": "Example for Laboratory Order Questionnaire for toxicological Monitoring"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/1-tvt"
+        },
+        "name": "questionnaire response 1-tvt",
+        "description": "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/2-pertussis"
+        },
+        "name": "questionnaire response 2-pertussis",
+        "description": "Example Laboratory Order Questionnaire Response for Pertussis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/3-gyn"
+        },
+        "name": "questionnaire response 3-gyn",
+        "description": "Example for Laboratory Order Questionnaire response for preventive gynecological check-up"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/4-sepsis"
+        },
+        "name": "questionnaire response 4-sepsis",
+        "description": "Example for Laboratory Order Questionnaire response for Sepsis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/5-biol-monit"
+        },
+        "name": "questionnaire response 5-biol-monit",
+        "description": "Example for Laboratory Order Questionnaire response for toxicological Monitoring"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/1-tvt"
+        },
+        "name": "laborder 1-tvt",
+        "description": "Example for Service Request due to suspected deep vein thrombosis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/2-pertussis"
+        },
+        "name": "laborder 2-pertussis",
+        "description": "Example for Service Request for Pertussis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/3-gyn"
+        },
+        "name": "laborder 3-gyn",
+        "description": "Example for Service Request for preventive gynaecological check-up"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/4-sepsis"
+        },
+        "name": "laborder 4-sepsis",
+        "description": "Example for Service Request for Sepsis Investigation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/5-biol-monit"
+        },
+        "name": "laborder 5-biol-monit",
+        "description": "Example for Service Request for toxicological Monitoring"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/lab"
+        },
+        "name": "laborder lab",
+        "description": "Example for generic Service Request"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/blood-bactec-plus"
+        },
+        "name": "Blood Sample Bacteriology",
+        "description": "Example for Specimen for bacteriological Examination"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/blood-coag"
+        },
+        "name": "Blood Sample Coagulation",
+        "description": "Example for Specimen for haemostatic Examination"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/blood"
+        },
+        "name": "Blood Sample",
+        "description": "Example for Specimen for Haematological Examination"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/cervix-swab"
+        },
+        "name": "Cervix-swab Sample",
+        "description": "Example for Specimen of Cervix Swab"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/lsac"
+        },
+        "name": "Cerebrospinal Fluid Sample",
+        "description": "Example for Specimen of Cerebrospinal Fluid"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/serum"
+        },
+        "name": "Serum Sample",
+        "description": "Example for Specimen of Serum"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/throat-swab"
+        },
+        "name": "Throat Swab",
+        "description": "Example for Specimen of Throat Swab"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Specimen"
+          }
+        ],
+        "reference": {
+          "reference": "Specimen/urin"
+        },
+        "name": "Urin Sample",
+        "description": "Example for Specimen of Urin"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/ch-lab-order-composition"
+        },
+        "name": "CH LAB-Order Composition",
+        "description": "Definition for Composition in the context of CH LAB-Order",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/ch-lab-order-document"
+        },
+        "name": "CH LAB-ORDER Document Profile",
+        "description": "Definition of the bundle for the lab order document",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/ch-lab-order-servicerequest"
+        },
+        "name": "CH LAB-Order ServiceRequest",
+        "description": "Definition for ServiceRequest in the context of CH LAB-Order",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/ServiceRequest.categories"
+        },
+        "name": "Service Request Categories for Questionnaires",
+        "description": "ch-lab-order Service Request Categories",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/DocumentEntry.typeCode"
+        },
+        "name": "DocumentEntry.typeCode",
+        "description": "Type of document as per Annex 3 EPRO-FDHA.\n      \t\tThe code defines a document’s type (e.g. discharge report, laboratory report). Each document type should be assigned to precisely one document class.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/DocumentEntry.classCode"
+        },
+        "name": "DocumentEntry.classCode",
+        "description": "Document class as per EPRO-FDHA Annex 3",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/ServiceRequest.categories"
+        },
+        "name": "Service Request Categories for Questionnaires",
+        "description": "ch-lab-order defines 10 different Kinds of Service Request",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "casestudies-english.html",
+          "title": "Case Studies in English",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "casestudies-german.html",
+          "title": "Case Studies in German",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "casestudies-french.html",
+          "title": "Case Studies in French",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases-english.html",
+          "title": "Use Cases in English",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases-german.html",
+          "title": "Use Cases in German",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases-french.html",
+          "title": "Use Cases in French",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "path-pages",
+        "value": "input/pages"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/capabilities"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/examples"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/extensions"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/models"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/operations"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/profiles"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/maps"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/testing"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/history"
+      },
+      {
+        "code": "path-resource",
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "template/config"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/images"
+      },
+      {
+        "code": "path-tx-cache",
+        "value": "input-cache/txcache"
+      }
+    ]
+  }
+}

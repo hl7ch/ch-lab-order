@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="EvaErlenmeyerLaborPipette"/>
+  <meta>
+    <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href="Practitioner-EvaErlenmeyer.html">Generated Summary: id: 7601000050710; Eva Erlenmeyer (OFFICIAL); Phone: 033 444 55 66, eva.erlenmeyer@labor-pipette.ch</a></p><p><b>organization</b>: <a href="Organization-LaborPipette.html">Generated Summary: id: 7601000234400; name: Labor Pipette; Phone: +41223345566, info@labor-pipette.ch, http://www.labor-pipette.ch</a></p></div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/EvaErlenmeyer"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/LaborPipette"/>
+  </organization>
+</PractitionerRole>

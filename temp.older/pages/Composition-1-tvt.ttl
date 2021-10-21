@@ -1,0 +1,141 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Composition/1-tvt> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "1-tvt"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2021-02-18T17:04:38.520+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Laboratory Order</div></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "enterer" ];
+       fhir:Extension.valueReference [
+         fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/MarcMustermannArztpraxis>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/MarcMustermannArztpraxis" ]
+       ]
+     ];
+     fhir:Extension.url [ fhir:value "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/EvaErlenmeyerLaborPipette>;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/EvaErlenmeyerLaborPipette" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/MarcMustermannArztpraxis>;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/MarcMustermannArztpraxis" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/EvaErlenmeyerLaborPipette>;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/EvaErlenmeyerLaborPipette" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Extension.url [ fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/Organization/Gruppenpraxis>;
+       fhir:Reference.reference [ fhir:value "Organization/Gruppenpraxis" ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Extension.url [ fhir:value "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/HansGuggindieluft>;
+       fhir:Reference.reference [ fhir:value "Patient/HansGuggindieluft" ]
+     ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:721965002;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "721965002" ];
+       fhir:Coding.display [ fhir:value "Laboratory order (record artifact)" ]
+     ]
+  ];
+  fhir:Composition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:721963009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "721963009" ];
+       fhir:Coding.display [ fhir:value "Order (record artifact)" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/HansGuggindieluft>;
+     fhir:Reference.reference [ fhir:value "Patient/HansGuggindieluft" ]
+  ];
+  fhir:Composition.date [ fhir:value "2019-03-31T11:46:09+02:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://fhir.ch/ig/ch-lab-order/PractitionerRole/MarcMustermannArztpraxis>;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/MarcMustermannArztpraxis" ]
+  ];
+  fhir:Composition.title [ fhir:value "Order-Referral-Form 1-tvt"];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Order-Referral-Form 1-tvt" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:93037-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "93037-0" ];
+         fhir:Coding.display [ fhir:value "Portable medical order form" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order-Referral-Form 1-tvt</div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt>;
+       fhir:Reference.reference [ fhir:value "Questionnaire/1-tvt" ]
+     ], [
+       fhir:index 1;
+       fhir:link <http://fhir.ch/ig/ch-lab-order/QuestionnaireResponse/1-tvt>;
+       fhir:Reference.reference [ fhir:value "QuestionnaireResponse/1-tvt" ]
+     ], [
+       fhir:index 2;
+       fhir:link <http://fhir.ch/ig/ch-lab-order/ServiceRequest/1-tvt>;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/1-tvt" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Composition/1-tvt.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

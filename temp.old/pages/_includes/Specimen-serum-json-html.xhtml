@@ -1,0 +1,50 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen">resourceType</a>" : "Specimen",
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.id">id</a>" : "serum",
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: 48736-12345-75465&lt;/p&gt;&lt;p&gt;&lt;b&gt;accessionIdentifier&lt;/b&gt;: id: 4e88a-12345-dd888&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: available&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://snomed.info/sct 119364003}\&quot;&gt;Serum specimen (specimen)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-BeatBorer.html\&quot;&gt;Generated Summary: Medical record number: 012/08.111115; Beat Borer ; Phone: +41 36 123 45 67, beat.borer@example.ch; gender: male; birthDate: 1986-06-06; &lt;span title=\&quot;Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}\&quot;&gt;verheiratet&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Collections&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collector&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collected[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Practitioner-MarcMustermann.html\&quot;&gt;Generated Summary: id: 7601000050702; Marc Mustermann (OFFICIAL); Phone: 033 333 22 11, marc.mustermann@gruppenpraxis.ch&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Aug 16, 2015, 8:40:17 AM&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Containers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://snomed.info/sct 706053007}\&quot;&gt;General specimen container (physical object)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "48736-12345-75465"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.accessionIdentifier">accessionIdentifier</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "4e88a-12345-dd888"
+  },
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.status">status</a>" : "available",
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "119364003",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Serum specimen (specimen)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/BeatBorer"
+  },
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection">collection</a>" : {
+    "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.collector">collector</a>" : {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/MarcMustermann"
+    },
+    "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.collected[x]">collectedDateTime</a>" : "2015-08-16T06:40:17Z"
+  },
+  "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.container">container</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.container.type">type</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "706053007",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "General specimen container (physical object)"
+          }
+        ]
+      }
+    }
+  ]
+}</code></pre>
+{% endraw %}

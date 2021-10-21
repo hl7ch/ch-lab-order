@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Coverage/HealthInsuranceCard> a fhir:Coverage;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "HealthInsuranceCard"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: A123456780</p><p><b>status</b>: active</p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span></p><p><b>subscriber</b>: <a href=\"Patient-FranzMuster.html\">Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}\">in eingetragener Partnerschaft</span></a></p><p><b>beneficiary</b>: <a href=\"Patient-FranzMuster.html\">Generated Summary: Medical record number: 012/08.111111; Franz Muster ; Phone: +41 32 321 61 11, franz.muster@example.ch; gender: male; birthDate: 1995-01-27; <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 6}\">in eingetragener Partnerschaft</span></a></p><p><b>period</b>: ?? --&gt; 2012-03-17</p><p><b>payor</b>: <span></span></p></div>"
+  ];
+  fhir:Coverage.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://ehic.com/insurer/123456789/member" ];
+     fhir:Identifier.value [ fhir:value "A123456780" ]
+  ];
+  fhir:Coverage.status [ fhir:value "active"];
+  fhir:Coverage.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "EHCPOL" ];
+       fhir:Coding.display [ fhir:value "extended healthcare" ]
+     ]
+  ];
+  fhir:Coverage.subscriber [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/FranzMuster>;
+     fhir:Reference.reference [ fhir:value "Patient/FranzMuster" ]
+  ];
+  fhir:Coverage.beneficiary [
+     fhir:link <http://fhir.ch/ig/ch-lab-order/Patient/FranzMuster>;
+     fhir:Reference.reference [ fhir:value "Patient/FranzMuster" ]
+  ];
+  fhir:Coverage.period [
+     fhir:Period.end [ fhir:value "2012-03-17"^^xsd:date ]
+  ];
+  fhir:Coverage.payor [
+     fhir:index 0;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://ehic.com/insurer" ];
+       fhir:Identifier.value [ fhir:value "123456789" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-lab-order/Coverage/HealthInsuranceCard.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

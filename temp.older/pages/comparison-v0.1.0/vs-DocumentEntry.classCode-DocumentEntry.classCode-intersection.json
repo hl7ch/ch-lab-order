@@ -1,0 +1,30 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "25d021a1-f33a-4cd5-a41a-7fd128d87e51-12",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/25d021a1-f33a-4cd5-a41a-7fd128d87e51-12",
+  "name" : "IntersectionDocumentEntryClassCodeAndDocumentEntryClassCode",
+  "title" : "Intersection of DocumentEntry.classCode And DocumentEntry.classCode",
+  "status" : "active",
+  "date" : "2021-10-21T22:11:27+02:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CH"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "721963009",
+        "display" : "Order (record artifact)"
+      }]
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "721963009",
+      "display" : "Untersuchungsauftrag"
+    }]
+  }
+}

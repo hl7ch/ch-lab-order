@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="2-pertussis"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-04-01T20:18:41.341+00:00"/>
+    <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2019-04-01T20:18:41.341+00:00"/>
+<!--  entry[0] Composition -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Composition/2-pertussis"/>
+    <resource>
+      <Composition>
+        <id value="2-pertussis"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2021-02-18T17:04:38.520+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><blockquote><p><b>EPR Data Enterer</b></p><p><b>value</b>: <a href="#PractitionerRole_PeterPrestoGruppenpraxis">See above (PractitionerRole/PeterPrestoGruppenpraxis)</a></p></blockquote><p><b>CH ORF Urgent Notification Contact For The Response To This Document</b>: <a href="PractitionerRole-EvaErlenmeyerLaborPipette.html">Generated Summary: </a></p><p><b>CH ORF Copy Receiver</b>: <a href="Organization-Arztpraxis.html">Generated Summary: id: 7601000235500; name: Arztpraxis Messen; Phone: +41555545566, info@arztpraxis.ch, http://www.arztpraxis.ch</a></p><p><b>CH ORF Copy Receiver</b>: <a href="#Patient_EmilKummer">See above (Patient/EmilKummer)</a></p><p><b>status</b>: final</p><p><b>type</b>: <span title="Codes: {http://snomed.info/sct 721965002}">Laboratory order (record artifact)</span></p><p><b>category</b>: <span title="Codes: {http://snomed.info/sct 721963009}">Order (record artifact)</span></p><p><b>date</b>: Mar 31, 2020, 11:46:09 AM</p><p><b>author</b>: <a href="#PractitionerRole_PeterPrestoGruppenpraxis">See above (PractitionerRole/PeterPrestoGruppenpraxis)</a></p><p><b>title</b>: Referral Pertussis</p></div>
+        </text>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer">
+          <extension url="enterer">
+            <valueReference>
+              <reference value="PractitionerRole/PeterPrestoGruppenpraxis"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument">
+          <valueReference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Organization/Arztpraxis"/>
+          </valueReference>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver">
+          <valueReference>
+            <reference value="Patient/EmilKummer"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721965002"/>
+            <display value="Laboratory order (record artifact)"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="721963009"/>
+            <display value="Order (record artifact)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/EmilKummer"/>
+        </subject>
+        <date value="2020-03-31T11:46:09+02:00"/>
+        <author>
+          <reference value="PractitionerRole/PeterPrestoGruppenpraxis"/>
+        </author>
+        <title value="Referral Pertussis"/>
+      <!--  sections  -->
+        <section>
+          <title value="Order-Referral-Form 2-pertussis"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="93037-0"/>
+              <display value="Portable medical order form"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+              Order-Referral-Form 2-pertussis
+            </div>
+          </text>
+          <entry>
+            <reference value="Questionnaire/2-pertussis"/>
+          </entry>
+          <entry>
+            <reference value="QuestionnaireResponse/2-pertussis"/>
+          </entry>
+          <entry>
+            <reference value="ServiceRequest/2-pertussis"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+<!--  entry[1] patient  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Patient/EmilKummer"/>
+    <resource>
+      <Patient>
+        <id value="EmilKummer"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>Birth Place</b>: Paris Frankreich </p><p><b>Place of origin according to eCH-0011</b>: Köniz BE </p><p><b>religion</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1041}">Roman Catholic Church</span></p><p><b>identifier</b>: Medical record number: 012/08.111102</p><p><b>name</b>: Emil Kummer </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2020-05-05</p><p><b>maritalStatus</b>: <span title="Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 1}">ledig</span></p><h3>Communications</h3><table class="grid"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td><span title="Codes: {urn:ietf:bcp:47 de-CH}">Deutsch (Schweiz)</span></td><td>true</td></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+          <valueAddress>
+            <city value="Paris"/>
+            <country value="Frankreich"/>
+          </valueAddress>
+        </extension>
+        <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin">
+          <valueAddress>
+            <city value="Köniz"/>
+            <state value="BE"/>
+          </valueAddress>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1041"/>
+              <display value="Roman Catholic Church"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <identifier>
+          <type>
+          <!--  Medical Record Number -->
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.756.5.30.999999.1"/>
+          <value value="012/08.111102"/>
+        </identifier>
+        <name>
+          <family value="Kummer"/>
+          <given value="Emil"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="2020-05-05"/>
+        <maritalStatus>
+          <coding>
+            <system value="http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus"/>
+            <code value="1"/>
+            <display value="ledig"/>
+          </coding>
+        </maritalStatus>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47"/>
+              <code value="de-CH"/>
+            </coding>
+            <text value="Deutsch (Schweiz)"/>
+          </language>
+          <preferred value="true"/>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+<!--  entry[2] practitioner  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Practitioner/PeterPresto"/>
+    <resource>
+      <Practitioner>
+        <id value="PeterPresto"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 7601000050704</p><p><b>name</b>: Peter Presto </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.51.1.3"/>
+          <value value="7601000050704"/>
+        </identifier>
+        <name>
+          <family value="Presto"/>
+          <given value="Peter"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+<!--  entry[3] organisation  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Organization/Gruppenpraxis"/>
+    <resource>
+      <Organization>
+        <id value="Gruppenpraxis"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>name</b>: Gruppenpraxis Olten</p><p><b>address</b>: Gerbergasse 12 Olten 4600 CH </p></div>
+        </text>
+        <name value="Gruppenpraxis Olten"/>
+        <address>
+          <line value="Gerbergasse 12"/>
+          <city value="Olten"/>
+          <postalCode value="4600"/>
+          <country value="CH"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+<!--  entry[4] practitionerrole  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"/>
+    <resource>
+      <PractitionerRole>
+        <id value="PeterPrestoGruppenpraxis"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href="#Practitioner_PeterPresto">See above (Practitioner/PeterPresto)</a></p><p><b>organization</b>: <a href="#Organization_Gruppenpraxis">See above (Organization/Gruppenpraxis)</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/PeterPresto"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/Gruppenpraxis"/>
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+<!--  entry[5] questionnaire  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/Questionnaire/2-pertussis"/>
+    <resource>
+      <Questionnaire>
+        <id value="2-pertussis"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2019-04-01T20:17:53.340+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"/>
+          <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"/>
+          <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>Target structure map</b>: <a href="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle">http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle</a></p><p><b>Source structure map</b>: <a href="http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr">http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr</a></p><blockquote><p><b>Launch context resources</b></p><p><b>value</b>: Bundle</p><p><b>value</b>: Bundle</p><p><b>value</b>: The Bundle that is to be used to pre-populate the form</p></blockquote><p><b>url</b>: <code>http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis</code></p><p><b>version</b>: 0.9.1</p><p><b>name</b>: LabOrderExample</p><p><b>title</b>: Lab Order Example</p><p><b>status</b>: active</p><p><b>subjectType</b>: Patient</p><p><b>date</b>: 2020-12-17</p><p><b>publisher</b>: HL7 Switzerland</p><p><b>contact</b>: HL7 Switzerland: <a href="https://www.hl7.ch/">https://www.hl7.ch/</a></p><p><b>jurisdiction</b>: <span title="Codes: {urn:iso:std:iso:3166 CH}">Switzerland</span></p><p><b>copyright</b>: CC-BY-SA-4.0</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order</p><p><b>text</b>: Auftrag</p><p><b>type</b>: group</p><p><b>required</b>: true</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order.title</p><p><b>text</b>: Titel</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.type</p><p><b>text</b>: Typ</p><p><b>type</b>: choice</p><p><b>answerValueSet</b>: <a href="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode">http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.category</p><p><b>text</b>: Kategorie</p><p><b>type</b>: choice</p><p><b>answerValueSet</b>: <a href="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode">http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifier</p><p><b>text</b>: Auftragsnummer des Auftraggebers</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>hidden</b>: true</p><p><b>linkId</b>: order.placerOrderIdentifierDomain</p><p><b>text</b>: Identifier Domain der Auftragsnummer des Auftraggebers</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.fillerOrderIdentifier</p><p><b>text</b>: Auftragsnummer des Auftragsempfängers</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>hidden</b>: true</p><p><b>linkId</b>: order.fillerOrderIdentifierDomain</p><p><b>text</b>: Identifier Domain der Auftragsnummer des Auftragsempfängers</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>hidden</b>: true</p><p><b>linkId</b>: order.precedentDocumentIdentifier</p><p><b>text</b>: Identifier des Vorgängerdokuments</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocument</p><p><b>text</b>: Dringender Benachrichtigungskontakt für dieses Dokument</p><p><b>type</b>: group</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocumentResponse</p><p><b>text</b>: Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument</p><p><b>type</b>: group</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.priority</p><p><b>text</b>: Auftragspriorität</p><p><b>type</b>: choice</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver</p><p><b>text</b>: Empfänger</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.practitioner</p><p><b>text</b>: Empfangende Person</p><p><b>type</b>: group</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.organization</p><p><b>text</b>: Empfangende Organisation</p><p><b>type</b>: group</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient</p><p><b>text</b>: Patient</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.familyName</p><p><b>text</b>: Name</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.maidenName</p><p><b>text</b>: Ledigname</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.givenName</p><p><b>text</b>: Vorname</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.localPid</p><p><b>text</b>: Lokale Patienten-ID</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.birthDate</p><p><b>text</b>: Geburtsdatum</p><p><b>type</b>: date</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.gender</p><p><b>text</b>: Geschlecht</p><p><b>type</b>: choice</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.phone</p><p><b>text</b>: Telefon</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.email</p><p><b>text</b>: E-Mail</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.streetAddressLine</p><p><b>text</b>: Strasse, Hausnummer, Postfach etc.</p><p><b>type</b>: string</p><p><b>repeats</b>: true</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.postalCode</p><p><b>text</b>: PLZ</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.city</p><p><b>text</b>: Ort</p><p><b>type</b>: string</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.country</p><p><b>text</b>: Land</p><p><b>type</b>: string</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender</p><p><b>text</b>: Absender</p><p><b>type</b>: group</p><p><b>required</b>: true</p><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.author</p><p><b>text</b>: Verantwortlicher</p><p><b>type</b>: group</p><p><b>required</b>: true</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.dataenterer</p><p><b>text</b>: Erfasser</p><p><b>type</b>: group</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopies</p><p><b>text</b>: Kopieempfänger</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p><p><b>type</b>: group</p><p><b>repeats</b>: true</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: microbiology</p><p><b>text</b>: Mikrobiologie</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: per</p><p><b>text</b>: Pertussis and Parapertussis DNA</p><p><b>type</b>: choice</p><p><b>repeats</b>: true</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: hematology</p><p><b>text</b>: Hämatologie</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: blood-diff</p><p><b>text</b>: Manual Differential panel - Blood</p><p><b>type</b>: choice</p><p><b>repeats</b>: true</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: clinical chemistry</p><p><b>text</b>: Klinische Chemie</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: crp</p><p><b>text</b>: C-reactive Protein</p><p><b>type</b>: choice</p><p><b>repeats</b>: true</p></blockquote></blockquote></div>
+        </text>
+      <!--  extensions  -->
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap">
+          <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap">
+          <valueCanonical value="http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext">
+          <extension url="name">
+            <valueId value="Bundle"/>
+          </extension>
+          <extension url="type">
+            <valueCode value="Bundle"/>
+          </extension>
+          <extension url="description">
+            <valueString value="The Bundle that is to be used to pre-populate the form"/>
+          </extension>
+        </extension>
+        <url value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"/>
+        <version value="0.9.1"/>
+        <name value="LabOrderExample"/>
+        <title value="Lab Order Example"/>
+        <status value="active"/>
+        <subjectType value="Patient"/>
+        <date value="2020-12-17"/>
+        <publisher value="HL7 Switzerland"/>
+        <contact>
+          <name value="HL7 Switzerland"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.hl7.ch/"/>
+          </telecom>
+        </contact>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CH"/>
+          </coding>
+        </jurisdiction>
+        <copyright value="CC-BY-SA-4.0"/>
+      <!--  item[0] order: referral-min Questionnaire Example  -->
+        <item>
+          <linkId value="order"/>
+          <text value="Auftrag"/>
+          <type value="group"/>
+          <required value="true"/>
+          <item>
+            <linkId value="order.title"/>
+            <text value="Titel"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="order.type"/>
+            <text value="Typ"/>
+            <type value="choice"/>
+            <answerValueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode"/>
+          </item>
+          <item>
+            <linkId value="order.category"/>
+            <text value="Kategorie"/>
+            <type value="choice"/>
+            <answerValueSet value="http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"/>
+          </item>
+          <item>
+            <linkId value="order.placerOrderIdentifier"/>
+            <text value="Auftragsnummer des Auftraggebers"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="order.placerOrderIdentifierDomain"/>
+            <text value="Identifier Domain der Auftragsnummer des Auftraggebers"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="order.fillerOrderIdentifier"/>
+            <text value="Auftragsnummer des Auftragsempfängers"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="order.fillerOrderIdentifierDomain"/>
+            <text value="Identifier Domain der Auftragsnummer des Auftragsempfängers"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="order.precedentDocumentIdentifier"/>
+            <text value="Identifier des Vorgängerdokuments"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="order.notificationContactDocument"/>
+            <text value="Dringender Benachrichtigungskontakt für dieses Dokument"/>
+            <type value="group"/>
+            <item>
+              <linkId value="order.notificationContactDocument.practitioner"/>
+              <text value="Zu benachrichtigende Person"/>
+              <type value="group"/>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.title"/>
+                <text value="Titel"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.familyName"/>
+                <text value="Name"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.phone"/>
+                <text value="Telefon"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.email"/>
+                <text value="E-Mail"/>
+                <type value="string"/>
+              </item>
+            </item>
+          </item>
+          <item>
+            <linkId value="order.notificationContactDocumentResponse"/>
+            <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"/>
+            <type value="group"/>
+            <item>
+              <linkId value="order.notificationContactDocumentResponse.practitioner"/>
+              <text value="Zu benachrichtigende Person"/>
+              <type value="group"/>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.title"/>
+                <text value="Titel"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.familyName"/>
+                <text value="Name"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.phone"/>
+                <text value="Telefon"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.email"/>
+                <text value="E-Mail"/>
+                <type value="string"/>
+              </item>
+            </item>
+          </item>
+          <item>
+            <linkId value="order.priority"/>
+            <text value="Auftragspriorität"/>
+            <type value="choice"/>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/request-priority"/>
+                <code value="routine"/>
+                <display value="Die Anfrage hat normale Priorität."/>
+              </valueCoding>
+              <initialSelected value="true"/>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/request-priority"/>
+                <code value="urgent"/>
+                <display value="Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."/>
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/request-priority"/>
+                <code value="asap"/>
+                <display value="Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."/>
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/request-priority"/>
+                <code value="stat"/>
+                <display value="Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."/>
+              </valueCoding>
+            </answerOption>
+          </item>
+        </item>
+      <!--  item[1] 1-tvt Receiver: Person/organization who receives the request  -->
+        <item>
+          <linkId value="receiver"/>
+          <text value="Empfänger"/>
+          <type value="group"/>
+          <item>
+            <linkId value="receiver.practitioner"/>
+            <text value="Empfangende Person"/>
+            <type value="group"/>
+            <item>
+              <linkId value="receiver.practitioner.title"/>
+              <text value="Titel"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.familyName"/>
+              <text value="Name"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.givenName"/>
+              <text value="Vorname"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.gln"/>
+              <text value="GLN"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.phone"/>
+              <text value="Telefon"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.email"/>
+              <text value="E-Mail"/>
+              <type value="string"/>
+            </item>
+          </item>
+          <item>
+            <linkId value="receiver.organization"/>
+            <text value="Empfangende Organisation"/>
+            <type value="group"/>
+            <item>
+              <linkId value="receiver.organization.name"/>
+              <text value="Name der Organisation"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.organization.streetAddressLine"/>
+              <text value="Strasse, Hausnummer, Postfach etc."/>
+              <type value="string"/>
+              <repeats value="true"/>
+            </item>
+            <item>
+              <linkId value="receiver.organization.postalCode"/>
+              <text value="PLZ"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.organization.city"/>
+              <text value="Ort"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiver.organization.country"/>
+              <text value="Land"/>
+              <type value="string"/>
+            </item>
+          </item>
+        </item>
+      <!--  item[2] Patient: The principle target of a particular Form Content is one patient  -->
+        <item>
+          <linkId value="patient"/>
+          <text value="Patient"/>
+          <type value="group"/>
+          <item>
+            <linkId value="patient.familyName"/>
+            <text value="Name"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.maidenName"/>
+            <text value="Ledigname"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.givenName"/>
+            <text value="Vorname"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.localPid"/>
+            <text value="Lokale Patienten-ID"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.birthDate"/>
+            <text value="Geburtsdatum"/>
+            <type value="date"/>
+          </item>
+          <item>
+            <linkId value="patient.gender"/>
+            <text value="Geschlecht"/>
+            <type value="choice"/>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/administrative-gender"/>
+                <code value="male"/>
+                <display value="Männlich"/>
+              </valueCoding>
+              <initialSelected value="true"/>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/administrative-gender"/>
+                <code value="female"/>
+                <display value="Weiblich"/>
+              </valueCoding>
+            </answerOption>
+            <answerOption>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/administrative-gender"/>
+                <code value="other"/>
+                <display value="Anderes"/>
+              </valueCoding>
+            </answerOption>
+          </item>
+          <item>
+            <linkId value="patient.phone"/>
+            <text value="Telefon"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.email"/>
+            <text value="E-Mail"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.streetAddressLine"/>
+            <text value="Strasse, Hausnummer, Postfach etc."/>
+            <type value="string"/>
+            <repeats value="true"/>
+          </item>
+          <item>
+            <linkId value="patient.postalCode"/>
+            <text value="PLZ"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.city"/>
+            <text value="Ort"/>
+            <type value="string"/>
+          </item>
+          <item>
+            <linkId value="patient.country"/>
+            <text value="Land"/>
+            <type value="string"/>
+          </item>
+        </item>
+      <!--  item[3] sender, sender.author -->
+        <item>
+          <linkId value="sender"/>
+          <text value="Absender"/>
+          <type value="group"/>
+          <required value="true"/>
+          <item>
+            <linkId value="sender.author"/>
+            <text value="Verantwortlicher"/>
+            <type value="group"/>
+            <required value="true"/>
+            <item>
+              <linkId value="sender.author.practitioner"/>
+              <text value="Verantwortliche Person"/>
+              <type value="group"/>
+              <item>
+                <linkId value="sender.author.practitioner.title"/>
+                <text value="Titel"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.familyName"/>
+                <text value="Name"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.gln"/>
+                <text value="GLN"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.phone"/>
+                <text value="Telefon"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.email"/>
+                <text value="E-Mail"/>
+                <type value="string"/>
+              </item>
+            </item>
+            <item>
+              <linkId value="sender.author.organization"/>
+              <text value="Verantwortliche Organisation"/>
+              <type value="group"/>
+              <item>
+                <linkId value="sender.author.organization.name"/>
+                <text value="Name der Organisation"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.streetAddressLine"/>
+                <text value="Strasse, Hausnummer, Postfach etc."/>
+                <type value="string"/>
+                <repeats value="true"/>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.postalCode"/>
+                <text value="PLZ"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.city"/>
+                <text value="Ort"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.country"/>
+                <text value="Land"/>
+                <type value="string"/>
+              </item>
+            </item>
+          </item>
+          <item>
+            <linkId value="sender.dataenterer"/>
+            <text value="Erfasser"/>
+            <type value="group"/>
+            <item>
+              <linkId value="sender.dataenterer.practitioner"/>
+              <text value="Erfassende Person"/>
+              <type value="group"/>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.familyName"/>
+                <text value="Name"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.phone"/>
+                <text value="Telefon"/>
+                <type value="string"/>
+              </item>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.email"/>
+                <text value="E-Mail"/>
+                <type value="string"/>
+              </item>
+            </item>
+          </item>
+        </item>
+      <!--  item[4] receiverCopies, e.g. Patient, other HC-Organisation  -->
+        <item>
+          <linkId value="receiverCopies"/>
+          <text value="Kopieempfänger"/>
+          <type value="group"/>
+          <item>
+            <linkId value="receiverCopy"/>
+            <text value="Kopieempfangende Organisation oder Person"/>
+            <type value="group"/>
+            <repeats value="true"/>
+            <item>
+              <linkId value="receiverCopy.organization.name"/>
+              <text value="Name der Organisation"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.title"/>
+              <text value="Titel"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.familyName"/>
+              <text value="Name"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.givenName"/>
+              <text value="Vorname"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.phone"/>
+              <text value="Telefon"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.email"/>
+              <text value="E-Mail"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.streetAddressLine"/>
+              <text value="Strasse, Hausnummer, Postfach etc."/>
+              <type value="string"/>
+              <repeats value="true"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.postalCode"/>
+              <text value="PLZ"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.city"/>
+              <text value="Ort"/>
+              <type value="string"/>
+            </item>
+            <item>
+              <linkId value="receiverCopy.country"/>
+              <text value="Land"/>
+              <type value="string"/>
+            </item>
+          </item>
+        </item>
+      <!--  item[5] specialty, here: microbiology -->
+        <item>
+          <linkId value="microbiology"/>
+          <text value="Mikrobiologie"/>
+          <type value="group"/>
+        <!--  item[5.1] PCR for Pertussis/Parapertussis -->
+          <item>
+            <linkId value="per"/>
+            <text value="Pertussis and Parapertussis DNA"/>
+            <type value="choice"/>
+            <repeats value="true"/>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="90441-7"/>
+                <display value="B pert+parapert DNA Pnl Nph"/>
+              </valueCoding>
+            </answerOption>
+          </item>
+        </item>
+      <!--  item[6] specialty, here: hematology -->
+        <item>
+          <linkId value="hematology"/>
+          <text value="Hämatologie"/>
+          <type value="group"/>
+        <!--  item[6.0 Diff Bld]  -->
+          <item>
+            <linkId value="blood-diff"/>
+            <text value="Manual Differential panel - Blood"/>
+            <type value="choice"/>
+            <repeats value="true"/>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="24318-8"/>
+                <display value="Manual diff Bld"/>
+              </valueCoding>
+            </answerOption>
+          </item>
+        </item>
+      <!--  item[7] specialty, here: clinical chemistry -->
+        <item>
+          <linkId value="clinical chemistry"/>
+          <text value="Klinische Chemie"/>
+          <type value="group"/>
+        <!--  item[7.1] CRP C reactive Protein normal method  -->
+          <item>
+            <linkId value="crp"/>
+            <text value="C-reactive Protein"/>
+            <type value="choice"/>
+            <repeats value="true"/>
+            <answerOption>
+              <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="1988-5"/>
+                <display value="C reactive protein [Mass/volume] in Serum or Plasma"/>
+              </valueCoding>
+            </answerOption>
+          </item>
+        </item>
+      </Questionnaire>
+    </resource>
+  </entry>
+<!--  entry[6] questionnaireResponse  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/QuestionnaireResponse/2-pertussis"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="2-pertussis"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2019-04-01T20:17:53.340+00:00"/>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>questionnaire</b>: <a href="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis">http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis</a></p><p><b>status</b>: completed</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order</p><p><b>text</b>: Auftrag</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifier</p><p><b>text</b>: Auftragsnummer des Auftraggebers</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifierDomain</p><p><b>text</b>: Identifier Domain der Auftragsnummer des Auftraggebers</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.precedentDocumentIdentifier</p><p><b>text</b>: Identifier des Vorgängerdokuments</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocument</p><p><b>text</b>: Dringender Benachrichtigungskontakt für dieses Dokument</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocumentResponse</p><p><b>text</b>: Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.priority</p><p><b>text</b>: Auftragspriorität</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver</p><p><b>text</b>: Empfänger</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.practitioner</p><p><b>text</b>: Empfangende Person</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.organization</p><p><b>text</b>: Empfangende Organisation</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient</p><p><b>text</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.familyName</p><p><b>text</b>: Name</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.maidenName</p><p><b>text</b>: Ledigname</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.givenName</p><p><b>text</b>: Vorname</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.localPid</p><p><b>text</b>: Lokale Patienten-ID</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.birthDate</p><p><b>text</b>: Geburtsdatum</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.gender</p><p><b>text</b>: Geschlecht</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.phone</p><p><b>text</b>: Telefon</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.email</p><p><b>text</b>: E-Mail</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.streetAddressLine</p><p><b>text</b>: Strasse, Hausnummer, Postfach etc.</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.postalCode</p><p><b>text</b>: PLZ</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.city</p><p><b>text</b>: Ort</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.country</p><p><b>text</b>: Land</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender</p><p><b>text</b>: Absender</p><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.author</p><p><b>text</b>: Verantwortlicher</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.dataenterer</p><p><b>text</b>: Erfasser</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopies</p><p><b>text</b>: Kopieempfänger</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: microbiology</p><p><b>text</b>: Mikrobiologie</p><blockquote><p><b>item</b></p><p><b>linkId</b>: per</p><p><b>text</b>: Pertussis and Parapertussis DNA</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: hematology</p><p><b>text</b>: Hämatologie</p><blockquote><p><b>item</b></p><p><b>linkId</b>: blood-diff</p><p><b>text</b>: Manual Differential panel - Blood</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: clinical chemistry</p><p><b>text</b>: Klinische Chemie</p><blockquote><p><b>item</b></p><p><b>linkId</b>: crp</p><p><b>text</b>: C-reactive Protein</p></blockquote></blockquote></div>
+        </text>
+        <questionnaire value="http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"/>
+        <status value="completed"/>
+      <!--  item[0] order  -->
+        <item>
+          <linkId value="order"/>
+          <text value="Auftrag"/>
+        <!--  item[0][0]order.placerOrderIdentifier -->
+          <item>
+            <linkId value="order.placerOrderIdentifier"/>
+            <text value="Auftragsnummer des Auftraggebers"/>
+            <answer>
+              <valueString value="123"/>
+            </answer>
+          </item>
+        <!--  item[0][1]order.placerOrderIdentifierDomain  -->
+          <item>
+            <linkId value="order.placerOrderIdentifierDomain"/>
+            <text value="Identifier Domain der Auftragsnummer des Auftraggebers"/>
+            <answer>
+              <valueString value="urn:oid:1.3.4.5.6.7"/>
+            </answer>
+          </item>
+        <!--  item[0][2]order.precedentDocumentIdentifier  -->
+          <item>
+            <linkId value="order.precedentDocumentIdentifier"/>
+            <text value="Identifier des Vorgängerdokuments"/>
+            <answer>
+              <valueString value="1622f2fb-6ba3-4532-9aed-35b158def187"/>
+            </answer>
+          </item>
+        <!--  item[0][3]order.notificationContactDocument -->
+          <item>
+            <linkId value="order.notificationContactDocument"/>
+            <text value="Dringender Benachrichtigungskontakt für dieses Dokument"/>
+            <item>
+              <linkId value="order.notificationContactDocument.practitioner"/>
+              <text value="Zu benachrichtigende Person"/>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.title"/>
+                <text value="Titel"/>
+                <answer>
+                  <valueString value="Dr. med."/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.familyName"/>
+                <text value="Name"/>
+                <answer>
+                  <valueString value="Presto"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <answer>
+                  <valueString value="Peter"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.phone"/>
+                <text value="Telefon"/>
+                <answer>
+                  <valueString value="032 333 22 33"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocument.practitioner.email"/>
+                <text value="E-Mail"/>
+                <answer>
+                  <valueString value="eva.erlenmeyer@labor-pipette.ch"/>
+                </answer>
+              </item>
+            </item>
+          </item>
+        <!--  item[0][4]order.notificationContactDocumentResponse -->
+          <item>
+            <linkId value="order.notificationContactDocumentResponse"/>
+            <text value="Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"/>
+            <item>
+              <linkId value="order.notificationContactDocumentResponse.practitioner"/>
+              <text value="Zu benachrichtigende Person"/>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.title"/>
+                <text value="Titel"/>
+                <answer>
+                  <valueString value="Dr. med."/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.familyName"/>
+                <text value="Name"/>
+                <answer>
+                  <valueString value="Erlenmeyer"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <answer>
+                  <valueString value="Eva"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.phone"/>
+                <text value="Telefon"/>
+                <answer>
+                  <valueString value="033 444 55 66"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="order.notificationContactDocumentResponse.practitioner.email"/>
+                <text value="E-Mail"/>
+                <answer>
+                  <valueString value="eva.erlenmeyer@labor-pipette.ch"/>
+                </answer>
+              </item>
+            </item>
+          </item>
+        <!--  item[0][5]order.priority  -->
+          <item>
+            <linkId value="order.priority"/>
+            <text value="Auftragspriorität"/>
+            <answer>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/request-priority"/>
+                <code value="routine"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      <!--  item[1] receiver, Person/organization who receives order  -->
+        <item>
+          <linkId value="receiver"/>
+          <text value="Empfänger"/>
+        <!--  item[1][0] receiver Practitioner who receives order  -->
+          <item>
+            <linkId value="receiver.practitioner"/>
+            <text value="Empfangende Person"/>
+            <item>
+              <linkId value="receiver.practitioner.title"/>
+              <text value="Titel"/>
+              <answer>
+                <valueString value="Dr. med."/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.familyName"/>
+              <text value="Name"/>
+              <answer>
+                <valueString value="Presto"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.givenName"/>
+              <text value="Vorname"/>
+              <answer>
+                <valueString value="Peter"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.gln"/>
+              <text value="GLN"/>
+              <answer>
+                <valueString value="7601000050703"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.phone"/>
+              <text value="Telefon"/>
+              <answer>
+                <valueString value="+41322552525"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.practitioner.email"/>
+              <text value="E-Mail"/>
+              <answer>
+                <valueString value="peter.presto@arztpraxis.ch"/>
+              </answer>
+            </item>
+          </item>
+        <!--  item[1][1] receiver Organization which receives order  -->
+          <item>
+            <linkId value="receiver.organization"/>
+            <text value="Empfangende Organisation"/>
+            <item>
+              <linkId value="receiver.organization.name"/>
+              <text value="Name der Organisation"/>
+              <answer>
+                <valueString value="Labor Pipette"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.organization.streetAddressLine"/>
+              <text value="Strasse, Hausnummer, Postfach etc."/>
+              <answer>
+                <valueString value="Laborstrasse 23"/>
+              </answer>
+              <answer>
+                <valueString value="Postfach 44"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.organization.postalCode"/>
+              <text value="PLZ"/>
+              <answer>
+                <valueString value="4600"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.organization.city"/>
+              <text value="Ort"/>
+              <answer>
+                <valueString value="Olten"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiver.organization.country"/>
+              <text value="Land"/>
+              <answer>
+                <valueString value="Schweiz"/>
+              </answer>
+            </item>
+          </item>
+        </item>
+      <!--  item[2] patient  -->
+        <item>
+          <linkId value="patient"/>
+          <text value="Patient"/>
+          <item>
+            <linkId value="patient.familyName"/>
+            <text value="Name"/>
+            <answer>
+              <valueString value="Kummer"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.maidenName"/>
+            <text value="Ledigname"/>
+          <!--  @value kann nicht leer sein  -->
+            <answer>
+              <valueString value="Bering"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.givenName"/>
+            <text value="Vorname"/>
+            <answer>
+              <valueString value="Emil"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.localPid"/>
+            <text value="Lokale Patienten-ID"/>
+            <answer>
+              <valueString value="012/08.111102"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.birthDate"/>
+            <text value="Geburtsdatum"/>
+            <answer>
+              <valueDate value="2014-05-05"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.gender"/>
+            <text value="Geschlecht"/>
+            <answer>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/administrative-gender"/>
+                <code value="male"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.phone"/>
+            <text value="Telefon"/>
+            <answer>
+              <valueString value="079 989 89 89"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.email"/>
+            <text value="E-Mail"/>
+            <answer>
+              <valueString value="vera.kummer@example.ch"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.streetAddressLine"/>
+            <text value="Strasse, Hausnummer, Postfach etc."/>
+            <answer>
+              <valueString value="Musterweg"/>
+            </answer>
+            <answer>
+              <valueString value="6a"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.postalCode"/>
+            <text value="PLZ"/>
+            <answer>
+              <valueString value="8000"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.city"/>
+            <text value="Ort"/>
+            <answer>
+              <valueString value="Zürich"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="patient.country"/>
+            <text value="Land"/>
+            <answer>
+              <valueString value="Schweiz"/>
+            </answer>
+          </item>
+        </item>
+      <!--  item[3] sender, sender.author -->
+        <item>
+          <linkId value="sender"/>
+          <text value="Absender"/>
+          <item>
+            <linkId value="sender.author"/>
+            <text value="Verantwortlicher"/>
+            <item>
+              <linkId value="sender.author.practitioner"/>
+              <text value="Verantwortliche Person"/>
+              <item>
+                <linkId value="sender.author.practitioner.title"/>
+                <text value="Titel"/>
+                <answer>
+                  <valueString value="Dr. med."/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.familyName"/>
+                <text value="Name"/>
+                <answer>
+                  <valueString value="Presto"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <answer>
+                  <valueString value="Peter"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.gln"/>
+                <text value="GLN"/>
+                <answer>
+                  <valueString value="7601000034321"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.phone"/>
+                <text value="Telefon"/>
+                <answer>
+                  <valueString value="032 333 22 33"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.practitioner.email"/>
+                <text value="E-Mail"/>
+                <answer>
+                  <valueString value="peter.presto@arztpraxis.ch"/>
+                </answer>
+              </item>
+            </item>
+            <item>
+              <linkId value="sender.author.organization"/>
+              <text value="Verantwortliche Organisation"/>
+              <item>
+                <linkId value="sender.author.organization.name"/>
+                <text value="Name der Organisation"/>
+                <answer>
+                  <valueString value="Praxis Seeblick"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.streetAddressLine"/>
+                <text value="Strasse, Hausnummer, Postfach etc."/>
+                <answer>
+                  <valueString value="Seestrasse 133"/>
+                </answer>
+                <answer>
+                  <valueString value="Haus C"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.postalCode"/>
+                <text value="PLZ"/>
+                <answer>
+                  <valueString value="8000"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.city"/>
+                <text value="Ort"/>
+                <answer>
+                  <valueString value="Zürich"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.author.organization.country"/>
+                <text value="Land"/>
+                <answer>
+                  <valueString value="Schweiz"/>
+                </answer>
+              </item>
+            </item>
+          </item>
+          <item>
+            <linkId value="sender.dataenterer"/>
+            <text value="Erfasser"/>
+            <item>
+              <linkId value="sender.dataenterer.practitioner"/>
+              <text value="Erfassende Person"/>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.familyName"/>
+                <text value="Name"/>
+                <answer>
+                  <valueString value="Presto"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.givenName"/>
+                <text value="Vorname"/>
+                <answer>
+                  <valueString value="Peter"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.phone"/>
+                <text value="Telefon"/>
+                <answer>
+                  <valueString value="032 333 22 33"/>
+                </answer>
+              </item>
+              <item>
+                <linkId value="sender.dataenterer.practitioner.email"/>
+                <text value="E-Mail"/>
+                <answer>
+                  <valueString value="peter.presto@arztpraxis.ch"/>
+                </answer>
+              </item>
+            </item>
+          </item>
+        </item>
+      <!--  item[4] receiverCopies, e.g. Patient, other HC-Organisation  -->
+        <item>
+          <linkId value="receiverCopies"/>
+          <text value="Kopieempfänger"/>
+          <item>
+            <linkId value="receiverCopy"/>
+            <text value="Kopieempfangende Organisation oder Person"/>
+            <item>
+              <linkId value="receiverCopy.organization.name"/>
+              <text value="Name der Organisation"/>
+              <answer>
+                <valueString value="Gruppenpraxis"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.title"/>
+              <text value="Titel"/>
+              <answer>
+                <valueString value="Dr. med."/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.familyName"/>
+              <text value="Name"/>
+              <answer>
+                <valueString value="Hauser"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.givenName"/>
+              <text value="Vorname"/>
+              <answer>
+                <valueString value="Hans"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.phone"/>
+              <text value="Telefon"/>
+              <answer>
+                <valueString value="038 888 22 11"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.email"/>
+              <text value="E-Mail"/>
+              <answer>
+                <valueString value="hans.hauser@gruppenpraxis.ch"/>
+              </answer>
+            </item>
+          </item>
+          <item>
+            <linkId value="receiverCopy"/>
+            <text value="Kopieempfangende Organisation oder Person"/>
+            <item>
+              <linkId value="receiverCopy.familyName"/>
+              <text value="Name"/>
+              <answer>
+                <valueString value="Kummer"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.givenName"/>
+              <text value="Vorname"/>
+              <answer>
+                <valueString value="Claudia"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.phone"/>
+              <text value="Telefon"/>
+              <answer>
+                <valueString value="079 979 79 79"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.email"/>
+              <text value="E-Mail"/>
+              <answer>
+                <valueString value="claudia.kummer@redwin.ch"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.streetAddressLine"/>
+              <text value="Strasse, Hausnummer, Postfach etc."/>
+              <answer>
+                <valueString value="Musterweg"/>
+              </answer>
+              <answer>
+                <valueString value="6a"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.postalCode"/>
+              <text value="PLZ"/>
+              <answer>
+                <valueString value="8000"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.city"/>
+              <text value="Ort"/>
+              <answer>
+                <valueString value="Zürich"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="receiverCopy.country"/>
+              <text value="Land"/>
+              <answer>
+                <valueString value="Schweiz"/>
+              </answer>
+            </item>
+          </item>
+        </item>
+      <!--  item[5] specialty, here: microbiology  -->
+        <item>
+          <linkId value="microbiology"/>
+          <text value="Mikrobiologie"/>
+        <!--  item[5.0]  -->
+          <item>
+            <linkId value="per"/>
+            <text value="Pertussis and Parapertussis DNA"/>
+            <answer>
+              <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="90441-7"/>
+                <display value="B pert+parapert DNA Pnl Nph"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      <!--  item[6] specialty, here: hematology -->
+        <item>
+          <linkId value="hematology"/>
+          <text value="Hämatologie"/>
+          <item>
+            <linkId value="blood-diff"/>
+            <text value="Manual Differential panel - Blood"/>
+            <answer>
+              <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="24318-8"/>
+                <display value="Manual diff Bld"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      <!--  item[7] specialty, here: clinical chemistry -->
+        <item>
+          <linkId value="clinical chemistry"/>
+          <text value="Klinische Chemie"/>
+        <!--  CRP C reactive Protein normal method  -->
+          <item>
+            <linkId value="crp"/>
+            <text value="C-reactive Protein"/>
+            <answer>
+              <valueCoding>
+                <system value="http://loinc.org"/>
+                <code value="1988-5"/>
+                <display value="C reactive protein [Mass/volume] in Serum or Plasma"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+<!--  entry[7] serviceRequest  -->
+  <entry>
+    <fullUrl value="http://example.com/fhir/ServiceRequest/2-pertussis"/>
+    <resource>
+      <ServiceRequest>
+        <id value="2-pertussis"/>
+        <meta>
+          <profile value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Placer Identifier: 123, Filler Identifier: 456</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>category</b>: <span title="Codes: {http://snomed.info/sct 108252007}">Laboratory procedure (procedure)</span></p><p><b>priority</b>: urgent</p><p><b>subject</b>: <a href="#Patient_EmilKummer">See above (Patient/EmilKummer)</a></p><p><b>requester</b>: <a href="#PractitionerRole_PeterPrestoGruppenpraxis">See above (PractitionerRole/PeterPrestoGruppenpraxis)</a></p><p><b>reasonCode</b>: <span title="Codes: {http://snomed.info/sct 772146005}">Pertussis suspected (situation)</span></p><p><b>insurance</b>: <a href="Coverage-HealthInsuranceCard.html">A human-readable rendering of the European Health Insurance CardGenerated Summary: id: A123456780; status: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}">extended healthcare</span>; period: ?ngen-2? --&gt; 2012-03-17</a></p><p><b>specimen</b>: </p><ul><li><a href="Specimen-throat-swab.html">Generated Summary: id: 48736-15394-75465; id: 4e88a-bc987-dd888; status: available; <span title="Codes: {http://snomed.info/sct 258529004}">Throat swab (specimen)</span>; receivedTime: Aug 16, 2020, 6:40:17 PM; Some notes to Sample</a></li><li><a href="Specimen-blood.html">Generated Summary: status: available; <span title="Codes: {http://snomed.info/sct 119297000}">Blood sample</span></a></li><li><a href="Specimen-serum.html">Generated Summary: id: 48736-12345-75465; id: 4e88a-12345-dd888; status: available; <span title="Codes: {http://snomed.info/sct 119364003}">Serum specimen (specimen)</span></a></li></ul></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PLAC"/>
+              <display value="Placer Identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.3.4.5.6.7"/>
+          <value value="123"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="FILL"/>
+              <display value="Filler Identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:7.8.9.10.11"/>
+          <value value="456"/>
+        </identifier>
+        <status value="active"/>
+        <intent value="original-order"/>
+        <category>
+        <!--  0..* Classification of service, Service Request Category Codes (Example)  -->
+        <!--  Value Set http://hl7.org/fhir/ValueSet/servicerequest-category  -->
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+          </coding>
+          <text value="Laboratory procedure (procedure)"/>
+        </category>
+        <priority value="urgent"/>
+      <!--  0..1 routine | urgent | asap | stat  -->
+        <subject>
+          <reference value="Patient/EmilKummer"/>
+        </subject>
+        <requester>
+        <!--  0..1 Reference(Practitioner|PractitionerRole|Organization|
+          Patient|RelatedPerson|Device) Who/what is requesting service  -->
+          <reference value="PractitionerRole/PeterPrestoGruppenpraxis"/>
+        </requester>
+        <reasonCode>
+        <!--  0..* CodeableConcept Explanation/Justification for procedure or service  -->
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="772146005"/>
+          </coding>
+          <text value="Pertussis suspected (situation)"/>
+        </reasonCode>
+        <insurance>
+        <!--  0..* Bsp. Covid19 Kostenträger; Reference(Coverage|ClaimResponse) Associated insurance coverage  -->
+          <reference value="Coverage/HealthInsuranceCard"/>
+        </insurance>
+      <!--  3 Specimens, belong to this laborder-servicerequest  -->
+        <specimen>
+        <!--  0..* Reference(Specimen) Procedure Samples  -->
+          <reference value="Specimen/throat-swab"/>
+        </specimen>
+        <specimen>
+        <!--  0..* Reference(Specimen) Procedure Samples  -->
+          <reference value="Specimen/blood"/>
+        </specimen>
+        <specimen>
+        <!--  0..* Reference(Specimen) Procedure Samples  -->
+          <reference value="Specimen/serum"/>
+        </specimen>
+      </ServiceRequest>
+    </resource>
+  </entry>
+</Bundle>

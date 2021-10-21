@@ -1,0 +1,627 @@
+{
+  "resourceType": "Bundle",
+  "id": "5-biol-monit",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-04-01T20:18:41.341+00:00",
+    "profile": [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3359505"
+  },
+  "type": "document",
+  "timestamp": "2019-04-01T20:18:41.341+00:00",
+  "entry": [
+    {
+      "fullUrl": "http://example.com/fhir/Composition/5-biol-monit",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "5-biol-monit",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2021-02-18T17:04:38.520+00:00",
+          "profile": [
+            "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"
+          ]
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Laboratory Order</div></div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "enterer",
+                "valueReference": {
+                  "reference": "PractitionerRole/PauloPorcelliniSuva"
+                }
+              }
+            ],
+            "url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver",
+            "valueReference": {
+              "reference": "PractitionerRole/EvaErlenmeyerLaborPipette"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+            "valueReference": {
+              "reference": "Organization/Gruppenpraxis"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+            "valueReference": {
+              "reference": "Organization/SpeiserRails"
+            }
+          }
+        ],
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721965002",
+              "display": "Laboratory order (record artifact)"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "721963009",
+                "display": "Order (record artifact)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/BeatBorer"
+        },
+        "date": "2019-03-31T11:46:09+02:00",
+        "author": [
+          {
+            "reference": "PractitionerRole/PauloPorcelliniSuva"
+          }
+        ],
+        "title": "Referral 5-biol-monit",
+        "section": [
+          {
+            "title": "Order-Referral-Form 5-biol-monit",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "93037-0",
+                  "display": "Portable medical order form"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order-Referral-Form 5-biol-monit</div>"
+            },
+            "entry": [
+              {
+                "reference": "Questionnaire/5-biol-monit"
+              },
+              {
+                "reference": "QuestionnaireResponse/5-biol-monit"
+              },
+              {
+                "reference": "ServiceRequest/5-biol-monit"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/Patient/BeatBorer",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "BeatBorer",
+        "meta": {
+          "profile": [
+            "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>Birth Place</b>: Paris Frankreich </p><p><b>Place of origin according to eCH-0011</b>: Köniz BE </p><p><b>religion</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1077}\">Protestant</span></p><p><b>identifier</b>: Medical record number: 012/08.111101</p><p><b>name</b>: Beat Borer </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1986-06-06</p><p><b>maritalStatus</b>: <span title=\"Codes: {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus 2}\">verheiratet</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td><span title=\"Codes: {urn:ietf:bcp:47 de-CH}\">Deutsch (Schweiz)</span></td><td>true</td></tr></table></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Paris",
+              "country": "Frankreich"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin",
+            "valueAddress": {
+              "city": "Köniz",
+              "state": "BE"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
+                  "code": "1077",
+                  "display": "Protestant"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:2.16.756.5.30.999999.1",
+            "value": "012/08.111101"
+          }
+        ],
+        "name": [
+          {
+            "family": "Borer",
+            "given": [
+              "Beat"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1986-06-06",
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus",
+              "code": "2",
+              "display": "verheiratet"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "de-CH"
+                }
+              ],
+              "text": "Deutsch (Schweiz)"
+            },
+            "preferred": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/Practitioner/PauloPorcellini",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "PauloPorcellini",
+        "meta": {
+          "profile": [
+            "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 7601000050705</p><p><b>name</b>: Paulo Porcellini </p></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.51.1.3",
+            "value": "7601000050705"
+          }
+        ],
+        "name": [
+          {
+            "family": "Porcellini",
+            "given": [
+              "Paulo"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/Organization/Suva",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Suva",
+        "meta": {
+          "profile": [
+            "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: CHE-108.955.179</p><p><b>name</b>: Suva</p><p><b>telecom</b>: <a href=\"tel:+41322345566\">+41322345566</a>, <a href=\"mailto:info@suva.ch\">info@suva.ch</a>, <a href=\"http://www.suva.ch\">http://www.suva.ch</a></p><p><b>address</b>: Löwenplatz 1 Luzern 6004 CH </p></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.756.5.45",
+            "value": "CHE-108.955.179"
+          }
+        ],
+        "name": "Suva",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41322345566",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "info@suva.ch",
+            "use": "work"
+          },
+          {
+            "system": "url",
+            "value": "http://www.suva.ch",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Löwenplatz 1"
+            ],
+            "city": "Luzern",
+            "postalCode": "6004",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/PractitionerRole/PauloPorcelliniSuva",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "PauloPorcelliniSuva",
+        "meta": {
+          "profile": [
+            "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>practitioner</b>: <a href=\"#Practitioner_PauloPorcellini\">See above (Practitioner/PauloPorcellini)</a></p><p><b>organization</b>: <a href=\"#Organization_Suva\">See above (Organization/Suva)</a></p></div>"
+        },
+        "practitioner": {
+          "reference": "Practitioner/PauloPorcellini"
+        },
+        "organization": {
+          "reference": "Organization/Suva"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/Questionnaire/5-biol-monit",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "5-biol-monit",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2021-02-18T17:04:38.520+00:00",
+          "profile": [
+            "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"
+          ]
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Laboratory Order</div></div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "enterer",
+                "valueReference": {
+                  "reference": "PractitionerRole/PauloPorcelliniSuva"
+                }
+              }
+            ],
+            "url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver",
+            "valueReference": {
+              "reference": "PractitionerRole/EvaErlenmeyerLaborPipette"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+            "valueReference": {
+              "reference": "Organization/Gruppenpraxis"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+            "valueReference": {
+              "reference": "Organization/SpeiserRails"
+            }
+          }
+        ],
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721965002",
+              "display": "Laboratory order (record artifact)"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "721963009",
+                "display": "Order (record artifact)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/BeatBorer"
+        },
+        "date": "2019-03-31T11:46:09+02:00",
+        "author": [
+          {
+            "reference": "PractitionerRole/PauloPorcelliniSuva"
+          }
+        ],
+        "title": "Referral 5-biol-monit",
+        "section": [
+          {
+            "title": "Order-Referral-Form 5-biol-monit",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "93037-0",
+                  "display": "Portable medical order form"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order-Referral-Form 5-biol-monit</div>"
+            },
+            "entry": [
+              {
+                "reference": "Questionnaire/5-biol-monit"
+              },
+              {
+                "reference": "QuestionnaireResponse/5-biol-monit"
+              },
+              {
+                "reference": "ServiceRequest/5-biol-monit"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/QuestionnaireResponse/5-biol-monit",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "5-biol-monit",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2021-02-18T17:04:38.520+00:00",
+          "profile": [
+            "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"
+          ]
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Laboratory Order</div></div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "enterer",
+                "valueReference": {
+                  "reference": "PractitionerRole/PauloPorcelliniSuva"
+                }
+              }
+            ],
+            "url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver",
+            "valueReference": {
+              "reference": "PractitionerRole/EvaErlenmeyerLaborPipette"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+            "valueReference": {
+              "reference": "Organization/Gruppenpraxis"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver",
+            "valueReference": {
+              "reference": "Organization/SpeiserRails"
+            }
+          }
+        ],
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721965002",
+              "display": "Laboratory order (record artifact)"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "721963009",
+                "display": "Order (record artifact)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/BeatBorer"
+        },
+        "date": "2019-03-31T11:46:09+02:00",
+        "author": [
+          {
+            "reference": "PractitionerRole/PauloPorcelliniSuva"
+          }
+        ],
+        "title": "Referral 5-biol-monit",
+        "section": [
+          {
+            "title": "Order-Referral-Form 5-biol-monit",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "93037-0",
+                  "display": "Portable medical order form"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order-Referral-Form 5-biol-monit</div>"
+            },
+            "entry": [
+              {
+                "reference": "Questionnaire/5-biol-monit"
+              },
+              {
+                "reference": "QuestionnaireResponse/5-biol-monit"
+              },
+              {
+                "reference": "ServiceRequest/5-biol-monit"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/ServiceRequest/5-biol-monit",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "5-biol-monit",
+        "meta": {
+          "profile": [
+            "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Placer Identifier: 123, Filler Identifier: 456</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>category</b>: <span title=\"Codes: {http://snomed.info/sct 108252007}\">Laboratory procedure (procedure)</span></p><p><b>priority</b>: urgent</p><p><b>subject</b>: <a href=\"#Patient_BeatBorer\">See above (Patient/BeatBorer)</a></p><p><b>requester</b>: <a href=\"#PractitionerRole_PauloPorcelliniSuva\">See above (PractitionerRole/PauloPorcelliniSuva)</a></p><p><b>reasonCode</b>: <span title=\"Codes: {http://snomed.info/sct 409967009}\">Toxicology (qualifier value)</span></p><p><b>insurance</b>: <a href=\"Coverage-HealthInsuranceCard.html\">Generated Summary: id: A123456780; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span>; period: ?ngen-2? --&gt; 2012-03-17</a></p><p><b>specimen</b>: </p><ul><li><a href=\"Specimen-blood.html\">Generated Summary: status: available; <span title=\"Codes: {http://snomed.info/sct 119297000}\">Blood sample</span></a></li><li><a href=\"Specimen-urin.html\">Generated Summary: id: 11111-15394-75465; id: 22222-bc987-dd888; status: available; <span title=\"Codes: {http://snomed.info/sct 122575003}\">Urine sample</span>; receivedTime: Aug 16, 2020, 6:40:17 PM; Specimen is grossly lipemic</a></li></ul></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PLAC",
+                  "display": "Placer Identifier"
+                }
+              ]
+            },
+            "system": "urn:oid:1.3.4.5.6.7",
+            "value": "123"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "FILL",
+                  "display": "Filler Identifier"
+                }
+              ]
+            },
+            "system": "urn:oid:7.8.9.10.11",
+            "value": "456"
+          }
+        ],
+        "status": "active",
+        "intent": "original-order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "108252007"
+              }
+            ],
+            "text": "Laboratory procedure (procedure)"
+          }
+        ],
+        "priority": "urgent",
+        "subject": {
+          "reference": "Patient/BeatBorer"
+        },
+        "requester": {
+          "reference": "PractitionerRole/PauloPorcelliniSuva"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "409967009"
+              }
+            ],
+            "text": "Toxicology (qualifier value)"
+          }
+        ],
+        "insurance": [
+          {
+            "reference": "Coverage/HealthInsuranceCard"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "Specimen/blood"
+          },
+          {
+            "reference": "Specimen/urin"
+          }
+        ]
+      }
+    }
+  ]
+}

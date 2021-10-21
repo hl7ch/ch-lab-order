@@ -1,14 +1,15 @@
+# temporary folders
 input-cache/**
 output/**
 temp/**
 template/**
+fsh-generated/**
+
+# jar files
+*.jar
+
+# editing files and folders
 .vscode/**
-resources/implementationguide/ig-*.*
-org.hl7.*.jar
-publisher.jar
-publisher.jar.bak
-ch.fhir.ig.ch-orf.xml
-archiv/**
 
 www/*   
 !www/package-list.json   

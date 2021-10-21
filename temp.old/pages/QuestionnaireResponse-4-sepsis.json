@@ -1,0 +1,858 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "4-sepsis",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-04-01T20:17:53.340+00:00",
+    "profile": [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>questionnaire</b>: <a href=\"http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis\">http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis</a></p><p><b>status</b>: completed</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order</p><p><b>text</b>: Auftrag</p><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifier</p><p><b>text</b>: Auftragsnummer des Auftraggebers</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.placerOrderIdentifierDomain</p><p><b>text</b>: Identifier Domain der Auftragsnummer des Auftraggebers</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.precedentDocumentIdentifier</p><p><b>text</b>: Identifier des Vorgängerdokuments</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocument</p><p><b>text</b>: Dringender Benachrichtigungskontakt für dieses Dokument</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.notificationContactDocumentResponse</p><p><b>text</b>: Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: order.priority</p><p><b>text</b>: Auftragspriorität</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver</p><p><b>text</b>: Empfänger</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.practitioner</p><p><b>text</b>: Empfangende Person</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiver.organization</p><p><b>text</b>: Empfangende Organisation</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient</p><p><b>text</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.familyName</p><p><b>text</b>: Name</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.maidenName</p><p><b>text</b>: Ledigname</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.givenName</p><p><b>text</b>: Vorname</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.localPid</p><p><b>text</b>: Lokale Patienten-ID</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.birthDate</p><p><b>text</b>: Geburtsdatum</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.gender</p><p><b>text</b>: Geschlecht</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.phone</p><p><b>text</b>: Telefon</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.email</p><p><b>text</b>: E-Mail</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.streetAddressLine</p><p><b>text</b>: Strasse, Hausnummer, Postfach etc.</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.postalCode</p><p><b>text</b>: PLZ</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.city</p><p><b>text</b>: Ort</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: patient.country</p><p><b>text</b>: Land</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender</p><p><b>text</b>: Absender</p><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.author</p><p><b>text</b>: Verantwortlicher</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: sender.dataenterer</p><p><b>text</b>: Erfasser</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopies</p><p><b>text</b>: Kopieempfänger</p><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: receiverCopy</p><p><b>text</b>: Kopieempfangende Organisation oder Person</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: hematology</p><p><b>text</b>: Hematology</p><blockquote><p><b>item</b></p><p><b>linkId</b>: lab</p><p><b>text</b>: Laborwerte</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: microbiology</p><p><b>text</b>: Mikrobiologie</p><blockquote><p><b>item</b></p><p><b>linkId</b>: culture</p><p><b>text</b>: Blood by Culture</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: id-susc</p><p><b>text</b>: Bacterial Identification and Susceptibility</p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: cc</p><p><b>text</b>: clinical chemistry</p><blockquote><p><b>item</b></p><p><b>linkId</b>: crp</p><p><b>text</b>: CRP</p></blockquote></blockquote></div>"
+  },
+  "questionnaire": "http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis",
+  "status": "completed",
+  "item": [
+    {
+      "linkId": "order",
+      "text": "Auftrag",
+      "item": [
+        {
+          "linkId": "order.placerOrderIdentifier",
+          "text": "Auftragsnummer des Auftraggebers",
+          "answer": [
+            {
+              "valueString": "123"
+            }
+          ]
+        },
+        {
+          "linkId": "order.placerOrderIdentifierDomain",
+          "text": "Identifier Domain der Auftragsnummer des Auftraggebers",
+          "answer": [
+            {
+              "valueString": "urn:oid:1.3.4.5.6.7"
+            }
+          ]
+        },
+        {
+          "linkId": "order.precedentDocumentIdentifier",
+          "text": "Identifier des Vorgängerdokuments",
+          "answer": [
+            {
+              "valueString": "1622f2fb-6ba3-4532-9aed-35b158def187"
+            }
+          ]
+        },
+        {
+          "linkId": "order.notificationContactDocument",
+          "text": "Dringender Benachrichtigungskontakt für dieses Dokument",
+          "item": [
+            {
+              "linkId": "order.notificationContactDocument.practitioner",
+              "text": "Zu benachrichtigende Person",
+              "item": [
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.title",
+                  "text": "Titel",
+                  "answer": [
+                    {
+                      "valueString": "Dr. med."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Erlenmeyer"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Eva"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "033 444 55 66"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "eva.erlenmeyer@labor-pipette.ch"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "order.notificationContactDocumentResponse",
+          "text": "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument",
+          "item": [
+            {
+              "linkId": "order.notificationContactDocumentResponse.practitioner",
+              "text": "Zu benachrichtigende Person",
+              "item": [
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.title",
+                  "text": "Titel",
+                  "answer": [
+                    {
+                      "valueString": "Dr. med."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Hauser"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Hans"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "038 888 22 11"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "hans.hauser@kantonsspital.zug.ch"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "order.priority",
+          "text": "Auftragspriorität",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/request-priority",
+                "code": "routine"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "receiver",
+      "text": "Empfänger",
+      "item": [
+        {
+          "linkId": "receiver.practitioner",
+          "text": "Empfangende Person",
+          "item": [
+            {
+              "linkId": "receiver.practitioner.title",
+              "text": "Titel",
+              "answer": [
+                {
+                  "valueString": "Dr. med."
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.familyName",
+              "text": "Name",
+              "answer": [
+                {
+                  "valueString": "Erlenmeyer"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.givenName",
+              "text": "Vorname",
+              "answer": [
+                {
+                  "valueString": "Eva"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.gln",
+              "text": "GLN",
+              "answer": [
+                {
+                  "valueString": "7601000050703"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.phone",
+              "text": "Telefon",
+              "answer": [
+                {
+                  "valueString": "033 444 55 66"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.email",
+              "text": "E-Mail",
+              "answer": [
+                {
+                  "valueString": "eva.erlenmeyer@labor-pipette.ch"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "receiver.organization",
+          "text": "Empfangende Organisation",
+          "item": [
+            {
+              "linkId": "receiver.organization.name",
+              "text": "Name der Organisation",
+              "answer": [
+                {
+                  "valueString": "Labor Pipette"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.streetAddressLine",
+              "text": "Strasse, Hausnummer, Postfach etc.",
+              "answer": [
+                {
+                  "valueString": "Laborstrasse 23"
+                },
+                {
+                  "valueString": "Postfach 44"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.postalCode",
+              "text": "PLZ",
+              "answer": [
+                {
+                  "valueString": "4600"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.city",
+              "text": "Ort",
+              "answer": [
+                {
+                  "valueString": "Olten"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.country",
+              "text": "Land",
+              "answer": [
+                {
+                  "valueString": "Schweiz"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "patient",
+      "text": "Patient",
+      "item": [
+        {
+          "linkId": "patient.familyName",
+          "text": "Name",
+          "answer": [
+            {
+              "valueString": "Keller"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.maidenName",
+          "text": "Ledigname",
+          "answer": [
+            {
+              "valueString": "Pusterla"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.givenName",
+          "text": "Vorname",
+          "answer": [
+            {
+              "valueString": "Klebsiella"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.localPid",
+          "text": "Lokale Patienten-ID",
+          "answer": [
+            {
+              "valueString": "11.22.33.5444"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.birthDate",
+          "text": "Geburtsdatum",
+          "answer": [
+            {
+              "valueDate": "1975-12-12"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.gender",
+          "text": "Geschlecht",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/administrative-gender",
+                "code": "female"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "patient.phone",
+          "text": "Telefon",
+          "answer": [
+            {
+              "valueString": "+41 64 123 45 67"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.email",
+          "text": "E-Mail",
+          "answer": [
+            {
+              "valueString": "klebsiella.keller@example.ch"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.streetAddressLine",
+          "text": "Strasse, Hausnummer, Postfach etc.",
+          "answer": [
+            {
+              "valueString": "Musterweg"
+            },
+            {
+              "valueString": "6a"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.postalCode",
+          "text": "PLZ",
+          "answer": [
+            {
+              "valueString": "6565"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.city",
+          "text": "Ort",
+          "answer": [
+            {
+              "valueString": "Lenzburg"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.country",
+          "text": "Land",
+          "answer": [
+            {
+              "valueString": "Schweiz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "sender",
+      "text": "Absender",
+      "item": [
+        {
+          "linkId": "sender.author",
+          "text": "Verantwortlicher",
+          "item": [
+            {
+              "linkId": "sender.author.practitioner",
+              "text": "Verantwortliche Person",
+              "item": [
+                {
+                  "linkId": "sender.author.practitioner.title",
+                  "text": "Titel",
+                  "answer": [
+                    {
+                      "valueString": "Dr. med."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Hauser"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Hans"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.gln",
+                  "text": "GLN",
+                  "answer": [
+                    {
+                      "valueString": "7601000064321"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "038 888 22 11"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "hans.hauser@kantonsspital.zug.ch"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "sender.author.organization",
+              "text": "Verantwortliche Organisation",
+              "item": [
+                {
+                  "linkId": "sender.author.organization.name",
+                  "text": "Name der Organisation",
+                  "answer": [
+                    {
+                      "valueString": "Kantonsspital Zug"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.streetAddressLine",
+                  "text": "Strasse, Hausnummer, Postfach etc.",
+                  "answer": [
+                    {
+                      "valueString": "Seestrasse 14"
+                    },
+                    {
+                      "valueString": "Haus C"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.postalCode",
+                  "text": "PLZ",
+                  "answer": [
+                    {
+                      "valueString": "8000"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.city",
+                  "text": "Ort",
+                  "answer": [
+                    {
+                      "valueString": "Zug"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.country",
+                  "text": "Land",
+                  "answer": [
+                    {
+                      "valueString": "Schweiz"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "sender.dataenterer",
+          "text": "Erfasser",
+          "item": [
+            {
+              "linkId": "sender.dataenterer.practitioner",
+              "text": "Erfassende Person",
+              "item": [
+                {
+                  "linkId": "sender.dataenterer.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Egger"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Daniela"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "044 333 55 12"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "daniela.egger@kantonsspital.zug.ch"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "receiverCopies",
+      "text": "Kopieempfänger",
+      "item": [
+        {
+          "linkId": "receiverCopy",
+          "text": "Kopieempfangende Organisation oder Person",
+          "item": [
+            {
+              "linkId": "receiverCopy.organization.name",
+              "text": "Name der Organisation",
+              "answer": [
+                {
+                  "valueString": "Praxis Seeblick"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.title",
+              "text": "Titel",
+              "answer": [
+                {
+                  "valueString": "Dr. med."
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.familyName",
+              "text": "Name",
+              "answer": [
+                {
+                  "valueString": "Meier"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.givenName",
+              "text": "Vorname",
+              "answer": [
+                {
+                  "valueString": "Sabine"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.phone",
+              "text": "Telefon",
+              "answer": [
+                {
+                  "valueString": "044 333 22 11"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.email",
+              "text": "E-Mail",
+              "answer": [
+                {
+                  "valueString": "sabine.meier@praxisseeblick.ch"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "receiverCopy",
+          "text": "Kopieempfangende Organisation oder Person",
+          "item": [
+            {
+              "linkId": "receiverCopy.familyName",
+              "text": "Name",
+              "answer": [
+                {
+                  "valueString": "Costalla"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.givenName",
+              "text": "Vorname",
+              "answer": [
+                {
+                  "valueString": "Maria"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.phone",
+              "text": "Telefon",
+              "answer": [
+                {
+                  "valueString": "079 979 80 80"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.email",
+              "text": "E-Mail",
+              "answer": [
+                {
+                  "valueString": "maria.costella@redwin.ch"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.streetAddressLine",
+              "text": "Strasse, Hausnummer, Postfach etc.",
+              "answer": [
+                {
+                  "valueString": "Fliederweg"
+                },
+                {
+                  "valueString": "78"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.postalCode",
+              "text": "PLZ",
+              "answer": [
+                {
+                  "valueString": "6415"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.city",
+              "text": "Ort",
+              "answer": [
+                {
+                  "valueString": "Arth"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.country",
+              "text": "Land",
+              "answer": [
+                {
+                  "valueString": "Schweiz"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "hematology",
+      "text": "Hematology",
+      "item": [
+        {
+          "linkId": "lab",
+          "text": "Laborwerte",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "24360-0",
+                "display": "Hemoglobin and Hematocrit panel - Blood"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "43113-0",
+                "display": "Hemoglobin electrophoresis panel in Blood"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "57021-8",
+                "display": "CBC W Auto Differential panel - Blood"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "58410-2",
+                "display": "CBC panel - Blood by Automated count"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "57023-4",
+                "display": "Auto Differential panel - Blood"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "microbiology",
+      "text": "Mikrobiologie",
+      "item": [
+        {
+          "linkId": "culture",
+          "text": "Blood by Culture",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "90423-5",
+                "display": "Microorganism preliminary growth detection panel - Blood by Culture"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "id-susc",
+          "text": "Bacterial Identification and Susceptibility",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "85421-6",
+                "display": "Bacterial identification and susceptibility panel - Isolate"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "cc",
+      "text": "clinical chemistry",
+      "item": [
+        {
+          "linkId": "crp",
+          "text": "CRP",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "1988-5",
+                "display": "C reactive protein [Mass/Volume] in Serum or Plasma"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "76485-2",
+                "display": "C reactive protein [Moles/volume] in Serum or Plasma"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "30522-7",
+                "display": "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "76486-0",
+                "display": "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+   <id value="ch.fhir.ig.ch-lab-order"/>
+   <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+      ImplementationGuide for CH-LAB-ORDER
+    </div>
+   </text>
+   <url value="http://fhir.ch/ig/ch-lab-order/ImplementationGuide/ch.fhir.ig.ch-lab-order"/>
+   <version value="0.1.0"/>
+   <name value="CH_LAB_ORDER"/>
+   <title value="CH LAB-Order (R4)"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2021-06-16"/>
+   <publisher value="HL7 Switzerland"/>
+   <contact>
+      <name value="HL7 Switzerland"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.hl7.ch/"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="Marcel Hanselmann"/>
+      <telecom>
+         <system value="email"/>
+         <value value="marcel.hanselmann@bluewin.ch"/>
+      </telecom>
+   </contact>
+   <description value="ImplementationGuide to generate form templates for Laboratory Order in Schweiz"/>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="CH"/>
+      </coding>
+   </jurisdiction>
+   <copyright value="CC-BY-SA-4.0"/>
+   <packageId value="ch.fhir.ig.ch-lab-order"/>
+   <license value="CC-BY-SA-4.0"/>
+   <fhirVersion value="4.0.1"/>
+   <dependsOn id="chorf">
+      <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
+      <packageId value="ch.fhir.ig.ch-orf"/>
+      <version value="0.10.0"/>
+   </dependsOn>
+   <global>
+      <type value="Practitioner"/>
+      <profile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner-epr"/>
+   </global>
+   <definition>
+
+
+
+
+
+      <grouping id="-str-questionnaire">
+         <name value="Structures: Questionnaires"/>
+         <description value="These define forms used by systems conforming to this implementation guide to capture or expose data to end users"/>
+      </grouping>
+
+      <grouping id="-str-profile">
+         <name value="Structures: Resource Profiles"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide"/>
+      </grouping>
+
+
+      <grouping id="-term-valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide"/>
+      </grouping>
+      <grouping id="-term-codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide"/>
+      </grouping>
+
+
+
+
+
+
+
+
+      <grouping id="-ex-example">
+         <name value="Example: Example Instances"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like"/>
+      </grouping>
+      <grouping id="-other">
+         <name value="Other"/>
+         <description value="These are resources that are used within this implementation guide that do not fit into one of the other categories"/>
+      </grouping>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-1-tvt.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/1-tvt"/>
+         </reference>
+         <name value="Referral 1-tvt"/>
+         <description value="Example Bundle for referral/order due to suspected deep vein thrombosis"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-2-pertussis.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/2-pertussis"/>
+         </reference>
+         <name value="Referral 2-pertussis"/>
+         <description value="Example Bundle for referral/order for Pertussis investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-3-gyn.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/3-gyn"/>
+         </reference>
+         <name value="Referreal 3-gyn"/>
+         <description value="Example Bundle for referral/order for preventive gynaecological check-up"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-4-sepsis.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/4-sepsis"/>
+         </reference>
+         <name value="Referreal 4-sepsis"/>
+         <description value="Example Bundle for referral/order for Sepsis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-5-biol-monit.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/5-biol-monit"/>
+         </reference>
+         <name value="Referreal 5-biol-monit"/>
+         <description value="Example Bundle for referral/order for toxicological Monitoring"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Composition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Composition-1-tvt.html"/>
+         </extension>
+         <reference>
+            <reference value="Composition/1-tvt"/>
+         </reference>
+         <name value="1-tvt"/>
+         <description value="Composition: Storyboard for suspected deep Vein Thrombosis"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Composition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Composition-2-pertussis.html"/>
+         </extension>
+         <reference>
+            <reference value="Composition/2-pertussis"/>
+         </reference>
+         <name value="2-pertussis"/>
+         <description value="Composition: Storyboard for Pertussis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Composition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Composition-3-gyn.html"/>
+         </extension>
+         <reference>
+            <reference value="Composition/3-gyn"/>
+         </reference>
+         <name value="3-gyn"/>
+         <description value="Composition: Storyboard for Preventive Gynaecological Check-up"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Composition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Composition-4-sepsis.html"/>
+         </extension>
+         <reference>
+            <reference value="Composition/4-sepsis"/>
+         </reference>
+         <name value="4-sepsis"/>
+         <description value="Composition: Storyboard for Sepsis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Composition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Composition-5-biol-monit.html"/>
+         </extension>
+         <reference>
+            <reference value="Composition/5-biol-monit"/>
+         </reference>
+         <name value="5-biol-monit"/>
+         <description value="Composition: Storyboard for Toxicological Monitoring"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Coverage"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Coverage-CoverageFranzMuster.html"/>
+         </extension>
+         <reference>
+            <reference value="Coverage/CoverageFranzMuster"/>
+         </reference>
+         <name value="CoverageFranzMuster"/>
+         <description value="Example for Insurance Coverage"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Coverage"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Coverage-HealthInsuranceCard.html"/>
+         </extension>
+         <reference>
+            <reference value="Coverage/HealthInsuranceCard"/>
+         </reference>
+         <name value="HealthInsuranceCard"/>
+         <description value="Example for Insurance"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-Arztpraxis.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/Arztpraxis"/>
+         </reference>
+         <name value="Arztpraxis"/>
+         <description value="Practice, refers to 2-pertussis and 3-gyn"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-Gruppenpraxis.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/Gruppenpraxis"/>
+         </reference>
+         <name value="Praxis Seeblick"/>
+         <description value="Example for group practice"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-Kantonsspital.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/Kantonsspital"/>
+         </reference>
+         <name value="Kantonsspital"/>
+         <description value="Example for Hospital"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-LaborPipette.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/LaborPipette"/>
+         </reference>
+         <name value="Labor Pipette"/>
+         <description value="Laboratory Organization, refers to all Storyboards"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-PraxisSeeblick.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/PraxisSeeblick"/>
+         </reference>
+         <name value="Praxis Seeblick"/>
+         <description value="Example for practice"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-SpeiserRails.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/SpeiserRails"/>
+         </reference>
+         <name value="Speiser Rails"/>
+         <description value="Example for Manufacturer, refers to 5-biol-monit"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-Suva.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/Suva"/>
+         </reference>
+         <name value="SUVA"/>
+         <description value="Insurance for occupational medicine, refers to 5-biol-monit"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-BeatBorer.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/BeatBorer"/>
+         </reference>
+         <name value="Beat Borer"/>
+         <description value="Example for CH-Core-Patient"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-EmilKummer.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/EmilKummer"/>
+         </reference>
+         <name value="Emil Kummer"/>
+         <description value="CH-Core-Patient, refers to 2-pertussis"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-FranzMuster.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/FranzMuster"/>
+         </reference>
+         <name value="FranzMuster"/>
+         <description value="Example for CH-Core-Patient, used in coverage"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-HansGuggindieluft.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/HansGuggindieluft"/>
+         </reference>
+         <name value="Hans Guggindieluft"/>
+         <description value="CH-Core-Patient, refers to 1-tvt"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-KlebsiellaKeller.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/KlebsiellaKeller"/>
+         </reference>
+         <name value="Klebsiella Keller"/>
+         <description value="CH-Core-Patient, refers to 4-sepsis"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-MarinaRubella.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/MarinaRubella"/>
+         </reference>
+         <name value="Marina Rubella"/>
+         <description value="CH-Core-Patient, refers to 3-gyn"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-EvaErlenmeyer.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/EvaErlenmeyer"/>
+         </reference>
+         <name value="Eva Erlenmeyer"/>
+         <description value="Specialist for Laboratory Medicine, works in Labor Pipette"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-HansHauser.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/HansHauser"/>
+         </reference>
+         <name value="Hans Hauser"/>
+         <description value="Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-MarcMustermann.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/MarcMustermann"/>
+         </reference>
+         <name value="Marc Mustermann"/>
+         <description value="Practitioner, works in Arztpraxis, refers to 1-tvt"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-PauloPorcellini.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/PauloPorcellini"/>
+         </reference>
+         <name value="Paulo Porcellini"/>
+         <description value="Specialist for Occupational Medicine, works at SUVA, refers to 5-tvt"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-PeterPap.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/PeterPap"/>
+         </reference>
+         <name value="Peter Pap"/>
+         <description value="Practitioner, works at Gruppenpraxis, refers to 3-gyn"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-PeterPresto.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/PeterPresto"/>
+         </reference>
+         <name value="Peter Presto"/>
+         <description value="Practitioner, works at Gruppenpraxis, refers to 2-pertussis"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-ResponseReceiverSabineMeier.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/ResponseReceiverSabineMeier"/>
+         </reference>
+         <name value="Response Receiver Sabine Meier"/>
+         <description value="Practitioner, works in Kantonsspital"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-SabineMeier.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/SabineMeier"/>
+         </reference>
+         <name value="Sabine Meier"/>
+         <description value="Practitioner, works in Kantonsspital, refers to 4-sepsis"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-EvaErlenmeyerLaborPipette.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/EvaErlenmeyerLaborPipette"/>
+         </reference>
+         <name value="Eva Erlenmeyer Labor Pipette"/>
+         <description value="PractitionerRole, Specialist for Laboratory Medicine, refers to all story boards"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-MarcMustermannArztpraxis.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/MarcMustermannArztpraxis"/>
+         </reference>
+         <name value="Marc Mustermann at Arztpraxis"/>
+         <description value="PractitionerRole, refers to 1-tvt"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-PauloPorcelliniSuva.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/PauloPorcelliniSuva"/>
+         </reference>
+         <name value="Paulo Porcellini Suva"/>
+         <description value="PractitionerRole, refers to 5-biol-monit"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-PeterPapGruppenpraxis.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/PeterPapGruppenpraxis"/>
+         </reference>
+         <name value="Peter Pap Gruppenpraxis"/>
+         <description value="PractitionerRole, refers to 3-gyn"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-PeterPrestoGruppenpraxis.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/PeterPrestoGruppenpraxis"/>
+         </reference>
+         <name value="Peter Presto at Gruppenpraxis"/>
+         <description value="PractitionerRole, refers to 2-pertussis"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-HansHauserKantonsspital.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/HansHauserKantonsspital"/>
+         </reference>
+         <name value="Hans Hauser Kantonsspital"/>
+         <description value="PractitionerRole"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Questionnaire"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Questionnaire-1-tvt.html"/>
+         </extension>
+         <reference>
+            <reference value="Questionnaire/1-tvt"/>
+         </reference>
+         <name value="questionnaire 1-tvt"/>
+         <description value="Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"/>
+         <groupingId value="-str-questionnaire"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Questionnaire"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Questionnaire-2-pertussis.html"/>
+         </extension>
+         <reference>
+            <reference value="Questionnaire/2-pertussis"/>
+         </reference>
+         <name value="questionnaire 2-pertussis"/>
+         <description value="Example for Laboratory Order Questionnaire for Pertussis Investigation"/>
+         <groupingId value="-str-questionnaire"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Questionnaire"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Questionnaire-3-gyn.html"/>
+         </extension>
+         <reference>
+            <reference value="Questionnaire/3-gyn"/>
+         </reference>
+         <name value="questionnaire 3-gyn"/>
+         <description value="Example for Laboratory Order Questionnaire for gynaecological check-up"/>
+         <groupingId value="-str-questionnaire"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Questionnaire"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Questionnaire-4-sepsis.html"/>
+         </extension>
+         <reference>
+            <reference value="Questionnaire/4-sepsis"/>
+         </reference>
+         <name value="questionnaire 4-sepsis"/>
+         <description value="Example for Laboratory Order Questionnaire for Sepsis Investigation"/>
+         <groupingId value="-str-questionnaire"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Questionnaire"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Questionnaire-5-biol-monit.html"/>
+         </extension>
+         <reference>
+            <reference value="Questionnaire/5-biol-monit"/>
+         </reference>
+         <name value="questionnaire 5-biol-monit"/>
+         <description value="Example for Laboratory Order Questionnaire for toxicological Monitoring"/>
+         <groupingId value="-str-questionnaire"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-1-tvt.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/1-tvt"/>
+         </reference>
+         <name value="questionnaire response 1-tvt"/>
+         <description value="Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-2-pertussis.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/2-pertussis"/>
+         </reference>
+         <name value="questionnaire response 2-pertussis"/>
+         <description value="Example Laboratory Order Questionnaire Response for Pertussis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-3-gyn.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/3-gyn"/>
+         </reference>
+         <name value="questionnaire response 3-gyn"/>
+         <description value="Example for Laboratory Order Questionnaire response for preventive gynecological check-up"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-4-sepsis.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/4-sepsis"/>
+         </reference>
+         <name value="questionnaire response 4-sepsis"/>
+         <description value="Example for Laboratory Order Questionnaire response for Sepsis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="QuestionnaireResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="QuestionnaireResponse-5-biol-monit.html"/>
+         </extension>
+         <reference>
+            <reference value="QuestionnaireResponse/5-biol-monit"/>
+         </reference>
+         <name value="questionnaire response 5-biol-monit"/>
+         <description value="Example for Laboratory Order Questionnaire response for toxicological Monitoring"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-1-tvt.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/1-tvt"/>
+         </reference>
+         <name value="laborder 1-tvt"/>
+         <description value="Example for Service Request due to suspected deep vein thrombosis"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-2-pertussis.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/2-pertussis"/>
+         </reference>
+         <name value="laborder 2-pertussis"/>
+         <description value="Example for Service Request for Pertussis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-3-gyn.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/3-gyn"/>
+         </reference>
+         <name value="laborder 3-gyn"/>
+         <description value="Example for Service Request for preventive gynaecological check-up"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-4-sepsis.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/4-sepsis"/>
+         </reference>
+         <name value="laborder 4-sepsis"/>
+         <description value="Example for Service Request for Sepsis Investigation"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-5-biol-monit.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/5-biol-monit"/>
+         </reference>
+         <name value="laborder 5-biol-monit"/>
+         <description value="Example for Service Request for toxicological Monitoring"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-lab.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/lab"/>
+         </reference>
+         <name value="laborder lab"/>
+         <description value="Example for generic Service Request"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-blood-bactec-plus.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/blood-bactec-plus"/>
+         </reference>
+         <name value="Blood Sample Bacteriology"/>
+         <description value="Example for Specimen for bacteriological Examination"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-blood-coag.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/blood-coag"/>
+         </reference>
+         <name value="Blood Sample Coagulation"/>
+         <description value="Example for Specimen for haemostatic Examination"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-blood.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/blood"/>
+         </reference>
+         <name value="Blood Sample"/>
+         <description value="Example for Specimen for Haematological Examination"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-cervix-swab.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/cervix-swab"/>
+         </reference>
+         <name value="Cervix-swab Sample"/>
+         <description value="Example for Specimen of Cervix Swab"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-lsac.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/lsac"/>
+         </reference>
+         <name value="Cerebrospinal Fluid Sample"/>
+         <description value="Example for Specimen of Cerebrospinal Fluid"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-serum.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/serum"/>
+         </reference>
+         <name value="Serum Sample"/>
+         <description value="Example for Specimen of Serum"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-throat-swab.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/throat-swab"/>
+         </reference>
+         <name value="Throat Swab"/>
+         <description value="Example for Specimen of Throat Swab"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-urin.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/urin"/>
+         </reference>
+         <name value="Urin Sample"/>
+         <description value="Example for Specimen of Urin"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ch-lab-order-composition.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ch-lab-order-composition"/>
+         </reference>
+         <name value="CH LAB-Order Composition"/>
+         <description value="Definition for Composition in the context of CH LAB-Order"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ch-lab-order-document.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ch-lab-order-document"/>
+         </reference>
+         <name value="CH LAB-ORDER Document Profile"/>
+         <description value="Definition of the bundle for the lab order document"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ch-lab-order-servicerequest.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ch-lab-order-servicerequest"/>
+         </reference>
+         <name value="CH LAB-Order ServiceRequest"/>
+         <description value="Definition for ServiceRequest in the context of CH LAB-Order"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-ServiceRequest.categories.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/ServiceRequest.categories"/>
+         </reference>
+         <name value="Service Request Categories for Questionnaires"/>
+         <description value="ch-lab-order Service Request Categories"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-DocumentEntry.typeCode.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/DocumentEntry.typeCode"/>
+         </reference>
+         <name value="DocumentEntry.typeCode"/>
+         <description value="Type of document as per Annex 3 EPRO-FDHA.&#xA;      &#x9;&#x9;The code defines a document’s type (e.g. discharge report, laboratory report). Each document type should be assigned to precisely one document class."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-DocumentEntry.classCode.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/DocumentEntry.classCode"/>
+         </reference>
+         <name value="DocumentEntry.classCode"/>
+         <description value="Document class as per EPRO-FDHA Annex 3"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-ServiceRequest.categories.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/ServiceRequest.categories"/>
+         </reference>
+         <name value="Service Request Categories for Questionnaires"/>
+         <description value="ch-lab-order defines 10 different Kinds of Service Request"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <page>
+         <nameUrl value="toc.html"/>
+         <title value="Table of Contents"/>
+         <generation value="html"/>
+         <page>
+            <nameUrl value="index.html"/>
+            <title value="Home"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="casestudies-english.html"/>
+            <title value="Case Studies in English"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="casestudies-german.html"/>
+            <title value="Case Studies in German"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="casestudies-french.html"/>
+            <title value="Case Studies in French"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="usecases-english.html"/>
+            <title value="Use Cases in English"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="usecases-german.html"/>
+            <title value="Use Cases in German"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="usecases-french.html"/>
+            <title value="Use Cases in French"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="profiles.html"/>
+            <title value="Profiles"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="terminology.html"/>
+            <title value="Terminology"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="artifacts.html"/>
+            <title value="Artifacts Summary"/>
+            <generation value="html"/>
+            <page>
+               <nameUrl value="Questionnaire-1-tvt.html"/>
+               <title value="questionnaire 1-tvt"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Questionnaire-2-pertussis.html"/>
+               <title value="questionnaire 2-pertussis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Questionnaire-3-gyn.html"/>
+               <title value="questionnaire 3-gyn"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Questionnaire-4-sepsis.html"/>
+               <title value="questionnaire 4-sepsis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Questionnaire-5-biol-monit.html"/>
+               <title value="questionnaire 5-biol-monit"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ch-lab-order-composition.html"/>
+               <title value="CH LAB-Order Composition"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ch-lab-order-document.html"/>
+               <title value="CH LAB-ORDER Document Profile"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ch-lab-order-servicerequest.html"/>
+               <title value="CH LAB-Order ServiceRequest"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-ServiceRequest.categories.html"/>
+               <title value="Service Request Categories for Questionnaires"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-DocumentEntry.typeCode.html"/>
+               <title value="DocumentEntry.typeCode"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-DocumentEntry.classCode.html"/>
+               <title value="DocumentEntry.classCode"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-ServiceRequest.categories.html"/>
+               <title value="Service Request Categories for Questionnaires"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-EvaErlenmeyer.html"/>
+               <title value="Eva Erlenmeyer"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-HansHauser.html"/>
+               <title value="Hans Hauser"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-MarcMustermann.html"/>
+               <title value="Marc Mustermann"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-PauloPorcellini.html"/>
+               <title value="Paulo Porcellini"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-PeterPap.html"/>
+               <title value="Peter Pap"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-PeterPresto.html"/>
+               <title value="Peter Presto"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-ResponseReceiverSabineMeier.html"/>
+               <title value="Response Receiver Sabine Meier"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-SabineMeier.html"/>
+               <title value="Sabine Meier"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="PractitionerRole-EvaErlenmeyerLaborPipette.html"/>
+               <title value="Eva Erlenmeyer Labor Pipette"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="PractitionerRole-MarcMustermannArztpraxis.html"/>
+               <title value="Marc Mustermann at Arztpraxis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="PractitionerRole-PauloPorcelliniSuva.html"/>
+               <title value="Paulo Porcellini Suva"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="PractitionerRole-PeterPapGruppenpraxis.html"/>
+               <title value="Peter Pap Gruppenpraxis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="PractitionerRole-PeterPrestoGruppenpraxis.html"/>
+               <title value="Peter Presto at Gruppenpraxis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="PractitionerRole-HansHauserKantonsspital.html"/>
+               <title value="Hans Hauser Kantonsspital"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-1-tvt.html"/>
+               <title value="Referral 1-tvt"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-2-pertussis.html"/>
+               <title value="Referral 2-pertussis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-3-gyn.html"/>
+               <title value="Referreal 3-gyn"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-4-sepsis.html"/>
+               <title value="Referreal 4-sepsis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-5-biol-monit.html"/>
+               <title value="Referreal 5-biol-monit"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Composition-1-tvt.html"/>
+               <title value="1-tvt"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Composition-2-pertussis.html"/>
+               <title value="2-pertussis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Composition-3-gyn.html"/>
+               <title value="3-gyn"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Composition-4-sepsis.html"/>
+               <title value="4-sepsis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Composition-5-biol-monit.html"/>
+               <title value="5-biol-monit"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Coverage-CoverageFranzMuster.html"/>
+               <title value="CoverageFranzMuster"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Coverage-HealthInsuranceCard.html"/>
+               <title value="HealthInsuranceCard"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-Arztpraxis.html"/>
+               <title value="Arztpraxis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-Gruppenpraxis.html"/>
+               <title value="Praxis Seeblick"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-Kantonsspital.html"/>
+               <title value="Kantonsspital"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-LaborPipette.html"/>
+               <title value="Labor Pipette"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-PraxisSeeblick.html"/>
+               <title value="Praxis Seeblick"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-SpeiserRails.html"/>
+               <title value="Speiser Rails"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-Suva.html"/>
+               <title value="SUVA"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-BeatBorer.html"/>
+               <title value="Beat Borer"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-EmilKummer.html"/>
+               <title value="Emil Kummer"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-FranzMuster.html"/>
+               <title value="FranzMuster"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-HansGuggindieluft.html"/>
+               <title value="Hans Guggindieluft"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-KlebsiellaKeller.html"/>
+               <title value="Klebsiella Keller"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-MarinaRubella.html"/>
+               <title value="Marina Rubella"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-1-tvt.html"/>
+               <title value="questionnaire response 1-tvt"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-2-pertussis.html"/>
+               <title value="questionnaire response 2-pertussis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-3-gyn.html"/>
+               <title value="questionnaire response 3-gyn"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-4-sepsis.html"/>
+               <title value="questionnaire response 4-sepsis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="QuestionnaireResponse-5-biol-monit.html"/>
+               <title value="questionnaire response 5-biol-monit"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ServiceRequest-1-tvt.html"/>
+               <title value="laborder 1-tvt"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ServiceRequest-2-pertussis.html"/>
+               <title value="laborder 2-pertussis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ServiceRequest-3-gyn.html"/>
+               <title value="laborder 3-gyn"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ServiceRequest-4-sepsis.html"/>
+               <title value="laborder 4-sepsis"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ServiceRequest-5-biol-monit.html"/>
+               <title value="laborder 5-biol-monit"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ServiceRequest-lab.html"/>
+               <title value="laborder lab"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-blood-bactec-plus.html"/>
+               <title value="Blood Sample Bacteriology"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-blood-coag.html"/>
+               <title value="Blood Sample Coagulation"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-blood.html"/>
+               <title value="Blood Sample"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-cervix-swab.html"/>
+               <title value="Cervix-swab Sample"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-lsac.html"/>
+               <title value="Cerebrospinal Fluid Sample"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-serum.html"/>
+               <title value="Serum Sample"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-throat-swab.html"/>
+               <title value="Throat Swab"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Specimen-urin.html"/>
+               <title value="Urin Sample"/>
+               <generation value="generated"/>
+            </page>
+         </page>
+      </page>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="STU 1 Ballot"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="input/pages"/>
+      </parameter>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2021+"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/capabilities"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/examples"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/extensions"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/models"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/operations"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/profiles"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/vocabulary"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/maps"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/history"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="fsh-generated/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="template/config"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="input/images"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="template/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="input/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-qa"/>
+         <value value="temp/qa"/>
+      </parameter>
+      <parameter>
+         <code value="path-temp"/>
+         <value value="temp/pages"/>
+      </parameter>
+      <parameter>
+         <code value="path-output"/>
+         <value value="output"/>
+      </parameter>
+      <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="path-suppressed-warnings"/>
+         <value value="input/ignoreWarnings.txt"/>
+      </parameter>
+      <parameter>
+         <code value="path-history"/>
+         <value value="http://fhir.ch/ig/ch-lab-order/history.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-html"/>
+         <value value="template-page.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-md"/>
+         <value value="template-page-md.html"/>
+      </parameter>
+      <parameter>
+         <code value="apply-contact"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-context"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-copyright"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-jurisdiction"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-license"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-publisher"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-version"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="active-tables"/>
+         <value value="true"/>
+      </parameter>
+   </definition>
+</ImplementationGuide>
