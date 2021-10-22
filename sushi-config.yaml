@@ -1,14 +1,44 @@
 canonical: http://fhir.ch/ig/ch-lab-order
-fhirVersion: 4.0.1
-FSHOnly: true
-applyExtensionMetadataToRoot: false
 id: ch.fhir.ig.ch-lab-order
 name: CH_LAB_ORDER
+title: "CH LAB-Order (R4)"
+description: Implementation guide CH LAB-Order (R4)
 status: active
+license: CC-BY-SA-4.0
+copyright: CC-BY-SA-4.0
+jurisdiction: urn:iso:std:iso:3166#CH
+date: 2021-10-22
 version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: CI Build
+publisher:
+  name: HL7 Switzerland
+contact:
+  name: Marcel Hanselmann
+  telecom:
+    system: url
+    value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-orf:
-    version: 0.10.0
-    uri: http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf
-    id: chorf
+  ch.fhir.ig.ch-orf: 0.10.0
   ch.fhir.ig.ch-core: 2.0.0
+
+pages:
+  index.md:
+    title: Home
+  casestudies-english.md:
+    title: Case Studies in English
+  casestudies-german.md:
+    title: Case Studies in German
+  casestudies-french.md:
+    title: Case Studies in French
+  usecases-english.md:
+    title: Use Cases in English
+  usecases-german.md:
+    title: Use Cases in German
+  usecases-french.md:
+    title: Use Cases in French
+  profiles.md:
+    title: Profiles
+  terminology.md:
+    title: Terminology
