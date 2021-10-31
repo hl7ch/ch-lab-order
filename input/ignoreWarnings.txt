@@ -3,28 +3,7 @@
 # Build Errors: icon-q-coding.png, see https://github.com/hl7ch/ch-orf/issues/26
 The image source 'icon-q-coding.png' cannot be resolved
 
-# Build Errors: Options, see https://github.com/hl7ch/ch-orf/issues/8
-The link 'null#item.order.priority' for "4 options" cannot be resolved
-The link 'null#item.patient.gender' for "3 options" cannot be resolved
-The link 'null#item.requestedEncounter.class' for "3 options" cannot be resolved
-The link 'null#item.requestedEncounter.desiredAccommodation' for "3 options" cannot be resolved
-The link 'null#item.appointment.status' for "3 options" cannot be resolved
 
-The link 'null#item.hemato-subset' for "5 options" cannot be resolved
-The link 'null#item.d-dimer' for "1 option" cannot be resolved
-The link 'null#item.crp' for "4 options" cannot be resolved
-The link 'null#item.per' for "1 option" cannot be resolved
-The link 'null#item.blood-diff' for "1 option" cannot be resolved
-The link 'null#item.crp' for "1 option" cannot be resolved
-The link 'null#item.cervicalSmear' for "2 options" cannot be resolved
-The link 'null#item.combur9' for "1 option" cannot be resolved
-The link 'null#item.obstetric' for "1 option" cannot be resolved
-The link 'null#item.lab' for "5 options" cannot be resolved
-The link 'null#item.culture' for "1 option" cannot be resolved
-The link 'null#item.id-susc' for "1 option" cannot be resolved
-The link 'null#item.crp' for "4 options" cannot be resolved
-The link 'null#item.lab' for "5 options" cannot be resolved
-The link 'null#item.tox' for "3 options" cannot be resolved
 
 # Build Errors: valueset-diagnostic-requests.html, see https://github.com/hl7ch/ch-orf/issues/7
 The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
