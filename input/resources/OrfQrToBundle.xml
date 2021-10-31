@@ -42,8 +42,10 @@ group OrderItems(source src : BackboneElement, target bundle : Bundle, target co
   src.item as item where ((linkId.value = 'order.precedentDocumentIdentifier') and answer.exists()) -&gt;  composition.extension as ext,  ext.url = 'http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-precedentdocument',  ext.value = create('Identifier') as value,  value.value = (item.answer.valueString) "precedentDocumentIdentifier";
   src.item as item where ((linkId.value = 'order.placerOrderIdentifier') and answer.exists()) -&gt;  serviceRequest.identifier as value share placer,  value.type as type,  type.coding as coding,  coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203',  coding.code = 'PLAC',  value.value = (item.answer.valueString) "placerOrderIdentifier";
   src.item as item where ((linkId.value = 'order.placerOrderIdentifierDomain') and answer.exists()) -&gt;  serviceRequest.identifier as value share placer,  value.system = (item.answer.valueString) "placerOrderIdentifierDomain";
+
   src.item as item where ((linkId.value = 'order.IdentifiefillerOrderIdentifier') and answer.exists()) -&gt;  serviceRequest.identifier as value share filler,  value.type as type,  type.coding as coding,  coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203',  coding.code = 'FILL',  value.value = (item.answer.valueString) "IdentifiefillerOrderIdentifier";
   src.item as item where ((linkId.value = 'order.IdentifiefillerOrderIdentifierDomain') and answer.exists()) -&gt;  serviceRequest.identifier as value share filler,  value.system = (item.answer.valueString) "IdentifiefillerOrderIdentifierDomain";
+  
   src.item as item where ((linkId.value = 'order.dateTime') and answer.exists()) -&gt; serviceRequest.authoredOn = (item.answer.value);
   src.item as item where ((linkId.value = 'order.priority') and answer.exists()) -&gt; serviceRequest.priority = (item.answer.value.code);
   src.item as item where (linkId.value = 'order.notificationContactDocument') then {

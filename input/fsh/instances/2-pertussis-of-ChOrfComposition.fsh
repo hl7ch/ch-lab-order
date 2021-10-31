@@ -12,12 +12,20 @@ Usage: #definition
 * extension[0].extension.url = "enterer"
 * extension[=].extension.valueReference = Reference(PeterPrestoGruppenpraxis)
 * extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
+
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
+
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(Arztpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(EmilKummer)
+
+
+
+
+
+
 * status = #final
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * category = $sct#721963009 "Order (record artifact)"
