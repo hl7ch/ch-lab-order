@@ -1,5 +1,7 @@
 Instance: RegionalspitalZugersee
 InstanceOf: CHCoreOrganization
+Title: "Regionalspital Zugersee"
+Description: "Example for hospital"
 Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000235500"
@@ -18,4 +20,4 @@ Usage: #example
 * address.line[+] = "Postfach 80"
 * address.city = "Walchwil"
 * address.postalCode = "6318"
-* address.country = "Schweiz"
+* address.country = "CH"

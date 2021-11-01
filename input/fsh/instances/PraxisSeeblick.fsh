@@ -2,7 +2,7 @@ Instance: PraxisSeeblick
 InstanceOf: CHCoreOrganization
 Title: "Praxis Seeblick"
 Description: "Example for practice"
-Usage: #definition
+Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000235520"
 * name = "Arztpraxis Messen"
