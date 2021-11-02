@@ -3,7 +3,7 @@ InstanceOf: CHCorePractitioner
 Title: "Eva Erlenmeyer"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #example
-* identifier.system = "urn:oid:2.51.1.3"
+* identifier.system = "urn:oid:2.16.756.5.30.999999.2"
 * identifier.value = "7601000050710"
 * name.use = #official
 * name.family = "Erlenmeyer"

@@ -5,7 +5,7 @@ Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #definition
 * id = "1-tvt"
 * identifier.type = $v2-0203#PLAC "Placer Identifier"
-* identifier.system = "urn:oid:1.3.4.5.6.7"
+* identifier.system = "urn:oid:2.16.756.5.30"
 * identifier.value = "123"
 * status = #active
 * intent = #original-order
