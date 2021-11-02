@@ -22,10 +22,6 @@ Usage: #definition
 * extension[=].valueReference = Reference(EmilKummer)
 
 
-
-
-
-
 * status = #final
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * category = $sct#721963009 "Order (record artifact)"
@@ -33,10 +29,19 @@ Usage: #definition
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPrestoGruppenpraxis)
 * title = "Referral Pertussis"
-* section.title = "Order-Referral-Form 2-pertussis"
-* section.code = $loinc#93037-0 "Portable medical order form"
-* section.text.status = #generated
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        Order-Referral-Form 2-pertussis\n      </div>"
-* section.entry[0] = Reference(Questionnaire/2-pertussis)
-* section.entry[+] = Reference(QuestionnaireResponse/2-pertussis)
-* section.entry[+] = Reference(ServiceRequest/2-pertussis)
+
+// * section.title = "Order-Referral-Form 2-pertussis"
+// * section.code = $loinc#93037-0 "Portable medical order form"
+// * section.text.status = #generated
+// * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
+// * section.entry[0] = Reference(Questionnaire/2-pertussis)
+// * section.entry[+] = Reference(QuestionnaireResponse/2-pertussis)
+// * section.entry[+] = Reference(ServiceRequest/2-pertussis)
+
+* section[orderReferral].title = "Order-Referral-Form 2-pertussis"
+* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].text.status = #generated
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
+* section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-of-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-of-ChOrfQuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-of-ChOrfServiceRequest)

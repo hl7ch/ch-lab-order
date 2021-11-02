@@ -23,10 +23,19 @@ Usage: #definition
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPapGruppenpraxis)
 * title = "Referral 3-gyn"
-* section.title = "Order-Referral-Form 3-gyn"
-* section.code = $loinc#93037-0 "Portable medical order form"
-* section.text.status = #generated
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        Order-Referral-Form 3-gyn\n      </div>"
-* section.entry[0] = Reference(Questionnaire/3-gyn)
-* section.entry[+] = Reference(QuestionnaireResponse/3-gyn)
-* section.entry[+] = Reference(ServiceRequest/3-gyn)
+
+// * section.title = "Order-Referral-Form 3-gyn"
+// * section.code = $loinc#93037-0 "Portable medical order form"
+// * section.text.status = #generated
+// * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        Order-Referral-Form 3-gyn\n      </div>"
+// * section.entry[0] = Reference(Questionnaire/3-gyn)
+// * section.entry[+] = Reference(QuestionnaireResponse/3-gyn)
+// * section.entry[+] = Reference(ServiceRequest/3-gyn)
+
+* section[orderReferral].title = "Order-Referral-Form 3-gyn"
+* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].text.status = #generated
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 3-gyn\n </div>"
+* section[orderReferral].entry[Questionnaire] = Reference(3-gyn-of-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(3-gyn-of-ChOrfQuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(3-gyn-of-ChOrfServiceRequest)

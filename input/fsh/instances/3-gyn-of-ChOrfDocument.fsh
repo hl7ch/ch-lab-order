@@ -10,19 +10,37 @@ Usage: #definition
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
+
+// * entry[0].fullUrl = "http://example.com/fhir/Composition/3-gyn"
+// * entry[=].resource = Inline-Instance-for-3-gyn-1
+// * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
+// * entry[=].resource = Inline-Instance-for-3-gyn-2
+// * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPap"
+// * entry[=].resource = MarcApgar
+// * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+// * entry[=].resource = Inline-Instance-for-3-gyn-3
+// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis"
+// * entry[=].resource = PeterPapGruppenpraxis
+// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/3-gyn"
+// * entry[=].resource = 3-gyn
+// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
+// * entry[=].resource = 3-gyn
+// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
+// * entry[=].resource = Inline-Instance-for-3-gyn-7
+
 * entry[0].fullUrl = "http://example.com/fhir/Composition/3-gyn"
-* entry[=].resource = Inline-Instance-for-3-gyn-1
+* entry[=].resource = 3-gyn-of-ChOrfComposition
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
-* entry[=].resource = Inline-Instance-for-3-gyn-2
+* entry[=].resource = MarinaRubella
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPap"
-* entry[=].resource = MarcApgar
+* entry[=].resource = PeterPap
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-* entry[=].resource = Inline-Instance-for-3-gyn-3
+* entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis"
 * entry[=].resource = PeterPapGruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/3-gyn"
-* entry[=].resource = 3-gyn
+* entry[=].resource = 3-gyn-of-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
-* entry[=].resource = 3-gyn
+* entry[=].resource = 3-gyn-of-ChOrfQuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
-* entry[=].resource = Inline-Instance-for-3-gyn-7
+* entry[=].resource = 3-gyn-of-ChOrfServiceRequest
