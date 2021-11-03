@@ -43,23 +43,23 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "Richiesta di esame istologico"
 * compose.include.concept[=].designation[+].language = #en-US
 * compose.include.concept[=].designation[=].value = "Pathology order"
-* compose.include.concept[+].code = #4241000179101
-* compose.include.concept[=].display = "Laboratory report (record artifact)"
-* compose.include.concept[=].designation[0].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Laborbericht"
-* compose.include.concept[=].designation[+].language = #fr-CH
-* compose.include.concept[=].designation[=].value = "Rapport de laboratoire"
-* compose.include.concept[=].designation[+].language = #it-CH
-* compose.include.concept[=].designation[=].value = "Referto di laboratorio"
-* compose.include.concept[=].designation[+].language = #en-US
-* compose.include.concept[=].designation[=].value = "Laboratory report"
-* compose.include.concept[+].code = #371528001
-* compose.include.concept[=].display = "Pathology report (record artifact)"
-* compose.include.concept[=].designation[0].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Pathologiebericht"
-* compose.include.concept[=].designation[+].language = #fr-CH
-* compose.include.concept[=].designation[=].value = "Rapport d’examen pathologique"
-* compose.include.concept[=].designation[+].language = #it-CH
-* compose.include.concept[=].designation[=].value = "Referto istologico"
-* compose.include.concept[=].designation[+].language = #en-US
-* compose.include.concept[=].designation[=].value = "Pathology report"
+// * compose.include.concept[+].code = #4241000179101
+// * compose.include.concept[=].display = "Laboratory report (record artifact)"
+// * compose.include.concept[=].designation[0].language = #de-CH
+// * compose.include.concept[=].designation[=].value = "Laborbericht"
+// * compose.include.concept[=].designation[+].language = #fr-CH
+// * compose.include.concept[=].designation[=].value = "Rapport de laboratoire"
+// * compose.include.concept[=].designation[+].language = #it-CH
+// * compose.include.concept[=].designation[=].value = "Referto di laboratorio"
+// * compose.include.concept[=].designation[+].language = #en-US
+// * compose.include.concept[=].designation[=].value = "Laboratory report"
+// * compose.include.concept[+].code = #371528001
+// * compose.include.concept[=].display = "Pathology report (record artifact)"
+// * compose.include.concept[=].designation[0].language = #de-CH
+// * compose.include.concept[=].designation[=].value = "Pathologiebericht"
+// * compose.include.concept[=].designation[+].language = #fr-CH
+// * compose.include.concept[=].designation[=].value = "Rapport d’examen pathologique"
+// * compose.include.concept[=].designation[+].language = #it-CH
+// * compose.include.concept[=].designation[=].value = "Referto istologico"
+// * compose.include.concept[=].designation[+].language = #en-US
+// * compose.include.concept[=].designation[=].value = "Pathology report"

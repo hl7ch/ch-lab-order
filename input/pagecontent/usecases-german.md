@@ -28,21 +28,26 @@ Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende An
 
 Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
 
-### Use Case 2: Anfordern von zusätzlichen Unteresuchungen der gleichen Probe
+### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
+
+Im Spitalumfeld besteht oft die Situation, dass das Formular zur Auswahl der Laboranalysen direkt vom KIS zur Verfügung gestellt wird. Das Formular kann dann auch die mittels Clinical Decision Suport Systems modifiziert werden. Diese Formulare sollten direkt in Service Requests integriert werden können, wobei pro Auftrag auch mehrere Service Requests mittels Request Patterns aufgenommen werden sollten.
+<http://hl7.org/fhir/2020May/request.html#requisitionid>
+
+### Use Case 3: Anfordern von zusätzlichen Unteresuchungen der gleichen Probe
 
 Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere Test mit der gleichen Probe gewünscht werden. So kann im Beispiel 1-tvt eine venöse Thrombophilie vermutet werden, sodass weitere Laboruntersuchungen hereditäre Ursachen, wie Faktor-V-Leiden-Mutaion, Prothrombin-Genmutation, Antithrombinmangel usw. auffinden können.
 
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForAdditionalExam
 
-### Use Case 3: Anfordern von vorhandenen Laborresultaten und Bildern
+### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern
 
 Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.B. um den Verlauf von Prostata-spezifische Antigen (PSA) zu beurteilen.
 
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
   
-### Use Case 4: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
+### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
 Dieser Use Case entspricht dem Beispiel 5-biol-monit. Um die Gefährdung von Arbeitern gegenüber chemischen Stoffen zu beurteilen werden Messungen am Arbeitsplatz ergänzt durch arbeitsmedizinische Vorsorgeuntersuchungen. Es können die toxischen Arbeitsstoffe selbst oder deren Metaboliten im Serum oder Urin bestimmt werden. Der Auftrag wird vom Arbeitsmediziner der Firma oder der Versicherung veranlasst. Dabei muss die Problematik der Mitarbeiterfluktuationen im Auge behalten werden.
 
@@ -56,21 +61,21 @@ Beispiele dazu sind:
 
 Beispieldokument: [5-biol-monit.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/5-biol-monit.xml). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
-### Use Case 5: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
+### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
 Nach Erhalt des Laborauftrages und dessen Bearbeitung kann sich die Situation ergeben, dass der Laborarzt dem Author des Auftrages Vorschläge für weitere oder alternative Untersuchungen machen möchte. Er kann dazu das erhaltene Auftragsdokument verwenden, durch sein Informationssystem die Personendaten von Sender und Receiver austauschen, und mit den Vorschlägen zu weiteren oder alternativen Laboruntersuchungen zurückschicken.
 
 * ServiceRequest.category: ProposalForAdditionalExam
 
-### Use Case 6: Befunde und weiteren Daten zum Gesundheitszustand des Patienten
+### Use Case 7: Befunde und weiteren Daten zum Gesundheitszustand des Patienten
 
 Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, müssen weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können. Es handelt sich dabei um vorhandene Befunde, medizische Berichte und Dokumente
 
 * ServiceRequest.reasonCode ServiceRequest.reasonReference
 
-### Use Case 7: Angaben zur Probe, Präanalytik
+### Use Case 8: Angaben zur Probe, Präanalytik
 
-Bei gewissen Untersuchungen reichen Auftrag und Probe alleine nicht aus, um das Laborresultat zu bestimmen. In solchen Fällen müssen Beobachtungen zur Probenentnahme an das Labor geliefert werden. Als Beispiel sei hier die Bestimmung der Creatinin-Clearance im 24 h Urin erwähnt. Dazu muss dem Labor die während einer bestimmten Zeitdauer gesammelte Urinmenge bekannt sein. Der Auftraggeben übermittelt dazu dem Labor das Urinvolumen, sowie eine Probe des Urins und des Serums.
+Es gibt zwingende oder gewünschte Angaben zur vollständigen Auftragsstellung bzw. für die Ergebnisinterpretation, da bei gewissen Untersuchungen Auftrag und Probe alleine nicht ausreichen, um das Laborresultat zu bestimmen. In solchen Fällen müssen Beobachtungen zur Probenentnahme an das Labor geliefert werden. Als Beispiel sei hier die Bestimmung der Creatinin-Clearance im 24 h Urin erwähnt. Dazu muss dem Labor die während einer bestimmten Zeitdauer gesammelte Urinmenge bekannt sein. Der Auftraggeben übermittelt dazu dem Labor das Urinvolumen, sowie eine Probe des Urins und des Serums.
 
 * Gesammelte Urinmenge: Specimen.collection.quantity.
 
@@ -82,9 +87,8 @@ Ein weiteres Beispiel ist der Synacthen(ACTH) Funktionstest, bei dem eine basale
 
 * Zweite Serum-Probe 60 Minuten später: Specimen.collection.collected[collectedDateTime]
 
-### Use Case 8: Zusätzliche Angaben zum Kontext der Probe
-
-Bei Blutgas-Analysen ist die dem Patienten verabreichte Sauerstoffmenge manchmal von Belang
+Oder es sind zusätzliche Angaben zum Kontext der Probe zur späteren Befundinterpretation gewünscht, wie z.Bsp.
+bei Blutgas-Analysen, wo die dem Patienten zum Zeitpunkt der Probeentnahme verabreichte Sauerstoffmenge bekannt sein soll.
 
 * ServiceRequest.supportingInfo, z.Bsp. O2 4 Liter/Min.
 
