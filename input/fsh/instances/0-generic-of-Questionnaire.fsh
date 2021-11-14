@@ -458,7 +458,31 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].repeats = true
 
-// * item[=].item[=].item.answerOption[=].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[+].linkId = "HemoglobinElectrophoresisPanelBlood"
+* item[=].item[=].item[=].text = "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "CBCWAutoDifferentialPanelBlood"
+* item[=].item[=].item[=].text = "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "CBCPanelBloodAutomatedCount"
+* item[=].item[=].item[=].text = "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "AutoDifferentialPanelBlood"
+* item[=].item[=].item[=].text = "Auto Differential panel - Blood"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].repeats = true
+
+
 // * item[=].item[=].item.answerOption[=].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 // * item[=].item[=].item.answerOption[=].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
 // * item[=].item[=].item.answerOption[=].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
