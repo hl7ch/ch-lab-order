@@ -438,83 +438,45 @@ Usage: #definition
 * item[=].item[=].required = true
 
 // ------------Choice of Specialty-----------------
+//#################################################
+//* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
 * item[+].linkId = "labSpecialties"
 * item[=].text = "Labor Sparten"
 * item[=].type = #group
-* item[=].item[+].linkId = "labSpecialty"
-//* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 
-* item[=].item[+].linkId = "hematology"
-* item[=].item[=].text = "Hämatologie"
-* item[=].item[=].answerOption[0].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+* item[=].item[+].answerOption[0].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+* item[=].item[=].linkId = "hematology"
+* item[=].item[=].answerOption[1].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+* item[=].item[=].linkId = "hematology"
+* item[=].item[=].answerOption[2].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+* item[=].item[=].linkId = "chemistry"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
 
 
-* item[=].item[=].item[+].linkId = "HemoglobinHematocritPanelBlood"
-* item[=].item[=].item[=].text = "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "HemoglobinElectrophoresisPanelBlood"
-* item[=].item[=].item[=].text = "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "CBCWAutoDifferentialPanelBlood"
-* item[=].item[=].item[=].text = "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "CBCPanelBloodAutomatedCount"
-* item[=].item[=].item[=].text = "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "AutoDifferentialPanelBlood"
-* item[=].item[=].item[=].text = "Auto Differential panel - Blood"
-* item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].repeats = true
-
-
-// * item[=].item[=].item.answerOption[=].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-// * item[=].item[=].item.answerOption[=].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-// * item[=].item[=].item.answerOption[=].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
-
-// * item[+].linkId = "coagulation"
-// * item[=].text = "Coagulation"
-// * item[=].type = #group
-* item[=].item[=].answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
-* item[=].item.linkId = "coagulation"
-* item[=].item.text = "Koagulation"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
+// * item[=].item[+].linkId = "hematology"
+// * item[=].item[=].answerOption[0].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+// * item[=].item[=].text = "Hämatologie"
+// * item[=].item[+].linkId = "coagulation"
+// * item[=].item[=].answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+// * item[=].item[=].text = "Koagulation"
 // 
-// * item[=].item.answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+// * item[=].item[=].type = #choice
+// * item[=].item[=].repeats = true
 // 
-* item[=].item[=].answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
-* item[=].item.linkId = "chemistry"
-* item[=].item.text = "Klinische Chemie"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
+// 
+// * item[=].item[=].type = #choice
+// * item[=].item[=].repeats = true
+// 
+// * item[=].item[+].linkId = "chemistry"
+// * item[=].item[=].answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+// * item[=].item[=].text = "Klinische Chemie"
+// * item[=].item[=].type = #choice
+// * item[=].item[=].repeats = true
 
-// * item[=].item.linkId = "crp"
-// * item[=].item.text = "CRP"
-// * item[=].item.type = #choice
-// * item[=].item.repeats = true
-// 
-// * item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-// * item[=].item.answerOption[=].initialSelected = true
-// * item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-// * item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-// * item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
-// 
+// ######################################################################################
+
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
