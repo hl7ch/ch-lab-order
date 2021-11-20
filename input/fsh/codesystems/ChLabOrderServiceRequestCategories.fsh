@@ -12,6 +12,7 @@ Description: "ch-lab-order defines 10 different Kinds of Service Request"
 * ^contact.telecom.value = "https://www.hl7.ch"
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
+* ^caseSensitive = true
 * ^content = #complete
 * ^count = 11
 * #RequestForLabExam "Anforderung von Laboruntersuchungen" "Electronic ordering of laboratory tests and/or panels"
