@@ -1,4 +1,4 @@
-Instance: 1-tvt-of-Questionnaire
+Instance: 1-tvt-of-ChOrfQuestionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 1-tvt"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
