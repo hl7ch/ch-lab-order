@@ -246,6 +246,10 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "receiverCopy.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+// ------------Choice of Specialty-----------------
+//#################################################
+
 * item[+].linkId = "hematology"
 * item[=].text = "Hematology"
 * item[=].item.linkId = "hemato-subset"
@@ -265,3 +269,5 @@ Usage: #definition
 * item[=].item.linkId = "crp"
 * item[=].item.text = "CRP"
 * item[=].item.answer.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+
+//#################################################

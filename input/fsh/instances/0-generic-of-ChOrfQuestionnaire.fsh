@@ -312,39 +312,36 @@ Usage: #definition
 * item[=].item.item[=].type = #string
 
 // ------------Choice of Specialty-----------------
+//#################################################
+//* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
-* item[+].linkId = "hematology"
-* item[=].text = "Hematology"
+
+* item[+].linkId = "labSpecialties"
+* item[=].text = "Labor Sparten"
 * item[=].type = #group
-* item[=].item.linkId = "hemato-subset"
-* item[=].item.text = "Hämatologie Subset"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
-* item[+].linkId = "coagulation"
-* item[=].text = "Coagulation"
-* item[=].type = #group
-* item[=].item.linkId = "d-dimer"
-* item[=].item.text = "D-Dimer"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* item[+].linkId = "cc"
-* item[=].text = "clinical chemistry"
-* item[=].type = #group
-* item[=].item.linkId = "crp"
-* item[=].item.text = "CRP"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* item[=].item.answerOption[=].initialSelected = true
-* item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+
+* item[=].item[+].answerOption[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+* item[=].item[=].linkId = "hematology"
+* item[=].item[=].text = "Hematology"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+
+* item[=].item[=].answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+* item[=].item[=].linkId = "coagulation"
+* item[=].item[=].text = "Coagulation"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+
+* item[=].item[=].answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+* item[=].item[=].linkId = "chemistry"
+* item[=].item[=].text = "Clinical Chemistry"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+
+
+// ######################################################################################
+
+
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
