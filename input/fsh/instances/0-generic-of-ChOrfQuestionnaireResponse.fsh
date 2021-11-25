@@ -252,19 +252,24 @@ Usage: #definition
 //* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
 
-* item[+].linkId = "labSpecialties"
-* item[=].text = "Labor Sparten"
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+  
 
-* item[=].item[+].answer[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
-* item[=].item[=].linkId = "hematology"
-* item[=].item[=].text = "Hematology"
-
-* item[=].item[=].answer[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
-* item[=].item[=].linkId = "coagulation"
-* item[=].item[=].text = "Coagulation"
-
-* item[=].item[=].answer[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
-* item[=].item[=].linkId = "chemistry"
-* item[=].item[=].text = "Clinical Chemistry"
+  * item[+]
+    * answer[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * linkId = "hematology"
+    * text = "Hematology"
+    
+  * item[+]
+    * answer[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * linkId = "coagulation"
+    * text = "Coagulation"
+     
+  * item[+]
+    * answer[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * linkId = "chemistry"
+    * text = "Clinical Chemistry"
 
 // #####################################################

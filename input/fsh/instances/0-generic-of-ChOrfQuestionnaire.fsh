@@ -316,28 +316,31 @@ Usage: #definition
 //* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
 
-* item[+].linkId = "labSpecialties"
-* item[=].text = "Labor Sparten"
-* item[=].type = #group
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+  * type = #group
 
-* item[=].item[+].answerOption[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
-* item[=].item[=].linkId = "hematology"
-* item[=].item[=].text = "Hematology"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-
-* item[=].item[=].answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
-* item[=].item[=].linkId = "coagulation"
-* item[=].item[=].text = "Coagulation"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-
-* item[=].item[=].answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
-* item[=].item[=].linkId = "chemistry"
-* item[=].item[=].text = "Clinical Chemistry"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-
+  * item[+]
+    * answerOption[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * linkId = "hematology"
+    * text = "Hematology"
+    * type = #choice
+    * repeats = true
+  
+  * item[+]
+    * answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * linkId = "coagulation"
+    * text = "Coagulation"
+    * type = #choice
+    * repeats = true
+  
+  * item[+]
+    * answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * linkId = "chemistry"
+    * text = "Clinical Chemistry"
+    * type = #choice
+    * repeats = true
 
 // ######################################################################################
 
