@@ -322,21 +322,37 @@ Usage: #definition
   * type = #group
 
   * item[+]
-    * answerOption[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * answerOption.valueCoding = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "hematology"
     * text = "Hematology"
-    * type = #choice
+    * type = #group
     * repeats = true
+//    * enableWhen[+].question = "hematology"
+//    * enableWhen[=].operator.value = "="
+//    * enableWhen[=].answerBoolean = true
+
+    * item[+]
+      * answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+      * linkId = "ShortFibrinDdimerPlateletpoorplasma"
+      * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+      * type = #choice
+      * repeats = true
+    * item[+]
+      * answerOption.valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+      * linkId = "INRplateletPoorPlasmaCoagulationAssay"
+      * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+      * type = #choice
+      * repeats = true
   
   * item[+]
-    * answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * answerOption.valueCoding = $loinc#18720-3 "Coagulation studies (set)"
     * linkId = "coagulation"
     * text = "Coagulation"
     * type = #choice
     * repeats = true
   
   * item[+]
-    * answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * answerOption.valueCoding = $loinc#18719-5 "Chemistry studies (set)"
     * linkId = "chemistry"
     * text = "Clinical Chemistry"
     * type = #choice

@@ -258,18 +258,29 @@ Usage: #definition
   
 
   * item[+]
-    * answer[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * answer.valueCoding = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "hematology"
     * text = "Hematology"
     
+
+//    * item[+]
+//      * answer.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+//      * linkId = "ShortFibrinDdimerPlateletpoorplasma"
+//      * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+//      
+//    * item[+]
+//      * answer.valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+//      * linkId = "INRplateletPoorPlasmaCoagulationAssay"
+//      * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+        
   * item[+]
-    * answer[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * answer.valueCoding = $loinc#18720-3 "Coagulation studies (set)"
     * linkId = "coagulation"
     * text = "Coagulation"
      
   * item[+]
-    * answer[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * answer.valueCoding = $loinc#18719-5 "Chemistry studies (set)"
     * linkId = "chemistry"
     * text = "Clinical Chemistry"
-
+    
 // #####################################################
