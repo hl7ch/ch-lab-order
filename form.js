@@ -221,32 +221,11 @@ var fhirQ = {
           "answerOption": [
             {
               "valueCoding": {
-                "code": "routine",
-                "system": "http://hl7.org/fhir/request-priority",
-                "display": "Die Anfrage hat normale Priorität."
-              },
-              "initialSelected": true
-            },
-            {
-              "valueCoding": {
-                "code": "urgent",
-                "system": "http://hl7.org/fhir/request-priority",
-                "display": "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "asap",
-                "system": "http://hl7.org/fhir/request-priority",
-                "display": "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-              }
-            },
-            {
-              "valueCoding": {
                 "code": "stat",
                 "system": "http://hl7.org/fhir/request-priority",
                 "display": "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
-              }
+              },
+              "initialSelected": true
             }
           ]
         }
@@ -366,25 +345,11 @@ var fhirQ = {
           "answerOption": [
             {
               "valueCoding": {
-                "code": "male",
-                "system": "http://hl7.org/fhir/administrative-gender",
-                "display": "Männlich"
-              },
-              "initialSelected": true
-            },
-            {
-              "valueCoding": {
-                "code": "female",
-                "system": "http://hl7.org/fhir/administrative-gender",
-                "display": "Weiblich"
-              }
-            },
-            {
-              "valueCoding": {
                 "code": "other",
                 "system": "http://hl7.org/fhir/administrative-gender",
                 "display": "Anderes"
-              }
+              },
+              "initialSelected": true
             }
           ]
         },
@@ -609,7 +574,7 @@ var fhirQ = {
     },
     {
       "linkId": "labSpecialties",
-      "text": "Labor Sparten",
+      "text": "Labor Sparten Testing",
       "type": "group",
       "item": [
         {
@@ -885,6 +850,8 @@ var fhirQ = {
     }
   ]
 }
+
+
 
 // Add the form to the page
 LForms.Util.addFormToPage(fhirQ, 'formContainer');

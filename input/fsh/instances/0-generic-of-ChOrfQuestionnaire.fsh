@@ -116,9 +116,9 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption.valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption.valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption.valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -185,8 +185,8 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
+* item[=].item[=].answerOption.valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption.valueCoding = $administrative-gender#other "Anderes"
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].type = #string
@@ -318,11 +318,11 @@ Usage: #definition
 
 * item[+]
   * linkId = "labSpecialties"
-  * text = "Labor Sparten"
+  * text = "Labor Sparten Testing"
   * type = #group
 
   * item[+]
-    * answerOption[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * answerOption.valueCoding = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "hematology"
     * text = "Hematology"
     * type = #choice
@@ -332,9 +332,9 @@ Usage: #definition
     * linkId = "hematologyPanels"
     * text = "Hematology Panels"
     * type = #group
-//    * enableWhen[+].question = "hematology"
-//    * enableWhen[=].operator.value = "="
-//    * enableWhen[=].answerBoolean = true
+//    * enableWhen.question = "hematology"
+//    * enableWhen.operator.value = "="
+//    * enableWhen.answerCoding.userSelected.value = true
 
     * item[+]
       * answerOption.valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
@@ -358,21 +358,21 @@ Usage: #definition
       * repeats = true
  
     * item[+]
-      * answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+      * answerOption.valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
       * linkId = "CBCPanelBloodAutomatedCount"
       * text = "CBC panel - Blood by Automated count"
       * type = #choice
       * repeats = true
      
     * item[+]
-      * answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+      * answerOption.valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
       * linkId = "AutoDifferentialPanelBlood"
       * text = "Auto Differential panel - Blood"
       * type = #choice
       * repeats = true
  
   * item[+]
-    * answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * answerOption.valueCoding = $loinc#18720-3 "Coagulation studies (set)"
     * linkId = "coagulation"
     * text = "Coagulation"
     * type = #choice
@@ -387,20 +387,20 @@ Usage: #definition
 //    * enableWhen[=].answerBoolean = true
 
     * item[+]
-      * answerOption[+].valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+      * answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
       * linkId = "ShortFibrinDdimerPlateletpoorplasma"
       * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
       * type = #choice
 
     * item[+]
-      * answerOption[+].valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+      * answerOption.valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
       * linkId = "INRplateletPoorPlasmaCoagulationAssay"
       * text = "INR in Platelet poor plasma or blood by Coagulation assay"
       * type = #choice
   
 
   * item[+]
-    * answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * answerOption.valueCoding = $loinc#18719-5 "Chemistry studies (set)"
     * linkId = "chemistry"
     * text = "Clinical Chemistry"
     * type = #choice
@@ -415,14 +415,14 @@ Usage: #definition
 //    * enableWhen[=].answerBoolean = true
 
     * item[+]
-      * answerOption[+].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+      * answerOption.valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
       * linkId = "CRP-MassProVolumeSerumPlasma"
       * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
       * type = #choice
       * repeats = true
   
     * item[+]  
-      * answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+      * answerOption.valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
       * linkId = "CRP-MolesProVolumeSerumPlasma"
       * text = "C reactive protein [Moles/volume] in Serum or Plasma"
       * type = #choice
