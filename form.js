@@ -578,13 +578,14 @@ var fhirQ = {
       "type": "group",
       "item": [
         {
+          "definition": "18723-7",
           "linkId": "labSpecialties.hematology",
           "text": "Hematology",
           "type": "boolean",
           "item": [
             {
-              "linkId": "labSpecialties.hematology.subgroup",
-              "text": "Subgroup",
+              "linkId": "labSpecialties.hematology.panels",
+              "text": "Hematology Panels",
               "type": "group",
               "enableWhen": [
                 {
@@ -595,12 +596,66 @@ var fhirQ = {
               ],
               "item": [
                 {
-                  "linkId": "labSpecialties.hematology.subgroup.ShortFibrinDdimerPlateletpoorplasma",
+                  "definition": "24360-0",
+                  "linkId": "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood",
+                  "text": "Hemoglobin and Hematocrit panel - Blood",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "43113-0",
+                  "linkId": "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood",
+                  "text": "INR in Platelet poor plasma or blood by Coagulation assay",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "57021-8",
+                  "linkId": "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood",
+                  "text": "CBC W Auto Differential panel - Blood",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "58410-2",
+                  "linkId": "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount",
+                  "text": "CBC panel - Blood by Automated count",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "57023-4",
+                  "linkId": "labSpecialties.hematology.panels.AutoDifferentialPanelBlood",
+                  "text": "Auto Differential panel - Blood",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "definition": "18720-3",
+          "linkId": "labSpecialties.coagulation",
+          "text": "Coagulation",
+          "type": "boolean",
+          "item": [
+            {
+              "linkId": "labSpecialties.coagulation.panels",
+              "text": "Coagulation Panels",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "labSpecialties.coagulation",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "definition": "55398-2",
+                  "linkId": "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma",
                   "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
                   "type": "boolean"
                 },
                 {
-                  "linkId": "labSpecialties.hematology.subgroup.INRplateletPoorPlasmaCoagulationAssay",
+                  "definition": "38875-1",
+                  "linkId": "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay",
                   "text": "INR in Platelet poor plasma or blood by Coagulation assay",
                   "type": "boolean"
                 }
@@ -609,16 +664,38 @@ var fhirQ = {
           ]
         },
         {
-          "linkId": "labSpecialties.coagulation",
-          "text": "Coagulation",
-          "type": "boolean",
-          "repeats": true
-        },
-        {
+          "definition": "18719-5",
           "linkId": "labSpecialties.chemistry",
           "text": "Clinical Chemistry",
           "type": "boolean",
-          "repeats": true
+          "item": [
+            {
+              "linkId": "labSpecialties.chemistry.panels",
+              "text": "Chemistry Panels",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "labSpecialties.chemistry",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "definition": "1988-5",
+                  "linkId": "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma",
+                  "text": "C reactive protein [Mass/Volume] in Serum or Plasma",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "76485-2",
+                  "linkId": "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma",
+                  "text": "C reactive protein [Moles/volume] in Serum or Plasma",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -694,8 +771,6 @@ var fhirQ = {
     }
   ]
 }
-
-
 
 // Add the form to the page
 LForms.Util.addFormToPage(fhirQ, 'formContainer');
