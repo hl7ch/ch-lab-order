@@ -322,40 +322,47 @@ Usage: #definition
   * type = #group
 
   * item[+]
-    * answerOption.valueCoding = $loinc#18723-7 "Hematology studies (set)"
-    * linkId = "hematology"
+  //  * answerOption.valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * linkId = "labSpecialties.hematology"
     * text = "Hematology"
-    * type = #group
-    * repeats = true
+    * type = #boolean
+    // * repeats = true
 //    * enableWhen[+].question = "hematology"
 //    * enableWhen[=].operator.value = "="
 //    * enableWhen[=].answerBoolean = true
 
     * item[+]
-      * answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-      * linkId = "ShortFibrinDdimerPlateletpoorplasma"
-      * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-      * type = #choice
-      * repeats = true
-    * item[+]
-      * answerOption.valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
-      * linkId = "INRplateletPoorPlasmaCoagulationAssay"
-      * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-      * type = #choice
-      * repeats = true
+      * linkId = "labSpecialties.hematology.subgroup"  // TBD: rename subgroup
+      * text = "Subgroup"  // TBD: rename subgroup
+      * type = #group
+      * enableWhen[+].question = "labSpecialties.hematology"
+      * enableWhen[=].operator = #=
+      * enableWhen[=].answerBoolean = true
+      * item[+]
+        //* answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * linkId = "labSpecialties.hematology.subgroup.ShortFibrinDdimerPlateletpoorplasma"
+        * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * type = #boolean
+        //* repeats = true
+      * item[+]
+        //* answerOption.valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+        * linkId = "labSpecialties.hematology.subgroup.INRplateletPoorPlasmaCoagulationAssay"
+        * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+        * type = #boolean
+        //* repeats = true
   
   * item[+]
-    * answerOption.valueCoding = $loinc#18720-3 "Coagulation studies (set)"
-    * linkId = "coagulation"
+    //* answerOption.valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * linkId = "labSpecialties.coagulation"
     * text = "Coagulation"
-    * type = #choice
+    * type = #boolean
     * repeats = true
   
   * item[+]
-    * answerOption.valueCoding = $loinc#18719-5 "Chemistry studies (set)"
-    * linkId = "chemistry"
+    //* answerOption.valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * linkId = "labSpecialties.chemistry"
     * text = "Clinical Chemistry"
-    * type = #choice
+    * type = #boolean
     * repeats = true
 
 // ######################################################################################
