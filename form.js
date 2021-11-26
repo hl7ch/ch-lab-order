@@ -1,163 +1,890 @@
 var fhirQ = {
   "resourceType": "Questionnaire",
-  "id": "zika-virus-exposure-assessment",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>\n      </pre>\n    </div>"
+  "id": "0-generic",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-04-01T20:17:53.340+00:00",
+    "profile": [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire",
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire",
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"
+    ]
   },
-  "url": "http://example.org/Questionnaire/zika-virus-exposure-assessment",
-  "name": "ExampleZikaVirusExposureAssessment",
-  "title": "Example Zika Virus Exposure Assessment",
-  "status": "draft",
+  "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap",
+      "valueCanonical": "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap",
+      "valueCanonical": "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+    },
+    {
+      "extension": [
+        {
+          "url": "name",
+          "valueId": "Bundle"
+        },
+        {
+          "url": "type",
+          "valueCode": "Bundle"
+        },
+        {
+          "url": "description",
+          "valueString": "The Bundle that is to be used to pre-populate the form"
+        }
+      ],
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+    }
+  ],
+  "version": "0.9.1",
+  "name": "LabOrderFormExample",
+  "title": "Lab Order Form Example",
+  "status": "active",
   "subjectType": [
     "Patient"
   ],
-  "date": "2016-11-14",
-  "description": "Example questionnaire to assess Zika virus exposure potential.",
-  "effectivePeriod": {
-    "start": "2016-11-14"
-  },
+  "date": "2020-12-17",
+  "publisher": "HL7 Switzerland",
+  "contact": [
+    {
+      "name": "HL7 Switzerland",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.hl7.ch/"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CH",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "copyright": "CC-BY-SA-4.0",
   "item": [
     {
-      "extension": [
+      "linkId": "order",
+      "text": "Auftrag",
+      "type": "group",
+      "required": true,
+      "item": [
         {
-          "url": "http://example.org/additional-information",
-          "valueAttachment": {
-            "url": "http://www.cdc.gov/zika/geo/index.html",
-            "title": "Areas with active Zika virus transmission/exposure risk"
-          }
-        }
-      ],
-      "linkId": "1",
-      "code": [
+          "linkId": "order.title",
+          "text": "Titel",
+          "type": "string"
+        },
         {
-          "system": "http://example.org/questionnaires",
-          "code": "CDE: Resident of or Frequent Traveler to Zika Area"
-        }
-      ],
-      "text": "Are you a resident of, or do you travel frequently to, an area with active Zika transmission?",
-      "type": "boolean"
-    },
-    {
-      "extension": [
+          "linkId": "order.type",
+          "text": "Typ",
+          "type": "choice",
+          "answerValueSet": "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode"
+        },
         {
-          "url": "http://example.org/additional-information",
-          "valueAttachment": {
-            "url": "http://www.cdc.gov/zika/geo/index.html",
-            "title": "Areas with active Zika virus transmission/exposure risk"
-          }
-        }
-      ],
-      "linkId": "2",
-      "code": [
+          "linkId": "order.category",
+          "text": "Kategorie",
+          "type": "choice",
+          "answerValueSet": "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"
+        },
         {
-          "system": "http://example.org/questionnaires",
-          "code": "CDE: Recent Travel to Zika Area"
-        }
-      ],
-      "text": "Have you recently traveled to an area with active Zika transmission?",
-      "type": "boolean",
-      "enableWhen": [
+          "linkId": "order.placerOrderIdentifier",
+          "text": "Auftragsnummer des Auftraggebers",
+          "type": "string"
+        },
         {
-          "question": "1",
-          "operator": "=",
-          "answerBoolean": false
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "order.placerOrderIdentifierDomain",
+          "text": "Identifier Domain der Auftragsnummer des Auftraggebers",
+          "type": "string"
+        },
+        {
+          "linkId": "order.fillerOrderIdentifier",
+          "text": "Auftragsnummer des Auftragsempfängers",
+          "type": "string"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "order.fillerOrderIdentifierDomain",
+          "text": "Identifier Domain der Auftragsnummer des Auftragsempfängers",
+          "type": "string"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "order.precedentDocumentIdentifier",
+          "text": "Identifier des Vorgängerdokuments",
+          "type": "string"
+        },
+        {
+          "linkId": "order.notificationContactDocument",
+          "text": "Dringender Benachrichtigungskontakt für dieses Dokument",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "order.notificationContactDocument.practitioner",
+              "text": "Zu benachrichtigende Person",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.title",
+                  "text": "Titel",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.familyName",
+                  "text": "Name",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.givenName",
+                  "text": "Vorname",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.phone",
+                  "text": "Telefon",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.email",
+                  "text": "E-Mail",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "order.notificationContactDocumentResponse",
+          "text": "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "order.notificationContactDocumentResponse.practitioner",
+              "text": "Zu benachrichtigende Person",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.title",
+                  "text": "Titel",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.familyName",
+                  "text": "Name",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.givenName",
+                  "text": "Vorname",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.phone",
+                  "text": "Telefon",
+                  "type": "string"
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.email",
+                  "text": "E-Mail",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "order.priority",
+          "text": "Auftragspriorität",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "routine",
+                "system": "http://hl7.org/fhir/request-priority",
+                "display": "Die Anfrage hat normale Priorität."
+              },
+              "initialSelected": true
+            },
+            {
+              "valueCoding": {
+                "code": "urgent",
+                "system": "http://hl7.org/fhir/request-priority",
+                "display": "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "asap",
+                "system": "http://hl7.org/fhir/request-priority",
+                "display": "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "stat",
+                "system": "http://hl7.org/fhir/request-priority",
+                "display": "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "linkId": "3",
-      "code": [
+      "linkId": "receiver",
+      "text": "Empfänger",
+      "type": "group",
+      "item": [
         {
-          "system": "http://example.org/questionnaires",
-          "code": "CDE: Time Since Returned From Travel"
-        }
-      ],
-      "text": "How long has it been since you returned?",
-      "type": "quantity",
-      "enableWhen": [
+          "linkId": "receiver.practitioner",
+          "text": "Empfangende Person",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "receiver.practitioner.title",
+              "text": "Titel",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.practitioner.familyName",
+              "text": "Name",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.practitioner.givenName",
+              "text": "Vorname",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.practitioner.gln",
+              "text": "GLN",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.practitioner.phone",
+              "text": "Telefon",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.practitioner.email",
+              "text": "E-Mail",
+              "type": "string"
+            }
+          ]
+        },
         {
-          "question": "2",
-          "operator": "=",
-          "answerBoolean": true
+          "linkId": "receiver.organization",
+          "text": "Empfangende Organisation",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "receiver.organization.name",
+              "text": "Name der Organisation",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.organization.streetAddressLine",
+              "text": "Strasse, Hausnummer, Postfach etc.",
+              "type": "string",
+              "repeats": true
+            },
+            {
+              "linkId": "receiver.organization.postalCode",
+              "text": "PLZ",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.organization.city",
+              "text": "Ort",
+              "type": "string"
+            },
+            {
+              "linkId": "receiver.organization.country",
+              "text": "Land",
+              "type": "string"
+            }
+          ]
         }
       ]
     },
     {
-      "extension": [
+      "linkId": "patient",
+      "text": "Patient",
+      "type": "group",
+      "item": [
         {
-          "url": "http://example.org/additional-information",
-          "valueAttachment": {
-            "url": "http://www.cdc.gov/zika/geo/index.html",
-            "title": "Areas with active Zika virus transmission/exposure risk"
-          }
-        }
-      ],
-      "linkId": "4",
-      "code": [
+          "linkId": "patient.familyName",
+          "text": "Name",
+          "type": "string"
+        },
         {
-          "system": "http://example.org/questionnaires",
-          "code": "CDE: Recent Sexual Encounter with Traveler to Zika Area"
-        }
-      ],
-      "text": "Have you recently had condomless sex with a partner that has travelled in an area with active Zika transmission?",
-      "type": "boolean",
-      "enableWhen": [
+          "linkId": "patient.maidenName",
+          "text": "Ledigname",
+          "type": "string"
+        },
         {
-          "question": "2",
-          "operator": "=",
-          "answerBoolean": false
+          "linkId": "patient.givenName",
+          "text": "Vorname",
+          "type": "string"
+        },
+        {
+          "linkId": "patient.localPid",
+          "text": "Lokale Patienten-ID",
+          "type": "string"
+        },
+        {
+          "linkId": "patient.birthDate",
+          "text": "Geburtsdatum",
+          "type": "date"
+        },
+        {
+          "linkId": "patient.gender",
+          "text": "Geschlecht",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "male",
+                "system": "http://hl7.org/fhir/administrative-gender",
+                "display": "Männlich"
+              },
+              "initialSelected": true
+            },
+            {
+              "valueCoding": {
+                "code": "female",
+                "system": "http://hl7.org/fhir/administrative-gender",
+                "display": "Weiblich"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "other",
+                "system": "http://hl7.org/fhir/administrative-gender",
+                "display": "Anderes"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "patient.phone",
+          "text": "Telefon",
+          "type": "string"
+        },
+        {
+          "linkId": "patient.email",
+          "text": "E-Mail",
+          "type": "string"
+        },
+        {
+          "linkId": "patient.streetAddressLine",
+          "text": "Strasse, Hausnummer, Postfach etc.",
+          "type": "string",
+          "repeats": true
+        },
+        {
+          "linkId": "patient.postalCode",
+          "text": "PLZ",
+          "type": "string"
+        },
+        {
+          "linkId": "patient.city",
+          "text": "Ort",
+          "type": "string"
+        },
+        {
+          "linkId": "patient.country",
+          "text": "Land",
+          "type": "string"
         }
       ]
     },
     {
-      "linkId": "5",
-      "code": [
+      "linkId": "sender",
+      "text": "Absender",
+      "type": "group",
+      "required": true,
+      "item": [
         {
-          "system": "http://example.org/questionnaires",
-          "code": "CDE: Time Since Sexual Encounter"
-        }
-      ],
-      "text": "How long has it been since your last condomless sexual encounter?",
-      "type": "quantity",
-      "enableWhen": [
+          "linkId": "sender.author",
+          "text": "Verantwortlicher",
+          "type": "group",
+          "required": true,
+          "item": [
+            {
+              "linkId": "sender.author.practitioner",
+              "text": "Verantwortliche Person",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "sender.author.practitioner.title",
+                  "text": "Titel",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.practitioner.familyName",
+                  "text": "Name",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.practitioner.givenName",
+                  "text": "Vorname",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.practitioner.gln",
+                  "text": "GLN",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.practitioner.phone",
+                  "text": "Telefon",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.practitioner.email",
+                  "text": "E-Mail",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "linkId": "sender.author.organization",
+              "text": "Verantwortliche Organisation",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "sender.author.organization.name",
+                  "text": "Name der Organisation",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.organization.streetAddressLine",
+                  "text": "Strasse, Hausnummer, Postfach etc.",
+                  "type": "string",
+                  "repeats": true
+                },
+                {
+                  "linkId": "sender.author.organization.postalCode",
+                  "text": "PLZ",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.organization.city",
+                  "text": "Ort",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.author.organization.country",
+                  "text": "Land",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
         {
-          "question": "4",
-          "operator": "=",
-          "answerBoolean": true
+          "linkId": "sender.dataenterer",
+          "text": "Erfasser",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "sender.dataenterer.practitioner",
+              "text": "Erfassende Person",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "sender.dataenterer.practitioner.familyName",
+                  "text": "Name",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.givenName",
+                  "text": "Vorname",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.phone",
+                  "text": "Telefon",
+                  "type": "string"
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.email",
+                  "text": "E-Mail",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "extension": [
+      "linkId": "receiverCopies",
+      "text": "Kopieempfänger",
+      "type": "group",
+      "item": [
         {
-          "url": "http://example.org/additional-information",
-          "valueAttachment": {
-            "url": "http://www.cdc.gov/zika/geo/index.html",
-            "title": "Areas with active Zika virus transmission/exposure risk"
-          }
+          "linkId": "receiverCopy",
+          "text": "Kopieempfangende Organisation oder Person",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "receiverCopy.organization.name",
+              "text": "Name der Organisation",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.title",
+              "text": "Titel",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.familyName",
+              "text": "Name",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.givenName",
+              "text": "Vorname",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.phone",
+              "text": "Telefon",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.email",
+              "text": "E-Mail",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.streetAddressLine",
+              "text": "Strasse, Hausnummer, Postfach etc.",
+              "type": "string",
+              "repeats": true
+            },
+            {
+              "linkId": "receiverCopy.postalCode",
+              "text": "PLZ",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.city",
+              "text": "Ort",
+              "type": "string"
+            },
+            {
+              "linkId": "receiverCopy.country",
+              "text": "Land",
+              "type": "string"
+            }
+          ]
         }
-      ],
-      "linkId": "6",
-      "code": [
+      ]
+    },
+    {
+      "linkId": "labSpecialties",
+      "text": "Labor Sparten",
+      "type": "group",
+      "item": [
         {
-          "system": "http://example.org/questionnaires",
-          "code": "CDE: Planned Travel to Zika Area"
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "18723-7",
+                "system": "http://loinc.org",
+                "display": "Hematology studies (set)"
+              }
+            }
+          ],
+          "linkId": "hematology",
+          "text": "Hematology",
+          "type": "choice",
+          "repeats": true
+        },
+        {
+          "linkId": "hematologyPanels",
+          "text": "Hematology Panels",
+          "type": "group",
+          "item": [
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "24360-0",
+                    "system": "http://loinc.org",
+                    "display": "Hemoglobin and Hematocrit panel - Blood"
+                  }
+                }
+              ],
+              "linkId": "HemoglobinHematocritPanelBlood",
+              "text": "Hemoglobin and Hematocrit panel - Blood",
+              "type": "choice",
+              "repeats": true
+            },
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "43113-0",
+                    "system": "http://loinc.org",
+                    "display": "Hemoglobin electrophoresis panel in Blood"
+                  }
+                }
+              ],
+              "linkId": "HemoglobinElectrophoresisPanelBlood",
+              "text": "Hemoglobin electrophoresis panel in Blood",
+              "type": "choice",
+              "repeats": true
+            },
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "57021-8",
+                    "system": "http://loinc.org",
+                    "display": "CBC W Auto Differential panel - Blood"
+                  }
+                }
+              ],
+              "linkId": "CBCWAutoDifferentialPanelBlood",
+              "text": "CBC W Auto Differential panel - Blood",
+              "type": "choice",
+              "repeats": true
+            },
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "58410-2",
+                    "system": "http://loinc.org",
+                    "display": "CBC panel - Blood by Automated count"
+                  }
+                }
+              ],
+              "linkId": "CBCPanelBloodAutomatedCount",
+              "text": "CBC panel - Blood by Automated count",
+              "type": "choice",
+              "repeats": true
+            },
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "57023-4",
+                    "system": "http://loinc.org",
+                    "display": "Auto Differential panel - Blood"
+                  }
+                }
+              ],
+              "linkId": "AutoDifferentialPanelBlood",
+              "text": "Auto Differential panel - Blood",
+              "type": "choice",
+              "repeats": true
+            }
+          ]
+        },
+        {
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "18720-3",
+                "system": "http://loinc.org",
+                "display": "Coagulation studies (set)"
+              }
+            }
+          ],
+          "linkId": "coagulation",
+          "text": "Coagulation",
+          "type": "choice",
+          "repeats": true
+        },
+        {
+          "linkId": "coagulationPanels",
+          "text": "Coagulation Panels",
+          "type": "group",
+          "item": [
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "55398-2",
+                    "system": "http://loinc.org",
+                    "display": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+                  }
+                }
+              ],
+              "linkId": "ShortFibrinDdimerPlateletpoorplasma",
+              "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
+              "type": "choice"
+            },
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "38875-1",
+                    "system": "http://loinc.org",
+                    "display": "INR in Platelet poor plasma or blood by Coagulation assay"
+                  }
+                }
+              ],
+              "linkId": "INRplateletPoorPlasmaCoagulationAssay",
+              "text": "INR in Platelet poor plasma or blood by Coagulation assay",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "18719-5",
+                "system": "http://loinc.org",
+                "display": "Chemistry studies (set)"
+              }
+            }
+          ],
+          "linkId": "chemistry",
+          "text": "Clinical Chemistry",
+          "type": "choice",
+          "repeats": true
+        },
+        {
+          "linkId": "chemistryPanels",
+          "text": "Chemistry Panels",
+          "type": "group",
+          "item": [
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1988-5",
+                    "system": "http://loinc.org",
+                    "display": "C reactive protein [Mass/Volume] in Serum or Plasma"
+                  }
+                }
+              ],
+              "linkId": "CRP-MassProVolumeSerumPlasma",
+              "text": "C reactive protein [Mass/Volume] in Serum or Plasma",
+              "type": "choice",
+              "repeats": true
+            },
+            {
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "76485-2",
+                    "system": "http://loinc.org",
+                    "display": "C reactive protein [Moles/volume] in Serum or Plasma"
+                  }
+                }
+              ],
+              "linkId": "CRP-MolesProVolumeSerumPlasma",
+              "text": "C reactive protein [Moles/volume] in Serum or Plasma",
+              "type": "choice",
+              "repeats": true
+            }
+          ]
         }
-      ],
-      "text": "Do you plan to travel to an area with active Zika transmission?",
-      "type": "boolean",
-      "enableWhen": [
+      ]
+    },
+    {
+      "linkId": "consent",
+      "definition": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo",
+      "text": "Einverständniserklärung",
+      "type": "group",
+      "item": [
         {
-          "question": "4",
-          "operator": "=",
-          "answerBoolean": false
+          "linkId": "consent.treatment",
+          "text": "Einverständnis des Patienten zur Behandlung",
+          "type": "string"
+        },
+        {
+          "linkId": "consent.patientPrivacy",
+          "text": "Einverständnis des Patienten zum Datenschutz",
+          "type": "string"
+        },
+        {
+          "linkId": "consent.research",
+          "text": "Einverständnis des Patienten zur Forschung",
+          "type": "string"
+        },
+        {
+          "linkId": "consent.advancedCareDirective",
+          "text": "Patientenverfügung",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "linkId": "coverage",
+      "definition": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance",
+      "text": "Kostenträger",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "coverage.uvg",
+          "text": "Unfallversicherung (nach UVG)",
+          "type": "string"
+        },
+        {
+          "linkId": "coverage.kvg",
+          "text": "Grundversicherung (nach KVG)",
+          "type": "string"
+        },
+        {
+          "linkId": "coverage.vvg",
+          "text": "Zusatzversicherung (nach VVG)",
+          "type": "string"
+        },
+        {
+          "linkId": "coverage.vvgOther",
+          "text": "Andere (nach VVG)",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "linkId": "previousResult",
+      "definition": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo",
+      "text": "Vorheriges Untersuchungsresultat",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "previousResult.result",
+          "text": "Untersuchungsresultat",
+          "type": "string",
+          "repeats": true
         }
       ]
     }
   ]
 }
-
 
 // Add the form to the page
 LForms.Util.addFormToPage(fhirQ, 'formContainer');

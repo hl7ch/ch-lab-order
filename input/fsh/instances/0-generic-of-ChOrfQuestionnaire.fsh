@@ -322,41 +322,111 @@ Usage: #definition
   * type = #group
 
   * item[+]
-    * answerOption.valueCoding = $loinc#18723-7 "Hematology studies (set)"
+    * answerOption[+].valueCoding = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "hematology"
     * text = "Hematology"
-    * type = #group
+    * type = #choice
     * repeats = true
+
+  * item[+]
+    * linkId = "hematologyPanels"
+    * text = "Hematology Panels"
+    * type = #group
 //    * enableWhen[+].question = "hematology"
 //    * enableWhen[=].operator.value = "="
 //    * enableWhen[=].answerBoolean = true
 
     * item[+]
-      * answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-      * linkId = "ShortFibrinDdimerPlateletpoorplasma"
-      * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+      * answerOption.valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+      * linkId = "HemoglobinHematocritPanelBlood"
+      * text = "Hemoglobin and Hematocrit panel - Blood"
       * type = #choice
       * repeats = true
+
     * item[+]
-      * answerOption.valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
-      * linkId = "INRplateletPoorPlasmaCoagulationAssay"
-      * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+      * answerOption.valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+      * linkId = "HemoglobinElectrophoresisPanelBlood"
+      * text = "Hemoglobin electrophoresis panel in Blood"
       * type = #choice
       * repeats = true
-  
+
+    * item[+]
+      * answerOption.valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+      * linkId = "CBCWAutoDifferentialPanelBlood"
+      * text = "CBC W Auto Differential panel - Blood"
+      * type = #choice
+      * repeats = true
+ 
+    * item[+]
+      * answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+      * linkId = "CBCPanelBloodAutomatedCount"
+      * text = "CBC panel - Blood by Automated count"
+      * type = #choice
+      * repeats = true
+     
+    * item[+]
+      * answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+      * linkId = "AutoDifferentialPanelBlood"
+      * text = "Auto Differential panel - Blood"
+      * type = #choice
+      * repeats = true
+ 
   * item[+]
-    * answerOption.valueCoding = $loinc#18720-3 "Coagulation studies (set)"
+    * answerOption[+].valueCoding = $loinc#18720-3 "Coagulation studies (set)"
     * linkId = "coagulation"
     * text = "Coagulation"
     * type = #choice
     * repeats = true
-  
+
   * item[+]
-    * answerOption.valueCoding = $loinc#18719-5 "Chemistry studies (set)"
+    * linkId = "coagulationPanels"
+    * text = "Coagulation Panels"
+    * type = #group
+//    * enableWhen[+].question = "coagulation"
+//    * enableWhen[=].operator.value = "="
+//    * enableWhen[=].answerBoolean = true
+
+    * item[+]
+      * answerOption[+].valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+      * linkId = "ShortFibrinDdimerPlateletpoorplasma"
+      * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+      * type = #choice
+
+    * item[+]
+      * answerOption[+].valueCoding = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+      * linkId = "INRplateletPoorPlasmaCoagulationAssay"
+      * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+      * type = #choice
+  
+
+  * item[+]
+    * answerOption[+].valueCoding = $loinc#18719-5 "Chemistry studies (set)"
     * linkId = "chemistry"
     * text = "Clinical Chemistry"
     * type = #choice
     * repeats = true
+
+  * item[+]
+    * linkId = "chemistryPanels"
+    * text = "Chemistry Panels"
+    * type = #group
+//    * enableWhen[+].question = "chemistry"
+//    * enableWhen[=].operator.value = "="
+//    * enableWhen[=].answerBoolean = true
+
+    * item[+]
+      * answerOption[+].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+      * linkId = "CRP-MassProVolumeSerumPlasma"
+      * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
+      * type = #choice
+      * repeats = true
+  
+    * item[+]  
+      * answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+      * linkId = "CRP-MolesProVolumeSerumPlasma"
+      * text = "C reactive protein [Moles/volume] in Serum or Plasma"
+      * type = #choice
+      * repeats = true
 
 // ######################################################################################
 
