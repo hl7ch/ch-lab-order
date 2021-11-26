@@ -574,207 +574,51 @@ var fhirQ = {
     },
     {
       "linkId": "labSpecialties",
-      "text": "Labor Sparten Testing",
+      "text": "Labor Sparten",
       "type": "group",
       "item": [
         {
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "18723-7",
-                "system": "http://loinc.org",
-                "display": "Hematology studies (set)"
-              }
-            }
-          ],
-          "linkId": "hematology",
+          "linkId": "labSpecialties.hematology",
           "text": "Hematology",
-          "type": "choice",
-          "repeats": true
-        },
-        {
-          "linkId": "hematologyPanels",
-          "text": "Hematology Panels",
-          "type": "group",
+          "type": "boolean",
           "item": [
             {
-              "answerOption": [
+              "linkId": "labSpecialties.hematology.subgroup",
+              "text": "Subgroup",
+              "type": "group",
+              "enableWhen": [
                 {
-                  "valueCoding": {
-                    "code": "24360-0",
-                    "system": "http://loinc.org",
-                    "display": "Hemoglobin and Hematocrit panel - Blood"
-                  }
+                  "question": "labSpecialties.hematology",
+                  "operator": "=",
+                  "answerBoolean": true
                 }
               ],
-              "linkId": "HemoglobinHematocritPanelBlood",
-              "text": "Hemoglobin and Hematocrit panel - Blood",
-              "type": "choice",
-              "repeats": true
-            },
-            {
-              "answerOption": [
+              "item": [
                 {
-                  "valueCoding": {
-                    "code": "43113-0",
-                    "system": "http://loinc.org",
-                    "display": "Hemoglobin electrophoresis panel in Blood"
-                  }
-                }
-              ],
-              "linkId": "HemoglobinElectrophoresisPanelBlood",
-              "text": "Hemoglobin electrophoresis panel in Blood",
-              "type": "choice",
-              "repeats": true
-            },
-            {
-              "answerOption": [
+                  "linkId": "labSpecialties.hematology.subgroup.ShortFibrinDdimerPlateletpoorplasma",
+                  "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
+                  "type": "boolean"
+                },
                 {
-                  "valueCoding": {
-                    "code": "57021-8",
-                    "system": "http://loinc.org",
-                    "display": "CBC W Auto Differential panel - Blood"
-                  }
+                  "linkId": "labSpecialties.hematology.subgroup.INRplateletPoorPlasmaCoagulationAssay",
+                  "text": "INR in Platelet poor plasma or blood by Coagulation assay",
+                  "type": "boolean"
                 }
-              ],
-              "linkId": "CBCWAutoDifferentialPanelBlood",
-              "text": "CBC W Auto Differential panel - Blood",
-              "type": "choice",
-              "repeats": true
-            },
-            {
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "code": "58410-2",
-                    "system": "http://loinc.org",
-                    "display": "CBC panel - Blood by Automated count"
-                  }
-                }
-              ],
-              "linkId": "CBCPanelBloodAutomatedCount",
-              "text": "CBC panel - Blood by Automated count",
-              "type": "choice",
-              "repeats": true
-            },
-            {
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "code": "57023-4",
-                    "system": "http://loinc.org",
-                    "display": "Auto Differential panel - Blood"
-                  }
-                }
-              ],
-              "linkId": "AutoDifferentialPanelBlood",
-              "text": "Auto Differential panel - Blood",
-              "type": "choice",
-              "repeats": true
+              ]
             }
           ]
         },
         {
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "18720-3",
-                "system": "http://loinc.org",
-                "display": "Coagulation studies (set)"
-              }
-            }
-          ],
-          "linkId": "coagulation",
+          "linkId": "labSpecialties.coagulation",
           "text": "Coagulation",
-          "type": "choice",
+          "type": "boolean",
           "repeats": true
         },
         {
-          "linkId": "coagulationPanels",
-          "text": "Coagulation Panels",
-          "type": "group",
-          "item": [
-            {
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "code": "55398-2",
-                    "system": "http://loinc.org",
-                    "display": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-                  }
-                }
-              ],
-              "linkId": "ShortFibrinDdimerPlateletpoorplasma",
-              "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
-              "type": "choice"
-            },
-            {
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "code": "38875-1",
-                    "system": "http://loinc.org",
-                    "display": "INR in Platelet poor plasma or blood by Coagulation assay"
-                  }
-                }
-              ],
-              "linkId": "INRplateletPoorPlasmaCoagulationAssay",
-              "text": "INR in Platelet poor plasma or blood by Coagulation assay",
-              "type": "choice"
-            }
-          ]
-        },
-        {
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "18719-5",
-                "system": "http://loinc.org",
-                "display": "Chemistry studies (set)"
-              }
-            }
-          ],
-          "linkId": "chemistry",
+          "linkId": "labSpecialties.chemistry",
           "text": "Clinical Chemistry",
-          "type": "choice",
+          "type": "boolean",
           "repeats": true
-        },
-        {
-          "linkId": "chemistryPanels",
-          "text": "Chemistry Panels",
-          "type": "group",
-          "item": [
-            {
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "code": "1988-5",
-                    "system": "http://loinc.org",
-                    "display": "C reactive protein [Mass/Volume] in Serum or Plasma"
-                  }
-                }
-              ],
-              "linkId": "CRP-MassProVolumeSerumPlasma",
-              "text": "C reactive protein [Mass/Volume] in Serum or Plasma",
-              "type": "choice",
-              "repeats": true
-            },
-            {
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "code": "76485-2",
-                    "system": "http://loinc.org",
-                    "display": "C reactive protein [Moles/volume] in Serum or Plasma"
-                  }
-                }
-              ],
-              "linkId": "CRP-MolesProVolumeSerumPlasma",
-              "text": "C reactive protein [Moles/volume] in Serum or Plasma",
-              "type": "choice",
-              "repeats": true
-            }
-          ]
         }
       ]
     },
