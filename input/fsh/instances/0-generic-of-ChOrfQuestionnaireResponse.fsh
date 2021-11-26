@@ -263,7 +263,7 @@ Usage: #definition
     * text = "Hematology"
     
 
-    * item[+]
+    * answer.item[+]
       * linkId = "labSpecialties.hematology.panels"
       * text = "Hematology Panels"
       
@@ -298,7 +298,7 @@ Usage: #definition
 
 
   // Coagulation
-  * item[+]
+  * answer.item[+]
     * definition = $loinc#18720-3 "Coagulation studies (set)"
     * linkId = "labSpecialties.coagulation"
     * text = "Coagulation"
@@ -324,7 +324,7 @@ Usage: #definition
   
 
   // Chemistry
-  * item[+]
+  * answer.item[+]
     * definition = $loinc#18719-5 "Chemistry studies (set)"
     * linkId = "labSpecialties.chemistry"
     * text = "Clinical Chemistry"

@@ -399,7 +399,7 @@ Usage: #definition
       * text = "Chemistry Panels"
       * type = #group
       * enableWhen.question = "labSpecialties.chemistry"
-      * enableWhen[=].operator = #=
+      * enableWhen.operator = #=
       * enableWhen.answerBoolean = true
       * item[+]
         * definition = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
@@ -411,6 +411,28 @@ Usage: #definition
         * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
         * text = "C reactive protein [Moles/volume] in Serum or Plasma"
         * type = #boolean  
+
+  // Microbiology
+  * item[+]
+    * definition = $loinc#18725-2 "Microbiology studies (set)"
+    * linkId = "labSpecialties.microbiol"
+    * text = "Microbiology"
+    * type = #boolean
+
+    * item[+]
+      * linkId = "labSpecialties.microbiol.panels"
+      * text = "Microbiology Panels"
+      * type = #group
+      * enableWhen.question = "labSpecialties.microbiol"
+      * enableWhen.operator = #=
+      * enableWhen.answerBoolean = true
+      * item[+]
+        * definition = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+        * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
+        * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
+        * type = #boolean
+      
+  
 // ######################################################################################
 
 
