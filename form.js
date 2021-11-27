@@ -604,7 +604,7 @@ var fhirQ = {
                 {
                   "definition": "43113-0",
                   "linkId": "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood",
-                  "text": "INR in Platelet poor plasma or blood by Coagulation assay",
+                  "text": "Hemoglobin electrophoresis panel in Blood",
                   "type": "boolean"
                 },
                 {
@@ -626,72 +626,100 @@ var fhirQ = {
                   "type": "boolean"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "definition": "18720-3",
-          "linkId": "labSpecialties.coagulation",
-          "text": "Coagulation",
-          "type": "boolean",
-          "item": [
+            },
             {
-              "linkId": "labSpecialties.coagulation.panels",
-              "text": "Coagulation Panels",
-              "type": "group",
-              "enableWhen": [
-                {
-                  "question": "labSpecialties.coagulation",
-                  "operator": "=",
-                  "answerBoolean": true
-                }
-              ],
+              "definition": "18720-3",
+              "linkId": "labSpecialties.coagulation",
+              "text": "Coagulation",
+              "type": "boolean",
               "item": [
                 {
-                  "definition": "55398-2",
-                  "linkId": "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma",
-                  "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
-                  "type": "boolean"
-                },
-                {
-                  "definition": "38875-1",
-                  "linkId": "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay",
-                  "text": "INR in Platelet poor plasma or blood by Coagulation assay",
-                  "type": "boolean"
+                  "linkId": "labSpecialties.coagulation.panels",
+                  "text": "Coagulation Panels",
+                  "type": "group",
+                  "enableWhen": [
+                    {
+                      "question": "labSpecialties.coagulation",
+                      "operator": "=",
+                      "answerBoolean": true
+                    }
+                  ],
+                  "item": [
+                    {
+                      "definition": "55398-2",
+                      "linkId": "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma",
+                      "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
+                      "type": "boolean"
+                    },
+                    {
+                      "definition": "38875-1",
+                      "linkId": "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay",
+                      "text": "INR in Platelet poor plasma or blood by Coagulation assay",
+                      "type": "boolean"
+                    }
+                  ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "definition": "18719-5",
-          "linkId": "labSpecialties.chemistry",
-          "text": "Clinical Chemistry",
-          "type": "boolean",
-          "item": [
+            },
             {
-              "linkId": "labSpecialties.chemistry.panels",
-              "text": "Chemistry Panels",
-              "type": "group",
-              "enableWhen": [
-                {
-                  "question": "labSpecialties.chemistry",
-                  "operator": "=",
-                  "answerBoolean": true
-                }
-              ],
+              "definition": "18719-5",
+              "linkId": "labSpecialties.chemistry",
+              "text": "Clinical Chemistry",
+              "type": "boolean",
               "item": [
                 {
-                  "definition": "1988-5",
-                  "linkId": "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma",
-                  "text": "C reactive protein [Mass/Volume] in Serum or Plasma",
-                  "type": "boolean"
-                },
+                  "linkId": "labSpecialties.chemistry.panels",
+                  "text": "Chemistry Panels",
+                  "type": "group",
+                  "enableWhen": [
+                    {
+                      "question": "labSpecialties.chemistry",
+                      "operator": "=",
+                      "answerBoolean": true
+                    }
+                  ],
+                  "item": [
+                    {
+                      "definition": "1988-5",
+                      "linkId": "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma",
+                      "text": "C reactive protein [Mass/Volume] in Serum or Plasma",
+                      "type": "boolean"
+                    },
+                    {
+                      "definition": "76485-2",
+                      "linkId": "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma",
+                      "text": "C reactive protein [Moles/volume] in Serum or Plasma",
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "definition": "18725-2",
+              "linkId": "labSpecialties.microbiol",
+              "text": "Microbiology",
+              "type": "boolean",
+              "item": [
                 {
-                  "definition": "76485-2",
-                  "linkId": "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma",
-                  "text": "C reactive protein [Moles/volume] in Serum or Plasma",
-                  "type": "boolean"
+                  "linkId": "labSpecialties.microbiol.panels",
+                  "text": "Microbiology Panels",
+                  "type": "group",
+                  "enableWhen": [
+                    {
+                      "question": "labSpecialties.microbiol",
+                      "operator": "=",
+                      "answerBoolean": true
+                    }
+                  ],
+                  "item": [
+                    {
+                      "definition": "90441-7",
+                      "linkId": "labSpecialties.microbiol.panels.BordPertParaperDNA",
+                      "text": "Bordetella pertussis & Bordetella parapertussis DNA panel",
+                      "type": "boolean"
+                    }
+                  ]
                 }
               ]
             }
@@ -771,6 +799,7 @@ var fhirQ = {
     }
   ]
 }
+
 
 // Add the form to the page
 LForms.Util.addFormToPage(fhirQ, 'formContainer');

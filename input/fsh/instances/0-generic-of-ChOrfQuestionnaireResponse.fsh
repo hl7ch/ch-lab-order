@@ -255,18 +255,15 @@ Usage: #definition
 * item[+]
   * linkId = "labSpecialties"
   * text = "Labor Sparten"
-  
 
   * item[+]
     * definition = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "labSpecialties.hematology"
     * text = "Hematology"
-    
 
-    * answer.item[+]
+    * item[+]
       * linkId = "labSpecialties.hematology.panels"
       * text = "Hematology Panels"
-      
     //  * enableWhen[+].question = "labSpecialties.hematology"
     //  * enableWhen[=].operator = #=
     //  * enableWhen[=].answerBoolean = true
@@ -274,78 +271,41 @@ Usage: #definition
         * definition = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
         * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
         * text = "Hemoglobin and Hematocrit panel - Blood"
-        
       * item[+]
         * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
         * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
         * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-        
       * item[+]
         * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
         * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
         * text = "CBC W Auto Differential panel - Blood"
-        
       * item[+]
         * definition = $loinc#58410-2 "CBC panel - Blood by Automated count"
         * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
         * text = "CBC panel - Blood by Automated count"
-        
       * item[+]
         * definition = $loinc#57023-4 "Auto Differential panel - Blood"
         * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
         * text = "Auto Differential panel - Blood"
-        
 
+      * item[+]
+        * definition = $loinc#18720-3 "Coagulation studies (set)"
+        * linkId = "labSpecialties.coagulation"
+        * text = "Coagulation"
 
-  // Coagulation
-  * answer.item[+]
-    * definition = $loinc#18720-3 "Coagulation studies (set)"
-    * linkId = "labSpecialties.coagulation"
-    * text = "Coagulation"
-    
-  
-    * item[+]
-      * linkId = "labSpecialties.coagulation.panels"
-      * text = "Coagulation Panels"
-      
-  //    * enableWhen[+].question = "labSpecialties.coagulation"
-  //    * enableWhen[=].operator = #=
-  //    * enableWhen[=].answerBoolean = true
-      * item[+]
-        * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-        * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
-        * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-        
-      * item[+]
-        * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
-        * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
-        * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-        
-  
-
-  // Chemistry
-  * answer.item[+]
-    * definition = $loinc#18719-5 "Chemistry studies (set)"
-    * linkId = "labSpecialties.chemistry"
-    * text = "Clinical Chemistry"
-    
-
-    * item[+]
-      * linkId = "labSpecialties.chemistry.panels"
-      * text = "Chemistry Panels"
-      
-  //    * enableWhen.question = "labSpecialties.chemistry"
-  //    * enableWhen[=].operator = #=
-  //    * enableWhen.answerBoolean = true
-      * item[+]
-        * definition = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-        * linkId = "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma"
-        * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
-        
-      * item[+]
-        * definition = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-        * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
-        * text = "C reactive protein [Moles/volume] in Serum or Plasma"
-          
+        * item[+]
+          * linkId = "labSpecialties.coagulation.panels"
+          * text = "Coagulation Panels"
+        //  * enableWhen[+].question = "labSpecialties.coagulation"
+        //  * enableWhen[=].operator = #=
+        //  * enableWhen[=].answerBoolean = true
+          * item[+]
+            * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+            * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
+            * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+          * item[+]
+            * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+            * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
+            * text = "INR in Platelet poor plasma or blood by Coagulation assay"
     
 // #####################################################
