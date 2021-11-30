@@ -21,42 +21,42 @@ Usage: #definition
 * item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
 * item[=].item[+].linkId = "order.notificationContactDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
-* item[=].item[=].item.linkId = "order.notificationContactDocument.practitioner"
-* item[=].item[=].item.text = "Zu benachrichtigende Person"
-* item[=].item[=].item.item[0].linkId = "order.notificationContactDocument.practitioner.title"
-* item[=].item[=].item.item[=].text = "Titel"
-* item[=].item[=].item.item[=].answer.valueString = "Dr. med."
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocument.practitioner.familyName"
-* item[=].item[=].item.item[=].text = "Name"
-* item[=].item[=].item.item[=].answer.valueString = "Erlenmeyer"
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocument.practitioner.givenName"
-* item[=].item[=].item.item[=].text = "Vorname"
-* item[=].item[=].item.item[=].answer.valueString = "Eva"
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocument.practitioner.phone"
-* item[=].item[=].item.item[=].text = "Telefon"
-* item[=].item[=].item.item[=].answer.valueString = "033 444 55 66"
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocument.practitioner.email"
-* item[=].item[=].item.item[=].text = "E-Mail"
-* item[=].item[=].item.item[=].answer.valueString = "eva.erlenmeyer@labor-pipette.ch"
+* item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner"
+* item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+* item[=].item[=].item[=].item[0].linkId = "order.notificationContactDocument.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Erlenmeyer"
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Eva"
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "033 444 55 66"
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "eva.erlenmeyer@labor-pipette.ch"
 * item[=].item[+].linkId = "order.notificationContactDocumentResponse"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
-* item[=].item[=].item.linkId = "order.notificationContactDocumentResponse.practitioner"
-* item[=].item[=].item.text = "Zu benachrichtigende Person"
-* item[=].item[=].item.item[0].linkId = "order.notificationContactDocumentResponse.practitioner.title"
-* item[=].item[=].item.item[=].text = "Titel"
-* item[=].item[=].item.item[=].answer.valueString = "Dr. med."
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.familyName"
-* item[=].item[=].item.item[=].text = "Name"
-* item[=].item[=].item.item[=].answer.valueString = "Mustermann"
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.givenName"
-* item[=].item[=].item.item[=].text = "Vorname"
-* item[=].item[=].item.item[=].answer.valueString = "Marc"
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.phone"
-* item[=].item[=].item.item[=].text = "Telefon"
-* item[=].item[=].item.item[=].answer.valueString = "033 444 55 66"
-* item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
-* item[=].item[=].item.item[=].text = "E-Mail"
-* item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
+* item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner"
+* item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+* item[=].item[=].item[=].item[0].linkId = "order.notificationContactDocumentResponse.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Mustermann"
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Marc"
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "033 444 55 66"
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "peter.presto@arztpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].answer.valueCoding = $request-priority#routine
@@ -257,55 +257,59 @@ Usage: #definition
   * text = "Labor Sparten"
 
   * item[+]
-    * definition = $loinc#18723-7 "Hematology studies (set)"
+    //* definition = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "labSpecialties.hematology"
     * text = "Hematology"
-
-    * item[+]
-      * linkId = "labSpecialties.hematology.panels"
-      * text = "Hematology Panels"
-    //  * enableWhen[+].question = "labSpecialties.hematology"
-    //  * enableWhen[=].operator = #=
-    //  * enableWhen[=].answerBoolean = true
-      * item[+]
-        * definition = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-        * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
-        * text = "Hemoglobin and Hematocrit panel - Blood"
-      * item[+]
-        * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-        * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
-        * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-      * item[+]
-        * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-        * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
-        * text = "CBC W Auto Differential panel - Blood"
-      * item[+]
-        * definition = $loinc#58410-2 "CBC panel - Blood by Automated count"
-        * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
-        * text = "CBC panel - Blood by Automated count"
-      * item[+]
-        * definition = $loinc#57023-4 "Auto Differential panel - Blood"
-        * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
-        * text = "Auto Differential panel - Blood"
+    * answer
+      * valueBoolean = true
 
       * item[+]
-        * definition = $loinc#18720-3 "Coagulation studies (set)"
-        * linkId = "labSpecialties.coagulation"
-        * text = "Coagulation"
+        * linkId = "labSpecialties.hematology.panels"
+        * text = "Hematology Panels"
+      //  * enableWhen[+].question = "labSpecialties.hematology"
+      //  * enableWhen[=].operator = #=
+      //  * enableWhen[=].answerBoolean = true
+        * item[+]
+          // * definition = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"  --> Loinc wird im Mapping zugewiesen
+          * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
+          * text = "Hemoglobin and Hematocrit panel - Blood"
+          * answer.valueBoolean = true
+/*
+        * item[+]
+          * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+          * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
+          * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+        * item[+]
+          * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+          * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
+          * text = "CBC W Auto Differential panel - Blood"
+        * item[+]
+          * definition = $loinc#58410-2 "CBC panel - Blood by Automated count"
+          * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
+          * text = "CBC panel - Blood by Automated count"
+        * item[+]
+          * definition = $loinc#57023-4 "Auto Differential panel - Blood"
+          * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
+          * text = "Auto Differential panel - Blood"
 
         * item[+]
-          * linkId = "labSpecialties.coagulation.panels"
-          * text = "Coagulation Panels"
-        //  * enableWhen[+].question = "labSpecialties.coagulation"
-        //  * enableWhen[=].operator = #=
-        //  * enableWhen[=].answerBoolean = true
+          * definition = $loinc#18720-3 "Coagulation studies (set)"
+          * linkId = "labSpecialties.coagulation"
+          * text = "Coagulation"
+
           * item[+]
-            * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-            * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
-            * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-          * item[+]
-            * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
-            * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
-            * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-    
-// #####################################################
+            * linkId = "labSpecialties.coagulation.panels"
+            * text = "Coagulation Panels"
+          //  * enableWhen[+].question = "labSpecialties.coagulation"
+          //  * enableWhen[=].operator = #=
+          //  * enableWhen[=].answerBoolean = true
+            * item[+]
+              * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+              * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
+              * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+            * item[+]
+              * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+              * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
+              * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+      */
+  // #####################################################
