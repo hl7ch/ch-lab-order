@@ -11,3 +11,5 @@ Usage: #definition
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#706053007 "General specimen container (physical object)"
+// * fastingStatusDuration.value = "12" // TODO please correct content
+// * fastingStatusDurationUnit.code = #h

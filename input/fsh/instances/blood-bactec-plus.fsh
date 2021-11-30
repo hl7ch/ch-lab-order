@@ -12,6 +12,7 @@ Usage: #definition
 * request = Reference(lab)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* processing.procedure = #FREEZE "Tiefkühlen bei -18° Celsius" // TODO should have another Value not in the WS: colling, freezing ...
 * container.identifier.value = "4e88a-bc987-dd888-00000-bact"
 * container.description = "Sarstedt Blutkultur-Adapter Universal"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
