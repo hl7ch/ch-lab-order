@@ -266,14 +266,11 @@ Usage: #definition
       * item[+]
         * linkId = "labSpecialties.hematology.panels"
         * text = "Hematology Panels"
-      //  * enableWhen[+].question = "labSpecialties.hematology"
-      //  * enableWhen[=].operator = #=
-      //  * enableWhen[=].answerBoolean = true
         * item[+]
-          // * definition = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"  --> Loinc wird im Mapping zugewiesen
           * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
           * text = "Hemoglobin and Hematocrit panel - Blood"
-          * answer.valueBoolean = true
+          * answer
+            * valueBoolean = true
 /*
         * item[+]
           * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
@@ -292,24 +289,27 @@ Usage: #definition
           * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
           * text = "Auto Differential panel - Blood"
 
-        * item[+]
-          * definition = $loinc#18720-3 "Coagulation studies (set)"
-          * linkId = "labSpecialties.coagulation"
-          * text = "Coagulation"
 
-          * item[+]
-            * linkId = "labSpecialties.coagulation.panels"
-            * text = "Coagulation Panels"
-          //  * enableWhen[+].question = "labSpecialties.coagulation"
-          //  * enableWhen[=].operator = #=
-          //  * enableWhen[=].answerBoolean = true
-            * item[+]
-              * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-              * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
-              * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+  * item[+]
+    * linkId = "labSpecialties.coagulation"
+    * text = "Coagulation"
+    * answer
+      * answerBoolean = true
+
+      * item[+]
+        * linkId = "labSpecialties.coagulation.panels"
+        * text = "Coagulation Panels"
+
+        * item[+]
+          * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
+          * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+          * answer
+            * answerBoolean = true
+
+           
             * item[+]
               * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
               * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
               * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-      */
+*/ 
   // #####################################################
