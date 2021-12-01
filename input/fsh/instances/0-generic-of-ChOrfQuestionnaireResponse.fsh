@@ -257,7 +257,6 @@ Usage: #definition
   * text = "Labor Sparten"
 
   * item[+]
-    //* definition = $loinc#18723-7 "Hematology studies (set)"
     * linkId = "labSpecialties.hematology"
     * text = "Hematology"
     * answer
@@ -289,13 +288,15 @@ Usage: #definition
           * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
           * text = "Auto Differential panel - Blood"
 
+*/
 
   * item[+]
     * linkId = "labSpecialties.coagulation"
     * text = "Coagulation"
     * answer
-      * answerBoolean = true
+      * valueBoolean = true
 
+/* 
       * item[+]
         * linkId = "labSpecialties.coagulation.panels"
         * text = "Coagulation Panels"
@@ -304,12 +305,18 @@ Usage: #definition
           * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
           * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
           * answer
-            * answerBoolean = true
+            * valueBoolean = true
 
-           
+          
             * item[+]
               * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
               * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
               * text = "INR in Platelet poor plasma or blood by Coagulation assay"
 */ 
+
+  * item[+]
+    * linkId = "labSpecialties.chemistry"
+    * text = "Clinical Chemistry"
+    * answer
+      * valueBoolean = true
   // #####################################################
