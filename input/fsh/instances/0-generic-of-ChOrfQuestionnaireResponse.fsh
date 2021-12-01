@@ -270,11 +270,13 @@ Usage: #definition
           * text = "Hemoglobin and Hematocrit panel - Blood"
           * answer
             * valueBoolean = true
-/*
+
         * item[+]
-          * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
           * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
-          * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+          * text = "Hemoglobin electrophoresis panel in Blood"
+          * answer
+            * valueBoolean = true
+/*          
         * item[+]
           * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
           * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
@@ -296,7 +298,7 @@ Usage: #definition
     * answer
       * valueBoolean = true
 
-/* 
+
       * item[+]
         * linkId = "labSpecialties.coagulation.panels"
         * text = "Coagulation Panels"
@@ -308,11 +310,12 @@ Usage: #definition
             * valueBoolean = true
 
           
-            * item[+]
-              * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
-              * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
-              * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-*/ 
+        * item[+]
+          * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
+          * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+          * answer
+            * valueBoolean = true
+
 
   * item[+]
     * linkId = "labSpecialties.chemistry"
