@@ -12,7 +12,10 @@ Usage: #definition
 * request = Reference(lab)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
-* processing.procedure = #FREEZE "Tiefkühlen bei -18° Celsius" // TODO should have another Value not in the WS: colling, freezing ...
+* processing.procedure.coding.system = "https://www.hl7.org/fhir/v2/0373" // TODO should have another Value not in the WS: cooling, freezing ...
+* processing.procedure.coding.code.value = "ACID"
+* processing.procedure.coding.system = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/Specimen.processing.procedure"
+* processing.procedure.coding.code.value = "COOLING"
 * container.identifier.value = "4e88a-bc987-dd888-00000-bact"
 * container.description = "Sarstedt Blutkultur-Adapter Universal"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
