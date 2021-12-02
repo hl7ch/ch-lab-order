@@ -116,9 +116,9 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption.valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption.valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption.valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -185,8 +185,8 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption.valueCoding = $administrative-gender#female "Weiblich"
-* item[=].item[=].answerOption.valueCoding = $administrative-gender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].type = #string
@@ -361,76 +361,71 @@ Usage: #definition
         * text = "Auto Differential panel - Blood"
         * type = #boolean
 
-    // Coagulation
+  // Coagulation
+  * item[+]
+    * definition = $loinc#18720-3 "Coagulation studies (set)"
+    * linkId = "labSpecialties.coagulation"
+    * text = "Coagulation"
+    * type = #boolean
+  
     * item[+]
-      * definition = $loinc#18720-3 "Coagulation studies (set)"
-      * linkId = "labSpecialties.coagulation"
-      * text = "Coagulation"
-      * type = #boolean
-    
+      * linkId = "labSpecialties.coagulation.panels"
+      * text = "Coagulation Panels"
+      * type = #group
+      * enableWhen[+].question = "labSpecialties.coagulation"
+      * enableWhen[=].operator = #=
+      * enableWhen[=].answerBoolean = true
       * item[+]
-        * linkId = "labSpecialties.coagulation.panels"
-        * text = "Coagulation Panels"
-        * type = #group
-        * enableWhen[+].question = "labSpecialties.coagulation"
-        * enableWhen[=].operator = #=
-        * enableWhen[=].answerBoolean = true
-        * item[+]
-          * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-          * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
-          * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-          * type = #boolean
-        * item[+]
-          * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
-          * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
-          * text = "INR in Platelet poor plasma or blood by Coagulation assay"
-          * type = #boolean
-
-    // Chemistry
+        * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
+        * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+        * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
+        * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+        * type = #boolean
+  // Chemistry
+  * item[+]
+    * definition = $loinc#18719-5 "Chemistry studies (set)"
+    * linkId = "labSpecialties.chemistry"
+    * text = "Clinical Chemistry"
+    * type = #boolean
     * item[+]
-      * definition = $loinc#18719-5 "Chemistry studies (set)"
-      * linkId = "labSpecialties.chemistry"
-      * text = "Clinical Chemistry"
-      * type = #boolean
-
+      * linkId = "labSpecialties.chemistry.panels"
+      * text = "Chemistry Panels"
+      * type = #group
+      * enableWhen.question = "labSpecialties.chemistry"
+      * enableWhen.operator = #=
+      * enableWhen.answerBoolean = true
       * item[+]
-        * linkId = "labSpecialties.chemistry.panels"
-        * text = "Chemistry Panels"
-        * type = #group
-        * enableWhen.question = "labSpecialties.chemistry"
-        * enableWhen.operator = #=
-        * enableWhen.answerBoolean = true
-        * item[+]
-          * definition = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-          * linkId = "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma"
-          * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
-          * type = #boolean
-        * item[+]
-          * definition = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-          * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
-          * text = "C reactive protein [Moles/volume] in Serum or Plasma"
-          * type = #boolean  
-
-    // Microbiology
+        * definition = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+        * linkId = "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma"
+        * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+        * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
+        * text = "C reactive protein [Moles/volume] in Serum or Plasma"
+        * type = #boolean  
+  // Microbiology
+  * item[+]
+    * definition = $loinc#18725-2 "Microbiology studies (set)"
+    * linkId = "labSpecialties.microbiol"
+    * text = "Microbiology"
+    * type = #boolean
     * item[+]
-      * definition = $loinc#18725-2 "Microbiology studies (set)"
-      * linkId = "labSpecialties.microbiol"
-      * text = "Microbiology"
-      * type = #boolean
-
+      * linkId = "labSpecialties.microbiol.panels"
+      * text = "Microbiology Panels"
+      * type = #group
+      * enableWhen.question = "labSpecialties.microbiol"
+      * enableWhen.operator = #=
+      * enableWhen.answerBoolean = true
       * item[+]
-        * linkId = "labSpecialties.microbiol.panels"
-        * text = "Microbiology Panels"
-        * type = #group
-        * enableWhen.question = "labSpecialties.microbiol"
-        * enableWhen.operator = #=
-        * enableWhen.answerBoolean = true
-        * item[+]
-          * definition = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
-          * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
-          * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
-          * type = #boolean
-
+        * definition = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+        * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
+        * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
+        * type = #boolean
 
   
 
