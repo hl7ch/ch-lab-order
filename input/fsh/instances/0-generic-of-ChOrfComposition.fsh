@@ -45,6 +45,6 @@ Usage: #definition
 * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 0-generic\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(0-generic-of-Questionnaire)
+* section[orderReferral].entry[Questionnaire] = Reference(0-generic-of-ChOrfQuestionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(0-generic-of-ChOrfQuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(0-generic-of-ChOrfServiceRequest)

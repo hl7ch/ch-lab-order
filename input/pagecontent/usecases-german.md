@@ -30,7 +30,8 @@ Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurüc
 
 ### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
-Im Spitalumfeld besteht oft die Situation, dass das Formular zur Auswahl der Laboranalysen direkt vom KIS zur Verfügung gestellt wird. Das Formular kann dann auch die mittels Clinical Decision Suport Systems modifiziert werden. Diese Formulare sollten direkt in Service Requests integriert werden können, wobei pro Auftrag auch mehrere Service Requests mittels Request Patterns aufgenommen werden sollten.
+Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
+
 <http://hl7.org/fhir/2020May/request.html#requisitionid>
 
 ### Use Case 3: Anfordern von zusätzlichen Unteresuchungen der gleichen Probe
@@ -98,7 +99,7 @@ Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Me
 
 * ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG
 
-### Use Case 10: Auftraggeber wählt die Analysen oder Analysen-Panel aus einem Katalog
+### Use Case 10: Laborverordnung ohne Verwendung von Questionnaire / QuestionnaireResponse
 
 Dieser Use Case bewegt sich ausserhalb des Bereiches dieses Implementationsguides, obschon er ein wesentlicher Bestandteil von jeder Laborverordnunbg darstellt. Auftraggeber brauchen die Auswahl der Laboruntersuchungen, die das Labor auch wirklich zur Verfügung stellen kann. Ausserdem brauchen sie Orientierung in der Vielzahl von möglichen Untersuchungen in den verschiedenen Sparten, sowie Vorgaben für das präanalytische Vorgehen, Vorgaben für die richtigen Gefässe und Transportmedien, für die Minimalvolumen der Proben usw. Eine zukünftigen Version sollte diese Möglichkeit bieten.
 

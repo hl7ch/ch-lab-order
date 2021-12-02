@@ -1,5 +1,5 @@
-Instance: 1-tvt-of-Questionnaire
-InstanceOf: Questionnaire
+Instance: 1-tvt-of-ChOrfQuestionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 1-tvt"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #definition
@@ -310,6 +310,9 @@ Usage: #definition
 * item[=].item.item[+].linkId = "receiverCopy.country"
 * item[=].item.item[=].text = "Land"
 * item[=].item.item[=].type = #string
+
+// ------------Choice of Specialty-----------------
+// TODO
 * item[+].linkId = "hematology"
 * item[=].text = "Hematology"
 * item[=].type = #group

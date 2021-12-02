@@ -1,9 +1,11 @@
 # temporary folders
-input-cache/**
-output/**
-temp/**
-template/**
-fsh-generated/**
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
 
 # jar files
 *.jar
@@ -11,6 +13,6 @@ fsh-generated/**
 # editing files and folders
 .vscode/**
 
-www/*   
+/www/*   
 !www/package-list.json   
 !www/publish.ini

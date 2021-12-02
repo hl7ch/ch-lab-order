@@ -1,5 +1,5 @@
-Instance: 0-generic-of-Questionnaire
-InstanceOf: Questionnaire
+Instance: 0-generic-of-ChOrfQuestionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 0-generic"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #definition
@@ -311,43 +311,127 @@ Usage: #definition
 * item[=].item.item[=].text = "Land"
 * item[=].item.item[=].type = #string
 
-* item[+].linkId = "hematology"
-* item[=].text = "Hematology"
-* item[=].type = #group
-* item[=].item.linkId = "hemato-subset"
-* item[=].item.text = "Hämatologie Subset"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
+// ------------Choice of Specialty-----------------
+//#################################################
+//* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
+// TODO
 
-* item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+  * type = #group
 
-* item[+].linkId = "coagulation"
-* item[=].text = "Coagulation"
-* item[=].type = #group
-* item[=].item.linkId = "d-dimer"
-* item[=].item.text = "D-Dimer"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
+  // Hematology
+  * item[+]
+    * definition = $loinc#18723-7 "Hematology studies (set)"
+    * linkId = "labSpecialties.hematology"
+    * text = "Hematology"
+    * type = #boolean
 
-* item[=].item.answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+    * item[+]
+      * linkId = "labSpecialties.hematology.panels"
+      * text = "Hematology Panels"
+      * type = #group
+      * enableWhen[+].question = "labSpecialties.hematology"
+      * enableWhen[=].operator = #=
+      * enableWhen[=].answerBoolean = true
+      * item[+]
+        * definition = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+        * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
+        * text = "Hemoglobin and Hematocrit panel - Blood"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+        * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
+        * text = "Hemoglobin electrophoresis panel in Blood"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+        * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
+        * text = "CBC W Auto Differential panel - Blood"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#58410-2 "CBC panel - Blood by Automated count"
+        * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
+        * text = "CBC panel - Blood by Automated count"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#57023-4 "Auto Differential panel - Blood"
+        * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
+        * text = "Auto Differential panel - Blood"
+        * type = #boolean
 
-* item[+].linkId = "cc"
-* item[=].text = "clinical chemistry"
-* item[=].type = #group
-* item[=].item.linkId = "crp"
-* item[=].item.text = "CRP"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
+  // Coagulation
+  * item[+]
+    * definition = $loinc#18720-3 "Coagulation studies (set)"
+    * linkId = "labSpecialties.coagulation"
+    * text = "Coagulation"
+    * type = #boolean
+  
+    * item[+]
+      * linkId = "labSpecialties.coagulation.panels"
+      * text = "Coagulation Panels"
+      * type = #group
+      * enableWhen[+].question = "labSpecialties.coagulation"
+      * enableWhen[=].operator = #=
+      * enableWhen[=].answerBoolean = true
+      * item[+]
+        * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
+        * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+        * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
+        * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+        * type = #boolean
+  // Chemistry
+  * item[+]
+    * definition = $loinc#18719-5 "Chemistry studies (set)"
+    * linkId = "labSpecialties.chemistry"
+    * text = "Clinical Chemistry"
+    * type = #boolean
+    * item[+]
+      * linkId = "labSpecialties.chemistry.panels"
+      * text = "Chemistry Panels"
+      * type = #group
+      * enableWhen.question = "labSpecialties.chemistry"
+      * enableWhen.operator = #=
+      * enableWhen.answerBoolean = true
+      * item[+]
+        * definition = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+        * linkId = "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma"
+        * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
+        * type = #boolean
+      * item[+]
+        * definition = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+        * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
+        * text = "C reactive protein [Moles/volume] in Serum or Plasma"
+        * type = #boolean  
+  // Microbiology
+  * item[+]
+    * definition = $loinc#18725-2 "Microbiology studies (set)"
+    * linkId = "labSpecialties.microbiol"
+    * text = "Microbiology"
+    * type = #boolean
+    * item[+]
+      * linkId = "labSpecialties.microbiol.panels"
+      * text = "Microbiology Panels"
+      * type = #group
+      * enableWhen.question = "labSpecialties.microbiol"
+      * enableWhen.operator = #=
+      * enableWhen.answerBoolean = true
+      * item[+]
+        * definition = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+        * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
+        * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
+        * type = #boolean
 
-* item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* item[=].item.answerOption[=].initialSelected = true
-* item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+  
+
+  
+// ######################################################################################
+
 
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"

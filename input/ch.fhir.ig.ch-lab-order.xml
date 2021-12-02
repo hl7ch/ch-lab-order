@@ -103,6 +103,13 @@
     <!-- ####################### -->
 
     <!-- Reference to Bundles -->
+    <resource>
+      <reference>
+        <reference value="Bundle/0-generic" />
+      </reference>
+      <name value="Referral 0-generic" />
+      <description value="Example Bundle for referral/order for general laboratory orders" />
+    </resource>
 
     <resource>
       <reference>

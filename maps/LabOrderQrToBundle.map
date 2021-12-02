@@ -1,6 +1,6 @@
 map "http://fhir.ch/ig/ch-lab-order/StructureMap/LabOrderQrToBundle" = "LabOrderQrToBundle"
 
-// Labiologoy QuestionnaireResponse to Bundle
+// Laboratory QuestionnaireResponse to Bundle
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
