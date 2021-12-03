@@ -12,6 +12,8 @@ Usage: #definition
 * request = Reference(lab)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
+* processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
