@@ -10,6 +10,8 @@ Usage: #definition
 * subject = Reference(BeatBorer)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.fastingStatusCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0916"
+* collection.fastingStatusCodeableConcept.coding.code.value = "F"
+* collection.fastingStatusCodeableConcept.coding.display = "Patient nüchtern vor Prozedur"
+// * collection.bodySite = "cubital vein"
 * container.type = $sct#706053007 "General specimen container (physical object)"
-// * fastingStatusDuration.value = "12" // TODO please correct content
-// * fastingStatusDurationUnit.code = #h
