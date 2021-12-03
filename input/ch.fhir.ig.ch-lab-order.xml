@@ -103,6 +103,13 @@
     <!-- ####################### -->
 
     <!-- Reference to Bundles -->
+    <resource>
+      <reference>
+        <reference value="Bundle/0-generic" />
+      </reference>
+      <name value="Referral 0-generic" />
+      <description value="Example Bundle for referral/order for general laboratory orders" />
+    </resource>
 
     <resource>
       <reference>
@@ -663,9 +670,17 @@
     
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
+
     <resource>
       <reference>
         <reference value="StructureDefinition/ch-lab-order-composition" />
+      </reference>
+      <exampleBoolean value="false" />
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-lab-order-document" />
       </reference>
       <exampleBoolean value="false" />
     </resource>
@@ -676,6 +691,8 @@
       </reference>
       <exampleBoolean value="false" />
     </resource>
+
+    
 
     <!-- References to VALUESETS -->
     <!-- ####################### -->

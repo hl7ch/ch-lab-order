@@ -1,35 +1,5 @@
 == Suppressed Messages ==
 
-# Build Errors: icon-q-coding.png, see https://github.com/hl7ch/ch-orf/issues/26
-The image source 'icon-q-coding.png' cannot be resolved
-
-# Build Errors: Options, see https://github.com/hl7ch/ch-orf/issues/8
-The link 'null#item.order.priority' for "4 options" cannot be resolved
-The link 'null#item.patient.gender' for "3 options" cannot be resolved
-The link 'null#item.requestedEncounter.class' for "3 options" cannot be resolved
-The link 'null#item.requestedEncounter.desiredAccommodation' for "3 options" cannot be resolved
-The link 'null#item.appointment.status' for "3 options" cannot be resolved
-
-The link 'null#item.hemato-subset' for "5 options" cannot be resolved
-The link 'null#item.d-dimer' for "1 option" cannot be resolved
-The link 'null#item.crp' for "4 options" cannot be resolved
-The link 'null#item.per' for "1 option" cannot be resolved
-The link 'null#item.blood-diff' for "1 option" cannot be resolved
-The link 'null#item.crp' for "1 option" cannot be resolved
-The link 'null#item.cervicalSmear' for "2 options" cannot be resolved
-The link 'null#item.combur9' for "1 option" cannot be resolved
-The link 'null#item.obstetric' for "1 option" cannot be resolved
-The link 'null#item.lab' for "5 options" cannot be resolved
-The link 'null#item.culture' for "1 option" cannot be resolved
-The link 'null#item.id-susc' for "1 option" cannot be resolved
-The link 'null#item.crp' for "4 options" cannot be resolved
-The link 'null#item.lab' for "5 options" cannot be resolved
-The link 'null#item.tox' for "3 options" cannot be resolved
-
-# Build Errors: valueset-diagnostic-requests.html, see https://github.com/hl7ch/ch-orf/issues/7
-The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-
-
 # Allow German display values or clearer descriptions for the questionnaire
 
 Display Name for http://hl7.org/fhir/request-priority#routine should be one of 'Routine' instead of 'Die Anfrage hat normale Priorität.' for 'http://hl7.org/fhir/request-priority#routine'
@@ -55,3 +25,7 @@ Code System URI 'http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicer
 # missing examples
 
 The Implementation Guide contains no examples for this profile
+
+# Allow Swiss specific display value
+
+The display "Clinical presentation" is not a valid display for the code {http://loinc.org}55108-5 - should be one of ['Clinical presentation Document', 'Clinical presentation Doc', '临床文档型' (zh-CN), '临床文档' (zh-CN), '文档' (zh-CN), '文书' (zh-CN), '医疗文书' (zh-CN), '临床医疗文书 医疗服务对象' (zh-CN), '客户' (zh-CN), '病人' (zh-CN), '病患' (zh-CN), '病号' (zh-CN), '超系统 - 病人 发现是一个原子型临床观察指标，并不是作为印象的概括陈述。体格检查、病史、系统检查及其他此类观察指标的属性均为发现。它们的标尺对于编码型发现可能是名义型，而对于叙述型文本之中所报告的发现，则可能是叙述型。' (zh-CN), '发现物' (zh-CN), '所见' (zh-CN), '结果' (zh-CN), '结论 文档.其他' (zh-CN), '杂项类文档' (zh-CN), '其他文档 时刻' (zh-CN), '随机' (zh-CN), '随意' (zh-CN), '瞬间 杂项' (zh-CN), '杂项类' (zh-CN), '杂项试验' (zh-CN), 'Documentazione miscellanea Miscellanea Osservazione paziente Punto nel tempo (episodio)' (it-IT), 'Документ Точка во времени' (ru-RU), 'Момент' (ru-RU), '' (ru-RU)] (from http://tx.fhir.org/r4) for 'http://loinc.org#55108-5'

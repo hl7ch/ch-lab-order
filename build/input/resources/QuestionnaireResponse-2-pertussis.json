@@ -1,0 +1,792 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "2-pertussis",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"
+    ],
+    "versionId": "1",
+    "lastUpdated": "2019-04-01T20:17:53.340+00:00"
+  },
+  "questionnaire": "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis",
+  "status": "completed",
+  "item": [
+    {
+      "linkId": "order",
+      "text": "Auftrag",
+      "item": [
+        {
+          "linkId": "order.placerOrderIdentifier",
+          "text": "Auftragsnummer des Auftraggebers",
+          "answer": [
+            {
+              "valueString": "123"
+            }
+          ]
+        },
+        {
+          "linkId": "order.placerOrderIdentifierDomain",
+          "text": "Identifier Domain der Auftragsnummer des Auftraggebers",
+          "answer": [
+            {
+              "valueString": "urn:oid:2.16.756.5.30"
+            }
+          ]
+        },
+        {
+          "linkId": "order.precedentDocumentIdentifier",
+          "text": "Identifier des Vorgängerdokuments",
+          "answer": [
+            {
+              "valueString": "1622f2fb-6ba3-4532-9aed-35b158def187"
+            }
+          ]
+        },
+        {
+          "linkId": "order.notificationContactDocument",
+          "text": "Dringender Benachrichtigungskontakt für dieses Dokument",
+          "item": [
+            {
+              "linkId": "order.notificationContactDocument.practitioner",
+              "text": "Zu benachrichtigende Person",
+              "item": [
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.title",
+                  "text": "Titel",
+                  "answer": [
+                    {
+                      "valueString": "Dr. med."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Presto"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Peter"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "032 333 22 33"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocument.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "eva.erlenmeyer@labor-pipette.ch"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "order.notificationContactDocumentResponse",
+          "text": "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument",
+          "item": [
+            {
+              "linkId": "order.notificationContactDocumentResponse.practitioner",
+              "text": "Zu benachrichtigende Person",
+              "item": [
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.title",
+                  "text": "Titel",
+                  "answer": [
+                    {
+                      "valueString": "Dr. med."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Erlenmeyer"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Eva"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "033 444 55 66"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "order.notificationContactDocumentResponse.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "eva.erlenmeyer@labor-pipette.ch"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "order.priority",
+          "text": "Auftragspriorität",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "routine",
+                "system": "http://hl7.org/fhir/request-priority"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "receiver",
+      "text": "Empfänger",
+      "item": [
+        {
+          "linkId": "receiver.practitioner",
+          "text": "Empfangende Person",
+          "item": [
+            {
+              "linkId": "receiver.practitioner.title",
+              "text": "Titel",
+              "answer": [
+                {
+                  "valueString": "Dr. med."
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.familyName",
+              "text": "Name",
+              "answer": [
+                {
+                  "valueString": "Presto"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.givenName",
+              "text": "Vorname",
+              "answer": [
+                {
+                  "valueString": "Peter"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.gln",
+              "text": "GLN",
+              "answer": [
+                {
+                  "valueString": "7601000050703"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.phone",
+              "text": "Telefon",
+              "answer": [
+                {
+                  "valueString": "+41322552525"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.practitioner.email",
+              "text": "E-Mail",
+              "answer": [
+                {
+                  "valueString": "peter.presto@arztpraxis.ch"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "receiver.organization",
+          "text": "Empfangende Organisation",
+          "item": [
+            {
+              "linkId": "receiver.organization.name",
+              "text": "Name der Organisation",
+              "answer": [
+                {
+                  "valueString": "Labor Pipette"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.streetAddressLine",
+              "text": "Strasse, Hausnummer, Postfach etc.",
+              "answer": [
+                {
+                  "valueString": "Laborstrasse 23"
+                },
+                {
+                  "valueString": "Postfach 44"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.postalCode",
+              "text": "PLZ",
+              "answer": [
+                {
+                  "valueString": "4600"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.city",
+              "text": "Ort",
+              "answer": [
+                {
+                  "valueString": "Olten"
+                }
+              ]
+            },
+            {
+              "linkId": "receiver.organization.country",
+              "text": "Land",
+              "answer": [
+                {
+                  "valueString": "Schweiz"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "patient",
+      "text": "Patient",
+      "item": [
+        {
+          "linkId": "patient.familyName",
+          "text": "Name",
+          "answer": [
+            {
+              "valueString": "Kummer"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.maidenName",
+          "text": "Ledigname",
+          "answer": [
+            {
+              "valueString": "Bering"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.givenName",
+          "text": "Vorname",
+          "answer": [
+            {
+              "valueString": "Emil"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.localPid",
+          "text": "Lokale Patienten-ID",
+          "answer": [
+            {
+              "valueString": "012/08.111102"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.birthDate",
+          "text": "Geburtsdatum",
+          "answer": [
+            {
+              "valueDate": "2014-05-05"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.gender",
+          "text": "Geschlecht",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "male",
+                "system": "http://hl7.org/fhir/administrative-gender"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "patient.phone",
+          "text": "Telefon",
+          "answer": [
+            {
+              "valueString": "079 989 89 89"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.email",
+          "text": "E-Mail",
+          "answer": [
+            {
+              "valueString": "vera.kummer@example.ch"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.streetAddressLine",
+          "text": "Strasse, Hausnummer, Postfach etc.",
+          "answer": [
+            {
+              "valueString": "Musterweg"
+            },
+            {
+              "valueString": "6a"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.postalCode",
+          "text": "PLZ",
+          "answer": [
+            {
+              "valueString": "8000"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.city",
+          "text": "Ort",
+          "answer": [
+            {
+              "valueString": "Zürich"
+            }
+          ]
+        },
+        {
+          "linkId": "patient.country",
+          "text": "Land",
+          "answer": [
+            {
+              "valueString": "Schweiz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "sender",
+      "text": "Absender",
+      "item": [
+        {
+          "linkId": "sender.author",
+          "text": "Verantwortlicher",
+          "item": [
+            {
+              "linkId": "sender.author.practitioner",
+              "text": "Verantwortliche Person",
+              "item": [
+                {
+                  "linkId": "sender.author.practitioner.title",
+                  "text": "Titel",
+                  "answer": [
+                    {
+                      "valueString": "Dr. med."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Presto"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Peter"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.gln",
+                  "text": "GLN",
+                  "answer": [
+                    {
+                      "valueString": "7601000034321"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "032 333 22 33"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "peter.presto@arztpraxis.ch"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "sender.author.organization",
+              "text": "Verantwortliche Organisation",
+              "item": [
+                {
+                  "linkId": "sender.author.organization.name",
+                  "text": "Name der Organisation",
+                  "answer": [
+                    {
+                      "valueString": "Praxis Seeblick"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.streetAddressLine",
+                  "text": "Strasse, Hausnummer, Postfach etc.",
+                  "answer": [
+                    {
+                      "valueString": "Seestrasse 133"
+                    },
+                    {
+                      "valueString": "Haus C"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.postalCode",
+                  "text": "PLZ",
+                  "answer": [
+                    {
+                      "valueString": "8000"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.city",
+                  "text": "Ort",
+                  "answer": [
+                    {
+                      "valueString": "Zürich"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.author.organization.country",
+                  "text": "Land",
+                  "answer": [
+                    {
+                      "valueString": "Schweiz"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "sender.dataenterer",
+          "text": "Erfasser",
+          "item": [
+            {
+              "linkId": "sender.dataenterer.practitioner",
+              "text": "Erfassende Person",
+              "item": [
+                {
+                  "linkId": "sender.dataenterer.practitioner.familyName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Presto"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.givenName",
+                  "text": "Vorname",
+                  "answer": [
+                    {
+                      "valueString": "Peter"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.phone",
+                  "text": "Telefon",
+                  "answer": [
+                    {
+                      "valueString": "032 333 22 33"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "sender.dataenterer.practitioner.email",
+                  "text": "E-Mail",
+                  "answer": [
+                    {
+                      "valueString": "peter.presto@arztpraxis.ch"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "receiverCopies",
+      "text": "Kopieempfänger",
+      "item": [
+        {
+          "linkId": "receiverCopy",
+          "text": "Kopieempfangende Organisation oder Person",
+          "item": [
+            {
+              "linkId": "receiverCopy.organization.name",
+              "text": "Name der Organisation",
+              "answer": [
+                {
+                  "valueString": "Gruppenpraxis"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.title",
+              "text": "Titel",
+              "answer": [
+                {
+                  "valueString": "Dr. med."
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.familyName",
+              "text": "Name",
+              "answer": [
+                {
+                  "valueString": "Hauser"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.givenName",
+              "text": "Vorname",
+              "answer": [
+                {
+                  "valueString": "Hans"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.phone",
+              "text": "Telefon",
+              "answer": [
+                {
+                  "valueString": "038 888 22 11"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.email",
+              "text": "E-Mail",
+              "answer": [
+                {
+                  "valueString": "hans.hauser@gruppenpraxis.ch"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "receiverCopy",
+          "text": "Kopieempfangende Organisation oder Person",
+          "item": [
+            {
+              "linkId": "receiverCopy.familyName",
+              "text": "Name",
+              "answer": [
+                {
+                  "valueString": "Kummer"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.givenName",
+              "text": "Vorname",
+              "answer": [
+                {
+                  "valueString": "Claudia"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.phone",
+              "text": "Telefon",
+              "answer": [
+                {
+                  "valueString": "079 979 79 79"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.email",
+              "text": "E-Mail",
+              "answer": [
+                {
+                  "valueString": "claudia.kummer@redwin.ch"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.streetAddressLine",
+              "text": "Strasse, Hausnummer, Postfach etc.",
+              "answer": [
+                {
+                  "valueString": "Musterweg"
+                },
+                {
+                  "valueString": "6a"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.postalCode",
+              "text": "PLZ",
+              "answer": [
+                {
+                  "valueString": "8000"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.city",
+              "text": "Ort",
+              "answer": [
+                {
+                  "valueString": "Zürich"
+                }
+              ]
+            },
+            {
+              "linkId": "receiverCopy.country",
+              "text": "Land",
+              "answer": [
+                {
+                  "valueString": "Schweiz"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "microbiology",
+      "text": "Mikrobiologie",
+      "item": [
+        {
+          "linkId": "per",
+          "text": "Pertussis and Parapertussis DNA",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "90441-7",
+                "system": "http://loinc.org",
+                "display": "B pert+parapert DNA Pnl Nph"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "hematology",
+      "text": "Hämatologie",
+      "item": [
+        {
+          "linkId": "blood-diff",
+          "text": "Manual Differential panel - Blood",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "24318-8",
+                "system": "http://loinc.org",
+                "display": "Manual diff Bld"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "clinical chemistry",
+      "text": "Klinische Chemie",
+      "item": [
+        {
+          "linkId": "crp",
+          "text": "C-reactive Protein",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "1988-5",
+                "system": "http://loinc.org",
+                "display": "C reactive protein [Mass/volume] in Serum or Plasma"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

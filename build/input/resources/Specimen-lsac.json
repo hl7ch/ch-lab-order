@@ -1,0 +1,121 @@
+{
+  "resourceType": "Specimen",
+  "id": "lsac",
+  "identifier": [
+    {
+      "value": "48736-22222-75465"
+    }
+  ],
+  "accessionIdentifier": {
+    "value": "4e88a-11111-dd888"
+  },
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "code": "258450006",
+        "system": "http://snomed.info/sct",
+        "display": "Cerebrospinal fluid sample"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "FranzMuster"
+  },
+  "receivedTime": "2020-08-16T16:40:17Z",
+  "request": [
+    {
+      "reference": "ServiceRequest/lab"
+    }
+  ],
+  "collection": {
+    "collector": {
+      "reference": "MarcMustermann"
+    },
+    "collectedDateTime": "2020-08-16T06:40:17Z",
+    "method": {
+      "coding": [
+        {
+          "code": "277762005",
+          "system": "http://snomed.info/sct",
+          "display": "Lumbar puncture (procedure)"
+        }
+      ]
+    }
+  },
+  "container": [
+    {
+      "identifier": [
+        {
+          "value": "4e88a-bc987-dd888-12345-cc"
+        }
+      ],
+      "description": "Container for Chemistry",
+      "type": {
+        "coding": [
+          {
+            "code": "706053007",
+            "system": "http://snomed.info/sct",
+            "display": "General specimen container (physical object)"
+          }
+        ]
+      }
+    },
+    {
+      "identifier": [
+        {
+          "value": "4e88a-bc987-dd888-12345-mic"
+        }
+      ],
+      "description": "Container for Microbiology",
+      "type": {
+        "coding": [
+          {
+            "code": "706053007",
+            "system": "http://snomed.info/sct",
+            "display": "General specimen container (physical object)"
+          }
+        ]
+      }
+    },
+    {
+      "identifier": [
+        {
+          "value": "4e88a-bc987-dd888-12345-cyt"
+        }
+      ],
+      "description": "Container for Cytology",
+      "type": {
+        "coding": [
+          {
+            "code": "706053007",
+            "system": "http://snomed.info/sct",
+            "display": "General specimen container (physical object)"
+          }
+        ]
+      }
+    },
+    {
+      "identifier": [
+        {
+          "value": "4e88a-bc987-dd888-12345-other"
+        }
+      ],
+      "description": "Container for other Examens, VDRL, electrophoresis/immunofixation",
+      "type": {
+        "coding": [
+          {
+            "code": "706053007",
+            "system": "http://snomed.info/sct",
+            "display": "General specimen container (physical object)"
+          }
+        ]
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "e.g. Priority of exams"
+    }
+  ]
+}
