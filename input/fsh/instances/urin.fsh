@@ -15,4 +15,3 @@ Usage: #definition
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706053007 "General specimen container (physical object)"
-* note.text = "Specimen is grossly lipemic"

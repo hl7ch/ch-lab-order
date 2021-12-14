@@ -12,7 +12,7 @@ Usage: #definition
 * request = Reference(lab)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
-* processing.procedure.coding.system = "https://www.hl7.org/fhir/v2/0373" // TODO should have another Value not in the WS: cooling, freezing ...
+* processing.procedure.coding.system = "https://www.hl7.org/fhir/v2/0373" 
 * processing.procedure.coding.code.value = "ACID"
 * processing.procedure.coding.system = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/Specimen.processing.procedure"
 * processing.procedure.coding.code.value = "COOLING"
