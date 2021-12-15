@@ -28,9 +28,13 @@ Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende An
 
 Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
 
+Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
+Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
+
 ### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
 Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
+TODO Beispielformular ohne Q/QR
 
 <http://hl7.org/fhir/2020May/request.html#requisitionid>
 
@@ -41,12 +45,16 @@ Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere T
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForAdditionalExam
 
+TODO Beispielformular für Nachverordnung
+
 ### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern
 
 Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.B. um den Verlauf von Prostata-spezifische Antigen (PSA) zu beurteilen.
 
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
+
+TODO Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
   
 ### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
@@ -60,7 +68,7 @@ Beispiele dazu sind:
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
-Beispieldokument: [5-biol-monit.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/5-biol-monit.xml). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
+Beispielformular: [5-biol-monit](http://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
 ### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
@@ -68,11 +76,16 @@ Nach Erhalt des Laborauftrages und dessen Bearbeitung kann sich die Situation er
 
 * ServiceRequest.category: ProposalForAdditionalExam
 
-### Use Case 7: Befunde und weiteren Daten zum Gesundheitszustand des Patienten
+Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
+Beispielformular mir Vorschlag für zusätzliche Untersuchungen als Antwort
 
-Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, müssen weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können. Es handelt sich dabei um vorhandene Befunde, medizische Berichte und Dokumente
+### Use Case 7: Fragestellung, Befunde und weiteren Daten zum Gesundheitszustand des Patienten
 
-* ServiceRequest.reasonCode ServiceRequest.reasonReference
+Die Fragestellung ist für den Laborauftrag von besonderem Interesse. Dazu stellt die der ServiceRequest.reasonCode das nötige Feld zur Verfügung. Der Grund für den Auftrag (ReasonCode) kann codiert, z.B. als SNOMED-CT Procedure dargestellt werden; auch ist reiner Freitext möglich, z.B. 'Abklärung einer adypischen Pneumonie'.  Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, können weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können, wie vorhandene Befunde, medizische Berichte und Dokumente.
+
+* ServiceRequest.reasonCode ServiceRequest.reasonCode.text ServiceRequest.reasonReference
+
+TODO Beispielformular für Mikrobiologie mit Fragestellung [4-sepsis](http://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.html).
 
 ### Use Case 8: Angaben zur Probe, Präanalytik
 
@@ -95,11 +108,16 @@ bei Blutgas-Analysen, wo die dem Patienten zum Zeitpunkt der Probeentnahme verab
 
 ### Use Case 9: Anfordern von Monitoring-Untersuchungen
 
-Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab.
+Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab. Es wurde versucht, diese Verordnungen über die ServiceRequest.catogories abzubilden:
 
 * ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG
 
-### Use Case 10: Laborverordnung ohne Verwendung von Questionnaire / QuestionnaireResponse
+Dieses Vorgehen erscheint aber unbefriedigend, da solche Monitoring Untersuchungen von Vitaldaten ausserhalb der eigentlichen Labordomäne fallen, und da uns FHIR spezifischere Resourcen zur Verfügung stellt:
+Die Resource DeviceRequest bietet sich hier an, wobei das benötigte Gerät in der DeviceDefinition Resource referenziert wird.
+Der dazugeörige Use Case kann analog der Laborverordnung als Bundle mit einer Composition, welche an Stelle des Service Request den Device Request enthält, implementiert werden. Es ist somit sinnvoller, die Anforderung von Monitoring-Untersuchungen in einem eigenen Implementation Guide abzuhandeln.
+Aufgrund obiger Überlegungen wurden die entsprechenden ServiceRequestCategories für das Monitoring im ValueSet des Implementation Guide auskommentiert.
+
+### Use Case 10: Laborverordnung aus dem Labor-Katalog
 
 Dieser Use Case bewegt sich ausserhalb des Bereiches dieses Implementationsguides, obschon er ein wesentlicher Bestandteil von jeder Laborverordnunbg darstellt. Auftraggeber brauchen die Auswahl der Laboruntersuchungen, die das Labor auch wirklich zur Verfügung stellen kann. Ausserdem brauchen sie Orientierung in der Vielzahl von möglichen Untersuchungen in den verschiedenen Sparten, sowie Vorgaben für das präanalytische Vorgehen, Vorgaben für die richtigen Gefässe und Transportmedien, für die Minimalvolumen der Proben usw. Eine zukünftigen Version sollte diese Möglichkeit bieten.
 
