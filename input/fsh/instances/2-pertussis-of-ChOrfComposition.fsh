@@ -17,7 +17,7 @@ Usage: #definition
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(Arztpraxis)
+* extension[=].valueReference = Reference(MarcMustermannArztpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(EmilKummer)
 
