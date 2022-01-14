@@ -7,11 +7,15 @@ Usage: #definition
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
-// * identifier[+].type = $v2-0203#FILL "Filler Identifier"
-// * identifier[=].system = "http://example.com/identifier"
-// * identifier[=].value = "456"
 * status = #active
 * intent = #original-order
+* category = $ch-lab-order-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[0] = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
+* code.coding[+] = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* code.coding[+] = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* code.coding[+] = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+
 * priority = #routine
 * subject = Reference(MarinaRubella)
 * requester = Reference(PeterPapGruppenpraxis)

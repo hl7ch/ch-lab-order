@@ -38,14 +38,12 @@ TODO Beispielformular ohne Q/QR
 
 <http://hl7.org/fhir/2020May/request.html#requisitionid>
 
-### Use Case 3: Anfordern von zusätzlichen Unteresuchungen der gleichen Probe
+### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
 Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere Test mit der gleichen Probe gewünscht werden. So kann im Beispiel 1-tvt eine venöse Thrombophilie vermutet werden, sodass weitere Laboruntersuchungen hereditäre Ursachen, wie Faktor-V-Leiden-Mutaion, Prothrombin-Genmutation, Antithrombinmangel usw. auffinden können.
 
 * Angaben zum angeforderten Service
-  * Servicerequest.category ist RequestForAdditionalExam
-
-TODO Beispielformular für Nachverordnung
+  * Im ValueSet Servicerequest.category wird RequestForAdditionalExam angewählt
 
 ### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern
 
@@ -54,7 +52,7 @@ Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
 
-TODO Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
+Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
   
 ### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
@@ -83,9 +81,9 @@ Beispielformular mir Vorschlag für zusätzliche Untersuchungen als Antwort
 
 Die Fragestellung ist für den Laborauftrag von besonderem Interesse. Dazu stellt die der ServiceRequest.reasonCode das nötige Feld zur Verfügung. Der Grund für den Auftrag (ReasonCode) kann codiert, z.B. als SNOMED-CT Procedure dargestellt werden; auch ist reiner Freitext möglich, z.B. 'Abklärung einer adypischen Pneumonie'.  Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, können weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können, wie vorhandene Befunde, medizische Berichte und Dokumente.
 
-* ServiceRequest.reasonCode ServiceRequest.reasonCode.text ServiceRequest.reasonReference
+* ServiceRequest.reasonCode ServiceRequest.reasonCode.text
 
-TODO Beispielformular für Mikrobiologie mit Fragestellung [4-sepsis](http://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.html).
+Beispielformular für Mikrobiologie mit Fragestellung [4-sepsis](http://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.html).
 
 ### Use Case 8: Angaben zur Probe, Präanalytik
 
@@ -106,7 +104,7 @@ bei Blutgas-Analysen, wo die dem Patienten zum Zeitpunkt der Probeentnahme verab
 
 * ServiceRequest.supportingInfo, z.Bsp. O2 4 Liter/Min.
 
-### Use Case 9: Anfordern von Monitoring-Untersuchungen
+### Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
 
 Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab. Es wurde versucht, diese Verordnungen über die ServiceRequest.catogories abzubilden:
 
@@ -124,6 +122,6 @@ Dieser Use Case bewegt sich ausserhalb des Bereiches dieses Implementationsguide
 Die Labore stellen dazu ihren Kunden einen Katalog von derjenigen Laboruntersuchungen zu Verfügung, welche sie zur Verfügung stellen können. Dabei kann es sich um Einzeluntersuchungen handeln, wie zum Beispiel Natriumkonzentration im Serum, oder um eine Kollektion von Untersuchungen, wie zum Beispiel Na, K und Cl im Serum handeln. Häufig in Form eines Laborhandbuches machen sie die Vorgaben zu Transport-Temperatur, minimale Probenmenge, Art des Transportgefässes usw. zugänglich.
 
 Es wird dazu verschiedene Typen von Katalogeinträgen (CatalogEntries) geben: Einzel-Analysen, Mehrfach-Analysen (panels), Proben-Gefässe, präanalytische Vorbedingungen.
-Der einzelne Datensatz einer Laboruntersuchung oder einer Probe lässt sich als mittels der Resource CatalogEntry abbilden. Eine Composition mit einem Profile for Catalog ist dann das Document, das den Katalog darstellt und repräsentiert die Gesamtheit der enthaltenen CatalogEntries. Dabei ist wichtig, dass der Catalog immer den aktuellen Gegebenheiten des Labors entspricht, und beispielsweise sofort neue Laboruntersuchungen oder veränderte Vorgaben der Präanalytik aufnehmen kann.
+Der einzelne Datensatz einer Laboruntersuchung oder einer Probe lässt sich als mittels der Resource CatalogEntry abbilden. Eine Composition mit einem Profile for Catalog ist dann das Dokument, das den Katalog darstellt und repräsentiert die Gesamtheit der enthaltenen CatalogEntries. Dabei ist wichtig, dass der Catalog immer den aktuellen Gegebenheiten des Labors entspricht, und beispielsweise sofort neue Laboruntersuchungen oder veränderte Vorgaben der Präanalytik aufnehmen kann.
 
 [StructureDefinition:Catalog] <http://hl7.org/fhir/catalog.html>
