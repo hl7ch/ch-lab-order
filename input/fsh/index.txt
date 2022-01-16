@@ -94,7 +94,7 @@ Blood-coag                                  Instance    instances/Blood-coag.fsh
 Cervix-swab                                 Instance    instances/Cervix-swab.fsh
 lab                                         Instance    instances/lab.fsh
 Lsac                                        Instance    instances/Lsac.fsh
-sanitas                                     Instance    instances/sanitas.fsh
+Sanitas                                     Instance    instances/Sanitas.fsh
 serum                                       Instance    instances/serum.fsh
 Throat-swab                                 Instance    instances/Throat-swab.fsh
 urin                                        Instance    instances/urin.fsh
