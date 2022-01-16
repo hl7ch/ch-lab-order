@@ -17,8 +17,8 @@ Usage: #definition
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(MarcMustermannArztpraxis)
 * status = #final
-* type = $sct#721965002 "Laboratory order (record artifact)"
-* category = $sct#721963009 "Order (record artifact)"
+* type = SCT#721965002 "Laboratory order (record artifact)"
+* category = SCT#721963009 "Order (record artifact)"
 * subject = Reference(MarinaRubella)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPapGruppenpraxis)

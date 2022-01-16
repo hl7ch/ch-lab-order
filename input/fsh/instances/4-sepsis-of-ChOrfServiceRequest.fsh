@@ -24,7 +24,7 @@ Usage: #definition
 * priority = #urgent
 * subject = Reference(KlebsiellaKeller)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
+* reasonCode = SCT#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood-bactec-plus)

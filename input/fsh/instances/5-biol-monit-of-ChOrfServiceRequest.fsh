@@ -24,7 +24,7 @@ Usage: #definition
 * priority = #urgent
 * subject = Reference(BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#409967009
+* reasonCode = SCT#409967009
 * reasonCode.text = "Toxicology (qualifier value)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood)

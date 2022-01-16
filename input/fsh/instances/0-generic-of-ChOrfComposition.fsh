@@ -26,8 +26,8 @@ Usage: #definition
 * extension[=].valueReference = Reference(HansGuggindieluft)
 
 * status = #final
-* type = $sct#721965002 "Laboratory order (record artifact)"
-* category = $sct#721963009 "Order (record artifact)"
+* type = SCT#721965002 "Laboratory order (record artifact)"
+* category = SCT#721963009 "Order (record artifact)"
 * subject = Reference(HansGuggindieluft)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)

@@ -19,7 +19,7 @@ Usage: #definition
 * priority = #routine
 * subject = Reference(MarinaRubella)
 * requester = Reference(PeterPapGruppenpraxis)
-* reasonCode = $sct#702601001
+* reasonCode = SCT#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Cervix-swab)

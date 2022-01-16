@@ -19,7 +19,7 @@ Usage: #definition
 * priority = #urgent
 * subject = Reference(EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
+* reasonCode = SCT#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Throat-swab)

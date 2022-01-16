@@ -1,4 +1,4 @@
-Alias: $sct = http://snomed.info/sct
+Alias: SCT = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
 Alias: $ech-11-maritalstatus = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias: $request-priority = http://hl7.org/fhir/request-priority
@@ -9,5 +9,5 @@ Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $ch-lab-order-servicerequest-categories = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
 Alias: $v2-0371 = http://terminology.hl7.org/CodeSystem/v2-0371
 Alias: $shareablevalueset = http://hl7.org/fhir/StructureDefinition/shareablevalueset
-Alias: $DocumentEntry.typeCode = http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.typeCode
-Alias: $DocumentEntry.classCode = http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.classCode
+Alias:   DocumentEntryClassCode =           http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
+Alias:   DocumentEntryTypeCode =            http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
