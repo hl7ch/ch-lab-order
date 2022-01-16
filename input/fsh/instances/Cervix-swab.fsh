@@ -1,4 +1,4 @@
-Instance: cervix-swab
+Instance: Cervix-swab
 InstanceOf: Specimen
 Title: "Cervix-swab Sample"
 Description: "Example for Specimen of Cervix Swab"

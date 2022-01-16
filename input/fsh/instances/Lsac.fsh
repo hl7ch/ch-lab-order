@@ -1,4 +1,4 @@
-Instance: lsac
+Instance: Lsac
 InstanceOf: Specimen
 Title: "Cerebrospinal Fluid Sample"
 Description: "Example for Specimen of Cerebrospinal Fluid"
