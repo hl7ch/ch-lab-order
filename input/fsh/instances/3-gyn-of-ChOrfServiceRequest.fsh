@@ -25,4 +25,4 @@ Usage: #definition
 * specimen[0] = Reference(Cervix-swab)
 * specimen[+] = Reference(Blood)
 * specimen[+] = Reference(serum)
-* specimen[+] = Reference(urin)
+* specimen[+] = Reference(Urin)

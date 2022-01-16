@@ -667,7 +667,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/urin" />
+        <reference value="Specimen/Urin" />
       </reference>
       <name value="Urin Sample" />
       <description value="Example for Specimen of Urin" />

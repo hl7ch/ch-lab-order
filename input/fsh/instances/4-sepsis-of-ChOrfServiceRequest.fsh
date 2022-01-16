@@ -29,4 +29,4 @@ Usage: #definition
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood-bactec-plus)
 * specimen[+] = Reference(Blood)
-* specimen[+] = Reference(urin)
+* specimen[+] = Reference(Urin)

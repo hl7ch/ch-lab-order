@@ -1,4 +1,4 @@
-Instance: urin
+Instance: Urin
 InstanceOf: Specimen
 Title: "Urin Sample"
 Description: "Example for Specimen of Urin"
