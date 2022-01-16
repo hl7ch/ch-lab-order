@@ -8,9 +8,23 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * status = #completed
+
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+
+* item[=].item[+].linkId = "order.title"
+* item[=].item[=].text = "Titel"
+* item[=].item[=].answer.valueString = "Laborauftrag"
+
+* item[=].item[+].linkId = "order.category"
+* item[=].item[=].text = "Kategorie"
+* item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order" 
+
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"

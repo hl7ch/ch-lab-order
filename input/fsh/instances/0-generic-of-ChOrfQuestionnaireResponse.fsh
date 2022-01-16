@@ -18,11 +18,11 @@ Usage: #definition
 
 * item[=].item[+].linkId = "order.category"
 * item[=].item[=].text = "Kategorie"
-* item[=].item[=].answer.valueCoding = SCT#721963009 "Order" //gibt Warnung aus
+* item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
 
 * item[=].item[+].linkId = "order.type"
 * item[=].item[=].text = "Typ"
-* item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order" //gibt Warnung aus
+* item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
 
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
