@@ -37,17 +37,30 @@ Usage: #definition
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
+
 * item[=].item[0].linkId = "order.title"
 * item[=].item[=].text = "Titel"
 * item[=].item[=].type = #string
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode"
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "Laborauftrag"
+
 * item[=].item[+].linkId = "order.category"
 * item[=].item[=].text = "Kategorie"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryClassCode
+* item[=].item[=].initial.valueCoding = SCT#721963009 // Order (record artifact) | Untersuchungsauftrag
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryTypeCode
+* item[=].item[=].initial.valueCoding = SCT#721965002 // Laboratory Order | Laborauftrag | Mandat d’analyse en laboratoire | Richiesta di analisi di laboratorio
+
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string

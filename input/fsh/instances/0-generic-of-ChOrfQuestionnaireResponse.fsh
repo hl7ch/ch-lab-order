@@ -27,16 +27,21 @@ Usage: #definition
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
+
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30"
+
 * item[=].item[+].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
+
 * item[=].item[+].linkId = "order.notificationContactDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
+
 * item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner"
 * item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+
 * item[=].item[=].item[=].item[0].linkId = "order.notificationContactDocument.practitioner.title"
 * item[=].item[=].item[=].item[=].text = "Titel"
 * item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
