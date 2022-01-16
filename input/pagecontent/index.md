@@ -17,6 +17,14 @@ This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Reque
 
 You can download this Implementation Guide in [NPM-format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](https://fhir.ch/ig/ch-lab-order/package.tgz).
 
+### Foundation
+
+Applications claiming for conformance with the CH LAB-Order Implementation Guide shall:
+-Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the user interface (e.g. on screen, in print).
+
+For Clinical Information: Grouping of items and the order of items within shall be adequately reproduced according to the Questionnaire.
+<http://fhir.ch/ig/ch-lab-order/index.html#foundation>
+
 ### Management Summary
 
 Customers of laboratories want to create their orders as efficiently and correctly as possible with the help of order forms. For this purpose, the laboratories provide forms that meet the following requirements:
