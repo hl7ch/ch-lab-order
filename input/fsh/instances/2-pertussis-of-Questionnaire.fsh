@@ -317,7 +317,7 @@ Usage: #definition
 * item[=].item.text = "Pertussis and Parapertussis DNA"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item.answerOption.valueCoding = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
 * item[=].type = #group
@@ -325,7 +325,7 @@ Usage: #definition
 * item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#24318-8 "Manual diff Bld"
+* item[=].item.answerOption.valueCoding = LOINC#24318-8 "Manual diff Bld"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].type = #group
@@ -333,4 +333,4 @@ Usage: #definition
 * item[=].item.text = "C-reactive Protein"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answerOption.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"

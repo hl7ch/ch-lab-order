@@ -317,8 +317,8 @@ Usage: #definition
 * item[=].item.text = "Cervical Smear"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item.answerOption[+].valueCoding = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* item[=].item.answerOption[0].valueCoding = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
+* item[=].item.answerOption[+].valueCoding = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
 * item[+].linkId = "urin"
 * item[=].text = "Urin"
 * item[=].type = #group
@@ -326,7 +326,7 @@ Usage: #definition
 * item[=].item.text = "Combur-9"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* item[=].item.answerOption.valueCoding = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
 * item[+].linkId = "obstetricalPanels"
 * item[=].text = "Schwangerschaftsvorsorge"
 * item[=].type = #group
@@ -334,4 +334,4 @@ Usage: #definition
 * item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item.answerOption.valueCoding = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"

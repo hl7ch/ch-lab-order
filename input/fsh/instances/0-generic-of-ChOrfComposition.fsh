@@ -34,7 +34,7 @@ Usage: #definition
 * title = "Order-Referral-Form 0-generic"
 
 // * section.title = "Order-Referral-Form 0-generic"
-// * section.code = $loinc#93037-0 "Portable medical order form"
+// * section.code = LOINC#93037-0 "Portable medical order form"
 // * section.text.status = #generated
 // * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 0-generic\n</div>"
 // * section.entry[0] = Reference(Questionnaire/0-generic)
@@ -42,7 +42,7 @@ Usage: #definition
 // * section.entry[+] = Reference(ServiceRequest/0-generic)
 
 * section[orderReferral].title = "Order-Referral-Form 0-generic"
-* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 0-generic\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(0-generic-of-ChOrfQuestionnaire)

@@ -293,15 +293,15 @@ Usage: #definition
             * valueBoolean = true
 /*          
         * item[+]
-          * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+          * definition = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
           * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
           * text = "CBC W Auto Differential panel - Blood"
         * item[+]
-          * definition = $loinc#58410-2 "CBC panel - Blood by Automated count"
+          * definition = LOINC#58410-2 "CBC panel - Blood by Automated count"
           * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
           * text = "CBC panel - Blood by Automated count"
         * item[+]
-          * definition = $loinc#57023-4 "Auto Differential panel - Blood"
+          * definition = LOINC#57023-4 "Auto Differential panel - Blood"
           * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
           * text = "Auto Differential panel - Blood"
 

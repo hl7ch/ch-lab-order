@@ -336,7 +336,7 @@ Usage: #definition
 
   // Hematology
   * item[+]
-    * definition = $loinc#18723-7 "Hematology studies (set)"
+    * definition = LOINC#18723-7 "Hematology studies (set)"
     * linkId = "labSpecialties.hematology"
     * text = "Hematology"
     * type = #boolean
@@ -349,34 +349,34 @@ Usage: #definition
       * enableWhen[=].operator = #=
       * enableWhen[=].answerBoolean = true
       * item[+]
-        * definition = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+        * definition = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
         * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
         * text = "Hemoglobin and Hematocrit panel - Blood"
         * type = #boolean
       * item[+]
-        * definition = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+        * definition = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
         * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
         * text = "Hemoglobin electrophoresis panel in Blood"
         * type = #boolean
       * item[+]
-        * definition = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+        * definition = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
         * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
         * text = "CBC W Auto Differential panel - Blood"
         * type = #boolean
       * item[+]
-        * definition = $loinc#58410-2 "CBC panel - Blood by Automated count"
+        * definition = LOINC#58410-2 "CBC panel - Blood by Automated count"
         * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
         * text = "CBC panel - Blood by Automated count"
         * type = #boolean
       * item[+]
-        * definition = $loinc#57023-4 "Auto Differential panel - Blood"
+        * definition = LOINC#57023-4 "Auto Differential panel - Blood"
         * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
         * text = "Auto Differential panel - Blood"
         * type = #boolean
 
   // Coagulation
   * item[+]
-    * definition = $loinc#18720-3 "Coagulation studies (set)"
+    * definition = LOINC#18720-3 "Coagulation studies (set)"
     * linkId = "labSpecialties.coagulation"
     * text = "Coagulation"
     * type = #boolean
@@ -389,18 +389,18 @@ Usage: #definition
       * enableWhen[=].operator = #=
       * enableWhen[=].answerBoolean = true
       * item[+]
-        * definition = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+        * definition = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
         * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
         * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
         * type = #boolean
       * item[+]
-        * definition = $loinc#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
+        * definition = LOINC#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
         * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
         * text = "INR in Platelet poor plasma or Blood by Coagulation assay"
         * type = #boolean
   // Chemistry
   * item[+]
-    * definition = $loinc#18719-5 "Chemistry studies (set)"
+    * definition = LOINC#18719-5 "Chemistry studies (set)"
     * linkId = "labSpecialties.chemistry"
     * text = "Clinical Chemistry"
     * type = #boolean
@@ -412,18 +412,18 @@ Usage: #definition
       * enableWhen.operator = #=
       * enableWhen.answerBoolean = true
       * item[+]
-        * definition = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+        * definition = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
         * linkId = "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma"
         * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
         * type = #boolean
       * item[+]
-        * definition = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+        * definition = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
         * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
         * text = "C reactive protein [Moles/volume] in Serum or Plasma"
         * type = #boolean  
   // Microbiology
   * item[+]
-    * definition = $loinc#18725-2 "Microbiology studies (set)"
+    * definition = LOINC#18725-2 "Microbiology studies (set)"
     * linkId = "labSpecialties.microbiol"
     * text = "Microbiology"
     * type = #boolean
@@ -435,7 +435,7 @@ Usage: #definition
       * enableWhen.operator = #=
       * enableWhen.answerBoolean = true
       * item[+]
-        * definition = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+        * definition = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
         * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
         * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
         * type = #boolean

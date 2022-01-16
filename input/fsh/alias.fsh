@@ -1,5 +1,5 @@
-Alias: SCT = http://snomed.info/sct
-Alias: $loinc = http://loinc.org
+Alias:  SCT               = http://snomed.info/sct
+Alias:  LOINC             = http://loinc.org
 Alias: $ech-11-maritalstatus = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias: $request-priority = http://hl7.org/fhir/request-priority
 Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender

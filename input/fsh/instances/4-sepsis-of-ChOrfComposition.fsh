@@ -31,7 +31,7 @@ Usage: #definition
 * title = "Referral 4-sepsis"
 
 // * section.title = "Order-Referral-Form 4-sepsis"
-// * section.code = $loinc#93037-0 "Portable medical order form"
+// * section.code = LOINC#93037-0 "Portable medical order form"
 // * section.text.status = #generated
 // * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        Order-Referral-Form 4-sepsis\n      </div>"
 // * section.entry[0] = Reference(Questionnaire/4-sepsis)
@@ -39,7 +39,7 @@ Usage: #definition
 // * section.entry[+] = Reference(ServiceRequest/4-sepsis)
 
 * section[orderReferral].title = "Order-Referral-Form 4-sepsis"
-* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 4-sepsis\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(4-sepsis-of-Questionnaire)

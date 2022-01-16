@@ -11,10 +11,10 @@ Usage: #definition
 * intent = #original-order
 * category = $ch-lab-order-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
-* code.coding[+] = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
-* code.coding[+] = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
-* code.coding[+] = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* code.coding[0] = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
+* code.coding[+] = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* code.coding[+] = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* code.coding[+] = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
 
 * priority = #routine
 * subject = Reference(MarinaRubella)
