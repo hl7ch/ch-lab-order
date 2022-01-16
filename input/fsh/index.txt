@@ -96,5 +96,5 @@ lab                                         Instance    instances/lab.fsh
 Lsac                                        Instance    instances/Lsac.fsh
 sanitas                                     Instance    instances/sanitas.fsh
 serum                                       Instance    instances/serum.fsh
-throat-swab                                 Instance    instances/throat-swab.fsh
+Throat-swab                                 Instance    instances/Throat-swab.fsh
 urin                                        Instance    instances/urin.fsh

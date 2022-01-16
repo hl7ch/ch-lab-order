@@ -1,4 +1,4 @@
-Instance: throat-swab
+Instance: Throat-swab
 InstanceOf: Specimen
 Title: "Throat Swab"
 Description: "Example for Specimen of Throat Swab"

@@ -659,7 +659,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/throat-swab" />
+        <reference value="Specimen/Throat-swab" />
       </reference>
       <name value="Throat Swab" />
       <description value="Example for Specimen of Throat Swab" />

@@ -22,6 +22,6 @@ Usage: #definition
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(throat-swab)
+* specimen[0] = Reference(Throat-swab)
 * specimen[+] = Reference(Blood)
 * specimen[+] = Reference(serum)
