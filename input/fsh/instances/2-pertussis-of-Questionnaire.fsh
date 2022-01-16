@@ -1,5 +1,5 @@
 Instance: 2-pertussis-of-Questionnaire
-InstanceOf: Questionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 2-pertussis"
 Description: "Example for Laboratory Order Questionnaire for Pertussis Investigation"
 Usage: #definition

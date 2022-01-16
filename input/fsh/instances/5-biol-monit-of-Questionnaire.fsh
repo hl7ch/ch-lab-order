@@ -1,5 +1,5 @@
 Instance: 5-biol-monit-of-Questionnaire
-InstanceOf: Questionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 5-biol-monit"
 Description: "Example for Laboratory Order Questionnaire for toxicological Monitoring"
 Usage: #definition

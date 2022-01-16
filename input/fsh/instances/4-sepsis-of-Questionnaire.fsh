@@ -1,5 +1,5 @@
 Instance: 4-sepsis-of-Questionnaire
-InstanceOf: Questionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 4-sepsis"
 Description: "Example for Laboratory Order Questionnaire for Sepsis Investigation"
 Usage: #definition

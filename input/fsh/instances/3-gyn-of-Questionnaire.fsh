@@ -1,5 +1,5 @@
 Instance: 3-gyn-of-Questionnaire
-InstanceOf: Questionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 3-gyn"
 Description: "Example for Laboratory Order Questionnaire for gynaecological check-up"
 Usage: #definition
