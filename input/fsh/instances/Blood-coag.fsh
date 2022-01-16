@@ -1,4 +1,4 @@
-Instance: blood-coag
+Instance: Blood-coag
 InstanceOf: Specimen
 Title: "Blood Sample Coagulation"
 Description: "Example for Specimen for haemostatic Examination"

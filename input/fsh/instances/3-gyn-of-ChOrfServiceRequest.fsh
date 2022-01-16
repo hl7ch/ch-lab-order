@@ -23,6 +23,6 @@ Usage: #definition
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(cervix-swab)
-* specimen[+] = Reference(blood)
+* specimen[+] = Reference(Blood)
 * specimen[+] = Reference(serum)
 * specimen[+] = Reference(urin)

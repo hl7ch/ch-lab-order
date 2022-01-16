@@ -691,7 +691,7 @@ var fhirQ = {
                 {
                   "definition": "38875-1",
                   "linkId": "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay",
-                  "text": "INR in Platelet poor plasma or blood by Coagulation assay",
+                  "text": "INR in Platelet poor plasma or Blood by Coagulation assay",
                   "type": "boolean"
                 }
               ]

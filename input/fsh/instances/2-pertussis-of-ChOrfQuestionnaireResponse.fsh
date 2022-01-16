@@ -253,7 +253,7 @@ Usage: #definition
 * item[=].item.answer.valueCoding = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
-* item[=].item.linkId = "blood-diff"
+* item[=].item.linkId = "Blood-diff"
 * item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.answer.valueCoding = $loinc#24318-8 "Manual diff Bld"
 * item[+].linkId = "clinical chemistry"

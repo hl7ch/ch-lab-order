@@ -381,9 +381,9 @@ Usage: #definition
         * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
         * type = #boolean
       * item[+]
-        * definition = $loinc#38875-1 "INR in Platelet poor plasma or blood by Coagulation assay"
+        * definition = $loinc#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
         * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
-        * text = "INR in Platelet poor plasma or blood by Coagulation assay"
+        * text = "INR in Platelet poor plasma or Blood by Coagulation assay"
         * type = #boolean
   // Chemistry
   * item[+]

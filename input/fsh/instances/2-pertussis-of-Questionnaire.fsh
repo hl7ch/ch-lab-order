@@ -321,7 +321,7 @@ Usage: #definition
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
 * item[=].type = #group
-* item[=].item.linkId = "blood-diff"
+* item[=].item.linkId = "Blood-diff"
 * item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true

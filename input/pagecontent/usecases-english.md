@@ -14,7 +14,7 @@ A form (Questionnaire) is presented to the client, which contains the following 
 * Information on the requested examinations
 
 * Information about the sample material, Specimen
-  * Type: e.g. serum, whole blood, cerebrospinal fluid
+  * Type: e.g. serum, whole Blood, cerebrospinal fluid
   * Subject: reference to the patient
   * Collection: information about collection, collection time, amount, method, collection site (e.g. right arm), fasting period
   * Container, vessel: identifier, type
@@ -76,19 +76,19 @@ For certain tests, the order and sample alone are not sufficient to determine th
 
 * Start and end of urine collection: Specimen.collection.collected[collectedPeriod] - start - end
 
-Another example is the Synacthen(ACTH) function test, where a basal blood sample is collected in the morning fasting, followed immediately by the Synacthen injection, and a second blood sample is collected an hour later.
+Another example is the Synacthen(ACTH) function test, where a basal Blood sample is collected in the morning fasting, followed immediately by the Synacthen injection, and a second Blood sample is collected an hour later.
 
 * Basal serum sample fasting and administration of Synacthen(ACTH): Specimen.collection.collected[collectedDateTime], a second serum sample is collected 60 minutes later: Specimen.collection.collected[collectedDateTime]
 
 ### Use Case 8: Additional information on the context of the sample
 
-For blood gas analyses, the amount of oxygen administered to the patient is sometimes of concern
+For Blood gas analyses, the amount of oxygen administered to the patient is sometimes of concern
 
 * ServiceRequest.supportingInfo, e.g. O2 4 liters/min.
 
 ### Use Case 9: Requesting monitoring examinations
 
-Laboratories often offer the option of monitoring vital functions with appropriate medical devices, such as 24-hour blood pressure monitoring, long-term ECG monitoring, or sleep medicine monitoring. For this purpose, the medical device is either sent to the client, or the patient picks it up from the lab himself.
+Laboratories often offer the option of monitoring vital functions with appropriate medical devices, such as 24-hour Blood pressure monitoring, long-term ECG monitoring, or sleep medicine monitoring. For this purpose, the medical device is either sent to the client, or the patient picks it up from the lab himself.
 
 * ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG
 

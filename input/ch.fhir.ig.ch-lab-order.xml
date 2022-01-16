@@ -610,7 +610,7 @@
     <!-- References to Specimens -->
     <resource>
       <reference>
-        <reference value="Specimen/blood-bactec-plus" />
+        <reference value="Specimen/Blood-bactec-plus" />
       </reference>
       <name value="Blood Sample Bacteriology" />
       <description value="Example for Specimen for bacteriological Examination" />
@@ -618,7 +618,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/blood-coag" />
+        <reference value="Specimen/Blood-coag" />
       </reference>
       <name value="Blood Sample Coagulation" />
       <description value="Example for Specimen for haemostatic Examination" />
@@ -626,7 +626,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/blood" />
+        <reference value="Specimen/Blood" />
       </reference>
       <name value="Blood Sample" />
       <description value="Example for Specimen for Haematological Examination" />

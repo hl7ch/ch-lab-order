@@ -23,5 +23,5 @@ Usage: #definition
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(throat-swab)
-* specimen[+] = Reference(blood)
+* specimen[+] = Reference(Blood)
 * specimen[+] = Reference(serum)

@@ -1,4 +1,4 @@
-Instance: blood
+Instance: Blood
 InstanceOf: Specimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
