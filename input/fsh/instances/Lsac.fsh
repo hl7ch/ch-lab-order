@@ -9,7 +9,7 @@ Usage: #definition
 * type = $sct#258450006 "Cerebrospinal fluid sample"
 * subject = Reference(FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
-* request = Reference(lab)
+* request = Reference(Lab)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * collection.method = $sct#277762005 "Lumbar puncture (procedure)"

@@ -9,7 +9,7 @@ Usage: #definition
 * type = $sct#258529004 "Throat swab (specimen)"
 * subject = Reference(FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
-* request = Reference(lab)
+* request = Reference(Lab)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * collection.method = $sct#418932006 "Oral swab (specimen)"
