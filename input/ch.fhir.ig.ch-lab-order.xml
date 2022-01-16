@@ -651,7 +651,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/serum" />
+        <reference value="Specimen/Serum" />
       </reference>
       <name value="Serum Sample" />
       <description value="Example for Specimen of Serum" />

@@ -26,5 +26,5 @@ Usage: #definition
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(serum) "Serum specimen"
+* specimen[0] = Reference(Serum) "Serum specimen"
 * specimen[+] = Reference(Blood)

@@ -24,5 +24,5 @@ Usage: #definition
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Cervix-swab)
 * specimen[+] = Reference(Blood)
-* specimen[+] = Reference(serum)
+* specimen[+] = Reference(Serum)
 * specimen[+] = Reference(Urin)

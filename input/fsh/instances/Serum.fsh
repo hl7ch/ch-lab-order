@@ -1,4 +1,4 @@
-Instance: serum
+Instance: Serum
 InstanceOf: Specimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum"
