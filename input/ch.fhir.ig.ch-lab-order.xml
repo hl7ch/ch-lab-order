@@ -469,6 +469,14 @@
 
     <resource>
       <reference>
+        <reference value="Questionnaire/0-generic" />
+      </reference>
+      <name value="questionnaire 0-generic" />
+      <description value="Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Questionnaire/1-tvt" />
       </reference>
       <name value="questionnaire 1-tvt" />
