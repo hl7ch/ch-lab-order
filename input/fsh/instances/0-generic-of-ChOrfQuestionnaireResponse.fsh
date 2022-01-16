@@ -24,7 +24,6 @@ Usage: #definition
 * item[=].item[=].text = "Typ"
 * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
 
-
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
