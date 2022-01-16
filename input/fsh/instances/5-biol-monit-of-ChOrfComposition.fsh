@@ -15,20 +15,20 @@ Usage: #definition
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(Gruppenpraxis)
+* extension[=].valueReference = Reference(MarcMustermannArztpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(SpeiserRails)
+* extension[=].valueReference = Reference(WoodyWorkdocSpeiserRails)
 
 * status = #final
-* type = $sct#721965002 "Laboratory order (record artifact)"
-* category = $sct#721963009 "Order (record artifact)"
+* type = SCT#721965002 "Laboratory order (record artifact)"
+* category = SCT#721963009 "Order (record artifact)"
 * subject = Reference(BeatBorer)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(PauloPorcelliniSuva)
 * title = "Referral 5-biol-monit"
 
 // * section.title = "Order-Referral-Form 5-biol-monit"
-// * section.code = $loinc#93037-0 "Portable medical order form"
+// * section.code = LOINC#93037-0 "Portable medical order form"
 // * section.text.status = #generated
 // * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        Order-Referral-Form 5-biol-monit\n      </div>"
 // * section.entry[0] = Reference(Questionnaire/5-biol-monit)
@@ -36,7 +36,7 @@ Usage: #definition
 // * section.entry[+] = Reference(ServiceRequest/5-biol-monit)
 
 * section[orderReferral].title = "Order-Referral-Form 5-biol-monit"
-* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 5-biol-monit\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(5-biol-monit-of-Questionnaire)

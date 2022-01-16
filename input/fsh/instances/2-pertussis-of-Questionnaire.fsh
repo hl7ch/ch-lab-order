@@ -1,5 +1,5 @@
 Instance: 2-pertussis-of-Questionnaire
-InstanceOf: Questionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 2-pertussis"
 Description: "Example for Laboratory Order Questionnaire for Pertussis Investigation"
 Usage: #definition
@@ -37,17 +37,30 @@ Usage: #definition
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
+
 * item[=].item[0].linkId = "order.title"
 * item[=].item[=].text = "Titel"
 * item[=].item[=].type = #string
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode"
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "Laborauftrag"
+
 * item[=].item[+].linkId = "order.category"
 * item[=].item[=].text = "Kategorie"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryClassCode
+* item[=].item[=].initial.valueCoding = SCT#721963009 // Order (record artifact) | Untersuchungsauftrag
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryTypeCode
+* item[=].item[=].initial.valueCoding = SCT#721965002 // Laboratory Order | Laborauftrag | Mandat d’analyse en laboratoire | Richiesta di analisi di laboratorio
+
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
@@ -317,15 +330,15 @@ Usage: #definition
 * item[=].item.text = "Pertussis and Parapertussis DNA"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item.answerOption.valueCoding = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
 * item[=].type = #group
-* item[=].item.linkId = "blood-diff"
+* item[=].item.linkId = "Blood-diff"
 * item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#24318-8 "Manual diff Bld"
+* item[=].item.answerOption.valueCoding = LOINC#24318-8 "Manual diff Bld"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].type = #group
@@ -333,4 +346,4 @@ Usage: #definition
 * item[=].item.text = "C-reactive Protein"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answerOption.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"

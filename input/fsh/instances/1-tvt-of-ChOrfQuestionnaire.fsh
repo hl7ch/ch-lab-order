@@ -1,9 +1,9 @@
-Instance: 0-generic-of-Questionnaire
-InstanceOf: Questionnaire
-Title: "questionnaire 0-generic"
+Instance: 1-tvt-of-ChOrfQuestionnaire
+InstanceOf: ChOrfQuestionnaire
+Title: "questionnaire 1-tvt"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #definition
-* id = "0-generic"
+* id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -20,7 +20,7 @@ Usage: #definition
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
 * extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * version = "0.9.1"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example"
@@ -37,17 +37,30 @@ Usage: #definition
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
+
 * item[=].item[0].linkId = "order.title"
 * item[=].item[=].text = "Titel"
 * item[=].item[=].type = #string
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode"
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "Laborauftrag"
+
 * item[=].item[+].linkId = "order.category"
 * item[=].item[=].text = "Kategorie"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryClassCode
+* item[=].item[=].initial.valueCoding = SCT#721963009 // Order (record artifact) | Untersuchungsauftrag
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryTypeCode
+* item[=].item[=].initial.valueCoding = SCT#721965002 // Laboratory Order | Laborauftrag | Mandat d’analyse en laboratoire | Richiesta di analisi di laboratorio
+
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
@@ -311,6 +324,8 @@ Usage: #definition
 * item[=].item.item[=].text = "Land"
 * item[=].item.item[=].type = #string
 
+// ------------Choice of Specialty-----------------
+// TODO
 * item[+].linkId = "hematology"
 * item[=].text = "Hematology"
 * item[=].type = #group
@@ -318,13 +333,11 @@ Usage: #definition
 * item[=].item.text = "Hämatologie Subset"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-
-* item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
-
+* item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "coagulation"
 * item[=].text = "Coagulation"
 * item[=].type = #group
@@ -332,9 +345,7 @@ Usage: #definition
 * item[=].item.text = "D-Dimer"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-
-* item[=].item.answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-
+* item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[+].linkId = "cc"
 * item[=].text = "clinical chemistry"
 * item[=].type = #group
@@ -342,13 +353,11 @@ Usage: #definition
 * item[=].item.text = "CRP"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-
-* item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item.answerOption[0].valueCoding = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 * item[=].item.answerOption[=].initialSelected = true
-* item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
-
+* item[=].item.answerOption[+].valueCoding = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item.answerOption[+].valueCoding = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item.answerOption[+].valueCoding = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"

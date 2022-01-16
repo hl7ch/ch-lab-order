@@ -8,9 +8,23 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"
 * status = #completed
+
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+
+* item[=].item[+].linkId = "order.title"
+* item[=].item[=].text = "Titel"
+* item[=].item[=].answer.valueString = "Laborauftrag"
+
+* item[=].item[+].linkId = "order.category"
+* item[=].item[=].text = "Kategorie"
+* item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
@@ -250,14 +264,14 @@ Usage: #definition
 * item[=].text = "Mikrobiologie"
 * item[=].item.linkId = "per"
 * item[=].item.text = "Pertussis and Parapertussis DNA"
-* item[=].item.answer.valueCoding = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item.answer.valueCoding = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
-* item[=].item.linkId = "blood-diff"
+* item[=].item.linkId = "Blood-diff"
 * item[=].item.text = "Manual Differential panel - Blood"
-* item[=].item.answer.valueCoding = $loinc#24318-8 "Manual diff Bld"
+* item[=].item.answer.valueCoding = LOINC#24318-8 "Manual diff Bld"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].item.linkId = "crp"
 * item[=].item.text = "C-reactive Protein"
-* item[=].item.answer.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answer.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"

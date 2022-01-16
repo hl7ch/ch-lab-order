@@ -34,12 +34,12 @@ Usage: #definition
 * entry[=].resource = HansGuggindieluft
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-* entry[=].resource = Gruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
+* entry[=].resource = Arztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
-* entry[=].resource = 1-tvt-of-Questionnaire
+* entry[=].resource = 1-tvt-of-ChOrfQuestionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
 * entry[=].resource = 1-tvt-of-ChOrfQuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt"

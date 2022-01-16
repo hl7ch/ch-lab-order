@@ -8,9 +8,23 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * status = #completed
+
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+
+* item[=].item[+].linkId = "order.title"
+* item[=].item[=].text = "Titel"
+* item[=].item[=].answer.valueString = "Laborauftrag"
+
+* item[=].item[+].linkId = "order.category"
+* item[=].item[=].text = "Kategorie"
+* item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order" 
+
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
@@ -246,22 +260,28 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "receiverCopy.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+// ------------Choice of Specialty-----------------
+//#################################################
+
 * item[+].linkId = "hematology"
 * item[=].text = "Hematology"
 * item[=].item.linkId = "hemato-subset"
 * item[=].item.text = "Hämatologie Subset"
-* item[=].item.answer[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answer[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answer[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "coagulation"
 * item[=].text = "Coagulation"
 * item[=].item.linkId = "d-dimer"
 * item[=].item.text = "D-Dimer"
-* item[=].item.answer.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item.answer.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[+].linkId = "cc"
 * item[=].text = "clinical chemistry"
 * item[=].item.linkId = "crp"
 * item[=].item.text = "CRP"
-* item[=].item.answer.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answer.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+
+//#################################################

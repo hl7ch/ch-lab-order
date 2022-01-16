@@ -1,6 +1,6 @@
-{
+var fhirQ = {
   "resourceType": "Questionnaire",
-  "id": "2-pertussis",
+  "id": "0-generic",
   "meta": {
     "versionId": "1",
     "lastUpdated": "2019-04-01T20:17:53.340+00:00",
@@ -10,6 +10,7 @@
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"
     ]
   },
+  "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic",
   "extension": [
     {
       "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap",
@@ -37,10 +38,9 @@
       "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
     }
   ],
-  "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis",
   "version": "0.9.1",
-  "name": "LabOrderExample",
-  "title": "Lab Order Example",
+  "name": "LabOrderFormExample",
+  "title": "Lab Order Form Example",
   "status": "active",
   "subjectType": [
     "Patient"
@@ -608,70 +608,243 @@
       ]
     },
     {
-      "linkId": "microbiology",
-      "text": "Mikrobiologie",
+      "linkId": "labSpecialties",
+      "text": "Labor Sparten",
       "type": "group",
       "item": [
         {
-          "linkId": "per",
-          "text": "Pertussis and Parapertussis DNA",
-          "type": "choice",
-          "repeats": true,
-          "answerOption": [
+          "definition": "18723-7",
+          "linkId": "labSpecialties.hematology",
+          "text": "Hematology",
+          "type": "boolean",
+          "item": [
             {
-              "valueCoding": {
-                "code": "90441-7",
-                "system": "http://loinc.org",
-                "display": "B pert+parapert DNA Pnl Nph"
-              }
+              "linkId": "labSpecialties.hematology.panels",
+              "text": "Hematology Panels",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "labSpecialties.hematology",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "definition": "24360-0",
+                  "linkId": "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood",
+                  "text": "Hemoglobin and Hematocrit panel - Blood",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "43113-0",
+                  "linkId": "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood",
+                  "text": "Hemoglobin electrophoresis panel in Blood",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "57021-8",
+                  "linkId": "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood",
+                  "text": "CBC W Auto Differential panel - Blood",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "58410-2",
+                  "linkId": "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount",
+                  "text": "CBC panel - Blood by Automated count",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "57023-4",
+                  "linkId": "labSpecialties.hematology.panels.AutoDifferentialPanelBlood",
+                  "text": "Auto Differential panel - Blood",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "definition": "18720-3",
+          "linkId": "labSpecialties.coagulation",
+          "text": "Coagulation",
+          "type": "boolean",
+          "item": [
+            {
+              "linkId": "labSpecialties.coagulation.panels",
+              "text": "Coagulation Panels",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "labSpecialties.coagulation",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "definition": "55398-2",
+                  "linkId": "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma",
+                  "text": "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "38875-1",
+                  "linkId": "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay",
+                  "text": "INR in Platelet poor plasma or Blood by Coagulation assay",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "definition": "18719-5",
+          "linkId": "labSpecialties.chemistry",
+          "text": "Clinical Chemistry",
+          "type": "boolean",
+          "item": [
+            {
+              "linkId": "labSpecialties.chemistry.panels",
+              "text": "Chemistry Panels",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "labSpecialties.chemistry",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "definition": "1988-5",
+                  "linkId": "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma",
+                  "text": "C reactive protein [Mass/Volume] in Serum or Plasma",
+                  "type": "boolean"
+                },
+                {
+                  "definition": "76485-2",
+                  "linkId": "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma",
+                  "text": "C reactive protein [Moles/volume] in Serum or Plasma",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "definition": "18725-2",
+          "linkId": "labSpecialties.microbiol",
+          "text": "Microbiology",
+          "type": "boolean",
+          "item": [
+            {
+              "linkId": "labSpecialties.microbiol.panels",
+              "text": "Microbiology Panels",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "labSpecialties.microbiol",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "definition": "90441-7",
+                  "linkId": "labSpecialties.microbiol.panels.BordPertParaperDNA",
+                  "text": "Bordetella pertussis & Bordetella parapertussis DNA panel",
+                  "type": "boolean"
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "linkId": "hematology",
-      "text": "Hämatologie",
+      "linkId": "consent",
+      "definition": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo",
+      "text": "Einverständniserklärung",
       "type": "group",
       "item": [
         {
-          "linkId": "Blood-diff",
-          "text": "Manual Differential panel - Blood",
-          "type": "choice",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "24318-8",
-                "system": "http://loinc.org",
-                "display": "Manual diff Bld"
-              }
-            }
-          ]
+          "linkId": "consent.treatment",
+          "text": "Einverständnis des Patienten zur Behandlung",
+          "type": "string"
+        },
+        {
+          "linkId": "consent.patientPrivacy",
+          "text": "Einverständnis des Patienten zum Datenschutz",
+          "type": "string"
+        },
+        {
+          "linkId": "consent.research",
+          "text": "Einverständnis des Patienten zur Forschung",
+          "type": "string"
+        },
+        {
+          "linkId": "consent.advancedCareDirective",
+          "text": "Patientenverfügung",
+          "type": "string"
         }
       ]
     },
     {
-      "linkId": "clinical chemistry",
-      "text": "Klinische Chemie",
+      "linkId": "coverage",
+      "definition": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance",
+      "text": "Kostenträger",
       "type": "group",
       "item": [
         {
-          "linkId": "crp",
-          "text": "C-reactive Protein",
-          "type": "choice",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "1988-5",
-                "system": "http://loinc.org",
-                "display": "C reactive protein [Mass/volume] in Serum or Plasma"
-              }
-            }
-          ]
+          "linkId": "coverage.uvg",
+          "text": "Unfallversicherung (nach UVG)",
+          "type": "string"
+        },
+        {
+          "linkId": "coverage.kvg",
+          "text": "Grundversicherung (nach KVG)",
+          "type": "string"
+        },
+        {
+          "linkId": "coverage.vvg",
+          "text": "Zusatzversicherung (nach VVG)",
+          "type": "string"
+        },
+        {
+          "linkId": "coverage.vvgOther",
+          "text": "Andere (nach VVG)",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "linkId": "previousResult",
+      "definition": "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo",
+      "text": "Vorheriges Untersuchungsresultat",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "previousResult.result",
+          "text": "Untersuchungsresultat",
+          "type": "string",
+          "repeats": true
         }
       ]
     }
   ]
 }
+
+
+
+// Add the form to the page
+LForms.Util.addFormToPage(fhirQ, 'formContainer');
+
+
+// Define the function for showing the QuestionnaireResponse
+function showQR() {
+  var qr = LForms.Util.getFormFHIRData('QuestionnaireResponse', 'R4');
+  window.alert(JSON.stringify(qr, null, 2));
+}
+
+

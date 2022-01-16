@@ -1,6 +1,6 @@
 {
   "resourceType": "Specimen",
-  "id": "blood",
+  "id": "Blood",
   "status": "available",
   "type": {
     "coding": [
