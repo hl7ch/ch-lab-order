@@ -150,6 +150,9 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
+* item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
+* item[=].item[=].item[=].text = "ZSR"
+* item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
 * item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].type = #string
@@ -257,6 +260,9 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.gln"
 * item[=].item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.zsr"
+* item[=].item[=].item[=].item[=].text = "ZSR"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
