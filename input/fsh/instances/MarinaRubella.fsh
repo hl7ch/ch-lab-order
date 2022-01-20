@@ -13,7 +13,7 @@ Usage: #definition
 * extension[=].valueAddress.state = "TI"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $v3-ReligiousAffiliation#1077 "Protestant"
-* identifier.type = $v2-0203#MR
+* identifier.type = V2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111113"
 * name[0].use = #official

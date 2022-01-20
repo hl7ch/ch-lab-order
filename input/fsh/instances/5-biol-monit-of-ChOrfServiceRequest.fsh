@@ -4,7 +4,7 @@ Title: "laborder 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #definition
 * id = "5-biol-monit"
-* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[0].type = V2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
 * status = #active
