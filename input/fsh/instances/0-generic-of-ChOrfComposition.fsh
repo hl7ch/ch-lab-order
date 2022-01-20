@@ -26,20 +26,12 @@ Usage: #definition
 * extension[=].valueReference = Reference(HansGuggindieluft)
 
 * status = #final
-* type = SCT#721965002 "Laboratory order (record artifact)"
+* title = "Laborauftrag"
 * category = SCT#721963009 "Order (record artifact)"
+* type = SCT#721965002 "Laboratory order (record artifact)"
 * subject = Reference(HansGuggindieluft)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
-* title = "Order-Referral-Form 0-generic"
-
-// * section.title = "Order-Referral-Form 0-generic"
-// * section.code = LOINC#93037-0 "Portable medical order form"
-// * section.text.status = #generated
-// * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 0-generic\n</div>"
-// * section.entry[0] = Reference(Questionnaire/0-generic)
-// * section.entry[+] = Reference(QuestionnaireResponse/0-generic)
-// * section.entry[+] = Reference(ServiceRequest/0-generic)
 
 * section[orderReferral].title = "Order-Referral-Form 0-generic"
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"

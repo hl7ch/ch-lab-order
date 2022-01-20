@@ -38,29 +38,6 @@ Usage: #definition
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "order.title"
-* item[=].item[=].text = "Titel"
-* item[=].item[=].type = #string
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].initial.valueString = "Laborauftrag"
-
-* item[=].item[+].linkId = "order.category"
-* item[=].item[=].text = "Kategorie"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = DocumentEntryClassCode
-* item[=].item[=].initial.valueCoding = SCT#721963009 // Order (record artifact) | Untersuchungsauftrag
-
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = DocumentEntryTypeCode
-* item[=].item[=].initial.valueCoding = SCT#721965002 // Laboratory Order | Laborauftrag | Mandat d’analyse en laboratoire | Richiesta di analisi di laboratorio
-
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
@@ -127,11 +104,11 @@ Usage: #definition
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = REQUESTPRIORITY#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = REQUESTPRIORITY#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = REQUESTPRIORITY#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = REQUESTPRIORITY#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -196,10 +173,26 @@ Usage: #definition
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = ADMINISTRATIVEGENDER#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = ADMINISTRATIVEGENDER#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = ADMINISTRATIVEGENDER#other "Anderes"
+
+// patient.maritalStatus
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#9 "unbekannt"
+
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].type = #string

@@ -12,17 +12,17 @@ Usage: #definition
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 
-* item[=].item[+].linkId = "order.title"
-* item[=].item[=].text = "Titel"
-* item[=].item[=].answer.valueString = "Laborauftrag"
-
-* item[=].item[+].linkId = "order.category"
-* item[=].item[=].text = "Kategorie"
-* item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
-
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+// * item[=].item[+].linkId = "order.title"
+// * item[=].item[=].text = "Titel"
+// * item[=].item[=].answer.valueString = "Laborauftrag"
+// 
+// * item[=].item[+].linkId = "order.category"
+// * item[=].item[=].text = "Kategorie"
+// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// 
+// * item[=].item[+].linkId = "order.type"
+// * item[=].item[=].text = "Typ"
+// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
@@ -74,7 +74,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "peter.pap@gruppenpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $request-priority#routine
+* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -134,7 +134,14 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrative-gender#female
+* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#female
+
+// patient.maritalStatus
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].answer.valueCoding = ECH-11-maritalstatus#2 "verheiratet"
+
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].answer.valueString = "079 979 79 79"

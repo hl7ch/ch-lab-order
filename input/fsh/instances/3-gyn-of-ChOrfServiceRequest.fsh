@@ -4,12 +4,12 @@ Title: "laborder 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #definition
 * id = "3-gyn"
-* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[0].type = V2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
 * status = #active
 * intent = #original-order
-* category = $ch-lab-order-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
 * code.coding[+] = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"

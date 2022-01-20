@@ -12,8 +12,8 @@ Usage: #definition
 * extension[=].valueAddress.city = "Lenzburg"
 * extension[=].valueAddress.state = "AG"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $v3-ReligiousAffiliation#1025 "Jehovah's Witnesses"
-* identifier.type = $v2-0203#MR
+* extension[=].valueCodeableConcept = RELIGIOUSAFFILIATION#1025 "Jehovah's Witnesses"
+* identifier.type = V2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111114"
 * name.family = "Klebsiella"
@@ -25,7 +25,7 @@ Usage: #definition
 * telecom[=].value = "klebsiella.keller@example.ch"
 * gender = #female
 * birthDate = "1975-12-12"
-* maritalStatus = $ech-11-maritalstatus#2 "verheiratet"
+* maritalStatus = ECH-11-maritalstatus#2 "verheiratet"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true

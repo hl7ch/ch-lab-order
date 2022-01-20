@@ -4,12 +4,12 @@ Title: "laborder 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #definition
 * id = "1-tvt"
-* identifier.type = $v2-0203#PLAC "Placer Identifier"
+* identifier.type = V2-0203#PLAC "Placer Identifier"
 * identifier.system = "urn:oid:2.16.756.5.30"
 * identifier.value = "123"
 * status = #active
 * intent = #original-order
-* category = $ch-lab-order-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"

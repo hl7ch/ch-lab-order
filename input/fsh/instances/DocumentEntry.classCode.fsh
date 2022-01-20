@@ -1,5 +1,5 @@
 Instance: DocumentEntry.classCode
-InstanceOf: $shareablevalueset
+InstanceOf: SHAREEABLEVALUESET
 Usage: #definition
 * meta.source = "http://art-decor.org/fhir/ValueSet/2.16.756.5.30.1.127.3.10.1.3--20200622100530"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
