@@ -74,7 +74,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "peter.pap@gruppenpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $request-priority#routine
+* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -134,7 +134,7 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrative-gender#female
+* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#female
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].answer.valueString = "079 979 79 79"

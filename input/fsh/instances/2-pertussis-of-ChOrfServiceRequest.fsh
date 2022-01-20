@@ -9,7 +9,7 @@ Usage: #definition
 * identifier[=].value = "123"
 * status = #active
 * intent = #original-order
-* category = $ch-lab-order-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"

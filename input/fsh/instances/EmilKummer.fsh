@@ -12,7 +12,7 @@ Usage: #definition
 * extension[=].valueAddress.city = "Köniz"
 * extension[=].valueAddress.state = "BE"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $v3-ReligiousAffiliation#1041 "Roman Catholic Church"
+* extension[=].valueCodeableConcept = RELIGIOUSAFFILIATION#1041 "Roman Catholic Church"
 * identifier[0].type = V2-0203#MR
 * identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier[=].value = "012/08.111112"
@@ -23,7 +23,7 @@ Usage: #definition
 * name.given = "Emil"
 * gender = #male
 * birthDate = "2014-05-05"
-* maritalStatus = $ech-11-maritalstatus#1 "ledig"
+* maritalStatus = ECH-11-maritalstatus#1 "ledig"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true

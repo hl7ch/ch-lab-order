@@ -12,7 +12,7 @@ Usage: #definition
 * extension[=].valueAddress.city = "Airolo"
 * extension[=].valueAddress.state = "TI"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $v3-ReligiousAffiliation#1077 "Protestant"
+* extension[=].valueCodeableConcept = RELIGIOUSAFFILIATION#1077 "Protestant"
 * identifier.type = V2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111113"
@@ -39,7 +39,7 @@ Usage: #definition
 * address.line = "Via del bosco 88"
 * address.city = "Airolo"
 * address.postalCode = "6780"
-* maritalStatus = $ech-11-maritalstatus#2 "verheiratet"
+* maritalStatus = ECH-11-maritalstatus#2 "verheiratet"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#it-CH
 * communication.language.text = "Italienisch (Schweiz)"
 * communication.preferred = true

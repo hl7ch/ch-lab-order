@@ -12,7 +12,7 @@ Usage: #definition
 * extension[=].valueAddress.city = "Köniz"
 * extension[=].valueAddress.state = "BE"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $v3-ReligiousAffiliation#1077 "Protestant"
+* extension[=].valueCodeableConcept = RELIGIOUSAFFILIATION#1077 "Protestant"
 * identifier.type = V2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111115"
@@ -25,7 +25,7 @@ Usage: #definition
 * telecom[=].value = "beat.borer@example.ch"
 * gender = #male
 * birthDate = "1986-06-06"
-* maritalStatus = $ech-11-maritalstatus#2 "verheiratet"
+* maritalStatus = ECH-11-maritalstatus#2 "verheiratet"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true

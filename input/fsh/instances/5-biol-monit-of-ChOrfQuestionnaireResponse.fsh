@@ -74,7 +74,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "paulo.porcellini@suva.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $request-priority#routine
+* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -134,7 +134,7 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1986-06-06"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrative-gender#male
+* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#male
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].answer.valueString = "+41 36 123 45 67"
