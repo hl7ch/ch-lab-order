@@ -177,6 +177,22 @@ Usage: #definition
 * item[=].item[=].answerOption[=].initialSelected = true
 * item[=].item[=].answerOption[+].valueCoding = ADMINISTRATIVEGENDER#female "Weiblich"
 * item[=].item[=].answerOption[+].valueCoding = ADMINISTRATIVEGENDER#other "Anderes"
+
+// patient.maritalStatus
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#9 "unbekannt"
+
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].type = #string
