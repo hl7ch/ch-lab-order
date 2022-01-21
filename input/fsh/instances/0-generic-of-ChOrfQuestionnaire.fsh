@@ -23,7 +23,7 @@ Usage: #definition
 * extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 
-// ###############  begin of general part  ##############################################################3
+// ###############  begin of general part  ########################################
 * version = "0.9.1"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example"
@@ -533,8 +533,6 @@ Usage: #definition
 * item[=].item.text = "Untersuchungsresultat"
 * item[=].item.type = #string
 * item[=].item.repeats = true
-
-// ################# end of general part  ################################
 
 // ############## begin of specific part ############################
 
