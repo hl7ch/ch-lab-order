@@ -5,7 +5,6 @@ Description: "Example for Laboratory Order Questionnaire due to suspected deep v
 Usage: #definition
 * id = "0-generic"
 
-// ###############  begin of general part  ##############################################################3
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -23,6 +22,8 @@ Usage: #definition
 * extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
 * extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
+
+// ###############  begin of general part  ##############################################################3
 * version = "0.9.1"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example"
@@ -533,7 +534,9 @@ Usage: #definition
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
-//################# end of general part################################
+// ################# end of general part  ################################
+
+// ############## begin of specific part ############################
 
 // ------------Choice of Specialty-----------------
 
