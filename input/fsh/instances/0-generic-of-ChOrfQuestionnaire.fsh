@@ -4,6 +4,7 @@ Title: "questionnaire 0-generic"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #definition
 * id = "0-generic"
+
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -21,6 +22,8 @@ Usage: #definition
 * extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
 * extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
+
+// ###############  begin of general part  ########################################
 * version = "0.9.1"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example"
@@ -160,6 +163,7 @@ Usage: #definition
 * item[+].linkId = "patient"
 * item[=].text = "Patient"
 * item[=].type = #group
+* item[=].required = true
 * item[=].item[0].linkId = "patient.familyName"
 * item[=].item[=].text = "Name"
 * item[=].item[=].type = #string
@@ -217,6 +221,47 @@ Usage: #definition
 * item[=].item[+].linkId = "patient.country"
 * item[=].item[=].text = "Land"
 * item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "patient.languageOfCorrespondance"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondance"
+* item[=].item[=].text = "Korrespondenssprache"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode"
+
+// ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
+* item[=].item[+].linkId = "patient.contactperson"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact"
+* item[=].item[=].text = "Kontaktperson"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.relationship"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.relationship.text"
+* item[=].item[=].item[=].text = "Beziehung"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.familyName"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.family"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.givenName"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.given"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.phone"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.email"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].type = #string
+
+
+
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
@@ -448,8 +493,51 @@ Usage: #definition
 * item[=].item.item[=].text = "Land"
 * item[=].item.item[=].type = #string
 
+* item[+].linkId = "consent"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].text = "Einverständniserklärung"
+* item[=].type = #group
+* item[=].item[0].linkId = "consent.treatment"
+* item[=].item[=].text = "Einverständnis des Patienten zur Behandlung"
+* item[=].item[=].type = #string
+* item[=].item[+].linkId = "consent.patientPrivacy"
+* item[=].item[=].text = "Einverständnis des Patienten zum Datenschutz"
+* item[=].item[=].type = #string
+* item[=].item[+].linkId = "consent.research"
+* item[=].item[=].text = "Einverständnis des Patienten zur Forschung"
+* item[=].item[=].type = #string
+* item[=].item[+].linkId = "consent.advancedCareDirective"
+* item[=].item[=].text = "Patientenverfügung"
+* item[=].item[=].type = #string
+* item[+].linkId = "coverage"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
+* item[=].text = "Kostenträger"
+* item[=].type = #group
+* item[=].item[0].linkId = "coverage.uvg"
+* item[=].item[=].text = "Unfallversicherung (nach UVG)"
+* item[=].item[=].type = #string
+* item[=].item[+].linkId = "coverage.kvg"
+* item[=].item[=].text = "Grundversicherung (nach KVG)"
+* item[=].item[=].type = #string
+* item[=].item[+].linkId = "coverage.vvg"
+* item[=].item[=].text = "Zusatzversicherung (nach VVG)"
+* item[=].item[=].type = #string
+* item[=].item[+].linkId = "coverage.vvgOther"
+* item[=].item[=].text = "Andere (nach VVG)"
+* item[=].item[=].type = #string
+* item[+].linkId = "previousResult"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].text = "Vorheriges Untersuchungsresultat"
+* item[=].type = #group
+* item[=].item.linkId = "previousResult.result"
+* item[=].item.text = "Untersuchungsresultat"
+* item[=].item.type = #string
+* item[=].item.repeats = true
+
+// ############## begin of specific part ############################
+
 // ------------Choice of Specialty-----------------
-//#################################################
+
 //* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
 
@@ -563,50 +651,6 @@ Usage: #definition
         * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
         * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
         * type = #boolean
-
-  
-
   
 // ######################################################################################
 
-
-* item[+].linkId = "consent"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
-* item[=].text = "Einverständniserklärung"
-* item[=].type = #group
-* item[=].item[0].linkId = "consent.treatment"
-* item[=].item[=].text = "Einverständnis des Patienten zur Behandlung"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "consent.patientPrivacy"
-* item[=].item[=].text = "Einverständnis des Patienten zum Datenschutz"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "consent.research"
-* item[=].item[=].text = "Einverständnis des Patienten zur Forschung"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "consent.advancedCareDirective"
-* item[=].item[=].text = "Patientenverfügung"
-* item[=].item[=].type = #string
-* item[+].linkId = "coverage"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
-* item[=].text = "Kostenträger"
-* item[=].type = #group
-* item[=].item[0].linkId = "coverage.uvg"
-* item[=].item[=].text = "Unfallversicherung (nach UVG)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "coverage.kvg"
-* item[=].item[=].text = "Grundversicherung (nach KVG)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "coverage.vvg"
-* item[=].item[=].text = "Zusatzversicherung (nach VVG)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "coverage.vvgOther"
-* item[=].item[=].text = "Andere (nach VVG)"
-* item[=].item[=].type = #string
-* item[+].linkId = "previousResult"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
-* item[=].text = "Vorheriges Untersuchungsresultat"
-* item[=].type = #group
-* item[=].item.linkId = "previousResult.result"
-* item[=].item.text = "Untersuchungsresultat"
-* item[=].item.type = #string
-* item[=].item.repeats = true
