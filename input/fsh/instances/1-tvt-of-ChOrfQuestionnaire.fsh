@@ -184,6 +184,7 @@ Usage: #definition
 * item[+].linkId = "patient"
 * item[=].text = "Patient"
 * item[=].type = #group
+* item[=].required = true
 * item[=].item[0].linkId = "patient.familyName"
 * item[=].item[=].text = "Name"
 * item[=].item[=].type = #string
