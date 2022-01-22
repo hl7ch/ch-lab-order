@@ -332,9 +332,9 @@ Usage: #definition
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-
+// receiverCopies
 * item[+].linkId = "receiverCopies"
-* item[=].text = "Kopieempfänger"
+* item[=].text = "Kopieempfangende Organisation oder Person"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "receiverCopy.practitionerRole"
@@ -361,6 +361,16 @@ Usage: #definition
 * item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.givenName"
 * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-humanname#HumanName.given"
 * item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.gln"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:GLN.value"
+* item[=].item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.zsr"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:ZSR.value"
+* item[=].item[=].item[=].item[=].text = "ZSR"
 * item[=].item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.phone"
@@ -457,42 +467,6 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-* item[=].item.linkId = "receiverCopy"
-* item[=].item.text = "Kopieempfangende Organisation oder Person"
-* item[=].item.type = #group
-* item[=].item.repeats = true
-* item[=].item.item[0].linkId = "receiverCopy.organization.name"
-* item[=].item.item[=].text = "Name der Organisation"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.title"
-* item[=].item.item[=].text = "Titel"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.familyName"
-* item[=].item.item[=].text = "Name"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.givenName"
-* item[=].item.item[=].text = "Vorname"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.phone"
-* item[=].item.item[=].text = "Telefon"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.email"
-* item[=].item.item[=].text = "E-Mail"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.streetAddressLine"
-* item[=].item.item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item.item[=].type = #string
-* item[=].item.item[=].repeats = true
-* item[=].item.item[+].linkId = "receiverCopy.postalCode"
-* item[=].item.item[=].text = "PLZ"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.city"
-* item[=].item.item[=].text = "Ort"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.country"
-* item[=].item.item[=].text = "Land"
-* item[=].item.item[=].type = #string
-
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
@@ -509,22 +483,186 @@ Usage: #definition
 * item[=].item[+].linkId = "consent.advancedCareDirective"
 * item[=].item[=].text = "Patientenverfügung"
 * item[=].item[=].type = #string
+
+// ---------- Coverage (Kostenträger) ----------
+// Design as agreed with eHealth Suisse and Cistec 09.06.2021
+
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
 * item[=].type = #group
-* item[=].item[0].linkId = "coverage.uvg"
-* item[=].item[=].text = "Unfallversicherung (nach UVG)"
-* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "coverage.beneficiary"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.beneficiary"
+* item[=].item[=].text = "Begünstigter (Patient)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.beneficiary.ahvn13"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.identifier:AHVN13"
+* item[=].item[=].item[=].text = "AHV-Nr. des Patienten"
+* item[=].item[=].item[=].type = #string
+
+// KVG
 * item[=].item[+].linkId = "coverage.kvg"
-* item[=].item[=].text = "Grundversicherung (nach KVG)"
-* item[=].item[=].type = #string
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
+* item[=].item[=].text = "Krankenkasse (nach KVG)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.kvg.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "coverage.kvg.insuranceCardNumber"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
+* item[=].item[=].item[=].type = #string
+
+// UVG
+* item[=].item[+].linkId = "coverage.uvg"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
+* item[=].item[=].text = "Unfallversicherung (nach UVG)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.uvg.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "coverage.uvg.claimNumber"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].text = "Schadennummer"
+* item[=].item[=].item[=].type = #string
+
+// VVG
 * item[=].item[+].linkId = "coverage.vvg"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
 * item[=].item[=].text = "Zusatzversicherung (nach VVG)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "coverage.vvgOther"
-* item[=].item[=].text = "Andere (nach VVG)"
-* item[=].item[=].type = #string
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.vvg.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "coverage.vvg.insuranceCardNumber"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
+* item[=].item[=].item[=].type = #string
+
+// IV
+* item[=].item[+].linkId = "coverage.iv"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
+* item[=].item[=].text = "Invalidenversicherung (IV)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.iv.verfuegungsnummer"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].text = "IV-Verfügungsnummer"
+* item[=].item[=].item[=].type = #string
+
+// MV
+* item[=].item[+].linkId = "coverage.mv"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
+* item[=].item[=].text = "Militärversicherung (MV)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.mv.versichertennummer"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].text = "MV-Versichertennummer"
+* item[=].item[=].item[=].type = #string
+
+// Self
+* item[=].item[+].linkId = "coverage.self"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
+* item[=].item[=].text = "Selbstzahler"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.self.patient"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Patient selbst"
+* item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[+].linkId = "coverage.self.patientRelatedPerson"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Andere Person"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].enableWhen[+].question = "coverage.self.patient"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = false
+
+* item[=].item[=].item[+].linkId = "coverage.self.relatedPerson" 
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Andere Person"   
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "coverage.self.patientRelatedPerson"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.familyName"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.name.family"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.givenName"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.name.given"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.phone"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.telecom.value"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.email"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.telecom.value"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.streetAddressLine"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.address.line"
+* item[=].item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.postalCode"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.address.postalCode"
+* item[=].item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.city"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.address.city"
+* item[=].item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.country"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.address.country"
+* item[=].item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].item[=].type = #string
+
+// Other
+* item[=].item[+].linkId = "coverage.other"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.type"
+* item[=].item[=].text = "Anderer Kostenträger"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "coverage.other.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.payor"
+* item[=].item[=].item[=].text = "Name des Kostenträgers"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "coverage.other.id"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].text = "Beliebige ID"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "coverage.other.id.note"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier.type.text"
+* item[=].item[=].item[=].text = "Bemerkung zur ID"
+* item[=].item[=].item[=].type = #string
+ 
+
 * item[+].linkId = "previousResult"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
