@@ -332,9 +332,9 @@ Usage: #definition
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-
+// receiverCopies
 * item[+].linkId = "receiverCopies"
-* item[=].text = "Kopieempfänger"
+* item[=].text = "Kopieempfangende Organisation oder Person"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "receiverCopy.practitionerRole"
@@ -467,41 +467,41 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-* item[=].item.linkId = "receiverCopy"
-* item[=].item.text = "Kopieempfangende Organisation oder Person"
-* item[=].item.type = #group
-* item[=].item.repeats = true
-* item[=].item.item[0].linkId = "receiverCopy.organization.name"
-* item[=].item.item[=].text = "Name der Organisation"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.title"
-* item[=].item.item[=].text = "Titel"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.familyName"
-* item[=].item.item[=].text = "Name"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.givenName"
-* item[=].item.item[=].text = "Vorname"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.phone"
-* item[=].item.item[=].text = "Telefon"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.email"
-* item[=].item.item[=].text = "E-Mail"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.streetAddressLine"
-* item[=].item.item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item.item[=].type = #string
-* item[=].item.item[=].repeats = true
-* item[=].item.item[+].linkId = "receiverCopy.postalCode"
-* item[=].item.item[=].text = "PLZ"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.city"
-* item[=].item.item[=].text = "Ort"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "receiverCopy.country"
-* item[=].item.item[=].text = "Land"
-* item[=].item.item[=].type = #string
+//  * item[=].item.linkId = "receiverCopy"
+//  * item[=].item.text = "Kopieempfangende Organisation oder Person"
+//  * item[=].item.type = #group
+//  * item[=].item.repeats = true
+//  * item[=].item.item[0].linkId = "receiverCopy.organization.name"
+//  * item[=].item.item[=].text = "Name der Organisation"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.title"
+//  * item[=].item.item[=].text = "Titel"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.familyName"
+//  * item[=].item.item[=].text = "Name"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.givenName"
+//  * item[=].item.item[=].text = "Vorname"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.phone"
+//  * item[=].item.item[=].text = "Telefon"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.email"
+//  * item[=].item.item[=].text = "E-Mail"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.streetAddressLine"
+//  * item[=].item.item[=].text = "Strasse, Hausnummer, Postfach etc."
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[=].repeats = true
+//  * item[=].item.item[+].linkId = "receiverCopy.postalCode"
+//  * item[=].item.item[=].text = "PLZ"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.city"
+//  * item[=].item.item[=].text = "Ort"
+//  * item[=].item.item[=].type = #string
+//  * item[=].item.item[+].linkId = "receiverCopy.country"
+//  * item[=].item.item[=].text = "Land"
+//  * item[=].item.item[=].type = #string
 
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
