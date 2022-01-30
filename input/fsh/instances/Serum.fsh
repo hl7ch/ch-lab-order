@@ -1,4 +1,4 @@
-Instance: serum
+Instance: Serum
 InstanceOf: Specimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum"
@@ -6,7 +6,7 @@ Usage: #definition
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
-* type = $sct#119364003 "Serum specimen (specimen)"
+* type = SCT#119364003 "Serum specimen (specimen)"
 * subject = Reference(BeatBorer)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
@@ -16,4 +16,4 @@ Usage: #definition
 * collection.fastingStatusCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0916"
 * collection.fastingStatusCodeableConcept.coding.code.value = "F"
 * collection.fastingStatusCodeableConcept.coding.display = "Patient nüchtern vor Prozedur"
-* container.type = $sct#706053007 "General specimen container (physical object)"
+* container.type = SCT#706053007 "General specimen container (physical object)"

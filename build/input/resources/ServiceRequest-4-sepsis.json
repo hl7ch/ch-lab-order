@@ -61,10 +61,10 @@
   ],
   "specimen": [
     {
-      "reference": "Specimen/blood-bactec-plus"
+      "reference": "Specimen/Blood-bactec-plus"
     },
     {
-      "reference": "Specimen/blood"
+      "reference": "Specimen/Blood"
     },
     {
       "reference": "Specimen/urin"

@@ -8,10 +8,25 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn"
 * status = #completed
+
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+
+// * item[=].item[+].linkId = "order.title"
+// * item[=].item[=].text = "Titel"
+// * item[=].item[=].answer.valueString = "Laborauftrag"
+// 
+// * item[=].item[+].linkId = "order.category"
+// * item[=].item[=].text = "Kategorie"
+// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// 
+// * item[=].item[+].linkId = "order.type"
+// * item[=].item[=].text = "Typ"
+// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
+
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
@@ -59,7 +74,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "peter.pap@gruppenpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $request-priority#routine
+* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -119,7 +134,14 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrative-gender#female
+* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#female
+
+// patient.maritalStatus
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].answer.valueCoding = ECH-11-maritalstatus#2 "verheiratet"
+
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].answer.valueString = "079 979 79 79"
@@ -250,15 +272,15 @@ Usage: #definition
 * item[=].text = "Cytology and Microbiology"
 * item[=].item.linkId = "cervicalSmear"
 * item[=].item.text = "Cervical Smear"
-* item[=].item.answer[0].valueCoding = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item.answer[+].valueCoding = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* item[=].item.answer[0].valueCoding = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
+* item[=].item.answer[+].valueCoding = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
 * item[+].linkId = "urin"
 * item[=].text = "Urin"
 * item[=].item.linkId = "combur9"
 * item[=].item.text = "Combur-9"
-* item[=].item.answer.valueCoding = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* item[=].item.answer.valueCoding = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
 * item[+].linkId = "obstetricalPanels"
 * item[=].text = "Schwangerschaftsvorsorge"
 * item[=].item.linkId = "obstetric"
 * item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
-* item[=].item.answer.valueCoding = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item.answer.valueCoding = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"

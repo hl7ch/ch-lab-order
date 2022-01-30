@@ -8,10 +8,25 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"
 * status = #completed
+
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+
+// * item[=].item[+].linkId = "order.title"
+// * item[=].item[=].text = "Titel"
+// * item[=].item[=].answer.valueString = "Laborauftrag"
+// 
+// * item[=].item[+].linkId = "order.category"
+// * item[=].item[=].text = "Kategorie"
+// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// 
+// * item[=].item[+].linkId = "order.type"
+// * item[=].item[=].text = "Typ"
+// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
+
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
@@ -59,7 +74,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "paulo.porcellini@suva.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $request-priority#routine
+* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -119,7 +134,14 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1986-06-06"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrative-gender#male
+* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#male
+
+// patient.maritalStatus
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].answer.valueCoding = ECH-11-maritalstatus#2 "verheiratet"
+
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].answer.valueString = "+41 36 123 45 67"
@@ -250,15 +272,15 @@ Usage: #definition
 * item[=].text = "Hematology"
 * item[=].item.linkId = "lab"
 * item[=].item.text = "Laborwerte"
-* item[=].item.answer[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answer[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answer[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "toxicology"
 * item[=].text = "Toxicology"
 * item[=].item.linkId = "tox"
 * item[=].item.text = "Toxic Content"
-* item[=].item.answer[0].valueCoding = $loinc#29587-3 "Toxicology panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#54454-4 "Arsenic fractions panel - Urine"
-* item[=].item.answer[+].valueCoding = $loinc#29589-9 "Heavy metals panel - Urine"
+* item[=].item.answer[0].valueCoding = LOINC#29587-3 "Toxicology panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item.answer[+].valueCoding = LOINC#29589-9 "Heavy metals panel - Urine"

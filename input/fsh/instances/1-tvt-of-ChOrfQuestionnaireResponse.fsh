@@ -8,9 +8,23 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * status = #completed
+
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+
+// * item[=].item[+].linkId = "order.title"
+// * item[=].item[=].text = "Titel"
+// * item[=].item[=].answer.valueString = "Laborauftrag"
+// 
+// * item[=].item[+].linkId = "order.category"
+// * item[=].item[=].text = "Kategorie"
+// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// 
+// * item[=].item[+].linkId = "order.type"
+// * item[=].item[=].text = "Typ"
+// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order" 
+
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
@@ -59,7 +73,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $request-priority#routine
+* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -119,7 +133,14 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrative-gender#male
+* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#male
+
+// patient.maritalStatus
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].answer.valueCoding = ECH-11-maritalstatus#5 "unverheiratet"
+
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].answer.valueString = "079 979 79 79"
@@ -157,6 +178,9 @@ Usage: #definition
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.gln"
 * item[=].item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].item[=].answer.valueString = "7601000034321"
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.zsr"
+* item[=].item[=].item[=].item[=].text = "ZSR"
+* item[=].item[=].item[=].item[=].answer.valueString = "A123309"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].item[=].answer.valueString = "033 333 22 11"
@@ -254,20 +278,20 @@ Usage: #definition
 * item[=].text = "Hematology"
 * item[=].item.linkId = "hemato-subset"
 * item[=].item.text = "Hämatologie Subset"
-* item[=].item.answer[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answer[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answer[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "coagulation"
 * item[=].text = "Coagulation"
 * item[=].item.linkId = "d-dimer"
 * item[=].item.text = "D-Dimer"
-* item[=].item.answer.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item.answer.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[+].linkId = "cc"
 * item[=].text = "clinical chemistry"
 * item[=].item.linkId = "crp"
 * item[=].item.text = "CRP"
-* item[=].item.answer.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answer.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 
 //#################################################

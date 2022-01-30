@@ -3,7 +3,7 @@ InstanceOf: CHCoreOrganization
 Title: "Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
 Usage: #definition
-* identifier.system = "urn:oid:2.16.756.5.45"
+* identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
 * identifier.value = "CHE-108.444.179"
 * telecom[0].system = #phone
 * telecom[=].value = "+41412345566"

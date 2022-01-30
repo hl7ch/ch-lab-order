@@ -9,13 +9,21 @@ Please add your feedback via the ‘Propose a change’-link in the footer on th
 This is HL7 Swiss FHIR implementation guide for Laboratory Orders, which is based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
 
 It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](http://build.fhir.org/ig/HL7/sdc/index.html) and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
-There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested. Many laboratories also offer services for monitoring vital signs, such as blood pressure, ECG, pulse, which can be ordered.
+There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested. Many laboratories also offer services for monitoring vital signs, such as Blood pressure, ECG, pulse, which can be ordered.
 
 This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives gudiance for the implementaion of the user interface.
 
 #### Download
 
 You can download this Implementation Guide in [NPM-format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](https://fhir.ch/ig/ch-lab-order/package.tgz).
+
+### Foundation
+
+Applications claiming for conformance with the CH LAB-Order Implementation Guide shall:
+-Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the user interface (e.g. on screen, in print).
+
+For Clinical Information: Grouping of items and the order of items within shall be adequately reproduced according to the Questionnaire.
+<http://fhir.ch/ig/ch-lab-order/index.html#foundation>
 
 ### Management Summary
 

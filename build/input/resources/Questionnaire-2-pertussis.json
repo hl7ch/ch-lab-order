@@ -635,7 +635,7 @@
       "type": "group",
       "item": [
         {
-          "linkId": "blood-diff",
+          "linkId": "Blood-diff",
           "text": "Manual Differential panel - Blood",
           "type": "choice",
           "repeats": true,

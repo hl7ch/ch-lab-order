@@ -469,6 +469,14 @@
 
     <resource>
       <reference>
+        <reference value="Questionnaire/0-generic" />
+      </reference>
+      <name value="questionnaire 0-generic" />
+      <description value="Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis" />
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="Questionnaire/1-tvt" />
       </reference>
       <name value="questionnaire 1-tvt" />
@@ -602,7 +610,7 @@
     <!-- References to Specimens -->
     <resource>
       <reference>
-        <reference value="Specimen/blood-bactec-plus" />
+        <reference value="Specimen/Blood-bactec-plus" />
       </reference>
       <name value="Blood Sample Bacteriology" />
       <description value="Example for Specimen for bacteriological Examination" />
@@ -610,7 +618,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/blood-coag" />
+        <reference value="Specimen/Blood-coag" />
       </reference>
       <name value="Blood Sample Coagulation" />
       <description value="Example for Specimen for haemostatic Examination" />
@@ -618,7 +626,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/blood" />
+        <reference value="Specimen/Blood" />
       </reference>
       <name value="Blood Sample" />
       <description value="Example for Specimen for Haematological Examination" />
@@ -626,7 +634,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/cervix-swab" />
+        <reference value="Specimen/Cervix-swab" />
       </reference>
       <name value="Cervix-swab Sample" />
       <description value="Example for Specimen of Cervix Swab" />
@@ -635,7 +643,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/lsac" />
+        <reference value="Specimen/Lsac" />
       </reference>
       <name value="Cerebrospinal Fluid Sample" />
       <description value="Example for Specimen of Cerebrospinal Fluid" />
@@ -643,7 +651,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/serum" />
+        <reference value="Specimen/Serum" />
       </reference>
       <name value="Serum Sample" />
       <description value="Example for Specimen of Serum" />
@@ -651,7 +659,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/throat-swab" />
+        <reference value="Specimen/Throat-swab" />
       </reference>
       <name value="Throat Swab" />
       <description value="Example for Specimen of Throat Swab" />
@@ -659,7 +667,7 @@
 
     <resource>
       <reference>
-        <reference value="Specimen/urin" />
+        <reference value="Specimen/Urin" />
       </reference>
       <name value="Urin Sample" />
       <description value="Example for Specimen of Urin" />
