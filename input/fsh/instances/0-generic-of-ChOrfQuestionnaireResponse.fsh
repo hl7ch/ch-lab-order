@@ -336,13 +336,13 @@ Usage: #definition
 // ------------Choice of Specialty-----------------
 //#################################################
 //* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
-// TODO
 
 * item[+]
   * linkId = "labSpecialties"
   * text = "Labor Sparten"
 
   * item[+]
+    * definition = LOINC#18723-7 "Hematology studies (set)"
     * linkId = "labSpecialties.hematology"
     * text = "Hematology"
     * answer
@@ -352,33 +352,45 @@ Usage: #definition
         * linkId = "labSpecialties.hematology.panels"
         * text = "Hematology Panels"
         * item[+]
+          * definition = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
           * linkId = "labSpecialties.hematology.panels.hemoglobinHematocritPanelBlood"
           * text = "Hemoglobin and Hematocrit panel - Blood"
           * answer
             * valueBoolean = true
 
         * item[+]
+          * definition = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
           * linkId = "labSpecialties.hematology.panels.hemoglobinElectrophoresisPanelBlood"
           * text = "Hemoglobin electrophoresis panel in Blood"
           * answer
             * valueBoolean = true
-/*          
+          
         * item[+]
           * definition = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
           * linkId = "labSpecialties.hematology.panels.CBCWAutoDifferentialPanelBlood"
           * text = "CBC W Auto Differential panel - Blood"
+          * answer
+            * valueBoolean = false
+
         * item[+]
           * definition = LOINC#58410-2 "CBC panel - Blood by Automated count"
           * linkId = "labSpecialties.hematology.panels.CBCPanelBloodAutomatedCount"
           * text = "CBC panel - Blood by Automated count"
+          * answer
+            * valueBoolean = false
+
         * item[+]
           * definition = LOINC#57023-4 "Auto Differential panel - Blood"
           * linkId = "labSpecialties.hematology.panels.AutoDifferentialPanelBlood"
           * text = "Auto Differential panel - Blood"
+          * answer
+            * valueBoolean = false
 
-*/
 
+
+  // Coagulation
   * item[+]
+    * definition = LOINC#18720-3 "Coagulation studies (set)"
     * linkId = "labSpecialties.coagulation"
     * text = "Coagulation"
     * answer
@@ -390,6 +402,7 @@ Usage: #definition
         * text = "Coagulation Panels"
 
         * item[+]
+          * definition = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
           * linkId = "labSpecialties.coagulation.panels.ShortFibrinDdimerPlateletpoorplasma"
           * text = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
           * answer
@@ -397,15 +410,35 @@ Usage: #definition
 
           
         * item[+]
+          * definition = LOINC#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
           * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
           * text = "INR in Platelet poor plasma or Blood by Coagulation assay"
           * answer
             * valueBoolean = true
 
-
+  // Chemistry
   * item[+]
+    * definition = LOINC#18719-5 "Chemistry studies (set)"
     * linkId = "labSpecialties.chemistry"
     * text = "Clinical Chemistry"
     * answer
       * valueBoolean = true
+
+      * item[+]
+        * linkId = "labSpecialties.chemistry.panels"
+        * text = "Chemistry Panels"
+
+        * item[+]
+          * definition = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+          * linkId = "labSpecialties.chemistry.panels.CRP-MassProVolumeSerumPlasma"
+          * text = "C reactive protein [Mass/Volume] in Serum or Plasma"
+          * answer
+            * valueBoolean = true
+
+        * item[+]
+          * definition = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+          * linkId = "labSpecialties.chemistry.panels.CRP-MolesProVolumeSerumPlasma"
+          * text = "C reactive protein [Moles/volume] in Serum or Plasma"
+          * answer
+            * valueBoolean = true
   // #####################################################

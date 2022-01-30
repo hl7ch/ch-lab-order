@@ -748,6 +748,7 @@ Usage: #definition
         * linkId = "labSpecialties.coagulation.panels.INRplateletPoorPlasmaCoagulationAssay"
         * text = "INR in Platelet poor plasma or Blood by Coagulation assay"
         * type = #boolean
+  
   // Chemistry
   * item[+]
     * definition = LOINC#18719-5 "Chemistry studies (set)"
