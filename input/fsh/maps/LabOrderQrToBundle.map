@@ -1,6 +1,6 @@
 map "http://fhir.ch/ig/ch-lab-order/StructureMap/LabOrderQrToBundle" = "LabOrderQrToBundle"
 
-// Labiologoy QuestionnaireResponse to Bundle
+// Laboratory QuestionnaireResponse to Bundle, SD References
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
@@ -11,7 +11,7 @@ uses "http://hl7.org/fhir/StructureDefinition/PractitionerRole" alias Practition
 uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" alias ServiceRequest as target
 uses "http://hl7.org/fhir/StructureDefinition/BackboneElement" alias BackboneElement as target
 
-imports "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
+imports "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"  // import from ORF
 
 group LabOrderQrToBundle(source qr : QuestionnaireResponse, target bundle : Bundle ) {
       qr -> bundle.identifier as documentIdentifier, documentIdentifier.system = 'urn:ietf:rfc:3986',  uuid() as uuidDoc, documentIdentifier.value = ('urn:uuid:'+uuidDoc) "documentIdentifier";
