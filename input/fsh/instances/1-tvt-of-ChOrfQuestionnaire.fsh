@@ -148,6 +148,12 @@ Usage: #definition
 * item[=].item[=].item[0].linkId = "receiver.organization.name"
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "receiver.organization.gln"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
+* item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].type = #string
+
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
 * item[=].item[=].item[=].type = #string
