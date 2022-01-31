@@ -369,15 +369,15 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].item[=].type = #string
 
-* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.gln"
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:GLN.value"
-* item[=].item[=].item[=].item[=].text = "GLN"
-* item[=].item[=].item[=].item[=].type = #string
-
-* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.zsr"
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:ZSR.value"
-* item[=].item[=].item[=].item[=].text = "ZSR"
-* item[=].item[=].item[=].item[=].type = #string
+// * item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.gln"
+// * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:GLN.value"
+// * item[=].item[=].item[=].item[=].text = "GLN"
+// * item[=].item[=].item[=].item[=].type = #string
+// 
+// * item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.zsr"
+// * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:ZSR.value"
+// * item[=].item[=].item[=].item[=].text = "ZSR"
+// * item[=].item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.phone"
 * item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/ContactPoint#ContactPoint.value"
