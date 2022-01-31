@@ -4,11 +4,11 @@ Id: ch-lab-order-servicerequest
 Title: "CH LAB-Order ServiceRequest"
 Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 
-* . ^short = "CH RAD-Order ServiceRequest"
+* . ^short = "CH LAB-Order ServiceRequest"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
-(which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
-Consequently one CH RAD-Order Document contains one CH RAD-Order ServiceRequest which depicts one Placer Order 
+(which is concept commonly used in HL7) or Laboratory Service Request (Concept commonly used in DICOM). 
+Consequently one CH Lab-Order Document contains one CH LAB-Order ServiceRequest which depicts one Placer Order 
 equal one Filler Order equal one Imaging Service Request."
 
 // * ^version = "0.9.0"
