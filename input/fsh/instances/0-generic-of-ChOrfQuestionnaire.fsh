@@ -790,6 +790,19 @@ Usage: #definition
         * linkId = "labSpecialties.microbiol.panels.BordPertParaperDNA"
         * text = "Bordetella pertussis & Bordetella parapertussis DNA panel"
         * type = #boolean
+
+  // Reason
+  //* item[+]
+  //  * definition = SCT#404223003 "Deep venous thrombosis of lower extremity"
+  //  * linkID
+
+
+  // Specimen
+  // * item[+]
+  //   * specimen[0]
+  //   * specimen[+]
+    
+
   
 // ######################################################################################
 
