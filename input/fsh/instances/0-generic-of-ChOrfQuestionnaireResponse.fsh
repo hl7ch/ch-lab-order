@@ -341,6 +341,7 @@ Usage: #definition
   * linkId = "labSpecialties"
   * text = "Labor Sparten"
 
+  // Hematology
   * item[+]
     * definition = LOINC#18723-7 "Hematology studies (set)"
     * linkId = "labSpecialties.hematology"
