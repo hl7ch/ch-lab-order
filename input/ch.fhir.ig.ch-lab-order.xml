@@ -61,7 +61,7 @@
     <version value="0.10.0" /> <!-- otherwise we will get sdc 2.8.0 -->
   </dependsOn>
 
-<!-- 
+  <!-- 
   <dependsOn id="sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc" />
     <packageId value="hl7.fhir.uv.sdc" />
@@ -675,7 +675,7 @@
 
     <!-- References to code systems -->
     <!-- ########################## -->
-    
+
     <!-- References to STRUCTUREDEFINITIONS -->
     <!-- ################################## -->
 
@@ -700,7 +700,6 @@
       <exampleBoolean value="false" />
     </resource>
 
-    
 
     <!-- References to VALUESETS -->
     <!-- ####################### -->
@@ -789,6 +788,12 @@
         <nameUrl value="terminology.html" />
         <title value="Terminology" />
         <generation value="markdown" />
+      </page>
+
+      <page>
+        <nameUrl value="changelog.html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
       </page>
 
     </page>
