@@ -1,7 +1,6 @@
 <div markdown="1" class="stu-note">
 
-This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight.
-Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+Significant Changes, Open and Closed Issues
 </div>
 
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
