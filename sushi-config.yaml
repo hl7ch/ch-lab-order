@@ -42,3 +42,5 @@ pages:
     title: Profiles
   terminology.md:
     title: Terminology
+  changelog.md:
+    title: Changelog

@@ -1,6 +1,5 @@
 <div markdown="1" class="stu-note">
-
-Significant Changes, Open and Closed Issues
+  <a href="changelog.html">Significant Changes, Open and Closed Issues</a>
 </div>
 
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
