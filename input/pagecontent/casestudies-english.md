@@ -23,9 +23,9 @@ A mother visits the family doctor Peter Presto of the Olten group practice with 
 He prepares a laboratory order to carry out a pertussis PCR on the child's throat swab and gives the order to the mother. The mother herself is not sure whether she herself has been vaccinated against pertussis. Consequently, the family doctor Peter Presto gives her the pertussis vaccination right away and recommends that the same be done for the child's father and grandparents. In the meantime, the MPA has looked at the son's Blood smear under the microscope and finds a lot of reactive lymphocytes, which seem suspicious to her. She is unsure and asks the doctor, who gives the order to give the child's Blood smears to the mother and also to have them examined more closely in the laboratory.
 The mother arrives at the laboratory with her son, where the doctor's order is first to establish the son's identity. Then a pharyngeal swab and a right cubital venepuncture are taken from the child in the laboratory's Blood collection room and passed on to the laboratory together with the Blood smears and the doctor's examination order.
 
- Matching FHIR questionnaire that meets this specification:
-[2-pertussis.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.xml)
-[2-pertussis.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.json)
+Matching FHIR questionnaire that meets this specification:
+[2-pertussis.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.xml.html)
+[2-pertussis.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.json.html)
 
 ### Case study 3: Annual gynaecological check-up
 
@@ -43,8 +43,8 @@ Transmission of the order is triggered by the MPA (collection time)
 * Mammography: Order for the Dr. Curie X-ray Institute.
 
 Matching FHIR questionnaire that meets this specification:
-[3-gyn.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-3-gyn.xml)
-[3-gyn.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-3-gyn.json)
+[3-gyn.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-3-gyn.xml.html)
+[3-gyn.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-3-gyn.json.html)
 
 ### Case study 4: Suspected sepsis
 
@@ -53,8 +53,8 @@ All five samples are further processed in the external laboratory Pipette. There
 An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances "amoxicillin+clavulanic acid" and "ceftriaxone" are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
 
 Matching FHIR questionnaire corresponding to this specification:
-[4-sepsis.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.xml)
-[4-sepsis.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.json)
+[4-sepsis.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.xml.html)
+[4-sepsis.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-4-sepsis.json.html)
 
 ### Case study 5: Collective order "SUVA biological monitoring"
 
@@ -69,5 +69,5 @@ The companies receive a list from the AMV including labels with the affected emp
 Biological monitoring SUVA]<https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte>
 
 Matching FHIR questionnaire that corresponds to this specification:
-[5-biol-monit.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.xml)
-[5-biol-monit.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.json)
+[5-biol-monit.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.xml.html)
+[5-biol-monit.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.json.html)
