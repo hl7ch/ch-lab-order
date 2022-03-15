@@ -13,7 +13,6 @@ Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
 [1-tvt.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.xml.html)
 [1-tvt.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.json.html)
 
-
 Da es sich um eine primäre Beinvenenthrombose handelt, sendet Frau Dr. Eva Erlenmeier vom Labor Pipette ein Feedback an Dr. Mustermann, mit der Empfehlung, ein Thrombophilie-Screening durchzuführen, welches folgende Analysen enthält:
 Quick, aPTT, Fibrinogen, Antithrombin (funkt.), Thrombinzeit I 2.5 NIH/ml, APC Resistenz, D-Dimere, Protein C, (aPTT Methode), Protein S-Antigen
 Die Analysen können direkt von den mitgeschickten Proben der Citrat-Röhrchen erfolgen.
