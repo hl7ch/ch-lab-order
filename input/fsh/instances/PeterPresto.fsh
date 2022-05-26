@@ -4,7 +4,7 @@ Title: "Peter Presto"
 Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3" //GLN
-* identifier[=].value = "7601000050704"
+* identifier[=].value = "7601022050702"
 * identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
 * identifier[=].value = "A123303"
 * name.use = #official

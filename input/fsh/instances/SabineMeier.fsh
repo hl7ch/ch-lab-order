@@ -4,7 +4,7 @@ Title: "Sabine Meier"
 Description: "Practitioner, works in Kantonsspital, refers to 4-sepsis"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3" // GLN
-* identifier[=].value = "7601000034821"
+* identifier[=].value = "7601000034823"
 * identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
 * identifier[=].value = "A123321"
 * name.use = #official
