@@ -66,7 +66,7 @@ The Occupational Medical Prevention (AMV) of SUVA sends the laboratory a monthly
 * Examinations to be carried out (e.g. arsenic, lead, mercury, mandelic acid).
 The companies receive a list from the AMV including labels with the affected employees. Here we take the document of an employee Beat Borer, born 6. 6. 1986. The laboratory prints the order forms with the company number and sends the necessary number of urine cups and order forms to the companies. In the company, order forms and urine cups are labelled with the labels supplied by the AMV and given to the employees. The samples, including the order form, are sent from the company to the laboratory.
 
-Biological monitoring SUVA]<https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte>
+[Biological monitoring SUVA]<https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte>
 
 Matching FHIR questionnaire that corresponds to this specification:
 [5-biol-monit.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.xml.html)
