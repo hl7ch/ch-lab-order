@@ -101,4 +101,4 @@ For this purpose, the laboratories provide their customers with a catalog of tho
 There will be different types of catalog entries (CatalogEntries) for this purpose: Single analyses, multiple analyses (panels), sample vessels, pre-analytical preconditions.
 The single record of a laboratory analysis or a sample can be mapped as using the CatalogEntry resource. A composition with a Profile for Catalog is then the document that represents the catalog and represents the totality of the CatalogEntries it contains. It is important that the catalog always corresponds to the current conditions of the laboratory, and can, for example, immediately accommodate new laboratory tests or changed specifications of the preanalytics.
 
-[StructureDefinition:Catalog] <http://hl7.org/fhir/catalog.html>
+[StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)

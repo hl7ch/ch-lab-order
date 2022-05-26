@@ -4,7 +4,7 @@ Title: "Regionalspital Zugersee"
 Description: "Example for hospital"
 Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235500"
+* identifier.value = "7601980235500"
 * name = "Regionalspital Zugersee"
 * telecom[0].system = #phone
 * telecom[=].value = "+41 45 334 55 66"

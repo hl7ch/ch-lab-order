@@ -4,7 +4,7 @@ Title: "Kantonsspital"
 Description: "Example for Hospital"
 Usage: #definition
 * identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235500"
+* identifier.value = "7601000235503"
 * name = "Kantonsspital Zug"
 * telecom[0].system = #phone
 * telecom[=].value = "+41 45 334 55 66"

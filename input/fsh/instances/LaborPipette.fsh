@@ -4,7 +4,7 @@ Title: "Labor Pipette"
 Description: "Laboratory Organization, refers to all Storyboards"
 Usage: #definition
 * identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234400"
+* identifier.value = "7601000234407"
 * name = "Labor Pipette"
 * telecom[0].system = #phone
 * telecom[=].value = "+41223345566"
