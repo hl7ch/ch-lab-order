@@ -34,25 +34,24 @@ Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertu
 ### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
 Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
-TODO Beispielformular ohne Q/QR
 
-<http://hl7.org/fhir/2020May/request.html#requisitionid>
+TODO [Beispielformular ohne Q/QR](http://hl7.org/fhir/2020May/request.html#requisitionid)
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
 Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere Test mit der gleichen Probe gewünscht werden. So kann im Beispiel 1-tvt eine venöse Thrombophilie vermutet werden, sodass weitere Laboruntersuchungen hereditäre Ursachen, wie Faktor-V-Leiden-Mutaion, Prothrombin-Genmutation, Antithrombinmangel usw. auffinden können.
 
 * Angaben zum angeforderten Service
-  * Im ValueSet Servicerequest.category wird RequestForAdditionalExam angewählt
+* Im ValueSet Servicerequest.category wird RequestForAdditionalExam angewählt
 
 ### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern
 
 Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.B. um den Verlauf von Prostata-spezifische Antigen (PSA) zu beurteilen.
 
 * Angaben zum angeforderten Service
-  * Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
+* Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
 
-Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
+TODO Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
   
 ### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
@@ -61,8 +60,8 @@ Dieser Use Case entspricht dem Beispiel 5-biol-monit. Um die Gefährdung von Arb
 Beispiele dazu sind:
 
 * Arbeitsmedizin: Bestellung von Laboruntersuchungen zu einer Arbeitergruppe
-  * ServiceRequest.subject referenziet auf eine Gruppe
-  * ServiceRequest.specimen referenziert auf mehrere Proben (0 .. *)
+* ServiceRequest.subject referenziet auf eine Gruppe
+* ServiceRequest.specimen referenziert auf mehrere Proben (0 .. *)
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
@@ -124,4 +123,4 @@ Die Labore stellen dazu ihren Kunden einen Katalog von derjenigen Laboruntersuch
 Es wird dazu verschiedene Typen von Katalogeinträgen (CatalogEntries) geben: Einzel-Analysen, Mehrfach-Analysen (panels), Proben-Gefässe, präanalytische Vorbedingungen.
 Der einzelne Datensatz einer Laboruntersuchung oder einer Probe lässt sich als mittels der Resource CatalogEntry abbilden. Eine Composition mit einem Profile for Catalog ist dann das Dokument, das den Katalog darstellt und repräsentiert die Gesamtheit der enthaltenen CatalogEntries. Dabei ist wichtig, dass der Catalog immer den aktuellen Gegebenheiten des Labors entspricht, und beispielsweise sofort neue Laboruntersuchungen oder veränderte Vorgaben der Präanalytik aufnehmen kann.
 
-[StructureDefinition:Catalog] <http://hl7.org/fhir/catalog.html>
+[StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)
