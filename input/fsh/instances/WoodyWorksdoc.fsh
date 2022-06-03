@@ -3,10 +3,10 @@ InstanceOf: CHCorePractitionerEPR
 Title: "Woody Worksdoc"
 Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
 Usage: #example
-* identifier[0].system = "urn:oid:2.51.1.3" //GLN
-* identifier[=].value = "7601000050717"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123301"
+* identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
+* identifier[GLN].value = "7601000050717"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "A123301"
 * name.use = #official
 * name.family = "Worksdoc"
 * name.given = "Woody"

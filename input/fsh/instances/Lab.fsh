@@ -3,9 +3,9 @@ InstanceOf: ChOrfServiceRequest
 Title: "laborder lab"
 Description: "Example for generic Service Request"
 Usage: #definition
-* identifier[0].type = V2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
-* identifier[=].value = "7601000234407" // Prefix 760..769 is GS1 Schweiz, Suisse, Svizzera
+* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "7601000234407" // Prefix 760..769 is GS1 Schweiz, Suisse, Svizzera
 // * identifier[+].type = V2-0203#FILL "Filler Identifier"
 // * identifier[=].system = "http://example.com/identifier"
 // * identifier[=].value = "456"

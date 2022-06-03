@@ -4,9 +4,9 @@ Title: "laborder 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #definition
 * id = "4-sepsis"
-* identifier[0].type = V2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
-* identifier[=].value = "123"
+* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"

@@ -4,9 +4,9 @@ Title: "laborder 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #definition
 * id = "3-gyn"
-* identifier[0].type = V2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
-* identifier[=].value = "123"
+* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
