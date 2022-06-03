@@ -71,3 +71,16 @@ The companies receive a list from the AMV including labels with the affected emp
 Matching FHIR questionnaire that corresponds to this specification:
 [5-biol-monit.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.xml.html)
 [5-biol-monit.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.json.html)
+
+### Case study 6: Suspected Melanoma, order for histopathology examination
+
+A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
+Attachement of dermatoscopic images
+Clinical Notes: Histology; 2 mm margin excision
+Body Site: Back paralumbar left
+
+The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
+
+Matching FHIR questionnaire that corresponds to this specification:
+[6-histopath.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.xml.html)   TODO
+[6-histopath.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.json.html) TODO
