@@ -21,9 +21,10 @@ Usage: #definition
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
 * extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 
 // ###############  begin of general part  ########################################
+
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 * version = "0.9.1"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example"
