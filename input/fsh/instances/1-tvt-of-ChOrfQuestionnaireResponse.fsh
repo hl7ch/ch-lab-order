@@ -73,7 +73,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
+* item[=].item[=].answer.valueCoding = RequestPriority#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -133,7 +133,7 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#male
+* item[=].item[=].answer.valueCoding = AdministrativeGender#male
 
 // patient.maritalStatus
 
