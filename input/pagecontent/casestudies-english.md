@@ -76,7 +76,7 @@ Matching FHIR questionnaire that corresponds to this specification:
 
 A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
 Attachement of dermatoscopic images
-Clinical Notes: Histology; 2 mm margin excision
+Specimen: 29 x 11 x 5 mm skin ellipse
 Body Site: Back paralumbar left
 
 The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
