@@ -12,7 +12,7 @@ Usage: #definition
 * extension[=].valueAddress.city = "Lenzburg"
 * extension[=].valueAddress.state = "AG"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = RELIGIOUSAFFILIATION#1025 "Jehovah's Witnesses"
+* extension[=].valueCodeableConcept = ReligiousAffiliation#1025 "Jehovah's Witnesses"
 * identifier.type = V2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111114"
