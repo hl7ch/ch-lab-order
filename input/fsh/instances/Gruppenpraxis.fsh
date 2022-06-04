@@ -4,7 +4,7 @@ Title: "Praxis Seeblick"
 Description: "Example for group practice"
 Usage: #definition
 * identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000241111"
+* identifier.value = "7601000241115"
 * name = "Gruppenpraxis Olten"
 * telecom[0].system = #phone
 * telecom[=].value = "+41555556677"
