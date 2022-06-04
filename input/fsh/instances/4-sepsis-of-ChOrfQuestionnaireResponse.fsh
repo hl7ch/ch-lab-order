@@ -78,7 +78,7 @@ Usage: #definition
 * item[=].item[=].item.item[=].answer.valueString = "hans.hauser@kantonsspital.zug.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = REQUESTPRIORITY#routine
+* item[=].item[=].answer.valueCoding = RequestPriority#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -138,7 +138,7 @@ Usage: #definition
 * item[=].item[=].answer.valueDate = "1975-12-12"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = ADMINISTRATIVEGENDER#female
+* item[=].item[=].answer.valueCoding = AdministrativeGender#female
 
 // patient.maritalStatus
 

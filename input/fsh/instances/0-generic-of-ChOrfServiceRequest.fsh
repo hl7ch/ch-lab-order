@@ -4,9 +4,9 @@ Title: "laborder 0-generic"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #definition
 * id = "0-generic"
-* identifier.type = V2-0203#PLAC "Placer Identifier"
-* identifier.system = "urn:oid:2.16.756.5.30"
-* identifier.value = "123"
+* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
