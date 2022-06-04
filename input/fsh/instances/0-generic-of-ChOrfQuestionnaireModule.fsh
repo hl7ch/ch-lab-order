@@ -247,7 +247,8 @@ Description: "Subquestionnaire order"
 
 // ---------- Order Priority ----------
 * item[+].linkId = "order.priority"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.priority"
+* item[=].definition = RequestPriority
+// ""
 * item[=].text = "Auftragspriorität"
 * item[=].type = #choice
 * item[=].answerOption[+].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
