@@ -9,6 +9,8 @@ Usage: #definition
 
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div></div>"
+
+// Auftraggeber und Auftragnehmer, allgemeiner Teil
 * extension[0].extension.url = "enterer"
 * extension[=].extension.valueReference = Reference(MarcMustermannArztpraxis)
 * extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
@@ -18,17 +20,21 @@ Usage: #definition
 
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
 * extension[=].valueReference = Reference(MarcMustermannArztpraxis)
+
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
+
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
+
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(KlebsiellaKeller)
 
+// Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
-* title = "Laborauftrag"
+* title = "Pathologieauftrag"
 * category = SCT#721963009 "Order (record artifact)"
-* type = SCT#721965002 "Laboratory order (record artifact)"
+* type = SCT#721966001 "Pathology order (record artifact)"
 * subject = Reference(KlebsiellaKeller)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
