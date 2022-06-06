@@ -1,10 +1,7 @@
-Instance: 0-generic-of-ChOrfQuestionnaireModule
+Instance: 0-generic-mod-form
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 0-generic (modular version)"
 Description: "Example for Questionnaire"
-Usage: #definition
-* id = "0-generic-mod"
-
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -27,8 +24,7 @@ Usage: #definition
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-// ###############  begin of general part  ########################################
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-mod"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-mod-form"
 * name = "OrderLabForm"
 * title = "Order-Lab-Form"
 * status = #active
@@ -87,8 +83,6 @@ Usage: #definition
 
 
 // ---------- Coverage (Kostenträger) ----------
-// Design as agreed with eHealth Suisse and Cistec 09.06.2021
-
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -156,6 +150,7 @@ Usage: #definition
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
+//##### Subquestionnaire Order #################
 Instance: ch-orf-module-order
 InstanceOf: Questionnaire
 Title: "Module Questionnaire order"
@@ -257,6 +252,7 @@ Description: "Subquestionnaire order"
 * item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
 * item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
+//##### Subquestionnaire Receiver ###############################
 Instance: ch-orf-module-receiver
 InstanceOf: Questionnaire
 Title: "Module Questionnaire receiver"
@@ -336,7 +332,7 @@ Description: "Subquestionnaire receiver"
 * item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].item[=].type = #display
 
-
+//##### Subquestionnaire Patient ###########################
 Instance: ch-orf-module-patient
 InstanceOf: Questionnaire
 Title: "Module Questionnaire patient"
@@ -349,7 +345,6 @@ Description: "Subquestionnaire patient"
 * status = #active
 * date = "2022-05-04"
 * publisher = "HL7 Switzerland"
-
 
 * item[+].linkId = "patient.familyName"
 * item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.name.family"
@@ -464,6 +459,7 @@ Description: "Subquestionnaire patient"
 * item[=].item[=].text = "E-Mail"
 * item[=].item[=].type = #string
 
+//##### Subquestionnaire Requested Encounter #################
 Instance: ch-orf-module-requestedencounter
 InstanceOf: Questionnaire
 Title: "Module Questionnaire requestedEncounter"
@@ -493,7 +489,7 @@ Description: "Subquestionnaire patrequestedEncounterient"
 * item[=].answerOption[+].valueCoding = ChCoreCSEncounterType#2 "halbprivat"
 * item[=].answerOption[+].valueCoding = ChCoreCSEncounterType#3 "privat"
 
-
+//##### Subquestionnaire Coverage #############################
 Instance: ch-orf-module-coverage
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Coverage"
@@ -666,10 +662,7 @@ Description: "Subquestionnaire Coverage"
 * item[=].item[=].text = "Bemerkung zur ID"
 * item[=].item[=].type = #string
 
-// The situation where a person and not a organization is an other payer is not depicted. 
-// Id's of insurances other than kvg are proprietary. Zusatzversicherung however may use the Kennnummer der Versichertenkarte (KVG).
-// Id's for other are not defined.
-
+//##### Subquestionnaire Sender ###############################
 Instance: ch-orf-module-sender
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Sender"
@@ -766,7 +759,6 @@ Description: "Subquestionnaire Sender"
 * item[=].item[=].text = "Erfassende Person"
 * item[=].item[=].type = #group
 
-
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
@@ -778,6 +770,7 @@ Description: "Subquestionnaire Sender"
 * item[=].item[=].item.text = "Unable to resolve 'practitioner-nametel' sub-questionnaire"
 * item[=].item[=].item.type = #display
 
+//##### Subquestionnaire Receiver Copy #################
 Instance: ch-orf-module-receivercopy
 InstanceOf: Questionnaire
 Title: "Module Questionnaire receiverCopy"
@@ -839,7 +832,6 @@ Description: "Subquestionnaire receiverCopy"
 * item[=].text = "Patient selbst"
 * item[=].type = #boolean
 
-
 * item[+].linkId = "receiverCopy.relatedPerson"
 * item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson"
 * item[=].text = "Andere Person"
@@ -877,7 +869,7 @@ Description: "Subquestionnaire receiverCopy"
 * item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].item[=].type = #display
 
-/*------ Appointment ------------------------------ */
+//##### Subquestionnaire Appointment ##############
 Instance: ch-orf-module-appointment
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Appointment"
@@ -954,7 +946,7 @@ Description: "Subquestionnaire appointment"
 * item[=].text = "Patienteninformation für diesen Termin"
 * item[=].type = #string
 
-/*------ Practitioner Name / Telecom ------------------------------ */
+//##### Subquestionnaire Practitioner Name / Telecom ##############
 Instance: ch-orf-module-practitioner-nametel
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Practitioner with Name/Telecom"
@@ -995,9 +987,7 @@ Description: "Subquestionnaire Practitioner with Name/Telecom"
 * item[=].text = "E-Mail"
 * item[=].type = #string
 
-
-
-/*------ Address ------------------------------ */
+//##### Subquestionnaire Practitioner Address #################
 Instance: ch-orf-module-address
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Address"
