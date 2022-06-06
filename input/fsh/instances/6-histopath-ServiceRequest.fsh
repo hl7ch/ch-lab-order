@@ -21,7 +21,7 @@ Usage: #definition
 * priority = #urgent
 * subject = Reference(KlebsiellaKeller)
 * requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = SCT#163403006 "Pigmented nevus (morphologic abnormality)"
+* reasonCode = SCT#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Skin) "Skin specimen"

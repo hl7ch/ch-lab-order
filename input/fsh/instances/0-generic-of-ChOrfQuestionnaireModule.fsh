@@ -131,7 +131,7 @@ Usage: #definition
 * item[=].item.text = "Unable to resolve 'receivercopy' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Appointment ------------------------------ */
+// ------ Appointment ----------------------------
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -497,7 +497,7 @@ Description: "Subquestionnaire patrequestedEncounterient"
 Instance: ch-orf-module-coverage
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Coverage"
-Description: "Subquestionnaire Converage"
+Description: "Subquestionnaire Coverage"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-coverage"
