@@ -22,6 +22,8 @@ Usage: #definition
 * extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
 * extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 
+// ###############  begin of general part  ########################################
+
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 * version = "0.9.1"
 * name = "LabOrderFormExample"
@@ -35,8 +37,6 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
-
-
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group

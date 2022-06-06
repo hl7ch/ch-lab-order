@@ -1,4 +1,4 @@
-Instance: 6-histopath-mod-form
+Instance: 6-histopath-mod-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire 6-histopath (modular version)"
 Description: "Example for Questionnaire of Histopathology Examination"
@@ -24,7 +24,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-form"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-Questionnaire"
 * name = "LabOrderForm"
 * title = "Lab Order Form"
 * status = #active
@@ -1019,3 +1019,72 @@ Description: "Subquestionnaire Practitioner Address"
 * item[+].linkId = "country"
 * item[=].text = "Land"
 * item[=].type = #string
+
+// ############## begin of specific part ############################
+
+
+// ---------------Diagnosen und Befunde Ref --------------
+
+* item[+].linkId = "diagnosisList"
+* item[=].text = "Diagnosen und Befunde"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.reasonReference"
+* item[=].item[=].text = "Diagnose"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:diagnosis"
+* item[=].item[=].text = "Nebendiagnose"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+// --------------- Specimen Ref --------------
+
+* item[+].linkId = "SpecimenList"
+* item[=].text = "Diagnosen und Befunde"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "specimenList"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.specimenReference"
+* item[=].item[=].text = "Specimen"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+// ------------Choice of Specialty-----------------
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+  * type = #group
+
+  // Histopathology
+  * item[+]
+    * definition = LOINC#27898-6 "Pathology studies (set)"
+    * linkId = "labSpecialties.pathology"
+    * text = "Pathology"
+    * type = #boolean
+
+    * item[+]
+      * linkId = "labSpecialties.pathology.panels"
+      * text = "Pathology Panels"
+      * type = #group
+      * enableWhen[+].question = "labSpecialties.pathology"
+      * enableWhen[=].operator = #=
+      * enableWhen[=].answerBoolean = true
+      * item[+]
+        * definition = LOINC#18743-5 "Autopsy report"
+        * linkId = "labSpecialties.pathology.panels.Autopsy"
+        * text = "Autopsy report"
+        * type = #boolean
+      * item[+]
+        * definition = LOINC#11526-1 "Pathology study"
+        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
+        * text = "Pathology Study"
+        * type = #boolean
+      * item[+]
+        * definition = LOINC#11529-5 "Surgical pathology study"
+        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
+        * text = "Surgical pathology study"
+        * type = #boolean
