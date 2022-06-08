@@ -2,10 +2,6 @@ Instance: 6-histopath-Composition
 InstanceOf: ChOrfComposition
 Title: "6-histopath"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
-Usage: #definition
-* id = "6-histopath"
-* meta.versionId = "1"
-* meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div></div>"

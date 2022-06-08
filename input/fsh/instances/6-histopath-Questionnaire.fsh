@@ -1035,21 +1035,27 @@ Description: "Subquestionnaire Practitioner Address"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
-* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"  
+* item[=].item[+].linkId = "supportingInfo"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:diagnosis"
 * item[=].item[=].text = "Nebendiagnose"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
 // --------------- Specimen Ref --------------
-
 * item[+].linkId = "SpecimenList"
-* item[=].text = "Diagnosen und Befunde"
+* item[=].text = "Specimen Liste"
 * item[=].type = #group
 
-* item[=].item[+].linkId = "specimenList"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.specimenReference"
-* item[=].item[=].text = "Specimen"
+* item[=].item[+].linkId = "specimenList.collection"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.specimenReference:collection"
+* item[=].item[=].text = "Specimen Collection"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+// nicht sicher, ob URL:collection korrekt
+* item[=].item[+].linkId = "specimenList.container"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.specimenReference:container"
+* item[=].item[=].text = "Specimen Container"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
