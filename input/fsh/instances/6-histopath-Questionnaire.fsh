@@ -2,6 +2,7 @@ Instance: 6-histopath-mod-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire 6-histopath (modular version)"
 Description: "Example for Questionnaire of Histopathology Examination"
+* id = "6-histopath"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
