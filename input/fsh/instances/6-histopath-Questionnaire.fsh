@@ -2,6 +2,7 @@ Instance: 6-histopath-mod-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire 6-histopath (modular version)"
 Description: "Example for Questionnaire of Histopathology Examination"
+* id = "6-histopath-mod"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -24,7 +25,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-Questionnaire"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
 * name = "LabOrderForm"
 * title = "Lab Order Form"
 * status = #active
