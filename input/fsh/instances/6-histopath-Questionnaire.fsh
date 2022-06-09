@@ -150,6 +150,43 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
+// ########### specific Part ######################
+// ------------Choice of Specialty-----------------
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+  * type = #group
+
+  // Histopathology
+  * item[+]
+    * definition = LOINC#27898-6 "Pathology studies (set)"
+    * linkId = "labSpecialties.pathology"
+    * text = "Pathology"
+    * type = #boolean
+
+    * item[+]
+      * linkId = "labSpecialties.pathology.panels"
+      * text = "Pathology Panels"
+      * type = #group
+      * enableWhen[+].question = "labSpecialties.pathology"
+      * enableWhen[=].operator = #=
+      * enableWhen[=].answerBoolean = true
+      * item[+]
+        * definition = LOINC#18743-5 "Autopsy report"
+        * linkId = "labSpecialties.pathology.panels.Autopsy"
+        * text = "Autopsy report"
+        * type = #boolean
+      * item[+]
+        * definition = LOINC#11526-1 "Pathology study"
+        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
+        * text = "Pathology Study"
+        * type = #boolean
+      * item[+]
+        * definition = LOINC#11529-5 "Surgical pathology study"
+        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
+        * text = "Surgical pathology study"
+        * type = #boolean
+
 //##### Subquestionnaire Order #################
 Instance: 6-histopath-mod-order
 InstanceOf: Questionnaire
