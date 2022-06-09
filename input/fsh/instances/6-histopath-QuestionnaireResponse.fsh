@@ -97,3 +97,34 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 // * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item[=].text = "Kommentar"
 * item[=].item[=].answer.valueString = "mark in the skin specimen points to the cranio-medial part"
+
+// ########### specific Part ######################
+// ------------Choice of Specialty-----------------
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+
+  // Histopathology
+  * item[+]
+    * linkId = "labSpecialties.pathology"
+    * text = "Pathology"
+    * answer.valueBoolean = true
+
+    * answer.item[+]
+      * linkId = "labSpecialties.pathology.panels"
+      * text = "Pathology Panels"
+      * item[+]
+        * definition = LOINC#18743-5 "Autopsy report"
+        * linkId = "labSpecialties.pathology.panels.Autopsy"
+        * text = "Autopsy report"
+        * answer.valueBoolean = false
+      * item[+]
+        * definition = LOINC#11526-1 "Pathology study"
+        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
+        * text = "Pathology Study"
+        * answer.valueBoolean = false
+      * item[+]
+        * definition = LOINC#11529-5 "Surgical pathology study"
+        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
+        * text = "Surgical pathology study"
+        * answer.valueBoolean = true
