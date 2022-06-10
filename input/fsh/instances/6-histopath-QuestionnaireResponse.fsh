@@ -9,50 +9,262 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[+].linkId = "order"
 * item[=].text = "Auftrag"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order|2.0.0"
-* item[=].item.linkId = "order.1"
-* item[=].item.text = "Unable to resolve 'order' sub-questionnaire"
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
+* item[=].item[=].text = "Auftragsnummer des Auftraggebers"
+* item[=].item[=].answer.valueString = "123"
+
+* item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
+* item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
+* item[=].item[=].answer.valueString = "urn:oid:2.999.1.3.4.5.6.7"
+
+* item[=].item[+].linkId = "order.fillerOrderIdentifier"
+* item[=].item[=].text = "Auftragsnummer des Auftragsempfängers"
+* item[=].item[=].answer.valueString = "456"
+
+* item[=].item[+].linkId = "order.fillerOrderIdentifierDomain"
+* item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftragsempfängers"
+* item[=].item[=].answer.valueString = "urn:oid:2.999.7.8.9.10.11"
+
+* item[=].item[+].linkId = "order.precedentDocumentIdentifier"
+* item[=].item[=].text = "Identifier des Vorgängerdokuments"
+* item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
+
+// ---------- Urgent Notification Contact for this document ----------
+* item[=].item[+].linkId = "order.notificationContactDocument"
+* item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
+
+* item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner"
+* item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Röntgen"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Hans"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 412 00 99"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "hans.roentgen@kantonsspital.ch"
+
+// ---------- Urgent Notification Contact for the Response to this document ----------
+* item[=].item[+].linkId = "order.notificationContactDocumentResponse"
+* item[=].item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
+
+* item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner"
+* item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Meier"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Sabine"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 333 22 11"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "sabine.meier@praxisseeblick.ch"
+
+// ---------- Order Priority ----------
+* item[=].item[+].linkId = "order.priority"
+* item[=].item[=].text = "Auftragspriorität"
+* item[=].item[=].answer.valueCoding = RequestPriority#routine
 
 // ---------- Receiver: Person/organization who receives the document ----------
 * item[+].linkId = "receiver"
-// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
 * item[=].text = "Empfänger"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receiver|2.0.0"
-* item[=].item.linkId = "receiver.1"
-* item[=].item.text = "Unable to resolve 'receiver' sub-questionnaire"
+* item[=].item[+].linkId = "receiver.practitioner"
+* item[=].item[=].text = "Empfangende Person"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.title"
+* item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = "Röntgen"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.givenName"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].answer.valueString = "Hans"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
+* item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].answer.valueString = "7601000201041"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
+* item[=].item[=].item[=].text = "ZSR"
+* item[=].item[=].item[=].answer.valueString = "A123262"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = "044 412 00 99"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = "hans.roentgen@kantonsspital.ch"
+
+* item[=].item[+].linkId = "receiver.organization"
+* item[=].item[=].text = "Empfangende Organisation"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.name"
+* item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].answer.valueString = "Kantonsspital"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 14"
+* item[=].item[=].item[=].answer[1].valueString = "Postfach 14"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = "8000"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = "Zürich"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = "Schweiz"
 
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
 * item[+].linkId = "patient"
-// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.subject"
 * item[=].text = "Patient"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-patient|2.0.0"
-* item[=].item.linkId = "patient.1"
-* item[=].item.text = "Unable to resolve 'patient' sub-questionnaire"
+* item[=].item[+].linkId = "patient.familyName"
+* item[=].item[=].text = "Name"
+* item[=].item[=].answer.valueString = "Musterfrau"
 
-// ---------- Encounter Class (Ambulant / Stationär / Notfall) ----------
+* item[=].item[+].linkId = "patient.maidenName"
+* item[=].item[=].text = "Ledigname"
+* item[=].item[=].answer.valueString = "Ledigname"
+
+* item[=].item[+].linkId = "patient.givenName"
+* item[=].item[=].text = "Vorname"
+* item[=].item[=].answer.valueString = "Erika"
+
+* item[=].item[+].linkId = "patient.localPid"
+* item[=].item[=].text = "Lokale Patienten-ID"
+* item[=].item[=].answer.valueString = "11.22.33.4567"
+
+* item[=].item[+].linkId = "patient.localPidDomain"
+* item[=].item[=].text = "Lokale Patienten-ID Domain"
+* item[=].item[=].answer.valueString = "urn:oid:2.999.1.2.3.4"
+
+* item[=].item[+].linkId = "patient.birthDate"
+* item[=].item[=].text = "Geburtsdatum"
+* item[=].item[=].answer.valueDate = "1970-03-14"
+
+* item[=].item[+].linkId = "patient.gender"
+* item[=].item[=].text = "Geschlecht"
+* item[=].item[=].answer.valueCoding = AdministrativeGender#female
+
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].answer.valueCoding = EchMaritalStatus#1 "ledig"
+
+* item[=].item[+].linkId = "patient.phone"
+* item[=].item[=].text = "Telefon"
+* item[=].item[=].answer.valueString = "079 979 79 79"
+
+* item[=].item[+].linkId = "patient.email"
+* item[=].item[=].text = "E-Mail"
+* item[=].item[=].answer.valueString = "erika@musterfrau.ch"
+
+* item[=].item[+].linkId = "patient.streetAddressLine"
+* item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].answer[+].valueString = "Musterweg"
+* item[=].item[=].answer[+].valueString = "6a"
+
+* item[=].item[+].linkId = "patient.postalCode"
+* item[=].item[=].text = "PLZ"
+* item[=].item[=].answer.valueString = "8000"
+
+* item[=].item[+].linkId = "patient.city"
+* item[=].item[=].text = "Ort"
+* item[=].item[=].answer.valueString = "Zürich"
+
+* item[=].item[+].linkId = "patient.country"
+* item[=].item[=].text = "Land"
+* item[=].item[=].answer.valueString = "Schweiz"
+
+* item[=].item[+].linkId = "patient.languageOfCorrespondence"
+* item[=].item[=].text = "Korrespondenzsprache"
+* item[=].item[=].answer.valueCoding =  urn:ietf:bcp:47#de-CH "Deutsch (Schweiz)"
+
+// ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
+* item[=].item[+].linkId = "patient.contactperson"
+* item[=].item[=].text = "Kontaktperson"
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.relationship"
+* item[=].item[=].item[=].text = "Beziehung"
+* item[=].item[=].item[=].answer.valueString = "Guter Freund"
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = "Freund"
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.givenName"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].answer.valueString = "Max"
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = "079 111 22 33"
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = "max@freund.ch"
+
+// ---------- Encounter Class (Ambulant / Satinär / Notfall) & Zimmerkategorie ----------
 * item[+].linkId = "requestedEncounter"
-// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-requestedencounter|2.0.0"
-* item[=].item.linkId = "requestedEncounter.1"
-* item[=].item.text = "Unable to resolve 'requestedencounter' sub-questionnaire"
+* item[=].item[+].linkId = "requestedEncounter.class"
+* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
+* item[=].item[=].answer.valueCoding = V3ActCode#EMER "Notfall"
+
+
+* item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
+* item[=].item[=].text = "Zimmerkategorie"
+* item[=].item[=].answer.valueCoding = ChCoreCSEncounterType#2 "halbprivat"
 
 // ---------- Coverage (Kostenträger) ----------
+
 * item[+].linkId = "coverage"
-// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-coverage|2.0.0"
-* item[=].item.linkId = "coverage.1"
-* item[=].item.text = "Unable to resolve 'coverage' sub-questionnaire"
+// KVG
+* item[=].item[+].linkId = "coverage.kvg"
+* item[=].item[=].text = "Krankenkasse (nach KVG)"
+
+* item[=].item[=].item[+].linkId = "coverage.kvg.name"
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].answer.valueString = "Sanitas"
+
+* item[=].item[=].item[+].linkId = "coverage.kvg.insuranceCardNumber"
+* item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
+* item[=].item[=].item[=].answer.valueString = "80756015090002647590"
 
 // ---------- sender (Absender) ----------
 * item[+].linkId = "sender"
@@ -60,242 +272,149 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 
 // ---------- Author: The person/organization responsible for Form Content ----------
 * item[=].item[+].linkId = "sender.author"
-// * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.author"
 * item[=].item[=].text = "Verantwortlicher"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-sender|2.0.0"
-* item[=].item.linkId = "sender.1"
-* item[=].item.answer.valueString = "Marc Mustermann"
-* item[=].item.text = "Unable to resolve 'sender' sub-questionnaire"
+* item[=].item[=].item[+].linkId = "sender.author.practitioner"
+* item[=].item[=].item[=].text = "Verantwortliche Person"
 
-// ---------- Copy Receiver (Copy of this order and all results therefrom) ----------
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Meier"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Sabine"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.gln"
+* item[=].item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].item[=].answer.valueString = "7601000618627"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.zsr"
+* item[=].item[=].item[=].item[=].text = "ZSR"
+* item[=].item[=].item[=].item[=].answer.valueString = "A123321"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 333 22 11"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "sabine.meier@praxisseeblick.ch"
+
+* item[=].item[=].item[+].linkId = "sender.author.organization"
+* item[=].item[=].item[=].text = "Verantwortliche Organisation"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.organization.name"
+* item[=].item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].item[=].answer.valueString = "Praxis Seeblick"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.organization.streetAddressLine"
+* item[=].item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].item[=].answer[+].valueString = "Seestrasse 133"
+* item[=].item[=].item[=].item[=].answer[+].valueString = "Haus C"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.organization.postalCode"
+* item[=].item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].item[=].answer.valueString = "8000"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.organization.city"
+* item[=].item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].item[=].answer.valueString = "Zürich"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.author.organization.country"
+* item[=].item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+// ---------- Data Entry Person: The person who has typed/filled in the Form Content. ----------
+* item[=].item[+].linkId = "sender.dataenterer"
+* item[=].item[=].text = "Erfasser"
+
+* item[=].item[=].item[+].linkId = "sender.dataenterer.practitioner"
+* item[=].item[=].item[=].text = "Erfassende Person"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.dataenterer.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Boss"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.dataenterer.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Stabilo"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.dataenterer.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 333 22 12"
+
+* item[=].item[=].item[=].item[+].linkId = "sender.dataenterer.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "stabilo.boss@praxisseeblick.ch"
+
+// ---------- Copy Receiver ----------
 * item[+].linkId = "receiverCopy"
-// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:copyReceiver"
 * item[=].text = "Kopieempfänger (Kopie dieses Auftrags und aller daraus resultierenden Resultate)"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|2.0.0"
-* item[=].item.linkId = "receiverCopy.1"
-* item[=].item.text = "Unable to resolve 'receivercopy' sub-questionnaire"
+* item[=].item[+].linkId = "receiverCopy.practitionerRole"
+* item[=].item[=].text = "Gesundheitsfachperson oder -organisation"
 
-// ------ Appointment ----------------------------
-* item[+].linkId = "appointment"
-// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
-* item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
+* item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner"
+* item[=].item[=].item[=].text = "Gesundheitsfachperson"
 
-// * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|2.0.0"
-* item[=].item.linkId = "appointment.1"
-* item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Meier"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Sabine"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 333 22 11"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "sabine.meier@praxisseeblick.ch"
+
+* item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization"
+* item[=].item[=].item[=].text = "Gesundheitsorganisatiton"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.name"
+* item[=].item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].item[=].answer.valueString = "Praxis Seeblick"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.streetAddressLine"
+* item[=].item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].item[=].answer.valueString = "Seestrasse 133"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.postalCode"
+* item[=].item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].item[=].answer.valueString = "8000"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.city"
+* item[=].item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].item[=].answer.valueString = "Zürich"
+
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.country"
+* item[=].item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+
+* item[=].item[+].linkId = "receiverCopy.patient"
+* item[=].item[=].text = "Patient selbst"
+* item[=].item[=].answer.valueBoolean = true
+
 
 // -------- Service Request Notes ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 
 * item[=].item[+].linkId = "note.text"
-// * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
-* item[=].item[=].text = "Kommentar"
-* item[=].item[=].answer.valueString = "mark in the skin specimen points to the cranio-medial part"
-
-// ########### specific Part ######################
-// ------------Choice of Specialty-----------------
-* item[+]
-  * linkId = "labSpecialties"
-  * text = "Labor Sparten"
-
-  // Histopathology
-  * item[+]
-    * linkId = "labSpecialties.pathology"
-    * text = "Pathology"
-    * answer.valueBoolean = true
-
-    * answer.item[+]
-      * linkId = "labSpecialties.pathology.panels"
-      * text = "Pathology Panels"
-      * item[+]
-        * definition = LOINC#18743-5 "Autopsy report"
-        * linkId = "labSpecialties.pathology.panels.Autopsy"
-        * text = "Autopsy report"
-        * answer.valueBoolean = false
-      * item[+]
-        * definition = LOINC#11526-1 "Pathology study"
-        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
-        * text = "Pathology Study"
-        * answer.valueBoolean = false
-      * item[+]
-        * definition = LOINC#11529-5 "Surgical pathology study"
-        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-        * text = "Surgical pathology study"
-        * answer.valueBoolean = true
-
-// ##### Subquestionnaires #################
-// #############################################
-
-// Order
-Instance: 6-histopath-mod-order-Response
-InstanceOf: QuestionnaireResponse
-Title: "Module QuestionnaireResponse order"
-Description: "SubquestionnaireResponse order"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-order"
-* status = #completed
-
-* item[+].linkId = "order.placerOrderIdentifier"
-* item[=].text = "Auftragsnummer des Auftraggebers"
-* item[=].answer.valueString = "AN-1234567"
-
-* item[=].linkId = "order.placerOrderIdentifierDomain"
-* item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
-* item[=].answer.valueString = "Domain-22334455"
-
-* item[+].linkId = "order.fillerOrderIdentifier"
-* item[=].text = "Auftragsnummer des Auftragsempfängers"
-* item[=].answer.valueString = "N/A"
-
-* item[=].linkId = "order.fillerOrderIdentifierDomain"
-* item[=].text = "Identifier Domain der Auftragsnummer des Auftragsempfängers"
-* item[=].answer.valueString = "N/A"
-
-* item[=].linkId = "order.precedentDocumentIdentifier"
-* item[=].text = "Identifier des Vorgängerdokuments"
-* item[=].answer.valueString = "N/A"
-
-// ---------- Urgent Notification Contact for this document ----------
-* item[+].linkId = "order.notificationContactDocument"
-* item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
-
-* item[=].item[+].linkId = "order.notificationContactDocument.practitioner"
-* item[=].item[=].text = "Zu benachrichtigende Person"
-
-// * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
-// * item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
-// * item[=].item[=].extension.valueExpression.language = #text/fhirpath
-// * item[=].item[=].extension.valueExpression.expression = "'order.notificationContactDocument.practitioner.'"
-// 
-// * item[=].item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-practitioner-nametel|2.0.0"
-* item[=].item[=].item.linkId = "order.notificationContactDocument.practitioner.1"
-* item[=].item[=].item.text = "Unable to resolve 'practitioner-nametel' sub-questionnaire"
-
-// ---------- Urgent Notification Contact for the Response to this document ----------
-* item[+].linkId = "order.notificationContactDocumentResponse"
-* item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
-
-* item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner"
-* item[=].item[=].text = "Zu benachrichtigende Person"
-
-* item[=].item[=].item.linkId = "order.notificationContactDocumentResponse.practitioner.1"
-* item[=].item[=].item.text = "Unable to resolve 'practitioner-nametel' sub-questionnaire" // TODO: Subquestionnaire Practitioner Name/Telecom
-
-// ---------- Order Priority ----------
-* item[+].linkId = "order.priority"
-* item[=].definition = RequestPriority
-// ""
-* item[=].text = "Auftragspriorität"
-* item[=].answer.valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
-
-//##### Subquestionnaire Patient ###########################
-Instance: 6-histopath-mod-patient-Response
-InstanceOf: QuestionnaireResponse
-Title: "Module QuestionnaireResponse patient"
-Description: "SubquestionnaireResponse patient"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-patient"
-* status = #completed
-
-* item[+].linkId = "patient.familyName"
-* item[=].text = "Name"
-* item[=].answer.valueString = "Keller"
-
-* item[+].linkId = "patient.maidenName"
-* item[=].text = "Ledigname"
-* item[=].answer.valueString = ""
-
-* item[+].linkId = "patient.givenName"
-* item[=].text = "Vorname"
-* item[=].answer.valueString = "Klebsiella"
-
-* item[+].linkId = "patient.localPid"
-* item[=].text = "Lokale Patienten-ID"
-* item[=].answer.valueString = "012/08.111114"
-
-* item[=].linkId = "patient.localPidDomain"
-* item[=].text = "Lokale Patienten-ID Domain"
-* item[=].answer.valueString = "urn:oid:2.16.756.5.30.999999.1"
-
-* item[+].linkId = "patient.birthDate"
-* item[=].text = "Geburtsdatum"
-* item[=].answer.valueDate = "1975-12-12"
-
-* item[+].linkId = "patient.gender"
-* item[=].text = "Geschlecht"
-// * item[=].answerOption[+].valueCoding = AdministrativeGender#male "Männlich"
-// * item[=].answerOption[=].initialSelected = true
-* item[=].answer.valueCoding = AdministrativeGender#female "Weiblich"
-// * item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
-
-* item[+].linkId = "patient.maritalStatus"
-* item[=].text = "Zivilstand"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#1 "ledig"
-* item[=].answer.valueCoding = ECH-11-maritalstatus#2 "verheiratet"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#3 "verwitwet"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#4 "geschieden"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#5 "unverheiratet"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#6 "in eingetragener Partnerschaft"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#7 "aufgelöste Partnerschaft"
-// * item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#9 "unbekannt"
-
-* item[+].linkId = "patient.phone"
-* item[=].text = "Telefon"
-* item[=].answer.valueString = "+41 64 123 45 67"
-
-* item[+].linkId = "patient.email"
-* item[=].text = "E-Mail"
-* item[=].answer.valueString = "klebsiella.keller@example.ch"
-
-// * item[+].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-address|2.0.0"
-// * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
-// * item[=].extension[=].valueExpression.name = "linkIdPrefix"
-// * item[=].extension[=].valueExpression.language = #text/fhirpath
-// * item[=].extension[=].valueExpression.expression = "'patient.'"
-* item[=].linkId = "patient.1"
-* item[=].text = "Unable to resolve 'address' sub-questionnaire"
-// * item[=].type = #display
-
-* item[+].linkId = "patient.languageOfCorrespondance"
-// * item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondance"
-* item[=].text = "Korrespondenssprache"
-// * item[=].type = #choice
-* item[=].answer.valueCoding = languageOfCorrespondance#de-CH "German (Switzerland)	"
-
-// ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
-* item[+].linkId = "patient.contactperson"
-* item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact"
-* item[=].text = "Kontaktperson"
-// * item[=].type = #group
-
-* item[=].item[+].linkId = "patient.contactperson.relationship"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.relationship.text"
-* item[=].item[=].answer.valueString = "Schwager"
-// * item[=].item[=].type = #string
-
-* item[=].item[+].linkId = "patient.contactperson.familyName"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.family"
-* item[=].item[=].answer.valueString = "Guggenbühl"
-// * item[=].item[=].type = #string
-
-* item[=].item[+].linkId = "patient.contactperson.givenName"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.given"
-* item[=].item[=].answer.valueString = "Max"
-// * item[=].item[=].type = #string
-
-* item[=].item[+].linkId = "patient.contactperson.phone"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
-* item[=].item[=].answer.valueString = "077 888 99 00"
-// * item[=].item[=].type = #string
-// * item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "patient.contactperson.email"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
-* item[=].item[=].answer.valueString = "max.guggenbuehl@example.com"
-//* item[=].item[=].type = #string/
+* item[=].item[=].text = "Kommentar" 
+* item[=].item[=].answer.valueString = "Bemerkung/Kommentar"
