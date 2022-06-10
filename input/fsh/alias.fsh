@@ -9,6 +9,7 @@ Alias:  V3ActCode                              = http://terminology.hl7.org/Code
 Alias:  AdministrativeGender                   = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender
 Alias:  ECH-11-maritalstatus                   = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias:  ReligiousAffiliation                   = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
+Alias:  languageOfCorrespondance               = urn:ietf:bcp:47                      
 
 // Order
 Alias:  RequestPriority                        = http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.priority

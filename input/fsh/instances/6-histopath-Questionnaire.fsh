@@ -188,7 +188,10 @@ Description: "Example for Questionnaire of Histopathology Examination"
         * text = "Surgical pathology study"
         * type = #boolean
 
-//##### Subquestionnaire Order #################
+// ##### Subquestionnaires #################
+// #############################################
+
+// Order
 Instance: 6-histopath-mod-order
 InstanceOf: Questionnaire
 Title: "Module Questionnaire order"
