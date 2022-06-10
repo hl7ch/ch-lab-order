@@ -1,8 +1,9 @@
-Instance: 6-histopath-mod-QuestionnaireResponse
+Instance: qr-order-referral-form
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "QuestionnaireResponse 6-histopath (modular version)"
-Description: "Example for QuestionnaireResponse of Histopathology Examination"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
+Title: "QuestionnaireResponse Order-Referral-Form"
+Description: "Example for QuestionnaireResponse"
+* questionnaire = "http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form"
+// * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/order-referral-form"
 * status = #completed
 
 // ---------- order (Auftrag) ----------

@@ -1,8 +1,7 @@
-Instance: 6-histopath-mod-Questionnaire
+Instance: order-referral-form-modular
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire 6-histopath (modular version)"
-Description: "Example for Questionnaire of Histopathology Examination"
-* id = "6-histopath-mod"
+Title: "Questionnaire Order-Referral-Form"
+Description: "Example for Questionnaire"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -25,9 +24,9 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
-* name = "LabOrderForm"
-* title = "Lab Order Form"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/order-referral-form-modular"
+* name = "OrderReferralForm"
+* title = "Order-Referral-Form"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
@@ -70,7 +69,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].item.text = "Unable to resolve 'patient' sub-questionnaire"
 * item[=].item.type = #display
 
-// ---------- Encounter Class (Ambulant / Stationär / Notfall) ----------
+// ---------- Encounter Class (Ambulant / Satinär / Notfall) ----------
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
@@ -84,6 +83,8 @@ Description: "Example for Questionnaire of Histopathology Examination"
 
 
 // ---------- Coverage (Kostenträger) ----------
+// Design as agreed with eHealth Suisse and Cistec 09.06.2021
+
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -126,7 +127,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].item.text = "Unable to resolve 'receivercopy' sub-questionnaire"
 * item[=].item.type = #display
 
-// ------ Appointment ----------------------------
+/*------ Appointment ------------------------------ */
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -151,54 +152,13 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
-// ########### specific Part ######################
-// ------------Choice of Specialty-----------------
-* item[+]
-  * linkId = "labSpecialties"
-  * text = "Labor Sparten"
-  * type = #group
-
-  // Histopathology
-  * item[+]
-    * definition = LOINC#27898-6 "Pathology studies (set)"
-    * linkId = "labSpecialties.pathology"
-    * text = "Pathology"
-    * type = #boolean
-
-    * item[+]
-      * linkId = "labSpecialties.pathology.panels"
-      * text = "Pathology Panels"
-      * type = #group
-      * enableWhen[+].question = "labSpecialties.pathology"
-      * enableWhen[=].operator = #=
-      * enableWhen[=].answerBoolean = true
-      * item[+]
-        * definition = LOINC#18743-5 "Autopsy report"
-        * linkId = "labSpecialties.pathology.panels.Autopsy"
-        * text = "Autopsy report"
-        * type = #boolean
-      * item[+]
-        * definition = LOINC#11526-1 "Pathology study"
-        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
-        * text = "Pathology Study"
-        * type = #boolean
-      * item[+]
-        * definition = LOINC#11529-5 "Surgical pathology study"
-        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-        * text = "Surgical pathology study"
-        * type = #boolean
-
-// ##### Subquestionnaires #################
-// #############################################
-
-// Order
-Instance: 6-histopath-mod-order
+Instance: 6-histopath-module-order
 InstanceOf: Questionnaire
 Title: "Module Questionnaire order"
 Description: "Subquestionnaire order"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-order"
+* url = "http://fhir.ch/ig/ch-orf/Questionnaire/6-histopath-module-order"
 * name = "ModuleQuestionnaireOrderForm"
 * title = "Module Questionnaire Order Form"
 * status = #active
@@ -283,8 +243,7 @@ Description: "Subquestionnaire order"
 
 // ---------- Order Priority ----------
 * item[+].linkId = "order.priority"
-* item[=].definition = RequestPriority
-// ""
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.priority"
 * item[=].text = "Auftragspriorität"
 * item[=].type = #choice
 * item[=].answerOption[+].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
@@ -293,14 +252,13 @@ Description: "Subquestionnaire order"
 * item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
 * item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
-//##### Subquestionnaire Receiver ###############################
-Instance: 6-histopath-mod-receiver
+Instance: 6-histopath-module-receiver
 InstanceOf: Questionnaire
 Title: "Module Questionnaire receiver"
 Description: "Subquestionnaire receiver"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-receiver"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-receiver"
 * name = "ModuleQuestionnaireOrderReceiver"
 * title = "Module Questionnaire Order Receiver"
 * status = #active
@@ -373,19 +331,20 @@ Description: "Subquestionnaire receiver"
 * item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].item[=].type = #display
 
-//##### Subquestionnaire Patient ###########################
-Instance: 6-histopath-mod-patient
+
+Instance: 6-histopath-module-patient
 InstanceOf: Questionnaire
 Title: "Module Questionnaire patient"
 Description: "Subquestionnaire patient"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-patient"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-patient"
 * name = "ModuleQuestionnaireOrderPatient"
 * title = "Module Questionnaire Order Patient"
 * status = #active
 * date = "2022-05-04"
 * publisher = "HL7 Switzerland"
+
 
 * item[+].linkId = "patient.familyName"
 * item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.name.family"
@@ -462,9 +421,9 @@ Description: "Subquestionnaire patient"
 * item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].type = #display
 
-* item[+].linkId = "patient.languageOfCorrespondance"
-* item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondance"
-* item[=].text = "Korrespondenssprache"
+* item[+].linkId = "patient.languageOfCorrespondence"
+* item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondence"
+* item[=].text = "Korrespondenzsprache"
 * item[=].type = #choice
 * item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode"
 
@@ -500,14 +459,13 @@ Description: "Subquestionnaire patient"
 * item[=].item[=].text = "E-Mail"
 * item[=].item[=].type = #string
 
-//##### Subquestionnaire Requested Encounter #################
-Instance: 6-histopath-mod-requestedencounter
+Instance: 6-histopath-module-requestedencounter
 InstanceOf: Questionnaire
 Title: "Module Questionnaire requestedEncounter"
 Description: "Subquestionnaire patrequestedEncounterient"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-requestedencounter"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-requestedencounter"
 * name = "ModuleQuestionnaireOrderRequestedEncounter"
 * title = "Module Questionnaire Order requestedEncounter"
 * status = #active
@@ -530,14 +488,14 @@ Description: "Subquestionnaire patrequestedEncounterient"
 * item[=].answerOption[+].valueCoding = ChCoreCSEncounterType#2 "halbprivat"
 * item[=].answerOption[+].valueCoding = ChCoreCSEncounterType#3 "privat"
 
-//##### Subquestionnaire Coverage #############################
-Instance: 6-histopath-mod-coverage
+
+Instance: 6-histopath-module-coverage
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Coverage"
-Description: "Subquestionnaire Coverage"
+Description: "Subquestionnaire Converage"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-coverage"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-coverage"
 * name = "ModuleQuestionnaireOrderCoverage"
 * title = "Module Questionnaire Order Coverage"
 * status = #active
@@ -703,14 +661,17 @@ Description: "Subquestionnaire Coverage"
 * item[=].item[=].text = "Bemerkung zur ID"
 * item[=].item[=].type = #string
 
-//##### Subquestionnaire Sender ###############################
-Instance: 6-histopath-mod-sender
+// The situation where a person and not a organization is an other payer is not depicted. 
+// Id's of insurances other than kvg are proprietary. Zusatzversicherung however may use the Kennnummer der Versichertenkarte (KVG).
+// Id's for other are not defined.
+
+Instance: 6-histopath-module-sender
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Sender"
 Description: "Subquestionnaire Sender"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-sender"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-sender"
 * name = "ModuleQuestionnaireOrderSender"
 * title = "Module Questionnaire Order Sender"
 * status = #active
@@ -800,6 +761,7 @@ Description: "Subquestionnaire Sender"
 * item[=].item[=].text = "Erfassende Person"
 * item[=].item[=].type = #group
 
+
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
@@ -811,14 +773,13 @@ Description: "Subquestionnaire Sender"
 * item[=].item[=].item.text = "Unable to resolve 'practitioner-nametel' sub-questionnaire"
 * item[=].item[=].item.type = #display
 
-//##### Subquestionnaire Receiver Copy #################
-Instance: 6-histopath-mod-receivercopy
+Instance: 6-histopath-module-receivercopy
 InstanceOf: Questionnaire
 Title: "Module Questionnaire receiverCopy"
 Description: "Subquestionnaire receiverCopy"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-receivercopy"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-receivercopy"
 * name = "ModuleQuestionnaireOrderReceiverCopy"
 * title = "Module Questionnaire Order receiverCopy"
 * status = #active
@@ -873,6 +834,7 @@ Description: "Subquestionnaire receiverCopy"
 * item[=].text = "Patient selbst"
 * item[=].type = #boolean
 
+
 * item[+].linkId = "receiverCopy.relatedPerson"
 * item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson"
 * item[=].text = "Andere Person"
@@ -910,14 +872,14 @@ Description: "Subquestionnaire receiverCopy"
 * item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].item[=].type = #display
 
-//##### Subquestionnaire Appointment ##############
-Instance: 6-histopath-mod-appointment
+/*------ Appointment ------------------------------ */
+Instance: 6-histopath-module-appointment
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Appointment"
 Description: "Subquestionnaire appointment"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod-appointment"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-appointment"
 * name = "ModuleQuestionnaireOrderAppointment"
 * title = "Module Questionnaire Order Appointment"
 * status = #active
@@ -987,8 +949,8 @@ Description: "Subquestionnaire appointment"
 * item[=].text = "Patienteninformation für diesen Termin"
 * item[=].type = #string
 
-//##### Subquestionnaire Practitioner Name / Telecom ##############
-Instance: 6-histopath-mod-practitioner-nametel
+/*------ Practitioner Name / Telecom ------------------------------ */
+Instance: 6-histopath-module-practitioner-nametel
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Practitioner with Name/Telecom"
 Description: "Subquestionnaire Practitioner with Name/Telecom"
@@ -996,7 +958,7 @@ Description: "Subquestionnaire Practitioner with Name/Telecom"
 * extension[=].valueCode = #assemble-child
 * extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
 * extension[=].valueString = "linkIdPrefix"
-* url = "http://fhir.ch/ig/ch-ch-lab-order/Questionnaire/6-histopath-mod-practitioner-nametel"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-practitioner-nametel"
 * name = "ModuleQuestionnairePractitionerNameTel"
 * title = "Module Questionnaire Practitioner with name and telecom"
 * status = #active
@@ -1028,8 +990,10 @@ Description: "Subquestionnaire Practitioner with Name/Telecom"
 * item[=].text = "E-Mail"
 * item[=].type = #string
 
-//##### Subquestionnaire Practitioner Address #################
-Instance: 6-histopath-mod-address
+
+
+/*------ Address ------------------------------ */
+Instance: 6-histopath-module-address
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Address"
 Description: "Subquestionnaire Practitioner Address"
@@ -1037,7 +1001,7 @@ Description: "Subquestionnaire Practitioner Address"
 * extension[=].valueCode = #assemble-child
 * extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
 * extension[=].valueString = "linkIdPrefix"
-* url = "http://fhir.ch/ig/ch-ch-orf/Questionnaire/6-histopath-mod-address"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-address"
 * name = "ModuleQuestionnaireAddress"
 * title = "Module Questionnaire Address"
 * status = #active
@@ -1060,78 +1024,3 @@ Description: "Subquestionnaire Practitioner Address"
 * item[+].linkId = "country"
 * item[=].text = "Land"
 * item[=].type = #string
-
-// ############## begin of specific part ############################
-
-
-// ---------------Diagnosen und Befunde Ref --------------
-
-* item[+].linkId = "diagnosisList"
-* item[=].text = "Diagnosen und Befunde"
-* item[=].type = #group
-
-* item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.reasonReference"
-* item[=].item[=].text = "Diagnose"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "supportingInfo"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:diagnosis"
-* item[=].item[=].text = "Nebendiagnose"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
-
-// --------------- Specimen Ref --------------
-* item[+].linkId = "SpecimenList"
-* item[=].text = "Specimen Liste"
-* item[=].type = #group
-
-* item[=].item[+].linkId = "specimenList.collection"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.specimenReference:collection"
-* item[=].item[=].text = "Specimen Collection"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
-
-// nicht sicher, ob URL:collection korrekt
-* item[=].item[+].linkId = "specimenList.container"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.specimenReference:container"
-* item[=].item[=].text = "Specimen Container"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
-
-// ------------Choice of Specialty-----------------
-* item[+]
-  * linkId = "labSpecialties"
-  * text = "Labor Sparten"
-  * type = #group
-
-  // Histopathology
-  * item[+]
-    * definition = LOINC#27898-6 "Pathology studies (set)"
-    * linkId = "labSpecialties.pathology"
-    * text = "Pathology"
-    * type = #boolean
-
-    * item[+]
-      * linkId = "labSpecialties.pathology.panels"
-      * text = "Pathology Panels"
-      * type = #group
-      * enableWhen[+].question = "labSpecialties.pathology"
-      * enableWhen[=].operator = #=
-      * enableWhen[=].answerBoolean = true
-      * item[+]
-        * definition = LOINC#18743-5 "Autopsy report"
-        * linkId = "labSpecialties.pathology.panels.Autopsy"
-        * text = "Autopsy report"
-        * type = #boolean
-      * item[+]
-        * definition = LOINC#11526-1 "Pathology study"
-        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
-        * text = "Pathology Study"
-        * type = #boolean
-      * item[+]
-        * definition = LOINC#11529-5 "Surgical pathology study"
-        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-        * text = "Surgical pathology study"
-        * type = #boolean
