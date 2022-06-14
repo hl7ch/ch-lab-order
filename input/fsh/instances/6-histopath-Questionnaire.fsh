@@ -152,17 +152,17 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
-// --- Laboratory Service: ----
-* item[+].linkId = "service"
+// --- Labservice: ----
+* item[+].linkId = "labservice"
 * item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
-* item[=].text = "Service"
+* item[=].text = "Labservice"
 * item[=].type = #group
 * item[=].required = true
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-service|2.0.0"
-* item[=].item.linkId = "service.1"
-* item[=].item.text = "Unable to resolve 'service' sub-questionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-labservice|2.0.0"
+* item[=].item.linkId = "labservice.1"
+* item[=].item.text = "Unable to resolve 'labservice' sub-questionnaire"
 * item[=].item.type = #display
 
 // ######## Subquestionnaires ########################
@@ -1044,17 +1044,17 @@ Description: "Subquestionnaire Practitioner Address"
 //* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
 
-Instance: 6-histopath-module-service
+Instance: 6-histopath-module-labservice
 InstanceOf: Questionnaire
-Title: "Module Questionnaire Service"
-Description: "Subquestionnaire Service"
+Title: "Module Questionnaire Lab Service"
+Description: "Subquestionnaire LabService"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
 * extension[=].valueString = "linkIdPrefix"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-service"
-* name = "ModuleQuestionnaireService"
-* title = "Module Questionnaire Service"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-labservice"
+* name = "ModuleQuestionnaireLabService"
+* title = "Module Questionnaire LabService"
 * status = #active
 * date = "2022-05-09"
 * publisher = "HL7 Switzerland"
