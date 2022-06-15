@@ -418,4 +418,30 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[+].linkId = "note.text"
 * item[=].item[=].text = "Kommentar" 
-* item[=].item[=].answer.valueString = "Bemerkung/Kommentar"
+* item[=].item[=].answer.valueString = "Die Fadenmarkierung im Exzisat zeigt nach medial cranial"
+
+// // ------------Choice of Laboratory Service-----------------
+// * item[+]
+//   * linkId = "labSpecialties"
+//   * text = "Labor Sparten"
+// 
+//   // Histopathology
+//   * item[+]
+//     * linkId = "labSpecialties.pathology"
+//     * text = "Pathology"
+// 
+//     * item[+]
+//       * linkId = "labSpecialties.pathology.panels"
+//       * text = "Pathology Panels"
+//       * item[+]
+//         * linkId = "labSpecialties.pathology.panels.Autopsy"
+//         * text = "Autopsy report"
+//         * answerBoolean = false
+//       * item[+]
+//         * linkId = "labSpecialties.pathology.panels.PathologyStudy"
+//         * text = "Pathology Study"
+//         * answerBoolean = false
+//       * item[+]
+//         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
+//         * text = "Surgical pathology study"
+//         * answerBoolean = true

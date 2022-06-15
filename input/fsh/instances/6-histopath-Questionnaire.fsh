@@ -69,7 +69,7 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'patient' sub-questionnaire"
 * item[=].item.type = #display
 
-// ---------- Encounter Class (Ambulant / Stationär / Notfall) ----------
+// --- ServiceRequest Encounter Class (Ambulant / Stationär / Notfall) ----------
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
@@ -82,7 +82,7 @@ Description: "Example for Questionnaire"
 * item[=].item.type = #display
 
 
-// ---------- Coverage (Kostenträger) ----------
+// --- ServiceRequest Coverage (Kostenträger) ----------
 // Design as agreed with eHealth Suisse and Cistec 09.06.2021
 
 * item[+].linkId = "coverage"
@@ -1070,21 +1070,21 @@ Description: "Subquestionnaire Practitioner Address"
 
 //* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/LabSpecialties"
 // TODO
-
-Instance: 6-histopath-module-labservice
-InstanceOf: Questionnaire
-Title: "Module Questionnaire Lab Service"
-Description: "Subquestionnaire LabService"
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
-* extension[=].valueCode = #assemble-child
-* extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
-* extension[=].valueString = "linkIdPrefix"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-labservice"
-* name = "ModuleQuestionnaireLabService"
-* title = "Module Questionnaire LabService"
-* status = #active
-* date = "2022-05-09"
-* publisher = "HL7 Switzerland"
+// 
+// Instance: 6-histopath-module-labservice
+// InstanceOf: Questionnaire
+// Title: "Module Questionnaire Lab Service"
+// Description: "Subquestionnaire LabService"
+// * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+// * extension[=].valueCode = #assemble-child
+// * extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
+// * extension[=].valueString = "linkIdPrefix"
+// * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-labservice"
+// * name = "ModuleQuestionnaireLabService"
+// * title = "Module Questionnaire LabService"
+// * status = #active
+// * date = "2022-05-09"
+// * publisher = "HL7 Switzerland"
 
 
 // ------------Choice of Laboratory Service-----------------
@@ -1178,42 +1178,26 @@ Description: "Subquestionnaire Specimen"
 * date = "2022-05-09"
 * publisher = "HL7 Switzerland"
 
-// * item[+]
-//   * linkId = "labSpecialties"
-//   * text = "Labor Sparten"
-//   * type = #group
-// 
-//   // Histopathology
-//   * item[+]
-//     * definition = LOINC#27898-6 "Pathology studies (set)"
-//     * linkId = "labSpecialties.pathology"
-//     * text = "Pathology"
-//     * type = #boolean
-// 
-//     * item[+]
-//       * linkId = "labSpecialties.pathology.panels"
-//       * text = "Pathology Panels"
-//       * type = #group
-//       * enableWhen[+].question = "labSpecialties.pathology"
-//       * enableWhen[=].operator = #=
-//       * enableWhen[=].answerBoolean = true
-//       * item[+]
-//         * definition = LOINC#18743-5 "Autopsy report"
-//         * linkId = "labSpecialties.pathology.panels.Autopsy"
-//         * text = "Autopsy report"
-//         * type = #boolean
-//       * item[+]
-//         * definition = LOINC#11526-1 "Pathology study"
-//         * linkId = "labSpecialties.pathology.panels.PathologyStudy"
-//         * text = "Pathology Study"
-//         * type = #boolean
-//       * item[+]
-//         * definition = LOINC#11529-5 "Surgical pathology study"
-//         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-//         * text = "Surgical pathology study"
-//         * type = #boolean
+// Submodule SR note
+Instance: 6-histopath-module-notes
+InstanceOf: Questionnaire
+Title: "Module Questionnaire Notes"
+Description: "Subquestionnaire Note"
 
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[=].valueCode = #assemble-child
+* url = "http://fhir.ch/ig/6-histopath/Questionnaire/6-histopath-module-note"
+* name = "ModuleQuestionnaireNote"
+* title = "Module Questionnaire Note"
+* status = #active
+* date = "2022-05-25"
+* publisher = "HL7 Switzerland"
 
-  
+* item[+].linkId = "note.text"
+* item[=].definition = "http://fhir.ch/ig/6-histopath/StructureDefinition/6-histopath-servicerequest#ServiceRequest.note.text"
+* item[=].text = "Text" 
+* item[=].type = #text
+* item[=].required = false 
+
 // ######################################################################################
 
