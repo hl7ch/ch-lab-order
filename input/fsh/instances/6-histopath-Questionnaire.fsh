@@ -140,6 +140,18 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
 * item[=].item.type = #display
 
+// --- Service Request Notes ------
+* item[+].linkId = "note"
+* item[=].text = "Bemerkungen"
+* item[=].type = #group
+* item[=].repeats = true
+
+* item[=].item[+].linkId = "note.text"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
+* item[=].item[=].text = "Kommentar" 
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+
 // --- Labservice: ----
 * item[+].linkId = "labservice"
 * item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -152,18 +164,6 @@ Description: "Example for Questionnaire"
 * item[=].item.linkId = "labservice.1"
 * item[=].item.text = "Unable to resolve 'labservice' sub-questionnaire"
 * item[=].item.type = #display
-
-// --- Service Request Notes ------
-* item[+].linkId = "note"
-* item[=].text = "Bemerkungen"
-* item[=].type = #group
-* item[=].repeats = true
-
-* item[=].item[+].linkId = "note.text"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
-* item[=].item[=].text = "Kommentar" 
-* item[=].item[=].type = #string
-* item[=].item[=].required = true
 
 // --- Service Request Reason ----
 * item[+].linkId = "reason"
@@ -1124,26 +1124,26 @@ Description: "Subquestionnaire LabService"
         * type = #boolean
 
 
-// Service Request Note
-Instance: 6-histopath-module-note
-InstanceOf: Questionnaire
-Title: "Module Questionnaire Note"
-Description: "Subquestionnaire Note"
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
-* extension[=].valueCode = #assemble-child
-* extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
-* extension[=].valueString = "linkIdPrefix"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-note"
-* name = "ModuleQuestionnaireNote"
-* title = "Module Questionnaire Note"
-* status = #active
-* date = "2022-05-09"
-* publisher = "HL7 Switzerland"
-
-* item[+].linkId = "note-text"
-* item[=].text = "Text Kommentar"
-* item[=].type = #string
-* item[=].repeats = true
+// // Service Request Note
+// Instance: 6-histopath-module-note
+// InstanceOf: Questionnaire
+// Title: "Module Questionnaire Note"
+// Description: "Subquestionnaire Note"
+// * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+// * extension[=].valueCode = #assemble-child
+// * extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
+// * extension[=].valueString = "linkIdPrefix"
+// * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-note"
+// * name = "ModuleQuestionnaireNote"
+// * title = "Module Questionnaire Note"
+// * status = #active
+// * date = "2022-05-09"
+// * publisher = "HL7 Switzerland"
+// 
+// * item[+].linkId = "note-text"
+// * item[=].text = "Text Kommentar"
+// * item[=].type = #string
+// * item[=].repeats = true
 
 // Service Request Reason
 Instance: 6-histopath-module-reason
