@@ -169,13 +169,13 @@ Description: "Example for Questionnaire of Histopathology Examination"
 
 // --- subQuestionnaire LabServiceDefinition---
 // ################################################
-Instance: ch-orf-module-LabServiceDefinition
+Instance: 6-histopath-module-LabServiceDefinition
 InstanceOf: Questionnaire
 Title: "Module Questionnaire LabServiceDefinition"
 Description: "Subquestionnaire LabServiceDefinition"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabServiceDefinition"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-LabServiceDefinition"
 * name = "ModuleQuestionnaireLabServiceDefinition"
 * title = "Module Questionnaire Lab Service Definition"
 * status = #active
@@ -197,3 +197,18 @@ Description: "Subquestionnaire LabServiceDefinition"
 * item[=].definition = "https://build.fhir.org/ig/HL7/fhir-order-catalog/CodeSystem-laboratory-service-definition-type.html"
 * item[=].text = "Lab Service Type"
 * item[=].type = #string
+
+// --- subQuestionnaire LabServiceDefinition---
+// ################################################
+
+// --- subQuestionnaire Reason Reference SR ---
+// ################################################
+
+// --- subQuestionnaire Supporting Info SR ---
+// ################################################
+
+// --- subQuestionnaire Specimen SR ---
+// ################################################
+
+// --- subQuestionnaire Location Reference SR ---
+// ################################################
