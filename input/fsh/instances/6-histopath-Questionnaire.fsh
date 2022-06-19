@@ -153,3 +153,33 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
+// ### Specific part ############
+// ##############################
+
+// 155 --- Laboratory Service: parent questionnaire----
+* item[+].linkId = "labService"
+* item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+* item[=].text = "Lab Service"
+* item[=].type = #group
+* item[=].required = true
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-service|2.0.0"
+* item[=].item.linkId = "labservice.1"
+* item[=].item.text = "Unable to resolve 'labservice' sub-questionnaire"
+* item[=].item.type = #display
+
+
+// ---Subquestionnaire Lab Service
+Instance: 6-histopath-module-labservice
+InstanceOf: Questionnaire
+Title: "Module Questionnaire Lab Service"
+Description: "Subquestionnaire LabService"
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[=].valueCode = #assemble-child
+* extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext"
+* extension[=].valueString = "linkIdPrefix"
+* status = #active
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-labservice"
+* name = "ModuleQuestionnaireLabService"
+* title = "Module Questionnaire LabService"

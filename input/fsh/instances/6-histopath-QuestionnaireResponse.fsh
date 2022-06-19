@@ -418,3 +418,13 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[+].linkId = "note.text"
 * item[=].item[=].text = "Kommentar"
 * item[=].item[=].answer.valueString = "mark in the skin specimen points to the cranio-medial part"
+
+// ### Specific part ############
+// ##############################
+
+// 155 --- Laboratory Service: parent questionnaire----
+* item[+].linkId = "labService"
+* item[=].text = "Lab Service"
+
+* item[=].item.linkId = "labservice.1"
+* item[=].item.text = "Unable to resolve 'labservice' sub-questionnaire"
