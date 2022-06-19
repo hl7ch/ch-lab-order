@@ -23,7 +23,7 @@ Usage: #definition
 * name.given = "Emil"
 * gender = #male
 * birthDate = "2014-05-05"
-* maritalStatus = ECH-11-maritalstatus#1 "ledig"
+* maritalStatus = EchMaritalStatus#1 "ledig"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true

@@ -1,8 +1,8 @@
-Instance: 6-histopath-mod-Questionnaire
+Instance: 6-histopath-mod
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire 6-histopath (modular version)"
-Description: "Example for Questionnaire of Histopathology Examination"
-* id = "6-histopath-mod"
+Title: "Questionnaire Order-Referral-Form"
+Description: "Example for Questionnaire"
+
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -25,7 +25,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
+* url = "http://fhir.ch/ig/ch-orf/Questionnaire/6-histopath-mod"
 * name = "LabOrderForm"
 * title = "Lab Order Form"
 * status = #active
@@ -70,7 +70,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].item.text = "Unable to resolve 'patient' sub-questionnaire"
 * item[=].item.type = #display
 
-// ---------- Encounter Class (Ambulant / Stationär / Notfall) ----------
+// ---------- Encounter Class (Ambulant / Satinär / Notfall) ----------
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
@@ -84,6 +84,8 @@ Description: "Example for Questionnaire of Histopathology Examination"
 
 
 // ---------- Coverage (Kostenträger) ----------
+// Design as agreed with eHealth Suisse and Cistec 09.06.2021
+
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -120,13 +122,13 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].text = "Kopieempfänger (Kopie dieses Auftrags und aller daraus resultierenden Resultate)"
 * item[=].type = #group
 
-* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|2.0.0"
-* item[=].item.linkId = "receiverCopy.1"
-* item[=].item.text = "Unable to resolve 'receivercopy' sub-questionnaire"
-* item[=].item.type = #display
+* item[=].item[=].linkId = "receiverCopy.1"
+* item[=].item[=].text = "Unable to resolve 'receivercopy' sub-questionnaire"
+* item[=].item[=].type = #display
 
-// ------ Appointment ----------------------------
+/*------ Appointment ------------------------------ */
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -151,64 +153,3 @@ Description: "Example for Questionnaire of Histopathology Examination"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
-// -------- LabServiceDefinition ------
-* item[+].linkId = "LabServiceDefinition"
-* item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
-
-* item[=].text = "LabServiceDefinition"
-* item[=].type = #group
-* item[=].required = true
-
-* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-patient|2.0.0"
-* item[=].item.linkId = "LabServiceDefinition.1"
-* item[=].item.text = "Unable to resolve 'labservicedefinition' sub-questionnaire"
-* item[=].item.type = #display
-
-// ########### specific Part ######################
-
-// --- subQuestionnaire LabServiceDefinition---
-// ################################################
-Instance: 6-histopath-module-LabServiceDefinition
-InstanceOf: Questionnaire
-Title: "Module Questionnaire LabServiceDefinition"
-Description: "Subquestionnaire LabServiceDefinition"
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
-* extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-module-LabServiceDefinition"
-* name = "ModuleQuestionnaireLabServiceDefinition"
-* title = "Module Questionnaire Lab Service Definition"
-* status = #active
-* date = "2022-05-04"
-* publisher = "HL7 Switzerland"
-
-
-* item[+].linkId = "labservicedefinition.CatalogReference"
-* item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* item[=].text = "CatalogReference"
-* item[=].type = #string
-
-* item[+].linkId = "labservicedefinition.ServiceBillingCode"
-* item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
-* item[=].text = "Name"
-* item[=].type = #string
-
-* item[+].linkId = "type" //panel | test
-* item[=].definition = "https://build.fhir.org/ig/HL7/fhir-order-catalog/CodeSystem-laboratory-service-definition-type.html"
-* item[=].text = "Lab Service Type"
-* item[=].type = #string
-
-// --- subQuestionnaire LabServiceDefinition---
-// ################################################
-
-// --- subQuestionnaire Reason Reference SR ---
-// ################################################
-
-// --- subQuestionnaire Supporting Info SR ---
-// ################################################
-
-// --- subQuestionnaire Specimen SR ---
-// ################################################
-
-// --- subQuestionnaire Location Reference SR ---
-// ################################################

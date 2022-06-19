@@ -39,6 +39,6 @@ Description: "Composition: Storyboard for suspected Melanoma of skin"
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 6-histopath\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(6-histopath-mod-Questionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-mod-QuestionnaireResponse)
+* section[orderReferral].entry[Questionnaire] = Reference(6-histopath-mod)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-modResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequest)
