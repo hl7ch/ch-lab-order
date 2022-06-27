@@ -1058,7 +1058,7 @@ Description: "Subquestionnaire Practitioner Address"
 * item[=].text = "Land"
 * item[=].type = #string
 
-// ############## begin of specific part ############################
+/* ############## begin of specific part ############################
 
 
 // ---------------Diagnosen und Befunde Ref --------------
@@ -1132,3 +1132,5 @@ Description: "Subquestionnaire Practitioner Address"
         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
         * text = "Surgical pathology study"
         * type = #boolean
+
+*/        
