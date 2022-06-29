@@ -78,6 +78,57 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 
 // ---------- Receiver item[1] ----------
 // ################################################
+* item[+].linkId = "receiver"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
+* item[=].text = "Empfänger"
+
+// --- receiver.practitioner ------------------------
+* item[=].item[0].linkId = "receiver.practitioner"
+* item[=].item[=].text = "Empfangende Person"
+* item[=].item[=].item[0].linkId = "receiver.practitioner.title"
+* item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].answer.valueString = "Dr. med."
+* item[=].item[=].item[+].linkId = "receiver.practitioner.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = "Erlenmeyer"
+* item[=].item[=].item[+].linkId = "receiver.practitioner.givenName"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].answer.valueString = "Eva"
+* item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
+* item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].answer.valueString = "7601000050717"
+* item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
+* item[=].item[=].item[=].text = "ZSR"
+* item[=].item[=].item[=].answer.valueString = "A123315"
+* item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = "033 444 55 66"
+* item[=].item[=].item[+].linkId = "receiver.practitioner.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = "eva.erlenmeyer@labor-pipette.ch"
+
+// --- receiver.organization ------------------------
+* item[=].item[+].linkId = "receiver.organization"
+* item[=].item[=].text = "Empfangende Organisation"
+* item[=].item[=].item[0].linkId = "receiver.organization.name"
+* item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].answer.valueString = "Labor Pipette"
+* item[=].item[=].item[+].linkId = "receiver.organization.gln"
+* item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].answer.valueString = "7601000234407"
+* item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer.valueString = "Laborstrasse 23"
+* item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = "4600"
+* item[=].item[=].item[+].linkId = "receiver.organization.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = "Olten"
+* item[=].item[=].item[+].linkId = "receiver.organization.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = "CH"
+
 
 // ---------- Patient item[2] ----------
 // ################################################
