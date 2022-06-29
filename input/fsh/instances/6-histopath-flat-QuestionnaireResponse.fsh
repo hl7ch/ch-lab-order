@@ -187,7 +187,7 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 // --- patient.languageOfCorrespondance ---------------------------
 * item[=].item[+].linkId = "patient.languageOfCorrespondance"
 // * item[=].item[=].text = "Korrespondenssprache"
-// * item[=].item[=].answer.valueCode = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode#de-CH"
+// * item[=].item[=].answer.valueCoding = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode#de-CH"
 
 // --- patient.contactperson ---------------------------
 * item[=].item[+].linkId = "patient.contactperson"
@@ -209,11 +209,119 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[=].item[=].answer.valueString = ""
 
 
-// ---------- Encounter item[3] ----------
+// ---------- requestEncounter item[3] ----------
 // ################################################
+* item[+].linkId = "requestedEncounter"
+* item[=].text = "Patientenaufnahme"
+* item[=].item[0].linkId = "requestedEncounter.class"
+* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
+* item[=].item[=].answer.valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "Ambulant"
+
+* item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
+* item[=].item[=].text = "Zimmerkategorie"
+
+* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#3 "privat"
 
 // ---------- Coverage item[4] ----------
 // ################################################
+* item[+].linkId = "coverage"
+* item[=].text = "Kostenträger"
+* item[=].item[0].linkId = "coverage.beneficiary"   // item[4][0]
+* item[=].item[=].text = "Begünstigter (Patient)"
+* item[=].item[=].item.linkId = "coverage.beneficiary.ahvn13"  // item[4][0][0]
+* item[=].item[=].item.text = "AHV-Nr. des Patienten"
+* item[=].item[=].item.answer.valueString = ""
+* item[=].item[+].linkId = "coverage.kvg"   // item[4][1]
+* item[=].item[=].text = "Krankenkasse (nach KVG)"
+* item[=].item[=].item[0].linkId = "coverage.kvg.name"    // item[4][1][0]
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "coverage.kvg.insuranceCardNumber"   // item[4][1][1]
+* item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "coverage.uvg"   // item[4][2]
+* item[=].item[=].text = "Unfallversicherung (nach UVG)"
+* item[=].item[=].item[0].linkId = "coverage.uvg.name"
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "coverage.uvg.claimNumber"
+* item[=].item[=].item[=].text = "Schadennummer"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "coverage.vvg"   // item[4][3]
+* item[=].item[=].text = "Zusatzversicherung (nach VVG)"
+* item[=].item[=].item[0].linkId = "coverage.vvg.name"
+* item[=].item[=].item[=].text = "Name der Versicherung"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "coverage.vvg.insuranceCardNumber"
+* item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "coverage.iv"    // item[4][4]
+* item[=].item[=].text = "Invalidenversicherung (IV)"
+// * item[=].item[=].type = #group
+* item[=].item[=].item.linkId = "coverage.iv.verfuegungsnummer"
+* item[=].item[=].item.text = "IV-Verfügungsnummer"
+* item[=].item[=].item.answer.valueString = ""
+* item[=].item[+].linkId = "coverage.mv"    // item[4][5]
+* item[=].item[=].text = "Militärversicherung (MV)"
+// * item[=].item[=].type = #group
+* item[=].item[=].item.linkId = "coverage.mv.versichertennummer"
+* item[=].item[=].item.text = "MV-Versichertennummer"
+* item[=].item[=].item.answer.valueString = ""
+* item[=].item[+].linkId = "coverage.self"    // item[4][6]
+* item[=].item[=].text = "Selbstzahler"
+* item[=].item[=].item[0].linkId = "coverage.self.patient"
+* item[=].item[=].item[=].text = "Patient selbst"
+* item[=].item[=].item[=].answer.valueBoolean = false
+* item[=].item[=].item[+].linkId = "coverage.self.patientRelatedPerson"
+* item[=].item[=].item[=].text = "Andere Person"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].enableWhen.question = "coverage.self.patient"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = false
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "'coverage.self.relatedPerson.'"
+* item[=].item[=].item[=].linkId = "coverage.self.relatedPerson"
+* item[=].item[=].item[=].text = "Andere Person"
+// * item[=].item[=].item[=].enableWhen.question = "coverage.self.patientRelatedPerson"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].item[0].linkId = "coverage.self.relatedPerson.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.streetAddressLine"
+* item[=].item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.postalCode"
+* item[=].item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.city"
+* item[=].item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "coverage.self.relatedPerson.country"
+* item[=].item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "coverage.other"
+* item[=].item[=].text = "Anderer Kostenträger"
+* item[=].item[=].item[0].linkId = "coverage.other.name"
+* item[=].item[=].item[=].text = "Name des Kostenträgers"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "coverage.other.id"
+* item[=].item[=].item[=].text = "Beliebige ID"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "coverage.other.id.note"
+* item[=].item[=].item[=].text = "Bemerkung zur ID"
+* item[=].item[=].item[=].answer.valueString = ""
 
 // ---------- Sender item[5] ----------
 // ################################################
