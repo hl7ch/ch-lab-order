@@ -132,6 +132,82 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 
 // ---------- Patient item[2] ----------
 // ################################################
+* item[+].linkId = "patient"
+* item[=].text = "Patient"
+* item[=].item[0].linkId = "patient.familyName"
+* item[=].item[=].text = "Name"
+* item[=].item[=].answer.valueString = "Keller"
+* item[=].item[+].linkId = "patient.maidenName"
+* item[=].item[=].text = "Ledigname"
+* item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "patient.givenName"
+* item[=].item[=].text = "Vorname"
+* item[=].item[=].answer.valueString = "Klebsiella"
+* item[=].item[+].linkId = "patient.localPid"
+* item[=].item[=].text = "Lokale Patienten-ID"
+* item[=].item[=].answer.valueString = "012/08.111114"
+* item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+* item[=].item[=].extension.valueBoolean = true
+* item[=].item[=].linkId = "patient.localPidDomain"
+* item[=].item[=].text = "Lokale Patienten-ID Domain"
+* item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30.999999.1"
+* item[=].item[+].linkId = "patient.birthDate"
+* item[=].item[=].text = "Geburtsdatum"
+* item[=].item[=].answer.valueDate = "1975-12-12"
+
+// --- patient.gender ------------------------
+* item[=].item[+].linkId = "patient.gender"
+* item[=].item[=].text = "Geschlecht"
+* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#female "Weiblich"
+
+// --- patient.maritalStatus
+* item[=].item[+].linkId = "patient.maritalStatus"
+* item[=].item[=].text = "Zivilstand"
+* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2 "verheiratet"
+
+* item[=].item[+].linkId = "patient.phone"
+* item[=].item[=].text = "Telefon"
+* item[=].item[=].answer.valueString = "+41 64 123 45 67"
+* item[=].item[+].linkId = "patient.email"
+* item[=].item[=].text = "E-Mail"
+* item[=].item[=].answer.valueString = "klebsiella.keller@example.ch"
+* item[=].item[+].linkId = "patient.streetAddressLine"
+* item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "patient.postalCode"
+* item[=].item[=].text = "PLZ"
+* item[=].item[=].answer.valueString = "5600"
+* item[=].item[+].linkId = "patient.city"
+* item[=].item[=].text = "Ort"
+* item[=].item[=].answer.valueString = "Lenzburg"
+* item[=].item[+].linkId = "patient.country"
+* item[=].item[=].text = "Land"
+* item[=].item[=].answer.valueString = "CH"
+
+// --- patient.languageOfCorrespondance ---------------------------
+* item[=].item[+].linkId = "patient.languageOfCorrespondance"
+// * item[=].item[=].text = "Korrespondenssprache"
+// * item[=].item[=].answer.valueCode = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode#de-CH"
+
+// --- patient.contactperson ---------------------------
+* item[=].item[+].linkId = "patient.contactperson"
+* item[=].item[=].text = "Kontaktperson"
+* item[=].item[=].item[0].linkId = "patient.contactperson.relationship"
+* item[=].item[=].item[=].text = "Beziehung"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "patient.contactperson.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "patient.contactperson.givenName"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "patient.contactperson.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "patient.contactperson.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = ""
+
 
 // ---------- Encounter item[3] ----------
 // ################################################
