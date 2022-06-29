@@ -598,7 +598,7 @@ Usage: #example
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-// ---------- CopyReceiver item[7] ----------
+// ---------- CopyReceiver item[6] ----------
 // ################################################
 * item[+].linkId = "receiverCopy"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:copyReceiver"
@@ -705,6 +705,10 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
+
+// ---------- Appointment item[7] ----------
+// ################################################
+
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"

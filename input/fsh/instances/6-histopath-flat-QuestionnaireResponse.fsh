@@ -402,15 +402,95 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].answer.valueString = "info@arztpraxis.ch"
 
+// ---------- CopyReceiver item[6] ----------
+// ################################################
+* item[+].linkId = "receiverCopy"
+* item[=].text = "Kopieempfänger (Kopie dieses Auftrags und aller daraus resultierenden Resultate)"
+* item[=].item[0].linkId = "receiverCopy.practitionerRole"
+* item[=].item[=].text = "Gesundheitsfachperson oder -organisation"
+* item[=].item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+// * item[=].item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+// * item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+// * item[=].item[=].item[=].extension.valueExpression.expression = "'receiverCopy.practitionerRole.practitioner.'"
+* item[=].item[=].item[=].linkId = "receiverCopy.practitionerRole.practitioner"
+* item[=].item[=].item[=].text = "Gesundheitsfachperson"
+* item[=].item[=].item[=].item[0].linkId = "receiverCopy.practitionerRole.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+// * item[=].item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+// * item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+// * item[=].item[=].item[=].extension.valueExpression.expression = "'receiverCopy.practitionerRole.organization.'"
+* item[=].item[=].item[=].linkId = "receiverCopy.practitionerRole.organization"
+* item[=].item[=].item[=].text = "Gesundheitsorganisatiton"
+* item[=].item[=].item[=].item[0].linkId = "receiverCopy.practitionerRole.organization.name"
+* item[=].item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.streetAddressLine"
+* item[=].item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+// * item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.postalCode"
+* item[=].item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.city"
+* item[=].item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].item[+].linkId = "receiverCopy.practitionerRole.organization.country"
+* item[=].item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "receiverCopy.patient"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient"
+* item[=].item[=].text = "Patient selbst"
+* item[=].item[=].answer.valueBoolean = true
+* item[=].item[+].linkId = "receiverCopy.relatedPerson"
+* item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson"
+* item[=].item[=].text = "Andere Person"
+* item[=].item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+// * item[=].item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+// * item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+// * item[=].item[=].item[=].extension.valueExpression.expression = "'receiverCopy.relatedPerson.'"
+* item[=].item[=].item[=].linkId = "receiverCopy.relatedPerson.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.givenName"
+* item[=].item[=].item[=].text = "Vorame"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = ""
+// * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer.valueString = ""
+// * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = ""
 
-// ---------- Author item[6] ----------
+// ---------- Appointment item[7] ----------
 // ################################################
 
-// ---------- CopyReceiver item[7] ----------
-// ################################################
-
-// ---------- Appointment item[8] ----------
-// ################################################
-
-// ---------- ServiceRequest Notes item[9] ----------
+// ---------- ServiceRequest Notes item[8] ----------
 // ################################################
