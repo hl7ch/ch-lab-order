@@ -400,7 +400,7 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[=].item.item[=].answer.valueString = ""
 * item[=].item[=].item.item[+].linkId = "sender.dataenterer.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
-* item[=].item[=].item.item[=].answer.valueString = ""
+* item[=].item[=].item.item[=].answer.valueString = "info@arztpraxis.ch"
 
 
 // ---------- Author item[6] ----------
