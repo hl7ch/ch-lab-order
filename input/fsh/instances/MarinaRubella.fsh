@@ -39,7 +39,7 @@ Usage: #definition
 * address.line = "Via del bosco 88"
 * address.city = "Airolo"
 * address.postalCode = "6780"
-* maritalStatus = ECH-11-maritalstatus#2 "verheiratet"
+* maritalStatus = EchMaritalStatus#2 "verheiratet"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#it-CH
 * communication.language.text = "Italienisch (Schweiz)"
 * communication.preferred = true

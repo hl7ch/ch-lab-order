@@ -6,8 +6,8 @@ Alias:  V2-0371                                = http://terminology.hl7.org/Code
 Alias:  V3ActCode                              = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 // Patient 
-Alias:       AdministrativeGender              = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender
-Alias:  ECH-11-maritalstatus                   = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
+Alias:  AdministrativeGender              = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender
+Alias:  EchMaritalStatus                   = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias:  ReligiousAffiliation                   = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
 // Order
