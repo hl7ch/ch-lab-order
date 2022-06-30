@@ -774,6 +774,9 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].type = #string
+
+// ---------- ServiceRequest Notes item[8] ----------
+// ################################################
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group

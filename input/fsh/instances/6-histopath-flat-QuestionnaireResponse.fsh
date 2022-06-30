@@ -491,6 +491,89 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 
 // ---------- Appointment item[7] ----------
 // ################################################
+* item[+].linkId = "appointment"
+* item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
+* item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+// * item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+// * item[=].item[=].extension.valueExpression.language = #text/fhirpath
+// * item[=].item[=].extension.valueExpression.expression = "'appointment.location.'"
+* item[=].item[=].linkId = "appointment.location"
+* item[=].item[=].text = "Ort der Durchführung"
+* item[=].item[=].item[0].linkId = "appointment.location.name"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "appointment.requestedPeriod"
+* item[=].item[=].text = "Datum und Zeit, wann der Termin bevorzugt geplant werden soll"
+* item[=].item[=].item[0].linkId = "appointment.requestedPeriod.start"
+* item[=].item[=].item[=].text = "Von"
+* item[=].item[=].item[=].answer.valueDateTime = "2013-06-08T09:57:34.2112Z"  // Answer value must be of type dateTime
+* item[=].item[=].item[+].linkId = "appointment.requestedPeriod.end"
+* item[=].item[=].item[=].text = "Bis"
+* item[=].item[=].item[=].answer.valueDateTime = "2013-06-08T09:57:34.2112Z"  // Answer value must be of type dateTime
+* item[=].item[+].linkId = "appointment.status"
+* item[=].item[=].text = "Status"
+* item[=].item[=].answer.valueCoding = http://hl7.org/fhir/appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+// * item[=].item[=].answerOption[=].initialSelected = true
+// * item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+// * item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+* item[=].item[+].linkId = "appointment.patientInstruction"
+* item[=].item[=].text = "Patienteninformation für diesen Termin"
+* item[=].item[=].answer.valueString = ""
 
 // ---------- ServiceRequest Notes item[8] ----------
-// ################################################
+// ###################################################
+* item[+].linkId = "note"
+* item[=].text = "Bemerkungen"
+
+* item[=].item[+].linkId = "note.text"
+* item[=].item[=].text = "Kommentar"
+* item[=].item[=].answer.valueString = "mark in the skin specimen points to the cranio-medial part"
+
+// ########### specific Part ######################
+// ------------Choice of Specialty-----------------
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+
+  // Histopathology
+  * item[+]
+    * linkId = "labSpecialties.pathology"
+    * text = "Pathology"
+    * answer.valueBoolean = true
+
+    * answer.item[+]
+      * linkId = "labSpecialties.pathology.panels"
+      * text = "Pathology Panels"
+      * item[+]
+        * definition = LOINC#18743-5 "Autopsy report"
+        * linkId = "labSpecialties.pathology.panels.Autopsy"
+        * text = "Autopsy report"
+        * answer.valueBoolean = false
+      * item[+]
+        * definition = LOINC#11526-1 "Pathology study"
+        * linkId = "labSpecialties.pathology.panels.PathologyStudy"
+        * text = "Pathology Study"
+        * answer.valueBoolean = false
+      * item[+]
+        * definition = LOINC#11529-5 "Surgical pathology study"
+        * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
+        * text = "Surgical pathology study"
+        * answer.valueBoolean = true
