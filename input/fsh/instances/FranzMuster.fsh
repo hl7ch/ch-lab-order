@@ -25,7 +25,7 @@ Usage: #definition
 * telecom[=].value = "franz.muster@example.ch"
 * gender = #male
 * birthDate = "1995-01-27"
-* maritalStatus = ECH-11-maritalstatus#6 "in eingetragener Partnerschaft"
+* maritalStatus = EchMaritalStatus#6 "in eingetragener Partnerschaft"
 * communication.language = urn:oid:2.16.840.1.113883.6.316#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true

@@ -429,14 +429,14 @@ Description: "Subquestionnaire patient"
 * item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].text = "Zivilstand"
 * item[=].type = #choice
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#1 "ledig"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#2 "verheiratet"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#3 "verwitwet"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#4 "geschieden"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#5 "unverheiratet"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#6 "in eingetragener Partnerschaft"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#7 "aufgelöste Partnerschaft"
-* item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#9 "unbekannt"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#1 "ledig"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#2 "verheiratet"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#3 "verwitwet"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#4 "geschieden"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#5 "unverheiratet"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#6 "in eingetragener Partnerschaft"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#7 "aufgelöste Partnerschaft"
+* item[=].answerOption[+].valueCoding = EchMaritalStatus#9 "unbekannt"
 
 * item[+].linkId = "patient.phone"
 * item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.telecom.value"
@@ -1058,7 +1058,7 @@ Description: "Subquestionnaire Practitioner Address"
 * item[=].text = "Land"
 * item[=].type = #string
 
-// ############## begin of specific part ############################
+/* ############## begin of specific part ############################
 
 
 // ---------------Diagnosen und Befunde Ref --------------
@@ -1132,3 +1132,5 @@ Description: "Subquestionnaire Practitioner Address"
         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
         * text = "Surgical pathology study"
         * type = #boolean
+
+*/        
