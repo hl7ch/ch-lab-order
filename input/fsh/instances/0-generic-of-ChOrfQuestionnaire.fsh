@@ -27,7 +27,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 * version = "0.9.1"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example"
+* title = "Lab Order Form Example 0-generic"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"

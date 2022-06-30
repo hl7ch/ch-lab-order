@@ -25,7 +25,7 @@ Usage: #definition
 // ###############  begin of general part  ########################################
 * version = "0.9.1"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example"
+* title = "Lab Order Form Example 5-biol-monit"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
