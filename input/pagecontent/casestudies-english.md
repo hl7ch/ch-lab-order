@@ -75,12 +75,12 @@ Matching FHIR questionnaire that corresponds to this specification:
 ### Case study 6: Suspected Melanoma, order for histopathology examination
 
 A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
-Attachement of dermatoscopic images
+Attachement of dermatoscopic images // TODO
 Specimen: 29 x 11 x 5 mm skin ellipse
 Body Site: Back paralumbar left
 
 The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
 
 Matching FHIR questionnaire that corresponds to this specification:
-[6-histopath.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.xml.html)   TODO
-[6-histopath.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.json.html) TODO
+[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
+[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)

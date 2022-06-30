@@ -27,7 +27,7 @@ Description: "Example for Questionnaire of Histopathology Examination"
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
 * name = "LabOrderForm"
-* title = "Lab Order Form"
+* title = "Lab Order Form, modular version"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"

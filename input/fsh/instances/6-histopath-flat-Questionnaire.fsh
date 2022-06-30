@@ -40,7 +40,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat-Questionnaire"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form"
+* title = "Lab Order Form, assembled from modular version"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
