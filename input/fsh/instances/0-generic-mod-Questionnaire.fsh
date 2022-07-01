@@ -30,8 +30,8 @@ Usage: #definition
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-mod"
-* name = "OrderLabForm"
-* title = "Order-Lab-Form"
+* name = "LabOrderForm"
+* title = "Lab Order Form 0-generic, modular version"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
