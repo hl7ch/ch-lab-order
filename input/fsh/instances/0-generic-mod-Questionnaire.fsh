@@ -1,4 +1,4 @@
-Instance: 0-generic-mod-Questionnaire
+Instance: 0-generic-mod-Questionnaire   // corresponds to resource
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 0-generic (modular version)"
 Description: "Example for Questionnaire for generic Lab Order"
