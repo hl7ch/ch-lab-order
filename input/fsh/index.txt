@@ -1,4 +1,9 @@
 Name                                        Type        File
+0-generic-Composition                       Instance    instances/0-generic-Composition.fsh
+0-generic-Document                          Instance    instances/0-generic-Document.fsh
+0-generic-mod-QuestionnaireResponse         Instance    instances/0-generic-mod-QuestionnaireResponse.fsh
+0-generic-ServiceRequest                    Instance    instances/0-generic-ServiceRequest.fsh
+0-generic-mod-Questionnaire                 Instance    instances/0-generic-mod-Questionnaire.fsh
 1-tvt-of-ChOrfComposition                   Instance    instances/1-tvt-of-ChOrfComposition.fsh
 1-tvt-of-ChOrfDocument                      Instance    instances/1-tvt-of-ChOrfDocument.fsh
 1-tvt-of-ChOrfQuestionnaireResponse         Instance    instances/1-tvt-of-ChOrfQuestionnaireResponse.fsh

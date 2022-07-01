@@ -1,9 +1,8 @@
-Instance: 0-generic-of-ChOrfQuestionnaire
+Instance: 0-generic-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 0-generic"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #definition
-* id = "0-generic"
 
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
@@ -24,7 +23,7 @@ Usage: #definition
 
 // ###############  begin of general part  ########################################
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-Questionnaire"
 * version = "0.9.1"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 0-generic"

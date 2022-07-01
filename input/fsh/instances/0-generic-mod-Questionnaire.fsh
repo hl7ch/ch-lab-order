@@ -1,7 +1,8 @@
-Instance: 0-generic-mod-form
+Instance: 0-generic-mod-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 0-generic (modular version)"
 Description: "Example for Questionnaire"
+* id = "0-generic-mod"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -24,7 +25,7 @@ Description: "Example for Questionnaire"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-mod-form"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-mod"
 * name = "OrderLabForm"
 * title = "Order-Lab-Form"
 * status = #active

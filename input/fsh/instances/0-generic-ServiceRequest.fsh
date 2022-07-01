@@ -1,4 +1,4 @@
-Instance: 0-generic-of-ChOrfServiceRequest
+Instance: 0-generic-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 0-generic"
 Description: "Example for Service Request due to suspected deep vein thrombosis"

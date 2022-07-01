@@ -1,9 +1,8 @@
-Instance: 0-generic-of-ChOrfQuestionnaireResponse
+Instance: 0-generic-mod-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 0-generic"
 Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #definition
-* id = "0-generic"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
