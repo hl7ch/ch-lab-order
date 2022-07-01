@@ -21,9 +21,9 @@ Usage: #definition
 * entry[=].resource = Arztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath-mod-Questionnaire"
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath-flat-Questionnaire"
 * entry[=].resource = 6-histopath-flat-Questionnaire
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath-mod-QuestionnaireResponse"
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath-flat-QuestionnaireResponse"
 * entry[=].resource = 6-histopath-flat-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath"
 * entry[=].resource = 6-histopath-ServiceRequest
