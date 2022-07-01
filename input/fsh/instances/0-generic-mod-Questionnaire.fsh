@@ -31,7 +31,7 @@ Usage: #definition
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-mod"
 * name = "LabOrderForm"
-* title = "Lab Order Form 0-generic, modular version"
+* title = "Lab Order Form 0-generic modular version"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
