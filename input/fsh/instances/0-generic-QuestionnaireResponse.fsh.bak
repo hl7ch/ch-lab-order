@@ -5,7 +5,7 @@ Description: "Example for Laboratory Order Questionnaire Response due to suspect
 Usage: #definition
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat-Questionnaire"
 * status = #completed
 
 * item[0].linkId = "order"

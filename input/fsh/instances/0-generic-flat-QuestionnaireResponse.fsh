@@ -1,8 +1,8 @@
-Instance: 6-histopath-flat-QuestionnaireResponse
+Instance: 0-generic-flat-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "QuestionnaireResponse 6-histopath (modular version)"
+Title: "QuestionnaireResponse 0-generic (modular version)"
 Description: "Example for QuestionnaireResponse of Histopathology Examination"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat-Questionnaire"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat-Questionnaire"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------
@@ -547,7 +547,7 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[=].answer.valueString = "mark in the skin specimen points to the cranio-medial part"
 
 // ########### specific Part ######################
-// ------------Choice of Specialty-----------------
+/* ------------Choice of Specialty-----------------
 * item[+]
   * linkId = "labSpecialties"
   * text = "Labor Sparten"
@@ -576,3 +576,4 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
         * text = "Surgical pathology study"
         * answer.valueBoolean = true
+*/        
