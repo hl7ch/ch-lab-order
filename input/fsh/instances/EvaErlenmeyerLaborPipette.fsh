@@ -6,4 +6,4 @@ Usage: #example
 * identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
 * identifier[=].value = "A123444"
 * practitioner = Reference(EvaErlenmeyer)
-* organization = Reference(LaborPipette)
+* organization = Reference(Organization/LaborPipette)

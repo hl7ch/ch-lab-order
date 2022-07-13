@@ -37,6 +37,8 @@ Usage: #definition
 * date = "2022-05-04"
 * publisher = "HL7 Switzerland"
 
+// ###############  begin of general part  ##################################
+
 // ---------- order (Auftrag) ----------
 * item[+].linkId = "order"
 * item[=].text = "Auftrag"
@@ -155,4 +157,100 @@ Usage: #definition
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
-// ########### specific Part ######################
+// ########### Begin of specific Part ######################
+// ##########################################################
+
+* item[+]
+  * linkId = "labSpecialties"
+  * text = "Labor Sparten"
+  * type = #group
+
+  // Histopathology
+  * item[+]
+    * definition = LOINC#27898-6 "Pathology studies (set)"
+    * linkId = "labSpecialties.pathology"
+    * text = "Pathology"
+    * type = #boolean
+
+  // Chemistry
+
+
+/*/ --- LabServiceDefinition --------------------------------
+* item[+].linkId = "labServiceDefinition"
+* item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+* item[=].text = "Lab Service Definition"
+* item[=].type = #group
+* item[=].repeats = true
+
+*  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|2.0.0"
+* item[=].item.linkId = "PlanDefinition"
+* item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
+* item[=].item.type = #display
+
+
+
+// --- Choose from List of Catalogs - Catalog Header Profile--------------------
+* item[=].item[+].item.linkId = "PlanDefinition.CatalogReference"
+* item[=].item[+].item.text = "Unable to resolve 'PlanDefinition Catalog Reference' sub-questionnaire"
+* item[=].item[+].item.type = #display
+
+*/
+
+Instance: 24326-1
+InstanceOf: Questionnaire
+Title: "Electrolytes 1998 panel, Blood"  // Consumer name
+Description: "24326-1 Electrolytes 1998 panel - Serum or Plasma, but only for ordering"
+Usage: #definition
+
+* meta.versionId = "1"
+* meta.lastUpdated = "2021-03-02T15:07:05.000-05:00"
+* meta.source = "#uylouGDJXQ40Mvhr"
+* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|3.0"
+* meta.tag.code = L-Forms#"lformsVersion: 29.0.0"
+* name = "Lytes_1998_Pnl_SerPl" // Computer friendly name
+* title = "Electrolytes 1998 panel - Serum or Plasma"
+* status = #draft
+* code = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension.valueCoding = http://unitsofmeasure.org#mmol/L "mmol/L"
+* item[=].linkId = "/2951-2"
+* item[=].code = LOINC#2951-2 "Sodium SerPl-sCnc"
+* item[=].text = "Sodium SerPl-sCnc"
+* item[=].type = #decimal
+* item[=].required = false
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension.valueCoding = http://unitsofmeasure.org#mmol/L "mmol/L"
+* item[=].linkId = "/2823-3"
+* item[=].code = LOINC#2823-3 "Potassium SerPl-sCnc"
+* item[=].text = "Potassium SerPl-sCnc"
+* item[=].type = #decimal
+* item[=].required = false
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension.valueCoding = http://unitsofmeasure.org#mmol/L "mmol/L"
+* item[=].linkId = "/2075-0"
+* item[=].code = LOINC#2075-0 "Chloride SerPl-sCnc"
+* item[=].text = "Chloride SerPl-sCnc"
+* item[=].type = #decimal
+* item[=].required = false
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension.valueCoding = http://unitsofmeasure.org#mmol/L "mmol/L"
+* item[=].linkId = "/1963-8"
+* item[=].code = LOINC#1963-8 "HCO3 SerPl-sCnc"
+* item[=].text = "HCO3 SerPl-sCnc"
+* item[=].type = #decimal
+* item[=].required = false
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension.valueCoding = http://unitsofmeasure.org#mmol/L "mmol/L"
+* item[=].linkId = "/2028-9"
+* item[=].code = LOINC#2028-9 "CO2 SerPl-sCnc"
+* item[=].text = "CO2 SerPl-sCnc"
+* item[=].type = #decimal
+* item[=].required = false
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension.valueCoding = http://unitsofmeasure.org#mmol/L "mmol/L"
+* item[=].linkId = "/33037-3"
+* item[=].code = LOINC#33037-3 "Anion Gap SerPl-sCnc"
+* item[=].text = "Anion Gap SerPl-sCnc"
+* item[=].type = #decimal
+* item[=].required = false

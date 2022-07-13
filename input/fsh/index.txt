@@ -74,7 +74,7 @@ Inline-Instance-for-5-biol-monit-4          Instance    instances/Inline-Instanc
 Inline-Instance-for-5-biol-monit-8          Instance    instances/Inline-Instance-for-5-biol-monit-8.fsh
 Kantonsspital                               Instance    instances/Kantonsspital.fsh
 KlebsiellaKeller                            Instance    instances/KlebsiellaKeller.fsh
-LaborPipette                                Instance    instances/LaborPipette.fsh
+LaborPipette                                Instance    instances/Organization/LaborPipette.fsh
 MarcApgar                                   Instance    instances/MarcApgar.fsh
 MarcMustermann                              Instance    instances/MarcMustermann.fsh
 MarcMustermannArztpraxis                    Instance    instances/MarcMustermannArztpraxis.fsh

@@ -22,7 +22,8 @@ contact:
 dependencies:
   ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: current
- 
+  hl7.fhir.uv.order-catalog: 0.1.0 
+   
 pages:
   index.md:
     title: Home
