@@ -17,7 +17,7 @@ Usage: #definition
 * code.coding[+] = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
 
 * priority = #routine
-* subject = Reference(MarinaRubella)
+* subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PeterPapGruppenpraxis)
 * reasonCode = SCT#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"

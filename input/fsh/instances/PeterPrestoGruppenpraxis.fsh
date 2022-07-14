@@ -3,5 +3,5 @@ InstanceOf: CHCorePractitionerRole
 Title: "Peter Presto at Gruppenpraxis"
 Description: "PractitionerRole, refers to 2-pertussis"
 Usage: #example
-* practitioner = Reference(PeterPresto)
+* practitioner = Reference(Practitioner/PeterPresto)
 * organization = Reference(Organization/Gruppenpraxis)

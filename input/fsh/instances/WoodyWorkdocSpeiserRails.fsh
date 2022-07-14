@@ -3,5 +3,5 @@ InstanceOf: CHCorePractitionerRole
 Title: "Woody Worksdoc Speiser Rails"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
-* practitioner = Reference(WoodyWorkdoc)
+* practitioner = Reference(Practitioner/WoodyWorkdoc)
 * organization = Reference(Organization/SpeiserRails)
