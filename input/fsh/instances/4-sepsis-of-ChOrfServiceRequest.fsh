@@ -27,6 +27,6 @@ Usage: #definition
 * reasonCode = SCT#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood-bactec-plus)
-* specimen[+] = Reference(Blood)
+* specimen[0] = Reference(Specimen/Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/Blood)
 * specimen[+] = Reference(Urin)

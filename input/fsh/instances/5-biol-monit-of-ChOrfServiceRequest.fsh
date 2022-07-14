@@ -27,5 +27,5 @@ Usage: #definition
 * reasonCode = SCT#409967009
 * reasonCode.text = "Toxicology (qualifier value)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood)
+* specimen[0] = Reference(Specimen/Blood)
 * specimen[+] = Reference(Urin)

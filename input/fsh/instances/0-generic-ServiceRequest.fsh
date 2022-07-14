@@ -37,4 +37,4 @@ Usage: #definition
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Serum) "Serum specimen"
-* specimen[+] = Reference(Blood)
+* specimen[+] = Reference(Specimen/Blood)
