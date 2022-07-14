@@ -38,13 +38,13 @@ ChLabOrderServiceRequestCategories          CodeSystem  codesystems/ChLabOrderSe
 CoverageFranzMuster                         Instance    instances/CoverageFranzMuster.fsh
 DocumentEntry.classCode                     Instance    instances/DocumentEntry.classCode.fsh
 DocumentEntry.typeCode                      Instance    instances/DocumentEntry.typeCode.fsh
-EmilKummer                                  Instance    instances/EmilKummer.fsh
-EvaErlenmeyer                               Instance    instances/EvaErlenmeyer.fsh
+EmilKummer                                  Instance    instances/Patient/EmilKummer.fsh
+EvaErlenmeyer                               Instance    instances/Practitioner/EvaErlenmeyer.fsh
 EvaErlenmeyerLaborPipette                   Instance    instances/EvaErlenmeyerLaborPipette.fsh
-FranzMuster                                 Instance    instances/FranzMuster.fsh
+FranzMuster                                 Instance    instances/Patient/FranzMuster.fsh
 Gruppenpraxis                               Instance    instances/Organization/Gruppenpraxis.fsh
-HansGuggindieluft                           Instance    instances/HansGuggindieluft.fsh
-HansHauser                                  Instance    instances/HansHauser.fsh
+HansGuggindieluft                           Instance    instances/Patient/HansGuggindieluft.fsh
+HansHauser                                  Instance    instances/Practitioner/HansHauser.fsh
 HansHauserKantonsspital                     Instance    instances/HansHauserKantonsspital.fsh
 HealthInsuranceCard                         Instance    instances/HealthInsuranceCard.fsh
 Inline-Instance-for-1-tvt-1                 Instance    instances/Inline-Instance-for-1-tvt-1.fsh
@@ -75,7 +75,7 @@ Inline-Instance-for-5-biol-monit-8          Instance    instances/Inline-Instanc
 Kantonsspital                               Instance    instances/Kantonsspital.fsh
 KlebsiellaKeller                            Instance    instances/KlebsiellaKeller.fsh
 LaborPipette                                Instance    instances/Organization/LaborPipette.fsh
-MarcApgar                                   Instance    instances/MarcApgar.fsh
+HansHauser                                  Instance    instances/Practitioner/HansHauser.fsh
 MarcMustermann                              Instance    instances/MarcMustermann.fsh
 MarcMustermannArztpraxis                    Instance    instances/MarcMustermannArztpraxis.fsh
 MarinaRubella                               Instance    instances/MarinaRubella.fsh
