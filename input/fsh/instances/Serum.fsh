@@ -7,7 +7,7 @@ Usage: #definition
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
 * type = SCT#119364003 "Serum specimen (specimen)"
-* subject = Reference(BeatBorer)
+* subject = Reference(Patient/BeatBorer)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite.coding.system = "http://snomed.info/sct"

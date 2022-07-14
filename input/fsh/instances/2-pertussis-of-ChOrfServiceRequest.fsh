@@ -17,7 +17,7 @@ Usage: #definition
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(EmilKummer)
+* subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = SCT#772146005
 * reasonCode.text = "Pertussis suspected (situation)"

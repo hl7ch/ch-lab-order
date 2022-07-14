@@ -23,13 +23,13 @@ Usage: #definition
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(HansGuggindieluft)
+* extension[=].valueReference = Reference(Patient/HansGuggindieluft)
 
 * status = #final
 * title = "Laborauftrag"
 * category = SCT#721963009 "Order (record artifact)"
 * type = SCT#721965002 "Laboratory order (record artifact)"
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/HansGuggindieluft)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
 

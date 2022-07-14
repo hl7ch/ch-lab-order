@@ -7,7 +7,7 @@ Usage: #definition
 * accessionIdentifier.value = "77777-bc987-dd888"
 * status = #available
 * type = SCT#119297000 "Blood sample"
-* subject = Reference(FranzMuster)
+* subject = Reference(Patient/FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
 * request = Reference(Lab)
 * collection.collector = Reference(MarcMustermann)

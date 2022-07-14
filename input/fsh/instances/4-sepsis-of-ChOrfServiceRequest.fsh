@@ -22,7 +22,7 @@ Usage: #definition
 * status = #active
 * intent = #original-order
 * priority = #urgent
-* subject = Reference(KlebsiellaKeller)
+* subject = Reference(Patient/KlebsiellaKeller)
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = SCT#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"

@@ -24,14 +24,14 @@ Description: "Composition: Storyboard for suspected Melanoma of skin"
 * extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
 
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(KlebsiellaKeller)
+* extension[=].valueReference = Reference(Patient/KlebsiellaKeller)
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
 * title = "Pathologieauftrag"
 * category = SCT#721963009 "Order (record artifact)"
 * type = SCT#721966001 "Pathology order (record artifact)"
-* subject = Reference(KlebsiellaKeller)
+* subject = Reference(Patient/KlebsiellaKeller)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
 

@@ -31,7 +31,7 @@ Usage: #definition
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = SCT#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"

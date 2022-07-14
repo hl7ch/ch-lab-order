@@ -21,11 +21,11 @@ Usage: #definition
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(MarcMustermannArztpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(KlebsiellaKeller)
+* extension[=].valueReference = Reference(Patient/KlebsiellaKeller)
 * status = #final
 * type = SCT#721965002 "Laboratory order (record artifact)"
 * category = SCT#721963009 "Order (record artifact)"
-* subject = Reference(KlebsiellaKeller)
+* subject = Reference(Patient/KlebsiellaKeller)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(HansHauserKantonsspital)
 * title = "Referral 4-sepsis"

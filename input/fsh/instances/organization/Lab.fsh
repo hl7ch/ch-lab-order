@@ -14,7 +14,7 @@ Usage: #definition
 * category = SCT#108252007
 * category.text = "Laboratory procedure (procedure)"
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * performerType = SCT#61246008
 * performerType.text = "Laboratory medicine specialist (occupation)"

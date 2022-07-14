@@ -22,7 +22,7 @@ Usage: #definition
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(BeatBorer)
+* subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = SCT#409967009
 * reasonCode.text = "Toxicology (qualifier value)"

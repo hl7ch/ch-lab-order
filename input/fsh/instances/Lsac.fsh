@@ -7,7 +7,7 @@ Usage: #definition
 * accessionIdentifier.value = "4e88a-11111-dd888"
 * status = #available
 * type = SCT#258450006 "Cerebrospinal fluid sample"
-* subject = Reference(FranzMuster)
+* subject = Reference(Patient/FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
 * request = Reference(Lab)
 * collection.collector = Reference(MarcMustermann)

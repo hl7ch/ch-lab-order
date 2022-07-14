@@ -7,7 +7,7 @@ Usage: #definition
 * accessionIdentifier.value = "4e88a-bc987-dd888"
 * status = #available
 * type = SCT#258529004 "Throat swab (specimen)"
-* subject = Reference(FranzMuster)
+* subject = Reference(Patient/FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
 * request = Reference(Lab)
 * collection.collector = Reference(MarcMustermann)
