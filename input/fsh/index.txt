@@ -76,7 +76,7 @@ Kantonsspital                               Instance    instances/Kantonsspital.
 KlebsiellaKeller                            Instance    instances/KlebsiellaKeller.fsh
 LaborPipette                                Instance    instances/Organization/LaborPipette.fsh
 HansHauser                                  Instance    instances/Practitioner/HansHauser.fsh
-MarcMustermann                              Instance    instances/MarcMustermann.fsh
+MarcMustermann                              Instance    instances/Practitioner/MarcMustermann.fsh
 MarcMustermannArztpraxis                    Instance    instances/MarcMustermannArztpraxis.fsh
 MarinaRubella                               Instance    instances/MarinaRubella.fsh
 OrfQrToBundle                               Instance    instances/OrfQrToBundle.fsh

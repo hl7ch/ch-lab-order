@@ -10,7 +10,7 @@ Usage: #definition
 * subject = Reference(Patient/FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
 * request = Reference(Lab)
-* collection.collector = Reference(MarcMustermann)
+* collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * collection.method = SCT#277762005 "Lumbar puncture (procedure)"
 * container[0].identifier.value = "4e88a-bc987-dd888-12345-cc"
