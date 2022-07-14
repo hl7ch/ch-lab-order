@@ -22,7 +22,7 @@ Usage: #definition
 * reasonCode = SCT#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Cervix-swab)
+* specimen[0] = Reference(Specimen/Cervix-swab)
 * specimen[+] = Reference(Specimen/Blood)
-* specimen[+] = Reference(Serum)
-* specimen[+] = Reference(Urin)
+* specimen[+] = Reference(Specimen/Serum)
+* specimen[+] = Reference(Specimen/Urin)

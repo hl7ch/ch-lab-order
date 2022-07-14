@@ -28,4 +28,4 @@ Usage: #definition
 * reasonCode.text = "Toxicology (qualifier value)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Blood)
-* specimen[+] = Reference(Urin)
+* specimen[+] = Reference(Specimen/Urin)

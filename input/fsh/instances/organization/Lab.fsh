@@ -22,4 +22,4 @@ Usage: #definition
 * reasonCode = SCT#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)
-* specimen = Reference(Serum) "Serum specimen"
+* specimen = Reference(Specimen/Serum) "Serum specimen"
