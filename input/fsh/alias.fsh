@@ -4,11 +4,11 @@ Alias:  LOINC                                  = http://loinc.org
 Alias:  V2-0203                                = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:  V2-0371                                = http://terminology.hl7.org/CodeSystem/v2-0371
 Alias:  V3ActCode                              = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias:  L-Forms                                = https://lforms-fhir.nlm.nih.gov/baseR4
+Alias:  L-Forms                                = http://terminology.hl7.org/3.1.0/CodeSystem-forms-codes.html // not shure if correct!
 
 // Patient 
-Alias:  AdministrativeGender              = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender
-Alias:  EchMaritalStatus                   = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
+Alias:  AdministrativeGender                   = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender
+Alias:  EchMaritalStatus                       = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias:  ReligiousAffiliation                   = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
 // Order

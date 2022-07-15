@@ -17,11 +17,11 @@ Usage: #example
 * extension.valuePeriod.end = "2021-12-31"
 * identifier.use = #official
 * identifier.system = "http://fhir.org"
-* identifier.value = "GoodLabCompendium"
+* identifier.value = "PipetteLabCompendium"
 * status = #preliminary
 * type.text = "Catalog"
 * category = http://terminology.hl7.org/CodeSystem/catalogType#protocol
 * date = "2020-06-01T17:00:00+02:00"
 * author = Reference(Organization/LaborPipette)
-* title = "The good testing laboratory - Directory of Diagnostic Services"
+* title = "Pipette laboratory - Directory of Diagnostic Services"
 * custodian = Reference(Organization/LaborPipette)
