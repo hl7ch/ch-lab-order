@@ -158,7 +158,8 @@ Usage: #definition
 * item[=].item[=].required = true
 
 // ########### Begin of specific Part ######################
-// ##########################################################
+// #########################################################
+// https://loinc.org/fhir/
 
 * item[+]
   * linkId = "labSpecialties"

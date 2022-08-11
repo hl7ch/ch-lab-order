@@ -9,6 +9,7 @@ Id: top-2000-lab-observations-si
 * ^contact.name = "Regenstrief Institute, Inc."
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://loinc.org"
+* ^description = "SI version of the user-favorite LOINC Top 2000+ Lab Observations list (2012-07-01)"
 * ^copyright = "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at https://loinc.org/license/"
 * LOINC#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 * LOINC#718-7 "Hemoglobin [Mass/volume] in Blood"
