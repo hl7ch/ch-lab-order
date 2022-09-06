@@ -1,4 +1,4 @@
-Instance: lab-compendium-header
+Instance: Pipette-Compendium-Header
 InstanceOf: Composition
 Title: "Catalog Header of Labor Pipette"
 Description: "Example of a Lab header"
@@ -13,8 +13,8 @@ Usage: #example
 -->
 </div>"
 * extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ValidityPeriod"
-* extension.valuePeriod.start = "2020-08-01"
-* extension.valuePeriod.end = "2021-12-31"
+* extension.valuePeriod.start = "2022-08-01"
+* extension.valuePeriod.end = "2022-12-31"
 * identifier.use = #official
 * identifier.system = "http://fhir.org"
 * identifier.value = "PipetteLabCompendium"
