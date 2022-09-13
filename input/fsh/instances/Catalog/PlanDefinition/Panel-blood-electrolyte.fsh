@@ -36,7 +36,7 @@ Usage: #example
 * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
 * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-01 "BIOCHIMIE - SANG"
 * action.extension.extension.extension.url = "Material"
-* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-serum-plasma) "example-specimen-serum-plasma"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "Venous Blood"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"

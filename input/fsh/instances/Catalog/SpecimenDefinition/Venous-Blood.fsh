@@ -1,5 +1,6 @@
-Instance: serum-plasma
+Instance: Venous-Blood
 InstanceOf: SpecimenDefinition
+Description: "Venous blood"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US

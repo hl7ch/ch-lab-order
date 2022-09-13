@@ -3,7 +3,7 @@ Id: top-2000-lab-observations-si
 * ^name = "Top_2000_Lab_Results_SI"
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2020-06-17T20:08:52.148+00:00"
-* ^url = "http://loinc.org/vs/top-2000-lab-observations-si"
+* ^url = "http://fhir.ch/ig/ch-lab-order/ValueSet/top-2000-lab-observations-si"
 * ^status = #active
 * ^publisher = "Regenstrief Institute, Inc."
 * ^contact.name = "Regenstrief Institute, Inc."
