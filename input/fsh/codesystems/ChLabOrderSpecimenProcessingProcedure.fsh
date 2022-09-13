@@ -2,7 +2,8 @@ CodeSystem: ChLabOrderSpecimenProcessingProcedure
 Id: Specimen.processing.procedure
 Title: "Service Request Processing Procedure"
 Description: "ch-lab-order defines 2 different Kinds of Processing Procedures"
-* ^url = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/Specimen.processing.procedure"
+* ^url = "http://fhir.ch/ig/ch-lab-order/CodeSystem/Specimen.processing.procedure"
+// * ^url = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/Specimen.processing.procedure"
 * ^version = "0.1.0"
 * ^status = #active
 * ^date = "2021-06-01T10:21:46+00:00"

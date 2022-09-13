@@ -2,7 +2,8 @@ CodeSystem: ChLabOrderServiceRequestCategories
 Id: ServiceRequest.categories
 Title: "Service Request Categories for Questionnaires"
 Description: "ch-lab-order defines 10 different Kinds of Service Request"
-* ^url = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories"
+* ^url = "http://fhir.ch/ig/ch-lab-order/CodeSystem/ServiceRequest.categories"
+// * ^url = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories"
 * ^version = "0.1.0"
 * ^status = #active
 * ^date = "2021-06-01T10:21:46+00:00"
