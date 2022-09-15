@@ -4,7 +4,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* extension[=].valueReference = Reference(Composition/example-lab-compendium-header)
+* extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
 * extension[=].valueCodeableConcept = http://www.codage.ext.cnamts.fr/codif/nabm#1609
 * extension[+].extension[0].url = "textualSummary"
@@ -36,7 +36,7 @@ Usage: #example
 * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
 * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-01 "BIOCHIMIE - SANG"
 * action.extension.extension.extension.url = "Material"
-* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "Venous Blood"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "example-specimen-serum-plasma"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
