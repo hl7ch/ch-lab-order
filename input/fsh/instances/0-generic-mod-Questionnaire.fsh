@@ -175,8 +175,7 @@ Usage: #definition
 
   // Chemistry
 
-
-/*/ --- LabServiceDefinition --------------------------------
+// --- Kind of LabService (PlanDefinition) --------------------------------
 * item[+].linkId = "labServiceDefinition"
 * item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * item[=].text = "Lab Service Definition"
@@ -185,18 +184,21 @@ Usage: #definition
 
 *  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 // * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|2.0.0"
-* item[=].item.linkId = "PlanDefinition"
-* item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
-* item[=].item.type = #display
+* item[=].item[0].linkId = "Potassium-serum"
+* item[=].item[=].text = "Unable to resolve 'appointment' sub-questionnaire"
+* item[=].item[=].type = #display
+
+* item[=].item[+].linkId = "Panel-blood-electrolyte"
+* item[=].item[=].text = "Unable to resolve 'appointment' sub-questionnaire"
+* item[=].item[=].type = #display
 
 
 
-// --- Choose from List of Catalogs - Catalog Header Profile--------------------
-* item[=].item[+].item.linkId = "PlanDefinition.CatalogReference"
-* item[=].item[+].item.text = "Unable to resolve 'PlanDefinition Catalog Reference' sub-questionnaire"
-* item[=].item[+].item.type = #display
+// // --- Choose from List of Catalogs - Catalog Header Profile--------------------
+// * item[=].item[+].item.linkId = "PlanDefinition.CatalogReference"
+// * item[=].item[+].item.text = "Unable to resolve 'PlanDefinition Catalog Reference' sub-questionnaire"
+// * item[=].item[+].item.type = #display
 
-*/
 
 // ### Blood by Automated count #################
 

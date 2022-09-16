@@ -1,5 +1,6 @@
 Instance: example-lab-procedure-potassium-serum
 InstanceOf: ActivityDefinition
+Description: "Service Serum Kalium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
@@ -25,5 +26,5 @@ Usage: #example
 * code = http://loinc.org#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
-* observationRequirement = Reference(ObservationDefinition/example-input-observation-reason-for-ordering)
+* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
 * observationResultRequirement = Reference(ObservationDefinition/example-observation-serum-potassium)

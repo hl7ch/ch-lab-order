@@ -19,7 +19,7 @@ Usage: #example
 * topic = http://snomed.info/sct#166312007 "Blood chemistry"
 * kind = #ServiceRequest
 * code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* observationRequirement = Reference(ObservationDefinition/example-input-observation-reason-for-ordering)
+* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
 * observationResultRequirement[0] = Reference(ObservationDefinition/example-observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/example-observation-serum-potassium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/example-observation-serum-chloride)
