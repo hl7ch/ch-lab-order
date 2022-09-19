@@ -16,7 +16,7 @@ Usage: #definition
 // * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 // * entry[=].resource = Inline-Instance-for-3-gyn-2
 // * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPap"
-// * entry[=].resource = MarcApgar
+// * entry[=].resource = Reference(Practitioner/HansHauser)
 // * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
 // * entry[=].resource = Inline-Instance-for-3-gyn-3
 // * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis"

@@ -19,7 +19,7 @@ Usage: #definition
 * status = #final
 * type = SCT#721965002 "Laboratory order (record artifact)"
 * category = SCT#721963009 "Order (record artifact)"
-* subject = Reference(MarinaRubella)
+* subject = Reference(Patient/MarinaRubella)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPapGruppenpraxis)
 * title = "Referral 3-gyn"

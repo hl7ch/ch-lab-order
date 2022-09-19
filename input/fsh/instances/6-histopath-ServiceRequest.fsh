@@ -19,9 +19,9 @@ Usage: #definition
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(KlebsiellaKeller)
+* subject = Reference(Patient/KlebsiellaKeller)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = SCT#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Skin) "Skin specimen"
+* specimen[0] = Reference(Specimen/Skin) "Skin specimen"

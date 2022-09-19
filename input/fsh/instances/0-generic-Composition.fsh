@@ -1,4 +1,4 @@
-Instance: 0-generic-of-ChOrfComposition
+Instance: 0-generic-Composition
 InstanceOf: ChOrfComposition
 Title: "0-generic"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
@@ -23,13 +23,13 @@ Usage: #definition
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(HansGuggindieluft)
+* extension[=].valueReference = Reference(Patient/HansGuggindieluft)
 
 * status = #final
 * title = "Laborauftrag"
 * category = SCT#721963009 "Order (record artifact)"
 * type = SCT#721965002 "Laboratory order (record artifact)"
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/HansGuggindieluft)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
 
@@ -37,6 +37,6 @@ Usage: #definition
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 0-generic\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(0-generic-of-ChOrfQuestionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(0-generic-of-ChOrfQuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(0-generic-of-ChOrfServiceRequest)
+* section[orderReferral].entry[Questionnaire] = Reference(0-generic-flat-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(0-generic-flat-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(0-generic-ServiceRequest)

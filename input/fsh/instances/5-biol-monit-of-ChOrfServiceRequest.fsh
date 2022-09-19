@@ -22,10 +22,10 @@ Usage: #definition
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(BeatBorer)
+* subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = SCT#409967009
 * reasonCode.text = "Toxicology (qualifier value)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood)
-* specimen[+] = Reference(Urin)
+* specimen[0] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Urin)

@@ -17,12 +17,12 @@ Usage: #definition
 * code.coding[+] = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
 
 * priority = #routine
-* subject = Reference(MarinaRubella)
+* subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PeterPapGruppenpraxis)
 * reasonCode = SCT#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Cervix-swab)
-* specimen[+] = Reference(Blood)
-* specimen[+] = Reference(Serum)
-* specimen[+] = Reference(Urin)
+* specimen[0] = Reference(Specimen/Cervix-swab)
+* specimen[+] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Serum)
+* specimen[+] = Reference(Specimen/Urin)

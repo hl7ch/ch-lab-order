@@ -7,8 +7,8 @@ Usage: #definition
 * identifier.value = "A123456780"
 * status = #active
 * type = V3ActCode#EHCPOL "extended healthcare"
-* subscriber = Reference(FranzMuster)
-* beneficiary = Reference(FranzMuster)
+* subscriber = Reference(Patient/FranzMuster)
+* beneficiary = Reference(Patient/FranzMuster)
 * period.end = "2012-03-17"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"

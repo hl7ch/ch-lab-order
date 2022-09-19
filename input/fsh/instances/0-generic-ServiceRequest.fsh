@@ -1,4 +1,4 @@
-Instance: 0-generic-of-ChOrfServiceRequest
+Instance: 0-generic-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 0-generic"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
@@ -31,10 +31,10 @@ Usage: #definition
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = SCT#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Serum) "Serum specimen"
-* specimen[+] = Reference(Blood)
+* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+* specimen[+] = Reference(Specimen/Blood)

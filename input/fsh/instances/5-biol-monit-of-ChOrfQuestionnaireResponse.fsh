@@ -103,7 +103,7 @@ Usage: #definition
 * item[=].item[=].text = "Empfangende Organisation"
 * item[=].item[=].item[0].linkId = "receiver.organization.name"
 * item[=].item[=].item[=].text = "Name der Organisation"
-* item[=].item[=].item[=].answer.valueString = "LaborPipette"
+* item[=].item[=].item[=].answer.valueString = "Organization/LaborPipette"
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
 * item[=].item[=].item[=].answer[0].valueString = "Laborstrasse 23"

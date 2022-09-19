@@ -17,11 +17,11 @@ Usage: #definition
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(EmilKummer)
+* subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = SCT#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Throat-swab)
-* specimen[+] = Reference(Blood)
-* specimen[+] = Reference(Serum)
+* specimen[0] = Reference(Specimen/Throat-swab)
+* specimen[+] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Serum)

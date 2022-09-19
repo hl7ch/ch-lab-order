@@ -8,5 +8,5 @@ Usage: #definition
 * identifier.system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier.value = "80756015090002640000"
 * status = #active
-* beneficiary = Reference(FranzMuster)
-* payor = Reference(Sanitas)
+* beneficiary = Reference(Patient/FranzMuster)
+* payor = Reference(Organization/Sanitas)

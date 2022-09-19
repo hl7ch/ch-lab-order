@@ -7,7 +7,7 @@ Usage: #definition
 * accessionIdentifier.value = "4e99a-12345-dd888"
 * status = #available
 * type = SCT#396353007 "Specimen from skin obtained by elliptical excision (specimen)"
-* subject = Reference(MarinaRubella)
+* subject = Reference(Patient/MarinaRubella)
 * collection.collector = Reference(MarcMustermannArztpraxis)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite.coding.system = "http://snomed.info/sct"

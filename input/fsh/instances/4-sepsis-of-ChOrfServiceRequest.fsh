@@ -22,11 +22,11 @@ Usage: #definition
 * status = #active
 * intent = #original-order
 * priority = #urgent
-* subject = Reference(KlebsiellaKeller)
+* subject = Reference(Patient/KlebsiellaKeller)
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = SCT#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood-bactec-plus)
-* specimen[+] = Reference(Blood)
-* specimen[+] = Reference(Urin)
+* specimen[0] = Reference(Specimen/Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Urin)

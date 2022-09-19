@@ -2,6 +2,8 @@ Instance: 6-histopath-flat-Questionnaire
 InstanceOf: Questionnaire
 Description: "Example for Questionnaire of Histopathology Examination (flat version)"
 Usage: #example
+* meta.versionId = "1"
+* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -10,13 +12,22 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueId = "Bundle"
+* extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+* extension[=].extension[=].valueCoding.code = #patient
 * extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Bundle
+* extension[=].extension[=].valueCode = #Patient
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
-* extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
+* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
+
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order|1.0.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
@@ -40,7 +51,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat-Questionnaire"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form"
+* title = "Lab Order Form 6-histopath assembled from modular version"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
@@ -56,7 +67,9 @@ Usage: #example
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
-* item[=].item[0].linkId = "order.placerOrderIdentifier"  // [0][0]
+
+// --- order.placer item[0][0] ----------
+* item[=].item[0].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
@@ -67,7 +80,7 @@ Usage: #example
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
 
-
+// --- order.filler item[0][2] ----------
 * item[=].item[+].linkId = "order.fillerOrderIdentifier" // [0][2]
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:fillerOrderIdentifier.value"
 * item[=].item[=].text = "Auftragsnummer des Auftragsempfängers"
@@ -78,12 +91,16 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:fillerOrderIdentifier.system"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftragsempfängers"
 * item[=].item[=].type = #string
+
+// --- order.precedentDocument item[0][4] ----------
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
 * item[=].item[=].extension.valueBoolean = true
 * item[=].item[=].linkId = "order.precedentDocumentIdentifier" // [0][4]
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:precedentDocument"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].type = #string
+
+// --- order.precedentDocument notificationContactDocument[0][5] ----------
 * item[=].item[+].linkId = "order.notificationContactDocument"  // [0][5]
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:urgentNoficationContactForThisDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
@@ -116,6 +133,8 @@ Usage: #example
 * item[=].item[=].item.item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.telecom.value"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
+
+// --- order.precedentDocument notificationContactDocumentResponse[0][6] ----------
 * item[=].item[+].linkId = "order.notificationContactDocumentResponse"  // [0][6]
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:urgentNoficationContactForTheResponseToThisDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
@@ -149,7 +168,7 @@ Usage: #example
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-// --- order priority ---
+// --- order priority item[0][7] ---
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
@@ -159,7 +178,7 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
 * item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
-// --- receiver ----
+// --- receiver item[1]----
 // ######################
 * item[+].linkId = "receiver"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"

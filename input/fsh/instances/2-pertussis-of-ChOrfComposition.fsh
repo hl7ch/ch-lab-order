@@ -19,13 +19,13 @@ Usage: #definition
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(MarcMustermannArztpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(EmilKummer)
+* extension[=].valueReference = Reference(Patient/EmilKummer)
 
 
 * status = #final
 * type = SCT#721965002 "Laboratory order (record artifact)"
 * category = SCT#721963009 "Order (record artifact)"
-* subject = Reference(EmilKummer)
+* subject = Reference(Patient/EmilKummer)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPrestoGruppenpraxis)
 * title = "Referral Pertussis"

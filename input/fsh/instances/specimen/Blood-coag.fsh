@@ -7,10 +7,10 @@ Usage: #definition
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
 * type = SCT#119297000 "Blood sample"
-* subject = Reference(FranzMuster)
+* subject = Reference(Patient/FranzMuster)
 * receivedTime = "2020-08-16T16:40:17Z"
-* request = Reference(Lab)
-* collection.collector = Reference(MarcMustermann)
+// * request = Reference(Lab) Why the specimen was collected
+* collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
 * processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated

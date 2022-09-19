@@ -74,7 +74,6 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].answer.valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
 
 // ---------- Receiver item[1] ----------
 // ################################################
@@ -524,10 +523,10 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[=].text = "Datum und Zeit, wann der Termin bevorzugt geplant werden soll"
 * item[=].item[=].item[0].linkId = "appointment.requestedPeriod.start"
 * item[=].item[=].item[=].text = "Von"
-* item[=].item[=].item[=].answer.valueDateTime = "2013-06-08T09:57:34.2112Z"  // Answer value must be of type dateTime
+* item[=].item[=].item[=].answer.valueDateTime = "2022-08-31T09:57:34.2112Z"
 * item[=].item[=].item[+].linkId = "appointment.requestedPeriod.end"
 * item[=].item[=].item[=].text = "Bis"
-* item[=].item[=].item[=].answer.valueDateTime = "2013-06-08T09:57:34.2112Z"  // Answer value must be of type dateTime
+* item[=].item[=].item[=].answer.valueDateTime = "2022-08-08T09:57:34.2112Z"
 * item[=].item[+].linkId = "appointment.status"
 * item[=].item[=].text = "Status"
 * item[=].item[=].answer.valueCoding = http://hl7.org/fhir/appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"

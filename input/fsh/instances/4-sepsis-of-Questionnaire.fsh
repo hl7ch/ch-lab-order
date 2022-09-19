@@ -13,19 +13,28 @@ Usage: #definition
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
-* extension[+].extension[0].url = "name"
-* extension[=].extension[=].valueId = "Bundle"
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+* extension[=].extension[=].valueCoding.code = #patient
 * extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Bundle
+* extension[=].extension[=].valueCode = #Patient
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
-* extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
-* extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
+
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis"
 
 // ###############  begin of general part  ########################################
 * version = "0.9.1"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example"
+* title = "Lab Order Form Example 4-sepsis"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
