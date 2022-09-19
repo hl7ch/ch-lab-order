@@ -184,11 +184,11 @@ Usage: #definition
 
 *  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 // * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|2.0.0"
-* item[=].item[0].linkId = "Potassium-serum"
+* item[=].item[0].linkId = "potassium-serum"
 * item[=].item[=].text = "Unable to resolve 'appointment' sub-questionnaire"
 * item[=].item[=].type = #display
 
-* item[=].item[+].linkId = "Panel-blood-electrolyte"
+* item[=].item[+].linkId = "panel-blood-electrolyte"
 * item[=].item[=].text = "Unable to resolve 'appointment' sub-questionnaire"
 * item[=].item[=].type = #display
 

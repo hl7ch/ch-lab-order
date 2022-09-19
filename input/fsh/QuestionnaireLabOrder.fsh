@@ -917,20 +917,27 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 */
 
 
-//  /*----------- 1. Wahl Plan Definition             
-//  */
-//  * item[+].linkId = "requestedService"
-//  * item[=].text = "Angeforderte Leistung"
-//  * item[=].type = #group
-//  * item[=].required = true
-//  
-//  * item[=].item[+].linkId = "requestedService.service"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.category.coding"
-//  * item[=].item[=].text = "Leistung"                 
-//  * item[=].item[=].required = true
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-requested-service"
-//  
+//  -------- 1. Wahl Plan Definition ----------------
+// Als erstes wählt der Author des Laborauftrages den gewünschten        
+// Service. Hier als Beispiel: Potassium und Electrolyt Panel
+
+* item[+].linkId = "LabService"
+* item[=].text = "Laboratory Service"
+* item[=].type = #group
+* item[=].required = true
+
+*  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|2.0.0"
+* item[=].item[0].linkId = "potassium-serum"
+* item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
+* item[=].item[=].type = #display
+
+* item[=].item[+].linkId = "panel-blood-electrolyte"
+* item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
+* item[=].item[=].type = #display
+
+
+
 //  
 //  /*-----------  2. Wahl Composition, Catalog Header
 //  */
