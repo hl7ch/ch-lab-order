@@ -32,10 +32,10 @@ Description: "Example for Questionnaire"
 * url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/QuestionnaireLabOrder-form-modular"
 * name = "QuestionnaireLabOrder"
 * title = "Questionnaire Lab Order"
-* derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
+// * derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
 * status = #active
 * subjectType = #Patient
-* date = "2021-02-24"
+* date = "2022-09-09"
 * publisher = "HL7 Switzerland"
 
 // ---------- order (Auftrag) ----------
@@ -45,36 +45,11 @@ Description: "Example for Questionnaire"
 * item[=].type = #group
 * item[=].required = true
 
-/* ----------- not depicted in questionnaire; fix values are defined in composition resource
-
-* item[=].item[+].linkId = "order.title"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition#Composition.title"
-* item[=].item[=].text = "Titel"
-* item[=].item[=].type = #string
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].initial.valueString = "Radiologieauftrag"
-
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition#Composition.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = DocumentEntryTypeCode
-* item[=].item[=].initial.valueCoding = DocumentEntryTypeCode#2161000195103 // Bildgebungsauftrag
-
-* item[=].item[+].linkId = "order.category"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-composition#Composition.category"
-* item[=].item[=].text = "Kategorie"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = DocumentEntryClassCode
-* item[=].item[=].initial.valueCoding = DocumentEntryClassCode#721963009 // Untersuchungsauftrag
-
------------
-*/
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order|2.0.0"
+* item[=].item.linkId = "order.1"
+* item[=].item.text = "Unable to resolve 'order' sub-questionnaire"
+* item[=].item.type = #display
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
