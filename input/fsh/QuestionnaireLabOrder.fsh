@@ -1,4 +1,4 @@
-Instance: QuestionnaireLabOrder
+Instance: QuestionnaireLabOrder-form-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order"
 Description: "Example for Questionnaire"
@@ -6,22 +6,30 @@ Description: "Example for Questionnaire"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
+* meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
 
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-* extension[0].valueCanonical = "http://fhir.ch/ig/ch-lab-order/StructureMap/RadOrderQrToBundle"
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[=].valueCode = #assemble-root
 
-* extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
-* extension[1].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 
-* extension[2].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* extension[2].extension[0].url = "name" 
-* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#patient
-* extension[2].extension[1].url = "type"
-* extension[2].extension[1].valueCode = #Bundle
-* extension[2].extension[2].url = "description"
-* extension[2].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+* extension[=].extension[=].valueCoding.code = #patient
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Patient
 
-* url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/QuestionnaireLabOrder"
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Practitioner
+* extension[=].extension[+].url = "description"
+* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
+
+* url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/QuestionnaireLabOrder-form-modular"
 * name = "QuestionnaireLabOrder"
 * title = "Questionnaire Lab Order"
 * derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"

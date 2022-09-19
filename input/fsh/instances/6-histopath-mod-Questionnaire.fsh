@@ -23,11 +23,18 @@ Usage: #definition
 
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
-* extension[=].extension[0].valueId = "Bundle"
-* extension[=].extension[1].url = "type"
-* extension[=].extension[1].valueCode = #Bundle
-* extension[=].extension[2].url = "description"
-* extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
+* extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+* extension[=].extension[=].valueCoding.code = #patient
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Patient
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Practitioner
+* extension[=].extension[+].url = "description"
+* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
 * name = "LabOrderForm"
