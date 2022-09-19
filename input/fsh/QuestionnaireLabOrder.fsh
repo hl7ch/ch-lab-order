@@ -906,8 +906,14 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #string
 
 
+// ############ We order the one ore more Tests, Test-Panels, as Lab Services, 
+// we choose the
+// Composition (Catalog Header) for each Test/Panel Order, we choose the Specimen
+// Definition 
+// ########################################################################
+
 /* ============ Kerninhaltes der Lab-Order Form ==============================
-CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidugnen. Hier sind einige Inhalte beispielhaft ausgefüllt:
+CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
 1. PlanDefinition
   2. Referenz zu Composition (Catalog Header) auswählen
     3. Referenz zu ActivityDefinition auswählen
@@ -916,26 +922,28 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 */
 
-
-//  -------- 1. Wahl Plan Definition ----------------
+//  -------- 1. Wahl Lab Servic (Plan Definition) ----------------
 // Als erstes wählt der Author des Laborauftrages den gewünschten        
 // Service. Hier als Beispiel: Potassium und Electrolyt Panel
 
 * item[+].linkId = "LabService"
-* item[=].text = "Laboratory Service"
+* item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+* item[=].text = "Laboratory Service (PlanDefinition)"
 * item[=].type = #group
 * item[=].required = true
 
 *  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-// * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|2.0.0"
-* item[=].item[0].linkId = "potassium-serum"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/Plandefinition|1.0"
+
+* item[=].item[0].linkId = "pipette-potassium-serum"
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 
-* item[=].item[+].linkId = "panel-blood-electrolyte"
+* item[=].item[+].linkId = "pipette-panel-blood-electrolyte"
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 
+// further plan definitions
 
 
 //  

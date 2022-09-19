@@ -1,5 +1,6 @@
-Instance: panel-blood-electrolyte
+Instance: pipette-panel-blood-electrolyte
 InstanceOf: PlanDefinition
+Description: "LabService of Pipette Lab for Electrolyte Panel"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US

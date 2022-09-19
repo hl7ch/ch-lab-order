@@ -1,10 +1,11 @@
-Instance: Potassium-serum
+Instance: pipette-potassium-serum
 InstanceOf: PlanDefinition
+Description: "Lab Service of Pipette Lab for Serum Potassium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* extension[=].valueReference = Reference(Composition/Gantenbein-Catalog-Header)
+* extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
 * extension[=].valueCodeableConcept = http://www.ama-assn.org/go/cpt#CPTfakecode "Potassium, serum"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
