@@ -2,7 +2,11 @@ Instance: QuestionnaireLabOrder-form-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order"
 Description: "Example for Questionnaire"
+Usage: #definition
+* id = "QuestionnaireLabOrder-form-modular"
 
+* meta.versionId = "1"
+* meta.lastUpdated = "2012-09-01T20:17:53.340+00:00"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -13,6 +17,9 @@ Description: "Example for Questionnaire"
 
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
 
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
@@ -29,7 +36,7 @@ Description: "Example for Questionnaire"
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/QuestionnaireLabOrder-form-modular"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-modular"
 * name = "QuestionnaireLabOrder"
 * title = "Questionnaire Lab Order"
 // * derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
