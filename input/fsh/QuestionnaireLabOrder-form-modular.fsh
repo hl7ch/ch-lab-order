@@ -267,48 +267,48 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].type = #group
 * item[=].required = true
 
-*  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/Plandefinition|1.0"
+//*  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+//* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/Plandefinition|1.0"
 
 * item[=].item[0].linkId = "potassium-serum"
-* item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
-* item[=].item[=].type = #display
+* item[=].item[=].text = "Kalium im Serum"
+* item[=].item[=].type = #boolean
 
 * item[=].item[+].linkId = "panel-blood-electrolyte-module"
-* item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
-* item[=].item[=].type = #display
+* item[=].item[=].text = "Elektrolyt Panel im Blut"
+* item[=].item[=].type = #boolean
 
 * item[=].item[+].linkId = "vitamin-d-serum"
-* item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
-* item[=].item[=].type = #display
+* item[=].item[=].text = "Vitamin D im Serum"
+* item[=].item[=].type = #boolean
 // further plan definitions
 
 
-Instance: panel-blood-electrolyte-module
-InstanceOf: Questionnaire
-Title: "Module Questionnaire Panel Blood Electrolyte"
-Description: "Subquestionnaire Panel Blood Electrolyte"
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
-* extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order"
-* name = "ModuleQuestionnaireOrderForm"
-* title = "Module Questionnaire Order Form"
-* status = #active
-* date = "2022-05-04"
-* publisher = "HL7 Switzerland"
-
-* item[+].linkId = "LabService-potassium-serum"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/ch-orf-servicerequest#..."
-* item[=].text = ""
-* item[=].type = #display
-
-* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
-* item[=].extension.valueBoolean = true
-* item[=].linkId = "order.placerOrderIdentifierDomain"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#..."
-* item[=].text = "."
-* item[=].type = #display
-
+// Instance: panel-blood-electrolyte-module
+// InstanceOf: Questionnaire
+// Title: "Module Questionnaire Panel Blood Electrolyte"
+// Description: "Subquestionnaire Panel Blood Electrolyte"
+// * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/// sdc-questionnaire-assemble-expectation"
+// * extension[=].valueCode = #assemble-child
+// * url = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order"
+// * name = "ModuleQuestionnaireOrderForm"
+// * title = "Module Questionnaire Order Form"
+// * status = #active
+// * date = "2022-05-04"
+// * publisher = "HL7 Switzerland"
+// 
+// * item[+].linkId = "LabService-potassium-serum"
+// * item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/// ch-orf-servicerequest#..."
+// * item[=].text = ""
+// * item[=].type = #display
+// 
+// * item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+// * item[=].extension.valueBoolean = true
+// * item[=].linkId = "order.placerOrderIdentifierDomain"
+// * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/// ch-orf-servicerequest#..."
+// * item[=].text = "."
+// * item[=].type = #display
+// 
 // // -- 2. Wahl Labor-Compendium: Composition, ext-catalog-reference, durch orf-receiver gegeben
 // Instance: catalog-header-module
 // InstanceOf: Questionnaire
