@@ -239,10 +239,10 @@ Usage: #definition
 * item[=].item[=].type = #string
 
 // ############################################################
-// ########### Lab Service Part from Catalog ##################
+// ########### Lab Service from Catalog #######################
 // ############################################################
-// ############ We order the one ore more Tests, Test-Panels, as Lab Services, 
-// we choose the
+// To order one ore more Tests or Test-Panels as Lab Services, 
+// we choose the wanted PlanDefinition, here potassium, panel electrolytes or 
 // Composition (Catalog Header) for each Test/Panel Order, we choose the Specimen
 // Definition 
 // ########################################################################
@@ -274,11 +274,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 
-* item[=].item[+].linkId = "panel-blood-electrolyte"
+* item[=].item[+].linkId = "panel-blood-electrolyte-module"
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 
-* item[=].item[+].linkId = "pipette-vitamin-d-serum"
+* item[=].item[+].linkId = "vitamin-d-serum"
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 // further plan definitions
@@ -298,413 +298,35 @@ Description: "Subquestionnaire Panel Blood Electrolyte"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "LabService-potassium-serum"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
-* item[=].text = "Auftragsnummer des Auftraggebers"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/ch-orf-servicerequest#..."
+* item[=].text = ""
 * item[=].type = #display
 
 * item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
 * item[=].extension.valueBoolean = true
 * item[=].linkId = "order.placerOrderIdentifierDomain"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.system"
-* item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#..."
+* item[=].text = "."
 * item[=].type = #display
 
+// // -- 2. Wahl Labor-Compendium: Composition, ext-catalog-reference, durch orf-receiver gegeben
+// Instance: catalog-header-module
+// InstanceOf: Questionnaire
+// Title: "Wahl Labor Kompendium"
+// Description: "Subquestionnaire Catalog"
+// 
+// // -- 3. ext-billing-code: (hier nur AL als xlsx Datei) in PD hinterlegt
+// Instance: billing-code-module
+// InstanceOf: Questionnaire
+// Title: "Wahl Abrechnungscode aus der Analysenliste (xlsx-file)"
+// Description: "Subquestionnaire Billing Code"
+// 
+// // -- 4. Wahl SpecimenDefinition Referenz
+// Instance: SpecimenDefinition-module
+// InstanceOf: Questionnaire
+// Title: "Wahl der Proben Definition"
+// Description: "Subquestionnair SpecimenDefinition"
+// 
+// // --5. Activity Definition, ist aber eigentlich
 
 
-//  
-//  /*-----------  2. Wahl Composition, Catalog Header
-//  */
-//  * item[+].linkId = "reason"
-//  * item[=].text = "Klinische Fragestellung"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "reason.question"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.reasonCode.text"
-//  * item[=].item[=].text = "Fragestellung"                
-//  * item[=].item[=].type = #string
-//  * item[=].item[=].repeats = true
-//  
-//  
-//  /*-------------- 3. Aus der PlanDefinition ergibt sich die ActivityDefinition
-//      
-//  */
-//  * item[+].linkId = "imagingService"
-//  * item[=].text = "Bildgebendes Verfahren"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "imagingService.type"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.code.coding:RdlxModType"
-//  * item[=].item[=].text = "Art"                 
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-modality-type"
-//  
-//  
-//  /*------------ 4. Die Activity Definition lässt die Auswahl der 
-//                    ObservationDefinition und der SpecimenDefinition zu
-//  */
-//  * item[+].linkId = "orderDetail"
-//  * item[=].text = "Weitere Angaben zur Bildgebung"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "orderDetail.imagingRegion"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.orderDetail:imagingRegion"
-//  * item[=].item[=].text = "Region"
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].repeats = true
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-imaging-region"
-//  
-//  * item[=].item[+].linkId = "orderDetail.imagingFocus"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.bodySite"
-//  * item[=].item[=].text = "Fokus"
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].repeats = true
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-imaging-focus"
-//  
-//  * item[=].item[+].linkId = "orderDetail.laterality"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.orderDetail:laterality"
-//  * item[=].item[=].text = "Seitenangabe"
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-laterality"
-//  
-//  * item[=].item[+].linkId = "orderDetail.viewType"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.orderDetail:viewType"
-//  * item[=].item[=].text = "Ansicht"
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].repeats = true
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-view-type"
-//  
-//  * item[=].item[+].linkId = "orderDetail.maneuverType"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.orderDetail:maneuverType"
-//  * item[=].item[=].text = "Manöver"
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].repeats = true
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-maneuver-type"
-//  
-//  * item[=].item[+].linkId = "orderDetail.guidanceForAction"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.orderDetail:guidanceForAction"
-//  * item[=].item[=].text = "Handlungsanleitung"
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].enableWhen[+].question = "requestedService.service"
-//  * item[=].item[=].enableWhen[=].operator = #=
-//  * item[=].item[=].enableWhen[=].answerCoding = ChRadOrderRequestedService#RadIntervention
-//  * item[=].item[=].enableWhen[+].question = "requestedService.service"
-//  * item[=].item[=].enableWhen[=].operator = #=
-//  * item[=].item[=].enableWhen[=].answerCoding = ChRadOrderRequestedService#ImagingRequestWithIntervention
-//  * item[=].item[=].enableBehavior = #any
-//  * item[=].item[=].repeats = true
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-guidance-for-action"
-//  
-//  
-//  /*----------------------------------------------------------------------
-//  Gewünschter Radiologe: Noch offen, wie die Auswahlliste gemacht werden soll
-//  */
-//  * item[+].linkId = "desiredRadiologist"
-//  * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.performer"
-//  * item[=].text = "Gewünschter Radiologe für die Befundung / für die Intervention"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "desiredRadiologist.familyName"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.family"
-//  * item[=].item[=].text = "Name"
-//  * item[=].item[=].type = #string
-//  
-//  * item[=].item[+].linkId = "desiredRadiologist.givenName"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.given"
-//  * item[=].item[=].text = "Vorname"
-//  * item[=].item[=].type = #string
-//  
-//  
-//  /*----------------------------------------------------------------------
-//  Darstellung der Diagnosen und Befunde
-//  */
-//  * item[+].linkId = "diagnosisList"
-//  * item[=].text = "Diagnosen und Befunde"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"  
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.reasonReference"
-//  * item[=].item[=].text = "Hauptdiagnose"
-//  * item[=].item[=].type = #string
-//  * item[=].item[=].repeats = true
-//  
-//  * item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"  
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:diagnosis"
-//  * item[=].item[=].text = "Nebendiagnose"
-//  * item[=].item[=].type = #string
-//  * item[=].item[=].repeats = true
-//  
-//  * item[=].item[+].linkId = "diagnosisList.bodyHeight"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:bodyHeight"
-//  * item[=].item[=].text = "Grösse (cm)"   
-//  * item[=].item[=].type = #quantity
-//  * item[=].item[=].repeats = false
-//  
-//  * item[=].item[+].linkId = "diagnosisList.bodyWeight"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:bodyWeight"
-//  * item[=].item[=].text = "Gewicht (kg)"   
-//  * item[=].item[=].type = #quantity
-//  * item[=].item[=].repeats = false
-//  
-//  /*----------------------------------------------------------------------
-//  Caveats   
-//   */
-//  * item[+].linkId = "caveat" 
-//  * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:caveats" 
-//  * item[=].text = "Caveats"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "caveat.bloodCoagulation"   
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].text = "Beinträchtigte Blutgerinnung"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.INR" 
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.evidence.detail"
-//  * item[=].item[=].item[=].text = "INR"   
-//  * item[=].item[=].item[=].type = #group
-//  * item[=].item[=].item[=].enableWhen[+].question = "caveat.bloodCoagulation"
-//  * item[=].item[=].item[=].enableWhen[=].operator = #=
-//  * item[=].item[=].item[=].enableWhen[=].answerCoding = SCT#52101004
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.INR.quantity"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-INR-observation#Observation.valueQuantity"
-//  * item[=].item[=].item[=].item[=].text = "Wert (INR)"   
-//  * item[=].item[=].item[=].item[=].type = #quantity
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.INR.dateTime"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-INR-observation#Observation.effectiveDateTime"
-//  * item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
-//  * item[=].item[=].item[=].item[=].type = #dateTime
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.platelets"    
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.evidence.detail"    
-//  * item[=].item[=].item[=].text = "Thrombozyten"   
-//  * item[=].item[=].item[=].type = #group
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.platelets.quantity"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-platelets-observation#Observation.valueQuantity"
-//  * item[=].item[=].item[=].item[=].text = "Wert (10^3/µL)"   
-//  * item[=].item[=].item[=].item[=].type = #quantity
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.platelets.dateTime"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-platelets-observation#Observation.effectiveDateTime"
-//  * item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
-//  * item[=].item[=].item[=].item[=].type = #dateTime
-//  
-//  * item[=].item[+].linkId = "caveat.renalInsufficiency"    
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"   
-//  * item[=].item[=].text = "Niereninsuffizienz"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinineClearance" 
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.evidence.detail"
-//  * item[=].item[=].item[=].text = "Creatinin-Clearance"   
-//  * item[=].item[=].item[=].type = #group
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinineClearance.quantity"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-creatinineclearance-observation#Observation.valueQuantity"
-//  * item[=].item[=].item[=].item[=].text = "Wert (mL/min)"   
-//  * item[=].item[=].item[=].item[=].type = #quantity
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinineClearance.dateTime"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-creatinineclearance-observation#Observation.effectiveDateTime"
-//  * item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
-//  * item[=].item[=].item[=].item[=].type = #dateTime
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinine"    
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.evidence.detail"    
-//  * item[=].item[=].item[=].text = "Creatinin"   
-//  * item[=].item[=].item[=].type = #group
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinine.quantity"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-creatinine-observation#Observation.valueQuantity"
-//  * item[=].item[=].item[=].item[=].text = "Wert (µmol/L)"   
-//  * item[=].item[=].item[=].item[=].type = #quantity
-//  
-//  * item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinine.dateTime"
-//  * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-creatinine-observation#Observation.effectiveDateTime"
-//  * item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
-//  * item[=].item[=].item[=].item[=].type = #dateTime
-//  
-//  * item[=].item[+].linkId = "caveat.claustrophobia"    
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"   
-//  * item[=].item[=].text = "Klaustrophobie"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.bodyPiercing"     
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].text = "Körperpiercing"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.device" 
-//  * item[=].item[=].text = "Device (Herzschrittmacher, Herzklappenersatz, Insulinpumpe etc.)"     
-//  * item[=].item[=].type = #group
-//  * item[=].item[=].repeats = true
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.device.specifictype"
-//  * item[=].item[=].item[=].text = "Device"     
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#ch-lab-order-caveat-type"  
-//  * item[=].item[=].item[=].type = #choice
-//  * item[=].item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-device"
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.device.choice"  
-//  * item[=].item[=].item[=].text = "Choice"     
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].item[=].type = #choice
-//  * item[=].item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.hyperthyroidism"     
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].text = "Hyperthyreose"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.diabetes"    
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"   
-//  * item[=].item[=].text = "Diabetes mellitus"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.gravida"     
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].text = "Schwangerschaft"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.contrastMediaAllergy"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].text = "Kontrastmittelallergie"   
-//  * item[=].item[=].type = #choice
-//  * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[+].linkId = "caveat.drugPrescription" 
-//  * item[=].item[=].text = "Relevante Medikamente"     
-//  * item[=].item[=].type = #group
-//  * item[=].item[=].required = true
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.drugPrescription.metformin"     
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].item[=].text = "Metformin"   
-//  * item[=].item[=].item[=].type = #choice 
-//  * item[=].item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].item[=].required = true
-//  
-//  * item[=].item[=].item[+].linkId = "caveat.drugPrescription.betaBlocker"     
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-caveat-condition#Condition.code"  
-//  * item[=].item[=].item[=].text = "Betablocker"   
-//  * item[=].item[=].item[=].type = #choice 
-//  * item[=].item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-order-caveat-qualifier-value"
-//  * item[=].item[=].item[=].initial.valueCoding = SCT#373068000
-//  * item[=].item[=].item[=].required = true
-//  
-//  /* ---------------------------------------------------------------------------
-//  Vorherige Untersuchungsresultat:
-//  Angaben zu Reports, auf die verwiesen wird
-//  Angaben zu Bildern bzw. allfällige Vorbildern und Reports, auf die verwiesen wird  
-//  mittels ImagingStudy Resource (DICOM WADO) oder die mitgegeben werden in der Media Resource.
-//  */
-//  * item[+].linkId = "previousResults"
-//  * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo:previousImagingResults"
-//  * item[=].text = "Vorherige Untersuchungsresultate"
-//  * item[=].type = #group
-//  
-//  * item[=].item[+].linkId = "previousResults.attachment"  
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-media#Media.content.data"
-//  * item[=].item[=].text = "Daten"
-//  * item[=].item[=].type = #attachment
-//  * item[=].item[=].repeats = true
-//  
-//  * item[=].item[+].linkId = "previousResults.imagingStudy"
-//  * item[=].item[=].text = "Bilder (DICOM)"
-//  * item[=].item[=].type = #group
-//  * item[=].item[=].repeats = true
-//  
-//  /*
-//  The ImagingStudy’s DICOM Study Instance UID is encoded in the ImagingStudy.identifier element, 
-//  which is of the Identifier datatype. When encoding a DICOM UID in an Identifier datatype, 
-//  use the Identifier system of “urn:dicom:uid”, and prefix the UID value with “urn:oid:”. 
-//  Therefore, an ImagingStudy with DICOM Study Instance UID of 2.16.124.113543.1154777499.30246.19789.3503430046 
-//  is encoded as:
-//  
-//  	"identifier":{
-//  		"system":"urn:dicom:uid",
-//  		"value":"urn:oid:2.16.124.113543.1154777499.30246.19789.3503430046"
-//  	} 
-//  */
-//  
-//  * item[=].item[=].item[+].linkId = "previousResults.imagingStudy.StudyInstanceUid"  
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-imagingstudy#ImagingStudy.identifier"
-//  * item[=].item[=].item[=].text = "DICOM Study Instance UID"
-//  * item[=].item[=].item[=].type = #string
-//  
-//  /*
-//   The study accession number can also be encoded as an Identifier using the “ACSN” identifier type, as follows:
-//  
-//    "identifier":{
-//  		"type" : {
-//  			"coding" : [
-//  				{
-//  					"system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-//  					"code" : "ACSN"
-//  				}
-//  			]
-//  		},
-//  		"system":"http://ginormoushospital.org/accession",
-//  		"value":"GH334103"
-//  	} 
-//  */
-//  
-//  * item[=].item[=].item[+].linkId = "previousResults.imagingStudy.acsn"  
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-imagingstudy#ImagingStudy.identifier"
-//  * item[=].item[=].item[=].text = "ACSN"
-//  * item[=].item[=].item[=].type = #string
-//  
-//  /*
-//  DICOM Series Instance UID and SOP Instance UID use the id datatype, and are encoded directly. 
-//  For example, an image with SOP Instance UID of 2.16.124.113543.1154777499.30246.19789.3503430045.1.1 
-//  is encoded in ImagingStudy.series.instance.uid as “2.16.124.113543.1154777499.30246.19789.3503430045.1.1”. 
-//  */
-//  
-//  * item[=].item[=].item[+].linkId = "previousResults.imagingStudy.SeriesInstanceUid"  
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-imagingstudy#ImagingStudy.series.uid"
-//  * item[=].item[=].item[=].text = "DICOM Series Instance UID"
-//  * item[=].item[=].item[=].type = #string
-//  
-//  * item[=].item[=].item[+].linkId = "previousResults.imagingStudy.SopInstanceUid"  
-//  * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-imagingstudy#ImagingStudy.series.instance.uid"
-//  * item[=].item[=].item[=].text = "DICOM SOP Instance UID"
-//  * item[=].item[=].item[=].type = #string
-//  
-//  // -------- Service Request Notes ------
-//  * item[+].linkId = "note"
-//  * item[=].text = "Bemerkungen"
-//  * item[=].type = #group
-//  * item[=].repeats = true
-//  
-//  * item[=].item[+].linkId = "note.text"
-//  * item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.note.text"
-//  * item[=].item[=].text = "Kommentar" 
-//  * item[=].item[=].type = #string
-//  * item[=].item[=].required = true
