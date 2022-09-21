@@ -1,4 +1,4 @@
-Instance: pipette-panel-blood-electrolyte
+Instance: panel-blood-electrolyte
 InstanceOf: PlanDefinition
 Description: "LabService of Pipette Lab for Electrolyte Panel"
 Usage: #example

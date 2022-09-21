@@ -1,4 +1,4 @@
-Instance: pipette-potassium-serum
+Instance: potassium-serum
 InstanceOf: PlanDefinition
 Description: "Lab Service of Pipette Lab for Serum Potassium"
 Usage: #example

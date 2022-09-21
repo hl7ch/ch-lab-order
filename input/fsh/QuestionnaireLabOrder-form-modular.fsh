@@ -39,7 +39,6 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-modular"
 * name = "QuestionnaireLabOrder"
 * title = "Questionnaire Lab Order"
-// * derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
 * status = #active
 * subjectType = #Patient
 * date = "2022-09-09"
@@ -74,19 +73,7 @@ Usage: #definition
 * item[=].item.text = "Unable to resolve 'receiver' sub-questionnaire"
 * item[=].item.type = #display
 
-// ----------Initiator: Person/organization who initated this order / application ; e.g. spitex, retirement home etc. ----------
-* item[+].linkId = "initiator"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
-* item[=].text = "Initiant dieser Anmeldung"
-* item[=].type = #group
-
-* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-initiator|2.0.0"
-* item[=].item.linkId = "initiator.1"
-* item[=].item.text = "Unable to resolve 'intitiator' sub-questionnaire"
-* item[=].item.type = #display
-
-// ---------- Patient: The principle target of a particular Form Content is one patient ----------
+// ---- Patient: The principle target of a particular Form Content is one patient ------
 * item[+].linkId = "patient"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.subject"
 * item[=].text = "Patient"
@@ -105,6 +92,20 @@ Usage: #definition
 * item[=].item.linkId = "patient.1"
 * item[=].item.text = "Unable to resolve 'patient' sub-questionnaire"
 * item[=].item.type = #display
+
+// ----------Initiator: Person/organization who initated this order / application ; e.g. spitex, retirement home etc. ----------
+* item[+].linkId = "initiator"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
+* item[=].text = "Initiant dieser Anmeldung"
+* item[=].type = #group
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-initiator|2.0.0"
+* item[=].item.linkId = "initiator.1"
+* item[=].item.text = "Unable to resolve 'intitiator' sub-questionnaire"
+* item[=].item.type = #display
+
+
 
 // ---------- Encounter Class (Ambulant / Satinär / Notfall) ----------
 * item[+].linkId = "requestedEncounter"
@@ -258,7 +259,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 //  -------- 1. Wahl Lab Servic (Plan Definition) ----------------
 // Als erstes wählt der Author des Laborauftrages den gewünschten        
-// Service. Hier als Beispiel: Potassium und Electrolyt Panel
+// Service. Hier als Beispiel: Potassium, Electrolyt Panel und Vitamin-D
 
 * item[+].linkId = "LabService"
 * item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -269,15 +270,45 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 *  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/Plandefinition|1.0"
 
-* item[=].item[0].linkId = "pipette-potassium-serum"
+* item[=].item[0].linkId = "potassium-serum"
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 
-* item[=].item[+].linkId = "pipette-panel-blood-electrolyte"
+* item[=].item[+].linkId = "panel-blood-electrolyte"
 * item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
 * item[=].item[=].type = #display
 
+* item[=].item[+].linkId = "pipette-vitamin-d-serum"
+* item[=].item[=].text = "Unable to resolve 'plandefinition' sub-questionnaire"
+* item[=].item[=].type = #display
 // further plan definitions
+
+
+Instance: panel-blood-electrolyte-module
+InstanceOf: Questionnaire
+Title: "Module Questionnaire Panel Blood Electrolyte"
+Description: "Subquestionnaire Panel Blood Electrolyte"
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[=].valueCode = #assemble-child
+* url = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order"
+* name = "ModuleQuestionnaireOrderForm"
+* title = "Module Questionnaire Order Form"
+* status = #active
+* date = "2022-05-04"
+* publisher = "HL7 Switzerland"
+
+* item[+].linkId = "LabService-potassium-serum"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
+* item[=].text = "Auftragsnummer des Auftraggebers"
+* item[=].type = #display
+
+* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+* item[=].extension.valueBoolean = true
+* item[=].linkId = "order.placerOrderIdentifierDomain"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.system"
+* item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
+* item[=].type = #display
+
 
 
 //  
