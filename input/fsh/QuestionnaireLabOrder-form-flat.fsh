@@ -273,20 +273,25 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 // -- Choose Serum Potassium ---
 * item[=].item[0].linkId = "potassium-serum"
 * item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].text = "Kalium im Serum"
+* item[=].item[=].text = "Kalium im Serum oder Plasma"
 * item[=].item[=].type = #boolean
-
 
 // -- Choose Panel Electrolyte ---
 * item[=].item[+].linkId = "panel-blood-electrolyte"
 * item[=].item[=].definition = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].text = "Elektrolyt Panel im Blut"
+* item[=].item[=].text = "Elektrolyt Panel im Serum oder Plasma"
+* item[=].item[=].type = #boolean
+
+// -- Choose Creatinine Serum ---
+* item[=].item[+].linkId = "creatinine-serum"
+* item[=].item[=].definition = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].text = "Creatinin im Serum oder Plasma"
 * item[=].item[=].type = #boolean
 
 // -- Choose Serum Vitamin D ---
 * item[=].item[+].linkId = "vitamin-d-serum"
 * item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-* item[=].item[=].text = "Vitamin D im Serum"
+* item[=].item[=].text = "Vitamin D im Serum oder Plasma"
 * item[=].item[=].type = #boolean
 
 // further plan definitions
