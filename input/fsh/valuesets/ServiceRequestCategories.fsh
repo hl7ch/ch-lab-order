@@ -4,6 +4,7 @@ Title: "Service Request Categories for Questionnaires"
 Description: "ch-lab-order Service Request Categories"
 * ^version = "0.1.0"
 * ^status = #active
+* ^experimental = true
 * ^date = "2021-06-01T10:21:46+00:00"
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"

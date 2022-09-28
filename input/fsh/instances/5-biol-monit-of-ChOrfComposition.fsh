@@ -22,7 +22,7 @@ Usage: #definition
 * status = #final
 * type = SCT#721965002 "Laboratory order (record artifact)"
 * category = SCT#721963009 "Order (record artifact)"
-* subject = Reference(BeatBorer)
+* subject = Reference(Patient/BeatBorer)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(PauloPorcelliniSuva)
 * title = "Referral 5-biol-monit"

@@ -2,6 +2,7 @@ ValueSet: ChLabOrderLabSpecialities
 Id: ch-lab-order-labSpecialties
 Title: "Labor Spezialität"
 Description: "refers to https://wiki.ihe.net/index.php/1.3.6.1.4.1.19376.1.3.3.2.1, but without some errors"
+* ^experimental = true
 * LOINC#18717-9 "Blood bank studies (set)"
 * LOINC#18718-7 "Cell marker studies (set)"
 * LOINC#18719-5 "Chemistry studies (set)"
@@ -21,4 +22,4 @@ Description: "refers to https://wiki.ihe.net/index.php/1.3.6.1.4.1.19376.1.3.3.2
 // * LOINC#26436-6 "Laboratory studies (set)"
 * LOINC#26437-4 "Chemistry challenge studies (set)"
 * LOINC#26438-2 "Cytology studies (set)"
-
+* LOINC#27898-6 "Pathology studies (set)"

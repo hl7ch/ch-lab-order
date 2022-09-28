@@ -20,9 +20,10 @@ contact:
     system: url
     value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-orf: 1.0.0
-  ch.fhir.ig.ch-core: 2.0.0
-
+  ch.fhir.ig.ch-orf: current
+  ch.fhir.ig.ch-core: current
+  hl7.fhir.uv.order-catalog: 0.1.0 
+   
 pages:
   index.md:
     title: Home

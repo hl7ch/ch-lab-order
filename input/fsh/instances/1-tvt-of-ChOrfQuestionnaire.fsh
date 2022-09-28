@@ -9,25 +9,34 @@ Usage: #definition
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-* meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"
+* meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
-* extension[+].extension[0].url = "name"
-* extension[=].extension[=].valueId = "Bundle"
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+* extension[=].extension[=].valueCoding.code = #patient
 * extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Bundle
+* extension[=].extension[=].valueCode = #Patient
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
+* extension[=].extension[+].url = "type"
+* extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
-* extension[=].extension[=].valueString = "The Bundle that is to be used to pre-populate the form"
-* extension[=].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
+
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 
 // ###############  begin of general part  ##############################################################
 
 * version = "0.9.1"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example"
+* title = "Lab Order Form Example 1-tvt"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
@@ -108,11 +117,11 @@ Usage: #definition
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = REQUESTPRIORITY#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = REQUESTPRIORITY#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = REQUESTPRIORITY#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = REQUESTPRIORITY#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = RequestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -189,10 +198,10 @@ Usage: #definition
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = ADMINISTRATIVEGENDER#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = AdministrativeGender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = ADMINISTRATIVEGENDER#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = ADMINISTRATIVEGENDER#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
 
 // patient.maritalStatus
 
@@ -200,14 +209,14 @@ Usage: #definition
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = ECH-11-maritalstatus#9 "unbekannt"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#9 "unbekannt"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"

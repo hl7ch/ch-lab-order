@@ -4,9 +4,9 @@ Title: "laborder 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #definition
 * id = "5-biol-monit"
-* identifier[0].type = V2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
-* identifier[=].value = "123"
+* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
@@ -22,10 +22,10 @@ Usage: #definition
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(BeatBorer)
+* subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = SCT#409967009
 * reasonCode.text = "Toxicology (qualifier value)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood)
-* specimen[+] = Reference(Urin)
+* specimen[0] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Urin)

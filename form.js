@@ -7,7 +7,7 @@ var fhirQ = {
     "profile": [
       "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire",
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire",
-      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
     ]
   },
   "url": "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic",

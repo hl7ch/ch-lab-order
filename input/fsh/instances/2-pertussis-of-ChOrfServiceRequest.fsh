@@ -4,9 +4,9 @@ Title: "laborder 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #definition
 * id = "2-pertussis"
-* identifier[0].type = V2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
-* identifier[=].value = "123"
+* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
@@ -17,11 +17,11 @@ Usage: #definition
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(EmilKummer)
+* subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = SCT#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Throat-swab)
-* specimen[+] = Reference(Blood)
-* specimen[+] = Reference(Serum)
+* specimen[0] = Reference(Specimen/Throat-swab)
+* specimen[+] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Serum)

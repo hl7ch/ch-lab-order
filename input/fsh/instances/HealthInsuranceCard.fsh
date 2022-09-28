@@ -6,9 +6,9 @@ Usage: #definition
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active
-* type = V3-ActCode#EHCPOL "extended healthcare"
-* subscriber = Reference(FranzMuster)
-* beneficiary = Reference(FranzMuster)
+* type = V3ActCode#EHCPOL "extended healthcare"
+* subscriber = Reference(Patient/FranzMuster)
+* beneficiary = Reference(Patient/FranzMuster)
 * period.end = "2012-03-17"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"

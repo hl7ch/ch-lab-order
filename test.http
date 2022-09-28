@@ -1,0 +1,160 @@
+@host = http://test.ahdis.ch/matchbox/fhir 
+###@host = http://hapi.fhir.org/baseR4
+
+
+### ErikaMusterfrau
+PUT {{host}}/Patient/ErikaMusterfrau HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/patient/ErikaMusterfrau.xml
+
+### FranzMuster
+PUT {{host}}/Patient/FranzMuster HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/patient/FranzMuster.xml
+
+### ResponseReceiverErikaMusterfrau
+PUT {{host}}/Patient/ResponseReceiverErikaMusterfrau HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/patient/ResponseReceiverErikaMusterfrau.xml
+
+
+
+### Kantonsspital
+PUT {{host}}/Organization/Kantonsspital HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/organization/Kantonsspital.xml
+
+### PraxisSeeblick
+PUT {{host}}/Organization/PraxisSeeblick HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/organization/PraxisSeeblick.xml
+
+### ResponseReceiverPraxisSeeblick
+PUT {{host}}/Organization/ResponseReceiverPraxisSeeblick HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/organization/ResponseReceiverPraxisSeeblick.xml
+
+
+
+### HansRoentgen
+PUT {{host}}/Practitioner/HansRoentgen HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitioner/HansRoentgen.xml
+
+### MarcAgpar
+PUT {{host}}/Practitioner/MarcAgpar HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitioner/MarcAgpar.xml
+
+### NotificationContactHansRoentgen
+PUT {{host}}/Practitioner/NotificationContactHansRoentgen HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitioner/NotificationContactHansRoentgen.xml
+
+### NotificationContactSabineMeier
+PUT {{host}}/Practitioner/NotificationContactSabineMeier HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitioner/NotificationContactSabineMeier.xml
+
+### SabineMeier
+PUT {{host}}/Practitioner/SabineMeier HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitioner/SabineMeier.xml
+
+### StabiloBoss
+PUT {{host}}/Practitioner/StabiloBoss HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitioner/StabiloBoss.xml
+
+
+
+### HansRoentgenKantonsspital
+PUT {{host}}/PractitionerRole/HansRoentgenKantonsspital HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitionerrole/HansRoentgenKantonsspital.xml
+
+### NotificationContactHansRoentgen
+PUT {{host}}/PractitionerRole/NotificationContactHansRoentgen HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitionerrole/NotificationContactHansRoentgen.xml
+
+### NotificationContactSabineMeier
+PUT {{host}}/PractitionerRole/NotificationContactSabineMeier HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitionerrole/NotificationContactSabineMeier.xml
+
+### SabineMeierPraxisSeeblick
+PUT {{host}}/PractitionerRole/SabineMeierPraxisSeeblick HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitionerrole/SabineMeierPraxisSeeblick.xml
+
+### StabiloBossPraxisSeeblick
+PUT {{host}}/PractitionerRole/StabiloBossPraxisSeeblick HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/practitionerrole/StabiloBossPraxisSeeblick.xml
+
+
+
+### order-referral-form
+PUT {{host}}/ServiceRequest/order-referral-form HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/servicerequest/order-referral-form.xml
+
+
+
+### order-referral-form
+PUT {{host}}/Questionnaire/order-referral-form HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/questionnaire/order-referral-form.xml
+
+
+
+### order-referral-form
+PUT {{host}}/QuestionnaireResponse/order-referral-form HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/questionnaireresponse/order-referral-form.xml
+
+
+
+### order-referral-form
+PUT {{host}}/Composition/order-referral-form HTTP/1.1
+Content-Type: application/fhir+xml
+
+< input/examples/composition/order-referral-form.xml
+
+
+### $document order-referral-form
+GET {{host}}/Composition/order-referral-form/$document HTTP/1.1
+Content-Type: application/fhir+xml
+
+
+### Create modular questionnaire with $assemble operation
+### 1. Create FHS Questionnaires (modules)
+### 2. Upload IG on matchbox https://test.ahdis.ch/matchbox/#/igs
+### 3. Invoice $assemble operation on modular Questionnaire
+### 4. If you want to provide the Questionnaire integrated in your IG translate it back to fsh with: https://fshschool.org/FSHOnline/#/
+POST {{host}}/Questionnaire/$assemble HTTP/1.1
+Accept: application/json+fhir
+Content-Type: application/json+fhir
+
+< ./output/Questionnaire-0-generic-mod.json

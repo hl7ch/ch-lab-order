@@ -3,5 +3,5 @@ InstanceOf: CHCorePractitionerRole
 Title: "Hans Hauser Kantonsspital"
 Description: "PractitionerRole"
 Usage: #example
-* practitioner = Reference(HansHauser)
-* organization = Reference(Kantonsspital)
+* practitioner = Reference(Practitioner/HansHauser)
+* organization = Reference(Organization/Kantonsspital)
