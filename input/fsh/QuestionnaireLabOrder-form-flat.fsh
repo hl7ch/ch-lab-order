@@ -287,6 +287,12 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].definition = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].text = "Creatinin im Serum oder Plasma"
 * item[=].item[=].type = #boolean
+* item[=].item[=].item[+].linkId = " "
+* item[=].item[=].item[=].text = " "
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "creatinine-serum"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
 
 // -- Choose Serum Vitamin D ---
 * item[=].item[+].linkId = "vitamin-d-serum"
