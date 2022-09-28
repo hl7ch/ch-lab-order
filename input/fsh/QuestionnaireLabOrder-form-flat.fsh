@@ -1,9 +1,9 @@
-Instance: QuestionnaireLabOrder-form-modular
+Instance: QuestionnaireLabOrder-form-flat
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order"
 Description: "Example for Questionnaire"
 Usage: #definition
-* id = "QuestionnaireLabOrder-form-modular"
+* id = "QuestionnaireLabOrder-form-flat"
 
 * meta.versionId = "1"
 * meta.lastUpdated = "2012-09-01T20:17:53.340+00:00"
@@ -36,7 +36,7 @@ Usage: #definition
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-modular"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-flat"
 * name = "QuestionnaireLabOrder"
 * title = "Questionnaire Lab Order"
 * status = #active
@@ -270,17 +270,36 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 //*  item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 //* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/Plandefinition|1.0"
 
+// -- Choose Serum Potassium ---
 * item[=].item[0].linkId = "potassium-serum"
-* item[=].item[=].text = "Kalium im Serum"
+* item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].text = "Kalium im Serum oder Plasma"
 * item[=].item[=].type = #boolean
 
-* item[=].item[+].linkId = "panel-blood-electrolyte-module"
-* item[=].item[=].text = "Elektrolyt Panel im Blut"
+// -- Choose Panel Electrolyte ---
+* item[=].item[+].linkId = "panel-blood-electrolyte"
+* item[=].item[=].definition = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].text = "Elektrolyt Panel im Serum oder Plasma"
 * item[=].item[=].type = #boolean
 
+// -- Choose Creatinine Serum ---
+* item[=].item[+].linkId = "creatinine-serum"
+* item[=].item[=].definition = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].text = "Creatinin im Serum oder Plasma"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[+].linkId = " "
+* item[=].item[=].item[=].text = " "
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "creatinine-serum"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+
+// -- Choose Serum Vitamin D ---
 * item[=].item[+].linkId = "vitamin-d-serum"
-* item[=].item[=].text = "Vitamin D im Serum"
+* item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].text = "Vitamin D im Serum oder Plasma"
 * item[=].item[=].type = #boolean
+
 // further plan definitions
 
 

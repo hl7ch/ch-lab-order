@@ -6,6 +6,7 @@ Description: "ch-lab-order defines 10 different Kinds of Service Request"
 // * ^url = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/ServiceRequest.categories"
 * ^version = "0.1.0"
 * ^status = #active
+* ^experimental = true
 * ^date = "2021-06-01T10:21:46+00:00"
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "Marcel Hanselmann"

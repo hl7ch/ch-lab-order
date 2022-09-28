@@ -44,10 +44,13 @@ Usage: #definition
 * date = "2022-05-04"
 * publisher = "HL7 Switzerland"
 
-// ###############  begin of general part  ##################################
+// ############################################################
+// ################## General Part from ORF ###################
+// ############################################################
 
 // ---------- order (Auftrag) ----------
 * item[+].linkId = "order"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-document#Bundle"
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
@@ -70,13 +73,20 @@ Usage: #definition
 * item[=].item.text = "Unable to resolve 'receiver' sub-questionnaire"
 * item[=].item.type = #display
 
-// ---------- Patient: The principle target of a particular Form Content is one patient ----------
+// ---- Patient: The principle target of a particular Form Content is one patient ------
 * item[+].linkId = "patient"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.subject"
 * item[=].text = "Patient"
 * item[=].type = #group
 * item[=].required = true
-
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].extension[0].valueExpression.name = "linkIdPrefix"
+* item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].extension[=].valueExpression.expression = "'patient.'"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].extension[=].valueExpression.name = "address"
+* item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].extension[=].valueExpression.expression = "%patient.address"
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-patient|2.0.0"
 * item[=].item.linkId = "patient.1"
