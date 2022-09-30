@@ -257,9 +257,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 */
 
-//  -------- 1. Wahl Lab Servic (Plan Definition) ----------------
+//  -------- 1.Kind of LabService (PlanDefinition) ----------------
 // Als erstes wählt der Author des Laborauftrages den gewünschten        
-// Service. Hier als Beispiel: Potassium, Electrolyt Panel und Vitamin-D
+// Service. Hier als Beispiel: Potassium, Electrolyt Panel und Vitamin-D, Kreatinin
 
 * item[+].linkId = "LabService"
 * item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -287,12 +287,22 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].definition = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].text = "Creatinin im Serum oder Plasma"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[+].linkId = " "
-* item[=].item[=].item[=].text = " "
+* item[=].item[=].item[+].linkId = "Catalog.SpecimenDefinition"
+* item[=].item[=].item[=].text = "Proben: "
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen[+].question = "creatinine-serum"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+// -- creatinin-serum allows 2 specimenDefinitions: capillary, venous ---
+* item[=].item[=].item[=].item[+].linkId = "single-test-serum-capillary"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* item[=].item[=].item[=].item[=].text = "specimenDefinition capillary"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[+].linkId = "single-test-serum-venous"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* item[=].item[=].item[=].item[=].text = "specimenDefinition venous"
+* item[=].item[=].item[=].item[=].type = #boolean
+
 
 // -- Choose Serum Vitamin D ---
 * item[=].item[+].linkId = "vitamin-d-serum"
