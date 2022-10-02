@@ -6,7 +6,7 @@ Usage: #example
 * text.status = #additional
 * text.div = "<div xml:lang=\"fr-FR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"fr-FR\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Examen de biologie médicale monoparamétrique :</p>\n            <p>Dosage de la 25-(OH)-vitamine D (D2 + D3)</p>\n            <p>description : Vitamine D dosée sur échantillon de sérum</p>\n            <p>prescriptible : oui</p>\n            <p>délai de rendu : 120 minutes</p>\n        </div>"
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* extension[=].valueReference = Reference(Composition/example-lab-compendium-header)
+* extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
 * extension[=].valueReference = Reference(ChargeItemDefinition/example-lab-billing-vitamind-focus)
 * extension[+].extension[0].url = "textualSummary"

@@ -309,6 +309,50 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 * item[=].item[=].text = "Vitamin D im Serum oder Plasma"
 * item[=].item[=].type = #boolean
+* item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition"
+* item[=].item[=].item[=].text = "Limitationen AL"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "vitamin-d-serum"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+// --if choosed, we have to ask for the billing conditions --
+* item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext"
+* item[=].item[=].item[=].item[=].text = "Limitationen AL, Kontext Typ"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].repeats = true
+
+// -- AL allows several conditions for billing. Choose condition ---
+* item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext.rickets"
+* item[=].item[=].item[=].item[=].item[=].definition = "http://snomed.info/sct#41345002"
+* item[=].item[=].item[=].item[=].item[=].text = "Rachitis"
+* item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext.osteomalacia"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://snomed.info/sct#4598005"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Verdacht Osteomalazie"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext.transplanted_kidney"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://snomed.info/sct#737295003"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Nierentransplantation Nachsorge nach mehr als drei Monaten nach der Transplantation"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext.assessment_bariatric_surgery"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://snomed.info/sct#707206008"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Vorbereitung und Nachsorge bariatrischer Operationen"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext.assessment_repetive_fall"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://snomed.info/sct#41345002"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Beurteilung und Behandlung von älteren Menschen, die wiederholt stürzen"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.ChargeItemDefinition.UseContext.medication_interactions"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://snomed.info/sct#182817000"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Medikamente, die den Vit. D Stoffwechsel beeinflussen"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+
 
 // further plan definitions
 
