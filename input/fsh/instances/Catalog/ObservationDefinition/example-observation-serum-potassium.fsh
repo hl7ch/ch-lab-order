@@ -2,4 +2,26 @@ Instance: example-observation-serum-potassium
 InstanceOf: ObservationDefinition
 Description: "Kalium im Blut [Moles/volume]"
 Usage: #example
-* code = http://loinc.org#6298-4 "Potassium [Moles/volume] in Blood"
+* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+* language = #en-US
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* code = http://loinc.org#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* permittedDataType[0] = #Quantity
+* permittedDataType[+] = #string
+* multipleResultsAllowed = false
+* method.text = "Ion Selective Electrode (ISE)"
+* preferredReportName = "Potassium"
+* quantitativeDetails.customaryUnit = http://unitsofmeasure.org#g/L
+* quantitativeDetails.unit = http://unitsofmeasure.org#mmol/L
+* quantitativeDetails.decimalPrecision = 1
+* qualifiedInterval[0].category = #reference
+* qualifiedInterval[=].range.low = 3.8 'mmol/L'
+* qualifiedInterval[=].range.high = 5.1 'mmol/L'
+* qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
+* qualifiedInterval[=].age.low = 2 'a'
+* qualifiedInterval[=].age.high = 19 'a'
+* qualifiedInterval[+].category = #reference
+* qualifiedInterval[=].range.low = 3.5 'mmol/L'
+* qualifiedInterval[=].range.high = 5.3 'mmol/L'
+* qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
+* qualifiedInterval[=].age.low = 20 'a'
