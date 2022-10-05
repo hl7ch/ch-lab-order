@@ -3,6 +3,7 @@ InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order from Catalog"
 Description: "Example for generic Questionnaire (flat version)"
 Usage: #example
+
 * id = "QuestionnaireLabOrder-form-flat"
 
 * meta.versionId = "1"
