@@ -51,7 +51,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat-Questionnaire"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form 6-histopath assembled from modular version"
+* title = "Lab Order Form 0-generic assembled from modular version"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
