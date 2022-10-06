@@ -2,7 +2,7 @@ Instance: 1-tvt-of-ChOrfQuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 1-tvt"
 Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
-Usage: #definition
+Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"

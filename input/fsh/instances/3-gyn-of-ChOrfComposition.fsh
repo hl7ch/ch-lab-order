@@ -2,7 +2,7 @@ Instance: 3-gyn-of-ChOrfComposition
 InstanceOf: ChOrfComposition
 Title: "3-gyn"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
-Usage: #definition
+Usage: #example
 * id = "3-gyn"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

@@ -2,7 +2,7 @@ Instance: 6-histopath-Document
 InstanceOf: ChOrfDocument
 Title: "Referral 6-histopath"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
-Usage: #definition
+Usage: #example
 * id = "6-histopath"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
@@ -21,7 +21,7 @@ Usage: #definition
 * entry[=].resource = Arztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath-flat-Questionnaire"
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath-flat"
 * entry[=].resource = 6-histopath-flat-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath-flat-QuestionnaireResponse"
 * entry[=].resource = 6-histopath-flat-QuestionnaireResponse

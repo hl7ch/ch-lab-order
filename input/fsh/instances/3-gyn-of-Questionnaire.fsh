@@ -2,7 +2,7 @@ Instance: 3-gyn-of-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 3-gyn"
 Description: "Example for Laboratory Order Questionnaire for gynaecological check-up"
-Usage: #definition
+Usage: #example
 * id = "3-gyn"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
@@ -28,11 +28,8 @@ Usage: #definition
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn"
-
-// ###############  begin of general part  ########################################
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 3-gyn"
 * status = #active
@@ -44,6 +41,8 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
+
+// --- order (Auftrag) item[0] ----------
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group

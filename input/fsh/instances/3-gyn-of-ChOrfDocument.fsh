@@ -2,7 +2,7 @@ Instance: 3-gyn-of-ChOrfDocument
 InstanceOf: ChOrfDocument
 Title: "Referreal 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
-Usage: #definition
+Usage: #example
 * id = "3-gyn"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"

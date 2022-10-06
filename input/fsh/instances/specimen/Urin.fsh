@@ -2,7 +2,7 @@ Instance: Urin
 InstanceOf: Specimen
 Title: "Urin Sample"
 Description: "Example for Specimen of Urin"
-Usage: #definition
+Usage: #example
 * identifier.value = "11111-15394-75465"
 * accessionIdentifier.value = "22222-bc987-dd888"
 * status = #available

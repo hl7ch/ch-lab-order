@@ -2,7 +2,7 @@ Instance: Cervix-swab
 InstanceOf: Specimen
 Title: "Cervix-swab Sample"
 Description: "Example for Specimen of Cervix Swab"
-Usage: #definition
+Usage: #example
 * identifier.value = "48736-12345-12345"
 * accessionIdentifier.value = "4e88a-12345-aa222"
 * status = #available

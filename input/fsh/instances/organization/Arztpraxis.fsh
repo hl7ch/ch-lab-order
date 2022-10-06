@@ -2,7 +2,7 @@ Instance: Arztpraxis
 InstanceOf: CHCoreOrganization
 Title: "Arztpraxis"
 Description: "Practice, refers to 2-pertussis and 3-gyn"
-Usage: #definition
+Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000235503"
 * name = "Arztpraxis Messen"

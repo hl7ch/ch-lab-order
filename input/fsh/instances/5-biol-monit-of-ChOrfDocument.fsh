@@ -2,7 +2,7 @@ Instance: 5-biol-monit-of-ChOrfDocument
 InstanceOf: ChOrfDocument
 Title: "Referreal 5-biol-monit"
 Description: "Example Bundle for referral/order for toxicological Monitoring"
-Usage: #definition
+Usage: #example
 * id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"

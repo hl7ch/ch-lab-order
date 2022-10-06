@@ -2,7 +2,7 @@ Instance: 5-biol-monit-of-ChOrfComposition
 InstanceOf: ChOrfComposition
 Title: "5-biol-monit"
 Description: "Composition: Storyboard for Toxicological Monitoring"
-Usage: #definition
+Usage: #example
 * id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

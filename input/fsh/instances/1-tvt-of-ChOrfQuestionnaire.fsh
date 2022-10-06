@@ -2,9 +2,8 @@ Instance: 1-tvt-of-ChOrfQuestionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 1-tvt"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
-Usage: #definition
+Usage: #example
 * id = "1-tvt"
-
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -29,12 +28,8 @@ Usage: #definition
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
-
-// ###############  begin of general part  ##############################################################
-
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 1-tvt"
 * status = #active
@@ -46,11 +41,14 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
+
+// --- order (Auftrag) item[0] ----------
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
 
+// --- order.placer item[0][0] ----------
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string

@@ -2,7 +2,7 @@ Instance: LaborGantenbein
 InstanceOf: CHCoreOrganization
 Title: "Labor Gantenbein"
 Description: "Laboratory Organization, refers to all Storyboards"
-Usage: #definition
+Usage: #example
 * identifier.system = "urn:oid:2.51.1.5"
 * identifier.value = "7601000231111"
 * name = "Labor Gantenbein"

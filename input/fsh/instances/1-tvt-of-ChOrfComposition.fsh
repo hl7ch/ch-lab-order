@@ -2,7 +2,7 @@ Instance: 1-tvt-of-ChOrfComposition
 InstanceOf: ChOrfComposition
 Title: "1-tvt"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
-Usage: #definition
+Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

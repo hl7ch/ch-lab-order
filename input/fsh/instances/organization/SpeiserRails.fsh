@@ -2,7 +2,7 @@ Instance: SpeiserRails
 InstanceOf: CHCoreOrganization
 Title: "Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
-Usage: #definition
+Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
 * identifier.value = "CHE-108.444.179"
 * telecom[0].system = #phone

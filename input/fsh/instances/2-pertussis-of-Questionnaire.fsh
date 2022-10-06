@@ -2,9 +2,8 @@ Instance: 2-pertussis-of-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 2-pertussis"
 Description: "Example for Laboratory Order Questionnaire for Pertussis Investigation"
-Usage: #definition
+Usage: #example
 * id = "2-pertussis"
-
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -32,8 +31,7 @@ Usage: #definition
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"
 
-// ###############  begin of general part  ########################################
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 2-pertussis"
 * status = #active

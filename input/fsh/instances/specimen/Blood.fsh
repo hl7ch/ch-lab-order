@@ -2,7 +2,7 @@ Instance: Blood
 InstanceOf: Specimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
-Usage: #definition
+Usage: #example
 * status = #available
 * type = SCT#119297000 "Blood sample"
 * subject = Reference(Patient/BeatBorer)

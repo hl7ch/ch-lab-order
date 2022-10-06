@@ -2,7 +2,7 @@ Instance: 2-pertussis-of-ChOrfComposition
 InstanceOf: ChOrfComposition
 Title: "2-pertussis"
 Description: "Composition: Storyboard for Pertussis Investigation"
-Usage: #definition
+Usage: #example
 * id = "2-pertussis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

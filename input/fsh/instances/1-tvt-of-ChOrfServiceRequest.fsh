@@ -2,7 +2,7 @@ Instance: 1-tvt-of-ChOrfServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #definition
+Usage: #example
 * id = "1-tvt"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"

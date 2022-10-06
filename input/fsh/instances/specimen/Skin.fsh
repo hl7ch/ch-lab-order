@@ -2,7 +2,7 @@ Instance: Skin
 InstanceOf: Specimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum"
-Usage: #definition
+Usage: #example
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e99a-12345-dd888"
 * status = #available

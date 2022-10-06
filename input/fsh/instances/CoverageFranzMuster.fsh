@@ -2,7 +2,7 @@ Instance: CoverageFranzMuster
 InstanceOf: CHCoreCoverage
 Title: "CoverageFranzMuster"
 Description: "Example for Insurance Coverage"
-Usage: #definition
+Usage: #example
 * meta.source = "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
 * contained = Sanitas
 * identifier.system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"

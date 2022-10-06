@@ -2,7 +2,7 @@ Instance: 5-biol-monit-of-ChOrfQuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 5-biol-monit"
 Description: "Example for Laboratory Order Questionnaire response for toxicological Monitoring"
-Usage: #definition
+Usage: #example
 * id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"

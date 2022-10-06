@@ -2,7 +2,7 @@ Instance: Throat-swab
 InstanceOf: Specimen
 Title: "Throat Swab"
 Description: "Example for Specimen of Throat Swab"
-Usage: #definition
+Usage: #example
 * identifier.value = "48736-15394-75465"
 * accessionIdentifier.value = "4e88a-bc987-dd888"
 * status = #available

@@ -2,7 +2,7 @@ Instance: 4-sepsis-of-ChOrfComposition
 InstanceOf: ChOrfComposition
 Title: "4-sepsis"
 Description: "Composition: Storyboard for Sepsis Investigation"
-Usage: #definition
+Usage: #example
 * id = "4-sepsis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

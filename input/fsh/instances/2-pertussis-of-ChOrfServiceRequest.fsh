@@ -2,7 +2,7 @@ Instance: 2-pertussis-of-ChOrfServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
-Usage: #definition
+Usage: #example
 * id = "2-pertussis"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"

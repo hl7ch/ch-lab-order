@@ -2,7 +2,7 @@ Instance: 4-sepsis-of-ChOrfDocument
 InstanceOf: ChOrfDocument
 Title: "Referreal 4-sepsis"
 Description: "Example Bundle for referral/order for Sepsis Investigation"
-Usage: #definition
+Usage: #example
 * id = "4-sepsis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
