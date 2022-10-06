@@ -2,7 +2,7 @@ Instance: Suva
 InstanceOf: CHCoreOrganization
 Title: "SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
-Usage: #definition
+Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"
 * identifier.value = "CHE-108.955.179"
 * name = "Suva"

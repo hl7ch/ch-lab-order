@@ -1,10 +1,9 @@
-Instance: 1-tvt-of-ChOrfQuestionnaire
+Instance: 2-pertussis-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 1-tvt"
-Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
-Usage: #definition
-* id = "1-tvt"
-
+Title: "questionnaire 2-pertussis"
+Description: "Example for Laboratory Order Questionnaire for Pertussis Investigation"
+Usage: #example
+* id = "2-pertussis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -30,13 +29,11 @@ Usage: #definition
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"
 
-// ###############  begin of general part  ##############################################################
-
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example 1-tvt"
+* title = "Lab Order Form Example 2-pertussis"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
@@ -550,40 +547,29 @@ Usage: #definition
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
-//################# end of general part  ################################
-// ------------Choice of Specialty-----------------
-// 
+// ############## begin of specific part ############################
+
+* item[+].linkId = "microbiology"
+* item[=].text = "Mikrobiologie"
+* item[=].type = #group
+* item[=].item.linkId = "per"
+* item[=].item.text = "Pertussis and Parapertussis DNA"
+* item[=].item.type = #choice
+* item[=].item.repeats = true
+* item[=].item.answerOption.valueCoding = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
-* item[=].text = "Hematology"
+* item[=].text = "Hämatologie"
 * item[=].type = #group
-* item[=].item.linkId = "hemato-subset"
-* item[=].item.text = "Hämatologie Subset"
+* item[=].item.linkId = "Blood-diff"
+* item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
-* item[+].linkId = "coagulation"
-* item[=].text = "Coagulation"
-* item[=].type = #group
-* item[=].item.linkId = "d-dimer"
-* item[=].item.text = "D-Dimer"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* item[+].linkId = "cc"
-* item[=].text = "clinical chemistry"
+* item[=].item.answerOption.valueCoding = LOINC#24318-8 "Manual diff Bld"
+* item[+].linkId = "clinical chemistry"
+* item[=].text = "Klinische Chemie"
 * item[=].type = #group
 * item[=].item.linkId = "crp"
-* item[=].item.text = "CRP"
+* item[=].item.text = "C-reactive Protein"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* item[=].item.answerOption[=].initialSelected = true
-* item[=].item.answerOption[+].valueCoding = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item.answerOption[+].valueCoding = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item.answerOption[+].valueCoding = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
-
-
+* item[=].item.answerOption.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"

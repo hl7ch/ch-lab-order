@@ -2,7 +2,7 @@ Instance: Lab
 InstanceOf: ChOrfServiceRequest
 Title: "laborder lab"
 Description: "Example for generic Service Request"
-Usage: #definition
+Usage: #example
 * identifier[0].type = V2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "7601000234407" // Prefix 760..769 is GS1 Schweiz, Suisse, Svizzera

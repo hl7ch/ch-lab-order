@@ -2,7 +2,7 @@ Instance: HealthInsuranceCard
 InstanceOf: Coverage
 Title: "HealthInsuranceCard"
 Description: "Example for Insurance"
-Usage: #definition
+Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active

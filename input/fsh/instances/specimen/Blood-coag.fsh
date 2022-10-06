@@ -2,7 +2,7 @@ Instance: Blood-coag
 InstanceOf: Specimen
 Title: "Blood Sample Coagulation"
 Description: "Example for Specimen for haemostatic Examination"
-Usage: #definition
+Usage: #example
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available

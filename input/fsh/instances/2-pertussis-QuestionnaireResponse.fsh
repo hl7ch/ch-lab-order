@@ -1,8 +1,8 @@
-Instance: 2-pertussis-of-ChOrfQuestionnaireResponse
+Instance: 2-pertussis-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 2-pertussis"
 Description: "Example Laboratory Order Questionnaire Response for Pertussis Investigation"
-Usage: #definition
+Usage: #example
 * id = "2-pertussis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"

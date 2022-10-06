@@ -1,6 +1,6 @@
 Instance: OrfQrToBundle
 InstanceOf: StructureMap
-Usage: #definition
+Usage: #example
 * url = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * name = "OrfQrToBundle"
 * description = "ORF Questionnaire Response to Bundle\n2021-01-11 Oliver Egger, copyright ahdis ag, Apache License\nQRF Questionnaire: http://build.fhir.org/ig/ehealthsuisse/ch-orf/Questionnaire-referral-min.html\nQRF Questionnaire Response: http://build.fhir.org/ig/ehealthsuisse/ch-orf/QuestionnaireResponse-referral-min.xml.html\nBundle: http://build.fhir.org/ig/ehealthsuisse/ch-orf/StructureDefinition-ch-orf-document.html"
