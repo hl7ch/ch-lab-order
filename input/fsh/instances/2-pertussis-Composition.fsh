@@ -1,4 +1,4 @@
-Instance: 2-pertussis-of-ChOrfComposition
+Instance: 2-pertussis-Composition
 InstanceOf: ChOrfComposition
 Title: "2-pertussis"
 Description: "Composition: Storyboard for Pertussis Investigation"
@@ -43,5 +43,5 @@ Usage: #example
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-of-Questionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-of-ChOrfQuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-of-ChOrfServiceRequest)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequest)

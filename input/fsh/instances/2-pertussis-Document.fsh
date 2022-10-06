@@ -1,4 +1,4 @@
-Instance: 2-pertussis-of-ChOrfDocument
+Instance: 2-pertussis-Document
 InstanceOf: ChOrfDocument
 Title: "Referral 2-pertussis"
 Description: "Example Bundle for referral/order for Pertussis investigation"
@@ -29,7 +29,7 @@ Usage: #example
 // * entry[=].resource = Inline-Instance-for-2-pertussis-8
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/2-pertussis"
-* entry[=].resource = 2-pertussis-of-ChOrfComposition
+* entry[=].resource = 2-pertussis-Composition
 * entry[+].fullUrl = "http://example.com/fhir/Patient/EmilKummer"
 * entry[=].resource = EmilKummer
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
@@ -41,6 +41,6 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/2-pertussis"
 * entry[=].resource = 2-pertussis-of-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
-* entry[=].resource = 2-pertussis-of-ChOrfQuestionnaireResponse
+* entry[=].resource = 2-pertussis-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis"
-* entry[=].resource = 2-pertussis-of-ChOrfServiceRequest
+* entry[=].resource = 2-pertussis-ServiceRequest

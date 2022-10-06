@@ -1,4 +1,4 @@
-Instance: 2-pertussis-of-ChOrfServiceRequest
+Instance: 2-pertussis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"

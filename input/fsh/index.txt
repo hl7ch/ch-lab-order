@@ -9,10 +9,10 @@ Name                                        Type        File
 1-tvt-QuestionnaireResponse         Instance    instances/1-tvt-QuestionnaireResponse.fsh
 1-tvt-ServiceRequest                Instance    instances/1-tvt-ServiceRequest.fsh
 1-tvt-of-Questionnaire                      Instance    instances/1-tvt-of-Questionnaire.fsh
-2-pertussis-of-ChOrfComposition             Instance    instances/2-pertussis-of-ChOrfComposition.fsh
-2-pertussis-of-ChOrfDocument                Instance    instances/2-pertussis-of-ChOrfDocument.fsh
-2-pertussis-of-ChOrfQuestionnaireResponse   Instance    instances/2-pertussis-of-ChOrfQuestionnaireResponse.fsh
-2-pertussis-of-ChOrfServiceRequest          Instance    instances/2-pertussis-of-ChOrfServiceRequest.fsh
+2-pertussis-Composition             Instance    instances/2-pertussis-Composition.fsh
+2-pertussis-Document                Instance    instances/2-pertussis-Document.fsh
+2-pertussis-QuestionnaireResponse   Instance    instances/2-pertussis-QuestionnaireResponse.fsh
+2-pertussis-ServiceRequest          Instance    instances/2-pertussis-ServiceRequest.fsh
 2-pertussis-of-Questionnaire                Instance    instances/2-pertussis-of-Questionnaire.fsh
 3-gyn-of-ChOrfComposition                   Instance    instances/3-gyn-of-ChOrfComposition.fsh
 3-gyn-of-ChOrfDocument                      Instance    instances/3-gyn-of-ChOrfDocument.fsh

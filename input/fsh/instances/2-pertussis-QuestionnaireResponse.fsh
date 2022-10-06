@@ -1,4 +1,4 @@
-Instance: 2-pertussis-of-ChOrfQuestionnaireResponse
+Instance: 2-pertussis-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 2-pertussis"
 Description: "Example Laboratory Order Questionnaire Response for Pertussis Investigation"
