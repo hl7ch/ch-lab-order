@@ -19,11 +19,11 @@ Name                                        Type        File
 3-gyn-QuestionnaireResponse         Instance    instances/3-gyn-QuestionnaireResponse.fsh
 3-gyn-ServiceRequest                Instance    instances/3-gyn-ServiceRequest.fsh
 3-gyn-Questionnaire                      Instance    instances/3-gyn-Questionnaire.fsh
-4-sepsis-of-ChOrfComposition                Instance    instances/4-sepsis-of-ChOrfComposition.fsh
-4-sepsis-of-ChOrfDocument                   Instance    instances/4-sepsis-of-ChOrfDocument.fsh
-4-sepsis-of-ChOrfQuestionnaireResponse      Instance    instances/4-sepsis-of-ChOrfQuestionnaireResponse.fsh
-4-sepsis-of-ChOrfServiceRequest             Instance    instances/4-sepsis-of-ChOrfServiceRequest.fsh
-4-sepsis-of-Questionnaire                   Instance    instances/4-sepsis-of-Questionnaire.fsh
+4-sepsis-Composition                Instance    instances/4-sepsis-Composition.fsh
+4-sepsis-Document                   Instance    instances/4-sepsis-Document.fsh
+4-sepsis-QuestionnaireResponse      Instance    instances/4-sepsis-QuestionnaireResponse.fsh
+4-sepsis-ServiceRequest             Instance    instances/4-sepsis-ServiceRequest.fsh
+4-sepsis-Questionnaire                   Instance    instances/4-sepsis-Questionnaire.fsh
 5-biol-monit-of-ChOrfComposition            Instance    instances/5-biol-monit-of-ChOrfComposition.fsh
 5-biol-monit-of-ChOrfDocument               Instance    instances/5-biol-monit-of-ChOrfDocument.fsh
 5-biol-monit-of-ChOrfQuestionnaireResponse  Instance    instances/5-biol-monit-of-ChOrfQuestionnaireResponse.fsh

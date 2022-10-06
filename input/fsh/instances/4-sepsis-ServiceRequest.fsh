@@ -1,4 +1,4 @@
-Instance: 4-sepsis-of-ChOrfServiceRequest
+Instance: 4-sepsis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"

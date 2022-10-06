@@ -1,4 +1,4 @@
-Instance: 4-sepsis-of-ChOrfComposition
+Instance: 4-sepsis-Composition
 InstanceOf: ChOrfComposition
 Title: "4-sepsis"
 Description: "Composition: Storyboard for Sepsis Investigation"
@@ -42,6 +42,6 @@ Usage: #example
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 4-sepsis\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(4-sepsis-of-Questionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(4-sepsis-of-ChOrfQuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(4-sepsis-of-ChOrfServiceRequest)
+* section[orderReferral].entry[Questionnaire] = Reference(4-sepsis-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(4-sepsis-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(4-sepsis-ServiceRequest)
