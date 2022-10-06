@@ -1,4 +1,4 @@
-Instance: 5-biol-monit-of-ChOrfQuestionnaireResponse
+Instance: 5-biol-monit-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 5-biol-monit"
 Description: "Example for Laboratory Order Questionnaire response for toxicological Monitoring"

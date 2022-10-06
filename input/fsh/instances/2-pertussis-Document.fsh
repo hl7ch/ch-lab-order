@@ -39,7 +39,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/2-pertussis"
-* entry[=].resource = 2-pertussis-of-Questionnaire
+* entry[=].resource = 2-pertussis-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
 * entry[=].resource = 2-pertussis-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis"

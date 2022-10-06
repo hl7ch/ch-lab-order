@@ -1,4 +1,4 @@
-Instance: 5-biol-monit-of-ChOrfServiceRequest
+Instance: 5-biol-monit-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"

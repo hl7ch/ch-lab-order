@@ -42,6 +42,6 @@ Usage: #example
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-of-Questionnaire)
+* section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequest)
