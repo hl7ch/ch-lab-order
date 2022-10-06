@@ -4,10 +4,10 @@ Name                                        Type        File
 0-generic-mod-QuestionnaireResponse         Instance    instances/0-generic-mod-QuestionnaireResponse.fsh
 0-generic-ServiceRequest                    Instance    instances/0-generic-ServiceRequest.fsh
 0-generic-mod-Questionnaire                 Instance    instances/0-generic-mod-Questionnaire.fsh
-1-tvt-of-ChOrfComposition                   Instance    instances/1-tvt-of-ChOrfComposition.fsh
-1-tvt-of-ChOrfDocument                      Instance    instances/1-tvt-of-ChOrfDocument.fsh
-1-tvt-of-ChOrfQuestionnaireResponse         Instance    instances/1-tvt-of-ChOrfQuestionnaireResponse.fsh
-1-tvt-of-ChOrfServiceRequest                Instance    instances/1-tvt-of-ChOrfServiceRequest.fsh
+1-tvt-Composition                   Instance    instances/1-tvt-Composition.fsh
+1-tvt-Document                      Instance    instances/1-tvt-Document.fsh
+1-tvt-QuestionnaireResponse         Instance    instances/1-tvt-QuestionnaireResponse.fsh
+1-tvt-ServiceRequest                Instance    instances/1-tvt-ServiceRequest.fsh
 1-tvt-of-Questionnaire                      Instance    instances/1-tvt-of-Questionnaire.fsh
 2-pertussis-of-ChOrfComposition             Instance    instances/2-pertussis-of-ChOrfComposition.fsh
 2-pertussis-of-ChOrfDocument                Instance    instances/2-pertussis-of-ChOrfDocument.fsh

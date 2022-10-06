@@ -1,4 +1,4 @@
-Instance: 1-tvt-of-ChOrfServiceRequest
+Instance: 1-tvt-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
