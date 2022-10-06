@@ -2,9 +2,8 @@ Instance: QuestionnaireLabOrder-form-flat
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order from Catalog"
 Description: "Example for generic Questionnaire (flat version)"
-Usage: #definition
+Usage: #example
 * id = "QuestionnaireLabOrder-form-flat"
-
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
