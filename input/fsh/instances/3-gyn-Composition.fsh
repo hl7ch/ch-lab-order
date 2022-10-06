@@ -1,4 +1,4 @@
-Instance: 3-gyn-of-ChOrfComposition
+Instance: 3-gyn-Composition
 InstanceOf: ChOrfComposition
 Title: "3-gyn"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
@@ -36,6 +36,6 @@ Usage: #example
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 3-gyn\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(3-gyn-of-Questionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(3-gyn-of-ChOrfQuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(3-gyn-of-ChOrfServiceRequest)
+* section[orderReferral].entry[Questionnaire] = Reference(3-gyn-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(3-gyn-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(3-gyn-ServiceRequest)

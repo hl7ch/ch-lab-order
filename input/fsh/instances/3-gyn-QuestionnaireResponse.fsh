@@ -1,4 +1,4 @@
-Instance: 3-gyn-of-ChOrfQuestionnaireResponse
+Instance: 3-gyn-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 3-gyn"
 Description: "Example for Laboratory Order Questionnaire response for preventive gynecological check-up"

@@ -14,11 +14,11 @@ Name                                        Type        File
 2-pertussis-QuestionnaireResponse   Instance    instances/2-pertussis-QuestionnaireResponse.fsh
 2-pertussis-ServiceRequest          Instance    instances/2-pertussis-ServiceRequest.fsh
 2-pertussis-of-Questionnaire                Instance    instances/2-pertussis-of-Questionnaire.fsh
-3-gyn-of-ChOrfComposition                   Instance    instances/3-gyn-of-ChOrfComposition.fsh
-3-gyn-of-ChOrfDocument                      Instance    instances/3-gyn-of-ChOrfDocument.fsh
-3-gyn-of-ChOrfQuestionnaireResponse         Instance    instances/3-gyn-of-ChOrfQuestionnaireResponse.fsh
-3-gyn-of-ChOrfServiceRequest                Instance    instances/3-gyn-of-ChOrfServiceRequest.fsh
-3-gyn-of-Questionnaire                      Instance    instances/3-gyn-of-Questionnaire.fsh
+3-gyn-Composition                   Instance    instances/3-gyn-Composition.fsh
+3-gyn-Document                      Instance    instances/3-gyn-Document.fsh
+3-gyn-QuestionnaireResponse         Instance    instances/3-gyn-QuestionnaireResponse.fsh
+3-gyn-ServiceRequest                Instance    instances/3-gyn-ServiceRequest.fsh
+3-gyn-Questionnaire                      Instance    instances/3-gyn-Questionnaire.fsh
 4-sepsis-of-ChOrfComposition                Instance    instances/4-sepsis-of-ChOrfComposition.fsh
 4-sepsis-of-ChOrfDocument                   Instance    instances/4-sepsis-of-ChOrfDocument.fsh
 4-sepsis-of-ChOrfQuestionnaireResponse      Instance    instances/4-sepsis-of-ChOrfQuestionnaireResponse.fsh

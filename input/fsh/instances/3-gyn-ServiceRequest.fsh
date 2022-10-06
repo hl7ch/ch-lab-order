@@ -1,4 +1,4 @@
-Instance: 3-gyn-of-ChOrfServiceRequest
+Instance: 3-gyn-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
