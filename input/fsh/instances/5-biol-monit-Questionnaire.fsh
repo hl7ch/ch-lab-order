@@ -1,8 +1,8 @@
-Instance: 5-biol-monit-of-Questionnaire
+Instance: 5-biol-monit-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 5-biol-monit"
 Description: "Example for Laboratory Order Questionnaire for toxicological Monitoring"
-Usage: #definition
+Usage: #example
 * id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
@@ -32,7 +32,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"
 
 // ###############  begin of general part  ########################################
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 5-biol-monit"
 * status = #active
@@ -44,6 +44,8 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
+
+// --- order (Auftrag) item[0] ---------
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group
