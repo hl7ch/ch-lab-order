@@ -2,7 +2,7 @@ Instance: 6-histopath-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 0-generic"
 Description: "Example for Service Request due to suspected melanoma of skin"
-Usage: #definition
+Usage: #example
 * id = "6-histopath"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"

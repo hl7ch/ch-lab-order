@@ -2,6 +2,7 @@ Instance: 0-generic-flat-Questionnaire
 InstanceOf: Questionnaire
 Description: "Example for generic Questionnaire (flat version)"
 Usage: #example
+* id = "0-generic-flat"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -48,7 +49,7 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|1.0.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.0.0"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat-Questionnaire"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
 * title = "Lab Order Form 0-generic assembled from modular version"

@@ -1,9 +1,9 @@
-Instance: 3-gyn-of-Questionnaire
+Instance: 5-biol-monit-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 3-gyn"
-Description: "Example for Laboratory Order Questionnaire for gynaecological check-up"
-Usage: #definition
-* id = "3-gyn"
+Title: "questionnaire 5-biol-monit"
+Description: "Example for Laboratory Order Questionnaire for toxicological Monitoring"
+Usage: #example
+* id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -29,12 +29,12 @@ Usage: #definition
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"
 
 // ###############  begin of general part  ########################################
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example 3-gyn"
+* title = "Lab Order Form Example 5-biol-monit"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
@@ -44,6 +44,8 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
+
+// --- order (Auftrag) item[0] ---------
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group
@@ -548,30 +550,26 @@ Usage: #definition
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
-
-// #################  begin specific part  ##################################
-* item[+].linkId = "cytology"
-* item[=].text = "Cytology and Microbiology"
+// ################ begin specific part ##################################
+* item[+].linkId = "hematology"
+* item[=].text = "Hematology"
 * item[=].type = #group
-* item[=].item.linkId = "cervicalSmear"
-* item[=].item.text = "Cervical Smear"
+* item[=].item.linkId = "lab"
+* item[=].item.text = "Laborwerte"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item.answerOption[+].valueCoding = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
-* item[+].linkId = "urin"
-* item[=].text = "Urin"
+* item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[+].linkId = "toxicology"
+* item[=].text = "Toxicology"
 * item[=].type = #group
-* item[=].item.linkId = "combur9"
-* item[=].item.text = "Combur-9"
+* item[=].item.linkId = "tox"
+* item[=].item.text = "Toxic Content"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
-* item[+].linkId = "obstetricalPanels"
-* item[=].text = "Schwangerschaftsvorsorge"
-* item[=].type = #group
-* item[=].item.linkId = "obstetric"
-* item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item.answerOption[0].valueCoding = LOINC#29587-3 "Toxicology panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item.answerOption[+].valueCoding = LOINC#29589-9 "Heavy metals panel - Urine"

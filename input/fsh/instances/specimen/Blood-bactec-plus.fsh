@@ -2,7 +2,7 @@ Instance: Blood-bactec-plus
 InstanceOf: Specimen
 Title: "Blood Sample Bacteriology"
 Description: "Example for Specimen for bacteriological Examination"
-Usage: #definition
+Usage: #example
 * identifier.value = "88888-15394-75465"
 * accessionIdentifier.value = "77777-bc987-dd888"
 * status = #available

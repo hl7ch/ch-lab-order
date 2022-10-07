@@ -1,8 +1,8 @@
-Instance: 3-gyn-of-ChOrfServiceRequest
+Instance: 3-gyn-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
-Usage: #definition
+Usage: #example
 * id = "3-gyn"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"

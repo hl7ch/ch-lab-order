@@ -1,8 +1,8 @@
-Instance: 1-tvt-of-ChOrfDocument
+Instance: 1-tvt-Document
 InstanceOf: ChOrfDocument
 Title: "Referral 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
-Usage: #definition
+Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
@@ -29,7 +29,7 @@ Usage: #definition
 // * entry[=].resource = Inline-Instance-for-1-tvt-8
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt"
-* entry[=].resource = 1-tvt-of-ChOrfComposition
+* entry[=].resource = 1-tvt-Composition
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
@@ -39,8 +39,8 @@ Usage: #definition
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
-* entry[=].resource = 1-tvt-of-ChOrfQuestionnaire
+* entry[=].resource = 1-tvt-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
-* entry[=].resource = 1-tvt-of-ChOrfQuestionnaireResponse
+* entry[=].resource = 1-tvt-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt"
-* entry[=].resource = 1-tvt-of-ChOrfServiceRequest
+* entry[=].resource = 1-tvt-ServiceRequest

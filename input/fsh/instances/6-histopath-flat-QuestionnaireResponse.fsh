@@ -2,7 +2,7 @@ Instance: 6-histopath-flat-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "QuestionnaireResponse 6-histopath (modular version)"
 Description: "Example for QuestionnaireResponse of Histopathology Examination"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat-Questionnaire"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------
