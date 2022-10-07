@@ -2,11 +2,10 @@ Instance: 0-generic-flat-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "QuestionnaireResponse 0-generic (modular version)"
 Description: "Example for QuestionnaireResponse of Histopathology Examination"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat-Questionnaire"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------
-// ################################################
 * item[+].linkId = "order"
 * item[=].text = "Auftrag"
 

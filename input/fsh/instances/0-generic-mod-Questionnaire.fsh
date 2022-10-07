@@ -2,9 +2,8 @@ Instance: 0-generic-mod-Questionnaire   // corresponds to resource
 InstanceOf: ChOrfQuestionnaire
 Title: "questionnaire 0-generic, modular version"
 Description: "Example for Questionnaire for generic Lab Order"
-Usage: #definition
+Usage: #example
 * id = "0-generic-mod"
-
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -43,10 +42,6 @@ Usage: #definition
 * subjectType = #Patient
 * date = "2022-05-04"
 * publisher = "HL7 Switzerland"
-
-// ############################################################
-// ################## General Part from ORF ###################
-// ############################################################
 
 // ---------- order (Auftrag) ----------
 * item[+].linkId = "order"

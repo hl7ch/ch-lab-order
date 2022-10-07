@@ -1,8 +1,8 @@
-Instance: 5-biol-monit-of-ChOrfComposition
+Instance: 5-biol-monit-Composition
 InstanceOf: ChOrfComposition
 Title: "5-biol-monit"
 Description: "Composition: Storyboard for Toxicological Monitoring"
-Usage: #definition
+Usage: #example
 * id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
@@ -39,6 +39,6 @@ Usage: #definition
 * section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 5-biol-monit\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(5-biol-monit-of-Questionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(5-biol-monit-of-ChOrfQuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(5-biol-monit-of-ChOrfServiceRequest)
+* section[orderReferral].entry[Questionnaire] = Reference(5-biol-monit-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(5-biol-monit-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(5-biol-monit-ServiceRequest)

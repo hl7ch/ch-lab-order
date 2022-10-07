@@ -1,8 +1,8 @@
-Instance: 3-gyn-of-ChOrfDocument
+Instance: 3-gyn-Document
 InstanceOf: ChOrfDocument
 Title: "Referreal 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
-Usage: #definition
+Usage: #example
 * id = "3-gyn"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
@@ -29,7 +29,7 @@ Usage: #definition
 // * entry[=].resource = Inline-Instance-for-3-gyn-7
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/3-gyn"
-* entry[=].resource = 3-gyn-of-ChOrfComposition
+* entry[=].resource = 3-gyn-Composition
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPap"
@@ -39,8 +39,8 @@ Usage: #definition
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis"
 * entry[=].resource = PeterPapGruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/3-gyn"
-* entry[=].resource = 3-gyn-of-Questionnaire
+* entry[=].resource = 3-gyn-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
-* entry[=].resource = 3-gyn-of-ChOrfQuestionnaireResponse
+* entry[=].resource = 3-gyn-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
-* entry[=].resource = 3-gyn-of-ChOrfServiceRequest
+* entry[=].resource = 3-gyn-ServiceRequest

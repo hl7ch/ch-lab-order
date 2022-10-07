@@ -2,7 +2,7 @@ Instance: Kantonsspital
 InstanceOf: CHCoreOrganization
 Title: "Kantonsspital"
 Description: "Example for Hospital"
-Usage: #definition
+Usage: #example
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000235503"
 * name = "Kantonsspital Zug"

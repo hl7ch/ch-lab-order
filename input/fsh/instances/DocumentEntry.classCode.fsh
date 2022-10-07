@@ -1,6 +1,6 @@
 Instance: DocumentEntry.classCode
 InstanceOf: ShareableValueSet
-Usage: #definition
+Usage: #example
 * meta.source = "http://art-decor.org/fhir/ValueSet/2.16.756.5.30.1.127.3.10.1.3--20200622100530"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
 * extension.valuePeriod.start = "2020-06-22T10:05:30+02:00"

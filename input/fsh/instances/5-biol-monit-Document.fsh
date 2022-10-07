@@ -1,8 +1,8 @@
-Instance: 5-biol-monit-of-ChOrfDocument
+Instance: 5-biol-monit-Document
 InstanceOf: ChOrfDocument
 Title: "Referreal 5-biol-monit"
 Description: "Example Bundle for referral/order for toxicological Monitoring"
-Usage: #definition
+Usage: #example
 * id = "5-biol-monit"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
@@ -29,7 +29,7 @@ Usage: #definition
 // * entry[=].resource = Inline-Instance-for-5-biol-monit-8
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit"
-* entry[=].resource = 5-biol-monit-of-ChOrfComposition
+* entry[=].resource = 5-biol-monit-Composition
 * entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
 * entry[=].resource = BeatBorer
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PauloPorcellini"
@@ -39,8 +39,8 @@ Usage: #definition
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PauloPorcelliniSuva"
 * entry[=].resource = PauloPorcelliniSuva
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/5-biol-monit"
-* entry[=].resource = 5-biol-monit-of-Questionnaire
+* entry[=].resource = 5-biol-monit-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/5-biol-monit"
-* entry[=].resource = 5-biol-monit-of-ChOrfQuestionnaireResponse
+* entry[=].resource = 5-biol-monit-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit"
-* entry[=].resource = 5-biol-monit-of-ChOrfServiceRequest
+* entry[=].resource = 5-biol-monit-ServiceRequest

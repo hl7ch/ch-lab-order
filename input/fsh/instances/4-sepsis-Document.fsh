@@ -1,8 +1,8 @@
-Instance: 4-sepsis-of-ChOrfDocument
+Instance: 4-sepsis-Document
 InstanceOf: ChOrfDocument
 Title: "Referreal 4-sepsis"
 Description: "Example Bundle for referral/order for Sepsis Investigation"
-Usage: #definition
+Usage: #example
 * id = "4-sepsis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
@@ -29,7 +29,7 @@ Usage: #definition
 // * entry[=].resource = Inline-Instance-for-4-sepsis-8
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/4-sepsis"
-* entry[=].resource = 4-sepsis-of-ChOrfComposition
+* entry[=].resource = 4-sepsis-Composition
 * entry[+].fullUrl = "http://example.com/fhir/Patient/KlebsiellaKeller"
 * entry[=].resource = KlebsiellaKeller
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/HansHauser"
@@ -39,8 +39,8 @@ Usage: #definition
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/HansHauserKantonsspital"
 * entry[=].resource = HansHauserKantonsspital
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/4-sepsis"
-* entry[=].resource = 4-sepsis-of-Questionnaire
+* entry[=].resource = 4-sepsis-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/4-sepsis"
-* entry[=].resource = 4-sepsis-of-ChOrfQuestionnaireResponse
+* entry[=].resource = 4-sepsis-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis"
-* entry[=].resource = 4-sepsis-of-ChOrfServiceRequest
+* entry[=].resource = 4-sepsis-ServiceRequest

@@ -1,9 +1,9 @@
-Instance: 3-gyn-of-Questionnaire
+Instance: 4-sepsis-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 3-gyn"
-Description: "Example for Laboratory Order Questionnaire for gynaecological check-up"
-Usage: #definition
-* id = "3-gyn"
+Title: "questionnaire 4-sepsis"
+Description: "Example for Laboratory Order Questionnaire for Sepsis Investigation"
+Usage: #example
+* id = "4-sepsis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -29,12 +29,12 @@ Usage: #definition
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/3-gyn"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis"
 
 // ###############  begin of general part  ########################################
-* version = "0.9.1"
+* version = "1.0.0"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example 3-gyn"
+* title = "Lab Order Form Example 4-sepsis"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
@@ -548,30 +548,42 @@ Usage: #definition
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
+// ###############  begin specific part  ######################
 
-// #################  begin specific part  ##################################
-* item[+].linkId = "cytology"
-* item[=].text = "Cytology and Microbiology"
+* item[+].linkId = "hematology"
+* item[=].text = "Hematology"
 * item[=].type = #group
-* item[=].item.linkId = "cervicalSmear"
-* item[=].item.text = "Cervical Smear"
+* item[=].item.linkId = "lab"
+* item[=].item.text = "Laborwerte"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item.answerOption[+].valueCoding = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
-* item[+].linkId = "urin"
-* item[=].text = "Urin"
+* item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[+].linkId = "microbiology"
+* item[=].text = "Mikrobiologie"
 * item[=].type = #group
-* item[=].item.linkId = "combur9"
-* item[=].item.text = "Combur-9"
+* item[=].item[0].linkId = "culture"
+* item[=].item[=].text = "Blood by Culture"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption.valueCoding = LOINC#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
+* item[=].item[+].linkId = "id-susc"
+* item[=].item[=].text = "Bacterial Identification and Susceptibility"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption.valueCoding = LOINC#85421-6 "Bacterial identification and susceptibility panel - Isolate"
+* item[+].linkId = "cc"
+* item[=].text = "clinical chemistry"
+* item[=].type = #group
+* item[=].item.linkId = "crp"
+* item[=].item.text = "CRP"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
-* item[+].linkId = "obstetricalPanels"
-* item[=].text = "Schwangerschaftsvorsorge"
-* item[=].type = #group
-* item[=].item.linkId = "obstetric"
-* item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item.answerOption[0].valueCoding = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item.answerOption[=].initialSelected = true
+* item[=].item.answerOption[+].valueCoding = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item.answerOption[+].valueCoding = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item.answerOption[+].valueCoding = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"

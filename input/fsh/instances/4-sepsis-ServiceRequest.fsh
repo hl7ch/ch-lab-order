@@ -1,8 +1,8 @@
-Instance: 4-sepsis-of-ChOrfServiceRequest
+Instance: 4-sepsis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
 Title: "laborder 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
-Usage: #definition
+Usage: #example
 * id = "4-sepsis"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
