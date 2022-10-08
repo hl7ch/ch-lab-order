@@ -1,68 +1,43 @@
 Instance: QuestionnaireLabOrder-form-flat
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire Lab Order from Catalog"
-Description: "Example for generic Questionnaire (flat version)"
+Title: "Questionnaire Lab Order"
+Description: "Lab Order form by Catalog"
 Usage: #example
 * id = "QuestionnaireLabOrder-form-flat"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
-* meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
+
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-lab-order/StructureMap/LabOrderQrToBundle"
+
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+
 * extension[=].extension[0].url = "name"
 * extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#patient
 * extension[=].extension[+].url = "type"
 * extension[=].extension[=].valueCode = #Patient
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+
 * extension[=].extension[0].url = "name"
 * extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
 * extension[=].extension[+].url = "type"
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-practitioner-nametel|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receiver|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-address|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-initiator|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-patient|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-familydoctor|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-requestedencounter|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-coverage|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-sender|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-consent|1.1.0"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-flat"
-* version = "1.0.0-assembled"
-* name = "LabOrderForm"
-* title = "Questionnaire Lab Order from Catalog"
+
+* url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/QuestionnaireLabOrder-form-flat"
+* name = "QuestionnaireLabOrder_form_flat"
+* title = "Lab Order form by Catalog"
+* derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
 * status = #active
 * subjectType = #Patient
-* date = "2022-05-04"
+* date = "2021-02-24"
 * publisher = "HL7 Switzerland"
-* contact.name = "Marcel Hanselmann"
-* contact.telecom.system = #url
-* contact.telecom.value = "https://www.hl7.ch"
-* jurisdiction = urn:iso:std:iso:3166#CH
-* copyright = "CC-BY-SA-4.0"
 
 // --- order (Auftrag) item[0] ----------
 * item[0].linkId = "order"
