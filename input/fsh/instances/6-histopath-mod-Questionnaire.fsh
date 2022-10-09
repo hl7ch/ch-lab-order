@@ -6,7 +6,7 @@ Usage: #example
 * id = "6-histopath-mod"
 
 * meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* meta.lastUpdated = "2022-10-09T09:46:53.340+00:00"
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -39,6 +39,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-mod"
 * name = "LabOrderForm"
 * title = "Lab Order Form 6-histopath modular version"
+* derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
