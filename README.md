@@ -223,7 +223,7 @@ Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 [3-gyn]<https://test.ahdis.ch/matchbox/#/questionnaire/3-gyn>
 [4-sepsis]<https://test.ahdis.ch/matchbox/#/questionnaire/4-sepsis>
 [5-biol-monit]<https://test.ahdis.ch/matchbox/#/questionnaire/5-biol-monit>
-[6-histopath]<https://test.ahdis.ch/matchbox/#/questionnaire/6-histopath-flat>
+[6-histopath]<https://test.ahdis.ch/matchbox/#/questionnaire/6-histopath-flat-Questionnaire>
 [LabOrder-form]<https://test.ahdis.ch/matchbox/#/questionnaire/LabOrder-form-flat>
 
 ### Matchbox
