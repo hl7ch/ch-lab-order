@@ -55,10 +55,10 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form-flat"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form flat by catalog assembled from modular version"
+* title = "Lab Order form by catalog assembled from modular version"
 * status = #active
 * subjectType = #Patient
-* date = "2022-05-04"
+* date = "2022-10-09"
 * publisher = "HL7 Switzerland"
 * contact.name = "Marcel Hanselmann"
 * contact.telecom.system = #url
