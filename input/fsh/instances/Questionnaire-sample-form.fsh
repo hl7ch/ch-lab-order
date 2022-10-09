@@ -55,7 +55,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/Questionnaire-sample-form"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form 6-histopath assembled from modular version"
+* title = "Lab Order Form by Catalog"
 * status = #active
 * subjectType = #Patient
 * date = "2022-10-09"
@@ -811,6 +811,7 @@ Usage: #example
 
 // ########### specific Part ######################
 // ------------Choice of Specialty-----------------
+// ################################################
 
 * item[=].item.required = true
 * item[+].linkId = "labSpecialties"
