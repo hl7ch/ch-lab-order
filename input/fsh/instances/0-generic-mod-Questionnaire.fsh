@@ -40,7 +40,7 @@ Usage: #example
 * title = "Lab Order Form 0-generic modular version"
 * status = #active
 * subjectType = #Patient
-* date = "2022-05-04"
+* date = "2022-10-09"
 * publisher = "HL7 Switzerland"
 
 // ---------- order (Auftrag) ----------

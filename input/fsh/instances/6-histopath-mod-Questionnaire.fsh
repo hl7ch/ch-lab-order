@@ -42,7 +42,7 @@ Usage: #example
 * derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-questionnaire"
 * status = #active
 * subjectType = #Patient
-* date = "2022-05-04"
+* date = "2022-10-09"
 * publisher = "HL7 Switzerland"
 
 // ---------- order (Auftrag) ----------

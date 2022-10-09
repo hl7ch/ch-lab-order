@@ -55,7 +55,7 @@ Usage: #example
 * title = "Lab Order Form 0-generic assembled from modular version"
 * status = #active
 * subjectType = #Patient
-* date = "2022-05-04"
+* date = "2022-10-09"
 * publisher = "HL7 Switzerland"
 * contact.name = "Marcel Hanselmann"
 * contact.telecom.system = #url
