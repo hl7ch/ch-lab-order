@@ -1,15 +1,15 @@
 Instance: LabOrder-form-flat
 InstanceOf: Questionnaire
-Title: "Questionnaire Lab Order"
-Description: "Lab Order Form by Catalog"
+Title: "Questionnaire Lab Order from Catalog"
+Description: "Example for generic Questionnaire (flat version)"
 Usage: #example
-* id = "LabOrder-form-flat"
-* meta.lastUpdated = "2022-10-09T09:46:53.340+00:00"
+* id = "QuestionnaireLabOrder-form-flat"
+* meta.versionId = "1"
+* meta.lastUpdated = "2022-10-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
-
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
@@ -17,7 +17,6 @@ Usage: #example
 * extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#patient
 * extension[=].extension[+].url = "type"
 * extension[=].extension[=].valueCode = #Patient
-
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
 * extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
@@ -25,7 +24,6 @@ Usage: #example
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
@@ -52,21 +50,21 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-consent|1.1.0"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form-flat"
-* version = "1.1.0-assembled"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-flat"
+* version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order form by catalog assembled from modular version"
+* title = "Questionnaire Lab Order from Catalog"
 * status = #active
 * subjectType = #Patient
-* date = "2022-07-07"
+* date = "2022-10-10"
 * publisher = "HL7 Switzerland"
-* contact.name = "HL7 Switzerland"
+* contact.name = "Marcel Hanselmann"
 * contact.telecom.system = #url
-* contact.telecom.value = "https://www.hl7.ch/"
+* contact.telecom.value = "https://www.hl7.ch"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
 
-// --- order (Auftrag) item[0] ----------
+// ---- order (Auftrag) item[0] ----------
 // #######################################
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
@@ -85,7 +83,7 @@ Usage: #example
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
 
-// --- order.filler item[0][2] ----------
+// --- order.filler item[0][1] ----------
 * item[=].item[+].linkId = "order.fillerOrderIdentifier"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:fillerOrderIdentifier.value"
 * item[=].item[=].text = "Auftragsnummer des Auftragsempfängers"
@@ -374,7 +372,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "initiator.relatedPerson.givenName"
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.name.given"
-* item[=].item[=].item[=].text = "Vorame"
+* item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "initiator.relatedPerson.phone"
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.telecom.value"
@@ -411,7 +409,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-// --- patient item[2] ----
+// --- patient item[3] ----
 // ##################################
 * item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].extension[=].valueExpression.name = "linkIdPrefix"
@@ -663,8 +661,8 @@ Usage: #example
 * item[=].item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].item[=].type = #string
 
-// --- requestedEncounter item[3] ----
-// ##################################
+// ---- requested encounter item[4]----
+// ####################################
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
@@ -684,8 +682,8 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#2 "halbprivat"
 * item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#3 "privat"
 
-// --- coverage item[4] -------------
-// ##################################
+// ---------- Coverage item[5] ----------
+// ################################################
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -835,8 +833,8 @@ Usage: #example
 * item[=].item[=].item[=].text = "Bemerkung zur ID"
 * item[=].item[=].item[=].type = #string
 
-// --- sender item[5] ----
-// ##################################
+// ---------- Sender item[6] ----------
+// ################################################
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
@@ -996,8 +994,8 @@ Usage: #example
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-// --- receiver Copy item[6] ----
-// ##################################
+// ---------- CopyReceiver item[7] ----------
+// ################################################
 * item[+].linkId = "receiverCopy"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:copyReceiver"
 * item[=].text = "Kopieempfänger (Kopie dieses Auftrags und aller daraus resultierenden Resultate)"
@@ -1128,8 +1126,8 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-// --- antecedent Episode Of Care item[7] ----
-// ###########################################
+// ---- antecedent episode of care item[8] ----
+// ############################################
 * item[+].linkId = "antecedentEpisodeOfCare"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:antecedentEpisodeOfCare"
 * item[=].text = "Vorgängiger Aufenthalt in Spital / Heim"
@@ -1180,8 +1178,8 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-// --- appointment item[8] ----
-// ##################################
+// ---- appointment item[9] ----
+// ############################################
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -1259,8 +1257,8 @@ Usage: #example
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].type = #string
 
-// --- consent item[9] ----
-// ##################################
+// ---- consent item[10] ----
+// ############################################
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:patientConsent"
 * item[=].text = "Einverständniserklärung"
@@ -1274,8 +1272,8 @@ Usage: #example
 * item[=].item.item.text = "Anmerkung"
 * item[=].item.item.type = #string
 
-// --- note item[10] ----
-// ##################################
+// ---- note item[11] ----
+// ############################################
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group
@@ -1284,34 +1282,3 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item.text = "Kommentar"
 * item[=].item.type = #string
-
-// ########### specific Part ######################
-// ------------Choice of Specialty-----------------
-// ################################################
-
-* item[=].item.required = true
-* item[+].linkId = "labSpecialties"
-* item[=].text = "Labor Sparten"
-* item[=].type = #group
-* item[=].item.linkId = "labSpecialties.pathology"
-* item[=].item.definition = "27898-6"
-* item[=].item.text = "Pathology"
-* item[=].item.type = #boolean
-* item[=].item.item.linkId = "labSpecialties.pathology.panels"
-* item[=].item.item.text = "Pathology Panels"
-* item[=].item.item.type = #group
-* item[=].item.item.enableWhen.question = "labSpecialties.pathology"
-* item[=].item.item.enableWhen.operator = #=
-* item[=].item.item.enableWhen.answerBoolean = true
-* item[=].item.item.item[0].linkId = "labSpecialties.pathology.panels.Autopsy"
-* item[=].item.item.item[=].definition = "18743-5"
-* item[=].item.item.item[=].text = "Autopsy report"
-* item[=].item.item.item[=].type = #boolean
-* item[=].item.item.item[+].linkId = "labSpecialties.pathology.panels.PathologyStudy"
-* item[=].item.item.item[=].definition = "11526-1"
-* item[=].item.item.item[=].text = "Pathology Study"
-* item[=].item.item.item[=].type = #boolean
-* item[=].item.item.item[+].linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-* item[=].item.item.item[=].definition = "11529-5"
-* item[=].item.item.item[=].text = "Surgical pathology study"
-* item[=].item.item.item[=].type = #boolean
