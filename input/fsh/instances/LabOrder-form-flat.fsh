@@ -3,7 +3,7 @@ InstanceOf: Questionnaire
 Title: "Questionnaire Lab Order from Catalog"
 Description: "Example for generic Questionnaire (flat version)"
 Usage: #example
-* id = "LabOrder-form-flat"
+* id = "QuestionnaireLabOrder-form-flat"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -50,8 +50,8 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-consent|1.1.0"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form-flat"
-* version = "1.1.0-assembled"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/QuestionnaireLabOrder-form-flat"
+* version = "1.0.0-assembled"
 * name = "LabOrderForm"
 * title = "Questionnaire Lab Order from Catalog"
 * status = #active
@@ -262,32 +262,32 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
---- initiator item[2] ----
-##################################
+// --- initiator item[2] ----
+// ##################################
 * item[+].linkId = "initiator"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
 * item[=].text = "Initiant dieser Anmeldung"
 * item[=].type = #group
 * item[=].item[0].linkId = "initiator.legalrelation"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Juristische Beziehung zum Patienten"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = SCT#373068000 "Nicht definiert"
-* item[=].item[=].answerOption[+].valueCoding = SCT#58626002 "Gesetzlicher Vertreter"
+* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#373068000 "Nicht definiert"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#58626002 "Gesetzlicher Vertreter"
 * item[=].item[+].linkId = "initiator.personalrelation"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = SCT#66089001 "Tochter"
-* item[=].item[=].answerOption[+].valueCoding = SCT#65616008 "Sohn"
-* item[=].item[=].answerOption[+].valueCoding = SCT#127849001 "Ehemann"
-* item[=].item[=].answerOption[+].valueCoding = SCT#127850001 "Ehefrau"
-* item[=].item[=].answerOption[+].valueCoding = SCT#394921008 "Partner (eingetragene  Partnerschaft)"
-* item[=].item[=].answerOption[+].valueCoding = SCT#70924004 "Bruder"
-* item[=].item[=].answerOption[+].valueCoding = SCT#27733009 "Schwester"
-* item[=].item[=].answerOption[+].valueCoding = SCT#72705000 "Mutter"
-* item[=].item[=].answerOption[+].valueCoding = SCT#66839005 "Vater"
-* item[=].item[=].answerOption[+].valueCoding = SCT#48385004 "Bekannt"
+* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#66089001 "Tochter"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#65616008 "Sohn"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127849001 "Ehemann"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127850001 "Ehefrau"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#394921008 "Partner (eingetragene  Partnerschaft)"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#70924004 "Bruder"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#27733009 "Schwester"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#72705000 "Mutter"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#66839005 "Vater"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#48385004 "Bekannt"
 * item[=].item[+].linkId = "initiator.practitionerRole"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole#PractitionerRole.practitioner"
 * item[=].item[=].text = "Gesundheitsfachperson oder -organisation"
