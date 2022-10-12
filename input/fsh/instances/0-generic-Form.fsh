@@ -54,9 +54,9 @@ Usage: #inline
 * title = "Lab Order Form by Catalog"
 * section.title = "Lab Order Form"
 * section.code = http://loinc.org#93037-0 "Portable medical order form"
-* section.entry[0] = Reference(urn:uuid:ac86e008-6d9c-423c-ad34-06d883969bb7)
-* section.entry[+] = Reference(urn:uuid:c794ef06-3e6a-49b2-8c7d-5ac9ec3d7226)
-* section.entry[+] = Reference(urn:uuid:37a97a13-0a44-4ca2-a47e-a9e92ca1e146)
+* section.entry[0] = Reference(urn:uuid:ac86e008-6d9c-423c-ad34-06d883969bb7) // QuestionnaireResponse
+* section.entry[+] = Reference(urn:uuid:c794ef06-3e6a-49b2-8c7d-5ac9ec3d7226) // SR
+* section.entry[+] = Reference(urn:uuid:37a97a13-0a44-4ca2-a47e-a9e92ca1e146) // Questionnaire
 
 Instance: Inline-Instance-for-0-generic-form-1
 InstanceOf: Patient
@@ -68,7 +68,7 @@ Usage: #inline
 Instance: ac86e008-6d9c-423c-ad34-06d883969bb7
 InstanceOf: QuestionnaireResponse
 Usage: #inline
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-form"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/37a97a13-0a44-4ca2-a47e-a9e92ca1e146"
 * status = #in-progress
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
@@ -227,7 +227,7 @@ Usage: #inline
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|1.0.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.0.0"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-form"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/37a97a13-0a44-4ca2-a47e-a9e92ca1e146"
 * version = "1.0.0"
 * name = "LabOrderForm"
 * title = "Lab Order Form 0-generic assembled from modular version"
@@ -1001,6 +1001,8 @@ Instance: Inline-Instance-for-0-generic-form-5
 InstanceOf: Organization
 Usage: #inline
 * id = "974cfb3c-9e44-4288-983e-b1084f0b9a06"
+* identifier.value = "7601000235503"
+* name = "Arztpraxis Messen"
 
 Instance: Inline-Instance-for-0-generic-form-6
 InstanceOf: PractitionerRole
