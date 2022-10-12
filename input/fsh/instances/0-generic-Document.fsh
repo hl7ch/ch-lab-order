@@ -22,7 +22,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/0-generic-flat"
-* entry[=].resource = 0-generic-flat-Questionnaire
+* entry[=].resource = 0-generic-flat
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/0-generic-flat-QuestionnaireResponse"
 * entry[=].resource = 0-generic-flat-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-generic"
