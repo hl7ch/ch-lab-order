@@ -12,7 +12,7 @@ Alias:  EchMaritalStatus                       = http://fhir.ch/ig/ch-core/CodeS
 Alias:  ReligiousAffiliation                   = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
 // Order
-Alias:  RequestPriority                        = http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.priority
+Alias:  RequestPriority                        = http://hl7.org/fhir/request-priority
 Alias:  CH-LAB-ORDER-servicerequest-categories = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
 Alias:  ShareableValueSet                      = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias:  DocumentEntryClassCode                 = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode

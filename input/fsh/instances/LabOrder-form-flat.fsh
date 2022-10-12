@@ -173,14 +173,14 @@ Usage: #example
 
 // --- order priority item[0][7] ---
 * item[=].item[+].linkId = "order.priority"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.priority"
+* item[=].item[=].definition = RequestPriority
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://hl7.org/fhir/request-priority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = RequestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
 // --- receiver item[1]----
 // ######################
