@@ -1,4 +1,4 @@
-Instance: cb9e5e26-2d81-4276-9670-311580d9aca3
+Instance: 0-generic-form
 InstanceOf: Bundle
 Description: "Lab Order Form by Catalog"
 Usage: #example
@@ -9,33 +9,33 @@ Usage: #example
 * entry[0].fullUrl = "urn:uuid:a6c6d60e-c17c-4a6e-861f-dbf9349d47a0"
 * entry[=].resource = a6c6d60e-c17c-4a6e-861f-dbf9349d47a0
 * entry[+].fullUrl = "urn:uuid:0648f307-78d3-4df2-9973-b29917883368"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-1
+* entry[=].resource = Inline-Instance-for-0-generic-form-1
 * entry[+].fullUrl = "urn:uuid:ac86e008-6d9c-423c-ad34-06d883969bb7"
 * entry[=].resource = ac86e008-6d9c-423c-ad34-06d883969bb7
 * entry[+].fullUrl = "urn:uuid:c794ef06-3e6a-49b2-8c7d-5ac9ec3d7226"
 * entry[=].resource = c794ef06-3e6a-49b2-8c7d-5ac9ec3d7226
 * entry[+].fullUrl = "urn:uuid:37a97a13-0a44-4ca2-a47e-a9e92ca1e146"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-2
+* entry[=].resource = Inline-Instance-for-0-generic-form-2
 * entry[+].fullUrl = "urn:uuid:5109c305-8658-4299-b57a-8cbdbe24715f"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-3
+* entry[=].resource = Inline-Instance-for-0-generic-form-3
 * entry[+].fullUrl = "urn:uuid:edf67477-aa77-4592-bb75-89c1d32d3430"
 * entry[=].resource = edf67477-aa77-4592-bb75-89c1d32d3430
 * entry[+].fullUrl = "urn:uuid:f4caa957-a5b4-4357-bfbc-e7f33cb105d1"
 * entry[=].resource = f4caa957-a5b4-4357-bfbc-e7f33cb105d1
 * entry[+].fullUrl = "urn:uuid:5e9f5b4e-d6f3-41ff-9d8a-9aa65637d48a"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-4
+* entry[=].resource = Inline-Instance-for-0-generic-form-4
 * entry[+].fullUrl = "urn:uuid:b8b7516a-6324-44ba-9581-e5f418ffccc6"
 * entry[=].resource = b8b7516a-6324-44ba-9581-e5f418ffccc6
 * entry[+].fullUrl = "urn:uuid:974cfb3c-9e44-4288-983e-b1084f0b9a06"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-5
+* entry[=].resource = Inline-Instance-for-0-generic-form-5
 * entry[+].fullUrl = "urn:uuid:069545f4-8c8a-4b23-9ad3-77b293d54210"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-6
+* entry[=].resource = Inline-Instance-for-0-generic-form-6
 * entry[+].fullUrl = "urn:uuid:161d5da3-18ac-4655-a0e6-a82508a4bc7f"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-7
+* entry[=].resource = Inline-Instance-for-0-generic-form-7
 * entry[+].fullUrl = "urn:uuid:99493c3c-9f2e-4663-af1e-f6ebee6437bb"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-8
+* entry[=].resource = Inline-Instance-for-0-generic-form-8
 * entry[+].fullUrl = "urn:uuid:8913d72d-6730-4d35-a06e-7e055d667f64"
-* entry[=].resource = Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-9
+* entry[=].resource = Inline-Instance-for-0-generic-form-9
 
 Instance: a6c6d60e-c17c-4a6e-861f-dbf9349d47a0
 InstanceOf: Composition
@@ -58,7 +58,7 @@ Usage: #inline
 * section.entry[+] = Reference(urn:uuid:c794ef06-3e6a-49b2-8c7d-5ac9ec3d7226)
 * section.entry[+] = Reference(urn:uuid:37a97a13-0a44-4ca2-a47e-a9e92ca1e146)
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-1
+Instance: Inline-Instance-for-0-generic-form-1
 InstanceOf: Patient
 Usage: #inline
 * id = "0648f307-78d3-4df2-9973-b29917883368"
@@ -68,7 +68,7 @@ Usage: #inline
 Instance: ac86e008-6d9c-423c-ad34-06d883969bb7
 InstanceOf: QuestionnaireResponse
 Usage: #inline
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-form"
 * status = #in-progress
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
@@ -183,7 +183,7 @@ Usage: #inline
 * requester = Reference(urn:uuid:5e9f5b4e-d6f3-41ff-9d8a-9aa65637d48a)
 * note.text = "Some Comment to add"
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-2
+Instance: Inline-Instance-for-0-generic-form-2
 InstanceOf: Questionnaire
 Usage: #inline
 * id = "37a97a13-0a44-4ca2-a47e-a9e92ca1e146"
@@ -227,7 +227,7 @@ Usage: #inline
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|1.0.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.0.0"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-form"
 * version = "1.0.0"
 * name = "LabOrderForm"
 * title = "Lab Order Form 0-generic assembled from modular version"
@@ -950,7 +950,7 @@ Usage: #inline
 * item[=].item.type = #string
 * item[=].item.required = true
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-3
+Instance: Inline-Instance-for-0-generic-form-3
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "5109c305-8658-4299-b57a-8cbdbe24715f"
@@ -977,7 +977,7 @@ Usage: #inline
 * identifier.value = "7601000234407"
 * name = "Labor Pipette"
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-4
+Instance: Inline-Instance-for-0-generic-form-4
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "5e9f5b4e-d6f3-41ff-9d8a-9aa65637d48a"
@@ -997,26 +997,26 @@ Usage: #inline
 * name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 * name.prefix.extension.valueCode = #AC
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-5
+Instance: Inline-Instance-for-0-generic-form-5
 InstanceOf: Organization
 Usage: #inline
 * id = "974cfb3c-9e44-4288-983e-b1084f0b9a06"
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-6
+Instance: Inline-Instance-for-0-generic-form-6
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "069545f4-8c8a-4b23-9ad3-77b293d54210"
 * practitioner = Reference(urn:uuid:161d5da3-18ac-4655-a0e6-a82508a4bc7f)
 * organization = Reference(urn:uuid:974cfb3c-9e44-4288-983e-b1084f0b9a06)
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-7
+Instance: Inline-Instance-for-0-generic-form-7
 InstanceOf: Practitioner
 Usage: #inline
 * id = "161d5da3-18ac-4655-a0e6-a82508a4bc7f"
 * name.family = "Mustermann"
 * name.given = "Marc"
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-8
+Instance: Inline-Instance-for-0-generic-form-8
 InstanceOf: Appointment
 Usage: #inline
 * id = "99493c3c-9f2e-4663-af1e-f6ebee6437bb"
@@ -1026,7 +1026,7 @@ Usage: #inline
 * participant.actor = Reference(urn:uuid:8913d72d-6730-4d35-a06e-7e055d667f64)
 * participant.status = #tentative
 
-Instance: Inline-Instance-for-cb9e5e26-2d81-4276-9670-311580d9aca3-9
+Instance: Inline-Instance-for-0-generic-form-9
 InstanceOf: Location
 Usage: #inline
 * id = "8913d72d-6730-4d35-a06e-7e055d667f64"
