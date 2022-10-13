@@ -217,9 +217,11 @@ Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 
 ### Lab Order Forms
 
+[0-generic-flat]<https://test.ahdis.ch/matchbox/#/questionnaire/0-generic-flat>
+
 [0-generic]<https://test.ahdis.ch/matchbox/#/questionnaire/0-generic>
 [1-tvt]<https://test.ahdis.ch/matchbox/#/questionnaire/1-tvt>
-[2-pertussis]<https://test.ahdis.ch/matchbox/#/questionnaire/0-generic>
+[2-pertussis]<https://test.ahdis.ch/matchbox/#/questionnaire/2-pertussis>
 [3-gyn]<https://test.ahdis.ch/matchbox/#/questionnaire/3-gyn>
 [4-sepsis]<https://test.ahdis.ch/matchbox/#/questionnaire/4-sepsis>
 [5-biol-monit]<https://test.ahdis.ch/matchbox/#/questionnaire/5-biol-monit>

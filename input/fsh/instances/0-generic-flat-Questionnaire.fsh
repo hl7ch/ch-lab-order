@@ -848,7 +848,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].text = "Pipette Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Pipette.labServices"
-* item[=].item[=].item[=].text = "Analyasen Labor Pipette"
+* item[=].item[=].item[=].text = "Analysen Labor Pipette"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -894,3 +894,51 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].type = #boolean
 
 // further plan definitions
+
+
+// ---- Compendium Labor Schildknecht ----
+* item[=].item[+].linkId = "labCatalog.Schildknecht"
+* item[=].item[=].definition = "27898-6"
+* item[=].item[=].text = "Schildknecht Compendium"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "labCatalog.Schildknecht.labServices"
+* item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "labCatalog.Schildknecht"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+// ------------Choice of Specialty-----------------
+// 
+* item[=].item[=].item[=].item[+].linkId = "hematology"
+* item[=].item[=].item[=].item[=].text = "Hematology"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
+* item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[+].linkId = "coagulation"
+* item[=].item[=].item[=].item[=].text = "Coagulation"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "d-dimer"
+* item[=].item[=].item[=].item[=].item.text = "D-Dimer"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item[=].item[=].item[+].linkId = "cc"
+* item[=].item[=].item[=].item[=].text = "clinical chemistry"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "crp"
+* item[=].item[=].item[=].item[=].item.text = "CRP"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
