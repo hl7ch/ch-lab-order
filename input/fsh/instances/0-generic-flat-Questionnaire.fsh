@@ -798,3 +798,111 @@ Usage: #example
 * item[=].item.text = "Kommentar"
 * item[=].item.type = #string
 * item[=].item.required = true
+
+// ############################################################
+// ########### Lab Service from Catalog #######################
+// ############################################################
+// To order one ore more Tests or Test-Panels as Lab Services, 
+// we choose the wanted PlanDefinition, here potassium, panel electrolytes or 
+// Composition (Catalog Header) for each Test/Panel Order, we choose the Specimen
+// Definition 
+// ########################################################################
+
+/* ============ Kerninhaltes der Lab-Order Form ==============================
+CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
+*/
+
+// ------------Choice of Catalog -----------------
+
+* item[+].linkId = "labCatalogs"
+* item[=].text = "Labor Compendien"
+* item[=].type = #group
+* item[=].item[+].linkId = "labCatalog.Gantenbein"
+* item[=].item[=].definition = ""
+* item[=].item[=].text = "Gantenbein Compendium"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
+* item[=].item[=].item[=].text = "Analyasen Labor Gantenbein"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Kalium"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Sodium"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Natrium"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Chloride"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Chlorid"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+/*
+// -- Choose Serum Potassium ---
+* item[=].item[=].item[=].item[+].linkId = "potassium-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Kalium im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+// -- Choose Panel Electrolyte ---
+* item[=].item[=].item[=].item[+].linkId = "panel-blood-electrolyte"
+* item[=].item[=].item[=].item[=].definition = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Elektrolyt Panel im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+// -- Choose Creatinine Serum ---
+* item[=].item[=].item[=].item[+].linkId = "creatinine-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Creatinin im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.SpecimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Proben: "
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen[+].question = "creatinine-serum"
+* item[=].item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+// -- creatinin-serum allows 2 specimenDefinitions: capillary, venous ---
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "single-test-serum-capillary"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "specimenDefinition capillary"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "single-test-serum-venous"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "specimenDefinition venous"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+
+// -- Choose Serum Vitamin D ---
+* item[=].item[=].item[=].item[+].linkId = "vitamin-d-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Vitamin D im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+// further plan definitions
+
+* item[+].linkId = "labCatalogs"
+* item[=].text = "Labor Compendien"
+* item[=].type = #group
+* item[=].item[+].linkId = "labCatalog.Pipette"
+* item[=].item[=].definition = "27898-6"
+* item[=].item[=].text = "Pipette Compendium"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "labCatalog.Pipette.labServices"
+* item[=].item[=].item[+].text = "Analyasen Labor Pipette"
+* item[=].item[=].item[+].type = #group
+* item[=].item[=].item[+].enableWhen.question = "labCatalog.Pipette"
+* item[=].item[=].item[+].enableWhen.operator = #=
+* item[=].item[=].item[+].enableWhen.answerBoolean = true
+
+
+
+// -- Choose Serum Vitamin D ---
+* item[=].item[=].item[=].item[+].linkId = "vitamin-d-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Vitamin D im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+*/
