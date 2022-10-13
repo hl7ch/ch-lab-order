@@ -817,6 +817,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[+].linkId = "labCatalogs"
 * item[=].text = "Labor Compendien"
 * item[=].type = #group
+
 * item[=].item[+].linkId = "labCatalog.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
@@ -841,7 +842,18 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].text = "Chlorid"
 * item[=].item[=].item[=].item[=].type = #boolean
 
-/*
+// ---- Compendium Labor Pipette ----
+* item[=].item[+].linkId = "labCatalog.Pipette"
+* item[=].item[=].definition = ""
+* item[=].item[=].text = "Pipette Compendium"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "labCatalog.Pipette.labServices"
+* item[=].item[=].item[=].text = "Analyasen Labor Pipette"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
 // -- Choose Serum Potassium ---
 * item[=].item[=].item[=].item[+].linkId = "potassium-serum"
 * item[=].item[=].item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
@@ -882,27 +894,3 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].type = #boolean
 
 // further plan definitions
-
-* item[+].linkId = "labCatalogs"
-* item[=].text = "Labor Compendien"
-* item[=].type = #group
-* item[=].item[+].linkId = "labCatalog.Pipette"
-* item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Pipette Compendium"
-* item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "labCatalog.Pipette.labServices"
-* item[=].item[=].item[+].text = "Analyasen Labor Pipette"
-* item[=].item[=].item[+].type = #group
-* item[=].item[=].item[+].enableWhen.question = "labCatalog.Pipette"
-* item[=].item[=].item[+].enableWhen.operator = #=
-* item[=].item[=].item[+].enableWhen.answerBoolean = true
-
-
-
-// -- Choose Serum Vitamin D ---
-* item[=].item[=].item[=].item[+].linkId = "vitamin-d-serum"
-* item[=].item[=].item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].text = "Vitamin D im Serum oder Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-*/
