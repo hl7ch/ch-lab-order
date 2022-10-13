@@ -808,11 +808,12 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item.text = "Kommentar"
 * item[=].item.type = #string
+* item[=].item.required = true
 
 // ########### specific Part ######################
 // ------------Choice of Specialty-----------------
 
-* item[=].item.required = true
+
 * item[+].linkId = "labSpecialties"
 * item[=].text = "Labor Sparten"
 * item[=].type = #group
