@@ -868,6 +868,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+
 * item[=].item[=].item[=].item[+].linkId = "coagulation"
 * item[=].item[=].item[=].item[=].text = "Coagulation"
 * item[=].item[=].item[=].item[=].type = #group
@@ -876,6 +877,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 * item[=].item[=].item[=].item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+
 * item[=].item[=].item[=].item[+].linkId = "cc"
 * item[=].item[=].item[=].item[=].text = "clinical chemistry"
 * item[=].item[=].item[=].item[=].type = #group
