@@ -854,46 +854,44 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// ------------Choice of Specialty-----------------
-// 
-* item[=].item[=].item[=].item[+].linkId = "hematology"
-* item[=].item[=].item[=].item[=].text = "Hematology"
-* item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
-* item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
-* item[=].item[=].item[=].item[=].item.type = #choice
-* item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+// -- Choose Serum Potassium ---
+* item[=].item[=].item[=].item[+].linkId = "potassium-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Kalium im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
 
-* item[=].item[=].item[=].item[+].linkId = "coagulation"
-* item[=].item[=].item[=].item[=].text = "Coagulation"
-* item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "d-dimer"
-* item[=].item[=].item[=].item[=].item.text = "D-Dimer"
-* item[=].item[=].item[=].item[=].item.type = #choice
-* item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+// -- Choose Panel Electrolyte ---
+* item[=].item[=].item[=].item[+].linkId = "panel-blood-electrolyte"
+* item[=].item[=].item[=].item[=].definition = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Elektrolyt Panel im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
 
-* item[=].item[=].item[=].item[+].linkId = "cc"
-* item[=].item[=].item[=].item[=].text = "clinical chemistry"
-* item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "crp"
-* item[=].item[=].item[=].item[=].item.text = "CRP"
-* item[=].item[=].item[=].item[=].item.type = #choice
-* item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+// -- Choose Creatinine Serum ---
+* item[=].item[=].item[=].item[+].linkId = "creatinine-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Creatinin im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[=].item[+].linkId = "Catalog.SpecimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Proben: "
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen[+].question = "creatinine-serum"
+* item[=].item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+// -- creatinin-serum allows 2 specimenDefinitions: capillary, venous ---
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "single-test-serum-capillary"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "specimenDefinition capillary"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "single-test-serum-venous"
+* item[=].item[=].item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "specimenDefinition venous"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+// -- Choose Serum Vitamin D ---
+* item[=].item[=].item[=].item[+].linkId = "vitamin-d-serum"
+* item[=].item[=].item[=].item[=].definition = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].text = "Vitamin D im Serum oder Plasma"
+* item[=].item[=].item[=].item[=].type = #boolean
 
 // further plan definitions
 
