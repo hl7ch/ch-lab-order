@@ -218,7 +218,6 @@ Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 ### Lab Order Forms
 
 [0-generic-flat]<https://test.ahdis.ch/matchbox/#/questionnaire/0-generic-flat>
-[sdc-sample]<https://test.ahdis.ch/matchbox/#/questionnaire/sdc-sample>
 
 [0-generic]<https://test.ahdis.ch/matchbox/#/questionnaire/0-generic>
 [1-tvt]<https://test.ahdis.ch/matchbox/#/questionnaire/1-tvt>
