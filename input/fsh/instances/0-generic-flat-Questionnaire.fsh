@@ -854,17 +854,31 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-* item[=].item[=].item[=].item[+].linkId = "labCatalog.Pipette.labServices"
-* item[=].item[=].item[=].item[=].text = "Lab Services Labor Pipette"
+* item[=].item[=].item[=].item[+].linkId = "cc.labServices"
+* item[=].item[=].item[=].item[=].text = "Clinical Chemistiry Lab Services Labor Pipette"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].item.linkId = "cc-subset"
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueString = "PlanDefinition potassium-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueString = "PlanDefinition panel-blood-electrolyte"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueString = "PlanDefinition creatinine-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueString = "PlanDefinition vitamin-d-serum"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#4635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueString = "Other Analyses, free text"
+
+* item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
+* item[=].item[=].item[=].item[=].text = "Hematology Lab Services Labor Pipette"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
+* item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 
 /*
 // -- Choose Serum Potassium ---
