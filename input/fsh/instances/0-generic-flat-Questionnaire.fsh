@@ -848,29 +848,41 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].text = "Pipette Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
-* item[=].item[=].item[=].text = "Compendium"
+* item[=].item[=].item[=].text = "Lab Services"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
 * item[=].item[=].item[=].item[+].linkId = "cc.labServices"
-* item[=].item[=].item[=].item[=].text = "Clinical Chemistiry Lab Services Labor Pipette"
+* item[=].item[=].item[=].item[=].text = "Clinical Chemistiry Lab Services"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "cc-subset"
+* item[=].item[=].item[=].item[=].item.linkId = "cc-subset-pipette"
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+
+* item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.type = #group
+* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
+* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = LOINC#2823-3
+* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
+* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
+* item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[=].valueCoding = SCT#28520004 "Venipuncture for blood test"
+
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#4635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueString = "Other Analyses, free text"
 
 * item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
-* item[=].item[=].item[=].item[=].text = "Hematology Lab Services Labor Pipette"
+* item[=].item[=].item[=].item[=].text = "Hematology Lab Services"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset-pipette"
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
@@ -941,7 +953,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[+].linkId = "hematology"
 * item[=].item[=].item[=].item[=].text = "Hematology"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset-schildknecht"
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
@@ -958,7 +970,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 * item[=].item[=].item[=].item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* item[=].item[=].item[=].item[+].linkId = "cc"
+* item[=].item[=].item[=].item[+].linkId = "cc-subset-schildknecht"
 * item[=].item[=].item[=].item[=].text = "clinical chemistry"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].item.linkId = "crp"
