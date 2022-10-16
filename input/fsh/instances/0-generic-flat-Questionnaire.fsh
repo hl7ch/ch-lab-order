@@ -857,7 +857,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Pipette.labServices"
 * item[=].item[=].item[=].item[=].text = "Lab Services Labor Pipette"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].answerOption[0].valueString = "PlanDefinition/potassium-serum"
+* item[=].item[=].item[=].item[=].item.linkId = "cc-subset"
+* item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition potassium-serum"
 * item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition panel-blood-electrolyte"
 * item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition creatinine-serum"
 * item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition vitamin-d-serum"
