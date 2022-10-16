@@ -1,5 +1,6 @@
 Instance: sdc-pathology
 InstanceOf: Questionnaire
+Description: "Sample File for Advanced Rendering"
 Usage: #example
 * url = "http://hl7.org/fhir/uv/sdc/Questionnaire/sdc-pathology"
 * version = "3.0.0"
