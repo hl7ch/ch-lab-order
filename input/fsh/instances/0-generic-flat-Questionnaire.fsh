@@ -873,7 +873,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[=].valueCoding = SCT#28520004 "Venipuncture for blood test"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#28520004 "Venipuncture for blood test"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
