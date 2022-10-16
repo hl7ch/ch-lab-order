@@ -844,16 +844,25 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 // ---- Compendium Labor Pipette ----
 * item[=].item[+].linkId = "labCatalog.Pipette"
-* item[=].item[=].definition = ""
+* item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Pipette Compendium"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "labCatalog.Pipette.labServices"
-* item[=].item[=].item[=].text = "Analysen Labor Pipette"
+* item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
+* item[=].item[=].item[=].text = "Compendium"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Pipette.labServices"
+* item[=].item[=].item[=].item[=].text = "Lab Services Labor Pipette"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].answerOption[0].valueString = "PlanDefinition/potassium-serum"
+* item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition panel-blood-electrolyte"
+* item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition creatinine-serum"
+* item[=].item[=].item[=].item[=].answerOption[+].valueString = "PlanDefinition vitamin-d-serum"
+
+/*
 // -- Choose Serum Potassium ---
 * item[=].item[=].item[=].item[+].linkId = "potassium-serum"
 * item[=].item[=].item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
@@ -895,6 +904,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 // further plan definitions
 
+*/
 
 // ---- Compendium Labor Schildknecht ----
 * item[=].item[+].linkId = "labCatalog.Schildknecht"
