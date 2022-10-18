@@ -861,9 +861,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-//* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueReference = Reference(PlanDefinition/potassium-serum) "Potassium [Moles/volume] in Serum or Plasma"
 
+/*
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.type = #group
@@ -875,6 +875,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "Venous blood specimen (specimen)"
+*/
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
