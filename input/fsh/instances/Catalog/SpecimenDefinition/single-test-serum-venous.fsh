@@ -4,7 +4,7 @@ Description: "Single Test Venous blood"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US
-* typeCollected = http://terminology.hl7.org/CodeSystem/v2-0487#BLDV "Blood venous"
+* typeCollected = http://snomed.info/sct#122555007 "Venous blood specimen (specimen)"
 * collection = http://snomed.info/sct#28520004 "Venipuncture for blood test"
 * typeTested[0].type = http://terminology.hl7.org/CodeSystem/v2-0487#SER "Serum"
 * typeTested[=].preference = #preferred

@@ -855,7 +855,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
 * item[=].item[=].item[=].item[+].linkId = "cc.labServices"
-* item[=].item[=].item[=].item[=].text = "Clinical Chemistiry Lab Services"
+* item[=].item[=].item[=].item[=].text = "Clinical Chemistry Lab Services"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].item.linkId = "cc-subset-pipette"
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
@@ -874,7 +874,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "Venipuncture for blood test"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
