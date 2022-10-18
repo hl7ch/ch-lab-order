@@ -215,7 +215,9 @@ Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 
 [LOINC Document Ontology](https://loinc.org/document-ontology/)
 
-### Lab Order Forms
+## Matchbox
+
+### Questionnaires
 
 [0-generic-flat]<https://test.ahdis.ch/matchbox/#/questionnaire/0-generic-flat>
 
@@ -232,6 +234,6 @@ Matchbox: file doesn't load
 [sdc-sample]<https://test.ahdis.ch/matchbox/#/questionnaire/sdc-sample>
 [sdc-pathology]<https://test.ahdis.ch/matchbox/#/questionnaire/sdc-pathology>
 
-### Matchbox
+### IG
 
 [package]<http://build.fhir.org/ig/hl7ch/ch-lab-order/branches/develop/package.tgz>
