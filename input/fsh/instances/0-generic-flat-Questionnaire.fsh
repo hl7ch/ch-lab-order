@@ -605,7 +605,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-/*
+
 // ---- Clinical Chemistry Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "cc.labServices"
 * item[=].item[=].item[=].item[=].text = "Clinical Chemistry Lab Services"
@@ -615,7 +615,17 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueReference = Reference(PlanDefinition/potassium-serum) "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
 
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/vitamind-serum) "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+
+/*
+
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
+
+/*
 * item[=].item[=].item[=].item[=].item.answerOption[0].modifierExtension.valueIdentifier.value = "potassium-serum"
 * item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive"
 * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
@@ -675,17 +685,6 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 
 /*
-// -- Choose Serum Potassium ---
-* item[=].item[=].item[=].item[+].linkId = "potassium-serum"
-* item[=].item[=].item[=].item[=].definition = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].text = "Kalium im Serum oder Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-// -- Choose Panel Electrolyte ---
-* item[=].item[=].item[=].item[+].linkId = "panel-blood-electrolyte"
-* item[=].item[=].item[=].item[=].definition = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].text = "Elektrolyt Panel im Serum oder Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
 
 // -- Choose Creatinine Serum ---
 * item[=].item[=].item[=].item[+].linkId = "creatinine-serum"
