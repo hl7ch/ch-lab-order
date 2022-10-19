@@ -1,7 +1,7 @@
 Instance: 6-histopath-mod-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire 6-histopath (modular version)"
-Description: "Example for Questionnaire of Histopathology Examination"
+Description: "Example for modular Questionnaire of Histopathology Examination"
 Usage: #example
 * id = "6-histopath-mod"
 
