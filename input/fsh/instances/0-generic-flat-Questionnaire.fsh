@@ -605,7 +605,6 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-
 // ---- Clinical Chemistry Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "cc.labServices"
 * item[=].item[=].item[=].item[=].text = "Clinical Chemistry Lab Services"
@@ -633,6 +632,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 
 /*
+// Does not render
 * item[=].item[=].item[=].item[=].item.answerOption[0].modifierExtension.valueIdentifier.value = "potassium-serum"
 * item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type" // VS not correct
 * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
