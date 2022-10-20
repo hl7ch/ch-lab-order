@@ -5,17 +5,16 @@ Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
-* meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
-
+* meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div></div>"
+
+// ---- Sender and Receiver ----
 * extension[0].extension.url = "enterer"
 * extension[=].extension.valueReference = Reference(MarcMustermannArztpraxis)
 * extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
-
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
-
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
 * extension[=].valueReference = Reference(MarcMustermannArztpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
@@ -25,6 +24,7 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(Patient/HansGuggindieluft)
 
+// Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
 * title = "Laborauftrag"
 * category = SCT#721963009 "Order (record artifact)"

@@ -5,10 +5,11 @@ Description: "Example for Laboratory Order Questionnaire due to suspected deep v
 Usage: #example
 * id = "0-generic"
 * meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* meta.lastUpdated = "2022-10-20T09:46:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
+
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"

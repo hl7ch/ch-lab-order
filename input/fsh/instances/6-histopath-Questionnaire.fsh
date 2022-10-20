@@ -1,11 +1,11 @@
 Instance: 6-histopath-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 6-histopath"
-Description: "Example for Questionnaire of Histopathology Examination assembled from modular version"
+Title: "questionnaire 6-histopath assembled from modular version"
+Description: "Example for Questionnaire of Histopathology Examination "
 Usage: #example
 * id = "6-histopath"
 * meta.versionId = "1"
-* meta.lastUpdated = "2022-10-09T09:46:53.340+00:00"
+* meta.lastUpdated = "2022-10-20T09:46:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
