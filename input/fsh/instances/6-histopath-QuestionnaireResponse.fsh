@@ -1,8 +1,12 @@
-Instance: 6-histopath-flat-QuestionnaireResponse
+Instance: 6-histopath-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "QuestionnaireResponse 6-histopath (modular version)"
 Description: "Example for QuestionnaireResponse of Histopathology Examination"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat-Questionnaire"
+Usage: #example
+* id = "6-histopath"
+* meta.versionId = "1"
+* meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------
@@ -70,7 +74,7 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].answer.valueString = "marc.mustermann@gruppenpraxis.ch"
 
-// --- order priority ---
+// ---- order priority ----
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].answer.valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
@@ -81,7 +85,7 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
 * item[=].text = "Empfänger"
 
-// --- receiver.practitioner ------------------------
+// ---- receiver.practitioner ------------------------
 * item[=].item[0].linkId = "receiver.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].item[0].linkId = "receiver.practitioner.title"

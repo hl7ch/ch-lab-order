@@ -1,28 +1,18 @@
-Instance: 0-generic-flat-QuestionnaireResponse
+Instance: 0-generic-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response 0-generic-flat"
+Title: "questionnaire response 0-generic"
 Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-generic-flat-QuestionnaireResponse"
+* id = "0-generic"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 * status = #completed
 
+// ---------- order (Auftrag) item[0] ----------
+// ################################################
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-
-// * item[=].item[+].linkId = "order.title"
-// * item[=].item[=].text = "Titel"
-// * item[=].item[=].answer.valueString = "Laborauftrag"
-// 
-// * item[=].item[+].linkId = "order.category"
-// * item[=].item[=].text = "Kategorie"
-// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
-// 
-// * item[=].item[+].linkId = "order.type"
-// * item[=].item[=].text = "Typ"
-// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order" 
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"

@@ -1,11 +1,11 @@
-Instance: 6-histopath-flat-Questionnaire
-InstanceOf: Questionnaire
-Title: "6-histopath-flat"
-Description: "Example for Questionnaire of Histopathology Examination (flat version)"
+Instance: 6-histopath-Questionnaire
+InstanceOf: ChOrfQuestionnaire
+Title: "questionnaire 6-histopath assembled from modular version"
+Description: "Example for Questionnaire of Histopathology Examination"
 Usage: #example
-* id = "6-histopath-flat-Questionnaire"
+* id = "6-histopath"
 * meta.versionId = "1"
-* meta.lastUpdated = "2022-10-09T09:46:53.340+00:00"
+* meta.lastUpdated = "2022-10-20T09:46:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -52,7 +52,7 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-appointment|1.0.0"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath-flat-Questionnaire"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
 * title = "Lab Order Form 6-histopath assembled from modular version"
@@ -812,7 +812,7 @@ Usage: #example
 
 // ########### specific Part ######################
 // ------------Choice of Specialty-----------------
-
+// ################################################
 
 * item[+].linkId = "labSpecialties"
 * item[=].text = "Labor Sparten"

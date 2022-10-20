@@ -21,9 +21,9 @@ Usage: #example
 * entry[=].resource = Arztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/0-generic-flat"
-* entry[=].resource = 0-generic-flat
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/0-generic-flat-QuestionnaireResponse" // entry[6]
-* entry[=].resource = 0-generic-flat-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/0-generic"
+* entry[=].resource = 0-generic-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/0-generic" //entry[6]
+* entry[=].resource = 0-generic-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-generic"
 * entry[=].resource = 0-generic-ServiceRequest

@@ -3,8 +3,8 @@ InstanceOf: CHCoreOrganization
 Title: "Labor Gantenbein"
 Description: "Laboratory Organization, refers to all Storyboards"
 Usage: #example
-* identifier.system = "urn:oid:2.51.1.5"
-* identifier.value = "7601000231111"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601055231116"
 * name = "Labor Gantenbein"
 * telecom[0].system = #phone
 * telecom[=].value = "+41223345566"

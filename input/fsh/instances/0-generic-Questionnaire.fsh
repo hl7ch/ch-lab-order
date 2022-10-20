@@ -1,14 +1,15 @@
-Instance: 0-generic-flat
+Instance: 0-generic-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 0-generic-flat"
+Title: "questionnaire 0-generic"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-generic-flat"
+* id = "0-generic"
 * meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* meta.lastUpdated = "2022-10-20T09:46:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
+
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
@@ -28,10 +29,10 @@ Usage: #example
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 * version = "1.0.0"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example 0-generic-flat"
+* title = "Lab Order Form Example 0-generic"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
