@@ -1,11 +1,11 @@
-Instance: 0-generic-Questionnaire
+Instance: LabOrder-form
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 0-generic"
-Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
+Title: "Questionnaire Lab Order from Catalog"
+Description: "Example for generic Questionnaire (flat version)"
 Usage: #example
-* id = "0-generic"
+* id = "LabOrder-form"
 * meta.versionId = "1"
-* meta.lastUpdated = "2022-10-20T09:46:53.340+00:00"
+* meta.lastUpdated = "2022-10-21T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -31,17 +31,17 @@ Usage: #example
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
-* version = "1.0.0"
-* name = "LabOrderFormExample"
-* title = "Lab Order Form Example 0-generic"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
+// * version = "1.1.0-assembled"
+* name = "LabOrderForm"
+* title = "Questionnaire Lab Order from Catalog"
 * status = #active
 * subjectType = #Patient
-* date = "2020-12-17"
+* date = "2022-10-10"
 * publisher = "HL7 Switzerland"
-* contact.name = "HL7 Switzerland"
+* contact.name = "Marcel Hanselmann"
 * contact.telecom.system = #url
-* contact.telecom.value = "https://www.hl7.ch/"
+* contact.telecom.value = "https://www.hl7.ch"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
 
