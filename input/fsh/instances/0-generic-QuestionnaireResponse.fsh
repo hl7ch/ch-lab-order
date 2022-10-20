@@ -1,12 +1,12 @@
-Instance: 0-generic-flat-QuestionnaireResponse
+Instance: 0-generic-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response 0-generic-flat"
+Title: "questionnaire response 0-generic"
 Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-generic-flat-QuestionnaireResponse"
+* id = "0-generic-QuestionnaireResponse"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-flat"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic"
 * status = #completed
 
 * item[0].linkId = "order"
