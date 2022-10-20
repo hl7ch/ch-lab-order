@@ -26,3 +26,10 @@ The display "Clinical presentation" is not a valid display for the code {http://
 # Build errors
 
 The link 'http://hl7.org/fhir/R4/snomed.html' for "SNOMED CT" cannot be resolved
+
+# Validation information
+
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+The HTML fragment 'cross-version-analysis.xhtml' is not included anywhere in the produced implementation guide
+The HTML fragment 'dependency-table.xhtml' is not included anywhere in the produced implementation guide
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
