@@ -616,6 +616,29 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
+
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// ---- Choose SpecimenDefinition for Potassium ----
+* item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.type = #group
+* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
+* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = LOINC#2823-3
+
+* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
+* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
+* item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2947-0 "Sodium [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+
+
+/*
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueReference = Reference(PlanDefinition/potassium-serum) "Potassium [Moles/volume] in Serum or Plasma"
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
@@ -634,7 +657,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/vitamind-serum) "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 
-/*
+
 // Does not render
 * item[=].item[=].item[=].item[=].item.answerOption[0].modifierExtension.valueIdentifier.value = "potassium-serum"
 * item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type" // VS not correct
