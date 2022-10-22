@@ -637,49 +637,6 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 
-
-/*
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueReference = Reference(PlanDefinition/potassium-serum) "Potassium [Moles/volume] in Serum or Plasma"
-// ---- Choose SpecimenDefinition for Potassium ----
-* item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
-* item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
-* item[=].item[=].item[=].item[=].item.item.type = #group
-* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
-* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item.item.enableWhen.answerReference = Reference(PlanDefinition/potassium-serum)
-* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
-* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
-* item[=].item[=].item[=].item[=].item.item.item.type = #choice
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-enous) "Venous blood specimen (specimen)"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/vitamind-serum) "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-
-
-// Does not render
-* item[=].item[=].item[=].item[=].item.answerOption[0].modifierExtension.valueIdentifier.value = "potassium-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type" // VS not correct
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Potassium [Moles/volume] in Serum or Plasma"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "panel-blood-electrolyte"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Electrolytes 1998 panel - Serum or Plasma"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "creatinine-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Creatinine [Mass/volume] in Serum or Plasma"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "vitamind-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-*/
-
 // ---- Hematology Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
 * item[=].item[=].item[=].item[=].text = "Hematology Lab Services"
