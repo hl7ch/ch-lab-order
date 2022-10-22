@@ -1,9 +1,9 @@
-Instance: LabOrder-form
+Instance: LabOrder-form-0
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order from Catalog"
-Description: "Example for generic Questionnaire (flat version)"
+Description: "Example for generic Questionnaire (flat version) using Observation Definitions from Catalog"
 Usage: #example
-* id = "LabOrder-form"
+* id = "LabOrder-form-0"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-21T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -31,7 +31,7 @@ Usage: #example
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form-0"
 // * version = "1.1.0-assembled"
 * name = "LabOrderForm"
 * title = "Questionnaire Lab Order from Catalog"
@@ -616,46 +616,26 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueReference = Reference(PlanDefinition/potassium-serum) "Potassium [Moles/volume] in Serum or Plasma"
+
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.type = #group
 * item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
 * item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item.item.enableWhen.answerReference = Reference(PlanDefinition/potassium-serum)
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = LOINC#2823-3
+
 * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-enous) "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/vitamind-serum) "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-
-/*
-// Does not render
-* item[=].item[=].item[=].item[=].item.answerOption[0].modifierExtension.valueIdentifier.value = "potassium-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type" // VS not correct
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Potassium [Moles/volume] in Serum or Plasma"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "panel-blood-electrolyte"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Electrolytes 1998 panel - Serum or Plasma"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "creatinine-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Creatinine [Mass/volume] in Serum or Plasma"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "vitamind-serum"
-* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-*/
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2947-0 "Sodium [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 
 // ---- Hematology Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
