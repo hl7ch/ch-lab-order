@@ -629,10 +629,18 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.repeats = false
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2947-0 "Sodium [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
+* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
+* item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.repeats = false
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"

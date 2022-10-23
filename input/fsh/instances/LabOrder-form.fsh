@@ -565,7 +565,7 @@ Usage: #example
 /* ============ Kerninhaltes der Lab-Order Form ==============================
 CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
 */
-
+// receiver.organization.name
 // ------------Choice of Catalog -----------------
 
 * item[+].linkId = "labCatalogs"
@@ -579,9 +579,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
 * item[=].item[=].item[=].text = "Analyasen Labor Gantenbein"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein"
+* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerString = "Gantenbein"
 
 * item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
 * item[=].item[=].item[=].item[=].definition = ""
@@ -604,9 +604,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
 * item[=].item[=].item[=].text = "Lab Services"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
+* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerString = "Pipette"
 
 // ---- Clinical Chemistry Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "cc.labServices"
@@ -679,9 +679,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[0].linkId = "labCatalog.Schildknecht.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Schildknecht"
+* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
 
 // ------------Choice of Hematology Specialty-----------------
 // 

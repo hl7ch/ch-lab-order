@@ -230,7 +230,7 @@ Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
 [6-histopath]<https://test.ahdis.ch/matchbox/#/questionnaire/6-histopath-Questionnaire>
 
 Matchbox: file doesn't load
-[LabOrder-form]<https://test.ahdis.ch/matchbox/#/questionnaire/LabOrder-form>
+[LabOrder-form]<https://test.ahdis.ch/matchbox/#/questionnaire/LabOrder-form-0>
 [sdc-sample]<https://test.ahdis.ch/matchbox/#/questionnaire/sdc-sample>
 [sdc-pathology]<https://test.ahdis.ch/matchbox/#/questionnaire/sdc-pathology>
 
