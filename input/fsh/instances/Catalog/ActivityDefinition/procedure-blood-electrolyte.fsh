@@ -1,9 +1,9 @@
-Instance: example-lab-blood-electrolyte
+Instance: procedure-blood-electrolyte
 InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-blood-electrolyte"
+* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-blood-electrolyte"
 * version = "0.1.0"
 * name = "BloodElectrolyteProcedure"
 * title = "Procedure - blood electrolyte (serum or plasma)"

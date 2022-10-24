@@ -607,8 +607,6 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
-
-
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Sodium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Natrium"
@@ -627,7 +625,6 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
-
 
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Chloride"
 * item[=].item[=].item[=].item[=].definition = ""
@@ -659,6 +656,19 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Electrolyte"
 * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Vitamin-D"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Vitamin D"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Vitamin-D.ActivityDefintion"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
 
 // ---- Compendium Labor Pipette ----
 // ###################################################

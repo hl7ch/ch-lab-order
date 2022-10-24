@@ -44,4 +44,4 @@ Usage: #example
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = http://loinc.org#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * action.timingDuration = 1 'h' "hour"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-procedure-serum-creatinine"
+* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-serum-creatinine"

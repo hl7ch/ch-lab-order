@@ -1,4 +1,4 @@
-Instance: example-observation-vitamin-d
+Instance: observation-vitamin-d
 InstanceOf: ObservationDefinition
 Description: "Vitamin-D"
 Usage: #example

@@ -57,4 +57,4 @@ Usage: #example
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Potassium, Serum"
 * action.code.coding[+] = http://loinc.org#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-procedure-potassium-serum"
+* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-potassium-serum"

@@ -1,11 +1,11 @@
-Instance: example-lab-procedure-vitamin-d-serum
+Instance: procedure-vitamin-d-serum
 InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #fr-FR
 * text.status = #additional
 * text.div = "<div xml:lang=\"fr-FR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"fr-FR\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Procédure de dosage de la vitamine D dans le sang</p>\n            <p>Elément clinique pertinent requis en entrée : ObservationDefinition/example-input-observation-context-for-vitamin-d</p>\n            <p>Résultat en sortie : ObservationDefinition/example-observation-vitamin-d</p>\n        </div>"
-* url = "http://fhir.ch/ig/ch-lab-order/ValueSet/example-lab-procedure-vitamin-d-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/ValueSet/procedure-vitamin-d-serum"
 * version = "0.1.0"
 * name = "VitaminDProcedure"
 * title = "Procédure - dosage vitamine D - sang"

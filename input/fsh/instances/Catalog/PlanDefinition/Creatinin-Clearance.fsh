@@ -49,6 +49,6 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-urine24h-creatinine-clearance"
-* action.action[0].definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-procedure-serum-creatinine"
-* action.action[+].definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-urine24h-creatinine"
+* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-urine24h-creatinine-clearance"
+* action.action[0].definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-serum-creatinine"
+* action.action[+].definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-urine24h-creatinine"

@@ -1,9 +1,9 @@
-Instance: example-lab-procedure-serum-creatinine
+Instance: procedure-serum-creatinine
 InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-procedure-serum-creatinine"
+* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-serum-creatinine"
 * version = "0.1.0"
 * name = "UrineCreatinineProcedure"
 * title = "Procedure - serum creatinine - venous blood"

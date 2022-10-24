@@ -1,9 +1,9 @@
-Instance: example-lab-urine24h-creatinine
+Instance: procedure-urine24h-creatinine
 InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-urine24h-creatinine"
+* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-urine24h-creatinine"
 * version = "0.1.0"
 * name = "UrineCreatinineProcedure"
 * title = "Procedure - urine creatinine - 24H urine"
