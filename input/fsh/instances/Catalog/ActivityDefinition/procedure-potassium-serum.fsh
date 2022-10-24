@@ -27,4 +27,4 @@ Usage: #example
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
-* observationResultRequirement = Reference(ObservationDefinition/example-observation-serum-potassium)
+* observationResultRequirement = Reference(ObservationDefinition/observation-serum-potassium)

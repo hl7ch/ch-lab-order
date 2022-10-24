@@ -20,6 +20,6 @@ Usage: #example
 * kind = #ServiceRequest
 * code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
-* observationResultRequirement[0] = Reference(ObservationDefinition/example-observation-serum-sodium)
-* observationResultRequirement[+] = Reference(ObservationDefinition/example-observation-serum-potassium)
-* observationResultRequirement[+] = Reference(ObservationDefinition/example-observation-serum-chloride)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-chloride)

@@ -18,4 +18,4 @@ Usage: #example
 * purpose = "This _ActivityDefinition_ specifies the input serum specimen and the output observation for serum creatinine.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
 * kind = #ServiceRequest
 * code = http://loinc.org#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* observationResultRequirement = Reference(ObservationDefinition/example-observation-serum-creatinine)
+* observationResultRequirement = Reference(ObservationDefinition/observation-serum-creatinine)

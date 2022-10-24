@@ -1,4 +1,4 @@
-Instance: example-observation-serum-sodium
+Instance: observation-serum-sodium
 InstanceOf: ObservationDefinition
 Description: "Natrium im Blut [Moles/volume]"
 Usage: #example

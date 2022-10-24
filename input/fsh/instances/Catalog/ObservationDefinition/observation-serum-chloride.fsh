@@ -1,4 +1,4 @@
-Instance: example-observation-serum-chloride
+Instance: observation-serum-chloride
 InstanceOf: ObservationDefinition
 Description: "Chlorid im Blut Befund"
 Usage: #example
