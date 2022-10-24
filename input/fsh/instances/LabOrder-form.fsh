@@ -577,7 +577,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].text = "Gantenbein Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
-* item[=].item[=].item[=].text = "Analyasen Labor Gantenbein"
+* item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
