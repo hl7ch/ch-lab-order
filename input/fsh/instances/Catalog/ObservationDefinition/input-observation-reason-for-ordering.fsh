@@ -1,4 +1,4 @@
-Instance: example-input-observation-reason-for-ordering
+Instance: input-observation-reason-for-ordering
 InstanceOf: ObservationDefinition
 Description: "For which reason is the test ordered"
 Usage: #example
@@ -9,4 +9,4 @@ Usage: #example
 * permittedDataType[0] = #CodeableConcept
 * permittedDataType[+] = #string
 * multipleResultsAllowed = true
-* validCodedValueSet = Reference(ValueSet/example-reasons-for-order) // must be added
+* validCodedValueSet = Reference(ValueSet/reasons-for-order) // must be added
