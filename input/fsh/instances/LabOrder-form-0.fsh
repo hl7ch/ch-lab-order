@@ -575,8 +575,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].type = #group
 
 
-// ---- Compendium Labor Gantenbein ----
-// #################################################
+// ---- Compendium Labor Gantenbein -- Main sample Lab----
+// #######################################################
 * item[=].item[+].linkId = "labCatalog.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
@@ -669,6 +669,26 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
+// ---- normal reasons ----
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.NormalReasonsVitaminD"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of normal reasons to order value of Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#41345002 "Rickets (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#4598005 "Osteomalacia (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#737295003 "Transplanted kidney present (finding)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#707206008 "Assessment for bariatric surgery (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#66999008 "Hyperparathyroidism (disorder)"
+
+// ---- clinical focus
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.ClinicalFocusVitaminD"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of clinical focuses ordering Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#404684003 "Clinical finding (finding)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#272379006 "Event (event)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#413350009 "Finding with explicit context (situation)"
 
 // ---- Compendium Labor Pipette ----
 // ###################################################
