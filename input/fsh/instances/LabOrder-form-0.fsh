@@ -588,6 +588,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
+// ---- E1 Blood potassium test ----
+// =================================
 * item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Kalium"
@@ -607,6 +609,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
+// ---- E1 Blood sodium test ----
+// =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Sodium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Natrium"
@@ -626,6 +630,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
+// ---- E1 Blood chloride test ----
+// =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Chloride"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Chlorid"
@@ -645,6 +651,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
+// ---- E2 Blood electrolyte test ----
+// =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Electrolyte"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Elektrolyte Panel"
@@ -657,11 +665,24 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
+// ---- E3 Creatinin 24h urine ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Creatinine24h"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine panel"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+
+
+
+// ---- E6 Vitamin D test ----
+// =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Vitamin-D"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Vitamin D"
 * item[=].item[=].item[=].item[=].type = #boolean
 
+// ---- Vitamin D ActivityDefintion ----
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Vitamin-D.ActivityDefintion"
 * item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Vitamin-D"
 * item[=].item[=].item[=].item[=].item[=].type = #group
@@ -669,7 +690,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// ---- normal reasons ----
+// ---- choice of normal reasons ----
 * item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.NormalReasonsVitaminD"
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of normal reasons to order value of Vitamin-D"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
@@ -681,7 +702,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#66999008 "Hyperparathyroidism (disorder)"
 
-// ---- clinical focus
+// ---- choice of clinical focus
 * item[=].item[=].item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.ClinicalFocusVitaminD"
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of clinical focuses ordering Vitamin-D"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
