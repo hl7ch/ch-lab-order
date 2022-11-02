@@ -6,7 +6,7 @@ Usage: #example
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
-* extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
+* extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"  // Analysen-Liste Code
 * extension[=].valueCodeableConcept = http://www.ama-assn.org/go/cpt#CPTfakecode "Potassium, serum"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
 * extension[=].valueCodeableConcept = http://www.codage.ext.cnamts.fr/codif/nabm#1608 "SANG : POTASSIUM (K)"

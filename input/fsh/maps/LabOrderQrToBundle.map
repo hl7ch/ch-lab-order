@@ -3,6 +3,8 @@ map "http://fhir.ch/ig/ch-lab-order/StructureMap/LabOrderQrToBundle" = "LabOrder
 // Laboratory QuestionnaireResponse to Bundle, SD References
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
+uses "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition" alias LabServiceDefinition as source
+
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
 uses "http://hl7.org/fhir/StructureDefinition/Organization" alias Organization as target

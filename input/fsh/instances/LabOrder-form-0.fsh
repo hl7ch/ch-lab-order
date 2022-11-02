@@ -584,9 +584,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein"
+* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerString = "Gantenbein"
 
 // ---- E1 Blood potassium test ----
 // =================================
@@ -665,14 +665,40 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// ---- E3 Creatinin 24h urine ----
+// ---- E3 Creatinine 24h urine ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Creatinine24h"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine panel"
 * item[=].item[=].item[=].item[=].type = #boolean
 
+// ---- E4 Creatinine serum ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.CreatinineSerum"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Creatinine Serum"
+* item[=].item[=].item[=].item[=].type = #boolean
 
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.CreatinineSerum.specimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein CreatinineSerum"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.CreatinineSerum"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.CreatinineSerum.specimenDefinitions"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
+// ---- E5 Creatinine Clearance ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.CreatinineClearance"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Creatinine Clearance"
+* item[=].item[=].item[=].item[=].type = #boolean
 
 
 // ---- E6 Vitamin D test ----
@@ -720,9 +746,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
 * item[=].item[=].item[=].text = "Lab Services"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
+* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerString = "Pipette"
 
 // ---- Clinical Chemistry Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "cc.labServices"
@@ -784,9 +810,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[0].linkId = "labCatalog.Schildknecht.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Schildknecht"
+* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
 
 // ------------Choice of Hematology Specialty-----------------
 // 
