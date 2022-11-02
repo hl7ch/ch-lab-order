@@ -13,7 +13,6 @@ Usage: #example
 * status = #draft
 * experimental = true
 * date = "2020-01-24T14:00:00+02:00"
-* publisher = "HL7 International - Orders and Observations Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Potassium measurement procedure on in-vitro serum specimen"

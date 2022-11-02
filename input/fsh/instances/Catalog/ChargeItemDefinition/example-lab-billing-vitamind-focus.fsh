@@ -10,7 +10,6 @@ Usage: #example
 * title = "Dosage de la vitamine D"
 * status = #active
 * date = "2019-10-18"
-* publisher = "HL7 International - Orders and Observations Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Propriétés détaillées du code NABM *1139* - *Dosage de la 25-(OH)-vitamine D (D2 + D3)*"

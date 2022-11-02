@@ -591,7 +591,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 // ---- E1 Blood potassium test ----
 // =================================
 * item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-potassium-serum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
 * item[=].item[=].item[=].item[=].type = #boolean
 
@@ -760,6 +760,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.repeats = true
 
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// not allowed: Questionnaire.item.answerOption.value[x], data type cannot repeat - they must have a maximum cardinality of 1 :
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/potassium-serum)
+
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
@@ -783,7 +786,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/chloride-serum) "Chloride [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
+
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 

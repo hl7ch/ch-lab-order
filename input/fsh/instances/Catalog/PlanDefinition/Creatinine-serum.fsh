@@ -23,7 +23,6 @@ Usage: #example
 * status = #draft
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"
-* publisher = "HL7 International - Orders and Observations Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Creatinine measurement on serum specimen"

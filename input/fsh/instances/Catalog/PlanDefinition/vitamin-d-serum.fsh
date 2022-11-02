@@ -31,7 +31,6 @@ Usage: #example
 * status = #draft
 * experimental = true
 * date = "2020-02-19T20:00:00+02:00"
-* publisher = "HL7 International - Orders and Observations Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Vitamine D dosée sur échantillon de sérum"
