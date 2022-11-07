@@ -1,7 +1,7 @@
 Instance: LabOrder-form
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order from Catalog"
-Description: "Example for generic Questionnaire (flat version)"
+Description: "Example for generic Questionnaire (flat version) using Observation Definitions from Catalog"
 Usage: #example
 * id = "LabOrder-form"
 * meta.versionId = "1"
@@ -565,13 +565,18 @@ Usage: #example
 /* ============ Kerninhaltes der Lab-Order Form ==============================
 CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
 */
-// receiver.organization.name
+
+// ######################################################
 // ------------Choice of Catalog -----------------
+// ######################################################
 
 * item[+].linkId = "labCatalogs"
 * item[=].text = "Labor Compendien"
 * item[=].type = #group
 
+
+// ---- Compendium Labor Gantenbein -- Main sample Lab----
+// #######################################################
 * item[=].item[+].linkId = "labCatalog.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
@@ -583,20 +588,157 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerString = "Gantenbein"
 
+// ---- E1 Blood potassium test ----
+// =================================
 * item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-potassium-serum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
 * item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium.specimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Kalium"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Potassium"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.Potassium.specimenDefinitions"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
+// ---- E1 Blood sodium test ----
+// =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Sodium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Natrium"
 * item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Sodium.specimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Natrium"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Sodium"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.Sodium.specimenDefinitions"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
+// ---- E1 Blood chloride test ----
+// =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Chloride"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Chlorid"
 * item[=].item[=].item[=].item[=].type = #boolean
 
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Chloride.specimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Chloride"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Chloride"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.Chloride.specimenDefinitions"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
+// ---- E2 Blood electrolyte test ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Electrolyte"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Elektrolyte Panel"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Electrolyte.ActivityDefintion"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Electrolyte"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+// ---- E3 Creatinine 24h urine ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Creatinine24h"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine panel"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+// ---- E4 Creatinine serum ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.CreatinineSerum"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Creatinine Serum"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.CreatinineSerum.specimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein CreatinineSerum"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.CreatinineSerum"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.CreatinineSerum.specimenDefinitions"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+
+// ---- E5 Creatinine Clearance ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.CreatinineClearance"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Creatinine Clearance"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+
+// ---- E6 Vitamin D test ----
+// =================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Vitamin-D"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Vitamin D"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+// ---- Vitamin D ActivityDefintion ----
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Vitamin-D.ActivityDefintion"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+// ---- choice of normal reasons ----
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.NormalReasonsVitaminD"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of normal reasons to order value of Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#41345002 "Rickets (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#4598005 "Osteomalacia (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#737295003 "Transplanted kidney present (finding)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#707206008 "Assessment for bariatric surgery (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#66999008 "Hyperparathyroidism (disorder)"
+
+// ---- choice of clinical focus
+* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.ClinicalFocusVitaminD"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of clinical focuses ordering Vitamin-D"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#404684003 "Clinical finding (finding)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#272379006 "Event (event)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#413350009 "Finding with explicit context (situation)"
+
 // ---- Compendium Labor Pipette ----
+// ###################################################
 * item[=].item[+].linkId = "labCatalog.Pipette"
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Pipette Compendium"
@@ -617,53 +759,40 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// not allowed: Questionnaire.item.answerOption.value[x], data type cannot repeat - they must have a maximum cardinality of 1 :
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/potassium-serum)
 
-// * item[=].item[=].item[=].item[=].item.answerOption[0].valueReference = Reference(PlanDefinition/potassium-serum) "Potassium [Moles/volume] in Serum or Plasma"
 // ---- Choose SpecimenDefinition for Potassium ----
-// * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
-// * item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
-// * item[=].item[=].item[=].item[=].item.item.type = #group
-// * item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
-// * item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
-// * item[=].item[=].item[=].item[=].item.item.enableWhen.answerReference = Reference(PlanDefinition/potassium-serum)
-// * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
-// * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
-// * item[=].item[=].item[=].item[=].item.item.item.type = #choice
-// * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "Capillary blood specimen (specimen)"
-// * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-enous) "Venous blood specimen (specimen)"
-// 
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/panel-blood-electrolyte) "Electrolytes 1998 panel - Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/creatinine-serum) "Creatinine [Mass/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/vitamind-serum) "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.type = #group
+* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
+* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = LOINC#2823-3
 
-/*
-// ---- Questionnaire.item.answerOption.value[x] ----
-* item[=].item[=].item[=].item[=].item[0].linkId = "potassium_serum"
-* item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[=].valueReference = Reference(PlanDefinition/potassium-serum)
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "cc.labServices"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerReference = Reference(PlanDefinition/potassium-serum)
+* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
+* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
+* item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.repeats = false
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2947-0 "Sodium [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
+* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
+* item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.repeats = false
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
-* item[=].item[=].item[=].item[=].item[+].item[0].linkId
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[+].item[+].linkId
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(SpecimenDefinition/single-test-serum-enous) "Venous blood specimen (specimen)"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference = Reference(PlanDefinition/panel-blood-electrolyte)
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
+// * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/chloride-serum) "Chloride [Moles/volume] in Blood"
+// * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+// * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference = Reference(PlanDefinition/creatinine-serum)
-
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference = Reference(PlanDefinition/vitamind-serum)
-*/
 
 // ---- Hematology Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
@@ -680,6 +809,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
 
 // ---- Compendium Labor Schildknecht ----
+// ##################################################
 * item[=].item[+].linkId = "labCatalog.Schildknecht"
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Schildknecht Compendium"

@@ -1,7 +1,7 @@
 Instance: LabOrder-form-0
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Lab Order from Catalog"
-Description: "Example for generic Questionnaire (flat version) using Observation Definitions from Catalog"
+Description: "This Form wants is for testing purposes"
 Usage: #example
 * id = "LabOrder-form-0"
 * meta.versionId = "1"
@@ -786,10 +786,10 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/chloride-serum) "Chloride [Moles/volume] in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2069-3 "Chloride [Moles/volume] in Blood"
+// * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/chloride-serum) "Chloride [Moles/volume] in Blood"
+// * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+// * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
