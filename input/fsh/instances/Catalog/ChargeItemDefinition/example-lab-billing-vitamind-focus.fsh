@@ -35,7 +35,7 @@ Usage: #example
 * code = http://www.codage.ext.cnamts.fr/codif/nabm#1139 "Dosage de la 25-(OH)-vitamine D (D2 + D3)"
 * applicability.description = "Cet acte est facturable si l'un au moins des contextes cliniques ciblés est déclaré              par le prescripteur dans la demande d'examens en tant que valeur de l'élément clinique pertinent \"motif de l'examen\"."
 * propertyGroup.priceComponent.type = #base
-* propertyGroup.priceComponent.code = http://www.codage.ext.cnamts.fr/codif/nabm#B
+* propertyGroup.priceComponent.code = https://medcodesearch.ch/de/AL/laboratory_analyses#1006.00
 * propertyGroup.priceComponent.factor = 35
 
 
