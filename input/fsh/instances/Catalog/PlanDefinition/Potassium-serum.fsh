@@ -9,7 +9,7 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"  // Analysen-Liste Code
 * extension[=].valueCodeableConcept = http://www.ama-assn.org/go/cpt#CPTfakecode "Potassium, serum"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
-* extension[=].valueCodeableConcept = http://www.codage.ext.cnamts.fr/codif/nabm#1608 "SANG : POTASSIUM (K)"
+* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses#1479.00 "Kalium Grosslabor"
 * extension[+].extension[0].url = "textualSummary"
 * extension[=].extension[=].valueMarkdown = "no notable particularity for billing"
 * extension[=].extension[+].url = "reimbursabilitySummary"
@@ -44,8 +44,7 @@ Usage: #example
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
 * topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
-* topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
-* topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-01 "BIOCHIMIE - SANG"
+
 * relatedArtifact.type = #documentation
 * relatedArtifact.citation = "Potassium (symbol K from Latin:kalium) is a key chemical element involved in neuron function and influencing osmotic balance between cells and interstitial fluid. Depletion in potassium levels results in deficient fluid and electrolyte balance in the body as well as various nervous and cardiac dysfunctions. Studies suggest diets high in potassium can reduce the risk of hypertension and possibly stroke. Foods rich in potassium include parsley, dried apricots, potatoes, bananas, avocados, soybeans, and bran, as well as most fruits, vegetables, meat and fish. Overall, clear cases of potassium deficiency are rare in healthy individuals."
 * relatedArtifact.url = "https://en.wikipedia.org/wiki/Potassium"

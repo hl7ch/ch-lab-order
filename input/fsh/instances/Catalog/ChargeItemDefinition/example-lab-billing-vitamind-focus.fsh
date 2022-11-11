@@ -32,13 +32,10 @@ Usage: #example
 * useContext[=].valueCodeableConcept = http://snomed.info/sct#182817000 "Drug prescription (situation)"
 * useContext[=].valueCodeableConcept.text = "Medikamente, die den Vit. D Stoffwechsel beeinflussen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* code = http://www.codage.ext.cnamts.fr/codif/nabm#1139 "Dosage de la 25-(OH)-vitamine D (D2 + D3)"
-* applicability.description = "Cet acte est facturable si l'un au moins des contextes cliniques ciblés est déclaré              par le prescripteur dans la demande d'examens en tant que valeur de l'élément clinique pertinent \"motif de l'examen\"."
+* code = https://medcodesearch.ch/de/AL/laboratory_analyses#1006.00 "Vitamin D"
 * propertyGroup.priceComponent.type = #base
 * propertyGroup.priceComponent.code = https://medcodesearch.ch/de/AL/laboratory_analyses#1006.00
-* propertyGroup.priceComponent.factor = 35
-
-
+* propertyGroup.priceComponent.factor = 1
 
 // Limitationen AL: 
 // 1. Nur einmal verrechenbar im Falle einer separaten Bestimmung der beiden Formen von 25-Hydroxy-Vitamin-D (25- OH-D3 und 25-OH-D2)

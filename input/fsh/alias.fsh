@@ -1,4 +1,5 @@
 // Terminologies, CodeSystems
+// TODO: replace all url with alias
 Alias:  SCT                                    = http://snomed.info/sct
 Alias:  LOINC                                  = http://loinc.org
 Alias:  V2-0203                                = http://terminology.hl7.org/CodeSystem/v2-0203

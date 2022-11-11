@@ -37,4 +37,3 @@ An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analy
 An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 
 # French CodeSystem for insurance
-Code System URI 'http://www.codage.ext.cnamts.fr/codif/nabm' is unknown so the code cannot be validated

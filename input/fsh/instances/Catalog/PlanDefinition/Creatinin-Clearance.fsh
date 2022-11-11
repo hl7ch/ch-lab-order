@@ -6,7 +6,9 @@ Usage: #example
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
-* extension[=].valueCodeableConcept = http://www.codage.ext.cnamts.fr/codif/nabm#0407
+* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses#1509.00
+* extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
+* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses#1509.01
 * extension[+].extension[0].url = "textualSummary"
 * extension[=].extension[=].valueMarkdown = "no notable particularity for billing"
 * extension[=].extension[+].url = "reimbursabilitySummary"
@@ -31,8 +33,6 @@ Usage: #example
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
 * topic[+] = http://snomed.info/sct#409091002 "24 hour urine measurement (procedure)"
-* topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
-* topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-03 "BIOCHIMIE - URINE"
 * action.extension[0].extension[0].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
