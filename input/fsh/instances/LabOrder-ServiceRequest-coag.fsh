@@ -1,9 +1,9 @@
-Instance: LabOrder-ServiceRequest
+Instance: LabOrder-ServiceRequest-coag
 InstanceOf: ChOrfServiceRequest
-Title: "laborder labOrder"
+Title: "LabOrder Service Request for Hematology Tests"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "labOrder"
+* id = "LabOrder-coag"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

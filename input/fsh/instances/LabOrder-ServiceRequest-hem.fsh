@@ -1,9 +1,9 @@
-Instance: LabOrder-ServiceRequest-0
+Instance: LabOrder-ServiceRequest-hem
 InstanceOf: ChOrfServiceRequest
-Title: "laborder labOrder"
+Title: "LabOrder Service Request for Hematology Tests"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "labOrder-0"
+* id = "LabOrder-hem"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -21,12 +21,12 @@ Usage: #example
 // * code.coding[+] = LOINC#57023-4 "Auto Differential panel - Blood"
 
 // Coagulation
-* code.coding[+] = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* code.coding[+] = LOINC#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
+// * code.coding[+] = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+// * code.coding[+] = LOINC#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
 
 // Chemistry
-* code.coding[+] = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* code.coding[+] = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+// * code.coding[+] = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+// * code.coding[+] = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

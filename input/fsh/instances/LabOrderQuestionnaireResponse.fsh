@@ -3,7 +3,7 @@ InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response LabOrder"
 Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
-* id = "LabOrder"
+* id = "LabOrder-qr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
