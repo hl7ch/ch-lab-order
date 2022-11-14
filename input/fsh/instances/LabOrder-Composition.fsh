@@ -40,6 +40,8 @@ Usage: #example
 * section[orderReferral].entry[Questionnaire] = Reference(LabOrder-form)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(LabOrder-QuestionnaireResponse)
 
-* section[orderReferral].entry[ServiceRequest] = Reference(LabOrder-ServiceRequest-hem)
+* section[orderReferral].entry[ServiceRequest][0] = Reference(LabOrder-ServiceRequest-hem)
 
-//* section[orderReferral].entry[ServiceRequest] = Reference(LabOrder-ServiceRequest-coag)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(LabOrder-ServiceRequest-coag)
+
+* section[orderReferral].entry[ServiceRequest][+] = Reference(LabOrder-ServiceRequest-cc)

@@ -31,5 +31,9 @@ Usage: #example
 * entry[=].resource = LabOrder-ServiceRequest-hem
 
 // ---- SR for Coagulation Tests ----
-// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
-// * entry[=].resource = LabOrder-ServiceRequest-coag
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
+* entry[=].resource = LabOrder-ServiceRequest-coag
+
+// ---- SR for Coagulation Tests ----
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
+* entry[=].resource = LabOrder-ServiceRequest-cc
