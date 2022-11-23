@@ -20,10 +20,13 @@ Usage: #example
 * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
-* topic[0] = http://snomed.info/sct#166312007 "Blood chemistry"
-* topic[1] = http://snomed.info/sct#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)"
+
+* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+
+* topic[+] = SCT#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)"
 * kind = #ServiceRequest
-* code = http://loinc.org#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* code = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)

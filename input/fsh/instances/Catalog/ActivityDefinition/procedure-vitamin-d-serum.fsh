@@ -18,9 +18,12 @@ Usage: #example
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2022-12-25"
-* topic = http://snomed.info/sct#166312007 "Blood chemistry"
+
+* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+
 * kind = #ServiceRequest
-* code = http://loinc.org#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* code = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 * priority = #routine
 * timingDuration = 120 'mn' "minutes"
 * observationRequirement = Reference(ObservationDefinition/input-observation-context-for-vitamin-d)

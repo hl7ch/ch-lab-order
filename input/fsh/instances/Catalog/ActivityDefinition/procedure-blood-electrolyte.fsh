@@ -15,9 +15,14 @@ Usage: #example
 * description = "Na, K, Cl level measurements on serum or plasma"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * purpose = "This _ActivityDefinition_ specifies the input specimens and input and output observations for blood electrolyte.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
-* topic = http://snomed.info/sct#166312007 "Blood chemistry"
+* effectivePeriod.start = "2020-04-01"
+* effectivePeriod.end = "2020-12-25"
+
+* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+
 * kind = #ServiceRequest
-* code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* code = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)

@@ -15,10 +15,17 @@ Usage: #example
 * description = "creatinine measurements on 24-hour urine specimen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * purpose = "This _ActivityDefinition_ specifies the input specimens and input and output observations for urine creatinine.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
+
+* effectivePeriod.start = "2020-04-01"
+* effectivePeriod.end = "2020-12-25"
+
+* topic[0] = LOINC#18729-4 "Urinalysis studies (set)"
+* topic[+] = SCT#442564008 "Evaluation of urine specimen (procedure)"
+
 * kind = #ServiceRequest
-* code = http://loinc.org#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
-// * observationRequirement[0] = Reference(ObservationDefinition/example-observation-collection-duration)
-// * observationRequirement[+] = Reference(ObservationDefinition/example-observation-collection-volume)
-// * observationResultRequirement[0] = Reference(ObservationDefinition/example-observation-collection-duration)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/example-observation-collection-volume)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/example-observation-urine24h-creatinine)
+* code = LOINC#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
+* observationRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
+* observationRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-urine24h-creatinine)

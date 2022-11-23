@@ -32,13 +32,14 @@ Usage: #example
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV "laboratory results review task"
 * useContext[=].valueCodeableConcept.text = "This panel may be added upon the pathologist initiative after result review of the order"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#409091002 "24 hour urine measurement (procedure)"
+
+* topic[0] = LOINC#18729-4 "Urinalysis studies (set)"
+* topic[+] = SCT#409091002 "24 hour urine measurement (procedure)"
 
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = http://loinc.org#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
+* action.code = LOINC#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * action.timingDuration = 2 'h' "hours"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/urine24h-creatinine"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-urine24h-creatinine"
