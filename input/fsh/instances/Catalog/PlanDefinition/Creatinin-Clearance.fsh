@@ -44,6 +44,8 @@ Usage: #example
 * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/urine-24h) "example-specimen-urine-24h"
 * action.extension[=].extension.url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
+
+//
 * action.code = http://loinc.org#34555-3 "Creatinine 24H renal clearance panel"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
