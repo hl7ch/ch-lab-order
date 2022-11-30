@@ -7,9 +7,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* basedOn[0] = Reference(ChOrfServiceRequest/LabOrder-ServiceRequest-hem)
-* basedOn[+] = Reference(ChOrfServiceRequest/LabOrder-ServiceRequest-coag)
-* basedOn[+] = Reference(ChOrfServiceRequest/LabOrder-ServiceRequest-cc)
+* basedOn[0] = Reference(LabOrder-ServiceRequest-hem)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-coag)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-cc)
 
 * status = #active
 * intent = #original-order
