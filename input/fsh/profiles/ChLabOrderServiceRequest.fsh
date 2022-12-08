@@ -5,11 +5,7 @@ Title: "CH LAB-Order ServiceRequest"
 Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest"
-* . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
-An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
-(which is concept commonly used in HL7) or Laboratory Service Request (Concept commonly used in DICOM). 
-Consequently one CH Lab-Order Document contains one CH LAB-Order ServiceRequest which depicts one Placer Order 
-equal one Filler Order equal one Imaging Service Request."
+* . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
 
 // * ^version = "0.9.0"
 // * ^status = #draft

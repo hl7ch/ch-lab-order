@@ -44,4 +44,4 @@ Usage: #example
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-blood-electrolyte"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-blood-electrolyte"
