@@ -7,6 +7,23 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 * . ^short = "CH LAB-Order ServiceRequest"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
 
+// ---- Canonical --- url to PlanDefinition| ActivityDefinition
+* instantiatesCanonical ^slicing.discriminator.type = #value
+* instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
+* instantiatesCanonical ^slicing.rules = #open
+* instantiatesCanonical ^slicing.description = ""
+* instantiatesCanonical ^slicing.ordered = false
+
+
+// ---- Reference to further SR
+* basedOn ^slicing.discriminator.type = #value
+* basedOn ^slicing.discriminator.path = "this"
+* basedOn ^slicing.rules = #open
+* basedOn ^slicing.description = ""
+* basedOn ^slicing.ordered = false
+
+
+
 // * ^version = "0.9.0"
 // * ^status = #draft
 // * ^date = "2019-02-05"
@@ -20,8 +37,45 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 // * ^jurisdiction = urn:iso:std:iso:3166#CH
 // * ^copyright = "CC-BY-SA-4.0"
 
-* category 1..
+//------- category -------
+* category 1..1
 * category from ServiceRequestCategories (required)
 * category ^short = "Classification of Service Request: order of lab-test, request for test-results or request for second opinion"
 * category ^binding.description = "High-level kind of a clinical document at a macro level."
-* specimen ^short = "Must be present, if order is request for test"
+
+//------- code -------
+// * code MS
+// * code ^short = "Which Test is beeing requested, code from LOINC and/or SNOMED CT"
+// 
+// * code.coding ^slicing.discriminator.type = #value
+// * code.coding ^slicing.discriminator.path = "this"
+// * code.coding ^slicing.rules = #open
+// * code.coding ^slicing.description = ""
+// * code.coding ^slicing.ordered = false
+// * code.coding.version = ""
+// * code.coding contains
+//     LoincCode 0..1 and
+//     SnomedCode 0..1
+// * code.coding[LoincCode] MS
+// * code.coding[LoincCode] from LOINC
+// * code.coding[SnomedCode] MS
+// * code.coding[SnomedCode] from SCT 
+
+
+//------- orderDetail -------
+
+//------- reasonCode -------
+* reasonCode MS
+* reasonCode ^short = "Clinical Question in free text"
+* reasonCode.text 1.. MS
+//------- reasonReference -------
+* reasonReference MS
+* reasonReference ^short = "Reason for the referral (primary diagnosis)"
+* reasonReference only Reference(ChRadOrderDiagnosisCondition) 
+
+//------- insurance -------
+
+//------- supportingInfo -------
+
+// ---- specimen ----
+* specimen ^short = "Must be present, if order category is request for test"
