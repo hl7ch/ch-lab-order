@@ -71,7 +71,7 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChRadOrderDiagnosisCondition) 
+* reasonReference only Reference(ChLabOrderDiagnosisCondition) 
 
 //------- insurance -------
 
