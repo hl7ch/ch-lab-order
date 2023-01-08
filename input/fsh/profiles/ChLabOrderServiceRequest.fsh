@@ -7,11 +7,11 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 * . ^short = "CH LAB-Order ServiceRequest"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
 
-// ---- Canonical --- url to PlanDefinition| ActivityDefinition
+// ---- Canonical --- url to PlanDefinition | ActivityDefinition
 * instantiatesCanonical ^slicing.discriminator.type = #value
 * instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
 * instantiatesCanonical ^slicing.rules = #open
-* instantiatesCanonical ^slicing.description = ""
+* instantiatesCanonical ^slicing.description = "choose desired PlanDefinition of test/panel"
 * instantiatesCanonical ^slicing.ordered = false
 
 
@@ -22,40 +22,39 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 * basedOn ^slicing.description = ""
 * basedOn ^slicing.ordered = false
 
-
-
-// * ^version = "0.9.0"
-// * ^status = #draft
-// * ^date = "2019-02-05"
-// * ^publisher = "HL7 Switzerland"
-// * ^contact[0].name = "HL7 Switzerland"
-// * ^contact[=].telecom.system = #url
-// * ^contact[=].telecom.value = "https://www.hl7.ch/"
-// * ^contact[+].name = "Marcel Hanselmann"
-// * ^contact[=].telecom.system = #email
-// * ^contact[=].telecom.value = "hanselmann48@gmail.com"
-// * ^jurisdiction = urn:iso:std:iso:3166#CH
-// * ^copyright = "CC-BY-SA-4.0"
+* ^version = "0.9.0"
+* ^status = #draft
+* ^date = "2019-02-05"
+* ^publisher = "HL7 Switzerland"
+* ^contact[0].name = "HL7 Switzerland"
+* ^contact[=].telecom.system = #url
+* ^contact[=].telecom.value = "https://www.hl7.ch/"
+* ^contact[+].name = "Marcel Hanselmann"
+* ^contact[=].telecom.system = #email
+* ^contact[=].telecom.value = "hanselmann48@gmail.com"
+* ^jurisdiction = urn:iso:std:iso:3166#CH
+* ^copyright = "CC-BY-SA-4.0"
 
 //------- category -------
 * category 1..1
 * category from ServiceRequestCategories (required)
-* category ^short = "Classification of Service Request: order of lab-test, request for test-results or request for second opinion"
+* category ^short = "Classification of Service Request: order of lab or histopathological tests/panels, request for test-results or request for 2nd opinion"
 * category ^binding.description = "High-level kind of a clinical document at a macro level."
 
-//------- code -------
-// * code MS
-// * code ^short = "Which Test is beeing requested, code from LOINC and/or SNOMED CT"
-// 
-// * code.coding ^slicing.discriminator.type = #value
-// * code.coding ^slicing.discriminator.path = "this"
-// * code.coding ^slicing.rules = #open
-// * code.coding ^slicing.description = ""
-// * code.coding ^slicing.ordered = false
-// * code.coding.version = ""
-// * code.coding contains
-//     LoincCode 0..1 and
-//     SnomedCode 0..1
+// ------ code -------
+
+* code MS
+* code ^short = "Only allow code from LOINC and/or SNOMED CT"
+
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "this"
+* code.coding ^slicing.rules = #closed
+* code.coding ^slicing.description = ""
+* code.coding ^slicing.ordered = false
+* code.coding.version = ""
+* code.coding contains
+    LoincCode 0..1 and
+    SnomedCode 0..1
 // * code.coding[LoincCode] MS
 // * code.coding[LoincCode] from LOINC
 // * code.coding[SnomedCode] MS
@@ -78,4 +77,4 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 //------- supportingInfo -------
 
 // ---- specimen ----
-* specimen ^short = "Must be present, if order category is request for test"
+* specimen ^short = "Must be present, if order category is #RequestForLabExam or #RequestForHistopathExam"
