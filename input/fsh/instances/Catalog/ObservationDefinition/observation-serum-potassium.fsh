@@ -1,4 +1,4 @@
-Instance: example-observation-serum-potassium
+Instance: observation-serum-potassium
 InstanceOf: ObservationDefinition
 Description: "Kalium im Blut [Moles/volume]"
 Usage: #example

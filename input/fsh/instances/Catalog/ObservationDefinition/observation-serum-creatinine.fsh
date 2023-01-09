@@ -1,4 +1,4 @@
-Instance: example-observation-serum-creatinine
+Instance: observation-serum-creatinine
 InstanceOf: ObservationDefinition
 Description: "Kreatinin [Masse/Volumen] im Serum oder Plasma"
 Usage: #example
