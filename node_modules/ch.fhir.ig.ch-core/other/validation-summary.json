@@ -1,0 +1,418 @@
+{
+  "ImplementationGuide/ch.fhir.ig.ch-core": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Bundle/1-ZuweisungZurRadiologischenDiagnostik-FHIR": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Bundle/CdaContainingOriginalRepresentationAsPdfA": {
+    "errors": 0,
+    "warnings": 6
+  },
+  "Composition/ZuweisungZurRadiologischenDiagnostik": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Coverage/CoverageBroennimann": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "DocumentReference/Docu": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Encounter/EncounterAmbulantBroennimann": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Encounter/EncounterAccidentBroennimann": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Organization/GruppenpraxisCH": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Organization/Radiologieinstitut": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Organization/SpitalSeeblick": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Patient/ElisabethBroennimannByBFH": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Patient/FranzMuster": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Patient/MaxMuster": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Patient/PersonEch011": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Patient/UpiEprTestKrcmarevic": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Practitioner/AgparMarc": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Practitioner/AllzeitBereit": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Practitioner/HanspeterWengerByBFH": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Practitioner/SchreibKraft": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "PractitionerRole/HPWengerRole": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "PractitionerRole/SchreibKraft": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-17-admitsource": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-18-admittype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-19-admitrole": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-20-encounterclass": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-21-encountertype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-27-dischargedecision": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-28-dischargedestination": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/bfs-medstats-29-dischargeencounter": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/ech-10": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/ech-11-maritalstatus": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/ech-11-maritaldata-separation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/ech-11": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "CodeSystem/ech-11-sex": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ConceptMap/bfs-encounter-class-to-fhir": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ConceptMap/documententry-confidentialitycode-to-fhir": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ConceptMap/maritalstatus-ech11-to-fhir": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ConceptMap/sex-ech11-to-fhir": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Consent/PatientHasEpr": {
+    "errors": 1,
+    "warnings": 0
+  },
+  "Consent/EncounterExcludedForEpr": {
+    "errors": 1,
+    "warnings": 0
+  },
+  "NamingSystem/ahvn13-navs13": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "NamingSystem/ber": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "NamingSystem/epr-spid": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "NamingSystem/gln": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "NamingSystem/uidb": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "NamingSystem/zsr": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-accident": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-bfs-ms-admitrole": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-bfs-ms-dischargedecision": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-bfs-ms-dischargedestination": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-ech-7-municipalityid": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-ech-10-linetype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-ech-11-firstname": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-ech-11-name": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-ech-11-maritaldata-separation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-encounter-susp-readmission": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-epr-confidentialitycode": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-epr-dataenterer": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-epr-informationrecipient": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-epr-sectionid": {
+    "errors": 0,
+    "warnings": 1
+  },
+  "StructureDefinition/ch-ext-epr-time": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-ext-epr-versionnumber": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-composition-epr": {
+    "errors": 0,
+    "warnings": 2
+  },
+  "StructureDefinition/ch-core-composition": {
+    "errors": 0,
+    "warnings": 1
+  },
+  "StructureDefinition/ch-core-coverage": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-document-epr": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-document": {
+    "errors": 0,
+    "warnings": 1
+  },
+  "StructureDefinition/ch-core-documentreference-epr": {
+    "errors": 0,
+    "warnings": 2
+  },
+  "StructureDefinition/ch-core-documentreference": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-patient-epr": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-consent-epr": {
+    "errors": 3,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-patient": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-encounter": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-humanname": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-location": {
+    "errors": 0,
+    "warnings": 1
+  },
+  "StructureDefinition/ch-core-organization-epr": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-organization": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-address": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-address-ech-10": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-address-ech-11-placeoforigin": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-address-ech-11-placeofbirth": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-patient-ech-11-placeofbirth": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-patient-ech-11-placeoforigin": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-practitioner-epr": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-practitioner": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-practitionerrole": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "StructureDefinition/ch-core-practitionerrole-epr": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-17-admitsource": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-18-admittype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-19-admitrole": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-20-encounterclass": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-21-encountertype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-27-dischargedecision": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-28-dischargedestination": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/bfs-medstats-29-dischargeencounter": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ch-core-encounter-participation-type": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ch-core-maritalstatus": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ech-10-linetype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ech-11-firstnamedatatype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ech-11-namedatatype": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ech-11-maritalstatus": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ech-11-maritaldata-separation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "ValueSet/ech-11-sex": {
+    "errors": 0,
+    "warnings": 0
+  }
+}
