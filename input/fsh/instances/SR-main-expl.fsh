@@ -9,6 +9,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 
 * basedOn = Reference(SR-CreaClearance)
+* basedOn = Reference(SR-Blood-Electrolytes)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = V2-0203#PLAC "Placer Identifier"

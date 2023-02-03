@@ -6,7 +6,7 @@ Usage: #example
 * language = #en-US
 * url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-chloride-serum"
 * identifier.use = #official
-* identifier.value = "K_serum_test"
+* identifier.value = "Cl_serum_test"
 * version = "0.1.0"
 * name = "ChlorideSerumMeasurementProcedure"
 * title = "Procedure - chloride measurement on in vitro blood serum"
@@ -17,7 +17,8 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Chloride measurement procedure on in-vitro serum specimen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform chloride level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
+* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform chloride level test on serum, and the output observation. It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
+
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 

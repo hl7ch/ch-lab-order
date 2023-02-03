@@ -19,10 +19,16 @@ Usage: #example
 * intent = #original-order
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
-// ---- orderDetails: Additional order information, codeableConcept
+// What is being ordered
+// * basedOn = Reference(ActivityDefinition/procedure-blood-electrolyte)
+* code = SCT#167181009 "Measurement of renal clearance of creatinine (procedure)"
+
+
+
+
+// orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* code = SCT#167181009 "Measurement of renal clearance of creatinine (procedure)"
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = SCT#723188008
