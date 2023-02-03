@@ -10,6 +10,10 @@ Usage: #example
 
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/panel-blood-electrolyte"
 
+* basedOn = Reference(SR-Sodium)
+* basedOn = Reference(SR-Potassium)
+* basedOn = Reference(SR-Chloride)
+
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = V2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
