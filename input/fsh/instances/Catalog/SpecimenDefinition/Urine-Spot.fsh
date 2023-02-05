@@ -1,6 +1,6 @@
 Instance: Urine-Spot
 InstanceOf: SpecimenDefinition
-Description: "Urin Mittelstrahl"
+Description: "Urin Spot"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US

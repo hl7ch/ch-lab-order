@@ -29,4 +29,4 @@ Usage: #example
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Blood-bactec-plus)
 * specimen[+] = Reference(Specimen/Blood)
-* specimen[+] = Reference(Specimen/Urin)
+* specimen[+] = Reference(Specimen/Urine)

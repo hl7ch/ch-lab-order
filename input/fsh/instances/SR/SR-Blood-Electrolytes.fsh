@@ -10,11 +10,9 @@ Usage: #example
 
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/panel-blood-electrolyte"
 
-// ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = V2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Electrolytes 1998 panel - Serum or Plasma ----
 * basedOn = Reference(SR-Sodium)
 * basedOn = Reference(SR-Potassium)
 * basedOn = Reference(SR-Chloride)
@@ -28,20 +26,18 @@ Usage: #example
 * intent = #original-order
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
-// What is being ordered
-// * basedOn = Reference(ActivityDefinition/procedure-blood-electrolyte)
-// ---- Electrolytes 1998 panel - Serum or Plasma ----
-* code.coding[0] = LOINC#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-* code.coding[+] = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* code.coding[+] = LOINC#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+// ---- Code, LOINC or SNOMED CT ----
+* code.coding[0] = SCT#20109005 "Electrolytes measurement, serum (procedure)"
+* code.coding[+] = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
-
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = SCT#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+
+// ---- Specimen 
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)

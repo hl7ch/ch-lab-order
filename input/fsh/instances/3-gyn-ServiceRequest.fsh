@@ -25,4 +25,4 @@ Usage: #example
 * specimen[0] = Reference(Specimen/Cervix-swab)
 * specimen[+] = Reference(Specimen/Blood)
 * specimen[+] = Reference(Specimen/Serum)
-* specimen[+] = Reference(Specimen/Urin)
+* specimen[+] = Reference(Specimen/Urine)

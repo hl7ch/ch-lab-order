@@ -20,7 +20,7 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // What is being ordered
-// * basedOn = Reference(ActivityDefinition/procedure-blood-electrolyte)
+// * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = LOINC#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
@@ -32,5 +32,8 @@ Usage: #example
 * reasonCode = SCT#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+
+// ---- Specimen ----
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+* specimen[+] = Reference(Specimen/Serum-capillary)
 // * specimen[+] = Reference(Specimen/Blood)

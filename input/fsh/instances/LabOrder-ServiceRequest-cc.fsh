@@ -13,7 +13,7 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // What is being ordered
-// * basedOn = Reference(ActivityDefinition/procedure-blood-electrolyte)
+// * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 * code.coding[+] = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
