@@ -51,7 +51,7 @@ Usage: #example
 
 //
 * action.code = http://loinc.org#34555-3 "Creatinine 24H renal clearance panel"
-* action.timingDuration = 24 'h' "hours"  // ==> 2 replaced by 24 !!
+* action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-urine24h-creatinine-clearance"
