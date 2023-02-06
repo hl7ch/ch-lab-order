@@ -27,7 +27,7 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Code, LOINC or SNOMED CT ----
-* code.coding = SCT#167181009 "Measurement of renal clearance of creatinine (procedure)"
+* code.coding[0] = SCT#167181009 "Measurement of renal clearance of creatinine (procedure)"
 * code.coding[+] = LOINC#34555-3 "Creatinine 24H renal clearance panel"
 
 // orderDetails: Additional order information, codeableConcept
