@@ -23,4 +23,4 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 // * category ^short = "Order Document"
 
 // ---------- Composition.section.entry:ServiceRequest ----------
-* section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChLabOrderServiceRequest)
+* section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChLabOrderSRcontainer)

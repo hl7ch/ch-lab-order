@@ -1,7 +1,7 @@
-Profile: ChLabOrderServiceRequest
+Profile: ChLabOrderSRbasedOn
 Parent: ChOrfServiceRequest
-Id: ch-lab-order-servicerequest
-Title: "CH LAB-Order ServiceRequest"
+Id: ch-lab-order-SR-basedOn
+Title: "CH LAB-Order ServiceRequest - Container"
 Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest"
