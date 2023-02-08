@@ -1,5 +1,5 @@
 Instance: SR-Creatinine-Serum
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR_labtest
 Title: "LabOrder Service Request for Clinical Chemistry Tests: Creatinine-Serum"
 Description: "Example for Service Request"
 Usage: #example
@@ -22,7 +22,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* code = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

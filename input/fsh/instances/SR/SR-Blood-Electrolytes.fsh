@@ -1,5 +1,5 @@
 Instance: SR-Blood-Electrolytes
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSRcontainer
 Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -27,8 +27,9 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Code, LOINC or SNOMED CT ----
-* code.coding[0] = SCT#20109005 "Electrolytes measurement, serum (procedure)"
-* code.coding[+] = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+// * code.coding[0] = SCT#20109005 "Electrolytes measurement, serum (procedure)"
+// * code.coding[+] = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* code = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent

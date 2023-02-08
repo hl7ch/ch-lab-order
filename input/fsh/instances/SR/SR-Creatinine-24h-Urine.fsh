@@ -1,5 +1,5 @@
 Instance: SR-Creatinine-24h-Urine
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR_labtest
 Title: "LabOrder Service Request for Clinical Chemistry Tests: Creatinine24 h Urine"
 Description: "Example for Service Request"
 Usage: #example
@@ -22,7 +22,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = LOINC#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
+* code = LOINC#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
 
 // orderDetails: Additional order information, codeableConcept
 

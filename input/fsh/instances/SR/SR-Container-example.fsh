@@ -1,9 +1,9 @@
-Instance: SR-main.fsh
-InstanceOf: ChOrfServiceRequest
-Title: "laborder SR-main"
-Description: "Main Service Request example as container for further SR"
+Instance: SR-Container-example
+InstanceOf: ChLabOrderSRcontainer
+Title: "laborder SR Container Example"
+Description: "Service Request example as container for 2 other containers, CreaClearance and Electrolytes"
 Usage: #example
-* id = "SR-main"
+* id = "SR-Container-example"
 * identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

@@ -1,5 +1,5 @@
 Instance: SR-Sodium
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR_labtest
 Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Sodium in Serum"
 Usage: #example
@@ -23,7 +23,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = LOINC#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* code = LOINC#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
