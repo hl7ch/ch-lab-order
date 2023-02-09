@@ -21,7 +21,7 @@ Usage: #example
 * extension[=].valueString = "No specific limitation for this test"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/RegulatorySummary"
 * extension[=].valueString = "CLIA Law & Regulations apply"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-chloride-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/chloride-serum"
 * identifier.use = #official
 * identifier.value = "Cl_serum_test"
 * version = "0.1.0"

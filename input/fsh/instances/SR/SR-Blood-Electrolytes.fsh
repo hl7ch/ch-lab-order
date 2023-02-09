@@ -10,7 +10,7 @@ Usage: #example
 
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/panel-blood-electrolyte"
 
-// What is being ordered
+// What is being ordered 
 // * basedOn = Reference(SR-example)
 // ---- Electrolytes 1998 panel - Serum or Plasma ----
 * basedOn = Reference(SR-Sodium)
