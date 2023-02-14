@@ -2,10 +2,10 @@
 // TODO: replace all url with alias
 Alias:  $sct                                   = http://snomed.info/sct
 Alias:  $loinc                                 = http://loinc.org
-Alias:  $v2-0203                                = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:  V2-0371                                = http://terminology.hl7.org/CodeSystem/v2-0371
-Alias:  V3ActCode                              = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias:  L-Forms                                = http://terminology.hl7.org/3.1.0/CodeSystem-forms-codes.html // not shure if correct!
+Alias:  $v2-0203                               = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:  $v2-0371                               = http://terminology.hl7.org/CodeSystem/v2-0371
+Alias:  $v3ActCode                             = http://terminology.hl7.org/CodeSystem/v3-ActCode
+// Alias:  $L-Forms                                = http://terminology.hl7.org/3.1.0/CodeSystem-forms-codes.html
 
 // Patient 
 Alias:  AdministrativeGender                   = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender

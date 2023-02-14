@@ -19,4 +19,4 @@ Usage: #example
 * container.identifier.value = "4e88a-bc987-dd888-00000-bact"
 * container.description = "Sarstedt Blutkultur-Adapter Universal"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
-* container.additiveCodeableConcept = V2-0371#BACTM "Bacterial Transport medium"
+* container.additiveCodeableConcept = $v2-0371#BACTM "Bacterial Transport medium"

@@ -17,4 +17,4 @@ Usage: #example
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
-* container.additiveCodeableConcept = V2-0371#C38 "3.8% Citrate"
+* container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
