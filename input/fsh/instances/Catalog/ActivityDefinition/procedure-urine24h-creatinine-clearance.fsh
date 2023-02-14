@@ -19,13 +19,13 @@ Usage: #example
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 
-* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
 * topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 * topic[+] = SCT#102811001 "Creatinine renal clearance, function (observable entity)" // SNOMED CT observable entity
 
 
 * kind = #ServiceRequest
-* code = LOINC#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
+* code = $loinc#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
 // * observationResultRequirement = Reference(ObservationDefinition/example-observation-creatinine-renal-clearance)
 
 * observationRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)

@@ -23,7 +23,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = LOINC#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

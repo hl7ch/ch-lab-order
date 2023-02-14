@@ -616,23 +616,23 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.type = #group
 * item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
 * item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = LOINC#2823-3
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = $loinc#2823-3
 * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 
 /*
 // Does not render
@@ -665,11 +665,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 
 // ---- Compendium Labor Schildknecht ----
 * item[=].item[+].linkId = "labCatalog.Schildknecht"
@@ -692,11 +692,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[+].linkId = "coagulation"
 * item[=].item[=].item[=].item[=].text = "Coagulation"
 * item[=].item[=].item[=].item[=].type = #group
@@ -704,7 +704,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "D-Dimer"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[=].item[=].item[=].item[+].linkId = "cc-subset-schildknecht"
 * item[=].item[=].item[=].item[=].text = "clinical chemistry"
 * item[=].item[=].item[=].item[=].type = #group
@@ -712,8 +712,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.text = "CRP"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = LOINC#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"

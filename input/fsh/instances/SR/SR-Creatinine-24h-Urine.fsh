@@ -22,7 +22,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = LOINC#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
+* code = $loinc#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
 
 // orderDetails: Additional order information, codeableConcept
 

@@ -22,7 +22,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = LOINC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

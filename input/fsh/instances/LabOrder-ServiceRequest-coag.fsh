@@ -12,8 +12,8 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Coagulation Tests ----
-* code.coding[0] = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* code.coding[+] = LOINC#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
+* code.coding[0] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* code.coding[+] = $loinc#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
 
 // orderDetails: Additional order information, codeableConcept
 

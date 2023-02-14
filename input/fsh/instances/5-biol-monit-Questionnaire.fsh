@@ -558,11 +558,11 @@ Usage: #example
 * item[=].item.text = "Laborwerte"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "toxicology"
 * item[=].text = "Toxicology"
 * item[=].type = #group
@@ -570,6 +570,6 @@ Usage: #example
 * item[=].item.text = "Toxic Content"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#29587-3 "Toxicology panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#54454-4 "Arsenic fractions panel - Urine"
-* item[=].item.answerOption[+].valueCoding = LOINC#29589-9 "Heavy metals panel - Urine"
+* item[=].item.answerOption[0].valueCoding = $loinc#29587-3 "Toxicology panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item.answerOption[+].valueCoding = $loinc#29589-9 "Heavy metals panel - Urine"

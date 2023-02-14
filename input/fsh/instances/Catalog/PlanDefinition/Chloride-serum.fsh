@@ -54,6 +54,6 @@ Usage: #example
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Chloride, Serum"
-* action.code.coding[+] = LOINC#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* action.code.coding[+] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-chloride-serum"

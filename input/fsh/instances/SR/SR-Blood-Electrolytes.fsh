@@ -28,8 +28,8 @@ Usage: #example
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = SCT#20109005 "Electrolytes measurement, serum (procedure)"
-// * code.coding[+] = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* code = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+// * code.coding[+] = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent

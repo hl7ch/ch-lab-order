@@ -21,12 +21,12 @@ Usage: #example
 * effectivePeriod.start = "2022-04-01"
 * effectivePeriod.end = "2023-12-25"
 
-* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
 * topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 * topic[+] = SCT#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)" // SCT Code
 
 * kind = #ServiceRequest
-* code = LOINC#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+* code = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
