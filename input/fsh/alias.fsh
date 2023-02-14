@@ -10,7 +10,7 @@ Alias:  $v3ActCode                             = http://terminology.hl7.org/Code
 // Patient 
 Alias:  $administrativeGender                  = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender
 Alias:  $echMaritalStatus                      = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
-Alias:  ReligiousAffiliation                   = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
+Alias:  $religiousAffiliation                   = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
 // Order
 Alias:  RequestPriority                        = http://hl7.org/fhir/request-priority
