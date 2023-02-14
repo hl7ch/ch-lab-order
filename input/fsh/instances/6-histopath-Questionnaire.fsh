@@ -287,10 +287,10 @@ Usage: #example
 * item[=].item[=].definition = "AdministrativeGender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrativeGender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrativeGender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrativeGender#other "Anderes"
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"

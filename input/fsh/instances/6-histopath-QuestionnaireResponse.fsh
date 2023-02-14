@@ -161,7 +161,7 @@ Usage: #example
 // --- patient.gender ------------------------
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#female "Weiblich"
+* item[=].item[=].answer.valueCoding = $administrativeGender#female "Weiblich"
 
 // --- patient.maritalStatus
 * item[=].item[+].linkId = "patient.maritalStatus"
