@@ -4,7 +4,7 @@ Title: "laborder 0-generic"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example
 * id = "6-histopath"
-* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active

@@ -4,14 +4,14 @@ Title: "LabOrder Service Request for Clinical Chemistry Tests: Creatinine-Serum"
 Description: "Example for Service Request"
 Usage: #example
 * id = "SR-Creatinine-Serum"
-* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-serum-creatinine"
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = V2-0203#PLAC "Placer Identifier"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 

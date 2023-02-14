@@ -4,14 +4,14 @@ Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Potassium in Serum"
 Usage: #example
 * id = "SR-Potassium"
-* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = V2-0203#PLAC "Placer Identifier"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 

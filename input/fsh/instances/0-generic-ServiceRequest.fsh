@@ -4,7 +4,7 @@ Title: "laborder 0-generic"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * id = "0-generic"
-* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active

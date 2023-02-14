@@ -4,7 +4,7 @@ Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * id = "SR-Electrolytes"
-* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
@@ -18,7 +18,7 @@ Usage: #example
 * basedOn = Reference(SR-Chloride)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = V2-0203#PLAC "Placer Identifier"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 

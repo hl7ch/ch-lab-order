@@ -4,7 +4,7 @@ Title: "laborder Creatinin Clearance"
 Description: "Service Request example for Creatinine-Clearance Container"
 Usage: #example
 * id = "CreaClearance"
-* identifier[placerOrderIdentifier].type = V2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
@@ -18,7 +18,7 @@ Usage: #example
 * basedOn = Reference(SR-Creatinine-24h-Urine)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = V2-0203#PLAC "Placer Identifier"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 

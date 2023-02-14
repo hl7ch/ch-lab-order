@@ -13,10 +13,10 @@ Usage: #example
 * extension[=].valueAddress.state = "BE"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = ReligiousAffiliation#1041 "Roman Catholic Church"
-* identifier[0].type = V2-0203#MR
+* identifier[0].type = $v2-0203#MR
 * identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier[=].value = "012/08.111112"
-* identifier[+].type = V2-0203#MR
+* identifier[+].type = $v2-0203#MR
 * identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier[=].value = "012/08.111112"
 * name.family = "Kummer"
