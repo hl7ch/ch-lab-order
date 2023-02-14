@@ -166,7 +166,7 @@ Usage: #example
 // --- patient.maritalStatus
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#2 "verheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
