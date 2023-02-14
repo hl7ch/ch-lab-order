@@ -20,7 +20,7 @@ Usage: #example
 * effectivePeriod.end = "2022-12-25"
 
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 
 * kind = #ServiceRequest
 * code = $loinc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"

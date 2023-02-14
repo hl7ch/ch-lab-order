@@ -30,7 +30,7 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = SCT#723188008
+* reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 

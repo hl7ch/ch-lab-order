@@ -606,8 +606,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 // ---- E1 Blood sodium test ----
 // =================================
@@ -627,8 +627,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 // ---- E1 Blood chloride test ----
 // =================================
@@ -648,8 +648,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 // ---- E2 Blood electrolyte test ----
 // =================================
@@ -690,8 +690,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 // ---- E5 Creatinine Clearance ----
 // =================================
@@ -721,21 +721,21 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of normal reasons to order value of Vitamin-D"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#41345002 "Rickets (disorder)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#4598005 "Osteomalacia (disorder)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#737295003 "Transplanted kidney present (finding)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#707206008 "Assessment for bariatric surgery (procedure)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#66999008 "Hyperparathyroidism (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#41345002 "Rickets (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#4598005 "Osteomalacia (disorder)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#737295003 "Transplanted kidney present (finding)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#707206008 "Assessment for bariatric surgery (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#66999008 "Hyperparathyroidism (disorder)"
 
 // ---- choice of clinical focus
 * item[=].item[=].item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.ClinicalFocusVitaminD"
 * item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of clinical focuses ordering Vitamin-D"
 * item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = SCT#404684003 "Clinical finding (finding)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#272379006 "Event (event)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = SCT#413350009 "Finding with explicit context (situation)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#404684003 "Clinical finding (finding)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#272379006 "Event (event)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#413350009 "Finding with explicit context (situation)"
 
 // ---- Compendium Labor Pipette ----
 // ###################################################
@@ -775,16 +775,16 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
 * item[=].item[=].item[=].item[=].item.item.item.repeats = false
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2947-0 "Sodium [Moles/volume] in Blood"
 * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
 * item[=].item[=].item[=].item[=].item.item.item.repeats = false
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = SCT#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = SCT#122555007 "Venous blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2069-3 "Chloride [Moles/volume] in Blood"
 // * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/chloride-serum) "Chloride [Moles/volume] in Blood"

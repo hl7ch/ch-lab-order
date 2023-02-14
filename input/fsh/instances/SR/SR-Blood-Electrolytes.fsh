@@ -27,7 +27,7 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Code, LOINC or SNOMED CT ----
-// * code.coding[0] = SCT#20109005 "Electrolytes measurement, serum (procedure)"
+// * code.coding[0] = $sct#20109005 "Electrolytes measurement, serum (procedure)"
 // * code.coding[+] = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 
@@ -35,7 +35,7 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = SCT#723188008
+* reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 

@@ -34,7 +34,7 @@ Usage: #example
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
 * topic[0] = $loinc#18729-4 "Urinalysis studies (set)"
-* topic[+] = SCT#409091002 "24 hour urine measurement (procedure)"
+* topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"

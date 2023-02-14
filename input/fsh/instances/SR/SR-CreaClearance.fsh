@@ -27,7 +27,7 @@ Usage: #example
 * category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Code, LOINC or SNOMED CT ----
-// * code.coding[0] = SCT#167181009 "Measurement of renal clearance of creatinine (procedure)"
+// * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"
 // * code.coding[+] = $loinc#34555-3 "Creatinine 24H renal clearance panel"
 * code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
 
@@ -35,7 +35,7 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = SCT#723188008
+* reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 

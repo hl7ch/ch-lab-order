@@ -22,9 +22,9 @@ Usage: #example
 * effectivePeriod.end = "2020-12-25"
 
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 
-* topic[+] = SCT#55235003 "C-reactive protein measurement (procedure)"
+* topic[+] = $sct#55235003 "C-reactive protein measurement (procedure)"
 * kind = #ServiceRequest
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 * priority = #routine

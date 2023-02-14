@@ -27,8 +27,8 @@ Usage: #example
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
 * title = "Pathologieauftrag"
-* category = SCT#721963009 "Order (record artifact)"
-* type = SCT#721966001 "Pathology order (record artifact)"
+* category = $sct#721963009 "Order (record artifact)"
+* type = $sct#721966001 "Pathology order (record artifact)"
 * subject = Reference(Patient/KlebsiellaKeller)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)

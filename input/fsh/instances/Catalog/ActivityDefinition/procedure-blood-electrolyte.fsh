@@ -19,7 +19,7 @@ Usage: #example
 * effectivePeriod.end = "2020-12-25"
 
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 
 * kind = #ServiceRequest
 * code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"

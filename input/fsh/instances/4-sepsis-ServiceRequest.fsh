@@ -24,7 +24,7 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/KlebsiellaKeller)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = SCT#870441004
+* reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Blood-bactec-plus)

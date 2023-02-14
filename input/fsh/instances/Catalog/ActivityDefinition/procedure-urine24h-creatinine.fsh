@@ -20,7 +20,7 @@ Usage: #example
 * effectivePeriod.end = "2020-12-25"
 
 * topic[0] = $loinc#18729-4 "Urinalysis studies (set)"
-* topic[+] = SCT#442564008 "Evaluation of urine specimen (procedure)"
+* topic[+] = $sct#442564008 "Evaluation of urine specimen (procedure)"
 
 * kind = #ServiceRequest
 * code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"

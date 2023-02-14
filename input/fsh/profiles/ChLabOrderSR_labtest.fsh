@@ -45,21 +45,13 @@ Description: "Definition for ServiceRequest for a lab test in the context of CH 
 // ------ code -------
 
 * code MS
-// * code ^short = "Only allow code from LOINC and/or SNOMED CT"
-// 
-// * code.coding ^slicing.discriminator.type = #value
-// * code.coding ^slicing.discriminator.path = "this"
-// * code.coding ^slicing.rules = #closed
-// * code.coding ^slicing.description = ""
-// * code.coding ^slicing.ordered = false
-// * code.coding.version = ""
-// * code.coding contains
-//     LoincCode 0..1 and
-//     SnomedCode 0..1
-// * code.coding[LoincCode] MS
-// * code.coding[LoincCode] from LOINC
-// * code.coding[SnomedCode] MS
-// * code.coding[SnomedCode] from SCT 
+// * code from $ch-vacd-immunization-allergyintolerances-vs (extensible)
+// * code ^short = "Allergy Intolerance code"
+// * code ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+// * code ^binding.extension[=].valueString = "AllergyCode"
+// * code ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"
+// * code ^binding.extension[=].valueBoolean = true
+// * code ^binding.description = "The code for allergy."
 
 
 //------- orderDetail -------

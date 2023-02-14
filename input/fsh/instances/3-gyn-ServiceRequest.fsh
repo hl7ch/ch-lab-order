@@ -19,7 +19,7 @@ Usage: #example
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PeterPapGruppenpraxis)
-* reasonCode = SCT#702601001
+* reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Cervix-swab)
