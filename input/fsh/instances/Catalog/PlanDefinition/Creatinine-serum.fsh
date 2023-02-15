@@ -31,7 +31,7 @@ Usage: #example
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[+] = $sct#166312007 "Blood chemistry"
 
 * action.extension.extension[0].extension.url = "Material"
 * action.extension.extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"

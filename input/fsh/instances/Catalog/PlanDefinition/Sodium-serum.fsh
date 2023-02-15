@@ -43,7 +43,7 @@ Usage: #example
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[+] = $sct#166312007 "Blood chemistry"
 
 * relatedArtifact.type = #documentation
 * relatedArtifact.citation = "Sodium (Na) is a positively charged electrolyte and a mineral. Eighty-five percent of Na is located in the blood and lymph fluid. The hormone aldosterone that is secreted by the adrenal glands helps to regulate Na levels by signaling the kidneys to either retain or secrete it. Damage or disease to the kidneys can lead to dangerous fluctuations of sodium. Na plays a number of key roles in the homeostasis of the human body. It helps to maintain blood volume by osmotically pulling water into the blood vessels. Too much sodium in the blood may cause too much water to be brought into the blood vessels and lead to high blood pressure. Muscles and nerves conduct electrical impulses that require charged particles including Na. The electrical currents cause muscle cells to contract and nerve cells to relay electrical signals between them. Too little sodium can lead to muscle spasms, cramps, headache, irritability, restlessness, nausea and fatigue. Extreme hyponatremia can lead to confusion, hallucinations, decreased consciousness and coma. Conversely, hypernatremia can cause lethargy or restlessness, deep tendon reflexes, muscle spasticity and seizures."

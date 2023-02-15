@@ -2,14 +2,14 @@ Instance: Venous-Blood-Fasting
 InstanceOf: SpecimenDefinition
 Description: "Venous Blood, 12 h fasting"
 Usage: #example
-* typeCollected = http://snomed.info/sct#122555007 "Venous blood specimen"
+* typeCollected = $sct#122555007 "Venous blood specimen"
 * patientPreparation[0].text = "12 hour fasting"
-* patientPreparation[+] = http://snomed.info/sct#263678003 "At rest"
+* patientPreparation[+] = $sct#263678003 "At rest"
 * timeAspect = "preferrably morning time"
-* typeTested[0].type = http://snomed.info/sct#119364003 "Serum specimen"
+* typeTested[0].type = $sct#119364003 "Serum specimen"
 * typeTested[=].preference = #preferred
-* typeTested[=].container.material = http://snomed.info/sct#61088005 "plastic"
-* typeTested[=].container.type = http://snomed.info/sct#702281005 "Evacuated blood collection tube, thrombin/clot activator/gel separator"
+* typeTested[=].container.material = $sct#61088005 "plastic"
+* typeTested[=].container.type = $sct#702281005 "Evacuated blood collection tube, thrombin/clot activator/gel separator"
 * typeTested[=].container.cap = urn:iso:std:iso:6710:2017#yellow "yellow cap"
 * typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
 * typeTested[=].handling[0].temperatureQualifier.text = "Ambient temperature"
@@ -20,10 +20,10 @@ Usage: #example
 * typeTested[=].handling[=].temperatureRange.low = 2 'Cel' "°C"
 * typeTested[=].handling[=].temperatureRange.high = 8 'Cel' "°C"
 * typeTested[=].handling[=].maxDuration = 8 'h' "hour"
-* typeTested[+].type = http://snomed.info/sct#119361006 "Plasma specimen"
+* typeTested[+].type = $sct#119361006 "Plasma specimen"
 * typeTested[=].preference = #alternate
-* typeTested[=].container.material = http://snomed.info/sct#32039001 "glass"
-* typeTested[=].container.type = http://snomed.info/sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
+* typeTested[=].container.material = $sct#32039001 "glass"
+* typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
 * typeTested[=].container.cap = urn:iso:std:iso:6710:2017#green "green cap"
 * typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
 * typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient "insufficient specimen volume"

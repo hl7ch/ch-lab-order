@@ -32,7 +32,7 @@ Usage: #example
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#409091002 "24 hour urine measurement (procedure)"
+* topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 // ---- Serum Specimen, venous serum or capillary serum ----
 * action.extension[0].extension[0].extension.url = "Material"

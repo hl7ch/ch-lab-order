@@ -43,7 +43,7 @@ Usage: #example
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[+] = $sct#166312007 "Blood chemistry"
 
 * relatedArtifact.type = #documentation
 * relatedArtifact.citation = "Chloride is an essential mineral required by humans that is found mainly in body fluids. It is an important, negatively charged ion in the blood, and a major electrolyte that helps to conduct electrical impulses. Electrolytes including chloride are located in the blood, lymph, and intra- and extra-cellular fluid. Chloride helps to regulate osmolarity by offsetting the positively charged sodium and potassium ions in the serum. It combines with hydrogen to form hydrochloric acid in the digestive tract which breaks down proteins, absorbs metallic minerals, and activates intrinsic factor. Chloride is absorbed both actively and passively in order to help maintain extracellular fluid volume. There is a continuous exchange of chloride and bicarbonate that occurs between the red blood cells and the plasma that controls the pH and excretion of carbon dioxide, a waste product of respiration.[https://traceminerals.com/chloride-the-forgotten-essential-mineral/]

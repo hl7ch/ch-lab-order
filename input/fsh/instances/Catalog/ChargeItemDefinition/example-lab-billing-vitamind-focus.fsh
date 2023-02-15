@@ -14,22 +14,22 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Propriétés détaillées du code NABM *1139* - *Dosage de la 25-(OH)-vitamine D (D2 + D3)*"
 * useContext[0].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://snomed.info/sct#41345002 "Rickets (disorder)"
+* useContext[=].valueCodeableConcept = $sct#41345002 "Rickets (disorder)"
 * useContext[=].valueCodeableConcept.text = "Verdacht Rachitis"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://snomed.info/sct#4598005 "Osteomalacia (disorder)"
+* useContext[=].valueCodeableConcept = $sct#4598005 "Osteomalacia (disorder)"
 * useContext[=].valueCodeableConcept.text = "Verdacht Osteomalazie"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://snomed.info/sct#737295003 "Transplanted kidney present (finding)"
+* useContext[=].valueCodeableConcept = $sct#737295003 "Transplanted kidney present (finding)"
 * useContext[=].valueCodeableConcept.text = "Nierentransplantation Nachsorge nach mehr als drei Monaten nach der Transplantation"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://snomed.info/sct#707206008 "Assessment for bariatric surgery (procedure)"
+* useContext[=].valueCodeableConcept = $sct#707206008 "Assessment for bariatric surgery (procedure)"
 * useContext[=].valueCodeableConcept.text = "Vorbereitung und Nachsorge bariatrischer Operationen"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://snomed.info/sct#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
+* useContext[=].valueCodeableConcept = $sct#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
 * useContext[=].valueCodeableConcept.text = "Beurteilung und Behandlung von älteren Menschen, die wiederholt stürzen"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://snomed.info/sct#182817000 "Drug prescription (situation)"
+* useContext[=].valueCodeableConcept = $sct#182817000 "Drug prescription (situation)"
 * useContext[=].valueCodeableConcept.text = "Medikamente, die den Vit. D Stoffwechsel beeinflussen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * code = https://medcodesearch.ch/de/AL/laboratory_analyses#1006.00 "Vitamin D"
