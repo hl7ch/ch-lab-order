@@ -6,7 +6,7 @@ Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
-* code = http://loinc.org#13362-9 "Collection duration of Urine"
+* code = $loinc#13362-9 "Collection duration of Urine"
 * permittedDataType = #Quantity
 * multipleResultsAllowed = false
 * preferredReportName = "urine collection duration"

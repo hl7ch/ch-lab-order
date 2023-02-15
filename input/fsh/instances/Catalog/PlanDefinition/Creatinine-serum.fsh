@@ -30,7 +30,7 @@ Usage: #example
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 
 * action.extension.extension[0].extension.url = "Material"
@@ -40,6 +40,6 @@ Usage: #example
 * action.extension.extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension[=].url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = http://loinc.org#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* action.code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * action.timingDuration = 1 'h' "hour"
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-serum-creatinine"

@@ -35,13 +35,13 @@ Usage: #example
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task "Workflow Task"
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "example-specimen-serum-plasma"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = http://loinc.org#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* action.code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-blood-electrolyte"

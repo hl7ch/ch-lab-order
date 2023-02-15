@@ -42,7 +42,7 @@ Usage: #example
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 
 * relatedArtifact.type = #documentation
@@ -53,6 +53,6 @@ Usage: #example
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Sodium, Serum"
-* action.code.coding[+] = http://loinc.org#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* action.code.coding[+] = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-sodium-serum"
