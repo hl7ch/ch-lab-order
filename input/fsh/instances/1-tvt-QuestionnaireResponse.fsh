@@ -68,7 +68,7 @@ Usage: #example
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
 
 // ---------- Receiver item[1] ----------
 // ################################################

@@ -77,7 +77,7 @@ Usage: #example
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answer.valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
 
 // ---------- Receiver item[1] ----------
 // ################################################
