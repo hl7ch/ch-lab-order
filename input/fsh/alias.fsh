@@ -15,7 +15,7 @@ Alias:  $religiousAffiliation                  = http://terminology.hl7.org/Code
 // Order
 Alias:  $requestPriority                       = http://hl7.org/fhir/request-priority
 Alias:  $servicerequest-categories             = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
-Alias:  ShareableValueSet                      = http://hl7.org/fhir/StructureDefinition/shareablevalueset
+Alias:  $shareableValueSet                     = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias:  DocumentEntryClassCode                 = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
 Alias:  DocumentEntryTypeCode                  = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
 
