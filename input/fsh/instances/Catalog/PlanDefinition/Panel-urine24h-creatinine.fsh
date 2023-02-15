@@ -26,10 +26,10 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Potassium measurement on serum specimen"
 * useContext[0].code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
+* useContext[=].valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * useContext[=].valueCodeableConcept.text = "this panel is orderable"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV "laboratory results review task"
+* useContext[=].valueCodeableConcept = $v3ActCode#LABRREV "laboratory results review task"
 * useContext[=].valueCodeableConcept.text = "This panel may be added upon the pathologist initiative after result review of the order"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 

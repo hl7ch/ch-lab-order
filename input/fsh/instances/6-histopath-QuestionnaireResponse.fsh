@@ -218,7 +218,7 @@ Usage: #example
 * item[=].text = "Patientenaufnahme"
 * item[=].item[0].linkId = "requestedEncounter.class"
 * item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
-* item[=].item[=].answer.valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "Ambulant"
+* item[=].item[=].answer.valueCoding = $v3ActCode#AMB "Ambulant"
 
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].text = "Zimmerkategorie"
