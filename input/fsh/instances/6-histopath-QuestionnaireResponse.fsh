@@ -533,10 +533,10 @@ Usage: #example
 * item[=].item[=].item[=].answer.valueDateTime = "2022-08-08T09:57:34.2112Z"
 * item[=].item[+].linkId = "appointment.status"
 * item[=].item[=].text = "Status"
-* item[=].item[=].answer.valueCoding = http://hl7.org/fhir/appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+* item[=].item[=].answer.valueCoding = $appointmentStatus#proposed "Wunsch des Patienten (vorgeschlagen)"
 // * item[=].item[=].answerOption[=].initialSelected = true
-// * item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
-// * item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
 * item[=].item[+].linkId = "appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].answer.valueString = ""
