@@ -9,7 +9,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* category = CH-LAB-ORDER-servicerequest-categories#RequestForHistopathExam "Anforderung von histopathologischen Untersuchungen"
+* category = $servicerequest-categories#RequestForHistopathExam "Anforderung von histopathologischen Untersuchungen"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC), CodeableConcept
 // code has an array of codings
 

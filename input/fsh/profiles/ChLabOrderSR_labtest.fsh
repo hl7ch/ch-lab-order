@@ -36,7 +36,7 @@ Description: "Definition for ServiceRequest for a lab test in the context of CH 
 * ^copyright = "CC-BY-SA-4.0"
 
 //------- category -------
-// * category = CH-LAB-ORDER-servicerequest-categories#RequestForHistopathExam "Anforderung von histopathologischen Untersuchungen"
+// * category = $servicerequest-categories#RequestForHistopathExam "Anforderung von histopathologischen Untersuchungen"
 // * category 1..1
 // * category from ServiceRequestCategories (required)
 // * category ^short = "Classification of Service Request: order of lab or histopathological tests/panels, request for test-results or request for 2nd opinion"

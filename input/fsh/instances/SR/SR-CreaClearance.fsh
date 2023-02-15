@@ -24,7 +24,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"

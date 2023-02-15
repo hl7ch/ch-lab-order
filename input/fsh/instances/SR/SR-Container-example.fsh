@@ -18,7 +18,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)

@@ -9,7 +9,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* category = CH-LAB-ORDER-servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
 // ---- Coagulation Tests ----
 * code.coding[0] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
