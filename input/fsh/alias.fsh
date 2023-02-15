@@ -15,9 +15,9 @@ Alias:  $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v
 // Order
 Alias:  $requestPriority               = http://hl7.org/fhir/request-priority
 Alias:  $servicerequest-categories     = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
-Alias:  ShareableValueSet              = http://hl7.org/fhir/StructureDefinition/shareablevalueset
-Alias:  DocumentEntryClassCode         = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
-Alias:  DocumentEntryTypeCode          = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
+Alias:  $shareableValueSet              = http://hl7.org/fhir/StructureDefinition/shareablevalueset
+Alias:  $documentEntryClassCode        = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
+Alias:  $documentEntryTypeCode         = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
 
 // Encounter, appointment
 Alias:  $ChCoreCSEncounterType         = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
