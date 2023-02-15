@@ -223,7 +223,7 @@ Usage: #example
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].text = "Zimmerkategorie"
 
-* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#3 "privat"
+* item[=].item[=].answer.valueCoding = $ChCoreCSEncounterType#3 "privat"
 
 // ---------- Coverage item[4] ----------
 // ################################################

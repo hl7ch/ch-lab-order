@@ -20,5 +20,5 @@ Alias:  DocumentEntryClassCode         = http://fhir.ch/ig/ch-epr-term/ValueSet/
 Alias:  DocumentEntryTypeCode          = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
 
 // Encounter, appointment
-Alias:  ChCoreCSEncounterType          = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+Alias:  $ChCoreCSEncounterType         = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
 Alias:  AppointmentStatus              = http://hl7.org/fhir/appointmentstatus
