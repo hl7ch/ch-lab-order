@@ -2,25 +2,10 @@ Profile: ChLabOrderSRcontainer
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-container
 Title: "CH LAB-Order ServiceRequest - Container"
-Description: "Definition for ServiceRequest in the context of CH LAB-Order"
+Description: "Definition for ServiceRequest Container in the context of CH LAB-Order"
 
-* . ^short = "CH LAB-Order ServiceRequest"
+* . ^short = "CH LAB-Order ServiceRequest Container"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
-
-// ---- Canonical --- url to PlanDefinition | ActivityDefinition
-// * instantiatesCanonical ^slicing.discriminator.type = #value
-// * instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
-// * instantiatesCanonical ^slicing.rules = #open
-// * instantiatesCanonical ^slicing.description = "choose desired PlanDefinition of test/panel"
-// * instantiatesCanonical ^slicing.ordered = false
-
-
-// ---- Reference to further SR
-// * basedOn ^slicing.discriminator.type = #value
-// * basedOn ^slicing.discriminator.path = "this"
-// * basedOn ^slicing.rules = #open
-// * basedOn ^slicing.description = ""
-// * basedOn ^slicing.ordered = false
 
 * ^version = "0.9.0"
 * ^status = #draft
@@ -34,6 +19,29 @@ Description: "Definition for ServiceRequest in the context of CH LAB-Order"
 * ^contact[=].telecom.value = "hanselmann48@gmail.com"
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
+
+// * identifier MS
+* basedOn MS
+* basedOn only Reference(ChLabOrderSR_labtest)
+// * requisition MS
+// * requisition.type
+
+
+// ---- Canonical --- url to PlanDefinition | ActivityDefinition
+// * instantiatesCanonical ^slicing.discriminator.type = #value
+// * instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
+// * instantiatesCanonical ^slicing.rules = #open
+// * instantiatesCanonical ^slicing.description = "choose desired PlanDefinition of test/panel"
+// * instantiatesCanonical ^slicing.ordered = false
+
+// ---- basedOn 1..n ---- Reference to further SR
+// * basedOn ^slicing.discriminator.type = #value
+// * basedOn ^slicing.discriminator.path = "this"
+// * basedOn ^slicing.rules = #open
+// * basedOn ^slicing.description = ""
+// * basedOn ^slicing.ordered = false
+
+// ---- requisition 1 ---- grouperID
 
 //------- category -------
 // * category 1..1
