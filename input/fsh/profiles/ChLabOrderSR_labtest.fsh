@@ -24,7 +24,13 @@ Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRconta
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
 * code 1.. MS
-* code from http://hl7.org/fhir/ValueSet/report-codes // Includes all codes defined in http://loinc.org
+* code from http://hl7.org/fhir/ValueSet/report-codes
+// * include codes from http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
+
+// * code from http://hl7.org/fhir/ValueSet/report-codes or http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
+
+// Includes all codes defined in http://loinc.org
+// * code from http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 // * code from $sct
 // error 'Found a reference to a CodeSystem (http://snomed.info/sct) where a ValueSet belongs'
 
