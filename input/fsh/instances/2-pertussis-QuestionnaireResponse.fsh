@@ -18,11 +18,11 @@ Usage: #example
 // 
 // * item[=].item[+].linkId = "order.category"
 // * item[=].item[=].text = "Kategorie"
-// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// * item[=].item[=].answer.valueCoding = $sct#721963009 "Order"
 // 
 // * item[=].item[+].linkId = "order.type"
 // * item[=].item[=].text = "Typ"
-// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+// * item[=].item[=].answer.valueCoding = $sct#721965002 "Laboratory Order"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
@@ -73,7 +73,7 @@ Usage: #example
 * item[=].item[=].item.item[=].answer.valueString = "eva.erlenmeyer@labor-pipette.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -139,7 +139,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = EchMaritalStatus#1 "ledig"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#1 "ledig"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -271,14 +271,14 @@ Usage: #example
 * item[=].text = "Mikrobiologie"
 * item[=].item.linkId = "per"
 * item[=].item.text = "Pertussis and Parapertussis DNA"
-* item[=].item.answer.valueCoding = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item.answer.valueCoding = $lnc#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
 * item[=].item.linkId = "Blood-diff"
 * item[=].item.text = "Manual Differential panel - Blood"
-* item[=].item.answer.valueCoding = LOINC#24318-8 "Manual diff Bld"
+* item[=].item.answer.valueCoding = $lnc#24318-8 "Manual diff Bld"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].item.linkId = "crp"
 * item[=].item.text = "C-reactive Protein"
-* item[=].item.answer.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answer.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"

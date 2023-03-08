@@ -40,10 +40,10 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Potassium measurement on serum specimen"
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
+* useContext.valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[0] = $lnc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#166312007 "Blood chemistry"
 
 * relatedArtifact.type = #documentation
 * relatedArtifact.citation = "Potassium (symbol K from Latin:kalium) is a key chemical element involved in neuron function and influencing osmotic balance between cells and interstitial fluid. Depletion in potassium levels results in deficient fluid and electrolyte balance in the body as well as various nervous and cardiac dysfunctions. Studies suggest diets high in potassium can reduce the risk of hypertension and possibly stroke. Foods rich in potassium include parsley, dried apricots, potatoes, bananas, avocados, soybeans, and bran, as well as most fruits, vegetables, meat and fish. Overall, clear cases of potassium deficiency are rare in healthy individuals."
@@ -53,6 +53,6 @@ Usage: #example
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Potassium, Serum"
-* action.code.coding[+] = http://loinc.org#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* action.code.coding[+] = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-potassium-serum"

@@ -27,11 +27,11 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Creatinine measurement on serum specimen"
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
+* useContext.valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[0] = $lnc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#166312007 "Blood chemistry"
 
 * action.extension.extension[0].extension.url = "Material"
 * action.extension.extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
@@ -40,6 +40,6 @@ Usage: #example
 * action.extension.extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension[=].url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = http://loinc.org#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* action.code = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * action.timingDuration = 1 'h' "hour"
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-serum-creatinine"

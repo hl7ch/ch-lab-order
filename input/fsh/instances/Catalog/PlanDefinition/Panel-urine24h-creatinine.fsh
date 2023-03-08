@@ -26,20 +26,20 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Potassium measurement on serum specimen"
 * useContext[0].code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
+* useContext[=].valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * useContext[=].valueCodeableConcept.text = "this panel is orderable"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV "laboratory results review task"
+* useContext[=].valueCodeableConcept = $v3ActCode#LABRREV "laboratory results review task"
 * useContext[=].valueCodeableConcept.text = "This panel may be added upon the pathologist initiative after result review of the order"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
-* topic[0] = LOINC#18729-4 "Urinalysis studies (set)"
-* topic[+] = SCT#409091002 "24 hour urine measurement (procedure)"
+* topic[0] = $lnc#18729-4 "Urinalysis studies (set)"
+* topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = LOINC#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
+* action.code = $lnc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * action.timingDuration = 2 'h' "hours"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-urine24h-creatinine"

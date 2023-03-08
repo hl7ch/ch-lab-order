@@ -18,11 +18,11 @@ Usage: #example
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 
-* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+* topic[0] = $lnc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 
 * kind = #ServiceRequest
-* code = LOINC#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)

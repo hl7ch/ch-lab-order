@@ -4,10 +4,10 @@ Description: "24 Stunden Urin"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US
-* collection = http://snomed.info/sct#2475000 "Urine specimen collection, 24 hours (procedure)"
-* typeTested.type = http://snomed.info/sct#122575003 "Urine specimen (specimen)"
+* collection = $sct#2475000 "Urine specimen collection, 24 hours (procedure)"
+* typeTested.type = $sct#122575003 "Urine specimen (specimen)"
 * typeTested.preference = #preferred
-* typeTested.container.type = http://snomed.info/sct#706055000 "24-hour urine specimen container (physical object)"
+* typeTested.container.type = $sct#706055000 "24-hour urine specimen container (physical object)"
 * typeTested.handling[0].temperatureQualifier.text = "room temperature"
 * typeTested.handling[=].maxDuration = 2 'h' "hour"
 * typeTested.handling[+].temperatureQualifier.text = "refrigerated"

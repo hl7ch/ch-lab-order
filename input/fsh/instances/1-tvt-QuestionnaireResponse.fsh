@@ -68,7 +68,7 @@ Usage: #example
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
 
 // ---------- Receiver item[1] ----------
 // ################################################
@@ -139,7 +139,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = EchMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#5 "unverheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -278,20 +278,20 @@ Usage: #example
 * item[=].text = "Hematology"
 * item[=].item.linkId = "hemato-subset"
 * item[=].item.text = "Hämatologie Subset"
-* item[=].item.answer[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answer[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answer[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "coagulation"
 * item[=].text = "Coagulation"
 * item[=].item.linkId = "d-dimer"
 * item[=].item.text = "D-Dimer"
-* item[=].item.answer.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item.answer.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[+].linkId = "cc"
 * item[=].text = "clinical chemistry"
 * item[=].item.linkId = "crp"
 * item[=].item.text = "CRP"
-* item[=].item.answer.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answer.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 
 //#################################################

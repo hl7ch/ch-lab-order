@@ -63,7 +63,7 @@ Usage: #example
 * item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -129,7 +129,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = EchMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#5 "unverheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"

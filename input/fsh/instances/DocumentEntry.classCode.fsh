@@ -1,10 +1,10 @@
 Instance: DocumentEntry.classCode
-InstanceOf: ShareableValueSet
+InstanceOf: $shareableValueSet
 Usage: #example
 * meta.source = "http://art-decor.org/fhir/ValueSet/2.16.756.5.30.1.127.3.10.1.3--20200622100530"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
 * extension.valuePeriod.start = "2020-06-22T10:05:30+02:00"
-* url = "http://fhir.ch/ig/ch-lab-order/ValueSet/DocumentEntry.classCode"
+* url = $documentEntryClassCode
 * identifier.use = #official
 * identifier.system = "http://art-decor.org/ns/oids/vs"
 * identifier.value = "2.16.756.5.30.1.127.3.10.1.3"
@@ -22,7 +22,7 @@ Usage: #example
 * jurisdiction = urn:iso:std:iso:3166#CH
 * immutable = false
 * copyright = "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."
-* compose.include.system = "http://snomed.info/sct"
+* compose.include.system = $sct
 * compose.include.concept.code = #721963009
 * compose.include.concept.display = "Order (record artifact)"
 * compose.include.concept.designation[0].language = #de-CH

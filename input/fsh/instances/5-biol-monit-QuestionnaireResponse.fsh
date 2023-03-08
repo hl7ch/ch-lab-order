@@ -18,11 +18,11 @@ Usage: #example
 // 
 // * item[=].item[+].linkId = "order.category"
 // * item[=].item[=].text = "Kategorie"
-// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// * item[=].item[=].answer.valueCoding = $sct#721963009 "Order"
 // 
 // * item[=].item[+].linkId = "order.type"
 // * item[=].item[=].text = "Typ"
-// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+// * item[=].item[=].answer.valueCoding = $sct#721965002 "Laboratory Order"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
@@ -76,7 +76,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueString = "paulo.porcellini@suva.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -142,7 +142,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = EchMaritalStatus#2 "verheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#2 "verheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -274,15 +274,15 @@ Usage: #example
 * item[=].text = "Hematology"
 * item[=].item.linkId = "lab"
 * item[=].item.text = "Laborwerte"
-* item[=].item.answer[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answer[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answer[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "toxicology"
 * item[=].text = "Toxicology"
 * item[=].item.linkId = "tox"
 * item[=].item.text = "Toxic Content"
-* item[=].item.answer[0].valueCoding = LOINC#29587-3 "Toxicology panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#54454-4 "Arsenic fractions panel - Urine"
-* item[=].item.answer[+].valueCoding = LOINC#29589-9 "Heavy metals panel - Urine"
+* item[=].item.answer[0].valueCoding = $lnc#29587-3 "Toxicology panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item.answer[+].valueCoding = $lnc#29589-9 "Heavy metals panel - Urine"

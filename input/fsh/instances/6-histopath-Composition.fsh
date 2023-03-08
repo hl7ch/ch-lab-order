@@ -27,14 +27,14 @@ Usage: #example
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
 * title = "Pathologieauftrag"
-* category = SCT#721963009 "Order (record artifact)"
-* type = SCT#721966001 "Pathology order (record artifact)"
+* category = $sct#721963009 "Order (record artifact)"
+* type = $sct#721966001 "Pathology order (record artifact)"
 * subject = Reference(Patient/KlebsiellaKeller)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
 
 * section[orderReferral].title = "Order-Referral-Form 6-histopath"
-* section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
+* section[orderReferral].code = $lnc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 6-histopath\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(6-histopath-Questionnaire)

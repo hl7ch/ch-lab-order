@@ -77,7 +77,7 @@ Usage: #example
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answer.valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
 
 // ---------- Receiver item[1] ----------
 // ################################################
@@ -161,12 +161,12 @@ Usage: #example
 // --- patient.gender ------------------------
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#female "Weiblich"
+* item[=].item[=].answer.valueCoding = $administrativeGender#female "Weiblich"
 
 // --- patient.maritalStatus
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#2 "verheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -218,12 +218,12 @@ Usage: #example
 * item[=].text = "Patientenaufnahme"
 * item[=].item[0].linkId = "requestedEncounter.class"
 * item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
-* item[=].item[=].answer.valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "Ambulant"
+* item[=].item[=].answer.valueCoding = $v3ActCode#AMB "Ambulant"
 
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].text = "Zimmerkategorie"
 
-* item[=].item[=].answer.valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#3 "privat"
+* item[=].item[=].answer.valueCoding = $ChCoreCSEncounterType#3 "privat"
 
 // ---------- Coverage item[4] ----------
 // ################################################
@@ -533,10 +533,10 @@ Usage: #example
 * item[=].item[=].item[=].answer.valueDateTime = "2022-08-08T09:57:34.2112Z"
 * item[=].item[+].linkId = "appointment.status"
 * item[=].item[=].text = "Status"
-* item[=].item[=].answer.valueCoding = http://hl7.org/fhir/appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+* item[=].item[=].answer.valueCoding = $appointmentStatus#proposed "Wunsch des Patienten (vorgeschlagen)"
 // * item[=].item[=].answerOption[=].initialSelected = true
-// * item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
-// * item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
 * item[=].item[+].linkId = "appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].answer.valueString = ""
@@ -566,17 +566,17 @@ Usage: #example
       * linkId = "labSpecialties.pathology.panels"
       * text = "Pathology Panels"
       * item[+]
-        * definition = LOINC#18743-5 "Autopsy report"
+        * definition = $lnc#18743-5 "Autopsy report"
         * linkId = "labSpecialties.pathology.panels.Autopsy"
         * text = "Autopsy report"
         * answer.valueBoolean = false
       * item[+]
-        * definition = LOINC#11526-1 "Pathology study"
+        * definition = $lnc#11526-1 "Pathology study"
         * linkId = "labSpecialties.pathology.panels.PathologyStudy"
         * text = "Pathology Study"
         * answer.valueBoolean = false
       * item[+]
-        * definition = LOINC#11529-5 "Surgical pathology study"
+        * definition = $lnc#11529-5 "Surgical pathology study"
         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
         * text = "Surgical pathology study"
         * answer.valueBoolean = true

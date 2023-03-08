@@ -176,11 +176,11 @@ Usage: #example
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
 // --- receiver item[1]----
 // ######################
@@ -287,22 +287,22 @@ Usage: #example
 * item[=].item[=].definition = "AdministrativeGender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrativeGender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrativeGender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrativeGender#other "Anderes"
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#9 "unbekannt"
+* item[=].item[=].answerOption[0].valueCoding = $echMaritalStatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#9 "unbekannt"
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.telecom.value"
 * item[=].item[=].text = "Telefon"
@@ -366,16 +366,16 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.class"
 * item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "Ambulant"
-* item[=].item[=].answerOption[+].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "Stationär"
-* item[=].item[=].answerOption[+].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER "Notfall"
+* item[=].item[=].answerOption[0].valueCoding = $v3ActCode#AMB "Ambulant"
+* item[=].item[=].answerOption[+].valueCoding = $v3ActCode#IMP "Stationär"
+* item[=].item[=].answerOption[+].valueCoding = $v3ActCode#EMER "Notfall"
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.extension:desiredAccommodation"
 * item[=].item[=].text = "Zimmerkategorie"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#1 "allgemein"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#2 "halbprivat"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#3 "privat"
+* item[=].item[=].answerOption[0].valueCoding = $ChCoreCSEncounterType#1 "allgemein"
+* item[=].item[=].answerOption[+].valueCoding = $ChCoreCSEncounterType#2 "halbprivat"
+* item[=].item[=].answerOption[+].valueCoding = $ChCoreCSEncounterType#3 "privat"
 
 // ---------- Coverage item[4] ----------
 // ################################################
@@ -789,10 +789,10 @@ Usage: #example
 * item[=].item[=].text = "Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-* item[=].item[=].answerOption[0].valueCoding = http://hl7.org/fhir/appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+* item[=].item[=].answerOption[0].valueCoding = $appointmentStatus#proposed "Wunsch des Patienten (vorgeschlagen)"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+* item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+* item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
 * item[=].item[+].linkId = "appointment.patientInstruction"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"

@@ -19,8 +19,8 @@ Usage: #example
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 
-* topic[0] = LOINC#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = SCT#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+* topic[0] = $lnc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 * kind = #ServiceRequest
-* code = LOINC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* code = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-creatinine)

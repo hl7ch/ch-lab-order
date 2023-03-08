@@ -114,11 +114,11 @@ Usage: #example
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -206,14 +206,14 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#9 "unbekannt"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#9 "unbekannt"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -556,8 +556,8 @@ Usage: #example
 * item[=].item.text = "Cervical Smear"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item.answerOption[+].valueCoding = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* item[=].item.answerOption[0].valueCoding = $lnc#86662-4 "Pap smear tests - FPAR 2.0 set"
+* item[=].item.answerOption[+].valueCoding = $lnc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
 * item[+].linkId = "urin"
 * item[=].text = "Urin"
 * item[=].type = #group
@@ -565,7 +565,7 @@ Usage: #example
 * item[=].item.text = "Combur-9"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* item[=].item.answerOption.valueCoding = $lnc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
 * item[+].linkId = "obstetricalPanels"
 * item[=].text = "Schwangerschaftsvorsorge"
 * item[=].type = #group
@@ -573,4 +573,4 @@ Usage: #example
 * item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item.answerOption.valueCoding = $lnc#24364-2 "Obstetric 1996 Pnl Ser+Bld"

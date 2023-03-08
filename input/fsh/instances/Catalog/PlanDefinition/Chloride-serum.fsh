@@ -21,7 +21,7 @@ Usage: #example
 * extension[=].valueString = "No specific limitation for this test"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/RegulatorySummary"
 * extension[=].valueString = "CLIA Law & Regulations apply"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-chloride-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/chloride-serum"
 * identifier.use = #official
 * identifier.value = "Cl_serum_test"
 * version = "0.1.0"
@@ -40,10 +40,10 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Chloride measurement on serum specimen"
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
+* useContext.valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[0] = $lnc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#166312007 "Blood chemistry"
 
 * relatedArtifact.type = #documentation
 * relatedArtifact.citation = "Chloride is an essential mineral required by humans that is found mainly in body fluids. It is an important, negatively charged ion in the blood, and a major electrolyte that helps to conduct electrical impulses. Electrolytes including chloride are located in the blood, lymph, and intra- and extra-cellular fluid. Chloride helps to regulate osmolarity by offsetting the positively charged sodium and potassium ions in the serum. It combines with hydrogen to form hydrochloric acid in the digestive tract which breaks down proteins, absorbs metallic minerals, and activates intrinsic factor. Chloride is absorbed both actively and passively in order to help maintain extracellular fluid volume. There is a continuous exchange of chloride and bicarbonate that occurs between the red blood cells and the plasma that controls the pH and excretion of carbon dioxide, a waste product of respiration.[https://traceminerals.com/chloride-the-forgotten-essential-mineral/]
@@ -54,6 +54,6 @@ Usage: #example
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Chloride, Serum"
-* action.code.coding[+] = LOINC#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* action.code.coding[+] = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-chloride-serum"

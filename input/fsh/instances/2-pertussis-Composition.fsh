@@ -23,15 +23,15 @@ Usage: #example
 
 
 * status = #final
-* type = SCT#721965002 "Laboratory order (record artifact)"
-* category = SCT#721963009 "Order (record artifact)"
+* type = $sct#721965002 "Laboratory order (record artifact)"
+* category = $sct#721963009 "Order (record artifact)"
 * subject = Reference(Patient/EmilKummer)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPrestoGruppenpraxis)
 * title = "Referral Pertussis"
 
 // * section.title = "Order-Referral-Form 2-pertussis"
-// * section.code = LOINC#93037-0 "Portable medical order form"
+// * section.code = $lnc#93037-0 "Portable medical order form"
 // * section.text.status = #generated
 // * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
 // * section.entry[0] = Reference(Questionnaire/2-pertussis)
@@ -39,7 +39,7 @@ Usage: #example
 // * section.entry[+] = Reference(ServiceRequest/2-pertussis)
 
 * section[orderReferral].title = "Order-Referral-Form 2-pertussis"
-* section[orderReferral].code = LOINC#93037-0 "Portable medical order form"
+* section[orderReferral].code = $lnc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
