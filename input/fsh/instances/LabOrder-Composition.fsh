@@ -34,7 +34,7 @@ Usage: #example
 * author = Reference(MarcMustermannArztpraxis)
 
 * section[orderReferral].title = "Order-Referral-Form LabOrder"
-* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].code = $lnc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form LabOrder\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(LabOrder-form)

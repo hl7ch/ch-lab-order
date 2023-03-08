@@ -15,8 +15,8 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* code.coding[+] = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* code.coding[0] = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+] = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

@@ -28,8 +28,8 @@ Usage: #example
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"
-// * code.coding[+] = $loinc#34555-3 "Creatinine 24H renal clearance panel"
-* code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
+// * code.coding[+] = $lnc#34555-3 "Creatinine 24H renal clearance panel"
+* code = $lnc#34555-3 "Creatinine 24H renal clearance panel"
 
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent

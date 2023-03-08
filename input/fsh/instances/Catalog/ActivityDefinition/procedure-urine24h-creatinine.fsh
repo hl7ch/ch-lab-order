@@ -19,11 +19,11 @@ Usage: #example
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 
-* topic[0] = $loinc#18729-4 "Urinalysis studies (set)"
+* topic[0] = $lnc#18729-4 "Urinalysis studies (set)"
 * topic[+] = $sct#442564008 "Evaluation of urine specimen (procedure)"
 
 * kind = #ServiceRequest
-* code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
+* code = $lnc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * observationRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
 * observationRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)

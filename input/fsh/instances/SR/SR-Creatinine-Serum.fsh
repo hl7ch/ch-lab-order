@@ -22,7 +22,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* code = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
