@@ -1,8 +1,8 @@
-Profile: ChLabOrderSR_labtest
+Profile: ChLabOrderSRLabtest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-labtest
 Title: "CH LAB-Order ServiceRequest - Container"
-Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRcontainer  in the context of CH LAB-Order"
+Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRContainer  in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."

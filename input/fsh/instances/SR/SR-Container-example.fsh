@@ -1,5 +1,5 @@
 Instance: SR-Container-example
-InstanceOf: ChLabOrderSRcontainer
+InstanceOf: ChLabOrderSRContainer
 Title: "laborder SR Container Example"
 Description: "Service Request example as container for 2 other containers, CreaClearance and Electrolytes"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: SR-Creatinine-24h-Urine
-InstanceOf: ChLabOrderSR_labtest
+InstanceOf: ChLabOrderSRLabtest
 Title: "LabOrder Service Request for Clinical Chemistry Tests: Creatinine24 h Urine"
 Description: "Example for Service Request"
 Usage: #example

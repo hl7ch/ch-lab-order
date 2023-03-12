@@ -1,4 +1,4 @@
-Profile: ChLabOrderSRcontainer
+Profile: ChLabOrderSRContainer
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-container
 Title: "CH LAB-Order ServiceRequest - Container"
@@ -20,9 +20,9 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
 
-// * Is based On ChLabOrderSR_labtest or other SRConainer
+// * Is based On ChLabOrderSRLabtest or other SRConainer
 * basedOn MS
-* basedOn only Reference(ChLabOrderSR_labtest) // may by Reference of ChLabOrderSRcontainer itself too
+* basedOn only Reference(ChLabOrderSRLabtest) // may by Reference of ChLabOrderSRContainer itself too
 // * requisition MS
 // * requisition.type
 

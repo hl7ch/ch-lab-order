@@ -1,5 +1,5 @@
 Instance: SR-Chloride
-InstanceOf: ChLabOrderSR_labtest
+InstanceOf: ChLabOrderSRLabtest
 Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Chloride in Serum"
 Usage: #example

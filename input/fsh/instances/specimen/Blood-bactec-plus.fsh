@@ -14,7 +14,7 @@ Usage: #example
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * processing.procedure.coding.system = "https://www.hl7.org/fhir/v2/0373" 
 * processing.procedure.coding.code.value = "ACID"
-* processing.procedure.coding.system = "http://build.fhir.org/ig/hl7ch/ch-lab-order/CodeSystem/Specimen.processing.procedure"
+* processing.procedure.coding.system = "http://fhir.ch/ig/ch-lab-order/CodeSystem/Specimen.processing.procedure"
 * processing.procedure.coding.code.value = "COOLING"
 * container.identifier.value = "4e88a-bc987-dd888-00000-bact"
 * container.description = "Sarstedt Blutkultur-Adapter Universal"

@@ -1,5 +1,5 @@
 Instance: SR-Potassium
-InstanceOf: ChLabOrderSR_labtest
+InstanceOf: ChLabOrderSRLabtest
 Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Potassium in Serum"
 Usage: #example
