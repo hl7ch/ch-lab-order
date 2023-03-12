@@ -20,6 +20,9 @@ Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRconta
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
 
+// ---- May be bases on CarePlan
+* basedOn only Reference(CarePlan)
+
 //---- Use Code from LOINC or Snomed CT -----
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
