@@ -1,7 +1,7 @@
 Profile: ChLabOrderSRLabtest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-labtest
-Title: "CH LAB-Order ServiceRequest - Container"
+Title: "CH LAB-Order-SR Labtest"
 Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRContainer  in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"

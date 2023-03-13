@@ -1,7 +1,7 @@
 Profile: ChLabOrderSRContainer
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-container
-Title: "CH LAB-Order ServiceRequest - Container"
+Title: "CH LAB-Order-SR Container"
 Description: "Definition for ServiceRequest Container in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest Container"
@@ -20,11 +20,14 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
 
+// ---- instantiates Canonical
+
 // * Is based On ChLabOrderSRLabtest or other SRConainer
 * basedOn MS
-* basedOn only Reference(ChLabOrderSRLabtest) // may by Reference of ChLabOrderSRContainer itself too
-// * requisition MS
-// * requisition.type
+* basedOn only Reference(ChLabOrderSRLabtest or ChLabOrderSRContainer) // may by Reference of ChLabOrderSRContainer itself too
+
+* requisition MS
+* requisition 1..1
 
 
 // ---- Canonical --- url to PlanDefinition | ActivityDefinition
