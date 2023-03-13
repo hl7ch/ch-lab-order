@@ -10,6 +10,6 @@ Usage: #example
 * subject = Reference(Patient/MarinaRubella)
 * collection.collector = Reference(MarcMustermannArztpraxis)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
-* collection.bodySite = http://snomed.info/sct#1149541002 "Entire skin of lumbar region of back (body structure)"
+* collection.bodySite = $sct#1149541002 "Entire skin of lumbar region of back (body structure)"
 
-* container.type = http://snomed.info/sct#701394007 "General specimen receptacle transport container (physical object)"
+* container.type = $sct#701394007 "General specimen receptacle transport container (physical object)"

@@ -1,5 +1,4 @@
 // Terminologies, CodeSystems
-// TODO: replace all url with alias
 Alias:  $sct                           = http://snomed.info/sct
 Alias:  $lnc                           = http://loinc.org
 Alias:  $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
