@@ -4,9 +4,13 @@ Alias:  $sct                           = http://snomed.info/sct
 Alias:  $lnc                           = http://loinc.org
 Alias:  $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:  $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371
+Alias:  $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2-0373
 Alias:  $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916
 Alias:  $v3ActCode                     = http://terminology.hl7.org/CodeSystem/v3-ActCode
-
+Alias:  $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
+Alias:  $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
+Alias:  $rejectionCriteria             = http://terminology.hl7.org/CodeSystem/rejection-criteria
+// Alias:  $processing-procedure          = http://fhir.ch/ig/ch-lab-order/CodeSystem/Specimen.processing.procedure, replaced by $handling-condition
 Alias:  $shareablevalueset             = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 // Alias:  $L-Forms                       = http://terminology.hl7.org/3.1.0/CodeSystem/forms-codes
 

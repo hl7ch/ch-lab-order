@@ -12,10 +12,7 @@ Usage: #example
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
-* processing.procedure.coding.system = "https://www.hl7.org/fhir/v2/0373" 
-* processing.procedure.coding.code.value = "ACID"
-* processing.procedure.coding.system = "http://fhir.ch/ig/ch-lab-order/CodeSystem/Specimen.processing.procedure"
-* processing.procedure.coding.code.value = "COOLING"
+* processing.procedure = $v2-0373#ACID "Acidification"
 * container.identifier.value = "4e88a-bc987-dd888-00000-bact"
 * container.description = "Sarstedt Blutkultur-Adapter Universal"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
