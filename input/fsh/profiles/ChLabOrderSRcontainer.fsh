@@ -21,10 +21,11 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * ^copyright = "CC-BY-SA-4.0"
 
 // ---- instantiates Canonical
+* instantiatesCanonical 1..
 
 // * Is based On ChLabOrderSRLabtest or other SRConainer
 * basedOn MS
-* basedOn only Reference(ChLabOrderSRLabtest or ChLabOrderSRContainer) // may by Reference of ChLabOrderSRContainer itself too
+* basedOn only Reference(ChLabOrderSRLabtest or ChLabOrderSRContainer) // Labtest or Selfreferential
 
 * requisition MS
 * requisition 1..1
