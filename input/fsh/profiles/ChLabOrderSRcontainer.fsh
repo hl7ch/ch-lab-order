@@ -27,8 +27,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * basedOn MS
 * basedOn only Reference(ChLabOrderSRLabtest or ChLabOrderSRContainer) // Labtest or Selfreferential
 
-* requisition MS
-* requisition 1..1
+* requisition 1..1 MS
 
 
 // ---- Canonical --- url to PlanDefinition | ActivityDefinition

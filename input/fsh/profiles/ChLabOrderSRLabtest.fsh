@@ -26,6 +26,9 @@ Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRConta
 * basedOn MS
 * basedOn only Reference(ChLabOrderSRContainer)
 
+// ---- SR Container and SR Labtest must have same requisition identifier ----
+* requisition 1..1 MS
+
 //---- Use Code from LOINC or Snomed CT -----
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
