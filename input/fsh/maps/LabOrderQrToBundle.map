@@ -252,7 +252,7 @@ group LabOrderQrToServiceRequest(source qr : QuestionnaireResponse, target patie
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '879862001',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '',
 //             coding2.display = 'Body piercing (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)

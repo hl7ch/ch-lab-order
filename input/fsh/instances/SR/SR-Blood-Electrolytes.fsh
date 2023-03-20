@@ -1,5 +1,5 @@
 Instance: SR-Blood-Electrolytes
-InstanceOf: ChLabOrderSRcontainer
+InstanceOf: ChLabOrderSRContainer
 Title: "LabOrder Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example

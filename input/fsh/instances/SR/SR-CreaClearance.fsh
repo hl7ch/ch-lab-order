@@ -1,5 +1,5 @@
 Instance: SR-CreaClearance
-InstanceOf: ChLabOrderSRcontainer
+InstanceOf: ChLabOrderSRContainer
 Title: "laborder Creatinin Clearance"
 Description: "Service Request example for Creatinine-Clearance Container"
 Usage: #example

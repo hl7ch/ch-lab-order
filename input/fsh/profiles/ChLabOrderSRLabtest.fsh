@@ -1,8 +1,8 @@
-Profile: ChLabOrderSR_labtest
+Profile: ChLabOrderSRLabtest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-labtest
-Title: "CH LAB-Order ServiceRequest - Container"
-Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRcontainer  in the context of CH LAB-Order"
+Title: "CH LAB-Order-SR Labtest"
+Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRContainer  in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
@@ -20,10 +20,16 @@ Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRconta
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
 
+* instantiatesCanonical 1..1
+
+// ---- SR LabTest is based on one SR Container
+* basedOn MS
+* basedOn only Reference(ChLabOrderSRContainer)
+
 //---- Use Code from LOINC or Snomed CT -----
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
-* code 1.. MS
+* code 1..1 MS
 * code from http://hl7.org/fhir/ValueSet/report-codes
 // * include codes from http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 

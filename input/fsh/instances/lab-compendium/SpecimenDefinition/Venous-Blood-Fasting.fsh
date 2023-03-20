@@ -10,7 +10,7 @@ Usage: #example
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "plastic"
 * typeTested[=].container.type = $sct#702281005 "Evacuated blood collection tube, thrombin/clot activator/gel separator"
-* typeTested[=].container.cap = urn:iso:std:iso:6710:2017#yellow "yellow cap"
+* typeTested[=].container.cap = $container-cap#yellow "yellow cap"
 * typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
 * typeTested[=].handling[0].temperatureQualifier.text = "Ambient temperature"
 * typeTested[=].handling[=].temperatureRange.low = 15 'Cel' "°C"
@@ -24,10 +24,10 @@ Usage: #example
 * typeTested[=].preference = #alternate
 * typeTested[=].container.material = $sct#32039001 "glass"
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
-* typeTested[=].container.cap = urn:iso:std:iso:6710:2017#green "green cap"
+* typeTested[=].container.cap = $container-cap#green "green cap"
 * typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
-* typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient "insufficient specimen volume"
-* typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#hemolized "hemolized specimen"
+* typeTested[=].rejectionCriterion[0] = $rejectionCriteria#insufficient "insufficient specimen volume"
+* typeTested[=].rejectionCriterion[+] = $rejectionCriteria#hemolized "hemolized specimen"
 * typeTested[=].handling[0].temperatureQualifier.text = "Ambient temperature"
 * typeTested[=].handling[=].temperatureRange.low = 15 'Cel' "°C"
 * typeTested[=].handling[=].temperatureRange.high = 25 'Cel' "°C"
