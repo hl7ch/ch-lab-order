@@ -20,16 +20,12 @@ Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRConta
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC-BY-SA-4.0"
 
-* instantiatesCanonical 1..1
-
-// ---- SR LabTest is based on one SR Container
-* basedOn MS
-* basedOn only Reference(ChLabOrderSRContainer)
+* instantiatesCanonical 1..1 MS
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 * requisition 1..1 MS
 
-//---- Use Code from LOINC or Snomed CT -----
+//---- Use only Code from LOINC or Snomed CT -----
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
 * code 1..1 MS
