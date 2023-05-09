@@ -35,9 +35,16 @@ Usage: #example
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task "Workflow Task"
 * useContext.valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+<<<<<<< HEAD:input/fsh/instances/lab-compendium/PlanDefinition/Panel-blood-electrolyte.fsh
 * topic[0] = $lnc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 
+=======
+* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+// * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
+// * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-01 "BIOCHIMIE - SANG"
+>>>>>>> master:input/fsh/instances/Catalog/PlanDefinition/Panel-blood-electrolyte.fsh
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "example-specimen-serum-plasma"
 * action.extension.extension.url = "ExclusiveGroup"
