@@ -114,11 +114,11 @@ Usage: #example
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -206,14 +206,14 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#9 "unbekannt"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#9 "unbekannt"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -556,7 +556,7 @@ Usage: #example
 * item[=].item.text = "Pertussis and Parapertussis DNA"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item.answerOption.valueCoding = $lnc#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[+].linkId = "hematology"
 * item[=].text = "Hämatologie"
 * item[=].type = #group
@@ -564,7 +564,7 @@ Usage: #example
 * item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#24318-8 "Manual diff Bld"
+* item[=].item.answerOption.valueCoding = $lnc#24318-8 "Manual diff Bld"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].type = #group
@@ -572,4 +572,4 @@ Usage: #example
 * item[=].item.text = "C-reactive Protein"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answerOption.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"

@@ -1,9 +1,9 @@
 Name                                        Type        File
 0-generic-Composition                       Instance    instances/0-generic-Composition.fsh
 0-generic-Document                          Instance    instances/0-generic-Document.fsh
-0-generic-mod-QuestionnaireResponse         Instance    instances/0-generic-mod-QuestionnaireResponse.fsh
+0-generic-QuestionnaireResponse         Instance    instances/0-generic-QuestionnaireResponse.fsh
 0-generic-ServiceRequest                    Instance    instances/0-generic-ServiceRequest.fsh
-0-generic-mod-Questionnaire                 Instance    instances/0-generic-mod-Questionnaire.fsh
+0-generic-Questionnaire                 Instance    instances/0-generic-Questionnaire.fsh
 1-tvt-Composition                   Instance    instances/1-tvt-Composition.fsh
 1-tvt-Document                      Instance    instances/1-tvt-Document.fsh
 1-tvt-QuestionnaireResponse         Instance    instances/1-tvt-QuestionnaireResponse.fsh

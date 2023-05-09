@@ -3,6 +3,8 @@ map "http://fhir.ch/ig/ch-lab-order/StructureMap/LabOrderQrToBundle" = "LabOrder
 // Laboratory QuestionnaireResponse to Bundle, SD References
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
+uses "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition" alias LabServiceDefinition as source
+
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
 uses "http://hl7.org/fhir/StructureDefinition/Organization" alias Organization as target
@@ -250,7 +252,7 @@ group LabOrderQrToServiceRequest(source qr : QuestionnaireResponse, target patie
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '879862001',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '',
 //             coding2.display = 'Body piercing (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)

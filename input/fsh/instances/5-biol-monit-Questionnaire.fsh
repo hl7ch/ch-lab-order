@@ -117,11 +117,11 @@ Usage: #example
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = RequestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $requestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -209,14 +209,14 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = EchMaritalStatus#9 "unbekannt"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#9 "unbekannt"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -558,11 +558,11 @@ Usage: #example
 * item[=].item.text = "Laborwerte"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "toxicology"
 * item[=].text = "Toxicology"
 * item[=].type = #group
@@ -570,6 +570,6 @@ Usage: #example
 * item[=].item.text = "Toxic Content"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = LOINC#29587-3 "Toxicology panel - Blood"
-* item[=].item.answerOption[+].valueCoding = LOINC#54454-4 "Arsenic fractions panel - Urine"
-* item[=].item.answerOption[+].valueCoding = LOINC#29589-9 "Heavy metals panel - Urine"
+* item[=].item.answerOption[0].valueCoding = $lnc#29587-3 "Toxicology panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $lnc#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item.answerOption[+].valueCoding = $lnc#29589-9 "Heavy metals panel - Urine"

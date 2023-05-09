@@ -48,7 +48,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="Questionnaire-LabOrder-form-flat.html">Specification</a>
+        <a href="Questionnaire-LabOrder-form.html">Specification</a>
       </li>
       <li>
         <a href="#">Form</a> <!-- questionnaire-form.html -->
@@ -63,7 +63,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="Questionnaire-0-generic-mod.html">Generisches Formular</a>
+        <a href="Questionnaire-0-generic.html">Generisches Formular</a>
       </li>
       <li>
         <a href="Questionnaire-1-tvt.html">Tiefe Venenthrombose</a>
@@ -81,7 +81,7 @@
         <a href="Questionnaire-5-biol-monit.html">Biologisches Monitoring</a>
       </li>
       <li>
-        <a href="Questionnaire-6-histopath-mod.html">Histopathologische Untersuchung</a>
+        <a href="Questionnaire-6-histopath.html">Histopathologische Untersuchung</a>
       </li>
     </ul>
   </li>

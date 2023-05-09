@@ -32,4 +32,20 @@ The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced
 
 # The Display Name *should be* valid
 
+# Build errors
+
+The link 'http://hl7.org/fhir/R4/snomed.html' for "SNOMED CT" cannot be resolved
+
+# Validation information
+
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+The HTML fragment 'cross-version-analysis.xhtml' is not included anywhere in the produced implementation guide
+The HTML fragment 'dependency-table.xhtml' is not included anywhere in the produced implementation guide
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+
+# French CodeSystem for insurance
+
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE in the language laboratory test order entry task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE'
+No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV in the language laboratory results review task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV'

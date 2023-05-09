@@ -1,38 +1,31 @@
 Instance: 1-tvt-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 1-tvt"
-Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
+Description: "Example for Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * status = #completed
 
+// ---------- order (Auftrag) item[0] ----------
+// ################################################
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
-
-// * item[=].item[+].linkId = "order.title"
-// * item[=].item[=].text = "Titel"
-// * item[=].item[=].answer.valueString = "Laborauftrag"
-// 
-// * item[=].item[+].linkId = "order.category"
-// * item[=].item[=].text = "Kategorie"
-// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
-// 
-// * item[=].item[+].linkId = "order.type"
-// * item[=].item[=].text = "Typ"
-// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order" 
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
+
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30"
+
 * item[=].item[+].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
+
 * item[=].item[+].linkId = "order.notificationContactDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
 * item[=].item[=].item.linkId = "order.notificationContactDocument.practitioner"
@@ -71,11 +64,18 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
+
+// ---- order priority ----
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
+
+// ---------- Receiver item[1] ----------
+// ################################################
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
+
+// ---- receiver.practitioner ------------------------
 * item[=].item[0].linkId = "receiver.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].item[0].linkId = "receiver.practitioner.title"
@@ -139,7 +139,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = EchMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#5 "unverheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -278,20 +278,20 @@ Usage: #example
 * item[=].text = "Hematology"
 * item[=].item.linkId = "hemato-subset"
 * item[=].item.text = "Hämatologie Subset"
-* item[=].item.answer[0].valueCoding = LOINC#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = LOINC#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = LOINC#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = LOINC#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answer[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answer[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "coagulation"
 * item[=].text = "Coagulation"
 * item[=].item.linkId = "d-dimer"
 * item[=].item.text = "D-Dimer"
-* item[=].item.answer.valueCoding = LOINC#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item.answer.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[+].linkId = "cc"
 * item[=].text = "clinical chemistry"
 * item[=].item.linkId = "crp"
 * item[=].item.text = "CRP"
-* item[=].item.answer.valueCoding = LOINC#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item.answer.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 
 //#################################################

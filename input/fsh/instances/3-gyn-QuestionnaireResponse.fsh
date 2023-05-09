@@ -18,11 +18,11 @@ Usage: #example
 // 
 // * item[=].item[+].linkId = "order.category"
 // * item[=].item[=].text = "Kategorie"
-// * item[=].item[=].answer.valueCoding = SCT#721963009 "Order"
+// * item[=].item[=].answer.valueCoding = $sct#721963009 "Order"
 // 
 // * item[=].item[+].linkId = "order.type"
 // * item[=].item[=].text = "Typ"
-// * item[=].item[=].answer.valueCoding = SCT#721965002 "Laboratory Order"
+// * item[=].item[=].answer.valueCoding = $sct#721965002 "Laboratory Order"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
@@ -74,7 +74,7 @@ Usage: #example
 * item[=].item[=].item.item[=].answer.valueString = "peter.pap@gruppenpraxis.ch"
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = $requestPriority#routine
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -140,7 +140,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = EchMaritalStatus#2 "verheiratet"
+* item[=].item[=].answer.valueCoding = $echMaritalStatus#2 "verheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -272,15 +272,15 @@ Usage: #example
 * item[=].text = "Cytology and Microbiology"
 * item[=].item.linkId = "cervicalSmear"
 * item[=].item.text = "Cervical Smear"
-* item[=].item.answer[0].valueCoding = LOINC#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item.answer[+].valueCoding = LOINC#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* item[=].item.answer[0].valueCoding = $lnc#86662-4 "Pap smear tests - FPAR 2.0 set"
+* item[=].item.answer[+].valueCoding = $lnc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
 * item[+].linkId = "urin"
 * item[=].text = "Urin"
 * item[=].item.linkId = "combur9"
 * item[=].item.text = "Combur-9"
-* item[=].item.answer.valueCoding = LOINC#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* item[=].item.answer.valueCoding = $lnc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
 * item[+].linkId = "obstetricalPanels"
 * item[=].text = "Schwangerschaftsvorsorge"
 * item[=].item.linkId = "obstetric"
 * item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
-* item[=].item.answer.valueCoding = LOINC#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item.answer.valueCoding = $lnc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
