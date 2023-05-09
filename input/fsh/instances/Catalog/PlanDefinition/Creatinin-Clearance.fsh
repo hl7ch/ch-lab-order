@@ -28,12 +28,13 @@ Usage: #example
 * description = "This 24-hour urine creatinine clearance panel is reusing the procedures from the          serum creatinine test as well as the procedure from the 24h urine creatinine panel."
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE "laboratory test order entry task"
+
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
 * topic[+] = http://snomed.info/sct#409091002 "24 hour urine measurement (procedure)"
-* topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
-* topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-03 "BIOCHIMIE - URINE"
+// * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
+// * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-03 "BIOCHIMIE - URINE"
 * action.extension[0].extension[0].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"

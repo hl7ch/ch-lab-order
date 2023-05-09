@@ -40,8 +40,8 @@ Usage: #example
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
 * topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
-* topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
-* topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#12 "PROTEINES - MARQUEURS TUMORAUX - VITAMINES"
+// * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
+// * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#12 "PROTEINES - MARQUEURS TUMORAUX - VITAMINES"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "example-specimen-venous-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
