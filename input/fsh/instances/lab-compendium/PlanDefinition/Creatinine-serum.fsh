@@ -30,8 +30,8 @@ Usage: #example
 * useContext.valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* topic[+] = http://snomed.info/sct#166312007 "Blood chemistry"
+* topic[0] = $lnc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#166312007 "Blood chemistry"
 // * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
 // * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-01 "BIOCHIMIE - SANG"
 * action.extension.extension[0].extension.url = "Material"

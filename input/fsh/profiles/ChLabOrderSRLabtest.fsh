@@ -36,10 +36,10 @@ Description: "Definition for ServiceRequests as lab tests in a ChLabOrderSRConta
 
 // * code from http://hl7.org/fhir/ValueSet/report-codes or $microbiol-procedures
 
-// Includes all codes defined in http://loinc.org
+// Includes all codes defined in $lnc
 // * code from $microbiol-procedures
 // * code from $sct
-// error 'Found a reference to a CodeSystem (http://snomed.info/sct) where a ValueSet belongs'
+// error 'Found a reference to a CodeSystem ($sct) where a ValueSet belongs'
 
 // * code from $sct (example)
 // * code ^binding.extension[=].valueString = "LOINC_Code"

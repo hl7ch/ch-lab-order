@@ -172,7 +172,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '64779008',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Blood coagulation disorder (disorder)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -197,7 +197,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '723188008',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Renal insufficiency (disorder)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id) then {
@@ -225,7 +225,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '19887002',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Claustrophobia (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -250,7 +250,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '879862001',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Body piercing (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -275,7 +275,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '397578001',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Device in situ (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id),
@@ -301,7 +301,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '34486009',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Hyperthyroidism (disorder)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -326,7 +326,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '73211009',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Diabetes mellitus (disorder)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -351,7 +351,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '366321006',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Finding of gravida (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -376,7 +376,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '293637006',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Allergy to contrast media (finding)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id)
@@ -401,7 +401,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.code as code,
 //             code.coding as coding2,
 //             coding2.code = '182817000',
-//             coding2.system = 'http://snomed.info/sct',
+//             coding2.system = '$sct',
 //             coding2.display = 'Drug prescription (situation)',
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id),
@@ -421,7 +421,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //          observation.code as code,
 //          code.coding as coding2,
 //          coding2.code = '723188008', // FIXME needs to be changed
-//          coding2.system = 'http://snomed.info/sct',
+//          coding2.system = '$sct',
 //          coding2.display = 'Renal insufficiency (disorder)',
 //          condition.evidence as evidence,
 //          evidence.detail as detail,
