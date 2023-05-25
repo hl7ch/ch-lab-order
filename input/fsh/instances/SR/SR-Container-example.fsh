@@ -1,9 +1,9 @@
-Instance: SR-Container-example
+Instance: SR-Container
 InstanceOf: ChLabOrderSRContainer
 Title: "laborder SR Container Example"
 Description: "Service Request example as container for 2 other containers, CreaClearance and Electrolytes"
 Usage: #example
-* id = "SR-Container-example"
+* id = "SR-Container"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

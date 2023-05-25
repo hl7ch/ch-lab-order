@@ -11,8 +11,7 @@ Usage: #example
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/Creatinine-Clearance"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/panel-blood-electrolyte"
 
-* basedOn = Reference(SR-CreaClearance)
-* basedOn = Reference(SR-Blood-Electrolytes)
+* basedOn = Reference(SR-Container)
 
 * status = #active
 * intent = #original-order
