@@ -6,6 +6,7 @@ Usage: #example
 * id = "LabOrder"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
+* language = #en
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
 * type = #document
@@ -37,3 +38,4 @@ Usage: #example
 // ---- SR for Coagulation Tests ----
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
 * entry[=].resource = LabOrder-ServiceRequest-cc
+
