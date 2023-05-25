@@ -575,11 +575,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].type = #group
 
 
-// ---- Compendium Labor Gantenbein -- Main sample Lab----
+// ---- Catalog Labor Gantenbein -- Main sample Lab----
 // #######################################################
 * item[=].item[+].linkId = "labCatalog.Gantenbein"
 * item[=].item[=].definition = ""
-* item[=].item[=].text = "Gantenbein Compendium"
+* item[=].item[=].text = "Gantenbein Catalog"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
@@ -737,11 +737,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#272379006 "Event (event)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#413350009 "Finding with explicit context (situation)"
 
-// ---- Compendium Labor Pipette ----
+// ---- Catalog Labor Pipette ----
 // ###################################################
 * item[=].item[+].linkId = "labCatalog.Pipette"
 * item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Pipette Compendium"
+* item[=].item[=].text = "Pipette Catalog"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
 * item[=].item[=].item[=].text = "Lab Services"
@@ -808,11 +808,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 
-// ---- Compendium Labor Schildknecht ----
+// ---- Catalog Labor Schildknecht ----
 // ##################################################
 * item[=].item[+].linkId = "labCatalog.Schildknecht"
 * item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Schildknecht Compendium"
+* item[=].item[=].text = "Schildknecht Catalog"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Schildknecht.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
