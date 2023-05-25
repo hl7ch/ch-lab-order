@@ -566,7 +566,7 @@ Usage: #example
 CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
 */
 
-// ------------Choice of Catalog -----------------
+// ---- Choice of Catalog, Gantenbein, Pipette -----------------
 
 * item[+].linkId = "labCatalogs"
 * item[=].text = "Labor Compendien"
@@ -617,6 +617,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
 * item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
