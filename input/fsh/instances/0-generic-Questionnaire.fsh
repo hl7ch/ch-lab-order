@@ -569,7 +569,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 // ---- Choice of Catalog, hier Gantenbein oder Pipette -----------------
 
 * item[+].linkId = "labCatalogs"
-* item[=].text = "Labor Compendien"
+* item[=].text = "Labor Catalogues"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "labCatalog.Gantenbein"
@@ -583,7 +583,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-* item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
+* item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Blablabla"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Kalium"
 * item[=].item[=].item[=].item[=].type = #boolean
