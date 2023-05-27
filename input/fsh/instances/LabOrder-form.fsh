@@ -152,6 +152,10 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.practitioner.email"
 * item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].type = #string
+
+
+
+//---- Empfangende Organisation ----
 * item[=].item[+].linkId = "receiver.organization"
 * item[=].item[=].text = "Empfangende Organisation"
 * item[=].item[=].type = #group
