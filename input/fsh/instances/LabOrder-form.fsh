@@ -152,10 +152,6 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.practitioner.email"
 * item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].type = #string
-
-
-
-//---- Empfangende Organisation ----
 * item[=].item[+].linkId = "receiver.organization"
 * item[=].item[=].text = "Empfangende Organisation"
 * item[=].item[=].type = #group
@@ -163,7 +159,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
 
-* item[=].item[=].item[+].linkId = "receiver.organization.gln"
+* item[=].item[=].item[+].linkId = "receciver.organization.gln"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
@@ -579,11 +575,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].type = #group
 
 
-// ---- Catalog Labor Gantenbein -- Main sample Lab----
+// ---- Compendium Labor Gantenbein -- Main sample Lab----
 // #######################################################
 * item[=].item[+].linkId = "labCatalog.Gantenbein"
 * item[=].item[=].definition = ""
-* item[=].item[=].text = "Gantenbein Catalog"
+* item[=].item[=].text = "Gantenbein Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
@@ -741,11 +737,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#272379006 "Event (event)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#413350009 "Finding with explicit context (situation)"
 
-// ---- Catalog Labor Pipette ----
+// ---- Compendium Labor Pipette ----
 // ###################################################
 * item[=].item[+].linkId = "labCatalog.Pipette"
 * item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Pipette Catalog"
+* item[=].item[=].text = "Pipette Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
 * item[=].item[=].item[=].text = "Lab Services"
@@ -812,11 +808,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 
-// ---- Catalog Labor Schildknecht ----
+// ---- Compendium Labor Schildknecht ----
 // ##################################################
 * item[=].item[+].linkId = "labCatalog.Schildknecht"
 * item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Schildknecht Catalog"
+* item[=].item[=].text = "Schildknecht Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "labCatalog.Schildknecht.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
