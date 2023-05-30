@@ -872,13 +872,19 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 // ------------ Choice of Container and/or Test-----------------
 // 
 * item[=].item[=].item[=].item[+].linkId = "SR-container"
-* item[=].item[=].item[=].item[=].text = "ServiceRequest Container"
-* item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].answerOption[0].valueString = "SR-Container"
+* item[=].item[=].item[=].item[=].text = "ServiceRequest test panel"
+* item[=].item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].item[=].answerOption[1].valueString = "SR-Test"
+
+
+* item[=].item[=].item[=].item[+].linkId = "SR-test"
+* item[=].item[=].item[=].item[=].text = "ServiceRequest single test"
+* item[=].item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].item[=].repeats = true
-// * item[=].item[=].item[=].item[=].answerOption[0].valueReference(SR-Container)
-// * item[=].item[=].item[=].item[=].answerOption[=].initialSelected = true
-// * item[=].item[=].item[=].item[=].answerOption[+].valueReference(SR-Blood-Electrolytes)
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "SR-test1"
+* item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+
+// * item[=].item[=].item[=].item[=].item[=].item[0].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 
