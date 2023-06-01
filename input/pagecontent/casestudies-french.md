@@ -11,6 +11,7 @@ Les résultats du laboratoire expéditeur arrivent électroniquement chez le mé
 
 Exemple FHIR correspondant qui répond à cette spécification :
 [1-tvt.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/1-tvt.xml)
+[1-tvt.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.json.html)
 
 Comme il s'agit d'une thrombose veineuse primaire de la jambe, le Dr Eva Erlenmeier du laboratoire Pipette envoie un retour d'information au Dr Mustermann, lui recommandant d'effectuer un dépistage de la thrombophilie, qui comprend les analyses suivantes :
 Quick, aPTT, fibrinogène, antithrombine (funct.), temps de thrombine I 2,5 NIH/ml, résistance APC, D-dimères, protéine C, (méthode aPTT), protéine S antigène.
