@@ -593,6 +593,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
 * item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-potassium-serum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
+* item[=].item[=].item[=].item[=].code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium.specimenDefinition"
@@ -614,6 +615,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Sodium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Natrium"
+* item[=].item[=].item[=].item[=].code = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Sodium.specimenDefinition"
@@ -635,6 +637,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Chloride"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Chlorid"
+* item[=].item[=].item[=].item[=].code = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Chloride.specimenDefinition"
@@ -655,7 +658,8 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Electrolyte"
 * item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Elektrolyte Panel"
+* item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
+* item[=].item[=].item[=].item[=].code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Electrolyte.ActivityDefintion"
@@ -665,18 +669,34 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// ---- E3 Creatinine 24h urine ----
-// =================================
-* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Creatinine24h"
+// ---- E3 Creatinine concentration on 24h urine ----
+// ==================================================
+* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.CreatinineUrine24h"
 * item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine panel"
+* item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine"
+* item[=].item[=].item[=].item[=].code = $lnc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
 * item[=].item[=].item[=].item[=].type = #boolean
 
-// ---- E4 Creatinine serum ----
-// =================================
+* item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.urine-24h.specimenDefinition"
+* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinin Konzentration im 24h Urin"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein.labServices.CreatinineUrine24h"
+* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.CreatinineUrin.specimenDefinitions"
+* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122575003 "Urine specimen (specimen)"
+
+
+// ---- E4 Creatinine concentration serum ----
+// ===========================================
 * item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.CreatinineSerum"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Creatinine Serum"
+* item[=].item[=].item[=].item[=].code = $lnc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.CreatinineSerum.specimenDefinition"
@@ -869,13 +889,16 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
 
-// ------------ Choice of Container and/or Test-----------------
+// ------------ Do I want a test panel -- yes/no -----------------
 // 
 * item[=].item[=].item[=].item[+].linkId = "SR-container"
 * item[=].item[=].item[=].item[=].text = "ServiceRequest test panel"
 * item[=].item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].item[=].repeats = true
 
+
+
+// ------------ Do I want a single test -- yes/no -----------------
 
 * item[=].item[=].item[=].item[+].linkId = "SR-test"
 * item[=].item[=].item[=].item[=].text = "ServiceRequest single test"
