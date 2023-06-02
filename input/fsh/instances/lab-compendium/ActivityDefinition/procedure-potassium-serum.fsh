@@ -29,5 +29,6 @@ Usage: #example
 * code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
-* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-capillary)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-potassium)

@@ -1,4 +1,6 @@
 Instance: Venous-Blood
+
+// ---- must be excanged with single-test-serum-venous SpecimenDefinition ----
 InstanceOf: SpecimenDefinition
 Description: "Venous blood"
 Usage: #example

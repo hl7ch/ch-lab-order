@@ -1,4 +1,7 @@
 Instance: Venous-Blood-Fasting
+
+// ---- must be renamed with single-test-venous-fasting ----
+// ---- single-test-capillary-fasting should be added ----
 InstanceOf: SpecimenDefinition
 Description: "Venous Blood, 12 h fasting"
 Usage: #example
