@@ -591,9 +591,10 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 // ---- E1 Blood potassium test ----
 // =================================
 * item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium"
-* item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-potassium-serum"
+// * item[=].item[=].item[=].item[=].definition = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-potassium-serum"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/potassium-serum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
-* item[=].item[=].item[=].item[=].code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Potassium.specimenDefinition"
