@@ -31,4 +31,5 @@ Usage: #example
 * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-capillary)
+* observationRequirement = Reference(ObservationDefinition/input-observation-reason-for-ordering)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-potassium)
