@@ -28,14 +28,14 @@ Usage: #example
 * name = "PotassiumSerumMeasurement"
 * title = "Potassium measurement on in vitro blood serum"
 * title.extension.extension[0].url = "lang"
-* title.extension.extension[=].valueCode = #fr-FR
+* title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage du potassium sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #draft
 * experimental = true
-* date = "2020-02-05T20:00:00+02:00"
+* date = "2023-06-05T20:00:00+02:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Potassium measurement on serum specimen"
@@ -51,7 +51,7 @@ Usage: #example
 * relatedArtifact.url = "https://en.wikipedia.org/wiki/Potassium"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
-* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-venous-serum-single-test"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"

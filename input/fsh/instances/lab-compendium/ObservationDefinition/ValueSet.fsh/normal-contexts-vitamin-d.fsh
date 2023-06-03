@@ -4,7 +4,7 @@ Title: "Contextes de remboursement du dosage de la vitamine D"
 Description: "Ce jeu de valeurs liste les réponses normales associées à la question \"contexte de prescription de l'examen dosage de la vitamine D\", autorisant le remboursement de cet examen (NABM 1139)."
 * ^meta.lastUpdated = "2020-03-10T07:30:00.000+00:00"
 * ^meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ObservationValueSet"
-* ^language = #fr-FR
+* ^language = #de-CH
 * ^url = "http://fhir.ch/ig/ch-lab-order/ValueSet/normal-contexts-vitamin-d"
 * ^version = "0.1.0"
 * ^status = #active

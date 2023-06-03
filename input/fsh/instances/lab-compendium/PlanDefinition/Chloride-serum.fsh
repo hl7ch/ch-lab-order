@@ -28,14 +28,14 @@ Usage: #example
 * name = "ChlorideSerumMeasurement"
 * title = "Chloride measurement on in vitro blood serum"
 * title.extension.extension[0].url = "lang"
-* title.extension.extension[=].valueCode = #fr-FR
+* title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage du chloride sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #draft
 * experimental = true
-* date = "2020-02-05T20:00:00+02:00"
+* date = "2023-06-05T20:00:00+02:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Chloride measurement on serum specimen"
