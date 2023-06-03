@@ -43,6 +43,7 @@ Usage: #example
 // * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#12 "PROTEINES - MARQUEURS TUMORAUX - VITAMINES"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $lnc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
