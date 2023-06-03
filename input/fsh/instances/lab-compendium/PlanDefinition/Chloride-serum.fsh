@@ -5,7 +5,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
+* extension[=].valueReference = Reference(Composition/Gantenbein-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"  // Analysen-Liste Code
 * extension[=].valueCodeableConcept = http://www.ama-assn.org/go/cpt#CPTfakecode "Chloride, serum"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
@@ -51,6 +51,7 @@ Usage: #example
 * relatedArtifact.url = "https://en.wikipedia.org/wiki/Chloride"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Chloride, Serum"

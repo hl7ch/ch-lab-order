@@ -29,5 +29,5 @@ Usage: #example
 * code = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
-* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-sodium)

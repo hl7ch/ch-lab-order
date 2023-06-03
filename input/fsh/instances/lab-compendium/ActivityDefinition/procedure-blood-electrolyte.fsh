@@ -23,7 +23,7 @@ Usage: #example
 
 * kind = #ServiceRequest
 * code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-chloride)
