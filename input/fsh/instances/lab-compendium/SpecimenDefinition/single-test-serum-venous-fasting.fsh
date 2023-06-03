@@ -1,4 +1,4 @@
-Instance: Venous-Blood-Fasting
+Instance: single-test-serum-venous-fasting
 
 // ---- must be renamed with single-test-venous-fasting ----
 // ---- single-test-capillary-fasting should be added ----
