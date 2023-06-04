@@ -25,7 +25,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "BloodElectrolytePanel"
 * title = "Blood electrolyte panel (serum or plasma)"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel "collection of tests and panels performed on one or more in vitro biologic specimens"
+* type = http://fhir.ch/ig/ch-lab-order/lab-compendium/CodeSystem/laboratory-service-definition-type#panel "collection of tests and panels performed on one or more in vitro biologic specimens"
 * status = #draft
 * experimental = true
 * date = "2020-02-11T20:00:00+02:00"
@@ -46,4 +46,4 @@ Usage: #example
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
-* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-blood-electrolyte"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-blood-electrolyte"
