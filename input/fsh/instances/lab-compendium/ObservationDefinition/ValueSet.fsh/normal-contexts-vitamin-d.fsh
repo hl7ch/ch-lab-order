@@ -17,7 +17,15 @@ Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verord
 * ^immutable = false
 * include codes from system SNOMED_CT where concept is-a #41345002  // Rickets (disorder) -- Rachitis
 * include codes from system SNOMED_CT where concept is-a #4598005   // Osteomalacia (disorder)
-* include codes from system SNOMED_CT where concept is-a #737295003 // Transplanted kidney present (finding)
-* include codes from system SNOMED_CT where concept is-a #707206008 // Assessment for bariatric surgery (procedure)
+* include codes from system SNOMED_CT where concept is-a #312894000 // Osteopenia (disorder)
+* include codes from system SNOMED_CT where concept is-a #64859006  // Osteoporosis (disorder)
+* include codes from system SNOMED_CT where concept is-a #268029009 // Pathological fracture (disorder)
 * include codes from system SNOMED_CT where concept is-a #443731004 // Assessment using falls risk assessment score for the elderly (procedure)
-* include codes from system SNOMED_CT where concept is-a #66999008  // Hyperparathyroidism (disorder) [not in orig file]
+* include codes from system SNOMED_CT where concept is-a #391040000 // At risk of osteoporotic fracture (finding)
+* include codes from system SNOMED_CT where concept is-a #90708001  // Kidney disease (disorder)
+* include codes from system SNOMED_CT where concept is-a #73132005  // Disorder of parathyroid gland (disorder)
+* include codes from system SNOMED_CT where concept is-a #119292006 //Disorder of gastrointestinal tract (disorder)
+* include codes from system SNOMED_CT where concept is-a #32230006  //Malabsorption syndrome (disorder)
+
+* include codes from system SNOMED_CT where concept is-a #235856003 // Disorder of liver (disorder) 
+* include codes from system SNOMED_CT where concept is-a #182817000 // Drug prescription (situation)
