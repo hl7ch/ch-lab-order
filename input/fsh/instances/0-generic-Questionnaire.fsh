@@ -568,43 +568,43 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 // ---- Choice of Catalog, hier Gantenbein oder Pipette -----------------
 
-* item[+].linkId = "labCatalogs"
+* item[+].linkId = "lab-compendiums"
 * item[=].text = "Labor Catalogues"
 * item[=].type = #group
 
-* item[=].item[+].linkId = "labCatalog.Gantenbein"
+* item[=].item[+].linkId = "lab-compendium.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Catalog"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices"
+* item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Gantenbein"
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-* item[=].item[=].item[=].item[0].linkId = "labCatalog.Gantenbein.labServices.Blablabla"
+* item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Blablabla"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Kalium"
 * item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Sodium"
+* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Natrium"
 * item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[+].linkId = "labCatalog.Gantenbein.labServices.Chloride"
+* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Chloride"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Chlorid"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 // ---- Catalog Labor Pipette ----
-* item[=].item[+].linkId = "labCatalog.Pipette"
+* item[=].item[+].linkId = "lab-compendium.Pipette"
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Pipette Catalog"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "labCatalog.Pipette.Services"
+* item[=].item[=].item[0].linkId = "lab-compendium.Pipette.Services"
 * item[=].item[=].item[=].text = "Lab Services"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Pipette"
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Pipette"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
@@ -673,14 +673,14 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 
 // ---- Catalog Labor Schildknecht ----
-* item[=].item[+].linkId = "labCatalog.Schildknecht"
+* item[=].item[+].linkId = "lab-compendium.Schildknecht"
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Schildknecht Catalog"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "labCatalog.Schildknecht.labServices"
+* item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices"
 * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "labCatalog.Schildknecht"
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Schildknecht"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
