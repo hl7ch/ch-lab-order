@@ -4,7 +4,7 @@ Description: "Service CRP"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-crp"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp"
 * identifier.use = #official
 * identifier.value = "CRP_test"
 * version = "0.1.0"

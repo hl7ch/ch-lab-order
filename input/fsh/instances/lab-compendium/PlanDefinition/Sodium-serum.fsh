@@ -56,4 +56,4 @@ Usage: #example
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Sodium, Serum"
 * action.code.coding[+] = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-sodium-serum"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"

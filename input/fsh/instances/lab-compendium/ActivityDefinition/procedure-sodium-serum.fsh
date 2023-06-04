@@ -4,7 +4,7 @@ Description: "Service Serum Natrium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-sodium-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"
 * identifier.use = #official
 * identifier.value = "Na_serum_test"
 * version = "0.1.0"
