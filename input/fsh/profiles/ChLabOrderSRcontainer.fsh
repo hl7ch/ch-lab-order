@@ -23,7 +23,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 // ---- instantiates Canonical
 * instantiatesCanonical 1.. MS
 
-// * Is based On ChLabOrderSRLabtest or other SRConainer
+// * Is based On ChLabOrderSRLabtest or other SRContainer
 * basedOn MS
 * basedOn only Reference(ChLabOrderSRLabtest or ChLabOrderSRContainer) // Labtest or Selfreferential
 

@@ -52,13 +52,13 @@ group LabOrderQrToServiceRequest(source qr : QuestionnaireResponse, target patie
 //   } "item.answer";
 // }
 
-// group ReasonServiceItems(source src : BackboneElement, target serviceRequest: ServiceRequest) {
-//   src.item as item where (linkId.value = 'reason.question' and answer.exists()) then {
-//     item.answer as answer then {
-//       answer.value: string as value -> serviceRequest.reasonCode as reasonCode, reasonCode.text = value "reason.question";
-//     } "answer.valueString";
-//   } "item.answer";
-// }
+group ReasonServiceItems(source src : BackboneElement, target serviceRequest: ServiceRequest) {
+  src.item as item where (linkId.value = 'reason.question' and answer.exists()) then {
+    item.answer as answer then {
+      answer.value: string as value -> serviceRequest.reasonCode as reasonCode, reasonCode.text = value "reason.question";
+    } "answer.valueString";
+  } "item.answer";
+}
 
 // group ImagingServiceItems(source src : BackboneElement, target serviceRequest: ServiceRequest) {
 //   src.item as item where (linkId.value = 'imagingService.type' and answer.exists()) then {
