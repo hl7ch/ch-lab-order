@@ -19,7 +19,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "SerumCreatinineTest"
 * title = "Serum creatinine test"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test
+* type = http://fhir.ch/ig/ch-lab-order/lab-compendium/CodeSystem/laboratory-service-definition-type#test
 * status = #draft
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"
@@ -43,4 +43,4 @@ Usage: #example
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * action.timingDuration = 1 'h' "hour"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-serum-creatinine"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-serum-creatinine"

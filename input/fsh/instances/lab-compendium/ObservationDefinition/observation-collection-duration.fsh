@@ -1,6 +1,6 @@
 Instance: observation-collection-duration
 InstanceOf: ObservationDefinition
-Description: "Collection duration of specimen"
+Description: "Collection duration [h] of specimen"
 Usage: #example
 * meta.profile[0] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"
 * meta.profile[+] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

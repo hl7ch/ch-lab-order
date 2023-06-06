@@ -1,5 +1,6 @@
 Instance: panel-urine24h-creatinine
 InstanceOf: PlanDefinition
+Description: "Creatinine [Mass/time] 24 hour urine panel - 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
@@ -37,9 +38,9 @@ Usage: #example
 * topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 * action.extension.extension.extension.url = "Material"
-* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/urine-24h) "example-specimen-urine-24h"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $lnc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * action.timingDuration = 2 'h' "hours"
-* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-urine24h-creatinine"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine"

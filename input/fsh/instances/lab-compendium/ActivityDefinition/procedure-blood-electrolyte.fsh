@@ -3,7 +3,7 @@ InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/Catalog/ActivityDefinition/procedure-blood-electrolyte"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-blood-electrolyte"
 * version = "0.1.0"
 * name = "BloodElectrolyteProcedure"
 * title = "Procedure - blood electrolyte (serum or plasma)"
@@ -23,7 +23,7 @@ Usage: #example
 
 * kind = #ServiceRequest
 * code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-chloride)

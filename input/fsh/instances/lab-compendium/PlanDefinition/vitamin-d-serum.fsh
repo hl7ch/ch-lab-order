@@ -2,9 +2,9 @@ Instance: vitamind-serum
 InstanceOf: PlanDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
-* language = #fr-FR
+* language = #de-CH
 * text.status = #additional
-* text.div = "<div xml:lang=\"fr-FR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"fr-FR\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Examen de biologie médicale monoparamétrique :</p>\n            <p>Dosage de la 25-(OH)-vitamine D (D2 + D3)</p>\n            <p>description : Vitamine D dosée sur échantillon de sérum</p>\n            <p>prescriptible : oui</p>\n            <p>délai de rendu : 120 minutes</p>\n        </div>"
+* text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Examen de biologie médicale monoparamétrique :</p>\n            <p>Dosage de la 25-(OH)-vitamine D (D2 + D3)</p>\n            <p>description : Vitamine D dosée sur échantillon de sérum</p>\n            <p>prescriptible : oui</p>\n            <p>délai de rendu : 120 minutes</p>\n        </div>"
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
@@ -23,7 +23,7 @@ Usage: #example
 * name = "VitaminDMeasurement"
 * title = "Dosage de la vitamine D dans le sang"
 * title.extension.extension[0].url = "lang"
-* title.extension.extension[=].valueCode = #fr-FR
+* title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage de la 25-(OH)-vitamine D (D2 + D3)"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
@@ -42,7 +42,8 @@ Usage: #example
 // * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
 // * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#12 "PROTEINES - MARQUEURS TUMORAUX - VITAMINES"
 * action.extension.extension.extension.url = "Material"
-* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/Venous-Blood) "example-specimen-venous-serum-single-test"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $lnc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"

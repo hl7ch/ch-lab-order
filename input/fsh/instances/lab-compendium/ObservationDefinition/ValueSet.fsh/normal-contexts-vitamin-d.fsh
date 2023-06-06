@@ -1,10 +1,10 @@
 ValueSet: NormalReasonsVitaminD
 Id: normal-contexts-vitamin-d
-Title: "Contextes de remboursement du dosage de la vitamine D"
-Description: "Ce jeu de valeurs liste les réponses normales associées à la question \"contexte de prescription de l'examen dosage de la vitamine D\", autorisant le remboursement de cet examen (NABM 1139)."
+Title: "Kontexte für die Erstattung des Vitamin-D-Tests"
+Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verordnungskontext für den Vitamin-D-Test\" auf, die eine Erstattung dieses Tests erlauben."
 * ^meta.lastUpdated = "2020-03-10T07:30:00.000+00:00"
 * ^meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ObservationValueSet"
-* ^language = #fr-FR
+* ^language = #de-CH
 * ^url = "http://fhir.ch/ig/ch-lab-order/ValueSet/normal-contexts-vitamin-d"
 * ^version = "0.1.0"
 * ^status = #active
@@ -17,7 +17,15 @@ Description: "Ce jeu de valeurs liste les réponses normales associées à la qu
 * ^immutable = false
 * include codes from system SNOMED_CT where concept is-a #41345002  // Rickets (disorder) -- Rachitis
 * include codes from system SNOMED_CT where concept is-a #4598005   // Osteomalacia (disorder)
-* include codes from system SNOMED_CT where concept is-a #737295003 // Transplanted kidney present (finding)
-* include codes from system SNOMED_CT where concept is-a #707206008 // Assessment for bariatric surgery (procedure)
+* include codes from system SNOMED_CT where concept is-a #312894000 // Osteopenia (disorder)
+* include codes from system SNOMED_CT where concept is-a #64859006  // Osteoporosis (disorder)
+* include codes from system SNOMED_CT where concept is-a #268029009 // Pathological fracture (disorder)
 * include codes from system SNOMED_CT where concept is-a #443731004 // Assessment using falls risk assessment score for the elderly (procedure)
-* include codes from system SNOMED_CT where concept is-a #66999008  // Hyperparathyroidism (disorder) [not in orig file]
+* include codes from system SNOMED_CT where concept is-a #391040000 // At risk of osteoporotic fracture (finding)
+* include codes from system SNOMED_CT where concept is-a #90708001  // Kidney disease (disorder)
+* include codes from system SNOMED_CT where concept is-a #73132005  // Disorder of parathyroid gland (disorder)
+* include codes from system SNOMED_CT where concept is-a #119292006 //Disorder of gastrointestinal tract (disorder)
+* include codes from system SNOMED_CT where concept is-a #32230006  //Malabsorption syndrome (disorder)
+
+* include codes from system SNOMED_CT where concept is-a #235856003 // Disorder of liver (disorder) 
+* include codes from system SNOMED_CT where concept is-a #182817000 // Drug prescription (situation)

@@ -4,7 +4,7 @@ Description: "Service Serum Kalium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-potassium-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 * identifier.use = #official
 * identifier.value = "K_serum_test"
 * version = "0.1.0"
@@ -29,5 +29,7 @@ Usage: #example
 * code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
-* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-capillary)
+* observationRequirement = Reference(ObservationDefinition/input-observation-reason-for-ordering)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-potassium)
