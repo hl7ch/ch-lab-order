@@ -72,3 +72,13 @@ Les entreprises reçoivent de l'AMV une liste comprenant des étiquettes avec le
 Questionnaire FHIR correspondant à cette spécification:
 [5-biol-monit.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.xml.html)
 [5-biol-monit.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.json.html)
+
+### Étude de cas n° 6 : suspicion de mélanome, demande d'examen histopathologique
+
+Une patiente de 45 ans s'est présentée pour un examen régulier de la peau et cette lésion a été observée : Naevus de jonction composé d'une zone séborrhéique à l'extrémité supérieure et d'un réseau atypique constitué de nombreux points, structures, etc. distincts, suggérant une implication mélanocytaire. Excision. Joindre les images dermatoscopiques // TODO Spécimen : Ellipse cutanée de 29 x 11 x 5 mm Site corporel : Dos paralombaire gauche
+
+L'échantillon de peau, le formulaire de commande et l'image dermatoscopique sont envoyés au laboratoire.
+
+Questionnaire FHIR correspondant à cette spécification:
+[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
+[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)

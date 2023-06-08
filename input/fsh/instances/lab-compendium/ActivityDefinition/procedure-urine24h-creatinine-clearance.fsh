@@ -3,7 +3,7 @@ InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-urine24h-creatinine-clearance"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine-clearance"
 * version = "0.1.0"
 * name = "UrineCreatinineClearanceProcedure"
 * title = "Procedure - 24-hour urine creatinine clearance"

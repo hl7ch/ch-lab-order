@@ -1,6 +1,6 @@
 Instance: observation-collection-volume
 InstanceOf: ObservationDefinition
-Description: "Collection volume of specimen"
+Description: "Collection volume [mL] of specimen"
 Usage: #example
 * meta.profile[0] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"
 * meta.profile[+] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

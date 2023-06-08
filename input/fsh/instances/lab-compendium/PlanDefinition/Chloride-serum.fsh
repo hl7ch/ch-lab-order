@@ -5,7 +5,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
+* extension[=].valueReference = Reference(Composition/Gantenbein-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"  // Analysen-Liste Code
 * extension[=].valueCodeableConcept = http://www.ama-assn.org/go/cpt#CPTfakecode "Chloride, serum"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
@@ -21,21 +21,21 @@ Usage: #example
 * extension[=].valueString = "No specific limitation for this test"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/RegulatorySummary"
 * extension[=].valueString = "CLIA Law & Regulations apply"
-* url = "http://fhir.ch/ig/ch-lab-order/Catalog/PlanDefinition/chloride-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/chloride-serum"
 * identifier.use = #official
 * identifier.value = "Cl_serum_test"
 * version = "0.1.0"
 * name = "ChlorideSerumMeasurement"
 * title = "Chloride measurement on in vitro blood serum"
 * title.extension.extension[0].url = "lang"
-* title.extension.extension[=].valueCode = #fr-FR
+* title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage du chloride sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #draft
 * experimental = true
-* date = "2020-02-05T20:00:00+02:00"
+* date = "2023-06-05T20:00:00+02:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Chloride measurement on serum specimen"
@@ -51,9 +51,10 @@ Usage: #example
 * relatedArtifact.url = "https://en.wikipedia.org/wiki/Chloride"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
+* action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Chloride, Serum"
 * action.code.coding[+] = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-chloride-serum"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"

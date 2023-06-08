@@ -1,4 +1,4 @@
-Instance: Lab
+Instance: LabOrder-ServiceRequest-generic
 InstanceOf: ChOrfServiceRequest
 Title: "laborder lab"
 Description: "Example for generic Service Request"

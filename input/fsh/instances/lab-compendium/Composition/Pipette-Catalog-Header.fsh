@@ -8,8 +8,8 @@ Usage: #example
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\">\n
 <p><b>Additional Narrative: </b></p>\n
-<p><b>Laboratory compendium title</b>: Labor Pipette - Directory of Diagnostic Services</p>\n
-<p><b>id:</b> example-lab-compendium-header</p>\n
+<p><b>Laboratory catalog title</b>: Labor Pipette - Directory of Diagnostic Services</p>\n
+<p><b>id:</b> example-lab-catalog-header</p>\n
 <p><b>meta - profile:</b> hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogHeader</p>\n
 <p><b>status:</b> preliminary</p>\n
 <p><b>type:</b> catalog</p>\n
@@ -26,7 +26,7 @@ Usage: #example
 * extension.valuePeriod.end = "2022-12-31"
 * identifier.use = #official
 * identifier.system = "http://fhir.org"
-* identifier.value = "PipetteLabCompendium"
+* identifier.value = "PipetteLabCatalog"
 * status = #preliminary
 * type.text = "Catalog"
 * category = http://terminology.hl7.org/CodeSystem/catalogType#protocol

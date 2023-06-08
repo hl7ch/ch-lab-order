@@ -1,4 +1,7 @@
-Instance: Venous-Blood-Fasting
+Instance: single-test-serum-venous-fasting
+
+// ---- must be renamed with single-test-venous-fasting ----
+// ---- single-test-capillary-fasting should be added ----
 InstanceOf: SpecimenDefinition
 Description: "Venous Blood, 12 h fasting"
 Usage: #example
@@ -26,8 +29,8 @@ Usage: #example
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
 * typeTested[=].container.cap = $container-cap#green "green cap"
 * typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
-* typeTested[=].rejectionCriterion[0] = $rejectionCriteria#insufficient "insufficient specimen volume"
-* typeTested[=].rejectionCriterion[+] = $rejectionCriteria#hemolized "hemolized specimen"
+* typeTested[=].rejectionCriterion[0] = $rejection-criteria#insufficient "insufficient specimen volume"
+* typeTested[=].rejectionCriterion[+] = $rejection-criteria#hemolized "hemolized specimen"
 * typeTested[=].handling[0].temperatureQualifier.text = "Ambient temperature"
 * typeTested[=].handling[=].temperatureRange.low = 15 'Cel' "°C"
 * typeTested[=].handling[=].temperatureRange.high = 25 'Cel' "°C"

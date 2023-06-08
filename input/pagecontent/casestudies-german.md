@@ -73,3 +73,13 @@ Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen
 Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
 [5-biol-monit.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.xml.html)
 [5-biol-monit.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.json.html)
+
+### Fallbeispiel 6: Verdacht auf Melanom, Anordnung einer histopathologischen Untersuchung
+
+Eine 45-jährige Patientin kam zu ihrer regelmäßigen Hautuntersuchung und es wurde diese Läsion festgestellt: Verbindungsnävi, bestehend aus einem seborrhoischen Bereich am oberen Ende und einem atypischen Netzwerk aus vielen einzelnen Punkten, Strukturen usw., was auf eine melanozytäre Beteiligung hindeutet. Exzision. Beifügung dermatoskopischer Bilder // TODO Präparat: 29 x 11 x 5 mm Hautellipse Körperstelle: Rücken paralumbar links
+
+Die Hautprobe wird zusammen mit dem Auftragsformular und dem dermatoskopischen Bild an das Labor gesandt.
+
+Passende FHIR-Formular, das dieser Spezifikation entspricht:
+[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
+[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)

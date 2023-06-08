@@ -1,6 +1,6 @@
 ValueSet: ClinicalFocusVitaminD
 Id: clinical-focus-vitamin-d
-Title: "All possible clinical contexts for vitamin D test"
+Title: "Vitamin D all possible clinical contexts for test"
 Description: "Broadest value set that may be referenced by ObservationDefinition.validCodedValueSet"
 * ^meta.lastUpdated = "2020-03-10T13:30:00.000+00:00"
 * ^meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ObservationValueSet"

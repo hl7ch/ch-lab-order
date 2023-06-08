@@ -4,7 +4,7 @@ Description: "Service Serum Chloride"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/procedure-chloride-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
 * identifier.use = #official
 * identifier.value = "Cl_serum_test"
 * version = "0.1.0"
@@ -29,5 +29,5 @@ Usage: #example
 * code = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
-* specimenRequirement = Reference(SpecimenDefinition/Venous-Blood)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-chloride)
