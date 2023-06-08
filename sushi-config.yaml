@@ -14,11 +14,14 @@ copyrightYear: 2021+
 releaseLabel: STU 1
 publisher:
   name: HL7 Switzerland
+  url: https://www.hl7.ch
 contact:
-  name: Marcel Hanselmann
-  telecom:
-    system: url
-    value: https://www.hl7.ch
+  - name: Marcel Hanselmann
+    telecom:
+      - system: email
+        value: laborprojektgruppe@gmail.com
+        use: work
+
 dependencies:
   ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: current
