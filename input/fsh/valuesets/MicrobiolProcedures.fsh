@@ -16,7 +16,7 @@ Description:  "Valueset Snomed CT Codes of Microbiological Procedures"
 * publisher = "eHealth Suisse"
 * contact.name = "eHealth Suisse"
 * contact.telecom.system = #url
-* contact.telecom.value = "www.e-health-suisse.ch"
+* contact.telecom.value = "https://www.e-health-suisse.ch"
 * description = "Valueset Snomed CT Codes of Microbiological Procedures"
 * immutable = true
 
