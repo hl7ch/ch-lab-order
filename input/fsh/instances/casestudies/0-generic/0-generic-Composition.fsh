@@ -8,7 +8,9 @@ Usage: #example
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div>
+<h3>Sample Composition</h3>
+</div>"
 * extension[0].extension.url = "enterer"
 * extension[=].extension.valueReference = Reference(MarcMustermannArztpraxis)
 * extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
