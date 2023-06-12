@@ -574,9 +574,11 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].text = "Labor Compendien"
 * item[=].type = #group
 
-
-// ---- Compendium Labor Gantenbein -- Main sample Lab----
-// #######################################################
+// #########################################################
+// ---- Compendium Labor Gantenbein
+// ---- choose test yes/no ----
+// ---- choose specimen venous/capillary
+// #########################################################
 * item[=].item[+].linkId = "lab-compendium.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
@@ -757,8 +759,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#272379006 "Event (event)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#413350009 "Finding with explicit context (situation)"
 
-// ---- Compendium Labor Pipette ----
-// ###################################################
+// #######################################################
+// ---- Compendium Labor Pipette, choose labSpecialty ----
+// #######################################################
 * item[=].item[+].linkId = "lab-compendium.Pipette"
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Pipette Compendium"
@@ -807,9 +810,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2069-3 "Chloride [Moles/volume] in Blood"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/chloride-serum) "Chloride [Moles/volume] in Blood"
-// * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-// * item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/chloride-serum"
+//* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+//* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
@@ -828,56 +831,10 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
 
-// ---- Compendium Labor Schildknecht ----
-// ##################################################
-// * item[=].item[+].linkId = "lab-compendium.Schildknecht"
-// * item[=].item[=].definition = "27898-6"
-// * item[=].item[=].text = "Schildknecht Compendium"
-// * item[=].item[=].type = #boolean
-// * item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices"
-// * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
-// * item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
-
-// ------------Choice of Hematology Specialty-----------------
-// // 
-// * item[=].item[=].item[=].item[+].linkId = "hematology"
-// * item[=].item[=].item[=].item[=].text = "Hematology"
-// * item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].item.linkId = "hemato-subset-schildknecht"
-// * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
-// * item[=].item[=].item[=].item[=].item.type = #choice
-// * item[=].item[=].item[=].item[=].item.repeats = true
-// * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
-// * item[=].item[=].item[=].item[+].linkId = "coagulation"
-// * item[=].item[=].item[=].item[=].text = "Coagulation"
-// * item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].item.linkId = "d-dimer"
-// * item[=].item[=].item[=].item[=].item.text = "D-Dimer"
-// * item[=].item[=].item[=].item[=].item.type = #choice
-// * item[=].item[=].item[=].item[=].item.repeats = true
-// * item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-// * item[=].item[=].item[=].item[+].linkId = "cc-subset-schildknecht"
-// * item[=].item[=].item[=].item[=].text = "clinical chemistry"
-// * item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].item.linkId = "crp"
-// * item[=].item[=].item[=].item[=].item.text = "CRP"
-// * item[=].item[=].item[=].item[=].item.type = #choice
-// * item[=].item[=].item[=].item[=].item.repeats = true
-// * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-// * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
-// 
+// ################################################################
 // ---- Compendium Labor Schildknecht, takes container concept ----
 // ################################################################
+
 * item[=].item[+].linkId = "lab-compendium.Schildknecht"
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Schildknecht Compendium"
@@ -891,23 +848,63 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 // ------------ Do I want a test panel -- yes/no -----------------
 // 
-* item[=].item[=].item[=].item[+].linkId = "SR-container"
-* item[=].item[=].item[=].item[=].text = "ServiceRequest test panel"
-* item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].linkId = "Schildknecht SR-container"
+* item[=].item[=].item[=].text = "ServiceRequest for test panel"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].repeats = true
 
-
+// * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.panels"
+// * item[=].item[=].item[=].item[=].text = "Testpanel Labor Schildknecht"
+// * item[=].item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].item[=].enableWhen.question = "SR-container"
+// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+// 
+// * item[=].item[=].item[=].item[=].item[0].linkId = "SR-test-panel"
+// * item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
+// * item[=].item[=].item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
 // ------------ Do I want a single test -- yes/no -----------------
+//
+* item[=].item[=].item[+].linkId = "SR-tests"
+* item[=].item[=].item[=].text = "ServiceRequest for single test"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[+].linkId = "SR-test"
-* item[=].item[=].item[=].item[=].text = "ServiceRequest single test"
-* item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[+].linkId = "singleTest.labServices"
+* item[=].item[=].item[=].item[=].text = "Single Test Lab Services"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "single-test-schildknecht"
+* item[=].item[=].item[=].item[=].item.text = "all_single_Tests"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "SR-test1"
-* item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
-* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
-// * item[=].item[=].item[=].item[=].item[=].item[0].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueReference = Reference(ChLabOrderSRLabtest/SR-Potassium) "Potassium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRLabtest/SR-Sodium) "Sodium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRLabtest/SR-Chloride) "Sodium [Moles/volume] in Serum or Plasma"
 
+// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueReference = Reference(ChLabOrderSRLabtest/SR-Potassium)
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRLabtest/SR-Sodium)
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(SR-Chloride)
+
+// * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.single-tests"
+// * item[=].item[=].item[=].item[=].text = "Einzeltest Labor Schildknecht"
+// * item[=].item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].item[=].enableWhen.question = "SR-tests"
+// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].enableWhen.answerString = true
+// 
+// 
+// * item[=].item[=].item[=].item[=].item[0].linkId = "SR-singleTest"
+// * item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
+// * item[=].item[=].item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"

@@ -27,3 +27,13 @@ Wrong Display Name 'Clinical presentation' for http://loinc.org#55108-5 - should
 
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE in the language laboratory test order entry task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE'
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV in the language laboratory results review task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV'
+
+# ValueSet/jurisdiction|4.0.1 ValueSet/languages|4.0.1 typeCode|2.0.8 classCode|2.0.8
+
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/languages|4.0.1
+Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.8
+Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode|2.0.8
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/ucum-units|4.0.1
+
+
