@@ -4,7 +4,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #de-CH
 * text.status = #additional
-* text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Examen de biologie médicale monoparamétrique :</p>\n            <p>Dosage de la 25-(OH)-vitamine D (D2 + D3)</p>\n            <p>description : Vitamine D dosée sur échantillon de sérum</p>\n            <p>prescriptible : oui</p>\n            <p>délai de rendu : 120 minutes</p>\n        </div>"
+* text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Zusätzliche Informationen in deutscher Sprache | Informationen in deutscher Sprache: </b></p>\n            <p>Monoparametrischer medizinischer Biologietest :</p>\n            <p>Konzentration von 25-(OH)-vitamine D (D2 + D3)</p>\n            <p>Beschreibung : Vitamine D Konzentration in Serum-Probe</p>\n            <p>verschreibbar : ja</p>\n            <p>Laufzeit : 120 Minuten</p>\n        </div>"
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
