@@ -82,5 +82,5 @@ Body Site: Back paralumbar left
 The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
 
 Matching FHIR questionnaire that corresponds to this specification:
-[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
-[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)
+[6-histopath.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
+[6-histopath.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)
