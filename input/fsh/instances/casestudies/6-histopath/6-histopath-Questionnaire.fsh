@@ -1,6 +1,6 @@
 Instance: 6-histopath-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 6-histopath assembled from modular version"
+Title: "questionnaire 6-histopath"
 Description: "Example for Questionnaire of Histopathology Examination"
 Usage: #example
 * id = "6-histopath"
@@ -10,7 +10,6 @@ Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
-
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
