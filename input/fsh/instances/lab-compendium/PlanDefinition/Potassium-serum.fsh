@@ -28,7 +28,7 @@ Usage: #example
 * name = "PotassiumSerumMeasurement"
 * title = "Potassium measurement on in vitro blood serum"
 * title.extension.extension[0].url = "lang"
-* title.extension.extension[=].valueCode = #de-CH
+* title.extension.extension[=].valueCode = #fr-FR
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage du potassium sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"

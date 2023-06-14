@@ -30,7 +30,7 @@ Usage: #example
 * title.extension.extension[0].url = "lang"
 * title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
-* title.extension.extension[=].valueString = "Dosage du chloride sérique"
+* title.extension.extension[=].valueString = "Konzentration Chlorid Serum"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #draft

@@ -19,21 +19,10 @@ Code System URI 'http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicer
 
 The Implementation Guide contains no examples for this profile
 
-# Allow specific display value
 
-# Wrong Display Name 'Clinical presentation' for http://loinc.org#55108-5 - should be one of 27 choices: 'Clinical presentation Document, "Clinical presentation Doc", "临床文档型" (zh-CN), "临床文档" (zh-CN), "文档" (zh-CN), "文书" (zh-CN), "医疗文书" (zh-CN), "临床医疗文书 医疗服务对象" (zh-CN), "客户" (zh-CN), "病人" (zh-CN), "病患" (zh-CN), "病号" (zh-CN), "超系统 - 病人 发现是一个原子型临床观察指标，并不是作为印象的概括陈述。体格检查、病史、系统检查及其他此类观察指标的属性均为发现。它们的标尺对于编码型发现可能是名义型，而对于叙述型文本之中所报告的发现，则可能是叙述型。" (zh-CN), "发现物" (zh-CN), "所见" (zh-CN), "结果" (zh-CN), "结论 文档.其他" (zh-CN), "杂项类文档" (zh-CN), "其他文档 时刻" (zh-CN), "随机" (zh-CN), "随意" (zh-CN), "瞬间 杂项" (zh-CN), "杂项类" (zh-CN), "杂项试验" (zh-CN), "Documentazione miscellanea Miscellanea Osservazione paziente Punto nel tempo (episodio)" (it-IT), "Документ Точка во времени" (ru-RU), "Момент" (ru-RU)' for the language(s) '--' (from Tx-Server) for 'http://loinc.org#55108-5'
-
-# French CodeSystem for insurance
+# 
 
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE in the language laboratory test order entry task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE'
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV in the language laboratory results review task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV'
-
-# ValueSet/jurisdiction|4.0.1 ValueSet/languages|4.0.1 typeCode|2.0.8 classCode|2.0.8
-
-# Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1
-# Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/languages|4.0.1
-# Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.8
-# Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode|2.0.8
-# Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/ucum-units|4.0.1
 
 
