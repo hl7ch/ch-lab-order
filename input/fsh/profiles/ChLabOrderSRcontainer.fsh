@@ -90,7 +90,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * specimen ^short = "Must be present, if order category is #RequestForLabExam or #RequestForHistopathExam"
 
 // ######################################################################
-// ---- Examples of Container ----
+// ---- Examples of Service Request Container ----
 // ######################################################################
 
 // ---- Container containing 2 other Containers
@@ -98,7 +98,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 
 Instance: SR-Container
 InstanceOf: ChLabOrderSRContainer
-Title: "Example of an ChLabOrderSRContainer containing 2 References on other Containers"
+Title: "ChLabOrderSRContainer containing 2 References on other Containers"
 Description: "Service Request example as container for 2 other containers, CreaClearance and Electrolytes"
 Usage: #example
 * id = "SR-Container"
@@ -129,7 +129,7 @@ Usage: #example
 
 Instance: SR-CreaClearance
 InstanceOf: ChLabOrderSRContainer
-Title: "LabOrder Service Request Creatinin Clearance Panel"
+Title: "ChLabOrderSRContainer containing the Creatinin Clearance Panel"
 Description: "Example for Service Request for Creatinine-Clearance Container"
 Usage: #example
 * id = "CreaClearance"
@@ -175,7 +175,7 @@ Usage: #example
 Instance: SR-Blood-Electrolytes
 InstanceOf: ChLabOrderSRContainer
 Title: "LabOrder Service Request Serum Electrolyte Panel"
-Description: "Example for Service Request for Serum Electrolyte Panel"
+Description: "ChLabOrderSRContainer containing the Serum Electrolyte Panel"
 Usage: #example
 * id = "SR-Electrolytes"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
