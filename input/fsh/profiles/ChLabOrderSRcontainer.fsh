@@ -29,7 +29,6 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 
 * requisition 1..1 MS
 
-
 // ---- Canonical --- url to PlanDefinition | ActivityDefinition
 // * instantiatesCanonical ^slicing.discriminator.type = #value
 // * instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
@@ -89,3 +88,131 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 
 // ---- specimen ----
 * specimen ^short = "Must be present, if order category is #RequestForLabExam or #RequestForHistopathExam"
+
+// ######################################################################
+// ---- Examples of Container ----
+// ######################################################################
+
+// ---- Container containing 2 other Containers
+// ######################################################################
+
+Instance: SR-Container
+InstanceOf: ChLabOrderSRContainer
+Title: "Example of an ChLabOrderSRContainer containing 2 References on other Containers"
+Description: "Service Request example as container for 2 other containers, CreaClearance and Electrolytes"
+Usage: #example
+* id = "SR-Container"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/Creatinine-Clearance"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/panel-blood-electrolyte"
+
+* basedOn = Reference(SR-CreaClearance)
+* basedOn = Reference(SR-Blood-Electrolytes)
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+
+* subject = Reference(Patient/HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+
+// ---- Container containing 2 Tests ----------
+// ######################################################################
+
+Instance: SR-CreaClearance
+InstanceOf: ChLabOrderSRContainer
+Title: "LabOrder Service Request Creatinin Clearance Panel"
+Description: "Example for Service Request for Creatinine-Clearance Container"
+Usage: #example
+* id = "CreaClearance"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/Creatinine-Clearance"
+
+* basedOn = Reference(SR-Creatinine-Serum)
+* basedOn = Reference(SR-Creatinine-24h-Urine)
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+
+// ---- Code, LOINC or SNOMED CT ----
+// * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"
+// * code.coding[+] = $lnc#34555-3 "Creatinine 24H renal clearance panel"
+* code = $lnc#34555-3 "Creatinine 24H renal clearance panel"
+
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(Patient/HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#723188008
+* reasonCode.text = "Renal insufficiency (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+
+// ---- Specimen: Serum, Urine
+* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+* specimen[+] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Urine)
+
+// ---- Container containing Serum Electrolyte Panel
+// ######################################################################
+
+Instance: SR-Blood-Electrolytes
+InstanceOf: ChLabOrderSRContainer
+Title: "LabOrder Service Request Serum Electrolyte Panel"
+Description: "Example for Service Request for Serum Electrolyte Panel"
+Usage: #example
+* id = "SR-Electrolytes"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/panel-blood-electrolyte"
+
+// What is being ordered 
+// * basedOn = Reference(SR-example)
+// ---- Electrolytes 1998 panel - Serum or Plasma ----
+* basedOn = Reference(SR-Sodium)
+* basedOn = Reference(SR-Potassium)
+* basedOn = Reference(SR-Chloride)
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+
+// ---- Code, LOINC or SNOMED CT ----
+// * code.coding[0] = $sct#20109005 "Electrolytes measurement, serum (procedure)"
+// * code.coding[+] = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(Patient/HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#723188008
+* reasonCode.text = "Renal insufficiency (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+
+// ---- Specimen 
+* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+// * specimen[+] = Reference(Specimen/Blood)
