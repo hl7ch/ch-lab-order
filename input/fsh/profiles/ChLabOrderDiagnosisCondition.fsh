@@ -7,7 +7,7 @@ Description: "Definition for the Diagnosis Condition resource in the context of 
 // Could be integrated to access a Problem List, e.g.:
 
 
-Instance: ProblemList
+Instance: ProblemItem-renal-failure
 InstanceOf: ChLabOrderDiagnosisCondition
 Description: "Problem or Diagnosis from problem list"
 

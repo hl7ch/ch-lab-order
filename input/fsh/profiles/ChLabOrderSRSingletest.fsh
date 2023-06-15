@@ -1,4 +1,4 @@
-Profile: ChLabOrderSRLabtest
+Profile: ChLabOrderSRSingletest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-labtest
 Title: "CH LAB-Order-SR Labtest"
@@ -90,7 +90,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // ######################################################################
 
 Instance: SR-Chloride
-InstanceOf: ChLabOrderSRLabtest
+InstanceOf: ChLabOrderSRSingletest
 Title: "LabOrder Service Request for single Test: Chloride"
 Description: "Example for Service Request of Chloride in Serum"
 Usage: #example
@@ -135,7 +135,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Creatinine-24h-Urine
-InstanceOf: ChLabOrderSRLabtest
+InstanceOf: ChLabOrderSRSingletest
 Title: "LabOrder Service Request for single Test: Creatinine24 h Urine"
 Description: "Example for Service Request"
 Usage: #example
@@ -176,7 +176,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Creatinine-Serum
-InstanceOf: ChLabOrderSRLabtest
+InstanceOf: ChLabOrderSRSingletest
 Title: "LabOrder Service Request for single Test: Creatinine-Serum"
 Description: "Example for Service Request"
 Usage: #example
@@ -219,7 +219,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Potassium
-InstanceOf: ChLabOrderSRLabtest
+InstanceOf: ChLabOrderSRSingletest
 Title: "LabOrder Service Request for single Test: Potassium"
 Description: "Example for Service Request of Potassium in Serum"
 Usage: #example
@@ -262,7 +262,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Sodium
-InstanceOf: ChLabOrderSRLabtest
+InstanceOf: ChLabOrderSRSingletest
 Title: "LabOrder Service Request for single Test: Sodium"
 Description: "Example for Service Request of Sodium in Serum"
 Usage: #example
