@@ -1,7 +1,7 @@
 Instance: LabOrder-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response LabOrder"
-Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
+Description: "Example for Laboratory Order Questionnaire Response"
 Usage: #example
 * id = "LabOrder-qr"
 * meta.versionId = "1"
