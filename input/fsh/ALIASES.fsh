@@ -10,6 +10,7 @@ Alias:  $v3ActCode                     = http://terminology.hl7.org/CodeSystem/v
 Alias:  $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
 Alias:  $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias:  $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
+Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
 Alias:  $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
 Alias:  $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 // Alias:  $processing-procedure          = http://fhir.ch/ig/ch-lab-order/CodeSystem/Specimen.processing.procedure, replaced by $handling-condition
