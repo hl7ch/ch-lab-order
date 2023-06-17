@@ -5,7 +5,7 @@ Description: "Example for QuestionnaireResponse of Histopathology Examination"
 Usage: #example
 * id = "6-histopath"
 * meta.versionId = "1"
-* meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
+* meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
 * status = #completed
 
@@ -77,7 +77,7 @@ Usage: #example
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority" // [0][7]
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answer.valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 
 // ---------- Receiver item[1] ----------
 // ################################################
@@ -149,9 +149,9 @@ Usage: #example
 * item[=].item[+].linkId = "patient.localPid"
 * item[=].item[=].text = "Lokale Patienten-ID"
 * item[=].item[=].answer.valueString = "012/08.111114"
-* item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
-* item[=].item[=].extension.valueBoolean = true
-* item[=].item[=].linkId = "patient.localPidDomain"
+//* item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+//* item[=].item[=].extension.valueBoolean = true
+* item[=].item[+].linkId = "patient.localPidDomain"
 * item[=].item[=].text = "Lokale Patienten-ID Domain"
 * item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30.999999.1"
 * item[=].item[+].linkId = "patient.birthDate"
@@ -161,12 +161,12 @@ Usage: #example
 // --- patient.gender ------------------------
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = $administrativeGender#female "Weiblich"
+* item[=].item[=].answer.valueCoding = $administrative-gender#female "Weiblich"
 
 // --- patient.maritalStatus
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = $echMaritalStatus#2 "verheiratet"
+* item[=].item[=].answer.valueCoding = $ech-11-maritalstatus#2 "verheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -218,7 +218,7 @@ Usage: #example
 * item[=].text = "Patientenaufnahme"
 * item[=].item[0].linkId = "requestedEncounter.class"
 * item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
-* item[=].item[=].answer.valueCoding = $v3ActCode#AMB "Ambulant"
+* item[=].item[=].answer.valueCoding = $v3-ActCode#AMB "Ambulant"
 
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].text = "Zimmerkategorie"
@@ -533,10 +533,10 @@ Usage: #example
 * item[=].item[=].item[=].answer.valueDateTime = "2022-08-08T09:57:34.2112Z"
 * item[=].item[+].linkId = "appointment.status"
 * item[=].item[=].text = "Status"
-* item[=].item[=].answer.valueCoding = $appointmentStatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+* item[=].item[=].answer.valueCoding = $appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
 // * item[=].item[=].answerOption[=].initialSelected = true
-// * item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
-// * item[=].item[=].answerOption[+].valueCoding = $appointmentStatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
 * item[=].item[+].linkId = "appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].answer.valueString = ""

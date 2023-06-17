@@ -5,10 +5,11 @@ Description: "Example for Laboratory Order Questionnaire due to suspected deep v
 Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* meta.lastUpdated = "2023-06-06T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
+
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
@@ -49,7 +50,7 @@ Usage: #example
 * item[=].required = true
 
 // --- order.placer item[0][0] ----------
-* item[=].item[+].linkId = "order.placerOrderIdentifier"
+* item[=].item[0].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
@@ -57,19 +58,27 @@ Usage: #example
 * item[=].item[=].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
+
+// --- order.filler item[0][2] ----------
 * item[=].item[+].linkId = "order.fillerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftragsempfängers"
 * item[=].item[=].type = #string
+
+// --- order.filler domain item[0][3] ----------
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
 * item[=].item[=].extension.valueBoolean = true
 * item[=].item[=].linkId = "order.fillerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftragsempfängers"
 * item[=].item[=].type = #string
+
+// --- order.precedentDocument item[0][4] ----------
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
 * item[=].item[=].extension.valueBoolean = true
 * item[=].item[=].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].type = #string
+
+// --- order.notificationContactDocument item[0][5] ----------
 * item[=].item[+].linkId = "order.notificationContactDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
 * item[=].item[=].type = #group
@@ -91,6 +100,8 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocument.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
+
+// --- order.notificationContactDocumentResponse item[0][6] ----------
 * item[=].item[+].linkId = "order.notificationContactDocumentResponse"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
 * item[=].item[=].type = #group
@@ -112,17 +123,23 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
+
+// --- order.priority item[0][7] ----------
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $requestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = $requestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = $requestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+
+// --- receiver item[1] ----------
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
+
+// --- receiver.practitioner item[1][0] ----------
 * item[=].item[0].linkId = "receiver.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].type = #group
@@ -149,18 +166,18 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.practitioner.email"
 * item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].type = #string
+
+// --- receiver.organization item[1][1] ----------
 * item[=].item[+].linkId = "receiver.organization"
 * item[=].item[=].text = "Empfangende Organisation"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "receiver.organization.name"
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "receiver.organization.gln"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
 * item[=].item[=].item[=].type = #string
@@ -174,6 +191,8 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.organization.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
+
+// ---- patient item[2] ----------
 * item[+].linkId = "patient"
 * item[=].text = "Patient"
 * item[=].type = #group
@@ -201,20 +220,19 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#female "Weiblich"
 * item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
 
-// patient.maritalStatus
-
+// patient.maritalStatus item[2][6]
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#9 "unbekannt"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#9 "unbekannt"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -242,40 +260,34 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode"
 
-// ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
+// ---------- Patient Contact Person --------
 * item[=].item[+].linkId = "patient.contactperson"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact"
 * item[=].item[=].text = "Kontaktperson"
 * item[=].item[=].type = #group
-
 * item[=].item[=].item[+].linkId = "patient.contactperson.relationship"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.relationship.text"
 * item[=].item[=].item[=].text = "Beziehung"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "patient.contactperson.familyName"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.family"
 * item[=].item[=].item[=].text = "Name"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "patient.contactperson.givenName"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.given"
 * item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "patient.contactperson.phone"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
 * item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].repeats = true
-
 * item[=].item[=].item[+].linkId = "patient.contactperson.email"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
 * item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].type = #string
 
-
-
+// ---- sender item[3] ----------
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
@@ -346,7 +358,7 @@ Usage: #example
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-
+// ---- receiverCopies item[4] ----------
 * item[+].linkId = "receiverCopies"
 * item[=].text = "Kopieempfänger"
 * item[=].type = #group
@@ -507,6 +519,7 @@ Usage: #example
 * item[=].item.item[=].text = "Land"
 * item[=].item.item[=].type = #string
 
+// ---- consent item[5]
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
@@ -523,6 +536,8 @@ Usage: #example
 * item[=].item[+].linkId = "consent.advancedCareDirective"
 * item[=].item[=].text = "Patientenverfügung"
 * item[=].item[=].type = #string
+
+// ---- coverage item[6]
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"

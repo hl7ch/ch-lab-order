@@ -25,4 +25,9 @@ The Implementation Guide contains no examples for this profile
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE in the language laboratory test order entry task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE'
 No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV in the language laboratory results review task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV'
 
-
+== Code System not recognized ==
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1
+Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.8
+Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode|2.0.8
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/languages|4.0.1
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/ucum-units|4.0.1

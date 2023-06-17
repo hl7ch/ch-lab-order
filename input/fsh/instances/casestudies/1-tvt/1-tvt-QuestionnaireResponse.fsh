@@ -5,7 +5,7 @@ Description: "Example for Questionnaire Response due to suspected deep vein thro
 Usage: #example
 * id = "1-tvt"
 * meta.versionId = "1"
-* meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
+* meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * status = #completed
 
@@ -68,7 +68,7 @@ Usage: #example
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = $requestPriority#routine
+* item[=].item[=].answer.valueCoding = $request-priority#routine
 
 // ---------- Receiver item[1] ----------
 // ################################################
@@ -139,7 +139,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
-* item[=].item[=].answer.valueCoding = $echMaritalStatus#5 "unverheiratet"
+* item[=].item[=].answer.valueCoding = $ech-11-maritalstatus#5 "unverheiratet"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"

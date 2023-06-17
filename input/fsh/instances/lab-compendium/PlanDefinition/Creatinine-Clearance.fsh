@@ -28,7 +28,7 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "This 24-hour urine creatinine clearance panel is reusing the procedures from the          serum creatinine test as well as the procedure from the 24h urine creatinine panel."
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
-* useContext.valueCodeableConcept = $v3ActCode#LABOE "laboratory test order entry task"
+* useContext.valueCodeableConcept = $v3-ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = $lnc#18719-5 "Chemistry studies (set)"
