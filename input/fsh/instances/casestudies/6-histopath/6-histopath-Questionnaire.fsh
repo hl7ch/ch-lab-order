@@ -290,7 +290,6 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 
 // --- requestedEncounter item[3] ----
-// ##################################
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
@@ -310,8 +309,7 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = $ChCoreCSEncounterType#2 "halbprivat"
 * item[=].item[=].answerOption[+].valueCoding = $ChCoreCSEncounterType#3 "privat"
 
-// ---------- Coverage item[4] ----------
-// ################################################
+// --- Coverage item[4] ----------
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -449,8 +447,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Bemerkung zur ID"
 * item[=].item[=].item[=].type = #string
 
-// ---------- Sender item[5] ----------
-// ################################################
+// --- Sender item[5] ----------
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
@@ -554,8 +551,7 @@ Usage: #example
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-// ---------- CopyReceiver item[6] ----------
-// ################################################
+// --- CopyReceiver item[6] ----------
 * item[+].linkId = "receiverCopy"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:copyReceiver"
 * item[=].text = "Kopieempfänger (Kopie dieses Auftrags und aller daraus resultierenden Resultate)"
@@ -662,9 +658,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-// ---------- Appointment item[7] ----------
-// ################################################
-
+// --- appointment item[7] ----------
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -731,8 +725,7 @@ Usage: #example
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].type = #string
 
-// ---------- ServiceRequest Notes item[8] ----------
-// ################################################
+// --- ServiceRequest Notes item[8] ----------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group

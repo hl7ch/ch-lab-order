@@ -208,6 +208,9 @@ Usage: #example
 * item[=].item[+].linkId = "patient.localPid"
 * item[=].item[=].text = "Lokale Patienten-ID"
 * item[=].item[=].type = #string
+// * item[=].item[+].linkId = "patient.localPidDomain"
+// * item[=].item[=].text = "Lokale Patienten-ID Domain"
+// * item[=].item[=].type = #string
 * item[=].item[+].linkId = "patient.birthDate"
 * item[=].item[=].text = "Geburtsdatum"
 * item[=].item[=].type = #date
@@ -553,6 +556,8 @@ Usage: #example
 * item[=].item[+].linkId = "coverage.vvgOther"
 * item[=].item[=].text = "Andere (nach VVG)"
 * item[=].item[=].type = #string
+
+// --- previousResult item[7] ----------
 * item[+].linkId = "previousResult"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
@@ -562,9 +567,10 @@ Usage: #example
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
-//################# end of general part  ################################
+// ########### specific Part ######################
 // ------------Choice of Specialty-----------------
-// 
+// ################################################
+
 * item[+].linkId = "hematology"
 * item[=].text = "Hematology"
 * item[=].type = #group
