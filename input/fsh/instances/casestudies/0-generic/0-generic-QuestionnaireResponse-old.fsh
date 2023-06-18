@@ -106,6 +106,8 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.organization.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+
 * item[+].linkId = "patient"
 * item[=].text = "Patient"
 * item[=].item[0].linkId = "patient.familyName"

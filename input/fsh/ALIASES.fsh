@@ -22,6 +22,7 @@ Alias:  $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ec
 Alias:  $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias:  $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias:  $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
+Alias:  $document-entry-language-code  = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode
 
 // Order
 Alias:  $request-priority              = http://hl7.org/fhir/request-priority
