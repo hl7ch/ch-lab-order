@@ -32,7 +32,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form 6-histopath assembled from modular version"
+* title = "Lab Order Form Example 6-histopath"
 * status = #active
 * subjectType = #Patient
 * date = "2022-10-09"
@@ -136,38 +136,30 @@ Usage: #example
 
 // --- receiver item[1]----
 * item[+].linkId = "receiver"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
 
 // --- receiver.practitioner item[1][0] ----------
-
 * item[=].item[0].linkId = "receiver.practitioner"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole#PractitionerRole.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "receiver.practitioner.title"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.prefix"
 * item[=].item[=].item[=].text = "Titel"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.practitioner.familyName"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.family"
 * item[=].item[=].item[=].text = "Name"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.practitioner.givenName"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.given"
 * item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].type = #string
+
 * item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:GLN.value"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:ZSR.value"
 * item[=].item[=].item[=].text = "ZSR"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
 * item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].type = #string
@@ -183,7 +175,6 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
