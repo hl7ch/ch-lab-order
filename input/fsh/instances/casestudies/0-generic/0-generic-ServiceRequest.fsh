@@ -3,7 +3,7 @@ InstanceOf: ChOrfServiceRequest
 Title: "laborder 0-generic"
 Description: "Service Request example as container for 2 other containers, CreaClearance and Electrolytes"
 Usage: #example
-* id = "0-generic"
+* id = "0-generic-ServiceRequest"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

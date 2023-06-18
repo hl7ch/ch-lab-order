@@ -11,19 +11,19 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/0-generic"
+* entry[0].fullUrl = "http://example.com/fhir/Composition/0-generic-Composition"  // entry[0]
 * entry[=].resource = 0-generic-Composition
-* entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
+* entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"  // entry[1]
 * entry[=].resource = HansGuggindieluft
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"  // entry[2]
 * entry[=].resource = MarcMustermann
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"  // entry[3]
 * entry[=].resource = Arztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"  // entry[4]
 * entry[=].resource = MarcMustermannArztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/0-generic"
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/0-generic-Questionnaire"  // entry[5]
 * entry[=].resource = 0-generic-Questionnaire
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/0-generic" //entry[6]
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/0-generic-QuestionnaireResponse" //entry[6]
 * entry[=].resource = 0-generic-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-generic"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-generic-ServiceRequest"
 * entry[=].resource = 0-generic-ServiceRequest
