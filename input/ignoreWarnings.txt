@@ -31,3 +31,6 @@ Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-te
 Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode|2.0.8
 Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/languages|4.0.1
 Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/ucum-units|4.0.1
+
+== ValueSet not found ==
+The code provided de cannot be validated in the options value set (DocumentEntry.languageCode) in the questionnaire because the system http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode is unknown

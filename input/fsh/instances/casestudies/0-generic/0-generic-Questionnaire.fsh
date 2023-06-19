@@ -1245,15 +1245,19 @@ Usage: #example
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:patientConsent"
 * item[=].text = "Einverständniserklärung"
+
 * item[=].type = #group
-* item[=].item.linkId = "patient.consent.statement"
+* item[=].item.linkId = "consent.statement"
 * item[=].item.text = "Ist der Patient über die Anmeldung informiert und explizit einverstanden?"
 * item[=].item.type = #choice
 * item[=].item.answerOption[0].valueCoding = $ch-orf-cs-consentstatus#ExplicitAgreement "Patient is informed and has explicitly agreed"
 * item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
-* item[=].item.item.linkId = "patient.consent.statement.note"
-* item[=].item.item.text = "Anmerkung"
-* item[=].item.item.type = #string
+
+/*
+* item[=].item.linkId = "consent.note"
+* item[=].item.text = "Anmerkung"
+* item[=].item.type = #string
+*/
 
 // --- note item[11] ---
 * item[+].linkId = "note"
@@ -1292,6 +1296,49 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 
+* item[=].item[+].linkId = "3-gyn"
+* item[=].item[=].definition = "" // url zu 3-gyn ?? evtl. plan definition
+* item[=].item[=].text = "Gynäkologische Vorsorge Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "3-gyn.labServices"
+* item[=].item[=].item[=].text = "Case Study Gynäkologische Vorsorge"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "3-gyn"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "4-sepis"
+* item[=].item[=].definition = ""  // url zu 4-sepis
+* item[=].item[=].text = "Abklärung Sepsis Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "4-sepis.labServices"
+* item[=].item[=].item[=].text = "Case Study Sepis"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "4-sepis"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "5-biol-monit"
+* item[=].item[=].definition = "" // url zu 5-biol-monit ?? evtl. plan definition
+* item[=].item[=].text = "Biologisches Monitoring Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "5-biol-monit.labServices"
+* item[=].item[=].item[=].text = "Case Study biologisches Monitoring"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "5-biol-monit"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "6-histopath"
+* item[=].item[=].definition = ""  // url zu 6-histopath
+* item[=].item[=].text = "Pathologische Untersuchung einer Gewebsprobe Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "6-histopath.labServices"
+* item[=].item[=].item[=].text = "Case Study Pathologische Untersuchung einer Gewebsprobe"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "6-histopath"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
 
 
 //################# end of general part  ################################
