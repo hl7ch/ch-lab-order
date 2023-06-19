@@ -1031,31 +1031,168 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = ""
 
-
-
 // #########################################################
 // ########### --- antecedentEpisodeOfCare item[8] ---
 // ###########################################################
 
-
-
-
+// --- antecedentEpisodeOfCare item[8]---
+* item[+].linkId = "antecedentEpisodeOfCare"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:antecedentEpisodeOfCare"
+* item[=].text = "Vorgängiger Aufenthalt in Spital / Heim"
+// * item[=].type = #group
+* item[=].item[0].linkId = "antecedentEpisodeOfCare.start"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.end"
+* item[=].item[=].text = "Von"
+* item[=].item[=].answer.valueDateTime = "2018-05-07T14:58:04.22+03:00"
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.end"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.end"
+* item[=].item[=].text = "Bis"
+* item[=].item[=].answer.valueDateTime = "2018-05-07T14:58:04.22+03:00"
+* item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+* item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].extension.valueExpression.expression = "'antecedentEpisodeOfCare.managingOrganization.'"
+* item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.managingOrganization"
+* item[=].item[=].text = "Spital /Heim"
+// * item[=].item[=].type = #group
+* item[=].item[=].item[0].linkId = "antecedentEpisodeOfCare.managingOrganization.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Organization.name"
+* item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.line"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer.valueString = ""
+// * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.postalCode"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.city"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.country"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = ""
 
 // #########################################################
 // ########### --- appointment item[9] ---
 // ###########################################################
-
-
-
+// --- appointment item[9] ---
+* item[+].linkId = "appointment"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
+* item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
+// * item[=].type = #group
+// * item[=].repeats = true
+* item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+* item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].extension.valueExpression.expression = "'appointment.location.'"
+* item[=].item[=].linkId = "appointment.location"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.participant.actor"
+* item[=].item[=].text = "Ort der Durchführung"
+// * item[=].item[=].type = #group
+* item[=].item[=].item[0].linkId = "appointment.location.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location#Location.name"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = ""
+// * item[=].item[=].item[=].required = true
+* item[=].item[=].item[+].linkId = "appointment.location.phone"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location#Location.telecom"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].linkId = "appointment.location.email"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location#Location.telecom"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.line"
+* item[=].item[=].item[=].linkId = "appointment.location.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer.valueString = ""
+// * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.postalCode"
+* item[=].item[=].item[=].linkId = "appointment.location.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.city"
+* item[=].item[=].item[=].linkId = "appointment.location.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
+* item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].item[=].extension.valueExpression.expression = "%address.country"
+* item[=].item[=].item[=].linkId = "appointment.location.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[+].linkId = "appointment.requestedPeriod"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.requestedPeriod"
+* item[=].item[=].text = "Datum und Zeit, wann der Termin bevorzugt geplant werden soll"
+// * item[=].item[=].type = #group
+* item[=].item[=].item[0].linkId = "appointment.requestedPeriod.start"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.requestedPeriod.start"
+* item[=].item[=].item[=].text = "Von"
+* item[=].item[=].item[=].answer.valueDateTime = "2023-07-07T14:58:04.22+03:00"
+* item[=].item[=].item[+].linkId = "appointment.requestedPeriod.end"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.requestedPeriod.end"
+* item[=].item[=].item[=].text = "Bis"
+* item[=].item[=].item[=].answer.valueDateTime = "2023-07-07T14:58:04.22+03:00"
+* item[=].item[+].linkId = "appointment.status"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.status"
+* item[=].item[=].text = "Status"
+// * item[=].item[=].type = #choice
+// * item[=].item[=].required = true
+* item[=].item[=].answer.valueCoding = $appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+// * item[=].item[=].answerOption[=].initialSelected = true
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+// * item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+* item[=].item[+].linkId = "appointment.patientInstruction"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.patientInstruction"
+* item[=].item[=].text = "Patienteninformation für diesen Termin"
+* item[=].item[=].answer.valueString = ""
 
 // #########################################################
 // ########### --- consent item[10] ---
 // ###########################################################
 
-
-
-
+* item[+].linkId = "consent"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:patientConsent"
+* item[=].text = "Einverständniserklärung"
+// * item[=].type = #group
+* item[=].item.linkId = "patient.consent.statement"
+* item[=].item.text = "Ist der Patient über die Anmeldung informiert und explizit einverstanden?"
+// * item[=].item.type = #choice
+* item[=].item.answer.valueCoding = $ch-orf-cs-consentstatus#ExplicitAgreement "Patient is informed and has explicitly agreed"
+// * item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
+* item[=].item.item.linkId = "patient.consent.statement.note"
+* item[=].item.item.text = "Anmerkung"
+* item[=].item.item.answer.valueString = ""
 
 // #########################################################
 // ########### --- note item[11] ---
 // ###########################################################
+
+* item[+].linkId = "note"
+* item[=].text = "Bemerkungen"
+// * item[=].type = #group
+// * item[=].repeats = true
+* item[=].item.linkId = "note.text"
+* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
+* item[=].item.text = "Kommentar"
+* item[=].item.answer.valueString = ""
