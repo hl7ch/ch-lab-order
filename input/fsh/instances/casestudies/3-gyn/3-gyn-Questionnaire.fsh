@@ -195,10 +195,10 @@ Usage: #example
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = AdministrativeGender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
 
 // patient.maritalStatus
 

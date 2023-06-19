@@ -138,7 +138,7 @@ Usage: #example
 * item[=].item[=].answer.valueDate = "1975-12-12"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = AdministrativeGender#female
+* item[=].item[=].answer.valueCoding = $administrative-gender#female
 
 // patient.maritalStatus
 

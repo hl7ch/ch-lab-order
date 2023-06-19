@@ -6,7 +6,7 @@ Alias:  $v2-0371                       = http://terminology.hl7.org/CodeSystem/v
 Alias:  $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2-0373
 Alias:  $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
 Alias:  $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916
-Alias:  $v3-ActCode                     = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias:  $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias:  $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
 Alias:  $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias:  $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
@@ -22,6 +22,7 @@ Alias:  $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ec
 Alias:  $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias:  $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias:  $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
+Alias:  $document-entry-language-code  = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode
 
 // Order
 Alias:  $request-priority              = http://hl7.org/fhir/request-priority

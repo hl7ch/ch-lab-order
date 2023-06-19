@@ -7,27 +7,18 @@ Display Name for http://hl7.org/fhir/request-priority#urgent should be one of 'U
 Display Name for http://hl7.org/fhir/request-priority#asap should be one of 'ASAP' instead of 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' for 'http://hl7.org/fhir/request-priority#asap'
 Display Name for http://hl7.org/fhir/request-priority#stat should be one of 'STAT' instead of 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' for 'http://hl7.org/fhir/request-priority#stat'
 
+# Missing valid display names
+
 Display Name for http://hl7.org/fhir/administrative-gender#male should be one of 'Male' instead of 'Männlich' for 'http://hl7.org/fhir/administrative-gender#male'
 Display Name for http://hl7.org/fhir/administrative-gender#female should be one of 'Female' instead of 'Weiblich' for 'http://hl7.org/fhir/administrative-gender#female'
 Display Name for http://hl7.org/fhir/administrative-gender#other should be one of 'Other' instead of 'Anderes' for 'http://hl7.org/fhir/administrative-gender#other'
 
 # Using own CodeSystem
 
-Code System URI 'http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories' is unknown so the code cannot be validated
+# Code System URI 'http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories' is unknown so the code cannot be validated
 
-# missing examples
+# missing examples: ==> ch-lab-order-composition, ch-lab-order-document
 
 The Implementation Guide contains no examples for this profile
 
-
-# 
-
-No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE in the language laboratory test order entry task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABOE'
-No valid Display Names found for http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV in the language laboratory results review task for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#LABRREV'
-
-== Code System not recognized ==
-Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1
-Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.8
-Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode|2.0.8
-Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/languages|4.0.1
-Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/ucum-units|4.0.1
+The code provided de cannot be validated in the options value set (DocumentEntry.languageCode) in the questionnaire because the system http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode is unknown

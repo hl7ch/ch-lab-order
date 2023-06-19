@@ -1,14 +1,16 @@
-Instance: 5-biol-monit-Questionnaire
+Instance: 0-generic-Questionnaire-old
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 5-biol-monit"
-Description: "Example for Laboratory Order Questionnaire for toxicological Monitoring"
+Title: "questionnaire 0-generic"
+Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #example
-* id = "5-biol-monit"
+* id = "0-generic-old"
 * meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* meta.lastUpdated = "2022-10-20T09:46:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
+* meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
+
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
@@ -29,12 +31,10 @@ Usage: #example
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"
-
-// ###############  begin of general part  ########################################
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-old"
 * version = "1.0.0"
 * name = "LabOrderFormExample"
-* title = "Lab Order Form Example 5-biol-monit"
+* title = "Lab Order Form Example 0-generic"
 * status = #active
 * subjectType = #Patient
 * date = "2020-12-17"
@@ -45,12 +45,13 @@ Usage: #example
 * jurisdiction = urn:iso:std:iso:3166#CH
 * copyright = "CC-BY-SA-4.0"
 
-// --- order (Auftrag) item[0] ---------
+// --- order (Auftrag) item[0] ----------
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
 
+// --- order.placer item[0][0] ----------
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
@@ -550,26 +551,143 @@ Usage: #example
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
-// ################ begin specific part ##################################
-* item[+].linkId = "hematology"
-* item[=].text = "Hematology"
+
+//################# end of general part  ################################
+
+// ############################################################
+// ########### Lab Service from Catalog #######################
+// ############################################################
+// To order one ore more Tests or Test-Panels as Lab Services, 
+// we choose the wanted PlanDefinition, here potassium, panel electrolytes or 
+// Composition (Catalog Header) for each Test/Panel Order, we choose the Specimen
+// Definition 
+// ########################################################################
+
+
+
+/* ============ Kerninhaltes der Lab-Order Form ==============================
+CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
+*/
+
+
+
+
+// ---- Choice of Catalog, hier Gantenbein oder Pipette -----------------
+
+* item[+].linkId = "lab-compendiums"
+* item[=].text = "Labor Catalogues"
 * item[=].type = #group
-* item[=].item.linkId = "lab"
-* item[=].item.text = "Laborwerte"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
-* item[+].linkId = "toxicology"
-* item[=].text = "Toxicology"
-* item[=].type = #group
-* item[=].item.linkId = "tox"
-* item[=].item.text = "Toxic Content"
-* item[=].item.type = #choice
-* item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $lnc#29587-3 "Toxicology panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#54454-4 "Arsenic fractions panel - Urine"
-* item[=].item.answerOption[+].valueCoding = $lnc#29589-9 "Heavy metals panel - Urine"
+
+* item[=].item[+].linkId = "lab-compendium.Gantenbein"
+* item[=].item[=].definition = ""
+* item[=].item[=].text = "Gantenbein Catalog"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices"
+* item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Blablabla"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Kalium"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Natrium"
+* item[=].item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Chloride"
+* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].text = "Chlorid"
+* item[=].item[=].item[=].item[=].type = #boolean
+
+// ---- Catalog Labor Pipette ----
+* item[=].item[+].linkId = "lab-compendium.Pipette"
+* item[=].item[=].definition = "27898-6"
+* item[=].item[=].text = "Pipette Catalog"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "lab-compendium.Pipette.Services"
+* item[=].item[=].item[=].text = "Lab Services"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Pipette"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+// ---- Clinical Chemistry Lab Services ----
+* item[=].item[=].item[=].item[+].linkId = "cc.labServices"
+* item[=].item[=].item[=].item[=].text = "Clinical Chemistry Lab Services"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "cc-subset-pipette"
+* item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+
+// ---- Choose SpecimenDefinition for Potassium ----
+* item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
+* item[=].item[=].item[=].item[=].item.item.type = #group
+* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
+* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = $lnc#2823-3
+* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
+* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
+* item[=].item[=].item[=].item[=].item.item.item.type = #choice
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
+* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
+
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+
+/*
+// Does not render
+* item[=].item[=].item[=].item[=].item.answerOption[0].modifierExtension.valueIdentifier.value = "potassium-serum"
+* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type" // VS not correct
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Potassium [Moles/volume] in Serum or Plasma"
+
+* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "panel-blood-electrolyte"
+* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Electrolytes 1998 panel - Serum or Plasma"
+
+* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "creatinine-serum"
+* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Creatinine [Mass/volume] in Serum or Plasma"
+
+* item[=].item[=].item[=].item[=].item.answerOption[+].modifierExtension.valueIdentifier.value = "vitamind-serum"
+* item[=].item[=].item[=].item[=].item.answerOption[=].modifierExtension.url = "http://hl7.org/fhir/ValueSet/plan-definition-type"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
+* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+*/
+
+// ---- Hematology Lab Services ----
+* item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
+* item[=].item[=].item[=].item[=].text = "Hematology Lab Services"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset-pipette"
+* item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+
+// ---- Catalog Labor Schildknecht ----
+* item[=].item[+].linkId = "lab-compendium.Schildknecht"
+* item[=].item[=].definition = "27898-6"
+* item[=].item[=].text = "Schildknecht Catalog"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices"
+* item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Schildknecht"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+// ------------Choice of Container-----------------

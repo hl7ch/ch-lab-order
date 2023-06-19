@@ -1,12 +1,12 @@
-Instance: 1-tvt-QuestionnaireResponse
+Instance: 0-generic-QuestionnaireResponse-old
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response 1-tvt"
-Description: "Example for Questionnaire Response due to suspected deep vein thrombosis"
+Title: "questionnaire response 0-generic-old"
+Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt"
+* id = "0-generic-questionnaire-response"
 * meta.versionId = "1"
-* meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
+* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-old"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------
@@ -17,15 +17,12 @@ Usage: #example
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
-
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30"
-
 * item[=].item[+].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
-
 * item[=].item[+].linkId = "order.notificationContactDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
 * item[=].item[=].item.linkId = "order.notificationContactDocument.practitioner"
@@ -64,18 +61,13 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
-
-// ---- order priority ----
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].answer.valueCoding = $request-priority#routine
 
-// ---------- Receiver item[1] ----------
-// ################################################
+// --- receiver item[1]
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
-
-// ---- receiver.practitioner ------------------------
 * item[=].item[0].linkId = "receiver.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].item[0].linkId = "receiver.practitioner.title"
@@ -114,6 +106,8 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.organization.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+
 * item[+].linkId = "patient"
 * item[=].text = "Patient"
 * item[=].item[0].linkId = "patient.familyName"
@@ -271,27 +265,4 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
 
-// ------------Choice of Specialty-----------------
-//#################################################
-
-* item[+].linkId = "hematology"
-* item[=].text = "Hematology"
-* item[=].item.linkId = "hemato-subset"
-* item[=].item.text = "Hämatologie Subset"
-* item[=].item.answer[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
-* item[+].linkId = "coagulation"
-* item[=].text = "Coagulation"
-* item[=].item.linkId = "d-dimer"
-* item[=].item.text = "D-Dimer"
-* item[=].item.answer.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* item[+].linkId = "cc"
-* item[=].text = "clinical chemistry"
-* item[=].item.linkId = "crp"
-* item[=].item.text = "CRP"
-* item[=].item.answer.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
-
-//#################################################
+// ########### specific Part ######################

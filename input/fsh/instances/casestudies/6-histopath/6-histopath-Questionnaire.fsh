@@ -32,7 +32,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
 * version = "1.0.0-assembled"
 * name = "LabOrderForm"
-* title = "Lab Order Form 6-histopath assembled from modular version"
+* title = "Lab Order Form Example 6-histopath"
 * status = #active
 * subjectType = #Patient
 * date = "2022-10-09"
@@ -136,38 +136,30 @@ Usage: #example
 
 // --- receiver item[1]----
 * item[+].linkId = "receiver"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
 
 // --- receiver.practitioner item[1][0] ----------
-
 * item[=].item[0].linkId = "receiver.practitioner"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole#PractitionerRole.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "receiver.practitioner.title"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.prefix"
 * item[=].item[=].item[=].text = "Titel"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.practitioner.familyName"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.family"
 * item[=].item[=].item[=].text = "Name"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.practitioner.givenName"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.given"
 * item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].type = #string
+
 * item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:GLN.value"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.identifier:ZSR.value"
 * item[=].item[=].item[=].text = "ZSR"
 * item[=].item[=].item[=].type = #string
-
 * item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
 * item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].type = #string
@@ -183,7 +175,6 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
@@ -226,10 +217,10 @@ Usage: #example
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = AdministrativeGender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
 
 // patient.maritalStatus item[2][6]
 * item[=].item[+].linkId = "patient.maritalStatus"
@@ -299,7 +290,6 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 
 // --- requestedEncounter item[3] ----
-// ##################################
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
@@ -319,8 +309,7 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = $ChCoreCSEncounterType#2 "halbprivat"
 * item[=].item[=].answerOption[+].valueCoding = $ChCoreCSEncounterType#3 "privat"
 
-// ---------- Coverage item[4] ----------
-// ################################################
+// --- Coverage item[4] ----------
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -458,8 +447,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Bemerkung zur ID"
 * item[=].item[=].item[=].type = #string
 
-// ---------- Sender item[5] ----------
-// ################################################
+// --- Sender item[5] ----------
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
@@ -563,8 +551,7 @@ Usage: #example
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
 
-// ---------- CopyReceiver item[6] ----------
-// ################################################
+// --- CopyReceiver item[6] ----------
 * item[+].linkId = "receiverCopy"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:copyReceiver"
 * item[=].text = "Kopieempfänger (Kopie dieses Auftrags und aller daraus resultierenden Resultate)"
@@ -671,9 +658,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-// ---------- Appointment item[7] ----------
-// ################################################
-
+// --- appointment item[7] ----------
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -740,8 +725,7 @@ Usage: #example
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].type = #string
 
-// ---------- ServiceRequest Notes item[8] ----------
-// ################################################
+// --- ServiceRequest Notes item[8] ----------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group

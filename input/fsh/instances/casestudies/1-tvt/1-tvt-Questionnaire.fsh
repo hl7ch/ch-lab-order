@@ -175,7 +175,6 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
@@ -209,16 +208,19 @@ Usage: #example
 * item[=].item[+].linkId = "patient.localPid"
 * item[=].item[=].text = "Lokale Patienten-ID"
 * item[=].item[=].type = #string
+// * item[=].item[+].linkId = "patient.localPidDomain"
+// * item[=].item[=].text = "Lokale Patienten-ID Domain"
+// * item[=].item[=].type = #string
 * item[=].item[+].linkId = "patient.birthDate"
 * item[=].item[=].text = "Geburtsdatum"
 * item[=].item[=].type = #date
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = AdministrativeGender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
 
 // patient.maritalStatus item[2][6]
 * item[=].item[+].linkId = "patient.maritalStatus"
@@ -554,6 +556,8 @@ Usage: #example
 * item[=].item[+].linkId = "coverage.vvgOther"
 * item[=].item[=].text = "Andere (nach VVG)"
 * item[=].item[=].type = #string
+
+// --- previousResult item[7] ----------
 * item[+].linkId = "previousResult"
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
@@ -563,9 +567,10 @@ Usage: #example
 * item[=].item.type = #string
 * item[=].item.repeats = true
 
-//################# end of general part  ################################
+// ########### specific Part ######################
 // ------------Choice of Specialty-----------------
-// 
+// ################################################
+
 * item[+].linkId = "hematology"
 * item[=].text = "Hematology"
 * item[=].type = #group

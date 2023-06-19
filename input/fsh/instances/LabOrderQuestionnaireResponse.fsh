@@ -123,7 +123,7 @@ Usage: #example
 * item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
-* item[=].item[=].answer.valueCoding = AdministrativeGender#male
+* item[=].item[=].answer.valueCoding = $administrative-gender#male
 
 // patient.maritalStatus
 
