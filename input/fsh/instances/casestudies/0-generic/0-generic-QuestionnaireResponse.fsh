@@ -3,7 +3,7 @@ InstanceOf: ChOrfQuestionnaireResponse
 Title: "questionnaire response 0-generic"
 Description: "Example for Laboratory Order Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-generic"
+* id = "0-generic-QuestionnaireResponse"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/0-generic-Questionnaire"
@@ -470,6 +470,8 @@ Usage: #example
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
 * item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].answer.valueString = ""
+
+// --- familydoctor ---
 * item[=].item[+].linkId = "familydoctor"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.generalPractitioner"
 * item[=].item[=].text = "Hausarzt"
@@ -547,3 +549,74 @@ Usage: #example
 * item[=].item[=].item[=].item[=].linkId = "familydoctor.organization.country"
 * item[=].item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].item[=].answer.valueString = ""
+
+// #########################################################
+// ########### ---- requestedEncounter item[4] ----------
+// ###########################################################
+* item[+].linkId = "requestedEncounter"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
+* item[=].text = "Patientenaufnahme"
+// * item[=].type = #group
+* item[=].item[0].linkId = "requestedEncounter.class"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.class"
+* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
+// * item[=].item[=].type = #choice
+* item[=].item[=].answer.valueCoding = $v3-ActCode#AMB "Ambulant"
+// * item[=].item[=].answerOption[+].valueCoding = $v3-ActCode#IMP "Stationär"
+// * item[=].item[=].answerOption[+].valueCoding = $v3-ActCode#EMER "Notfall"
+* item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.extension:desiredAccommodation"
+* item[=].item[=].text = "Zimmerkategorie"
+// * item[=].item[=].type = #choice
+* item[=].item[=].answer.valueCoding = $bfs-medstats-21-encountertype#1 "allgemein"
+// * item[=].item[=].answerOption[+].valueCoding = $bfs-medstats-21-encountertype#2 "halbprivat"
+// * item[=].item[=].answerOption[+].valueCoding = $bfs-medstats-21-encountertype#3 "privat"
+
+// #########################################################
+// ########### ---- coverage item[5] ----------
+// ###########################################################
+
+
+
+
+// #########################################################
+// ########### ---- sender item[6] ----------
+// ###########################################################
+
+
+
+
+
+// #########################################################
+// ########### --- receiverCopy item[7] ---
+// ###########################################################
+
+
+
+
+// #########################################################
+// ########### --- antecedentEpisodeOfCare item[8] ---
+// ###########################################################
+
+
+
+
+
+// #########################################################
+// ########### --- appointment item[9] ---
+// ###########################################################
+
+
+
+
+// #########################################################
+// ########### --- consent item[10] ---
+// ###########################################################
+
+
+
+
+
+// #########################################################
+// ########### --- note item[11] ---
+// ###########################################################
