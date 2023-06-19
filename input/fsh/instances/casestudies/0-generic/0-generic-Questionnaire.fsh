@@ -821,7 +821,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Bemerkung zur ID"
 * item[=].item[=].item[=].type = #string
 
-// --- sender item[6] --- line 821
+// --- sender item[6] --- line 824
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
