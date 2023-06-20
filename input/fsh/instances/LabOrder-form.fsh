@@ -552,6 +552,124 @@ Usage: #example
 * item[=].item.repeats = true
 
 //################# end of general part  ################################
+// --- Choice of Casestudy ---
+//#######################################################################
+
+// --- Choice of casestudy item[12]---
+* item[+].linkId = "casestudy"
+* item[=].text = "Case Studies"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "1-tvt"
+* item[=].item[=].definition = "" // url zu 1 tvt ?? evtl. plan definition
+* item[=].item[=].text = "Tiefe Venenthrombose Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "1-tvt.labServices"
+* item[=].item[=].item[=].text = "Case Study tiefe Venenthrombose"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "1-tvt"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+// ########### specific Part ######################
+// ------------Choice of Specialty and Tests-----------
+// ################################################
+
+* item[=].item[=].item[=].item[+].linkId = "hematology"
+* item[=].item[=].item[=].item[=].text = "Hematology"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
+* item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[+].linkId = "coagulation"
+* item[=].item[=].item[=].item[=].text = "Coagulation"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "d-dimer"
+* item[=].item[=].item[=].item[=].item.text = "D-Dimer"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item[=].item[=].item[+].linkId = "cc"
+* item[=].item[=].item[=].item[=].text = "clinical chemistry"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "crp"
+* item[=].item[=].item[=].item[=].item.text = "CRP"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+
+
+
+* item[=].item[+].linkId = "2-pertussis"
+* item[=].item[=].definition = ""  // url zu 2-pertussis
+* item[=].item[=].text = "Abklärung Husten Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "2-pertussis.labServices"
+* item[=].item[=].item[=].text = "Case Study Husten"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "2-pertussis"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "3-gyn"
+* item[=].item[=].definition = "" // url zu 3-gyn ?? evtl. plan definition
+* item[=].item[=].text = "Gynäkologische Vorsorge Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "3-gyn.labServices"
+* item[=].item[=].item[=].text = "Case Study Gynäkologische Vorsorge"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "3-gyn"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "4-sepis"
+* item[=].item[=].definition = ""  // url zu 4-sepis
+* item[=].item[=].text = "Abklärung Sepsis Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "4-sepis.labServices"
+* item[=].item[=].item[=].text = "Case Study Sepis"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "4-sepis"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "5-biol-monit"
+* item[=].item[=].definition = "" // url zu 5-biol-monit ?? evtl. plan definition
+* item[=].item[=].text = "Biologisches Monitoring Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "5-biol-monit.labServices"
+* item[=].item[=].item[=].text = "Case Study biologisches Monitoring"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "5-biol-monit"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[+].linkId = "6-histopath"
+* item[=].item[=].definition = ""  // url zu 6-histopath
+* item[=].item[=].text = "Pathologische Untersuchung einer Gewebsprobe Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "6-histopath.labServices"
+* item[=].item[=].item[=].text = "Case Study Pathologische Untersuchung einer Gewebsprobe"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "6-histopath"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+
+
+
+
+
 
 // ############################################################
 // ########### Lab Service from Catalog #######################
