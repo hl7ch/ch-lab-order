@@ -861,9 +861,9 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item[0].linkId = "serum-electrolyte-panel"
 * item[=].item[=].item[=].item[=].item[=].text = "Panel for Serum Electrolytes Na, K and Cl"
 * item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#24331-1 "Lipid 1996 panel - Serum or Plasma"
 
 // ------------ Do I want to order a single test -- yes/no -----------------
 * item[=].item[=].item[+].linkId = "single-test"
@@ -872,7 +872,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.singletests"
-* item[=].item[=].item[=].item[=].text = "Testpanel Labor Schildknecht"
+* item[=].item[=].item[=].item[=].text = "Einzeltest Labor Schildknecht"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].enableWhen.question = "single-test"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -880,16 +880,15 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "available-single-test"
-* item[=].item[=].item[=].item[=].item[=].text = "Einzeltest"
+* item[=].item[=].item[=].item[=].item[=].text = "verfügbare Einzeltests Schildknecht"
 * item[=].item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].item[=].item.linkId = "single-test-schildknecht"
 * item[=].item[=].item[=].item[=].item[=].item.text = "Einzeltest Schildknecht"
 * item[=].item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item[=].item.repeats = true
-
-* item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
 // * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueReference = Reference(ChLabOrderSRSingletest/SR-Potassium) "Potassium [Moles/volume] in Serum or Plasma"
 // * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRSingletest/SR-Sodium) "Sodium [Moles/volume] in Serum or Plasma"
