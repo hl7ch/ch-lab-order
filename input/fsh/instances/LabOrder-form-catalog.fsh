@@ -846,7 +846,7 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
 
 // ------------ Do I want to order a test panel -- yes/no -----------------
-* item[=].item[=].item[+].linkId = "schildknecht-SR-container"
+* item[=].item[=].item[+].linkId = "test-panel"
 * item[=].item[=].item[=].text = "ServiceRequest for test panel"
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].repeats = true
@@ -854,30 +854,38 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.panels"
 * item[=].item[=].item[=].item[=].text = "Testpanel Labor Schildknecht"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].enableWhen.question = "schildknecht-SR-container"
+* item[=].item[=].item[=].item[=].enableWhen.question = "test-panel"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "SR-electrolyte-serum-panel"
-* item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
+* item[=].item[=].item[=].item[=].item[0].linkId = "serum-electrolyte-panel"
+* item[=].item[=].item[=].item[=].item[=].text = "Panel for Serum Electrolytes Na, K and Cl"
 * item[=].item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
 // ------------ Do I want to order a single test -- yes/no -----------------
-* item[=].item[=].item[+].linkId = "SR-tests"
+* item[=].item[=].item[+].linkId = "single-test"
 * item[=].item[=].item[=].text = "ServiceRequest for single test"
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[+].linkId = "singleTest.labServices"
-* item[=].item[=].item[=].item[=].text = "Single Test Lab Services"
+* item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.singletests"
+* item[=].item[=].item[=].item[=].text = "Testpanel Labor Schildknecht"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "single-test-schildknecht"
-* item[=].item[=].item[=].item[=].item.text = "all_single_Tests"
-* item[=].item[=].item[=].item[=].item.type = #choice
-* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].enableWhen.question = "single-test"
+* item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+
+* item[=].item[=].item[=].item[=].item[+].linkId = "available-single-test"
+* item[=].item[=].item[=].item[=].item[=].text = "Einzeltest"
+* item[=].item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[=].item.linkId = "single-test-schildknecht"
+* item[=].item[=].item[=].item[=].item[=].item.text = "Einzeltest Schildknecht"
+* item[=].item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item[=].item.repeats = true
 
 * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
