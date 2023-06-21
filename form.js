@@ -231,14 +231,14 @@ var fhirQ = {
               "valueCoding": {
                 "code": "urgent",
                 "system": "http://hl7.org/fhir/request-priority",
-                "display": "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+                "display": "Urgent."
               }
             },
             {
               "valueCoding": {
                 "code": "asap",
                 "system": "http://hl7.org/fhir/request-priority",
-                "display": "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+                "display": "ASAP"
               }
             },
             {
@@ -368,7 +368,7 @@ var fhirQ = {
               "valueCoding": {
                 "code": "male",
                 "system": "http://hl7.org/fhir/administrative-gender",
-                "display": "Männlich"
+                "display": "Male"
               },
               "initialSelected": true
             },
@@ -376,14 +376,14 @@ var fhirQ = {
               "valueCoding": {
                 "code": "female",
                 "system": "http://hl7.org/fhir/administrative-gender",
-                "display": "Weiblich"
+                "display": "Female"
               }
             },
             {
               "valueCoding": {
                 "code": "other",
                 "system": "http://hl7.org/fhir/administrative-gender",
-                "display": "Anderes"
+                "display": "Other"
               }
             }
           ]

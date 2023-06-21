@@ -167,8 +167,8 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Urgent."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "ASAP"
 * item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
 // --- receiver item [1]
@@ -459,10 +459,10 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Male"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Female"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Other"
 * item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
 * item[=].item[=].extension.valueExpression.expression = "%patient.maritalStatus"

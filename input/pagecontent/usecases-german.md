@@ -18,13 +18,13 @@ Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende An
   * Subject:Verweis auf den Patienten
   * Collection: Angaben zur Entnahme, Entnahme-Zeitpunkt, Menge, Methode, Entnahmestelle (z.B. rechter Arm), Nüchternperiode
   * Behälter, Gefäss: Identifier, Type
-  * und anderes mehr
+  * und Other mehr
 
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForLabExam
   * Fragestellung, Untersuchungsgrund (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
   * Kostenträger (Krankenkasse, Unfallversicherung usw.)
-  * und anderes mehr
+  * und Other mehr
 
 Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
 

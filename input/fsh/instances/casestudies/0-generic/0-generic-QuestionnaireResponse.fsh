@@ -361,8 +361,8 @@ Usage: #example
 // * item[=].item[=].type = #choice
 * item[=].item[=].answer.valueCoding = $administrative-gender#male
 // * item[=].item[=].answerOption[=].initialSelected = true
-// * item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
-// * item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
+// * item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Female"
+// * item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Other"
 * item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
 * item[=].item[=].extension.valueExpression.expression = "%patient.maritalStatus"
