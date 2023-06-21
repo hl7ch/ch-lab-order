@@ -1,6 +1,6 @@
 Instance: LabOrder-form
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire Lab Order from Catalog"
+Title: "Questionnaire Lab Order Case Studies"
 Description: "Example for generic Questionnaire (flat version) using Observation Definitions from Catalog"
 Usage: #example
 * id = "LabOrder-form"
@@ -33,8 +33,8 @@ Usage: #example
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
 // * version = "1.1.0-assembled"
-* name = "LabOrderForm"
-* title = "Questionnaire Lab Order from Catalog"
+* name = "LabOrderFormCaseStudies"
+* title = "Questionnaire Lab Order Case Studies"
 * status = #active
 * subjectType = #Patient
 * date = "2022-10-10"

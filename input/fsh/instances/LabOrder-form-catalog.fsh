@@ -33,7 +33,7 @@ Usage: #example
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form-Catalog"
 // * version = "1.1.0-assembled"
-* name = "LabOrderForm"
+* name = "LabOrderFormCatalog"
 * title = "Questionnaire Lab Order from Catalog"
 * status = #active
 * subjectType = #Patient
