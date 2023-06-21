@@ -4,7 +4,7 @@ Title: "Beat Borer"
 Description: "Example for CH-Core-Patient"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BeatBorer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111115\n      </p><p><b>name</b>: Beat Borer \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jun 06, 1986\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$echMaritalStatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BeatBorer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111115\n      </p><p><b>name</b>: Beat Borer \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jun 06, 1986\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Lausanne"
 * extension[=].valueAddress.country = "Schweiz"
@@ -25,7 +25,7 @@ Usage: #example
 * telecom[=].value = "beat.borer@example.ch"
 * gender = #male
 * birthDate = "1986-06-06"
-* maritalStatus = $echMaritalStatus#2 "verheiratet"
+* maritalStatus = $ech-11-maritalstatus#2 "verheiratet"
 * communication.language = urn:ietf:bcp:47#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true

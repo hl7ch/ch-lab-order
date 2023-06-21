@@ -22,5 +22,11 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 // * category from $DocumentEntry.classCode (required)
 // * category ^short = "Order Document"
 
+// ---- Composition.section.entry:https://hl7.org/fhir/R4/questionnaire.html ----------
+// * section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChLabOrderQuestionnaire)
+
+// ---------- Composition.section.entry:ServiceRequest ----------
+// * section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChLabOrderQuestionnaireResponse)
+
 // ---------- Composition.section.entry:ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChLabOrderSRContainer)

@@ -118,11 +118,11 @@ Usage: #example
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $requestPriority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $requestPriority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = $requestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = $requestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
@@ -199,10 +199,10 @@ Usage: #example
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = AdministrativeGender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = AdministrativeGender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
 
 // patient.maritalStatus
 
@@ -210,14 +210,14 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = $echMaritalStatus#9 "unbekannt"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#9 "unbekannt"
 
 * item[=].item[+].linkId = "patient.phone"
 * item[=].item[=].text = "Telefon"
@@ -552,276 +552,31 @@ Usage: #example
 * item[=].item.repeats = true
 
 //################# end of general part  ################################
+// --- Choice of Casestudy ---
+//#######################################################################
 
-// ############################################################
-// ########### Lab Service from Catalog #######################
-// ############################################################
-// To order one ore more Tests or Test-Panels as Lab Services, 
-// we choose the wanted PlanDefinition, here potassium, panel electrolytes or 
-// Composition (Catalog Header) for each Test/Panel Order, we choose the Specimen
-// Definition 
-// ########################################################################
-
-/* ============ Kerninhaltes der Lab-Order Form ==============================
-CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es kommt zu einer Kaskade von Entscheidungen. Hier sind einige Inhalte beispielhaft ausgefüllt:
-*/
-
-// ######################################################
-// ------------Choice of Catalog -----------------
-// ######################################################
-
-* item[+].linkId = "lab-compendiums"
-* item[=].text = "Labor Compendien"
+// --- Choice of casestudy item[12]---
+* item[+].linkId = "casestudy"
+* item[=].text = "Case Studies"
 * item[=].type = #group
 
-// #########################################################
-// ---- Compendium Labor Gantenbein
-// ---- choose test yes/no ----
-// ---- choose specimen venous/capillary
-// #########################################################
-* item[=].item[+].linkId = "lab-compendium.Gantenbein"
-* item[=].item[=].definition = ""
-* item[=].item[=].text = "Gantenbein Compendium"
+// --- casestudy 1-tvt
+//==========================
+* item[=].item[+].linkId = "1-tvt"
+* item[=].item[=].definition = "" // url zu 1 tvt ?? evtl. plan definition
+* item[=].item[=].text = "Tiefe Venenthrombose Questionnaire"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices"
-* item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
+* item[=].item[=].item[0].linkId = "1-tvt.labServices"
+* item[=].item[=].item[=].text = "Case Study tiefe Venenthrombose"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
+* item[=].item[=].item[=].enableWhen.question = "1-tvt"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerString = "Gantenbein"
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// ---- E1 Blood potassium test ----
-// =================================
-* item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium"
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/potassium-serum"
-* item[=].item[=].item[=].item[=].text = "Kalium"
-// * item[=].item[=].item[=].item[=].code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Kalium"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.Potassium"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.Potassium.specimenDefinitions"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
-
-// ---- E1 Blood sodium test ----
-// =================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Natrium"
-* item[=].item[=].item[=].item[=].code = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Sodium.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Natrium"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.Sodium"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.Sodium.specimenDefinitions"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
-
-// ---- E1 Blood chloride test ----
-// =================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Chloride"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Chlorid"
-* item[=].item[=].item[=].item[=].code = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Chloride.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Chloride"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.Chloride"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.Chloride.specimenDefinitions"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
-
-// ---- E2 Blood electrolyte test ----
-// =================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Electrolyte"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
-* item[=].item[=].item[=].item[=].code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Electrolyte.ActivityDefintion"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.Electrolyte"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-// ---- E3 Creatinine concentration on 24h urine ----
-// ==================================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine"
-* item[=].item[=].item[=].item[=].code = $lnc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.urine-24h.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinin Konzentration im 24h Urin"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.CreatinineUrin.specimenDefinitions"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122575003 "Urine specimen (specimen)"
-
-
-// ---- E4 Creatinine concentration serum ----
-// ===========================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Creatinine Serum"
-* item[=].item[=].item[=].item[=].code = $lnc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein CreatinineSerum"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.CreatinineSerum"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.CreatinineSerum.specimenDefinitions"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
-
-// ---- E5 Creatinine Clearance ----
-// =================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineClearance"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Creatinine Clearance"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-
-// ---- E6 Vitamin D test ----
-// =================================
-* item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Vitamin-D"
-* item[=].item[=].item[=].item[=].definition = ""
-* item[=].item[=].item[=].item[=].text = "Vitamin D"
-* item[=].item[=].item[=].item[=].type = #boolean
-
-// ---- Vitamin D ActivityDefintion ----
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Vitamin-D.ActivityDefintion"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Vitamin-D"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.Vitamin-D"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-// ---- choice of normal reasons ----
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.NormalReasonsVitaminD"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of normal reasons to order value of Vitamin-D"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#41345002 "Rickets (disorder)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#4598005 "Osteomalacia (disorder)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#737295003 "Transplanted kidney present (finding)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#707206008 "Assessment for bariatric surgery (procedure)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#66999008 "Hyperparathyroidism (disorder)"
-
-// ---- choice of clinical focus
-* item[=].item[=].item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.ClinicalFocusVitaminD"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of clinical focuses ordering Vitamin-D"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#404684003 "Clinical finding (finding)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#272379006 "Event (event)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#413350009 "Finding with explicit context (situation)"
-
-// #######################################################
-// ---- Compendium Labor Pipette, choose labSpecialty ----
-// #######################################################
-* item[=].item[+].linkId = "lab-compendium.Pipette"
-* item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Pipette Compendium"
-* item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "lab-compendium.Pipette.Services"
-* item[=].item[=].item[=].text = "Lab Services"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerString = "Pipette"
-
-// ---- Clinical Chemistry Lab Services ----
-* item[=].item[=].item[=].item[+].linkId = "cc.labServices"
-* item[=].item[=].item[=].item[=].text = "Clinical Chemistry Lab Services"
+* item[=].item[=].item[=].item[+].linkId = "hematology-1"
+* item[=].item[=].item[=].item[=].text = "Hematology"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "cc-subset-pipette"
-* item[=].item[=].item[=].item[=].item.text = "Clinical chemistry Subset"
-* item[=].item[=].item[=].item[=].item.type = #choice
-* item[=].item[=].item[=].item[=].item.repeats = true
-
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-// not allowed: Questionnaire.item.answerOption.value[x], data type cannot repeat - they must have a maximum cardinality of 1 :
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/potassium-serum)
-
-// ---- Choose SpecimenDefinition for Potassium ----
-* item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
-* item[=].item[=].item[=].item[=].item.item.text = "Choose SpecimenDefinition"
-* item[=].item[=].item[=].item[=].item.item.type = #group
-* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
-* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = $lnc#2823-3
-
-* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
-* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
-* item[=].item[=].item[=].item[=].item.item.item.type = #choice
-* item[=].item[=].item[=].item[=].item.item.item.repeats = false
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2947-0 "Sodium [Moles/volume] in Blood"
-* item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
-* item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
-* item[=].item[=].item[=].item[=].item.item.item.type = #choice
-* item[=].item[=].item[=].item[=].item.item.item.repeats = false
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
-* item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2069-3 "Chloride [Moles/volume] in Blood"
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/chloride-serum"
-//* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
-//* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
-
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-
-// ---- Hematology Lab Services ----
-* item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
-* item[=].item[=].item[=].item[=].text = "Hematology Lab Services"
-* item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset-pipette"
+* item[=].item[=].item[=].item[=].item.linkId = "hemato-subset"
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
@@ -830,81 +585,227 @@ CH LAB-Order verwendet vorgefüllte Formulare aus dem dem Labor Kompendium. Es k
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
-
-// ################################################################
-// ---- Compendium Labor Schildknecht, takes container concept ----
-// ################################################################
-
-* item[=].item[+].linkId = "lab-compendium.Schildknecht"
-* item[=].item[=].definition = "27898-6"
-* item[=].item[=].text = "Schildknecht Compendium"
-* item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices"
-* item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
-
-// ------------ Do I want a test panel -- yes/no -----------------
-// 
-* item[=].item[=].item[+].linkId = "Schildknecht SR-container"
-* item[=].item[=].item[=].text = "ServiceRequest for test panel"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].repeats = true
-
-// * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.panels"
-// * item[=].item[=].item[=].item[=].text = "Testpanel Labor Schildknecht"
-// * item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].enableWhen.question = "SR-container"
-// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-// 
-// * item[=].item[=].item[=].item[=].item[0].linkId = "SR-test-panel"
-// * item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
-// * item[=].item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
-
-// ------------ Do I want a single test -- yes/no -----------------
-//
-* item[=].item[=].item[+].linkId = "SR-tests"
-* item[=].item[=].item[=].text = "ServiceRequest for single test"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[=].item[=].item[+].linkId = "singleTest.labServices"
-* item[=].item[=].item[=].item[=].text = "Single Test Lab Services"
+* item[=].item[=].item[=].item[+].linkId = "coagulation"
+* item[=].item[=].item[=].item[=].text = "Coagulation"
 * item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item.linkId = "single-test-schildknecht"
-* item[=].item[=].item[=].item[=].item.text = "all_single_Tests"
+* item[=].item[=].item[=].item[=].item.linkId = "d-dimer"
+* item[=].item[=].item[=].item[=].item.text = "D-Dimer"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item[=].item[=].item[+].linkId = "clinical-chemistry-1"
+* item[=].item[=].item[=].item[=].text = "Clinical Chemistry"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "crp-1"
+* item[=].item[=].item[=].item[=].item.text = "CRP"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 
-* item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+// --- casestudy 2-pertussis
+//==========================
+* item[=].item[+].linkId = "2-pertussis"
+* item[=].item[=].definition = ""  // url zu 2-pertussis
+* item[=].item[=].text = "Abklärung Husten Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "2-pertussis.labServices"
+* item[=].item[=].item[=].text = "Case Study Husten"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "2-pertussis"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueReference = Reference(ChLabOrderSRLabtest/SR-Potassium) "Potassium [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRLabtest/SR-Sodium) "Sodium [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRLabtest/SR-Chloride) "Sodium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[+].linkId = "microbiology-2"
+* item[=].item[=].item[=].item[=].text = "Mikrobiologie"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "per"
+* item[=].item[=].item[=].item[=].item.text = "Pertussis and Parapertussis DNA"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item[=].item[=].item[+].linkId = "hematology-2"
+* item[=].item[=].item[=].item[=].text = "Hämatologie"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "Blood-diff"
+* item[=].item[=].item[=].item[=].item.text = "Manual Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#24318-8 "Manual diff Bld"
+* item[=].item[=].item[=].item[+].linkId = "clinical-chemistry-2"
+* item[=].item[=].item[=].item[=].text = "Klinische Chemie"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "crp-2"
+* item[=].item[=].item[=].item[=].item.text = "C-reactive Protein"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 
-// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueReference = Reference(ChLabOrderSRLabtest/SR-Potassium)
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(ChLabOrderSRLabtest/SR-Sodium)
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueReference = Reference(SR-Chloride)
+// --- casestudy 3-gyn
+//==========================
+* item[=].item[+].linkId = "3-gyn"
+* item[=].item[=].definition = "" // url zu 3-gyn ?? evtl. plan definition
+* item[=].item[=].text = "Gynäkologische Vorsorge Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "3-gyn.labServices"
+* item[=].item[=].item[=].text = "Case Study Gynäkologische Vorsorge"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "3-gyn"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-// * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices.single-tests"
-// * item[=].item[=].item[=].item[=].text = "Einzeltest Labor Schildknecht"
-// * item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].enableWhen.question = "SR-tests"
-// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].item[=].enableWhen.answerString = true
-// 
-// 
-// * item[=].item[=].item[=].item[=].item[0].linkId = "SR-singleTest"
-// * item[=].item[=].item[=].item[=].item[=].text = "Service Request for single test"
-// * item[=].item[=].item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-// * item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[+].linkId = "cytology"
+* item[=].item[=].item[=].item[=].text = "Cytology and Microbiology"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "cervicalSmear"
+* item[=].item[=].item[=].item[=].item.text = "Cervical Smear"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#86662-4 "Pap smear tests - FPAR 2.0 set"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* item[=].item[=].item[=].item[+].linkId = "urin"
+* item[=].item[=].item[=].item[=].text = "Urin"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "combur9"
+* item[=].item[=].item[=].item[=].item.text = "Combur-9"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* item[=].item[=].item[=].item[+].linkId = "obstetricalPanels"
+* item[=].item[=].item[=].item[=].text = "Schwangerschaftsvorsorge"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "obstetric"
+* item[=].item[=].item[=].item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+
+// --- casestudy 4-sepsis
+//==========================
+* item[=].item[+].linkId = "4-sepis"
+* item[=].item[=].definition = ""  // url zu 4-sepis
+* item[=].item[=].text = "Abklärung Sepsis Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "4-sepis.labServices"
+* item[=].item[=].item[=].text = "Case Study Sepis"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "4-sepis"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "hematology-4"
+* item[=].item[=].item[=].item[=].text = "Hematology"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "lab-4"
+* item[=].item[=].item[=].item[=].item.text = "Laborwerte"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[+].linkId = "microbiology-4"
+* item[=].item[=].item[=].item[=].text = "Mikrobiologie"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item[0].linkId = "culture"
+* item[=].item[=].item[=].item[=].item[=].text = "Blood by Culture"
+* item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].item[=].answerOption.valueCoding = $lnc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
+* item[=].item[=].item[=].item[=].item[+].linkId = "id-susc"
+* item[=].item[=].item[=].item[=].item[=].text = "Bacterial Identification and Susceptibility"
+* item[=].item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].item[=].answerOption.valueCoding = $lnc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
+* item[=].item[=].item[=].item[+].linkId = "clinical-chemistry-4"
+* item[=].item[=].item[=].item[=].text = "Klinische Chemie"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "crp-4"
+* item[=].item[=].item[=].item[=].item.text = "CRP"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+
+// --- casestudy 5-biol-monit
+//==========================
+* item[=].item[+].linkId = "5-biol-monit"
+* item[=].item[=].definition = "" // url zu 5-biol-monit ?? evtl. plan definition
+* item[=].item[=].text = "Biologisches Monitoring Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "5-biol-monit.labServices"
+* item[=].item[=].item[=].text = "Case Study biologisches Monitoring"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "5-biol-monit"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "hematology-5"
+* item[=].item[=].item[=].item[=].text = "Hematology"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "lab-5"
+* item[=].item[=].item[=].item[=].item.text = "Laborwerte"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[+].linkId = "toxicology"
+* item[=].item[=].item[=].item[=].text = "Toxicology"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "tox"
+* item[=].item[=].item[=].item[=].item.text = "Toxic Content"
+* item[=].item[=].item[=].item[=].item.type = #choice
+* item[=].item[=].item[=].item[=].item.repeats = true
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#29587-3 "Toxicology panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#29589-9 "Heavy metals panel - Urine"
+
+
+// --- casestudy 6-histopath
+//==========================
+* item[=].item[+].linkId = "6-histopath"
+* item[=].item[=].definition = ""  // url zu 6-histopath
+* item[=].item[=].text = "Pathologische Untersuchung einer Gewebsprobe Questionnaire"
+* item[=].item[=].type = #boolean
+* item[=].item[=].item[0].linkId = "6-histopath.labServices"
+* item[=].item[=].item[=].text = "Case Study Pathologische Untersuchung einer Gewebsprobe"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "6-histopath"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "labSpecialties"
+* item[=].item[=].item[=].item[=].text = "Labor Sparten"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].item.linkId = "labSpecialties.pathology"
+* item[=].item[=].item[=].item[=].item.definition = "27898-6"
+* item[=].item[=].item[=].item[=].item.text = "Pathology"
+* item[=].item[=].item[=].item[=].item.type = #boolean
+* item[=].item[=].item[=].item[=].item.item.linkId = "labSpecialties.pathology.panels"
+* item[=].item[=].item[=].item[=].item.item.text = "Pathology Panels"
+* item[=].item[=].item[=].item[=].item.item.type = #group
+* item[=].item[=].item[=].item[=].item.item.enableWhen.question = "labSpecialties.pathology"
+* item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerBoolean = true
+* item[=].item[=].item[=].item[=].item.item.item[0].linkId = "labSpecialties.pathology.panels.Autopsy"
+* item[=].item[=].item[=].item[=].item.item.item[=].definition = "18743-5"
+* item[=].item[=].item[=].item[=].item.item.item[=].text = "Autopsy report"
+* item[=].item[=].item[=].item[=].item.item.item[=].type = #boolean
+* item[=].item[=].item[=].item[=].item.item.item[+].linkId = "labSpecialties.pathology.panels.PathologyStudy"
+* item[=].item[=].item[=].item[=].item.item.item[=].definition = "11526-1"
+* item[=].item[=].item[=].item[=].item.item.item[=].text = "Pathology Study"
+* item[=].item[=].item[=].item[=].item.item.item[=].type = #boolean
+* item[=].item[=].item[=].item[=].item.item.item[+].linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
+* item[=].item[=].item[=].item[=].item.item.item[=].definition = "11529-5"
+* item[=].item[=].item[=].item[=].item.item.item[=].text = "Surgical pathology study"
+* item[=].item[=].item[=].item[=].item.item.item[=].type = #boolean
