@@ -425,7 +425,7 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondence"
 * item[=].item[=].text = "Korrespondenzsprache"
 // * item[=].item[=].type = #choice
-* item[=].item[=].answer.valueCoding = $document-entry-language-code#de
+* item[=].item[=].answer.valueString = "de-CH"
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].item[=].extension.valueExpression.name = "contact"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
