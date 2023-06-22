@@ -1,6 +1,6 @@
 Profile: ChLabOrderSRSingletest
 Parent: ChOrfServiceRequest
-Id: ch-lab-order-SR-labtest
+Id: ch-lab-order-SR-singletest
 Title: "CH LAB-Order-SR Labtest"
 Description: "Definition of a ServiceRequests of a single LabTest in the context of CH LAB-Order"
 
