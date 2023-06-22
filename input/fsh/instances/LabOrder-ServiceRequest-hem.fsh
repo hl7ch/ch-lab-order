@@ -15,19 +15,19 @@ Usage: #example
 // code has an array of codings
 
 // Hematology
-* code.coding[0] = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-// * code.coding[+] = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-// * code.coding[+] = $lnc#58410-2 "CBC panel - Blood by Automated count"
-// * code.coding[+] = $lnc#57023-4 "Auto Differential panel - Blood"
+* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+// * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+// * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
+// * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 
 // Coagulation
-// * code.coding[+] = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-// * code.coding[+] = $lnc#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
+// * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+// * code.coding[+] = $loinc#38875-1 "INR in Platelet poor plasma or Blood by Coagulation assay"
 
 // Chemistry
-// * code.coding[+] = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-// * code.coding[+] = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+// * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+// * code.coding[+] = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

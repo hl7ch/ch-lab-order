@@ -14,7 +14,7 @@ Usage: #example
 // code has an array of codings
 
 // Pathology
-* code.coding[0] = $lnc#11526-1 "Pathology study"
+* code.coding[0] = $loinc#11526-1 "Pathology study"
 
 // orderDetails: Additional order information, codeableConcept
 

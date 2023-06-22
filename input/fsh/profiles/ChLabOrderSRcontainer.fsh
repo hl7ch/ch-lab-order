@@ -52,8 +52,10 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 // * category ^binding.description = "High-level kind of a clinical document at a macro level."
 
 // ------ code -------
+// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
-// * code MS
+
 // * code ^short = "Only allow code from LOINC and/or SNOMED CT"
 // 
 // * code.coding ^slicing.discriminator.type = #value
@@ -153,8 +155,8 @@ Usage: #example
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"
-// * code.coding[+] = $lnc#34555-3 "Creatinine 24H renal clearance panel"
-* code = $lnc#34555-3 "Creatinine 24H renal clearance panel"
+// * code.coding[+] = $loinc#34555-3 "Creatinine 24H renal clearance panel"
+* code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
 
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
@@ -202,8 +204,8 @@ Usage: #example
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#20109005 "Electrolytes measurement, serum (procedure)"
-// * code.coding[+] = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+// * code.coding[+] = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent

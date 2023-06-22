@@ -9,14 +9,14 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $lnc#57023-4 "Auto Differential panel - Blood"
-* code.coding[+] = $lnc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
-* code.coding[+] = $lnc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
-* code.coding[+] = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
+* code.coding[+] = $loinc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
+* code.coding[+] = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
+* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 // orderDetails: Additional order information
 
 * status = #active

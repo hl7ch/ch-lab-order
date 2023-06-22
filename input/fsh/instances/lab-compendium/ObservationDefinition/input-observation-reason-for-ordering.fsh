@@ -5,7 +5,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"
 * language = #en-US
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam "Exam"
-* code = $lnc#67098-4 "Reason for test or procedure"
+* code = $loinc#67098-4 "Reason for test or procedure"
 * permittedDataType[0] = #CodeableConcept
 * permittedDataType[+] = #string
 * multipleResultsAllowed = true

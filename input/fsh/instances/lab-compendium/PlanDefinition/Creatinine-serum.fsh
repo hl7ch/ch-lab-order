@@ -30,7 +30,7 @@ Usage: #example
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE // "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = $lnc#18719-5 "Chemistry studies (set)"
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 // * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
 // * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#13-01 "BIOCHIMIE - SANG"
@@ -41,6 +41,6 @@ Usage: #example
 * action.extension.extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension[=].url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* action.code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * action.timingDuration = 1 'h' "hour"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-serum-creatinine"

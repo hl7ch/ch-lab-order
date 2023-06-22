@@ -288,17 +288,17 @@ Usage: #example
       * linkId = "labSpecialties.pathology.panels"
       * text = "Pathology Panels"
       * item[+]
-        * definition = $lnc#18743-5 "Autopsy report"
+        * definition = $loinc#18743-5 "Autopsy report"
         * linkId = "labSpecialties.pathology.panels.Autopsy"
         * text = "Autopsy report"
         * answer.valueBoolean = false
       * item[+]
-        * definition = $lnc#11526-1 "Pathology study"
+        * definition = $loinc#11526-1 "Pathology study"
         * linkId = "labSpecialties.pathology.panels.PathologyStudy"
         * text = "Pathology Study"
         * answer.valueBoolean = false
       * item[+]
-        * definition = $lnc#11529-5 "Surgical pathology study"
+        * definition = $loinc#11529-5 "Surgical pathology study"
         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
         * text = "Surgical pathology study"
         * answer.valueBoolean = true

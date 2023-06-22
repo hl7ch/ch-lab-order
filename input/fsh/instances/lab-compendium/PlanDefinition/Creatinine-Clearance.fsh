@@ -31,7 +31,7 @@ Usage: #example
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE // "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* topic[0] = $lnc#18719-5 "Chemistry studies (set)"
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 // ---- Serum Specimen, venous serum or capillary serum ----
@@ -50,7 +50,7 @@ Usage: #example
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 
 //
-* action.code = $lnc#34555-3 "Creatinine 24H renal clearance panel"
+* action.code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
