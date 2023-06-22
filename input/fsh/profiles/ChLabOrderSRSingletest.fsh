@@ -28,17 +28,18 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 //---- Use only Code from LOINC or Snomed CT -----
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
+// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 
-// * code from $lnc (extensible) // or from $sct (extensible)
+// * code from $loinc (extensible) // or from $sct (extensible)
 // * code from $microbiol-procedures (extensible)
 
 // * code from $microbiol-procedures (extensible)
 
 // * code from http://hl7.org/fhir/ValueSet/report-codes or $microbiol-procedures
 
-// Includes all codes defined in $lnc
+// Includes all codes defined in $loinc
 // * code from $microbiol-procedures
 // * code from $sct
 // error 'Found a reference to a CodeSystem ($sct) where a ValueSet belongs'
@@ -115,8 +116,8 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-// * code.coding[0] = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
-* code = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+// * code.coding[0] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* code = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
@@ -160,7 +161,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = $lnc#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
+* code = $loinc#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
 
 // orderDetails: Additional order information, codeableConcept
 
@@ -201,7 +202,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
@@ -244,7 +245,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
@@ -288,7 +289,7 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

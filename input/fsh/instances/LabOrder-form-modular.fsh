@@ -213,11 +213,11 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[+].linkId = "coagulation"
 * item[=].item[=].item[=].item[=].text = "Coagulation"
 * item[=].item[=].item[=].item[=].type = #group
@@ -225,7 +225,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "D-Dimer"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * item[=].item[=].item[=].item[+].linkId = "clinical-chemistry-1"
 * item[=].item[=].item[=].item[=].text = "Clinical Chemistry"
 * item[=].item[=].item[=].item[=].type = #group
@@ -233,11 +233,11 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "CRP"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 
 // --- casestudy 2-pertussis
 //==========================
@@ -259,7 +259,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Pertussis and Parapertussis DNA"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#90441-7 "B pert+parapert DNA Pnl Nph"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#90441-7 "B pert+parapert DNA Pnl Nph"
 * item[=].item[=].item[=].item[+].linkId = "hematology-2"
 * item[=].item[=].item[=].item[=].text = "Hämatologie"
 * item[=].item[=].item[=].item[=].type = #group
@@ -267,7 +267,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#24318-8 "Manual diff Bld"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#24318-8 "Manual diff Bld"
 * item[=].item[=].item[=].item[+].linkId = "clinical-chemistry-2"
 * item[=].item[=].item[=].item[=].text = "Klinische Chemie"
 * item[=].item[=].item[=].item[=].type = #group
@@ -275,7 +275,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "C-reactive Protein"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 
 // --- casestudy 3-gyn
 //==========================
@@ -297,8 +297,8 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Cervical Smear"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#86662-4 "Pap smear tests - FPAR 2.0 set"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
 * item[=].item[=].item[=].item[+].linkId = "urin"
 * item[=].item[=].item[=].item[=].text = "Urin"
 * item[=].item[=].item[=].item[=].type = #group
@@ -306,7 +306,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Combur-9"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
 * item[=].item[=].item[=].item[+].linkId = "obstetricalPanels"
 * item[=].item[=].item[=].item[=].text = "Schwangerschaftsvorsorge"
 * item[=].item[=].item[=].item[=].type = #group
@@ -314,7 +314,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Obstetric 1996 panel – Serum and Blood"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $lnc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* item[=].item[=].item[=].item[=].item.answerOption.valueCoding = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
 
 // --- casestudy 4-sepsis
 //==========================
@@ -336,11 +336,11 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Laborwerte"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[+].linkId = "microbiology-4"
 * item[=].item[=].item[=].item[=].text = "Mikrobiologie"
 * item[=].item[=].item[=].item[=].type = #group
@@ -348,12 +348,12 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item[=].text = "Blood by Culture"
 * item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].item[=].item[=].answerOption.valueCoding = $lnc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
+* item[=].item[=].item[=].item[=].item[=].answerOption.valueCoding = $loinc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
 * item[=].item[=].item[=].item[=].item[+].linkId = "id-susc"
 * item[=].item[=].item[=].item[=].item[=].text = "Bacterial Identification and Susceptibility"
 * item[=].item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].item[=].item[=].answerOption.valueCoding = $lnc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
+* item[=].item[=].item[=].item[=].item[=].answerOption.valueCoding = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
 * item[=].item[=].item[=].item[+].linkId = "clinical-chemistry-4"
 * item[=].item[=].item[=].item[=].text = "Klinische Chemie"
 * item[=].item[=].item[=].item[=].type = #group
@@ -361,11 +361,11 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "CRP"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item.answerOption[=].initialSelected = true
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 
 // --- casestudy 5-biol-monit
 //==========================
@@ -387,11 +387,11 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Laborwerte"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[+].linkId = "toxicology"
 * item[=].item[=].item[=].item[=].text = "Toxicology"
 * item[=].item[=].item[=].item[=].type = #group
@@ -399,9 +399,9 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Toxic Content"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#29587-3 "Toxicology panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#54454-4 "Arsenic fractions panel - Urine"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#29589-9 "Heavy metals panel - Urine"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#29587-3 "Toxicology panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#54454-4 "Arsenic fractions panel - Urine"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#29589-9 "Heavy metals panel - Urine"
 
 
 // --- casestudy 6-histopath
@@ -472,7 +472,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium"
 * item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/potassium-serum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
-// * item[=].item[=].item[=].item[=].code = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// * item[=].item[=].item[=].item[=].code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium.specimenDefinition"
@@ -494,7 +494,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Natrium"
-* item[=].item[=].item[=].item[=].code = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Sodium.specimenDefinition"
@@ -516,7 +516,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Chloride"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Chlorid"
-* item[=].item[=].item[=].item[=].code = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].code = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Chloride.specimenDefinition"
@@ -538,7 +538,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Electrolyte"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
-* item[=].item[=].item[=].item[=].code = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Electrolyte.ActivityDefintion"
@@ -553,7 +553,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Creatinine on 24h urine"
-* item[=].item[=].item[=].item[=].code = $lnc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
+* item[=].item[=].item[=].item[=].code = $loinc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.urine-24h.specimenDefinition"
@@ -575,7 +575,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum"
 * item[=].item[=].item[=].item[=].definition = ""
 * item[=].item[=].item[=].item[=].text = "Creatinine Serum"
-* item[=].item[=].item[=].item[=].code = $lnc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].code = $loinc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum.specimenDefinition"
@@ -659,7 +659,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
 
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"
@@ -667,7 +667,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.item.type = #group
 * item[=].item[=].item[=].item[=].item.item.enableWhen.question = "cc-subset-pipette"
 * item[=].item[=].item[=].item[=].item.item.enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = $lnc#2823-3
+* item[=].item[=].item[=].item[=].item.item.enableWhen.answerCoding = $loinc#2823-3
 
 * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
@@ -676,7 +676,7 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2947-0 "Sodium [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2947-0 "Sodium [Moles/volume] in Blood"
 * item[=].item[=].item[=].item[=].item.item.item.linkId = "specimenDefinitions"
 * item[=].item[=].item[=].item[=].item.item.item.text = "Set of possible Specimens"
 * item[=].item[=].item[=].item[=].item.item.item.type = #choice
@@ -684,13 +684,13 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[0].valueCoding = $sct#122554006 "Capillary blood specimen (specimen)"
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2069-3 "Chloride [Moles/volume] in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2069-3 "Chloride [Moles/volume] in Blood"
 //* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/chloride-serum"
 //* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
 //* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
 
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 
 // ---- Hematology Lab Services ----
 * item[=].item[=].item[=].item[+].linkId = "hematology.labServices"
@@ -700,11 +700,11 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item.text = "Hämatologie Subset"
 * item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 
 // ################################################################
 // ---- Compendium Labor Schildknecht, takes container concept ----
@@ -741,9 +741,9 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item[=].item.text = "Testpanel wählen"
 * item[=].item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#24331-1 "Lipid 1996 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $loinc#24331-1 "Lipid 1996 panel - Serum or Plasma"
 
 
 // ------------ Do I want to order a single test -- yes/no -----------------
@@ -766,6 +766,6 @@ Usage:      #example
 * item[=].item[=].item[=].item[=].item[=].item.text = "Einzeltest wählen"
 * item[=].item[=].item[=].item[=].item[=].item.type = #choice
 * item[=].item[=].item[=].item[=].item[=].item.repeats = true
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $lnc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $lnc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"

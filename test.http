@@ -157,4 +157,4 @@ POST {{host}}/Questionnaire/$assemble HTTP/1.1
 Accept: application/json+fhir
 Content-Type: application/json+fhir
 
-< ./output/Questionnaire-LabOrder-form-mod.json
+< ./output/Questionnaire-LabOrder-form.json

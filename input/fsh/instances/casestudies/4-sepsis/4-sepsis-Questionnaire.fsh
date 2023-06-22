@@ -557,11 +557,11 @@ Usage: #example
 * item[=].item.text = "Laborwerte"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $lnc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answerOption[+].valueCoding = $lnc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $lnc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answerOption[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
 * item[+].linkId = "microbiology"
 * item[=].text = "Mikrobiologie"
 * item[=].type = #group
@@ -569,12 +569,12 @@ Usage: #example
 * item[=].item[=].text = "Blood by Culture"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $lnc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
+* item[=].item[=].answerOption.valueCoding = $loinc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
 * item[=].item[+].linkId = "id-susc"
 * item[=].item[=].text = "Bacterial Identification and Susceptibility"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption.valueCoding = $lnc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
+* item[=].item[=].answerOption.valueCoding = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
 * item[+].linkId = "cc"
 * item[=].text = "clinical chemistry"
 * item[=].type = #group
@@ -582,8 +582,8 @@ Usage: #example
 * item[=].item.text = "CRP"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption[0].valueCoding = $lnc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* item[=].item.answerOption[0].valueCoding = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 * item[=].item.answerOption[=].initialSelected = true
-* item[=].item.answerOption[+].valueCoding = $lnc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-* item[=].item.answerOption[+].valueCoding = $lnc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
-* item[=].item.answerOption[+].valueCoding = $lnc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item.answerOption[+].valueCoding = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
+* item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
