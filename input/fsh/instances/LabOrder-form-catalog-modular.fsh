@@ -1,10 +1,10 @@
 Alias: $launchContext = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 
-Instance:   LabOrder-form-Catalog
+Instance:   LabOrder-form-Catalog-mod
 InstanceOf: ChOrfQuestionnaire
 Title:      "Questionnaire Lab Order from Catalog"
 Usage:      #example
-* id = "LabOrder-form"
+* id = "LabOrder-form-catalog-mod"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-21T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -30,7 +30,7 @@ Usage:      #example
 * url = "http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form-modular"
 * version = "1.1.0"
 * name = "LabOrderFormCatalog"
-* title = "Questionnaire Lab Order from Catalog"
+* title = "Questionnaire Lab Order from Catalog, modular"
 * status = #active
 * subjectType = #Patient
 * date = "2022-07-07"
