@@ -460,10 +460,10 @@ Usage:      #example
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices"
+* item[=].item[=].item[0].linkId = "lab-compendium.GantenbeinLabServices"
 * item[=].item[=].item[=].text = "Analysen Labor Gantenbein"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerString = "Gantenbein"
 
@@ -643,10 +643,10 @@ Usage:      #example
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Pipette Compendium"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "lab-compendium.Pipette.Services"
+* item[=].item[=].item[0].linkId = "lab-compendium.PipetteLabServices"
 * item[=].item[=].item[=].text = "Lab Services"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Pipette"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerString = "Pipette"
 
@@ -714,10 +714,10 @@ Usage:      #example
 * item[=].item[=].definition = "27898-6"
 * item[=].item[=].text = "Schildknecht Compendium"
 * item[=].item[=].type = #boolean
-* item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices"
+* item[=].item[=].item[0].linkId = "lab-compendium.SchildknechtLabServices"
 * item[=].item[=].item[=].text = "Analysen Labor Schildknecht"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "receiver.organization.name"
+* item[=].item[=].item[=].enableWhen.question = "lab-compendium.Schildknecht"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerString = "Schildknecht"
 

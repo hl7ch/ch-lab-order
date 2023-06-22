@@ -53,7 +53,9 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 
 // ------ code -------
 
-// * code MS
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+
+
 // * code ^short = "Only allow code from LOINC and/or SNOMED CT"
 // 
 // * code.coding ^slicing.discriminator.type = #value

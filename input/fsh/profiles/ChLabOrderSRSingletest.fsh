@@ -28,7 +28,9 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 //---- Use only Code from LOINC or Snomed CT -----
 //---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
 
-* code 1..1 MS
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+
+
 // * code from $lnc (extensible) // or from $sct (extensible)
 // * code from $microbiol-procedures (extensible)
 
