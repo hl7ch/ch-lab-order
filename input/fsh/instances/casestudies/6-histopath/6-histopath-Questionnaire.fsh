@@ -4,7 +4,6 @@ Title: "questionnaire 6-histopath"
 Description: "Example for Questionnaire of Histopathology Examination"
 Usage: #example
 * id = "6-histopath"
-
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-06-06T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"

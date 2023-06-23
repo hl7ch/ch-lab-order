@@ -58,14 +58,11 @@
 
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-      Questionnaire
+      Questionnaire Case Studies
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="Questionnaire-0-generic-Questionnaire.html">Generisches Formular</a>
-      </li>
-      <li>
+            <li>
         <a href="Questionnaire-1-tvt.html">Tiefe Venenthrombose</a>
       </li>
       <li>

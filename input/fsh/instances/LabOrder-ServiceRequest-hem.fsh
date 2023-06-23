@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-hem
 InstanceOf: ChOrfServiceRequest
 Title: "LabOrder Service Request for Hematology Tests"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Description: "Example for Service Request Hematology Tests"
 Usage: #example
 * id = "LabOrder-hem"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

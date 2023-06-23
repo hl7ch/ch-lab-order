@@ -1,5 +1,5 @@
 Instance: LabOrder-Document
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocument
 Title: "Referral LabOrder"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
@@ -28,14 +28,14 @@ Usage: #example
 * entry[=].resource = LabOrder-QuestionnaireResponse
 
 // ---- SR for Hematology Tests ----
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-hem"
-* entry[=].resource = LabOrder-ServiceRequest-hem
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-sr"  // entry[7]
+* entry[=].resource = LabOrder-ServiceRequest
 
-// ---- SR for Coagulation Tests ----
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
-* entry[=].resource = LabOrder-ServiceRequest-coag
-
-// ---- SR for Coagulation Tests ----
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
-* entry[=].resource = LabOrder-ServiceRequest-cc
+// // ---- SR for Coagulation Tests ----
+// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
+// * entry[=].resource = LabOrder-ServiceRequest-coag
+// 
+// // ---- SR for Coagulation Tests ----
+// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
+// * entry[=].resource = LabOrder-ServiceRequest-cc
 
