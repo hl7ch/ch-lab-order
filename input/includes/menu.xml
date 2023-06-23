@@ -43,7 +43,7 @@
   </li>
 
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Questionnaire from Catalog<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Questionnaire<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -51,7 +51,7 @@
         <a href="Questionnaire-LabOrder-form.html">Specification</a>
       </li>
       <li>
-        <a href="#">Form</a> <!-- questionnaire-form.html -->
+        <a href="https://laborprojektgruppe.ch/questionnaire/">Form</a> <!-- questionnaire-form.html -->
       </li>
     </ul>
   </li>
