@@ -1,24 +1,23 @@
-Instance: LabOrder-ServiceRequest
+Instance: LabOrder-ServiceRequest-container
 InstanceOf: ChOrfServiceRequest
-Title: "LabOrder Service Request for Clinical Chemistry Tests"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Title: "LabOrder Service Request for multiple Lab Tests"
+Description: "Example for Service Request as container for multiple Service Requests"
 Usage: #example
-* id = "LabOrder-sr"
+* id = "LabOrder-container"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+
+// der SR referenziert auf 3 weitere SR
+* basedOn[0] = Reference(LabOrder-ServiceRequest-hem)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-coag)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-cc)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-container)
 
 * status = #active
 * intent = #original-order
 * category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-// * code.coding[0] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-// * code.coding[+] = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
-
-// orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
