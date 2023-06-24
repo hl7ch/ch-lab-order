@@ -128,11 +128,11 @@ Usage: #example
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Routine"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Urgent."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Urgent"
 * item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "ASAP"
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "STAT"
 
 // --- receiver item[1] ----------
 * item[+].linkId = "receiver"
