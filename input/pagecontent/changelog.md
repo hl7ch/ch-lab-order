@@ -19,7 +19,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Follow up of changes in CH-orf
 
-* [Change Log CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/changelog.html): 
+* [Change Log CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/changelog.html):
 
 #### Changed / Updated
 
