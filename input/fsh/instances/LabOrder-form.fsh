@@ -714,6 +714,10 @@ Usage: #example
 * item[+].linkId = "lab-compendiums"  // item[9]
 * item[=].text = "Labor Compendien"
 * item[=].type = #group
+
+// #######################################################
+// ---- Compendium Labor Pipette, choose labSpecialty ----
+// #######################################################
 * item[=].item[0].linkId = "lab-compendium.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
