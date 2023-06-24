@@ -72,7 +72,7 @@ Usage: #example
 * item[=].item[=].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].type = #string
-* item[=].item[+].linkId = "order.notificationContactDocument"
+* item[=].item[+].linkId = "order.notificationContactDocument"  // item[0[5]
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "order.notificationContactDocument.practitioner"
@@ -93,7 +93,7 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocument.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
-* item[=].item[+].linkId = "order.notificationContactDocumentResponse"
+* item[=].item[+].linkId = "order.notificationContactDocumentResponse" // item[0[6]
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "order.notificationContactDocumentResponse.practitioner"
@@ -114,14 +114,14 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
-* item[=].item[+].linkId = "order.priority"
+* item[=].item[+].linkId = "order.priority" // item[0[6]
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Routine"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Urgent."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Urgent"
 * item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "ASAP"
-* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "STAT"
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
 * item[=].type = #group
