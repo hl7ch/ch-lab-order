@@ -122,7 +122,7 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Urgent"
 * item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "ASAP"
 * item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "STAT"
-* item[+].linkId = "receiver"
+* item[+].linkId = "receiver" // item[1]
 * item[=].text = "Empfänger"
 * item[=].type = #group
 * item[=].item[0].linkId = "receiver.practitioner"
@@ -172,7 +172,7 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "receiver.organization.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
-* item[+].linkId = "patient"
+* item[+].linkId = "patient"  // item[2]
 * item[=].text = "Patient"
 * item[=].type = #group
 * item[=].required = true
@@ -254,7 +254,7 @@ Usage: #example
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
 * item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].type = #string
-* item[+].linkId = "sender"
+* item[+].linkId = "sender" // item[3]
 * item[=].text = "Absender"
 * item[=].type = #group
 * item[=].required = true
@@ -323,7 +323,7 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "sender.dataenterer.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].type = #string
-* item[+].linkId = "receiverCopies"
+* item[+].linkId = "receiverCopies" // item[4]
 * item[=].text = "Kopieempfänger"
 * item[=].type = #group
 * item[=].item[0].linkId = "receiverCopy"
@@ -448,7 +448,7 @@ Usage: #example
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.address.country"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
-* item[+].linkId = "consent"
+* item[+].linkId = "consent"  // item[5]
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
 * item[=].type = #group
@@ -464,7 +464,7 @@ Usage: #example
 * item[=].item[+].linkId = "consent.advancedCareDirective"
 * item[=].item[=].text = "Patientenverfügung"
 * item[=].item[=].type = #string
-* item[+].linkId = "coverage"
+* item[+].linkId = "coverage" // item[6]
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
 * item[=].type = #group
@@ -480,7 +480,7 @@ Usage: #example
 * item[=].item[+].linkId = "coverage.vvgOther"
 * item[=].item[=].text = "Andere (nach VVG)"
 * item[=].item[=].type = #string
-* item[+].linkId = "previousResult"
+* item[+].linkId = "previousResult" // item[7]
 * item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
 * item[=].type = #group
@@ -488,7 +488,7 @@ Usage: #example
 * item[=].item.text = "Untersuchungsresultat"
 * item[=].item.type = #string
 * item[=].item.repeats = true
-* item[+].linkId = "casestudy"
+* item[+].linkId = "casestudy"  // item[8]
 * item[=].text = "Case Studies"
 * item[=].type = #group
 * item[=].item[0].linkId = "1-tvt"
@@ -711,16 +711,10 @@ Usage: #example
 * item[=].item[=].item.item.item.item.item[=].text = "Surgical pathology study"
 * item[=].item[=].item.item.item.item.item[=].type = #boolean
 
-* item[+].linkId = "lab-compendiums"
+* item[+].linkId = "lab-compendiums"  // item[9]
 * item[=].text = "Labor Compendien"
 * item[=].type = #group
-
-// #########################################################
-// ---- Compendium Labor Gantenbein
-// ---- choose test yes/no ----
-// ---- choose specimen venous/capillary
-// #########################################################
-* item[=].item[+].linkId = "lab-compendium.Gantenbein"
+* item[=].item[0].linkId = "lab-compendium.Gantenbein"
 * item[=].item[=].definition = ""
 * item[=].item[=].text = "Gantenbein Compendium"
 * item[=].item[=].type = #boolean
