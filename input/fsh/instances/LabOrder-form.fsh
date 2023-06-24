@@ -721,7 +721,7 @@ Usage: #example
 // ---- choose specimen venous/capillary
 // #########################################################
 * item[=].item[0].linkId = "lab-compendium.Gantenbein"  // item[9][0]
-* item[=].item[=].definition = ""
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/Composition/Gantenbein-Catalog-Header"
 * item[=].item[=].text = "Gantenbein Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices"  // item[9][0][0]
@@ -753,7 +753,7 @@ Usage: #example
 // ---- E1 Blood sodium test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium" // item[9][0][0][1]
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/sodium-serum"
 * item[=].item[=].item[=].item[=].text = "Natrium"
 * item[=].item[=].item[=].item[=].code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -773,7 +773,7 @@ Usage: #example
 // ---- E1 Blood chloride test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Chloride" // item[9][0][0][2]
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-chloride-serum"
 * item[=].item[=].item[=].item[=].text = "Chlorid"
 * item[=].item[=].item[=].item[=].code = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -793,7 +793,7 @@ Usage: #example
 // ---- E2 Blood electrolyte test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Electrolyte"  // item[9][0][0][3]
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-blood-electrolyte"
 * item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
 * item[=].item[=].item[=].item[=].code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -815,7 +815,7 @@ Usage: #example
 // ---- E5 Creatinine Clearance ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineClearance"  // item[9][0][0][4]
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine-clearance"
 * item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine renal clearance (24H U+S/P) [Vol/Time]"
 * item[=].item[=].item[=].item[=].code = $loinc#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -823,7 +823,7 @@ Usage: #example
 // ---- E3 Creatinine concentration on 24h urine ----
 // ==================================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h" // item[9][0][0][5]
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine"
 * item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine on 24h urine"
 * item[=].item[=].item[=].item[=].code = $loinc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -849,7 +849,7 @@ Usage: #example
 // ---- E4 Creatinine concentration serum ----
 // ===========================================
 * item[=].item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum"  // item[9][0][0][6]
-* item[=].item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-serum-creatinine"
 * item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine Serum"
 * item[=].item[=].item[=].item[=].item[=].code = $loinc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item[=].type = #boolean
@@ -872,7 +872,7 @@ Usage: #example
 // ---- E6 Vitamin D test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Vitamin-D"  // item[9][0][0][7]
-* item[=].item[=].item[=].item[=].definition = ""
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-vitamin-d-serum"
 * item[=].item[=].item[=].item[=].text = "Vitamin D"
 * item[=].item[=].item[=].item[=].type = #boolean
 
@@ -909,7 +909,7 @@ Usage: #example
 // ---- Compendium Labor Pipette, choose labSpecialty ----
 // #######################################################
 * item[=].item[+].linkId = "lab-compendium.Pipette"         // item[9][1]
-* item[=].item[=].definition = "27898-6"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/Composition/Pipette-Catalog-Header"
 * item[=].item[=].text = "Pipette Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "lab-compendium.Pipette.Services"
@@ -982,7 +982,7 @@ Usage: #example
 // ################################################################
 
 * item[=].item[+].linkId = "lab-compendium.Schildknecht"  // item[9][2]
-* item[=].item[=].definition = "27898-6"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/Composition/Schildknecht-Catalog-Header"
 * item[=].item[=].text = "Schildknecht Compendium"
 * item[=].item[=].type = #boolean
 * item[=].item[=].item[0].linkId = "lab-compendium.Schildknecht.labServices"    // item[9][2][0]
