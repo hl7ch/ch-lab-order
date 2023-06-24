@@ -827,23 +827,23 @@ Usage: #example
 * item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine on 24h urine"
 * item[=].item[=].item[=].item[=].code = $loinc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
 * item[=].item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Sodium.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Natrium"
-* item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
-* item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.urine-24h.specimenDefinition"
-* item[=].item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinin Konzentration im 24h Urin"
-* item[=].item[=].item[=].item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
-* item[=].item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.CreatinineUrin.specimenDefinitions"
-* item[=].item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
-* item[=].item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122575003 "Urine specimen (specimen)"
+// * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Sodium.specimenDefinition"
+// * item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine Urin"
+// * item[=].item[=].item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
+// * item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.urine-24h.specimenDefinition"
+// * item[=].item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinin Konzentration im 24h Urin"
+// * item[=].item[=].item[=].item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].item[=].item[=].item[=].enableWhen.question = "lab-compendium.Gantenbein.labServices.CreatinineUrine24h"
+// * item[=].item[=].item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.CreatinineUrin.specimenDefinitions"
+// * item[=].item[=].item[=].item[=].item[=].item[=].item[=].text = "Set of possible Specimens in Lab Catalog Gantenbein"
+// * item[=].item[=].item[=].item[=].item[=].item[=].item[=].type = #choice
+// * item[=].item[=].item[=].item[=].item[=].item[=].item[=].repeats = false
+// * item[=].item[=].item[=].item[=].item[=].item[=].item[=].answerOption[0].valueCoding = $sct#122575003 "Urine specimen (specimen)"
 
 
 // ---- E4 Creatinine concentration serum ----
