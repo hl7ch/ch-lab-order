@@ -27,9 +27,8 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[6]
 * entry[=].resource = LabOrder-QuestionnaireResponse
 
-// ---- SR for Hematology Tests ----
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-sr"  // entry[7]
-* entry[=].resource = LabOrder-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-sr-potassium"  // entry[7]
+* entry[=].resource = LabOrder-ServiceRequest-potassium
 
 // // ---- SR for Coagulation Tests ----
 // * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
