@@ -23,6 +23,8 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * instantiatesCanonical 1..1 MS
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
+
+* basedOn only Reference(ChLabOrderSRSingletest) // Labtest
 * requisition 1..1 MS
 
 //---- Use only Code from LOINC or Snomed CT -----
