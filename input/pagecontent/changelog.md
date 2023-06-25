@@ -6,16 +6,16 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues for STU 2
 
-* [Issue #132](https://github.com/hl7ch/ch-lab-order/issues/132) Try to build a Questionnaire with a general part and 6 specific parts
 * [Issue #128](https://github.com/hl7ch/ch-lab-order/issues/128) Mapping reasonCode und reasonReference from Q to SR
 * [Issue #127](https://github.com/hl7ch/ch-lab-order/issues/127) Mapping Questionnaire code to Service Request code
 * [Issue #88](https://github.com/hl7ch/ch-lab-order/issues/88) look at #128; preanalytical notes which belong to specimen
 * [Issue #87](https://github.com/hl7ch/ch-lab-order/issues/87) Relations between Specimens and Tests
 * [Issue #80](https://github.com/hl7ch/ch-lab-order/issues/80) User should be able to select analyses or analyse panels from a Catalog. The applies to Specimens
 * [Issue #79](https://github.com/hl7ch/ch-lab-order/issues/79) Pick desired Analyses and Specimens from am Catalog
-* [Issue #78](https://github.com/hl7ch/ch-lab-order/issues/78) Test to be performed is missing in ServiceRequest.code: Has to be performed by mapping
-* [Issue #77](https://github.com/hl7ch/ch-lab-order/issues/77) Pathology Order: Add example
-* [Issue #72](https://github.com/hl7ch/ch-lab-order/issues/72) Relation between Tests and Specimens my be needed
+
+
+
+* [Issue #72](https://github.com/hl7ch/ch-lab-order/issues/72) Relation between Tests and Specimens my be needed. The relation should be established by a test-specific PlanDefinition as extension specimenRequested, which points to the test-specific SpecimenDefinition. The test-specific PlanDefinition and SpecimenDefinitin should be provided by a LabCatalog/Compendium. So the Lab Organization can independently define their tests with all the needed preanalytic conditions.
 
 #### Follow up of changes in CH-orf
 
@@ -23,9 +23,14 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 
-* Issue #89: Use of SNOMED CT, LOINC in Analyses, Specimens, Specialties etc. is changed in 0-generic-of-ChOrf-Questionnaire
+* [Issue #132](https://github.com/hl7ch/ch-lab-order/issues/132) Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](http://build.fhir.org/ig/hl7ch/ch-lab-order/Questionnaire-LabOrder-form.html)
+
+* [Issue #78](https://github.com/hl7ch/ch-lab-order/issues/78) Test to be performed is missing in ServiceRequest.code: Has to be performed by mapping
+
+* [Issue #77](https://github.com/hl7ch/ch-lab-order/issues/77) Pathology Order: Case Study and Instance is added: Case study 6: Suspected Melanoma, order for histopathology examination
+* Issue #89: Case Study 0-generic has been deleted.
 * Issue #86: Add Term 'Nachverordnung' in ChLabOrderServiceRequestCategories codesystem
-* Issue #85: Remove SR of Vital Monitoring Devices; should be realized under a separate IG
+* [Issue #85](https://github.com/hl7ch/ch-lab-order/issues/85): Remove SR of Vital Monitoring Devices; should be realized under a separate IG
 * Issue #84: The Resource Service Request provides that reasonCode and/or a reasonReference can be added to the job as Condition | Observation | Diagnostic Report | DocumentReference; the descrption of UC 7 has been completed
 * Issue #82: Previous lab results or images can be easily requested by phone. However, if a previous order can still be found in the system, the associated results can be requested easily and precisely by adjusting the value of ServiceRequest.categories accordingly.
 

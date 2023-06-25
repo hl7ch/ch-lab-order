@@ -90,7 +90,8 @@ For Blood gas analyses, the amount of oxygen administered to the patient is some
 
 Laboratories often offer the option of monitoring vital functions with appropriate medical devices, such as 24-hour Blood pressure monitoring, long-term ECG monitoring, or sleep medicine monitoring. For this purpose, the medical device is either sent to the client, or the patient picks it up from the lab himself.
 
-* ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG
+* However, the procedure of including this use case in the present implementation guide seems unsatisfactory, since such monitoring investigations of vital data fall outside the actual laboratory domain, and since FHIR provides us with more specific resources: The [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) resource lends itself here, with the required device referenced in the [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html) resource. The corresponding use case can be implemented analogously to the laboratory regulation as a bundle with a composition, which contains the [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) instead of the Service Request. It therefore makes more sense to deal with the monitoring request in a separate Implementation Guide.
+Based on the above considerations, the corresponding ServiceRequestCategories for monitoring were commented out in the ValueSet of the Implementation Guide.
 
 ### Use Case 10: Client selects analyses or analysis panels from a catalog
 
@@ -100,5 +101,4 @@ For this purpose, the laboratories provide their customers with a catalog of tho
 
 There will be different types of catalog entries (CatalogEntries) for this purpose: Single analyses, multiple analyses (panels), sample vessels, pre-analytical preconditions.
 The single record of a laboratory analysis or a sample can be mapped as using the CatalogEntry resource. A composition with a Profile for Catalog is then the document that represents the catalog and represents the totality of the CatalogEntries it contains. It is important that the catalog always corresponds to the current conditions of the laboratory, and can, for example, immediately accommodate new laboratory tests or changed specifications of the preanalytics.
-
 [StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)

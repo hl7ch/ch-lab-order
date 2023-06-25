@@ -107,11 +107,7 @@ bei Blutgas-Analysen, wo die dem Patienten zum Zeitpunkt der Probeentnahme verab
 
 Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab. Es wurde versucht, diese Verordnungen über die ServiceRequest.catogories abzubilden:
 
-* ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG
-
-Dieses Vorgehen erscheint aber unbefriedigend, da solche Monitoring Untersuchungen von Vitaldaten ausserhalb der eigentlichen Labordomäne fallen, und da uns FHIR spezifischere Resourcen zur Verfügung stellt:
-Die Resource DeviceRequest bietet sich hier an, wobei das benötigte Gerät in der DeviceDefinition Resource referenziert wird.
-Der dazugeörige Use Case kann analog der Laborverordnung als Bundle mit einer Composition, welche an Stelle des Service Request den Device Request enthält, implementiert werden. Es ist somit sinnvoller, die Anforderung von Monitoring-Untersuchungen in einem eigenen Implementation Guide abzuhandeln.
+* Das Vorgehen, diesen use case im vorliegenden Implementation guide aufzunehmen, erscheint aber unbefriedigend, da solche Monitoring Untersuchungen von Vitaldaten ausserhalb der eigentlichen Labordomäne fallen, und da uns FHIR spezifischere Resourcen zur Verfügung stellt: Die Resource [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) bietet sich hier an, wobei das benötigte Gerät in der [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html) Resource referenziert wird. Der dazugeörige Use Case kann analog der Laborverordnung als Bundle mit einer Composition, welche an Stelle des Service Request den [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) enthält, implementiert werden. Es ist somit sinnvoller, die Anforderung von Monitoring-Untersuchungen in einem eigenen Implementation Guide abzuhandeln.
 Aufgrund obiger Überlegungen wurden die entsprechenden ServiceRequestCategories für das Monitoring im ValueSet des Implementation Guide auskommentiert.
 
 ### Use Case 10: Laborverordnung aus dem Labor-Katalog
@@ -122,5 +118,4 @@ Die Labore stellen dazu ihren Kunden einen Katalog von derjenigen Laboruntersuch
 
 Es wird dazu verschiedene Typen von Katalogeinträgen (CatalogEntries) geben: Einzel-Analysen, Mehrfach-Analysen (panels), Proben-Gefässe, präanalytische Vorbedingungen.
 Der einzelne Datensatz einer Laboruntersuchung oder einer Probe lässt sich als mittels der Resource CatalogEntry abbilden. Eine Composition mit einem Profile for Catalog ist dann das Dokument, das den Katalog darstellt und repräsentiert die Gesamtheit der enthaltenen CatalogEntries. Dabei ist wichtig, dass der Catalog immer den aktuellen Gegebenheiten des Labors entspricht, und beispielsweise sofort neue Laboruntersuchungen oder veränderte Vorgaben der Präanalytik aufnehmen kann.
-
 [StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)
