@@ -59,4 +59,4 @@ Usage: #example
 * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                Order-Referral-Form\n            </div>"
 * section.entry[0] = Reference(LabOrder-form)
 * section.entry[+] = Reference(LabOrder-QuestionnaireResponse)
-* section.entry[+] = Reference(LabOrder-ServiceRequest)
+* section.entry[+] = Reference(LabOrder-ServiceRequest-potassium)

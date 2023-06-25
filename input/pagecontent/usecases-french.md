@@ -106,12 +106,8 @@ pour les analyses de gaz du sang, où la quantité d'oxygène administrée au pa
 
 Les laboratoires offrent souvent la possibilité de surveiller les fonctions vitales à l'aide d'appareils médicaux appropriés, comme par exemple la surveillance de la tension artérielle 24 heures sur 24, la surveillance à long terme de l'ECG ou la surveillance médicale du sommeil. Pour ce faire, l'appareil médical est soit envoyé au prescripteur, soit le patient vient le chercher lui-même au laboratoire. On a essayé de représenter ces prescriptions par les ServiceRequest.catogories :
 
-* ServiceRequest.category RequestForMonit24hBP, RequestForMonit24hECG, RequestForMonit7dECG, RequestForMonitPO, RequestForMonitPG.
-
-Cette procédure ne semble toutefois pas satisfaisante, car de tels examens de surveillance des données vitales sortent du domaine du laboratoire proprement dit et parce que FHIR met à notre disposition des ressources plus spécifiques :
-La ressource DeviceRequest s'impose ici, l'appareil nécessaire étant référencé dans la DeviceDefinition Resource.
-Le cas d'utilisation correspondant peut être implémenté de manière analogue à l'ordonnance sur les laboratoires sous forme de bundle avec une composition qui contient la Device Request à la place de la Service Request. Il est donc plus judicieux de traiter la demande d'examens de monitoring dans un guide d'implémentation séparé.
-Sur la base des considérations ci-dessus, les ServiceRequestCategories correspondantes pour le monitoring ont été commentées dans le ValueSet du guide d'implémentation.
+* La démarche consistant à inclure ce cas d'utilisation dans le présent guide d'implémentation semble toutefois insatisfaisante, car de tels examens de surveillance des données vitales sortent du domaine du laboratoire proprement dit et parce que FHIR met à notre disposition des ressources plus spécifiques : La ressource [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) s'impose ici, l'appareil nécessaire étant référencé dans la ressource [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html). Le cas d'utilisation correspondant peut être implémenté de manière analogue à la prescription de laboratoire sous forme de bundle avec une composition qui contient la [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) à la place de la demande de service. Il est donc plus judicieux de traiter la demande d'examens de surveillance dans un guide d'implémentation séparé.
+En raison des considérations ci-dessus, les ServiceRequestCategories correspondantes pour le monitoring ont été commentées dans le ValueSet du guide d'implémentation.
 
 ### Cas d'utilisation 10: Ordonnance de laboratoire du catalogue de laboratoire
 
@@ -121,5 +117,4 @@ Les laboratoires mettent à la disposition de leurs clients un catalogue des exa
 
 Il y aura différents types d'entrées dans le catalogue (CatalogEntries) : Analyses individuelles, analyses multiples (panels), récipients d'échantillons, conditions préalables pré-analytiques.
 L'enregistrement individuel d'une analyse de laboratoire ou d'un échantillon peut être représenté au moyen de la ressource CatalogEntry. Une composition avec un Profile for Catalog est alors le document qui représente le catalogue et représente l'ensemble des CatalogEntries qu'il contient. Il est important que le Catalog corresponde toujours aux conditions actuelles du laboratoire et qu'il puisse par exemple intégrer immédiatement de nouveaux examens de laboratoire ou des prescriptions modifiées de la préanalytique.
-
 [StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)
