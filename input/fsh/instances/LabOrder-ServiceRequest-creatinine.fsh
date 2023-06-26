@@ -1,12 +1,18 @@
-Instance: LabOrder-ServiceRequest-cc
-InstanceOf: ChOrfServiceRequest
-Title: "LabOrder Service Request for Clinical Chemistry Tests"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Instance: LabOrder-ServiceRequest-creatinine
+InstanceOf: ChLabOrderSRSingletest
+Title: "LabOrder Service Request for Serum Creatinine"
+Description: "Example for Service Request of Creatinine [Moles/volume] in Serum or Plasma"
 Usage: #example
-* id = "LabOrder-cc"
+* id = "LabOrder-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
 
 * status = #active
 * intent = #original-order
@@ -15,16 +21,15 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-* code.coding[+] = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
+* code.coding[0] = $loinc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity"
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)

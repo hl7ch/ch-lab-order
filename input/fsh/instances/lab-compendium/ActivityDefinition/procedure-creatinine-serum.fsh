@@ -1,9 +1,9 @@
-Instance: procedure-serum-creatinine
+Instance: procedure-creatinine-serum
 InstanceOf: ActivityDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-serum-creatinine"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
 * version = "0.1.0"
 * name = "UrineCreatinineProcedure"
 * title = "Procedure - serum creatinine - venous blood"
@@ -23,4 +23,4 @@ Usage: #example
 * topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 * kind = #ServiceRequest
 * code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* observationResultRequirement = Reference(ObservationDefinition/observation-serum-creatinine)
+* observationResultRequirement = Reference(ObservationDefinition/observation-creatinine-serum)

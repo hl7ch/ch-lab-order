@@ -1,12 +1,1 @@
 == Suppressed Messages ==
-
-# Snapshot information concerns the parent profile CH Core Encounter (identifier:VisitNumber)
-# The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-
-# Allow German display values or clearer descriptions for the questionnaire
-
-# Build Errors: 
-
-
-# Questionnaire Definition Elements do not resolve to fragment on html page #144 
-

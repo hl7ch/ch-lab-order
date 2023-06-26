@@ -1,13 +1,20 @@
-Instance: LabOrder-ServiceRequest-potassium
-InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for Clinical Chemistry Tests"
-Description: "Example for Service Request of Potassium [Moles/volume] in Serum or Plasma"
+Instance: LabOrder-ServiceRequest-electrolytes
+InstanceOf: ChLabOrderSRContainer
+Title: "LabOrder Service Request for Electrolytes in Serum"
+Description: "Example for Service Request as container for multiple Service Requests"
 Usage: #example
-* id = "LabOrder-potassium"
+* id = "LabOrder-electrolytes"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
+
+// der SR referenziert auf 3 weitere SR
+* basedOn[0] = Reference(LabOrder-ServiceRequest-sodium)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-potassium)
+* basedOn[+] = Reference(LabOrder-ServiceRequest-chloride) // TODO
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -18,18 +25,11 @@ Usage: #example
 * intent = #original-order
 * category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
 
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-
-// orderDetails: Additional order information, codeableConcept
-
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#90688005
-* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* reasonCode = $sct#404223003
+* reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
