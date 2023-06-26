@@ -21,7 +21,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * ^copyright = "CC-BY-SA-4.0"
 
 // ---- instantiates Canonical
-* instantiatesCanonical 1.. MS
+* instantiatesCanonical 0.. MS
 
 // * Is based On ChLabOrderSRSingletest or other SRContainer
 * basedOn 1.. MS
