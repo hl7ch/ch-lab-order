@@ -33,9 +33,8 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
-
-// * code from $loinc (extensible) // or from $sct (extensible)
-// * code from $microbiol-procedures (extensible)
+* code 1..1 
+// * code from https://fhir.loinc.org/ValueSet/LL1162-8 // warning not found by validator
 
 // * code from $microbiol-procedures (extensible)
 
