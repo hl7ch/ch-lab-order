@@ -46,7 +46,7 @@ Usage: #example
 * contact[=].telecom.value = "laborprojektgruppe@gmail.com"
 * contact[=].telecom.use = #work
 * jurisdiction = urn:iso:std:iso:3166#CH
-* copyright = "CC-BY-SA-4.0"
+* copyright = "CC0-1.0"
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group

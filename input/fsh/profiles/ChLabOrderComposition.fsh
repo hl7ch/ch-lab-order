@@ -15,7 +15,7 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 // * ^contact[=].telecom.system = #email
 // * ^contact[=].telecom.value = "hanselmann48@gmail.com"
 // * ^jurisdiction = urn:iso:std:iso:3166#CH
-// * ^copyright = "CC-BY-SA-4.0"
+// * ^copyright = "CC0-1.0"
 // * type from $DocumentEntry.typeCode (required)
 // * type ^short = "Precise type of clinical document"
 // * category 1..1

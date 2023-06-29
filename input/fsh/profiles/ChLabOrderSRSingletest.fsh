@@ -18,7 +18,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "hanselmann48@gmail.com"
 * ^jurisdiction = urn:iso:std:iso:3166#CH
-* ^copyright = "CC-BY-SA-4.0"
+* ^copyright = "CC0-1.0"
 
 * instantiatesCanonical 1..1 MS
 
