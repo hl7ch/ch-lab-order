@@ -27,14 +27,31 @@ Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-o
 
 ### Installation of JDK Oracle for Fedora 31
 
+Download JDK from Oracle website:
+
+https://www.oracle.com/java/technologies/downloads/
+
 ```bash
 cat /etc/fedora-release   or $ cat /usr/lib/os-release
-Fedora release 31 (Thirty One)
-java -version
-java version "1.8.0_231"
-Java(TM) SE Runtime Environment (build 1.8.0_231-b11)
-Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
+Fedora release 38 (Thirty Eight)
+java --version
+java 20.0.1 2023-04-18
+Java(TM) SE Runtime Environment (build 20.0.1+9-29)
+Java HotSpot(TM) 64-Bit Server VM (build 20.0.1+9-29, mixed mode, sharing)
+
+$ sudo alternatives --config java
+
+There are 3 programs which provide 'java'.
+
+  Selection    Command
+-----------------------------------------------
+   1           /usr/lib/jvm/jdk-17-oracle-x64/bin/java
+   2           java-17-openjdk.x86_64 (/usr/lib/jvm/java-17-openjdk-17.0.7.0.7-5.fc38.x86_64/bin/java)
+*+ 3           /usr/lib/jvm/jdk-20-oracle-x64/bin/java
+
+Enter to keep the current selection[+], or type selection number: 
 ```
+
 
 ### IG Publisher
 
@@ -46,9 +63,10 @@ Make sure you use the latest version of publisher.
 
 ```bash
 java --version
-openjdk 11.0.8 2020-07-14
-OpenJDK Runtime Environment 18.9 (build 11.0.8+10)
-OpenJDK 64-Bit Server VM 18.9 (build 11.0.8+10, mixed mode, sharing)
+java 20.0.1 2023-04-18
+Java(TM) SE Runtime Environment (build 20.0.1+9-29)
+Java HotSpot(TM) 64-Bit Server VM (build 20.0.1+9-29, mixed mode, sharing)
+
 
 java -jar input-cache/publisher.jar -ig ig.ini
 ```
