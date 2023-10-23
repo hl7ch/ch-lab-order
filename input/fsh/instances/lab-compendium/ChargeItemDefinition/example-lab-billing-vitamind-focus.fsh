@@ -35,11 +35,11 @@ Usage: #example
 * useContext[=].valueCodeableConcept.text = "(Verdacht) nicht traumatische Fraktur"
 
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = $sct#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
+* useContext[=].valueCodeableConcept = $sct#443731004 "Assessment using Falls Risk Assessment Scale for the Elderly (procedure)"
 * useContext[=].valueCodeableConcept.text = "Beurteilung und Behandlung nach unklarem Sturzereignis bei Patienten ≥ 65 Jahren"
 
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = $sct#391040000 "At risk of osteoporotic fracture (finding)" // snomed CT: At increased risk of osteoporotic fracture (finding)
+* useContext[=].valueCodeableConcept = $sct#391040000 "At increased risk of osteoporotic fracture (finding)"
 * useContext[=].valueCodeableConcept.text = "bei anamnestisch erhöhtem Frakturrisiko bei Patienten ≥ 65 Jahre"
 
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus

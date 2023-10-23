@@ -13,7 +13,7 @@ Description: "ch-lab-order defines 2 different Kinds of Processing Procedures, r
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.hl7.ch"
 * ^jurisdiction = urn:iso:std:iso:3166#CH
-* ^copyright = "CC-BY-SA-4.0"
+* ^copyright = "CC0-1.0"
 * ^caseSensitive = true
 * ^content = #complete
 * ^count = 2

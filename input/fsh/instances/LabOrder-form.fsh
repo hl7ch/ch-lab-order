@@ -46,7 +46,7 @@ Usage: #example
 * contact[=].telecom.value = "laborprojektgruppe@gmail.com"
 * contact[=].telecom.use = #work
 * jurisdiction = urn:iso:std:iso:3166#CH
-* copyright = "CC-BY-SA-4.0"
+* copyright = "CC0-1.0"
 * item[0].linkId = "order"
 * item[=].text = "Auftrag"
 * item[=].type = #group
@@ -893,7 +893,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#4598005 "Osteomalacia (disorder)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#737295003 "Transplanted kidney present (finding)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#707206008 "Assessment for bariatric surgery (procedure)"
-* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#443731004 "Assessment using falls risk assessment score for the elderly (procedure)"
+* item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#443731004 "Assessment using Falls Risk Assessment Scale for the Elderly (procedure)"
 * item[=].item[=].item[=].item[=].item[=].item[=].answerOption[+].valueCoding = $sct#66999008 "Hyperparathyroidism (disorder)"
 
 // ---- choice of clinical focus
