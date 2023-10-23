@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-container-example
 InstanceOf: ChLabOrderSRContainer
-Title: "LabOrder Service Request for Electrolytes in Serum"
+Title: "LabOrder Service Request for Creatinine Clearance and Electrolytes in Serum"
 Description: "Example for Service Request as container for multiple Service Requests"
 Usage: #example
 * id = "LabOrder-container-example"

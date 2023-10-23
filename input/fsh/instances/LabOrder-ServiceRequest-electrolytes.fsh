@@ -14,7 +14,7 @@ Usage: #example
 // der SR referenziert auf 3 weitere SR
 * basedOn[0] = Reference(LabOrder-ServiceRequest-sodium)
 * basedOn[+] = Reference(LabOrder-ServiceRequest-potassium)
-* basedOn[+] = Reference(LabOrder-ServiceRequest-chloride) // TODO
+* basedOn[+] = Reference(LabOrder-ServiceRequest-chloride)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
