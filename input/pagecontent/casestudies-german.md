@@ -81,5 +81,5 @@ Eine 45-jährige Patientin kam zu ihrer regelmäßigen Hautuntersuchung und es w
 Die Hautprobe wird zusammen mit dem Auftragsformular und dem dermatoskopischen Bild an das Labor gesandt.
 
 Passende FHIR-Formular, das dieser Spezifikation entspricht:
-[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
-[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)
+[6-histopath.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.xml.html)
+[6-histopath.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.json.html)

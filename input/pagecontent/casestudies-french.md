@@ -80,5 +80,5 @@ Une patiente de 45 ans s'est présentée pour un examen régulier de la peau et 
 L'échantillon de peau, le formulaire de commande et l'image dermatoscopique sont envoyés au laboratoire.
 
 Questionnaire FHIR correspondant à cette spécification:
-[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.xml.html)
-[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath-mod.json.html)
+[6-histopath.xml](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.xml.html)
+[6-histopath.json](https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.json.html)

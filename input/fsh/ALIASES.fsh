@@ -2,6 +2,7 @@
 Alias:  $sct                           = http://snomed.info/sct
 Alias:  $loinc                         = http://loinc.org
 Alias:  $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:  $v2-0038                       = http://terminology.hl7.org/CodeSystem/v2-0038  // orderStatus
 Alias:  $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371
 Alias:  $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2-0373
 Alias:  $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
