@@ -3,10 +3,9 @@
 ## CI Build
 
 * [CI Build master](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html)
-<!--- 
 * [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/develop/index.html)
-* [CI Build 2.0.0_STU2-ballot](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/2.0.0_STU2-ballot/index.html)
--->
+  * [CI Build 2.0.0_STU2-ballot](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/2.0.0_STU2-ballot/index.html)
+
 This is a HL7 Swiss FHIR implementation guide.
 The implementation guide is based on CH_ORF (v0.9.1 STU Draft)
 Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>
