@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD001 MD033 MD041 -->
+
 ### Etude de cas 1 : Suspicion de thrombose veineuse profonde
 
 Un patient, Hans Guggindieluft, se présente au cabinet de groupe d'Olten du Dr méd. Marc Mustermann le 09.03.2016. Il s'identifie verbalement via ses données de base comme Hans Guggindieluft, 01.01.1981. Il rapporte une douleur peu claire dans la partie inférieure de la jambe gauche ainsi qu'une douleur respiratoire et une toux concomitantes. Le médecin procède à l'anamnèse et à l'examen physique et commande les paramètres de laboratoire suivants :
