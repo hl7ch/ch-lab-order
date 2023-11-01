@@ -44,6 +44,10 @@ pages:
     title: Use Cases in German
   usecases-french.md:
     title: Use Cases in French
+  document-lo-by-form.md:
+    title: LAB-Order by form
+  document-lo-by-SR.md:
+    title: LAB-Order by Service Request
   profiles.md:
     title: Profiles
   terminology.md:
