@@ -1,8 +1,8 @@
-Profile: ChLabOrderComposition
+Profile: ChLabOrderCompositionForm
 Parent: ChOrfComposition
-Id: ch-lab-order-composition
-Title: "CH LAB-Order Composition"
-Description: "Definition for Composition resource in the context of CH LAB-Order"
+Id: ch-lab-order-composition-form
+Title: "CH LAB-Order Composition by Form"
+Description: "Definition for Composition resource in the context of CH LAB-Order by Form"
 * . ^short = "CH LAB-Order Composition"
 // * ^version = "0.9.0"
 // * ^status = #draft
@@ -22,11 +22,11 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 // * category from $DocumentEntry.classCode (required)
 // * category ^short = "Order Document"
 
-// ---- Composition.section.entry:https://hl7.org/fhir/R4/questionnaire.html ----------
-// * section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChLabOrderQuestionnaire)
+// ---------- Composition.section.entry:Questionnaire - 10.11.21: According to Ballot #18, Cardinality set to 0..
+* section[orderReferral].entry[Questionnaire] 1..1
+
+// ---------- Composition.section.entry:QuestionnaireResponse - - 10.11.21: According to Ballot #18, Cardinality set to 0..
+* section[orderReferral].entry[QuestionnaireResponse] 1..1
 
 // ---------- Composition.section.entry:ServiceRequest ----------
-// * section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChLabOrderQuestionnaireResponse)
-
-// ---------- Composition.section.entry:ServiceRequest ----------
-// * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChLabOrderSRContainer)
+* section[orderReferral].entry[ServiceRequest]  // ^type.targetProfile = Canonical(ChLabOrderSRContainer)

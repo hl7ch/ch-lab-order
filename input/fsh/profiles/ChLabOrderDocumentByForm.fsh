@@ -1,7 +1,7 @@
 Profile: ChLabOrderDocumentByForm
 Parent: ChOrfDocument
 Id: ch-lab-order-document-by-form
-Title: "CH LAB-ORDER Document Profile using forms"
+Title: "CH LAB-ORDER Document Profile by Form"
 Description: "Definition of the bundle for the lab order document"
 * . ^short = "CH Lab-Order Bundle"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
@@ -36,4 +36,4 @@ equal one Filler Order equal one Laboratory Service Request."
 
 // ---------- Bundle.entry:Composition ----------
 // * entry[Composition].resource ^type.profile = Canonical(ChLabOrderComposition)
-* entry[Composition].resource only ChLabOrderComposition
+* entry[Composition].resource only ChLabOrderCompositionForm

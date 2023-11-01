@@ -1,6 +1,7 @@
+/*
 Instance: LabOrder-Document-by-SR
 InstanceOf: ChLabOrderDocumentBySR
-Title: "Referral LabOrder"
+Title: "CH LAB-ORDER Document by Service Request"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "ch-lab-order-by-sr"
@@ -38,3 +39,4 @@ Usage: #example
 // * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
 // * entry[=].resource = LabOrder-ServiceRequest-cc
 
+*/

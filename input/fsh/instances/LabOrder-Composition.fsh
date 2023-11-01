@@ -1,5 +1,5 @@
 Instance: LabOrder-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionForm
 Title: "LabOrder"
 Description: "Composition for multiple SR"
 Usage: #example
