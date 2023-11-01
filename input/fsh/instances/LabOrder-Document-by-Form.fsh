@@ -1,9 +1,9 @@
-Instance: LabOrder-Document
-InstanceOf: ChLabOrderDocument
+Instance: LabOrder-Document-by-Form
+InstanceOf: ChLabOrderDocumentByForm
 Title: "Referral LabOrder"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "LabOrder"
+* id = "ch-lab-order-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * language = #en

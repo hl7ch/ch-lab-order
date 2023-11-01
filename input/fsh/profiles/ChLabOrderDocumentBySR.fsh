@@ -1,7 +1,7 @@
-Profile: ChLabOrderDocument
+Profile: ChLabOrderDocumentBySR
 Parent: ChOrfDocument
-Id: ch-lab-order-document
-Title: "CH LAB-ORDER Document Profile"
+Id: ch-lab-order-document-by-sr
+Title: "CH LAB-ORDER Document Profile using only service requests"
 Description: "Definition of the bundle for the lab order document"
 * . ^short = "CH Lab-Order Bundle"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
