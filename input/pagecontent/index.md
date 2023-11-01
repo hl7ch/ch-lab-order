@@ -57,7 +57,7 @@ The lab-order system should define the structure of the lab-order so it can be u
 
    * Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardised order system is not the more favourable solution in the long run.
 
-### Five Case studies with examples for the Order Document
+### Six Case studies with examples for the Order Document
 
 Using specific case histories, we have created five everyday examples of commissioned documents. These are requirements of examinations in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The last example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
 
