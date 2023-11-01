@@ -1,12 +1,13 @@
+<!-- markdownlint-disable MD001 MD033 MD041 -->
+
 # HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
 
 ## CI Build
 
 * [CI Build master](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html)
-<!--- 
 * [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/develop/index.html)
 * [CI Build 2.0.0_STU2-ballot](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/2.0.0_STU2-ballot/index.html)
--->
+
 This is a HL7 Swiss FHIR implementation guide.
 The implementation guide is based on CH_ORF (v0.9.1 STU Draft)
 Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>
@@ -36,7 +37,7 @@ Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-o
 
 Download JDK from Oracle website:
 
-https://www.oracle.com/java/technologies/downloads/
+<https://www.oracle.com/java/technologies/downloads/>
 
 ```bash
 cat /etc/fedora-release   or $ cat /usr/lib/os-release
@@ -58,7 +59,6 @@ There are 3 programs which provide 'java'.
 
 Enter to keep the current selection[+], or type selection number: 
 ```
-
 
 ### IG Publisher
 
@@ -116,7 +116,7 @@ after running IG publisher:
 
 ## further procedure
 
-look at 'https://fhirblog.com/clinicians-on-fhir-workshop/'
+look at '<https://fhirblog.com/clinicians-on-fhir-workshop/>'
 
 1. Description of Problem (use cases from CDA-CH)
 
@@ -208,35 +208,35 @@ If a new release is ready, it needs to be tested again on the develop branch. Be
 ### LOINC for in vitro Diagnostics (LLIVD)
 
 DSTU2 U.S. Data Access Framework (DAF) DiagnosticOrder Profile
-'https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html'
+'<https://www.hl7.org/fhir/dstu2/daf/diagnosticorder-daf.html>'
 
 Digital Format for Publication of LOINC to Vendor IVD Test Results by IICC:
 
-'http://ivdconnectivity.org/wp-content/uploads/delightful-downloads/2017/06/IICC_LIVD_Digital_Format_2017_06_01_R2.pdf'
+'<http://ivdconnectivity.org/wp-content/uploads/delightful-downloads/2017/06/IICC_LIVD_Digital_Format_2017_06_01_R2.pdf>'
 
 LIVD example bundle
 
-'http://hl7.org/fhir/uv/livd/2019Sep/livd-example.html'
+'<http://hl7.org/fhir/uv/livd/2019Sep/livd-example.html>'
 
-Roche qualitative LIVD example bundle 'http://hl7.org/fhir/uv/livd/2019Sep/livd-example-roche-qual.html#root'  
+Roche qualitative LIVD example bundle '<http://hl7.org/fhir/uv/livd/2019Sep/livd-example-roche-qual.html#root>'  
 
 ### Structured data capture
 
-'https://wiki.ihe.net/index.php/Retrieve_Form_for_Data_Capture'
+'<https://wiki.ihe.net/index.php/Retrieve_Form_for_Data_Capture>'
 
 ITI QRPH Supplement – Structured Data Capture:
-'https://ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf'
+'<https://ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf>'
 
-HL7 FHIR Implementation guide: 'http://hl7.org/fhir/uv/sdc/2018Sep/index.html'
+HL7 FHIR Implementation guide: '<http://hl7.org/fhir/uv/sdc/2018Sep/index.html>'
 
-Request for diagnostic report 'http://hl7.org/fhir/servicerequest.html'
+Request for diagnostic report '<http://hl7.org/fhir/servicerequest.html>'
 
 [Laboratory ask at order entry panel](https://loinc.org/89543-3)
 [Universal Lab Orders Value Set from LOINC](https://loinc.org/file-access/download-id/9825/)
 
 ### Order and Referral by Form (ORF)
 
-'http://build.fhir.org/ig/ahdis/ch-orf/'
+'<http://build.fhir.org/ig/ahdis/ch-orf/>'
 
 [LOINC Document Ontology](https://loinc.org/document-ontology/)
 

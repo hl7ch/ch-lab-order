@@ -1,8 +1,8 @@
 canonical: http://fhir.ch/ig/ch-lab-order
 id: ch.fhir.ig.ch-lab-order
-name: CH_LAB_ORDER
+name: CH_LAB_ORDER by Form
 title: CH LAB-Order (R4)
-description: Implementation guide CH LAB-Order (R4)
+description: Implementation guide CH LAB-Order by Form(R4)
 status: active
 license: CC0-1.0
 copyright: CC0-1.0

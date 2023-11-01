@@ -1,3 +1,10 @@
+<!-- markdownlint-disable MD001 MD033 MD041 -->
+<!--
+╭───────────────────── UC-english ──────────────────────────╮
+│  UC-english is original, german and french are dependent  │
+╰───────────────────────────────────────────────────────────╯
+-->
+
 ### Use Case 1: Lab Order in the conventional sense
 
 The client (e.g., physician) requires various laboratory tests for further diagnostics. For this purpose, he creates an order document in his practice information system with the necessary information on the patient, laboratory test, samples, etc. The necessary sample material (serum, urine, cerebrospinal fluid, etc.) is stored in the corresponding order documents. The necessary sample material (serum, urine, cerebrospinal fluid) is collected in appropriate containers and clearly assigned to the order document (Specimen.identifier, Specimen.container.identifier). Samples can be examined in the own laboratory, or they have to be sent via mail or courier to the external laboratory. There, the laboratory information system assigns them their own identifier (Specimen.accessionIdentifier).
@@ -39,9 +46,6 @@ It is not uncommon for the results of laboratory tests to lead to the request fo
 
 Sometimes the physician also wants information about previous laboratory tests, e.g., to assess the prostate-specific antigen (PSA) trend.
 
-* Details of the requested service
-  * ServiceRequest.category is RequestForPrecedentReport or RequestForPrecedentReportAndImages, respectively.
-  
 ### Use Case 4: Collective request for toxicological testing (biological monitoring)
 
 This use case corresponds to example 5-biol-monit. In order to assess the exposure of workers to chemical substances, measurements at the workplace are supplemented by occupational health checkups. The toxic substances themselves or their metabolites in serum or urine can be determined. The order is initiated by the occupational physician of the company or the insurance company. The problem of employee fluctuations must be kept in mind.
@@ -84,6 +88,7 @@ Another example is the Synacthen(ACTH) function test, where a basal Blood sample
 
 For Blood gas analyses, the amount of oxygen administered to the patient is sometimes of concern
 
+* ServiceRequest.reasonReference (Condition | Observation | DiagnosticReport)
 * ServiceRequest.supportingInfo, e.g. O2 4 liters/min.
 
 ### Use Case 9: Requesting monitoring examinations
@@ -92,13 +97,3 @@ Laboratories often offer the option of monitoring vital functions with appropria
 
 * However, the procedure of including this use case in the present implementation guide seems unsatisfactory, since such monitoring investigations of vital data fall outside the actual laboratory domain, and since FHIR provides us with more specific resources: The [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) resource lends itself here, with the required device referenced in the [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html) resource. The corresponding use case can be implemented analogously to the laboratory regulation as a bundle with a composition, which contains the [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) instead of the Service Request. It therefore makes more sense to deal with the monitoring request in a separate Implementation Guide.
 Based on the above considerations, the corresponding ServiceRequestCategories for monitoring were commented out in the ValueSet of the Implementation Guide.
-
-### Use Case 10: Client selects analyses or analysis panels from a catalog
-
-This use case is outside the scope of this implementation guide, although it is an essential part of any laboratory order. Clients need to be able to select the laboratory tests that the laboratory can actually provide. In addition, they need orientation in the multitude of possible examinations in the various divisions, as well as guidelines for the preanalytical procedure, guidelines for the correct vessels and transport media, for the minimum volumes of the samples, etc. A future version should offer this possibility.
-
-For this purpose, the laboratories provide their customers with a catalog of those laboratory tests that they can make available. These can be single tests, such as serum sodium concentration, or a collection of tests, such as serum Na, K, and Cl. Often in the form of a laboratory manual, they make available the specifications for transport temperature, minimum sample volume, type of transport vessel, etc.
-
-There will be different types of catalog entries (CatalogEntries) for this purpose: Single analyses, multiple analyses (panels), sample vessels, pre-analytical preconditions.
-The single record of a laboratory analysis or a sample can be mapped as using the CatalogEntry resource. A composition with a Profile for Catalog is then the document that represents the catalog and represents the totality of the CatalogEntries it contains. It is important that the catalog always corresponds to the current conditions of the laboratory, and can, for example, immediately accommodate new laboratory tests or changed specifications of the preanalytics.
-[StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)
