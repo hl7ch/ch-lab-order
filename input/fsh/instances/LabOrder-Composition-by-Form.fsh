@@ -1,9 +1,9 @@
-Instance: LabOrder-Composition
+Instance: LabOrder-Composition-by-Form
 InstanceOf: ChLabOrderCompositionForm
-Title: "LabOrder"
+Title: "CH LAB-Order Composition by Form"
 Description: "Composition for multiple SR"
 Usage: #example
-* id = "LabOrder"
+* id = "ch-lab-order-form-composition"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
