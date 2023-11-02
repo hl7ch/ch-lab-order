@@ -35,4 +35,4 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 * section[orderReferral].entry[QuestionnaireResponse] 0..0
 
 // ---------- Composition.section.entry:ServiceRequest ----------
-* section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChLabOrderSRContainer)
+* section[orderReferral].entry[ServiceRequest] // ^type.targetProfile = Canonical(ChLabOrderSRContainer)

@@ -1,4 +1,3 @@
-/*
 Instance: LabOrder-Document-by-SR
 InstanceOf: ChLabOrderDocumentBySR
 Title: "CH LAB-ORDER Document by Service Request"
@@ -14,7 +13,7 @@ Usage: #example
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/LabOrder"
-* entry[=].resource = LabOrder-Composition
+* entry[=].resource = LabOrder-Composition-by-SR
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
@@ -23,10 +22,10 @@ Usage: #example
 * entry[=].resource = Arztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/LabOrder-form" // entry[5]
-* entry[=].resource = LabOrder-form
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[6]
-* entry[=].resource = LabOrder-QuestionnaireResponse
+// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/LabOrder-form" // entry[5]
+// * entry[=].resource = LabOrder-form
+// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[6]
+// * entry[=].resource = LabOrder-QuestionnaireResponse
 
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-potassium"  // entry[7]
 * entry[=].resource = LabOrder-ServiceRequest-potassium
@@ -38,5 +37,3 @@ Usage: #example
 // // ---- SR for Coagulation Tests ----
 // * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
 // * entry[=].resource = LabOrder-ServiceRequest-cc
-
-*/

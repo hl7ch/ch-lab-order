@@ -1,9 +1,9 @@
-Instance: LabOrder-Composition-by-Form
-InstanceOf: ChLabOrderCompositionForm
-Title: "CH LAB-Order Composition by Form"
-Description: "Composition Questionnaire/QuestionnaireResponse and multiple SR"
+Instance: LabOrder-Composition-by-SR
+InstanceOf: ChLabOrderCompositionSR
+Title: "CH LAB-Order Composition by Service Request"
+Description: "Composition multiple SR whithout Questionnaire/Quse"
 Usage: #example
-* id = "ch-lab-order-composition-by-form"
+* id = "ch-lab-order-composition-by-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
@@ -35,6 +35,6 @@ Usage: #example
 * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                Order-Referral-Form\n            </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(LabOrder-form)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(LabOrder-QuestionnaireResponse)
+// * section[orderReferral].entry[Questionnaire] = Reference(LabOrder-form)
+// * section[orderReferral].entry[QuestionnaireResponse] = Reference(LabOrder-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(LabOrder-ServiceRequest-potassium)
