@@ -2,7 +2,7 @@ canonical: http://fhir.ch/ig/ch-lab-order
 id: ch.fhir.ig.ch-lab-order
 name: CH_LAB_ORDER by Form
 title: CH LAB-Order (R4)
-description: Implementation guide CH LAB-Order by Form(R4)
+description: Implementation guide CH CH LAB-Order by Form(R4)
 status: active
 license: CC0-1.0
 copyright: CC0-1.0
@@ -45,9 +45,9 @@ pages:
   usecases-french.md:
     title: Use Cases in French
   document-lo-by-form.md:
-    title: LAB-Order by form
+    title: CH LAB-Order by form
   document-lo-by-SR.md:
-    title: LAB-Order by Service Request
+    title: CH LAB-Order by Service Request
   profiles.md:
     title: Profiles
   terminology.md:
