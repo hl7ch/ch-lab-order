@@ -130,7 +130,7 @@ Usage: #example
 
 Instance: SR-CreaClearance
 InstanceOf: ChLabOrderSRContainer
-Title: "ChLabOrderSRContainer containing the Creatinine Clearance Panel"
+Title: "CH LAB-Order SRContainer containing the Creatinine Clearance Panel"
 Description: "Example for Service Request for Creatinine-Clearance Container"
 Usage: #example
 * id = "CreaClearance"

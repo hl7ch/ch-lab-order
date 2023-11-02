@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-electrolytes
 InstanceOf: ChLabOrderSRContainer
-Title: "LabOrder Service Request for Electrolytes in Serum"
+Title: "CH LAB-Order example Service Request for Electrolytes in Serum"
 Description: "Example for Service Request as container for multiple Service Requests"
 Usage: #example
 * id = "LabOrder-electrolytes"

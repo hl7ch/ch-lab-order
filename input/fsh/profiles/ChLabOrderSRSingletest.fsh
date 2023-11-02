@@ -1,7 +1,7 @@
 Profile: ChLabOrderSRSingletest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-singletest
-Title: "CH LAB-Order-SR Labtest"
+Title: "CH LAB-Order-SR Single-test"
 Description: "Definition of a ServiceRequests of a single LabTest in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"

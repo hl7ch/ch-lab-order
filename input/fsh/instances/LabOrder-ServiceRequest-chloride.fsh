@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-chloride
 InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for Clinical Chemistry Tests"
+Title: "CH LAB-Order example Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-chloride"

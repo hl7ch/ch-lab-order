@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance
 InstanceOf: ChLabOrderSRContainer
-Title: "LabOrder Service Request for Creatinine clearance"
+Title: "CH LAB-Order example Service Request for Creatinine clearance"
 Description: "Example for Service Request of Creatinine [Moles/volume] and 24h Urin Creatinen"
 Usage: #example
 * id = "LabOrder-creatinine-clearance"

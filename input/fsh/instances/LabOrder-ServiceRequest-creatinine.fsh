@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-creatinine
 InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for Serum Creatinine"
+Title: "CH LAB-Order example Service Request for Serum Creatinine"
 Description: "Example for Service Request of Creatinine [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-creatinine"

@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-generic
 InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request some single test"
+Title: "CH LAB-Order example Service Request some single test"
 Description: "Example for Service Request single test"
 Usage: #example
 * id = "LabOrder-generic"

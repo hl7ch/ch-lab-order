@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-urine24h-creatinine
 InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for Clinical Chemistry Tests"
+Title: "CH LAB-Order example Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Creatinine [Moles/volume] in Urine"
 Usage: #example
 * id = "LabOrder-u24-creatinine"

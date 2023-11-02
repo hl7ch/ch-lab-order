@@ -1,6 +1,6 @@
 Instance: LabOrder-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response LabOrder"
+Title: "CH LAB-Order example Questionnaire Response"
 Description: "Example for Laboratory Order Questionnaire Response"
 Usage: #example
 * id = "LabOrder-qr"
