@@ -9,7 +9,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"

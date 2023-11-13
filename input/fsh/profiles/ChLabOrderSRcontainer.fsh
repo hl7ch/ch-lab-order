@@ -120,7 +120,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
@@ -151,7 +151,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"
@@ -200,7 +200,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#20109005 "Electrolytes measurement, serum (procedure)"
