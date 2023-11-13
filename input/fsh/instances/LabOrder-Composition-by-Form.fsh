@@ -25,7 +25,7 @@ Usage: #example
 * extension[=].valueReference = Reference(Patient/HansGuggindieluft)
 
 * status = #final
-* type = $sct#419891008 "Record artifact (record artifact)"
+* type = $sct#721965002 "Laboratory order (record artifact)"
 * category = $sct#721963009 "Order (record artifact)"
 * subject = Reference(Patient/HansGuggindieluft)
 * date = "2019-03-31T11:46:09+02:00"
