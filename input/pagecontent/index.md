@@ -9,16 +9,24 @@ Please add your feedback via the ‘Propose a change’-link in the footer on th
 
 </div>
 
-### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
+### HL7 Swiss FHIR Implementation Guide for generic laboratory orders
 
-This is the HL7 Swiss FHIR implementation guide for Laboratory Orders by forms, which is based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
+This is the HL7 Swiss FHIR implementation guide for Laboratory Orders, which can be implemented as Orders by Forms or as Orders by ServiceRequest only.
+
+#### Order by Form
+
+Orders are based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
 
 It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
 There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested.
 
-This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives guidiance for the implementaion of the user interface.
+This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives guidance for the implementation of the user interface.
 
-Many laboratories also offer services for monitoring vital signs, such as Blood pressure, ECG, pulse, which can be ordered. This Use Case is out of scope of this implemantation guide, since there is a specific FHIR-Resource named DeviceRequest - Content
+Since many laboratories offer possibilities for monitoring vital signs, such as Blood pressure, ECG, pulse, these services can be ordered. But these use cases are out of scope of this implemantation guide, since there is a specific FHIR-Resource named DeviceRequest - Content, which should be used for this purose.
+
+#### Order by ServiceRequest
+
+This case primarily occurs in hospitals that operate their own medical laboratory. There is no Questonnaire, no QuestionnaireResponse, only the ServiceRequest, which contains what is beeing requested in a CodeableConcept. Therefore the service can be requested as a LOINC Code witĥ supplementary text string. Additional order information can be supplied in an 'orderDetail' element.
 
 #### Download
 

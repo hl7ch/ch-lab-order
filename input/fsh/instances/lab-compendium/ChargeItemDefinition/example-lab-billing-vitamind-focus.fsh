@@ -63,7 +63,7 @@ Usage: #example
 * useContext[=].valueCodeableConcept.text = "Lebererkrankungen"
 
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = $sct#182817000 "Drug prescription (situation)"
+* useContext[=].valueCodeableConcept = $sct#761938008 "Medicinal prescription record (record artifact)"
 * useContext[=].valueCodeableConcept.text = "Patienten, die Medikamente, die den Vit. D Stoffwechsel beeinflussen, einnehmen"
 
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001   // Code for 

@@ -24,8 +24,8 @@ Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verord
 * include codes from system SNOMED_CT where concept is-a #391040000 // At risk of osteoporotic fracture (finding)
 * include codes from system SNOMED_CT where concept is-a #90708001  // Kidney disease (disorder)
 * include codes from system SNOMED_CT where concept is-a #73132005  // Disorder of parathyroid gland (disorder)
-* include codes from system SNOMED_CT where concept is-a #119292006 //Disorder of gastrointestinal tract (disorder)
-* include codes from system SNOMED_CT where concept is-a #32230006  //Malabsorption syndrome (disorder)
+* include codes from system SNOMED_CT where concept is-a #119292006 // Disorder of gastrointestinal tract (disorder)
+* include codes from system SNOMED_CT where concept is-a #32230006  // Malabsorption syndrome (disorder)
 
 * include codes from system SNOMED_CT where concept is-a #235856003 // Disorder of liver (disorder) 
-* include codes from system SNOMED_CT where concept is-a #182817000 // Drug prescription (situation)
+* include codes from system SNOMED_CT where concept is-a #761938008 // Medicinal prescription record (record artifact)
