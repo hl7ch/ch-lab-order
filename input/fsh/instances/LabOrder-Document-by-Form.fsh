@@ -15,6 +15,7 @@ Usage: #example
 * entry[0].fullUrl = "http://example.com/fhir/Composition/LabOrder"
 * entry[=].resource = LabOrder-Composition-by-Form
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
+
 * entry[=].resource = HansGuggindieluft
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
