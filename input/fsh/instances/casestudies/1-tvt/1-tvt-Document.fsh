@@ -13,6 +13,7 @@ Usage: #example
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt"
 * entry[=].resource = 1-tvt-Composition
+
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
 

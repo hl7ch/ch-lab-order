@@ -24,7 +24,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[5]
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
 * entry[=].resource = LaborPipette
@@ -35,23 +35,25 @@ Usage: #example
 * entry[=].resource = PeterPap
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
 * entry[=].resource = Gruppenpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis"
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis" // entry[10]
 * entry[=].resource = PeterPapGruppenpraxis
+
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardMarinaRubella"
+* entry[=].resource = HealthInsuranceCardMarinaRubella
+
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Cervix-swab" // entry [12]
+* entry[=].resource = Cervix-swab
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-gyn"
+* entry[=].resource = Blood-gyn
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-gyn"
+* entry[=].resource = Serum-gyn
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-gyn"
+* entry[=].resource = Urine-gyn
+
+
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/3-gyn"
 * entry[=].resource = 3-gyn-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
 * entry[=].resource = 3-gyn-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
 * entry[=].resource = 3-gyn-ServiceRequest
-
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
-* entry[=].resource = HealthInsuranceCard
-
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Cervix-swab"
-* entry[=].resource = Cervix-swab
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood"
-* entry[=].resource = Blood
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
-* entry[=].resource = Serum
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine"
-* entry[=].resource = Urine
