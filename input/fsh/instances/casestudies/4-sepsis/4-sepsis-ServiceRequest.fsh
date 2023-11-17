@@ -26,7 +26,70 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCard)
+* insurance = Reference(HealthInsuranceCardKlebsiellaKeller)
 * specimen[0] = Reference(Specimen/Blood-bactec-plus)
-* specimen[+] = Reference(Specimen/Blood)
-* specimen[+] = Reference(Specimen/Urine)
+* specimen[+] = Reference(Specimen/Blood-sepsis)
+* specimen[+] = Reference(Specimen/Urine-sepsis)
+
+Instance: HealthInsuranceCardKlebsiellaKeller
+InstanceOf: Coverage
+Title: "HealthInsuranceCard"
+Description: "Example for Insurance"
+Usage: #example
+* identifier.system = "http://ehic.com/insurer/123456789/member"
+* identifier.value = "A123456780"
+* status = #active
+* type = $v3-ActCode#EHCPOL "extended healthcare"
+* subscriber = Reference(Patient/KlebsiellaKeller)
+* beneficiary = Reference(Patient/KlebsiellaKeller)
+* period.end = "2012-03-17"
+* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.value = "123456789"
+
+Instance: Blood-bactec-plus
+InstanceOf: Specimen
+Title: "Blood Sample"
+Description: "Example for Specimen for Haematological Examination"
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(Patient/KlebsiellaKeller)
+* request = Reference(ServiceRequest/4-sepsis)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+* note.text = "Specimen is grossly lipemic"
+
+Instance: Blood-sepsis
+InstanceOf: Specimen
+Title: "Blood Sample"
+Description: "Example for Specimen for Haematological Examination"
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(Patient/KlebsiellaKeller)
+* request = Reference(ServiceRequest/4-sepsis)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+* note.text = "Specimen is grossly lipemic"
+
+Instance: Urine-sepsis
+InstanceOf: Specimen
+Title: "Urine Sample"
+Description: "Example for Specimen of Urin"
+Usage: #example
+* identifier.value = "11111-15394-75465"
+* accessionIdentifier.value = "22222-bc987-dd888"
+* status = #available
+* type = $sct#122575003 "Urine sample"
+* subject = Reference(Patient/KlebsiellaKeller)
+* receivedTime = "2020-08-16T16:40:17Z"
+* request = Reference(ServiceRequest/4-sepsis)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2020-08-16T06:40:17Z"
+* container.identifier.value = "4e88a-bc987-dd888-12345-urin"
+* container.description = "Uriswab™ : Urine Collection System"
+* container.type = $sct#706054001 "Urine specimen container (physical object)"

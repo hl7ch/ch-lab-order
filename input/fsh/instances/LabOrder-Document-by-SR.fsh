@@ -12,24 +12,50 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/LabOrder"
+* entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition-by-sr"
 * entry[=].resource = LabOrder-Composition-by-SR
+
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
+* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
+* entry[=].resource = FranzMuster
+* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
+* entry[=].resource = BeatBorer
+
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
 * entry[=].resource = Arztpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
 * entry[=].resource = MarcMustermannArztpraxis
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/LabOrder-form" // entry[5]
+
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
+* entry[=].resource = EvaErlenmeyer
+* entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
+* entry[=].resource = LaborPipette
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
+* entry[=].resource = EvaErlenmeyerLaborPipette
+
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
+* entry[=].resource = PeterPresto
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+* entry[=].resource = Gruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
+* entry[=].resource = PeterPrestoGruppenpraxis
+
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
+* entry[=].resource = HealthInsuranceCard
+
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
+* entry[=].resource = Serum
+
+// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/LabOrder-form" // entry[8]
 // * entry[=].resource = LabOrder-form
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[6]
+// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[9]
 // * entry[=].resource = LabOrder-QuestionnaireResponse
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-potassium"  // entry[7]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-potassium"  // entry[10]
 * entry[=].resource = LabOrder-ServiceRequest-potassium
-
 // // ---- SR for Coagulation Tests ----
 // * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
 // * entry[=].resource = LabOrder-ServiceRequest-coag

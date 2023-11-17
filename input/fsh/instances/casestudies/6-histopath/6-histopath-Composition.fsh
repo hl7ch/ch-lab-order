@@ -23,14 +23,14 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(Patient/KlebsiellaKeller)
+* extension[=].valueReference = Reference(Patient/SimoneStuder)
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
 * title = "Pathologieauftrag"
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721966001 "Pathology order (record artifact)"
-* subject = Reference(Patient/KlebsiellaKeller)
+* subject = Reference(Patient/SimoneStuder)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
 
