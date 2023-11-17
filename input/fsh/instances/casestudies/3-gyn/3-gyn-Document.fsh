@@ -17,6 +17,20 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella
 
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
+* entry[=].resource = Arztpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
+* entry[=].resource = MarcMustermannArztpraxis
+
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
+* entry[=].resource = EvaErlenmeyer
+* entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
+* entry[=].resource = LaborPipette
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
+* entry[=].resource = EvaErlenmeyerLaborPipette
+
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPap"
 * entry[=].resource = PeterPap
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
@@ -29,3 +43,15 @@ Usage: #example
 * entry[=].resource = 3-gyn-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
 * entry[=].resource = 3-gyn-ServiceRequest
+
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
+* entry[=].resource = HealthInsuranceCard
+
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Cervix-swab"
+* entry[=].resource = Cervix-swab
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood"
+* entry[=].resource = Blood
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
+* entry[=].resource = Serum
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine"
+* entry[=].resource = Urine

@@ -47,7 +47,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
 * entry[=].resource = Serum
-
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag"
 * entry[=].resource = Blood-coag
 
