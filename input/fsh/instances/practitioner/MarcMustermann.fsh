@@ -1,7 +1,7 @@
 Instance: MarcMustermann
 InstanceOf: CHCorePractitioner
 Title: "Marc Mustermann"
-Description: "Practitioner, works in Arztpraxis, refers to 1-tvt"
+Description: "Practitioner, works in Arztpraxis, refers to 1-tvt and 5-biol-monit"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3"
 * identifier[=].value = "7601000050700"
@@ -19,3 +19,4 @@ Usage: #example
 * telecom[+].system = #email
 * telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
 * telecom[=].use = #work
+

@@ -40,7 +40,7 @@ Usage: #example
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/BeatBorer)
 * request = Reference(ServiceRequest/5-biol-monit)
-* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collector = Reference(Practitioner/PauloPorcellini)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
@@ -58,7 +58,7 @@ Usage: #example
 * subject = Reference(Patient/BeatBorer)
 * receivedTime = "2020-08-16T16:40:17Z"
 * request = Reference(ServiceRequest/5-biol-monit)
-* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collector = Reference(Practitioner/PauloPorcellini)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
 * container.description = "Uriswab™ : Urine Collection System"
