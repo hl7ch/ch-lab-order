@@ -27,3 +27,9 @@ Usage: #example
 * entry[=].resource = 6-histopath-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath"
 * entry[=].resource = 6-histopath-ServiceRequest
+
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
+* entry[=].resource = HealthInsuranceCard
+
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Skin"
+* entry[=].resource = Skin

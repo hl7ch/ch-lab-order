@@ -44,3 +44,11 @@ Usage: #example
 * entry[=].resource = 5-biol-monit-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit"
 * entry[=].resource = 5-biol-monit-ServiceRequest
+
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
+* entry[=].resource = HealthInsuranceCard
+
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood"
+* entry[=].resource = Blood
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine"
+* entry[=].resource = Urine
