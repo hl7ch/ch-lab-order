@@ -16,6 +16,10 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/EmilKummer"
 * entry[=].resource = EmilKummer
+* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
+* entry[=].resource = FranzMuster
+* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
+* entry[=].resource = BeatBorer
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
 * entry[=].resource = PeterPresto
@@ -23,6 +27,14 @@ Usage: #example
 * entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
+
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
+* entry[=].resource = Arztpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
+* entry[=].resource = MarcMustermannArztpraxis
+
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
