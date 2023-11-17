@@ -26,6 +26,41 @@ Usage: #example
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = $sct#409967009
 * reasonCode.text = "Toxicology (qualifier value)"
-* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/Blood)
-* specimen[+] = Reference(Specimen/Urine)
+* insurance = Reference(HealthInsuranceCardBeatBorer)
+* specimen[0] = Reference(Specimen/Blood-biol-monit)
+* specimen[+] = Reference(Specimen/Urine-biol-monit)
+
+
+Instance: Blood-biol-monit
+InstanceOf: Specimen
+Title: "Blood Sample"
+Description: "Example for Specimen for Haematological Examination"
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(Patient/BeatBorer)
+* request = Reference(ServiceRequest/5-biol-monit)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+* note.text = "Specimen is grossly lipemic"
+
+Instance: Urine-biol-monit
+InstanceOf: Specimen
+Title: "Urine Sample"
+Description: "Example for Specimen of Urin"
+Usage: #example
+* identifier.value = "11111-15394-75465"
+* accessionIdentifier.value = "22222-bc987-dd888"
+* status = #available
+* type = $sct#122575003 "Urine sample"
+* subject = Reference(Patient/BeatBorer)
+* receivedTime = "2020-08-16T16:40:17Z"
+* request = Reference(ServiceRequest/5-biol-monit)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2020-08-16T06:40:17Z"
+* container.identifier.value = "4e88a-bc987-dd888-12345-urin"
+* container.description = "Uriswab™ : Urine Collection System"
+* container.type = $sct#706054001 "Urine specimen container (physical object)"
+

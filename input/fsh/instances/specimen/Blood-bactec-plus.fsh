@@ -1,3 +1,4 @@
+/*
 Instance: Blood-bactec-plus
 InstanceOf: Specimen
 Title: "Blood Sample Bacteriology"
@@ -17,3 +18,4 @@ Usage: #example
 * container.description = "Sarstedt Blutkultur-Adapter Universal"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
 * container.additiveCodeableConcept = $v2-0371#BACTM "Bacterial Transport medium"
+*/
