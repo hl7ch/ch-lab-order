@@ -23,6 +23,7 @@ Usage: #example
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
+* reasonReference = Reference(DiagnosticReport/Skin-dermatoscopy)
 * insurance = Reference(HealthInsuranceCardSimoneStuder)
 * specimen[0] = Reference(Specimen/Skin) "Skin specimen"
 
@@ -103,3 +104,26 @@ Usage: #example
 * collection.bodySite = $sct#1149541002 "Entire skin of lumbar region of back (body structure)"
 
 * container.type = $sct#701394007 "General specimen receptacle transport container (physical object)"
+
+Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
+Alias: $acmeonline = https://www.acmeonline.com
+
+Instance: Skin-dermatoscopy
+InstanceOf: DiagnosticReport
+Usage: #example
+* identifier.system = "https://www.acmeonline.com"
+* identifier.value = "P44444444"
+* status = #final
+* category = $v2-0074#PAT "Pathology (gross & histopath, not surgical)"
+* category.text = "Pathology"
+* code = $acmeonline#4503 "Biopsy without Microscopic Description (1 Site/Lesion)-Standard"
+* code.text = "Biopsy without Microscopic Description (1 Site/Lesion)-Standard"
+* subject.display = "Simone Studer"
+* effectiveDateTime = "2017-03-02"
+* issued = "2017-03-15T08:13:08Z"
+* performer.display = "Acme Animal Labs"
+* resultsInterpreter.display = "Sean Stover, BS, DVM, DABVP (Canine/Feline), DACVP"
+* presentedForm.contentType = #application/pdf
+* presentedForm.language = #en
+* presentedForm.title = "Dermatoscopy"
+* presentedForm.url = "https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/IG-ohne-Q/LabOrderBySR.png"

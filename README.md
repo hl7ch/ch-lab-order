@@ -12,14 +12,6 @@ This is a HL7 Swiss FHIR implementation guide.
 The implementation guide is based on CH_ORF (v0.9.1 STU Draft)
 Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>
 
-## Example resource and structure definition
-
-* Franz Muster is an example of the patient **resource**: examples\patient\FranzMuster.xml
-* The corresponding **structure definition** example is here: resources\structuredefinition\ch-name-patient.xml
-* [TODO] Pipette Lab is an example of a Lab Organization
-* The corresponding **structure definition** example is here: resources\structuredefinition\ch-name-organization.xml
-* These two resources are referenced in resources\implementationguide\ch.fhir.ig.name.xml
-
 ## Swiss Laboratory professional societies
 
 * FAMH --The medical Laboratories of Schweiz <https://www.famh.ch/>

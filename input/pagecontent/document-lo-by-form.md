@@ -8,4 +8,3 @@ This exchange format is defined as a [document type](https://www.hl7.org/fhir/do
 
 * **Profile**: [CH LAB-ORDER Document by Form](StructureDefinition-ch-lab-order-document-by-form.html)
 * **Example**: CH LAB-ORDER Document by Form ([XML](Bundle-ch-lab-order-by-form.xml.html), [JSON](Bundle-ch-lab-order-by-form.json.html))
-  

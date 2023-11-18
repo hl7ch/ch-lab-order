@@ -50,3 +50,7 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Skin"
 * entry[=].resource = Skin
+
+* entry[+].fullUrl = "http://example.com/fhir/DiagnosticReport/Skin-dermatoscopy"
+* entry[=].resource = Skin-dermatoscopy
+
