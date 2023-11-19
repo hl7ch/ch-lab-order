@@ -38,19 +38,23 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette" // entry[10]
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath"
-* entry[=].resource = 6-histopath-Questionnaire
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
-* entry[=].resource = 6-histopath-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath"
-* entry[=].resource = 6-histopath-ServiceRequest
-
 * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardSimoneStuder"
 * entry[=].resource = HealthInsuranceCardSimoneStuder
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Skin"
 * entry[=].resource = Skin
 
-* entry[+].fullUrl = "http://example.com/fhir/DiagnosticReport/Skin-dermatoscopy"
+* entry[+].fullUrl = "http://example.com/fhir/DiagnosticReport/Skin-dermatoscopy" // entry[13] 
 * entry[=].resource = Skin-dermatoscopy
+
+* entry[+].fullUrl = "http://example.com/fhir/Media/da0a96ee-b9d9-438d-b723-b3ca4bead563" // entry[14] 
+* entry[=].resource = Skin-dermatoscopy-image
+
+
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath"
+* entry[=].resource = 6-histopath-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
+* entry[=].resource = 6-histopath-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath"
+* entry[=].resource = 6-histopath-ServiceRequest
 
