@@ -1,6 +1,6 @@
 Instance: 3-gyn-Document
 InstanceOf: ChOrfDocument
-Title: "Referreal 3-gyn"
+Title: "CH-LAB-Order 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn"

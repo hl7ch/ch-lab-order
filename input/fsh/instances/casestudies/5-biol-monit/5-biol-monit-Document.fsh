@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-Document
 InstanceOf: ChOrfDocument
-Title: "Referreal 5-biol-monit"
+Title: "CH-LAB-Order 5-biol-monit"
 Description: "Example Bundle for referral/order for toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit"
