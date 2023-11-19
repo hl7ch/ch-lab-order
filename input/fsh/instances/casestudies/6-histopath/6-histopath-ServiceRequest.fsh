@@ -110,7 +110,10 @@ Alias: $acmeonline = https://www.acmeonline.com
 
 Instance: Skin-dermatoscopy
 InstanceOf: DiagnosticReport
+Title: "Report about the dermatiscopic image of skin"
+Description: "Report about the dermatiscopic image of skin"
 Usage: #example
+* meta.profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
 * identifier.system = "https://www.acmeonline.com"
 * identifier.value = "P44444444"
 * status = #final
