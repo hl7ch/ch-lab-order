@@ -76,8 +76,8 @@ Matching FHIR questionnaire that corresponds to this specification:
 
 ### Case study 6: Suspected Melanoma, order for histopathology examination
 
-A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
-Attachement of dermatoscopic images // TODO
+The 45-year-old female patient SimoneStuder came to Dr. med. Marc Mustermann in Arztpraxis for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
+Attachement of dermatoscopic images
 Specimen: 29 x 11 x 5 mm skin ellipse
 Body Site: Back paralumbar left
 

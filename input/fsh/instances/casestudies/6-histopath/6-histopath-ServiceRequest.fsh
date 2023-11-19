@@ -98,7 +98,12 @@ Usage: #example
 * accessionIdentifier.value = "4e99a-12345-dd333"
 * status = #available
 * type = $sct#396353007 "Specimen from skin obtained by elliptical excision (specimen)"
+* type.text = "29 x 11 x 5 mm skin ellipse"
 * subject = Reference(Patient/SimoneStuder)
+* request = Reference(ServiceRequest/6-histopath)
+// ---- only in R5: ----
+//* feature.type = $sct#181469002 "Entire skin (body structure)"  //  The physical property of a specimen
+//* feature.Description = "29 x 11 x 5 mm skin ellipse"
 * collection.collector = Reference(MarcMustermannArztpraxis)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#1149541002 "Entire skin of lumbar region of back (body structure)"
@@ -124,8 +129,9 @@ Usage: #example
 * subject.display = "Simone Studer"
 * effectiveDateTime = "2017-03-02"
 * issued = "2017-03-15T08:13:08Z"
-* performer.display = "Acme Animal Labs"
-* resultsInterpreter.display = "Sean Stover, BS, DVM, DABVP (Canine/Feline), DACVP"
+* performer.display = "Marc Mustermann, Arztpraxis"
+* resultsInterpreter.display = "Marc Mustermann, Dr. med."
+* specimen = Reference(Skin)
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #en
 * presentedForm.title = "Dermatoscopy"
