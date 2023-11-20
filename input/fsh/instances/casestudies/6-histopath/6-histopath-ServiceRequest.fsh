@@ -121,7 +121,7 @@ Usage: #example
 * category = $v2-0074#PAT "Pathology (gross & histopath, not surgical)"
 * category.text = "Pathology"
 * code = $sct#1237125003 "Optical dermatoscopy of skin (procedure)"
-* code.text = "Image as Result of an dermatoscopy of skin"
+* code.text = "Dermatoscopy of skin, Diagnostic Report"
 * subject.display = "Simone Studer"
 * subject = Reference(Patient/SimoneStuder)
 * effectiveDateTime = "2017-03-02"
