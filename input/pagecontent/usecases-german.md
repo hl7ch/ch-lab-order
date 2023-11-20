@@ -41,7 +41,7 @@ Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertu
 ### Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe
 
 Es ist nicht ungewöhnlich, dass die Ergebnisse von Labortests dazu führen, dass weitere Tests für dieselbe Probe angefordert werden. Im Beispiel 1-tvt kann der Verdacht auf venöse Thrombophilie bestehen, so dass weitere Labortests erbliche Ursachen wie Faktor-V-Leiden-Mutation, Prothrombin-Gen-Mutation, Antithrombin-Mangel usw. aufdecken können.
-TODO [Beispielformular ohne Q/QR](http://hl7.org/fhir/2020May/request.html#requisitionid)
+Beispieldokument ohne Q/QR ([XML](Bundle-ch-lab-order-by-sr.xml.html), [JSON](Bundle-ch-lab-order-by-sr.json.html))
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
