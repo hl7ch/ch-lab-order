@@ -37,5 +37,38 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+* supportingInfo = Reference(MedicationStatement/Medication-diclofenac)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
+
+Instance: Medication-diclofenac
+InstanceOf: MedicationStatement
+Description: "Example of medication record"
+Usage: #example
+* status = #active
+* medicationReference = Reference(Medication/Voltaren)
+* subject = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+* effectiveDateTime = "2023-11-11"
+* dateAsserted = "2023-11-11"
+* informationSource = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+// * reason.reference.reference = "Observation/backache"
+* note.text = "Patient takes it every day in the morning back pain"
+* dosage.sequence = 1
+* dosage.text = "1 tablet per day"
+
+Instance: Voltaren
+InstanceOf: Medication
+Description: "Example of a medication product"
+Usage: #example
+* contained = sub01
+* code = $sct#775563008 "Product containing only diclofenac (medicinal product)"
+* form = $sct#385055001 "Tablet (basic dose form)"
+* ingredient.itemReference = Reference(sub01)
+* ingredient.strength.numerator = 50 'mg'
+* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+
+Instance: sub01
+InstanceOf: Substance
+Description: "Example of a medication substance"
+Usage: #inline
+* code = $sct#62039007 "Diclofenac sodium (substance)"
