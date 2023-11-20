@@ -130,14 +130,14 @@ Usage: #example
 * resultsInterpreter.display = "Marc Mustermann, Dr. med."
 * specimen = Reference(Skin)
 * media.comment = "Dermatoskopy"
-* media.link = Reference(Media/da0a96ee-b9d9-438d-b723-b3ca4bead563)
+* media.link = Reference(Media/skin-dermatoskopy-image)
 
 Instance: Skin-dermatoscopy-image
 InstanceOf: Media
 Description: "Example of an image sent together with a histopathological examination order"
 Title: "Dermatoscopic image of the skin excision"
 Usage: #example
-* id = "da0a96ee-b9d9-438d-b723-b3ca4bead563"
+* id = "skin-dermatoskopy-image"
 * status = #completed
 * type = $v3-MediaType#image/png "PNG Image"
 * subject = Reference(Patient/SimoneStuder)

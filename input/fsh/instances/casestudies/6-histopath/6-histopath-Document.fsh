@@ -47,7 +47,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/DiagnosticReport/Skin-dermatoscopy" // entry[13] 
 * entry[=].resource = Skin-dermatoscopy
 
-* entry[+].fullUrl = "http://example.com/fhir/Media/da0a96ee-b9d9-438d-b723-b3ca4bead563" // entry[14] 
+* entry[+].fullUrl = "http://example.com/fhir/Media/skin-dermatoskopy-image" // entry[14] 
 * entry[=].resource = Skin-dermatoscopy-image
 
 
