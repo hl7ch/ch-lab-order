@@ -7,7 +7,7 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div><div><h3>Case study 6: Suspected Melanoma, order for histopathology examination    </h3>      <p>A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision. Attachement of dermatoscopic images // TODO Specimen: 29 x 11 x 5 mm skin ellipse Body Site: Back paralumbar left
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div><div><h3>Case study 6: Suspected Melanoma, order for histopathology examination    </h3>      <p>A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision. Attachement of dermatoscopic images Specimen: 29 x 11 x 5 mm skin ellipse Body Site: Back paralumbar left
      </p>  <p>The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.</p>        <p>Matching FHIR questionnaire that meets this specification:          <a href='https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.xml.html'>6-histopath.xml</a>          <a href='https://fhir.ch/ig/ch-lab-order/Questionnaire-6-histopath.json.html'>6-histopath.json</a>      </p>        </div></div>"
 
 // ---- Sender and Receiver ----

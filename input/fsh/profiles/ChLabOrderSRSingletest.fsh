@@ -27,10 +27,6 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * basedOn only Reference(ChLabOrderSRSingletest) // Labtest
 * requisition 1..1 MS
 
-//---- Use only Code from LOINC or Snomed CT -----
-//---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
-
-// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 * code 1..1

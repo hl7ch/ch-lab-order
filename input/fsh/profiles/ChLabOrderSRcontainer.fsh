@@ -28,30 +28,6 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest or Selfreferential
 * requisition 1..1 MS
 
-// ---- Canonical --- url to PlanDefinition | ActivityDefinition
-// * instantiatesCanonical ^slicing.discriminator.type = #value
-// * instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
-// * instantiatesCanonical ^slicing.rules = #open
-// * instantiatesCanonical ^slicing.description = "choose desired PlanDefinition of test/panel"
-// * instantiatesCanonical ^slicing.ordered = false
-
-// ---- basedOn 1..n ---- Reference to further SR
-// * basedOn ^slicing.discriminator.type = #value
-// * basedOn ^slicing.discriminator.path = "this"
-// * basedOn ^slicing.rules = #open
-// * basedOn ^slicing.description = ""
-// * basedOn ^slicing.ordered = false
-
-// ---- requisition 1 ---- grouperID
-
-//------- category -------
-// * category 1..1
-// * category from ServiceRequestCategories (required)
-// * category ^short = "Classification of Service Request: order of lab or histopathological tests/panels, request for test-results or request for 2nd opinion"
-// * category ^binding.description = "High-level kind of a clinical document at a macro level."
-
-// ------ code -------
-// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 
