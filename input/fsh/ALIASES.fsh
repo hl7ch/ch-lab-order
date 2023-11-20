@@ -11,6 +11,10 @@ Alias:  $v2-0916                       = http://terminology.hl7.org/CodeSystem/v
 Alias:  $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias:  $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
 Alias:  $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
+Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
+Alias:  $condition-ver-status          = http://terminology.hl7.org/CodeSystem/condition-ver-status
+
 Alias:  $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias:  $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
 Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category

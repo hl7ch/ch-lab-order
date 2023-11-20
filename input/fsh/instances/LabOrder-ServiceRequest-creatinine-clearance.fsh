@@ -37,7 +37,8 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo = Reference(MedicationStatement/Medication-diclofenac)
+* supportingInfo[+] = Reference(MedicationStatement/Medication-diclofenac)
+* supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
 
@@ -72,3 +73,21 @@ InstanceOf: Substance
 Description: "Example of a medication substance"
 Usage: #inline
 * code = $sct#62039007 "Diclofenac sodium (substance)"
+
+Instance: Renal-insufficiency
+InstanceOf: Condition
+Description: "Example of a Condition or Problem"
+Usage: #example
+* identifier.value = "12345"
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding[0] = $sct#55607006 "Problem"
+* category.coding[+] = $condition-category#problem-list-item
+* severity = $sct#255604002 "Mild (qualifier value)"
+* code = $sct#723190009 "Chronic renal insufficiency (disorder)"
+* bodySite = $sct#181414000 "Entire kidney (body structure)"
+* subject = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+* onsetDateTime = "2013-04-02"
+* recordedDate = "2013-04-04"
+* recorder = Reference(Practitioner/MarcMustermann)
+* asserter = Reference(Practitioner/MarcMustermann)
