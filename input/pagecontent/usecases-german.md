@@ -38,26 +38,19 @@ Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurüc
 Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
 Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
-### Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe
+### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
-Es ist nicht ungewöhnlich, dass die Ergebnisse von Labortests dazu führen, dass weitere Tests für dieselbe Probe angefordert werden. Im Beispiel 1-tvt kann der Verdacht auf venöse Thrombophilie bestehen, so dass weitere Labortests erbliche Ursachen wie Faktor-V-Leiden-Mutation, Prothrombin-Gen-Mutation, Antithrombin-Mangel usw. aufdecken können.
-TODO [Beispielformular ohne Q/QR](http://hl7.org/fhir/2020May/request.html#requisitionid)
+Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
 
+* **Profile**: [CH LAB-ORDER Document by Service Request](StructureDefinition-ch-lab-order-document-by-sr.html)
+* **Example**: CH LAB-ORDER Example Document by Service Request ([XML](Bundle-ch-lab-order-by-sr.xml.html), [JSON](Bundle-ch-lab-order-by-sr.json.html))
+  
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
 Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere Test mit der gleichen Probe gewünscht werden. So kann im Beispiel 1-tvt eine venöse Thrombophilie vermutet werden, sodass weitere Laboruntersuchungen hereditäre Ursachen, wie Faktor-V-Leiden-Mutaion, Prothrombin-Genmutation, Antithrombinmangel usw. auffinden können.
 
 * Angaben zum angeforderten Service
 * Im ValueSet Servicerequest.category wird RequestForAdditionalExam angewählt
-
-### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern
-
-Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.B. um den Verlauf von Prostata-spezifische Antigen (PSA) zu beurteilen.
-
-* Angaben zum angeforderten Service
-* Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
-
-TODO Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
   
 ### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
