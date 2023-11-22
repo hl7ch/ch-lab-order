@@ -24,23 +24,23 @@ Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende An
   * Type: zum Beispiel Serum, Vollblut, Liquor
   * Subject:Verweis auf den Patienten
   * Collection: Angaben zur Entnahme, Entnahme-Zeitpunkt, Menge, Methode, Entnahmestelle (z.B. rechter Arm), Nüchternperiode
-  * Behälter, Gefäss: Identifier, Type
-  * und Other mehr
+  * Container: Behälter, Gefäss: Identifier, Type
+  * und anderes mehr
 
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForLabExam
   * Fragestellung, Untersuchungsgrund (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
   * Kostenträger (Krankenkasse, Unfallversicherung usw.)
-  * und Other mehr
+  * und anderesgi mehr
 
 Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
 
 Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
 Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
-### Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe
+### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
-Es ist nicht ungewöhnlich, dass die Ergebnisse von Labortests dazu führen, dass weitere Tests für dieselbe Probe angefordert werden. Im Beispiel 1-tvt kann der Verdacht auf venöse Thrombophilie bestehen, so dass weitere Labortests erbliche Ursachen wie Faktor-V-Leiden-Mutation, Prothrombin-Gen-Mutation, Antithrombin-Mangel usw. aufdecken können.
+Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
 
 Beispieldokument ohne Q/QR ([XML](Bundle-ch-lab-order-by-sr.xml.html), [JSON](Bundle-ch-lab-order-by-sr.json.html))
 
@@ -110,14 +110,7 @@ bei Blutgas-Analysen, wo die dem Patienten zum Zeitpunkt der Probeentnahme verab
 
 * ServiceRequest.supportingInfo, z.Bsp. O2 4 Liter/Min.
 
-### Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
-
-Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab. Es wurde versucht, diese Verordnungen über die ServiceRequest.catogories abzubilden:
-
-* Das Vorgehen, diesen use case im vorliegenden Implementation guide aufzunehmen, erscheint aber unbefriedigend, da solche Monitoring Untersuchungen von Vitaldaten ausserhalb der eigentlichen Labordomäne fallen, und da uns FHIR spezifischere Resourcen zur Verfügung stellt: Die Resource [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) bietet sich hier an, wobei das benötigte Gerät in der [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html) Resource referenziert wird. Der dazugeörige Use Case kann analog der Laborverordnung als Bundle mit einer Composition, welche an Stelle des Service Request den [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) enthält, implementiert werden. Es ist somit sinnvoller, die Anforderung von Monitoring-Untersuchungen in einem eigenen Implementation Guide abzuhandeln.
-Aufgrund obiger Überlegungen wurden die entsprechenden ServiceRequestCategories für das Monitoring im ValueSet des Implementation Guide auskommentiert.
-
-### Use Case 10: Laborverordnung aus dem Labor-Katalog
+### Use Case 9: Laborverordnung aus dem Labor-Katalog
 
 Dieser Use Case bewegt sich ausserhalb des Bereiches dieses Implementationsguides, obschon er ein wesentlicher Bestandteil von jeder Laborverordnunbg darstellt. Auftraggeber brauchen die Auswahl der Laboruntersuchungen, die das Labor auch wirklich zur Verfügung stellen kann. Ausserdem brauchen sie Orientierung in der Vielzahl von möglichen Untersuchungen in den verschiedenen Sparten, sowie Vorgaben für das präanalytische Vorgehen, Vorgaben für die richtigen Gefässe und Transportmedien, für die Minimalvolumen der Proben usw. Eine zukünftigen Version sollte diese Möglichkeit bieten.
 
