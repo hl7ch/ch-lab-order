@@ -5,7 +5,7 @@
 │  UC - english is original, this is a traduction           │
 ╰───────────────────────────────────────────────────────────╯
 -->
-### Use Case 1: Auftrag im herkömmlichen Sinne
+### Use Case 1: Auftrag im herkömmlichen Sinne, analog Papierformular
 
 Der Auftraggeber (z.B. Arzt) benötigt für die weitere Diagnostik verschiedene Labor-Untersuchungen. Dazu erstellt und speichert er in seinem Praxisinformationssystem ein Auftragsdokument mit den nötigen Angaben zu Patient, Labor-Test, Proben usw. Das notwendige Probenmaterial (Serum, Urin, Liquor) wird in entsprechenden Behältern gesammelt und dem Auftragsdokument eindeutig zugeordnet (Specimen.identifier, Specimen.container.identifier). Proben können im eigenen Labor untersucht werden, oder sie müssen via Post oder Kurier ins externe Labor verschickt werden. Dort weist ihnen das Laborinformationssystem einen eigenen Identifier (Specimen.accessionIdentifier) zu. Innerhalb einer Spitalinfrastruktur kann auf diese Zuweisung (relabelling) verzichtet werden, indem das Auftragsystem, die Proben-Entnahmestelle und das Laborinformationssystem denselben Identifier verwenden.
 
