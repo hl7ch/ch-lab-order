@@ -52,7 +52,7 @@ correct assignment of the patient identification number. In principle, several i
 
 * Remove: Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
-* Remove: Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern.
+* Modify: Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern.
 
 * Remove: Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
 * 
