@@ -1,5 +1,5 @@
 Instance: LabOrder-Composition-by-SR
-InstanceOf: ChLabOrderCompositionSR
+InstanceOf: ChLabOrderComposition
 Title: "CH LAB-Order Composition by Service Request"
 Description: "Composition multiple SR whithout Questionnaire/Quse"
 Usage: #example

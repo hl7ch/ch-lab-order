@@ -1,9 +1,9 @@
-Instance: 1-tvt-Composition
-InstanceOf: ChLabOrderComposition
-Title: "1-tvt Composition"
+Instance: 1-tvt-CompositionForm
+InstanceOf: ChLabOrderCompositionByForm
+Title: "1-tvt Composition by Form"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
-* id = "1-tvt-composition"
+* id = "1-tvt-composition-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
@@ -37,6 +37,6 @@ Usage: #example
 * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 1-tvt\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(1-tvt-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponse)
+* section[orderReferral].entry[Questionnaire] = Reference(1-tvt-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest)

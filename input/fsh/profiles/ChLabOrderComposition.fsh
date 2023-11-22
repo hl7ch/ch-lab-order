@@ -1,8 +1,8 @@
-Profile: ChLabOrderCompositionForm
+Profile: ChLabOrderComposition
 Parent: ChOrfComposition
-Id: ch-lab-order-composition-form
-Title: "CH LAB-Order Composition by Form"
-Description: "Definition for Composition resource in the context of CH CH LAB-Order by Form"
+Id: ch-lab-order-composition
+Title: "CH LAB-Order Composition by Service Request only"
+Description: "Definition for Composition resource in the context of CH CH LAB-Order by Service Request"
 * . ^short = "CH LAB-Order Composition"
 * ^version = "0.9.0"
 * ^status = #draft
@@ -23,10 +23,10 @@ Description: "Definition for Composition resource in the context of CH CH LAB-Or
 * category ^short = "Order Document"
 
 // ---------- Composition.section.entry:Questionnaire - 10.11.21: According to Ballot #18, Cardinality set to 0..
-* section[orderReferral].entry[Questionnaire] 1..1
+* section[orderReferral].entry[Questionnaire] 0..0
 
 // ---------- Composition.section.entry:QuestionnaireResponse - - 10.11.21: According to Ballot #18, Cardinality set to 0..
-* section[orderReferral].entry[QuestionnaireResponse] 1..1
+* section[orderReferral].entry[QuestionnaireResponse] 0..0
 
 // ---------- Composition.section.entry:ServiceRequest ----------
-* section[orderReferral].entry[ServiceRequest]  // ^type.targetProfile = Canonical(ChLabOrderSRContainer)
+* section[orderReferral].entry[ServiceRequest] // ^type.targetProfile = Canonical(ChLabOrderSRContainer)

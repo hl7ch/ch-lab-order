@@ -1,5 +1,5 @@
 Instance: LabOrder-Document-by-SR
-InstanceOf: ChLabOrderDocumentBySR
+InstanceOf: ChLabOrderDocument
 Title: "CH LAB-ORDER Document by Service Request"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
