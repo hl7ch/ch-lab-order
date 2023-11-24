@@ -14,8 +14,8 @@ Usage: #example
 * entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-composition-by-form"
 * entry[=].resource = 1-tvt-CompositionByForm
 
-* entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
-* entry[=].resource = HansGuggindieluft
+* entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
+* entry[=].resource = TobiasTimmermann
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
 * entry[=].resource = FranzMuster
