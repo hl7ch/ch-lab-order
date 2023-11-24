@@ -1,5 +1,5 @@
 Instance: LabOrder-Composition-by-Form
-InstanceOf: ChLabOrderCompositionForm
+InstanceOf: ChLabOrderCompositionByForm
 Title: "CH LAB-Order Composition by Form"
 Description: "Composition Questionnaire/QuestionnaireResponse and multiple SR"
 Usage: #example

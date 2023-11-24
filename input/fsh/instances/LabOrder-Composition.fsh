@@ -1,9 +1,9 @@
-Instance: LabOrder-Composition-by-SR
-InstanceOf: ChLabOrderCompositionSR
+Instance: LabOrder-Composition
+InstanceOf: ChLabOrderComposition
 Title: "CH LAB-Order Composition by Service Request"
 Description: "Composition multiple SR whithout Questionnaire/Quse"
 Usage: #example
-* id = "ch-lab-order-composition-by-sr"
+* id = "ch-lab-order-composition"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional

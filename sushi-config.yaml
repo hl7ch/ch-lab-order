@@ -46,7 +46,7 @@ pages:
     title: Use Cases in French
   document-lo-by-form.md:
     title: CH LAB-Order by form
-  document-lo-by-SR.md:
+  document-lo.md:
     title: CH LAB-Order by Service Request
   profiles.md:
     title: Profiles

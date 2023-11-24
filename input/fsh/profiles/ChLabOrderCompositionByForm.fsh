@@ -1,4 +1,4 @@
-Profile: ChLabOrderCompositionForm
+Profile: ChLabOrderCompositionByForm
 Parent: ChOrfComposition
 Id: ch-lab-order-composition-form
 Title: "CH LAB-Order Composition by Form"

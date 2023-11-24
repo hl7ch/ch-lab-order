@@ -1,6 +1,6 @@
-Profile: ChLabOrderDocumentBySR
+Profile: ChLabOrderDocument
 Parent: ChOrfDocument
-Id: ch-lab-order-document-by-sr
+Id: ch-lab-order-document
 Title: "CH LAB-Order Document Profile by Service Requests"
 Description: "Definition of the bundle for the lab order document"
 * . ^short = "CH Lab-Order Bundle"
@@ -32,8 +32,8 @@ equal one Filler Order equal one Laboratory Service Request."
 * entry[Composition] 1..1
 * entry[Composition] ^short = "Lab order composition"
 * entry[Composition].resource 1..
-* entry[Composition].resource only ChLabOrderCompositionSR
+* entry[Composition].resource only ChLabOrderComposition
 
 // ---------- Bundle.entry:Composition ----------
 // * entry[Composition].resource ^type.profile = Canonical(ChLabOrderComposition)
-// * entry[Composition].resource only ChLabOrderCompositionSR
+// * entry[Composition].resource only ChLabOrderComposition

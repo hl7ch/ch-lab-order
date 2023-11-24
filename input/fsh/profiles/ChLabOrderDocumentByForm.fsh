@@ -32,8 +32,8 @@ equal one Filler Order equal one Laboratory Service Request."
 * entry[Composition] 1..1
 * entry[Composition] ^short = "Lab order composition"
 * entry[Composition].resource 1..
-* entry[Composition].resource only ChLabOrderCompositionForm
+* entry[Composition].resource only ChLabOrderCompositionByForm
 
 // ---------- Bundle.entry:Composition ----------
 // * entry[Composition].resource ^type.profile = Canonical(ChLabOrderComposition)
-// * entry[Composition].resource only ChLabOrderCompositionForm
+// * entry[Composition].resource only ChLabOrderCompositionByForm

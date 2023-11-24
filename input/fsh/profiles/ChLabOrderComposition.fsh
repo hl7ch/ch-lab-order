@@ -1,6 +1,6 @@
-Profile: ChLabOrderCompositionSR
-Parent: ChOrfComposition
-Id: ch-lab-order-composition-SR
+Profile: ChLabOrderComposition
+Parent: ChOrfComposition  // replace Composition
+Id: ch-lab-order-composition
 Title: "CH LAB-Order Composition by Service Request"
 Description: "Definition for Composition resource in the context of CH CH LAB-Order by Service Request"
 * . ^short = "CH LAB-Order Composition"

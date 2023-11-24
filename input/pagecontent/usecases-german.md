@@ -40,7 +40,9 @@ Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertu
 
 Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
 
-Beispieldokument ohne Q/QR ([XML](Bundle-ch-lab-order-by-sr.xml.html), [JSON](Bundle-ch-lab-order-by-sr.json.html))
+<!--
+Beispieldokument ohne Q/QR ([XML](Bundle-ch-lab-order.xml.html), [JSON](Bundle-ch-lab-order.json.html))
+-->
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 

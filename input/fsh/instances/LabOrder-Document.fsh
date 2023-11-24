@@ -1,9 +1,9 @@
-Instance: LabOrder-Document-by-SR
-InstanceOf: ChLabOrderDocumentBySR
+Instance: LabOrder-Document
+InstanceOf: ChLabOrderDocument
 Title: "CH LAB-ORDER Document by Service Request"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "ch-lab-order-by-sr"
+* id = "ch-lab-order-document"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * language = #en
@@ -12,8 +12,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition-by-sr"
-* entry[=].resource = LabOrder-Composition-by-SR
+* entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition"
+* entry[=].resource = LabOrder-Composition
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
