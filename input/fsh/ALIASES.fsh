@@ -9,6 +9,7 @@ Alias:  $v2-0373                       = http://terminology.hl7.org/CodeSystem/v
 Alias:  $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
 Alias:  $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916
 Alias:  $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias:  $v3-Confidentiality            = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias:  $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
 Alias:  $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
 Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
@@ -41,6 +42,6 @@ Alias:  $documentEntryClassCode        = http://fhir.ch/ig/ch-epr-term/ValueSet/
 Alias:  $documentEntryTypeCode         = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
 
 // Encounter, appointment
-Alias:  $ChCoreCSEncounterType         = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+Alias:  $CHCoreCSEncounterType         = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
 Alias:  $appointmentstatus             = http://hl7.org/fhir/appointmentstatus
 Alias:  $bfs-medstats-21-encountertype = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype

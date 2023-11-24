@@ -40,9 +40,9 @@ Description: "Definition for Composition resource in the context of CH CH LAB-Or
 * section contains orderReferral 1..1 MS
 * section[orderReferral] ^short = "Contains the data that supports the order and referral by form."
 * section[orderReferral].title 1..1 MS
-* section[orderReferral].title ^short = "Order-Referral"
+* section[orderReferral].title ^short = "Laboratory Order by Service Request"
 * section[orderReferral].code 1..1 MS
-* section[orderReferral].code = $loinc#93037-0 // "Portable medical order form"
+* section[orderReferral].code = $sct#721963009 "Order (record artifact)"
 * section[orderReferral].text MS
 * section[orderReferral].section 0..0
 
@@ -50,23 +50,13 @@ Description: "Definition for Composition resource in the context of CH CH LAB-Or
 * section[orderReferral].entry ^slicing.discriminator.type = #profile
 * section[orderReferral].entry ^slicing.discriminator.path = "resolve()"
 * section[orderReferral].entry ^slicing.rules = #open
-// ---------- Composition.section.entry:Questionnaire - 10.11.21: According to Ballot #18, Cardinality set to 0..
-// * section[orderReferral].entry contains Questionnaire 0..1 MS
-// * section[orderReferral].entry[Questionnaire] only Reference(ChOrfQuestionnaire)
-// * section[orderReferral].entry[Questionnaire] ^short = "Questionnaire"
-// * section[orderReferral].entry[Questionnaire].reference 1.. MS
-// ---------- Composition.section.entry:QuestionnaireResponse - - 10.11.21: According to Ballot #18, Cardinality set to 0..
-// * section[orderReferral].entry contains QuestionnaireResponse 0..1 MS
-// * section[orderReferral].entry[QuestionnaireResponse] only Reference(ChOrfQuestionnaireResponse)
-// * section[orderReferral].entry[QuestionnaireResponse] ^short = "QuestionnaireResponse"
-// * section[orderReferral].entry[QuestionnaireResponse].reference 1.. MS
-// ---------- Composition.section.entry:ServiceRequest ----------
+ 
 * section[orderReferral].entry contains ServiceRequest 1..* MS
 * section[orderReferral].entry[ServiceRequest] only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer)
 * section[orderReferral].entry[ServiceRequest] ^short = "ServiceRequest"
 * section[orderReferral].entry[ServiceRequest].reference 1.. MS
 // ---------- Composition.section.entry:DocumentReference ----------
 * section[orderReferral].entry contains DocumentReference 0..* MS
-* section[orderReferral].entry[DocumentReference] only Reference(ChLabOrderDocument)
+* section[orderReferral].entry[DocumentReference] only Reference(ChLabDocumentReference)
 * section[orderReferral].entry[DocumentReference] ^short = "DocumentReference"
 * section[orderReferral].entry[DocumentReference].reference 1.. MS

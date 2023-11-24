@@ -32,7 +32,7 @@ Usage: #example
 * author = Reference(MarcMustermannArztpraxis)
 * title = "Laborauftrag"
 * section[orderReferral].title = "Auftrag für Laboruntersuchung"
-* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                Order-Referral-Form\n            </div>"
 
