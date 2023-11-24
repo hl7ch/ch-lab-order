@@ -1,6 +1,6 @@
 Instance: 1-tvt-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH-LAB-Order 1-tvt"
+Title: "CH-LAB-Order 1-tvt by Form"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-by-form"
