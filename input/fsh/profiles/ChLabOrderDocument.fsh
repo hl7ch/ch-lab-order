@@ -1,5 +1,5 @@
 Profile: ChLabOrderDocument
-Parent: ChOrfDocument
+Parent: CHCoreDocument
 Id: ch-lab-order-document
 Title: "CH LAB-Order Document Profile by Service Requests"
 Description: "Definition of the bundle for the lab order document"
