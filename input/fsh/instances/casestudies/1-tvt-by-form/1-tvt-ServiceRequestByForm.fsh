@@ -53,7 +53,7 @@ Usage: #example
 * telecom[=].value = "079 979 79 79"
 * telecom[=].use = #home
 * telecom[+].system = #email
-* telecom[=].value = "hans.timmermann@example.ch"
+* telecom[=].value = "tobias.timmermann@example.ch"
 * gender = #male
 * birthDate = "1984-01-01"
 * maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"

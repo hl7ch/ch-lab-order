@@ -24,9 +24,9 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * instantiatesCanonical 0.. MS
 
 // * Is based On ChLabOrderSRSingletest or other SRContainer
-* basedOn 1.. MS
+* basedOn 0.. MS
 * basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest or Selfreferential
-* requisition 1..1 MS
+* requisition 0..1 MS
 
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 

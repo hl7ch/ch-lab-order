@@ -1,5 +1,5 @@
 Instance: 1-tvt-CompositionByForm
-InstanceOf: ChOrfComposition
+InstanceOf: ChOrfComposition  // ChLabOrderComposition
 Title: "Composition 1-tvt by Form"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example

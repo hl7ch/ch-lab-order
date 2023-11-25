@@ -1,5 +1,5 @@
 Instance: 1-tvt-Composition
-InstanceOf: ChOrfComposition
+InstanceOf: ChLabOrderComposition
 Title: "1-tvt"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
@@ -22,21 +22,21 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(Patient/HansGuggindieluft)
+* extension[=].valueReference = Reference(Patient/TobiasTimmermann)
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
 * title = "Laborauftrag"
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721965002 "Laboratory order (record artifact)"
-* subject = Reference(Patient/HansGuggindieluft)
+* subject = Reference(Patient/TobiasTimmermann)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannArztpraxis)
 
 * section[orderReferral].title = "Order-Referral-Form 1-tvt"
-* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 1-tvt\n </div>"
-* section[orderReferral].entry[Questionnaire] = Reference(1-tvt-Questionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponse)
+// * section[orderReferral].entry[Questionnaire] = Reference(1-tvt-Questionnaire) ChLabOrderSRContainer
+// * section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest)

@@ -1,5 +1,5 @@
 Instance: 1-tvt-Document
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocument
 Title: "CH-LAB-Order 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
@@ -14,8 +14,8 @@ Usage: #example
 * entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt"
 * entry[=].resource = 1-tvt-Composition
 
-* entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
-* entry[=].resource = HansGuggindieluft
+* entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
+* entry[=].resource = TobiasTimmermann
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
 * entry[=].resource = FranzMuster
@@ -51,9 +51,9 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag"  // entry[15]
 * entry[=].resource = Blood-coag
 
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
-* entry[=].resource = 1-tvt-Questionnaire
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
-* entry[=].resource = 1-tvt-QuestionnaireResponse
+// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
+// * entry[=].resource = 1-tvt-Questionnaire
+// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
+// * entry[=].resource = 1-tvt-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt"
 * entry[=].resource = 1-tvt-ServiceRequest

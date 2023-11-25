@@ -1,5 +1,5 @@
 Instance: 1-tvt-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSRContainer //ChOrfServiceRequest
 Title: "laborder 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -21,7 +21,7 @@ Usage: #example
 // orderDetails: Additional order information
 
 * priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
+* subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
