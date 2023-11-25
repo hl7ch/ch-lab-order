@@ -1,4 +1,4 @@
-// example in 1-tvt-ServicerequestByForm
+// example in 1-tvt-Servicerequest
 Instance: MarcMustermannArztpraxis
 InstanceOf: CHCorePractitionerRole
 Title: "Marc Mustermann at Arztpraxis"

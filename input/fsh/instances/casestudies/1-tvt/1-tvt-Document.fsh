@@ -3,7 +3,7 @@ InstanceOf: ChLabOrderDocument
 Title: "CH-LAB-Order 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt"
+* id = "1-tvt-Document"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -17,17 +17,12 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann
 
-* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
-* entry[=].resource = FranzMuster
-* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
-* entry[=].resource = BeatBorer
-
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
-* entry[=].resource = Arztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
-* entry[=].resource = MarcMustermannArztpraxis
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+* entry[=].resource = Gruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+* entry[=].resource = MarcMustermannGruppenpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
@@ -36,24 +31,19 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto" // entry[10]
-* entry[=].resource = PeterPresto
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-* entry[=].resource = Gruppenpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
-* entry[=].resource = PeterPrestoGruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-tobias-timmermann"
+* entry[=].resource = HealthInsuranceCardTobiasTimmermann
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
-* entry[=].resource = HealthInsuranceCard
-
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
-* entry[=].resource = Serum
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag"  // entry[15]
-* entry[=].resource = Blood-coag
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-1-tvt"
+* entry[=].resource = Serum-1-tvt
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-1-tvt"  // entry[10]
+* entry[=].resource = Blood-coag-1-tvt
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[11]
+* entry[=].resource = Blood-1-tvt
 
 // * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
 // * entry[=].resource = 1-tvt-Questionnaire
 // * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
 // * entry[=].resource = 1-tvt-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request"
 * entry[=].resource = 1-tvt-ServiceRequest

@@ -20,7 +20,7 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(PeterPrestoGruppenpraxis)
+* extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)  // TODO zusätzlichen Arzt einbringen
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(Patient/TobiasTimmermann)
 
@@ -31,7 +31,7 @@ Usage: #example
 * subject = Reference(Patient/TobiasTimmermann)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannGruppenpraxis)
-* title = "Laborauftrag"
+* title = "Laborauftrag mit Formular"
 
 * section[orderReferral].title = "Order-Referral-Form 1-tvt"
 * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
@@ -40,3 +40,5 @@ Usage: #example
 * section[orderReferral].entry[Questionnaire] = Reference(1-tvt-QuestionnaireByForm)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponseByForm)
 * section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequestByForm)
+
+

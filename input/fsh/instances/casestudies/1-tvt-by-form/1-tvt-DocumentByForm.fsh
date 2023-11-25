@@ -17,11 +17,6 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann
 
-* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
-* entry[=].resource = FranzMuster
-* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
-* entry[=].resource = BeatBorer
-
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
@@ -36,20 +31,15 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto" // entry[10]
-* entry[=].resource = PeterPresto
-// * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-// * entry[=].resource = Gruppenpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
-* entry[=].resource = PeterPrestoGruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-tobias-timmermann"
+* entry[=].resource = HealthInsuranceCardTobiasTimmermann
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
-* entry[=].resource = HealthInsuranceCard
-
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
-* entry[=].resource = Serum
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag"  // entry[15]
-* entry[=].resource = Blood-coag
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-1-tvt"
+* entry[=].resource = Serum-1-tvt
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-1-tvt"  // entry[10]
+* entry[=].resource = Blood-coag-1-tvt
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[11]
+* entry[=].resource = Blood-1-tvt
 
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt-questionnaire-by-form"
 * entry[=].resource = 1-tvt-QuestionnaireByForm
