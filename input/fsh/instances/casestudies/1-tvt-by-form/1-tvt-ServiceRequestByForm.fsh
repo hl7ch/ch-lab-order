@@ -1,6 +1,6 @@
 Instance: 1-tvt-ServiceRequestByForm
 InstanceOf: ChOrfServiceRequest
-Title: "Service Request 1-tvt by Form"
+Title: "Service Request by Form 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-service-request-by-form"

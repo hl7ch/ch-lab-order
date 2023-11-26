@@ -38,12 +38,12 @@ Usage: #example
 * entry[=].resource = Serum-1-tvt
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-1-tvt"  // entry[10]
 * entry[=].resource = Blood-coag-1-tvt
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[11]
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  
 * entry[=].resource = Blood-1-tvt
 
 // * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
 // * entry[=].resource = 1-tvt-Questionnaire
 // * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
 // * entry[=].resource = 1-tvt-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request" // entry[12]
 * entry[=].resource = 1-tvt-ServiceRequest

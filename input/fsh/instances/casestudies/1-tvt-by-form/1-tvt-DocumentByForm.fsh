@@ -1,13 +1,13 @@
 Instance: 1-tvt-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH-LAB-Order 1-tvt by Form"
+Title: "CH-LAB-Order by Form 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
+* identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd11125f8"
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 

@@ -1,14 +1,13 @@
-Instance: 4-sepsis-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
-Title: "Service Request 4-sepsis"
+Instance: 4-sepsis-ServiceRequestByForm
+InstanceOf: ChOrfServiceRequest
+Title: "Service Request by Form 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
-* id = "4-sepsis"
+* id = "4-sepsis-service-request-by-form"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 * category = $sct#721963009 "Order (record artifact)"
-
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
@@ -18,8 +17,8 @@ Usage: #example
 * code.coding[+] = $loinc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
 * code.coding[+] = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-
 // orderDetails: Additional order information
+
 * status = #active
 * intent = #original-order
 * priority = #urgent
@@ -32,6 +31,7 @@ Usage: #example
 * specimen[+] = Reference(Specimen/Blood-sepsis)
 * specimen[+] = Reference(Specimen/Urine-sepsis)
 
+/*
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
 Title: "Sara Speckmann"
@@ -48,15 +48,15 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1025 "Jehovah's Witnesses"
 * identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.4"
+* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111114"
-* name.family = "Speckmann"
-* name.given = "Sara"
+* name.family = "Klebsiella"
+* name.given = "Keller"
 * telecom[0].system = #phone
-* telecom[=].value = "+41 64 888 45 67"
+* telecom[=].value = "+41 64 123 45 67"
 * telecom[=].use = #home
 * telecom[+].system = #email
-* telecom[=].value = "sara.speckmann@example.ch"
+* telecom[=].value = "klebsiella.keller@example.ch"
 * gender = #female
 * birthDate = "1975-12-12"
 * maritalStatus = $ech-11-maritalstatus#2 "verheiratet"
@@ -182,3 +182,4 @@ Usage: #example
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
+*/

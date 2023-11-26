@@ -31,7 +31,7 @@ Usage: #inline
 * subject = Reference(Patient/TobiasTimmermann)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannGruppenpraxis)
-* title = "Laborauftrag 1-tvt"
+* title = "Laboratory order 1-tvt"
 
 * section[orderReferral].title = "Laboratory Order by Service Request 1-tvt"
 // * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"

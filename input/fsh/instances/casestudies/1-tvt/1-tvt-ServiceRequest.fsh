@@ -1,5 +1,5 @@
 Instance: 1-tvt-ServiceRequest
-InstanceOf: ChLabOrderSRContainer //ChOrfServiceRequest
+InstanceOf: ChLabOrderSRContainer
 Title: "Service Request 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -10,6 +10,7 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
+
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
@@ -18,8 +19,8 @@ Usage: #example
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-// orderDetails: Additional order information
 
+// orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)

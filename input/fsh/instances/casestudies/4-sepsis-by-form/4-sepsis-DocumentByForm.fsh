@@ -1,18 +1,18 @@
-Instance: 4-sepsis-Document
-InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 4-sepsis"
+Instance: 4-sepsis-DocumentByForm
+InstanceOf: ChOrfDocument
+Title: "CH-LAB-Order by Form 4-sepsis"
 Description: "Example Bundle for referral/order for Sepsis Investigation"
 Usage: #example
-* id = "4-sepsis-document"
+* id = "4-sepsis-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
+* identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd00005f8"
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/4-sepsis"
-* entry[=].resource = 4-sepsis-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/4-sepsis-composition-by-form"
+* entry[=].resource = 4-sepsis-CompositionByForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SaraSpeckmann"
 * entry[=].resource = SaraSpeckmann
@@ -23,6 +23,13 @@ Usage: #example
 * entry[=].resource = Kantonsspital
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/HansHauserKantonsspital"
 * entry[=].resource = HansHauserKantonsspital
+
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"  // entry[5]
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+* entry[=].resource = Gruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+* entry[=].resource = MarcMustermannGruppenpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
@@ -41,10 +48,10 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-sepsis"
 * entry[=].resource = Urine-sepsis
 
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/4-sepsis"
-// * entry[=].resource = 4-sepsis-Questionnaire
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/4-sepsis"
-// * entry[=].resource = 4-sepsis-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis"  // entry[15]
-* entry[=].resource = 4-sepsis-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/4-sepsis"
+* entry[=].resource = 4-sepsis-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/4-sepsis"
+* entry[=].resource = 4-sepsis-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-service-request-by-form"
+* entry[=].resource = 4-sepsis-ServiceRequestByForm
 
