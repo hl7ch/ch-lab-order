@@ -22,22 +22,22 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * priority = #urgent
-* subject = Reference(Patient/KlebsiellaKeller)
+* subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardKlebsiellaKeller)
+* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[0] = Reference(Specimen/Blood-bactec-plus)
 * specimen[+] = Reference(Specimen/Blood-sepsis)
 * specimen[+] = Reference(Specimen/Urine-sepsis)
 
-Instance: KlebsiellaKeller
+Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
-Title: "Klebsiella Keller"
+Title: "Sara Speckmann"
 Description: "CH-Core-Patient, refers to 4-sepsis"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: KlebsiellaKeller\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111114\n      </p><p><b>name</b>: Klebsiella Keller\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SaraSpeckmann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111114\n      </p><p><b>name</b>: Sara Speckmann\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Aarau"
 * extension[=].valueAddress.country = "Schweiz"
@@ -119,7 +119,7 @@ Usage: #example
 
 
 
-Instance: HealthInsuranceCardKlebsiellaKeller
+Instance: HealthInsuranceCardSaraSpeckmann
 InstanceOf: Coverage
 Title: "HealthInsuranceCard"
 Description: "Example for Insurance"
@@ -128,8 +128,8 @@ Usage: #example
 * identifier.value = "A123456780"
 * status = #active
 * type = $v3-ActCode#EHCPOL "extended healthcare"
-* subscriber = Reference(Patient/KlebsiellaKeller)
-* beneficiary = Reference(Patient/KlebsiellaKeller)
+* subscriber = Reference(Patient/SaraSpeckmann)
+* beneficiary = Reference(Patient/SaraSpeckmann)
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
@@ -141,7 +141,7 @@ Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(Patient/KlebsiellaKeller)
+* subject = Reference(Patient/SaraSpeckmann)
 * request = Reference(ServiceRequest/4-sepsis)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
@@ -156,7 +156,7 @@ Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(Patient/KlebsiellaKeller)
+* subject = Reference(Patient/SaraSpeckmann)
 * request = Reference(ServiceRequest/4-sepsis)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
@@ -173,7 +173,7 @@ Usage: #example
 * accessionIdentifier.value = "22222-bc987-dd888"
 * status = #available
 * type = $sct#122575003 "Urine sample"
-* subject = Reference(Patient/KlebsiellaKeller)
+* subject = Reference(Patient/SaraSpeckmann)
 * receivedTime = "2020-08-16T16:40:17Z"
 * request = Reference(ServiceRequest/4-sepsis)
 * collection.collector = Reference(Practitioner/HansHauser)

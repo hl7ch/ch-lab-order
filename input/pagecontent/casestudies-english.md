@@ -50,7 +50,7 @@ Matching FHIR questionnaire that meets this specification:
 
 ### Case study 4: Suspected sepsis
 
-The patient Klebsiella Keller, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample.
+The patient Sara Speckmann, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample.
 All five samples are further processed in the external laboratory Pipette. There, germs are detected in all materials and then identified by mass spectrometry. The pathogens "Klebsiella pneumoniae" and "Escherichia coli" were detected in the four Blood culture bottles, and the bacterium "Streptococcus mitis" was also detected in one aerobic bottle. The germ identified in the urine sample is normally not pathogenic.
 An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances "amoxicillin+clavulanic acid" and "ceftriaxone" are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
 
