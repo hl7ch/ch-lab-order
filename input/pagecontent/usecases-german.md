@@ -33,7 +33,7 @@ Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende An
   * Kostenträger (Krankenkasse, Unfallversicherung usw.)
   * und anderes mehr
 
-Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
+Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt-by-form.html).
 Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
 ### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse

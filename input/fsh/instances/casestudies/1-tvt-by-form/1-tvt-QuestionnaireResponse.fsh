@@ -1,12 +1,12 @@
-Instance: 1-tvt-QuestionnaireResponseByForm
+Instance: 1-tvt-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "Questionnaire Response 1-tvt by Form"
 Description: "Example for Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-questionnaire-response-by-form"
+* id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt-questionnaire-by-form"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------

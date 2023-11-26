@@ -1,9 +1,9 @@
-Instance: 2-pertussis-Document
-InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 2-pertussis"
+Instance: 2-pertussis-DocumentByForm
+InstanceOf: ChOrfDocument
+Title: "CH-LAB-Order 2-pertussis by Form"
 Description: "Example Bundle for referral/order for Pertussis investigation"
 Usage: #example
-* id = "2-pertussis-document"
+* id = "2-pertussis-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/2-pertussis"
-* entry[=].resource = 2-pertussis-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/2-pertussis-composition-by-form"
+* entry[=].resource = 2-pertussis-CompositionByForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/EmilKummer"
 * entry[=].resource = EmilKummer
@@ -53,9 +53,9 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-2-pertussis"
 * entry[=].resource = Blood-2-pertussis
 
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/2-pertussis"
-// * entry[=].resource = 2-pertussis-Questionnaire
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
-// * entry[=].resource = 2-pertussis-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request"
-* entry[=].resource = 2-pertussis-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/2-pertussis"
+* entry[=].resource = 2-pertussis-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
+* entry[=].resource = 2-pertussis-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis"
+* entry[=].resource = 2-pertussis-ServiceRequestByForm

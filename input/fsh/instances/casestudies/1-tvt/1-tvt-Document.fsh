@@ -3,7 +3,7 @@ InstanceOf: ChLabOrderDocument
 Title: "CH-LAB-Order 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-Document"
+* id = "1-tvt-document"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"

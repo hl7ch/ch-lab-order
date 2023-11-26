@@ -3,7 +3,7 @@ InstanceOf: ChOrfDocument
 Title: "CH-LAB-Order 1-tvt by Form"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-by-form"
+* id = "1-tvt-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -41,9 +41,9 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[11]
 * entry[=].resource = Blood-1-tvt
 
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt-questionnaire-by-form"
-* entry[=].resource = 1-tvt-QuestionnaireByForm
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt-questionnaire-response-by-form"
-* entry[=].resource = 1-tvt-QuestionnaireResponseByForm
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
+* entry[=].resource = 1-tvt-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
+* entry[=].resource = 1-tvt-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-by-form"
 * entry[=].resource = 1-tvt-ServiceRequestByForm
