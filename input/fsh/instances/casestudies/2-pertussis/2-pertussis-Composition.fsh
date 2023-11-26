@@ -29,10 +29,10 @@ Usage: #example
 * author = Reference(PeterPrestoGruppenpraxis)
 * title = "Laborauftrag"
 
-* section[orderReferral].title = "Order-Referral-Form 2-pertussis"
+* section[orderReferral].title = "Laboratory Order by Service Request 2-pertussis"
 // * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 2-pertussis\n </div>"
 // * section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
 // * section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequest)
