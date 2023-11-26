@@ -42,7 +42,7 @@ Usage: #example
 * type = $v3-ActCode#EHCPOL "extended healthcare"
 * subscriber = Reference(Patient/KlebsiellaKeller)
 * beneficiary = Reference(Patient/KlebsiellaKeller)
-* period.end = "2012-03-17"
+* period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
