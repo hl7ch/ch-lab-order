@@ -2,7 +2,7 @@ Instance: 1-tvt-Composition
 InstanceOf: ChLabOrderComposition
 Title: "1-tvt"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
-Usage: #example
+Usage: #inline
 * id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
