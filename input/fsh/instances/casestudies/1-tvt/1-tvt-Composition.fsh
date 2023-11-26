@@ -26,12 +26,12 @@ Usage: #inline
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
-* title = "Laborauftrag"
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * subject = Reference(Patient/TobiasTimmermann)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannGruppenpraxis)
+* title = "Laborauftrag"
 
 * section[orderReferral].title = "Order-Referral-Form 1-tvt"
 // * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"

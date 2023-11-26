@@ -1,9 +1,9 @@
-Instance: 2-pertussis-Composition
-InstanceOf: ChLabOrderComposition
+Instance: 2-pertussis-CompositionByForm
+InstanceOf: ChOrfComposition
 Title: "2-pertussis"
 Description: "Composition: Storyboard for Pertussis Investigation"
 Usage: #example
-* id = "2-pertussis"
+* id = "2-pertussis-composition-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
@@ -20,19 +20,27 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(Patient/EmilKummer)
 
-// Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
+
 * status = #final
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * category = $sct#721963009 "Order (record artifact)"
 * subject = Reference(Patient/EmilKummer)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPrestoGruppenpraxis)
-* title = "Laborauftrag"
+* title = "Referral Pertussis"
+
+// * section.title = "Order-Referral-Form 2-pertussis"
+// * section.code = $loinc#93037-0 "Portable medical order form"
+// * section.text.status = #generated
+// * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
+// * section.entry[0] = Reference(Questionnaire/2-pertussis)
+// * section.entry[+] = Reference(QuestionnaireResponse/2-pertussis)
+// * section.entry[+] = Reference(ServiceRequest/2-pertussis)
 
 * section[orderReferral].title = "Order-Referral-Form 2-pertussis"
-// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 2-pertussis\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequest)
+* section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequestByForm)

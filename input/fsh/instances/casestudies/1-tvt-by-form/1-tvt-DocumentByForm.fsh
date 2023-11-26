@@ -3,7 +3,7 @@ InstanceOf: ChOrfDocument
 Title: "CH-LAB-Order 1-tvt by Form"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-by-form"
+* id = "1-tvt-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"

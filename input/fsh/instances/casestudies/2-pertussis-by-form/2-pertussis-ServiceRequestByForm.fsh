@@ -1,9 +1,9 @@
-Instance: 2-pertussis-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+Instance: 2-pertussis-ServiceRequestByForm
+InstanceOf: ChOrfServiceRequest
 Title: "laborder 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
-* id = "2-pertussis-service-request"
+* id = "2-pertussis"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -26,6 +26,7 @@ Usage: #example
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
+/*
 Instance: EmilKummer
 InstanceOf: CHCorePatient
 Title: "Emil Kummer"
@@ -149,3 +150,4 @@ Usage: #example
 * collection.collector = Reference(Practitioner/PeterPresto)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#702304001 "Microcapillary blood transfer tube, clot activator (physical object)"
+*/
