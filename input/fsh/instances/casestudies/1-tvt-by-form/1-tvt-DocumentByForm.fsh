@@ -41,9 +41,9 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[11]
 * entry[=].resource = Blood-1-tvt
 
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt-questionnaire-by-form"
-* entry[=].resource = 1-tvt-QuestionnaireByForm
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt-questionnaire-response-by-form"
-* entry[=].resource = 1-tvt-QuestionnaireResponseByForm
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
+* entry[=].resource = 1-tvt-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
+* entry[=].resource = 1-tvt-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-by-form"
 * entry[=].resource = 1-tvt-ServiceRequestByForm

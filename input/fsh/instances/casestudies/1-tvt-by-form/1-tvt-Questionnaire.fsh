@@ -1,10 +1,9 @@
-/*
-Instance: 1-tvt-QuestionnaireByForm
+Instance: 1-tvt-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire 1-tvt by Form"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #inline
-* id = "1-tvt-questionnaire-by-form"
+* id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-06-06T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
@@ -30,7 +29,7 @@ Usage: #inline
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt-questionnaire-by-form"
+* url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
 * version = "1.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 1-tvt"
@@ -605,4 +604,3 @@ Usage: #inline
 * item[=].item.answerOption[+].valueCoding = $loinc#30522-7 "C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
 * item[=].item.answerOption[+].valueCoding = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 
-*/
