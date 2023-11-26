@@ -1,9 +1,9 @@
-Instance: 3-gyn-ServiceRequest
+Instance: 3-gyn-ServiceRequestByForm
 InstanceOf: ChOrfServiceRequest
-Title: "laborder 3-gyn"
+Title: "Service Request 3-gyn by Form"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example
-* id = "3-gyn"
+* id = "3-gyn-service-request-by-form"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -27,52 +27,7 @@ Usage: #example
 * specimen[+] = Reference(Specimen/Serum-gyn)
 * specimen[+] = Reference(Specimen/Urine-gyn)
 
-Instance: MarinaRubella
-InstanceOf: CHCorePatient
-Title: "Marina Rubella"
-Description: "CH-Core-Patient, refers to 3-gyn"
-Usage: #example
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: MarinaRubella\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111113\n      </p><p><b>name</b>: MarinaRubella \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Aug 08, 1992\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Italienisch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
-* extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
-* extension[=].valueAddress.city = "Mendrisio"
-* extension[=].valueAddress.country = "Schweiz"
-* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
-* extension[=].valueAddress.city = "Airolo"
-* extension[=].valueAddress.state = "TI"
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $religiousAffiliation#1077 "Protestant"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111113"
-* name[0].use = #official
-* name[=].family.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name"
-* name[=].family.extension.valueCode = #officialName
-* name[=].family = "Rubella"
-* name[=].given = "Marina"
-* name[=].given.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-firstname"
-* name[=].given.extension.valueCode = #officialFirstName
-* name[+].use = #maiden
-* name[=].family.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name"
-* name[=].family.extension.valueCode = #originalName
-* name[=].family = "Meier"
-* telecom[0].system = #phone
-* telecom[=].value = "+41 64 123 45 67"
-* telecom[=].use = #home
-* telecom[+].system = #email
-* telecom[=].value = "marina.rubella@example.ch"
-* gender = #female
-* birthDate = "1992-08-08"
-* address.use = #home
-* address.type = #both
-* address.line = "Via del bosco 88"
-* address.city = "Airolo"
-* address.postalCode = "6780"
-* maritalStatus = $ech-11-maritalstatus#2 "verheiratet"
-* communication.language = urn:ietf:bcp:47#it-CH
-* communication.language.text = "Italienisch (Schweiz)"
-* communication.preferred = true
-
+/*
 Instance: HealthInsuranceCardMarinaRubella
 InstanceOf: Coverage
 Title: "HealthInsuranceCard"
@@ -87,36 +42,6 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
-
-Instance: PeterPapGruppenpraxis
-InstanceOf: CHCorePractitionerRole
-Title: "Peter Pap Gruppenpraxis"
-Description: "PractitionerRole, refers to 3-gyn"
-Usage: #example
-* practitioner = Reference(Practitioner/PeterPap)
-* organization = Reference(Organization/Gruppenpraxis)
-
-Instance: PeterPap
-InstanceOf: CHCorePractitioner
-Title: "Peter Pap"
-Description: "Practitioner, works at Gruppenpraxis, refers to 3-gyn"
-Usage: #example
-* identifier[0].system = "urn:oid:2.51.1.3"  // GLN
-* identifier[=].value = "7601003050707"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123305"
-* name.use = #official
-* name.family = "Pap"
-* name.given = "Peter"
-* name.prefix = "Dr. med."
-* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-* name.prefix.extension.valueCode = #AC
-* telecom[0].system = #phone
-* telecom[=].value = "032 333 22 40"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "peter.pap@gruppenpraxis.ch"
-* telecom[=].use = #work
 
 Instance: Cervix-swab
 InstanceOf: Specimen
@@ -182,3 +107,4 @@ Usage: #example
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
+*/

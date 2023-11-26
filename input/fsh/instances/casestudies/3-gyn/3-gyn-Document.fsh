@@ -1,5 +1,5 @@
 Instance: 3-gyn-Document
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocument
 Title: "CH-LAB-Order 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
 Usage: #example
@@ -51,9 +51,9 @@ Usage: #example
 * entry[=].resource = Urine-gyn
 
 
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/3-gyn"
-* entry[=].resource = 3-gyn-Questionnaire
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
-* entry[=].resource = 3-gyn-QuestionnaireResponse
+// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/3-gyn"
+// * entry[=].resource = 3-gyn-Questionnaire
+// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
+// * entry[=].resource = 3-gyn-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
 * entry[=].resource = 3-gyn-ServiceRequest

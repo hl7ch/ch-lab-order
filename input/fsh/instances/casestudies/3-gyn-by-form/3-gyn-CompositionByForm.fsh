@@ -1,9 +1,9 @@
-Instance: 3-gyn-Composition
-InstanceOf: ChLabOrderComposition
-Title: "3-gyn"
+Instance: 3-gyn-CompositionByForm
+InstanceOf: ChOrfComposition
+Title: "Composition 3-gyn by Form"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
 Usage: #example
-* id = "3-gyn"
+* id = "3-gyn-composition-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
@@ -25,12 +25,12 @@ Usage: #example
 * subject = Reference(Patient/MarinaRubella)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPapGruppenpraxis)
-* title = "Laborauftrag 3-gyn"
+* title = "Laboratory Order by Form 3-gyn"
 
-* section[orderReferral].title = "Laboratory Order by Service Request 3-gyn"
-// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].title = "Order-Referral-Form 3-gyn"
+* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 3-gyn\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(3-gyn-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(3-gyn-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(3-gyn-ServiceRequest)
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 3-gyn\n </div>"
+* section[orderReferral].entry[Questionnaire] = Reference(3-gyn-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(3-gyn-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(3-gyn-ServiceRequestByForm)
