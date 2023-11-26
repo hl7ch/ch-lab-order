@@ -21,10 +21,10 @@ Usage: #example
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
-* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/Throat-swab)
-* specimen[+] = Reference(Specimen/Blood)
-* specimen[+] = Reference(Specimen/Serum)
+* insurance = Reference(HealthInsuranceCardEmilKummer)
+* specimen[0] = Reference(Specimen/Throat-swab-2-pertussis)
+* specimen[+] = Reference(Specimen/Blood-2-pertussis)
+* specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
 Instance: EmilKummer
 InstanceOf: CHCorePatient
@@ -85,3 +85,67 @@ Usage: #example
 * telecom[+].system = #email
 * telecom[=].value = "peter.presto@arztpraxis.ch"
 * telecom[=].use = #work
+
+Instance: HealthInsuranceCardEmilKummer
+InstanceOf: Coverage
+Title: "Health Insurance Card Emil Kummer"
+Description: "Example for Insurance"
+Usage: #example
+* id = "health-insurance-card-emil-kummer"
+* identifier.system = "http://ehic.com/insurer/123456789/member"
+* identifier.value = "A123456780-1"
+* status = #active
+* type = $v3-ActCode#EHCPOL "extended healthcare"
+* subscriber = Reference(Patient/EmilKummer)
+* beneficiary = Reference(Patient/EmilKummer)
+* period.end = "2024-12-31"
+* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.value = "123456789"
+
+Instance: Throat-swab-2-pertussis
+InstanceOf: Specimen
+Title: "Throat Swab"
+Description: "Example for Specimen of Throat Swab"
+Usage: #example
+* identifier.value = "48736-222333-75465"
+* accessionIdentifier.value = "4e88a-bc987-dd888"
+* status = #available
+* type = $sct#258529004 "Throat swab (specimen)"
+* subject = Reference(Patient/EmilKummer)
+* receivedTime = "2020-08-16T16:40:17Z"
+* request = Reference(2-pertussis-ServiceRequest)  // reference to SR 
+* collection.collector = Reference(Practitioner/PeterPresto)
+* collection.collectedDateTime = "2020-08-16T06:40:17Z"
+* collection.method = $sct#418932006 "Oral swab (specimen)"
+* collection.bodySite = $sct#264231000 "Entire throat (surface region of neck) (body structure)"
+* container.identifier.value = "4e88a-bc987-dd888-12345"
+* container.description = "ESwab 486C tubes Copan"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+* note.text = "Some notes to Sample"
+
+Instance: Blood-2-pertussis
+InstanceOf: Specimen
+Title: "Blood Sample"
+Description: "Example for Specimen for Haematological Examination"
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(Patient/EmilKummer)
+* collection.collector = Reference(Practitioner/PeterPresto)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.bodySite = $sct#49094006 "Structure of capillary of skin (body structure)"
+* container.type = $sct#702306004 "Microcapillary blood transfer tube, ethylene diamine tetraacetic acid (physical object)"
+
+Instance: Serum-2-pertussis
+InstanceOf: Specimen
+Title: "Serum Sample"
+Description: "Example for Specimen of Serum from venous blood"
+Usage: #example
+* identifier.value = "48736-12345-75465"
+* accessionIdentifier.value = "4e88a-12345-dd888"
+* status = #available
+* type = $sct#119364003 "Serum specimen (specimen)"
+* subject = Reference(Patient/EmilKummer)
+* collection.collector = Reference(Practitioner/PeterPresto)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* container.type = $sct#702304001 "Microcapillary blood transfer tube, clot activator (physical object)"

@@ -36,7 +36,7 @@ Un formulaire (Questionnaire) est présenté au donneur d'ordre, qui contient le
 
 En dehors de ce cas d'utilisation : les résultats sont ensuite communiqués au donneur d'ordre.
 
-Exemple de formulaire pour l'hématologie, la coagulation et la chimie clinique : [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
+Exemple de formulaire pour l'hématologie, la coagulation et la chimie clinique : [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt-by-form.html).
 Exemple de formulaire pour la microbiologie, l'hématologie et la chimie clinique : [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
 ### Cas d'utilisation 2: Prescription de laboratoire sans utilisation de Questionnaire et QuestionnaireResponse
