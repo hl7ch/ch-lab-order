@@ -25,3 +25,63 @@ Usage: #example
 * specimen[0] = Reference(Specimen/Throat-swab)
 * specimen[+] = Reference(Specimen/Blood)
 * specimen[+] = Reference(Specimen/Serum)
+
+Instance: EmilKummer
+InstanceOf: CHCorePatient
+Title: "Emil Kummer"
+Description: "CH-Core-Patient, refers to 2-pertussis"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: EmilKummer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111112\n      </p><p><b>name</b>: Emil Kummer\n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: May 05, 2014\n      </p><p><b>maritalStatus</b>: ledig \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+* extension[=].valueAddress.city = "Paris"
+* extension[=].valueAddress.country = "Frankreich"
+* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+* extension[=].valueAddress.city = "Köniz"
+* extension[=].valueAddress.state = "BE"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[=].valueCodeableConcept = $religiousAffiliation#1041 "Roman Catholic Church"
+* identifier[0].type = $v2-0203#MR
+* identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
+* identifier[=].value = "012/08.111112"
+* identifier[+].type = $v2-0203#MR
+* identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
+* identifier[=].value = "012/08.111112"
+* name.family = "Kummer"
+* name.given = "Emil"
+* gender = #male
+* birthDate = "2017-05-05"
+* maritalStatus = $ech-11-maritalstatus#1 "ledig"
+* communication.language = urn:ietf:bcp:47#de-CH
+* communication.language.text = "Deutsch (Schweiz)"
+* communication.preferred = true
+
+Instance: PeterPrestoGruppenpraxis
+InstanceOf: CHCorePractitionerRole
+Title: "Peter Presto at Gruppenpraxis"
+Description: "PractitionerRole, refers to 2-pertussis"
+Usage: #example
+* practitioner = Reference(Practitioner/PeterPresto)
+* organization = Reference(Organization/Gruppenpraxis)
+
+Instance: PeterPresto
+InstanceOf: CHCorePractitionerEPR
+Title: "Peter Presto"
+Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
+Usage: #example
+* identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
+* identifier[GLN].value = "7601022050702"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "A123303"
+* name.use = #official
+* name.family = "Presto"
+* name.given = "Peter"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[=].value = "032 333 22 33"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "peter.presto@arztpraxis.ch"
+* telecom[=].use = #work
