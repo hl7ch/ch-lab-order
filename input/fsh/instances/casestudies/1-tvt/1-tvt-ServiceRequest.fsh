@@ -25,7 +25,7 @@ Usage: #example
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity"
+* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
@@ -64,6 +64,7 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+// ---- PractitionerRole --------
 Instance: MarcMustermannGruppenpraxis
 InstanceOf: CHCorePractitionerRole
 Title: "Marc Mustermann at Arztpraxis"

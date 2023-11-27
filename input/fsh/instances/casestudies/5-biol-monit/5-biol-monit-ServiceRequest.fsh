@@ -1,15 +1,16 @@
 Instance: 5-biol-monit-ServiceRequest
-InstanceOf: ChOrfServiceRequest
-Title: "laborder 5-biol-monit"
+InstanceOf: ChLabOrderSRContainer
+Title: "Service Request 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit"
+* id = "5-biol-monit-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "123123"
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
+
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
@@ -19,17 +20,18 @@ Usage: #example
 * code.coding[+] = $loinc#29587-3 "Toxicology panel - Blood"
 * code.coding[+] = $loinc#54454-4 "Arsenic fractions panel - Urine"
 * code.coding[+] = $loinc#29589-9 "Heavy metals panel - Urine"
-// orderDetails: Additional order information
 
+// orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#409967009
-* reasonCode.text = "Toxicology (qualifier value)"
+* reasonCode = $sct#314076009
+* reasonCode.text = "Toxicology screening test (procedure)"
 * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[0] = Reference(Specimen/Blood-biol-monit)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
+// ---- Patient --------
 Instance: BeatBorer
 InstanceOf: CHCorePatient
 Title: "Beat Borer"
@@ -62,6 +64,7 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+// ---- PractitionerRole --------
 Instance: PauloPorcelliniSuva
 InstanceOf: CHCorePractitionerRole
 Title: "Paulo Porcellini Suva"
@@ -114,6 +117,7 @@ Usage: #example
 * address.postalCode = "6004"
 * address.country = "CH"
 
+// ---- PractitionerRole --------
 Instance: WoodyWorkdocSpeiserRails
 InstanceOf: CHCorePractitionerRole
 Title: "Woody Workdoc Speiser Rails"
@@ -180,6 +184,7 @@ Usage: #example
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
+// ---- Specimen ---------------
 Instance: Blood-biol-monit
 InstanceOf: Specimen
 Title: "Blood Sample"
@@ -188,7 +193,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/BeatBorer)
-* request = Reference(ServiceRequest/5-biol-monit)
+* request = Reference(ServiceRequest/5-biol-monit-service-request)
 * collection.collector = Reference(Practitioner/PauloPorcellini)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -206,7 +211,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/BeatBorer)
 * receivedTime = "2020-08-16T16:40:17Z"
-* request = Reference(ServiceRequest/5-biol-monit)
+* request = Reference(ServiceRequest/5-biol-monit-service-request)
 * collection.collector = Reference(Practitioner/PauloPorcellini)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
