@@ -24,12 +24,12 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PauloPorcelliniSuva"
 * entry[=].resource = PauloPorcelliniSuva
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
-* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/ArminAhrens"
+* entry[=].resource = ArminAhrens
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
 * entry[=].resource = Arztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
-* entry[=].resource = MarcMustermannArztpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/ArminAhrensArztpraxis"
+* entry[=].resource = ArminAhrensArztpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer

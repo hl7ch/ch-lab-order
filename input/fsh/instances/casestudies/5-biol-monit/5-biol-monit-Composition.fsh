@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-Composition
 InstanceOf: ChLabOrderComposition
-Title: "5-biol-monit"
+Title: "Composition 5-biol-monit"
 Description: "Composition: Storyboard for Toxicological Monitoring"
 Usage: #inline
 * id = "5-biol-monit"
@@ -16,7 +16,7 @@ Usage: #inline
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(MarcMustermannArztpraxis)
+* extension[=].valueReference = Reference(MarcelMustermannGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(WoodyWorkdocSpeiserRails)
 

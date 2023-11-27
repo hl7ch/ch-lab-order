@@ -26,8 +26,8 @@ Usage: #example
 * entry[=].resource = MarcMustermann
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
 * entry[=].resource = Arztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
-* entry[=].resource = MarcMustermannArztpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/ArminAhrensArztpraxis"
+* entry[=].resource = ArminAhrensArztpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer

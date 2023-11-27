@@ -1,6 +1,6 @@
 Instance: 1-tvt-Document
 InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 1-tvt"
+Title: "Document 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document"
@@ -17,12 +17,12 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
-* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcelMustermann"
+* entry[=].resource = MarcelMustermann
 * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
 * entry[=].resource = Gruppenpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
-* entry[=].resource = MarcMustermannGruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcelMustermannGruppenpraxis"
+* entry[=].resource = MarcelMustermannGruppenpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer

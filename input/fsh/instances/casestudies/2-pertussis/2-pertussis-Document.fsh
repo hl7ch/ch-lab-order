@@ -1,6 +1,6 @@
 Instance: 2-pertussis-Document
 InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 2-pertussis"
+Title: "Document 2-pertussis"
 Description: "Example Bundle for referral/order for Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document"

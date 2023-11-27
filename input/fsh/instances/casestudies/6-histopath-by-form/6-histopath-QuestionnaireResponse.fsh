@@ -63,7 +63,7 @@ Usage: #example
 * item[=].item[=].item.item[=].answer.valueString = "033 444 55 66"
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
-* item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
+* item[=].item[=].item.item[=].answer.valueString = "marc.mustermann@gruppenpraxis.ch"
 
 // ---- order priority ----
 * item[=].item[+].linkId = "order.priority"

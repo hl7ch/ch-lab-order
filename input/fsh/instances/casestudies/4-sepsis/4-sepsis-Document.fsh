@@ -1,6 +1,6 @@
 Instance: 4-sepsis-Document
 InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 4-sepsis"
+Title: "Document 4-sepsis"
 Description: "Example Bundle for referral/order for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-document"
@@ -41,6 +41,6 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-sepsis"
 * entry[=].resource = Urine-sepsis
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis"  // entry[15]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-service-request"  // entry[15]
 * entry[=].resource = 4-sepsis-ServiceRequest
 

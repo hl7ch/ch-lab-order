@@ -23,7 +23,7 @@ Usage: #example
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* requester = Reference(MarcelMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
@@ -65,17 +65,17 @@ Usage: #example
 * communication.preferred = true
 
 // ---- PractitionerRole --------
-Instance: MarcMustermannGruppenpraxis
+Instance: MarcelMustermannGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "Marc Mustermann at Arztpraxis"
+Title: "Marcel Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #example
-* practitioner = Reference(Practitioner/MarcMustermann)
+* practitioner = Reference(Practitioner/MarcelMustermann)
 * organization = Reference(Organization/Gruppenpraxis)
 
-Instance: MarcMustermann
+Instance: MarcelMustermann
 InstanceOf: CHCorePractitioner
-Title: "Marc Mustermann"
+Title: "Marcel Mustermann"
 Description: "Practitioner, works in Arztpraxis, refers to 1-tvt and 5-biol-monit"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3"
@@ -84,7 +84,7 @@ Usage: #example
 * identifier[=].value = "A123309"
 * name.use = #official
 * name.family = "Mustermann"
-* name.given = "Marc"
+* name.given = "Marcel"
 * name.prefix = "Dr. med."
 * name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 * name.prefix.extension.valueCode = #AC
@@ -92,7 +92,7 @@ Usage: #example
 * telecom[=].value = "033 333 22 11"
 * telecom[=].use = #work
 * telecom[+].system = #email
-* telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
+* telecom[=].value = "marcel.mustermann@gruppenpraxis.ch"
 * telecom[=].use = #work
 
 Instance: HealthInsuranceCardTobiasTimmermann
@@ -123,7 +123,7 @@ Usage: #example
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
 * subject = Reference(Patient/TobiasTimmermann)
-* collection.collector = Reference(Practitioner/MarcMustermann)
+* collection.collector = Reference(Practitioner/MarcelMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
@@ -141,7 +141,7 @@ Usage: #example
 * subject = Reference(Patient/TobiasTimmermann)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
-* collection.collector = Reference(Practitioner/MarcMustermann)
+* collection.collector = Reference(Practitioner/MarcelMustermann)
 * collection.collectedDateTime = "2020-08-16T17:00:17Z"
 * processing.timePeriod.start = "2020-08-16T17:00:17Z" // usually same time as collectedDateTime
 * processing.timePeriod.end = "2020-08-16T17:30:17Z" // when processing should be terminated
@@ -158,7 +158,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/TobiasTimmermann)
-* collection.collector = Reference(Practitioner/MarcMustermann)
+* collection.collector = Reference(Practitioner/MarcelMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"

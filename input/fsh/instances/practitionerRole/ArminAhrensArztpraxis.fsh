@@ -1,8 +1,8 @@
 // example in 1-tvt-Servicerequest
-Instance: MarcMustermannArztpraxis
+Instance: ArminAhrensArztpraxis
 InstanceOf: CHCorePractitionerRole
 Title: "Marc Mustermann at Arztpraxis"
-Description: "PractitionerRole"
+Description: "PractitionerRole, refers to 1-tvt"
 Usage: #example
-* practitioner = Reference(Practitioner/MarcMustermann)
+* practitioner = Reference(Practitioner/ArminAhrens)
 * organization = Reference(Organization/Arztpraxis)

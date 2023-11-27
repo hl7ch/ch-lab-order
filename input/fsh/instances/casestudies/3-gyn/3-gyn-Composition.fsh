@@ -1,6 +1,6 @@
 Instance: 3-gyn-Composition
 InstanceOf: ChLabOrderComposition
-Title: "3-gyn"
+Title: "Composition 3-gyn"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
 Usage: #example
 * id = "3-gyn"
