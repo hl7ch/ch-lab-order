@@ -1,6 +1,6 @@
 Instance: 1-tvt-CompositionByForm
 InstanceOf: ChOrfComposition
-Title: "Composition 1-tvt by Form"
+Title: "Composition by Form 1-tvt"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
 * id = "1-tvt-composition-by-form"
