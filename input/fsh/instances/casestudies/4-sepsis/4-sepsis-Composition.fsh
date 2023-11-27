@@ -35,9 +35,6 @@ Usage: #example
 * title = "Laboratory Order 4-sepsis"
 
 * section[orderReferral].title = "Order-Referral-Form 4-sepsis"
-// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 4-sepsis\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(4-sepsis-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(4-sepsis-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(4-sepsis-ServiceRequest)

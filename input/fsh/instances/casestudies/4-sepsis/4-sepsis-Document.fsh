@@ -41,10 +41,6 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-sepsis"
 * entry[=].resource = Urine-sepsis
 
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/4-sepsis"
-// * entry[=].resource = 4-sepsis-Questionnaire
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/4-sepsis"
-// * entry[=].resource = 4-sepsis-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis"  // entry[15]
 * entry[=].resource = 4-sepsis-ServiceRequest
 

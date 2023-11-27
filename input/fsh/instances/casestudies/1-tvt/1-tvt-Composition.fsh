@@ -34,9 +34,6 @@ Usage: #inline
 * title = "Laboratory order 1-tvt"
 
 * section[orderReferral].title = "Laboratory Order by Service Request 1-tvt"
-// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 1-tvt\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(1-tvt-Questionnaire) ChLabOrderSRContainer
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest)
