@@ -20,7 +20,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/SimoneStuder)
-* requester = Reference(MarcelMustermannGruppenpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
 * reasonReference = Reference(DiagnosticReport/skin-dermatoscopy)

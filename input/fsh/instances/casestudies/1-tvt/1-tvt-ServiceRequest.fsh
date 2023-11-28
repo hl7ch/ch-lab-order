@@ -23,7 +23,7 @@ Usage: #example
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
-* requester = Reference(MarcelMustermannGruppenpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
@@ -65,15 +65,17 @@ Usage: #example
 * communication.preferred = true
 
 // ---- PractitionerRole --------
-Instance: MarcelMustermannGruppenpraxis
+
+/*
+Instance: MarcMustermannGruppenpraxis
 InstanceOf: CHCorePractitionerRole
 Title: "Marcel Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #example
-* practitioner = Reference(Practitioner/MarcelMustermann)
+* practitioner = Reference(Practitioner/MarcMustermann)
 * organization = Reference(Organization/Gruppenpraxis)
 
-Instance: MarcelMustermann
+Instance: MarcMustermann
 InstanceOf: CHCorePractitioner
 Title: "Marcel Mustermann"
 Description: "Practitioner, works in Arztpraxis, refers to 1-tvt and 5-biol-monit"
@@ -94,6 +96,7 @@ Usage: #example
 * telecom[+].system = #email
 * telecom[=].value = "marcel.mustermann@gruppenpraxis.ch"
 * telecom[=].use = #work
+*/
 
 Instance: HealthInsuranceCardTobiasTimmermann
 InstanceOf: Coverage
@@ -123,7 +126,7 @@ Usage: #example
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
 * subject = Reference(Patient/TobiasTimmermann)
-* collection.collector = Reference(Practitioner/MarcelMustermann)
+* collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
@@ -141,7 +144,7 @@ Usage: #example
 * subject = Reference(Patient/TobiasTimmermann)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
-* collection.collector = Reference(Practitioner/MarcelMustermann)
+* collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2020-08-16T17:00:17Z"
 * processing.timePeriod.start = "2020-08-16T17:00:17Z" // usually same time as collectedDateTime
 * processing.timePeriod.end = "2020-08-16T17:30:17Z" // when processing should be terminated
@@ -158,7 +161,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/TobiasTimmermann)
-* collection.collector = Reference(Practitioner/MarcelMustermann)
+* collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"

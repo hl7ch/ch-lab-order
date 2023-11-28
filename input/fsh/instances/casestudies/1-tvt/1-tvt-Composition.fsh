@@ -11,16 +11,16 @@ Usage: #example
 
 // ---- Sender and Receiver ----
 * extension[0].extension.url = "enterer"
-* extension[=].extension.valueReference = Reference(MarcelMustermannGruppenpraxis)
+* extension[=].extension.valueReference = Reference(MarcMustermannGruppenpraxis)
 * extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
-* extension[=].valueReference = Reference(MarcelMustermannGruppenpraxis)
+* extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(MarcelMustermannGruppenpraxis)  // TODO zusätzlichen Arzt einbringen
+* extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)  // TODO zusätzlichen Arzt einbringen
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(Patient/TobiasTimmermann)
 
@@ -30,7 +30,7 @@ Usage: #example
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * subject = Reference(Patient/TobiasTimmermann)
 * date = "2019-03-31T11:46:09+02:00"
-* author = Reference(MarcelMustermannGruppenpraxis)
+* author = Reference(MarcMustermannGruppenpraxis)
 * title = "Laboratory order 1-tvt"
 
 * section[orderReferral].title = "Laboratory Order by Service Request 1-tvt"

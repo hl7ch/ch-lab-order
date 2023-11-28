@@ -175,7 +175,7 @@ Usage: #example
 * subject = Reference(Patient/SimoneStuder)
 * createdDateTime = "2017-12-17"
 * issued = "2017-12-17T14:56:18Z"
-* operator = Reference(Practitioner/MarcelMustermann)
+* operator = Reference(Practitioner/MarcMustermann)
 * height = 661
 * width = 702
 * content.id = "a1"

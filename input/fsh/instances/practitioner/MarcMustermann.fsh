@@ -1,6 +1,6 @@
 Instance: MarcMustermann
 InstanceOf: CHCorePractitioner
-Title: "Armin Ahrens"
+Title: "Marc Mustermann, Practitioner"
 Description: "Practitioner, works in Gruppenpraxis"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3"

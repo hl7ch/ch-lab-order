@@ -14,7 +14,7 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(MarcelMustermannGruppenpraxis)
+* extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(WoodyWorkdocSpeiserRails)
 

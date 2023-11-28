@@ -22,7 +22,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
-* requester = Reference(MarcelMustermannGruppenpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
