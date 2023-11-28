@@ -73,36 +73,6 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-Instance: ArminAhrensArztpraxis
-InstanceOf: CHCorePractitionerRole
-Title: "Marc Mustermann at Arztpraxis"
-Description: "PractitionerRole, refers to 1-tvt"
-Usage: #example
-* practitioner = Reference(Practitioner/ArminAhrens)
-* organization = Reference(Organization/Arztpraxis)
-
-Instance: ArminAhrens
-InstanceOf: CHCorePractitioner
-Title: "Armin Ahrens"
-Description: "Practitioner, works in Arztpraxis, refers to 6-histopath"
-Usage: #example
-* identifier[0].system = "urn:oid:2.51.1.3"
-* identifier[=].value = "7601000050700"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123309"
-* name.use = #official
-* name.family = "Ahrens"
-* name.given = "Armin"
-* name.prefix = "Dr. med."
-* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-* name.prefix.extension.valueCode = #AC
-* telecom[0].system = #phone
-* telecom[=].value = "033 123 22 11"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "armin.ahrens@arztpraxis.ch"
-* telecom[=].use = #work
-
 Instance: HealthInsuranceCardSimoneStuder
 InstanceOf: Coverage
 Title: "HealthInsuranceCard"
@@ -141,7 +111,7 @@ Usage: #example
 * container.type = $sct#701394007 "General specimen receptacle transport container (physical object)"
 
 Instance: SkinDermatoscopy
-InstanceOf: DiagnosticReport
+InstanceOf: ChLabOrderDiagnosticReport
 Title: "Report about the dermatiscopy of skin"
 Description: "Report about the dermatiscopy of skin"
 Usage: #example
@@ -175,7 +145,7 @@ Usage: #example
 * subject = Reference(Patient/SimoneStuder)
 * createdDateTime = "2017-12-17"
 * issued = "2017-12-17T14:56:18Z"
-* operator = Reference(Practitioner/MarcMustermann)
+* operator = Reference(Practitioner/ArminAhrens)
 * height = 661
 * width = 702
 * content.id = "a1"
