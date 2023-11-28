@@ -12,9 +12,9 @@ Usage: #example
 * category = $sct#721927009 "Referral note (record artifact)"
 * subject = Reference(Patient/HansGuggindieluft)
 * date = "2005-12-24T09:43:41+11:00"
-* author = Reference(PractitionerRole/MarcMustermannArztpraxis)
-* authenticator = Reference(Organization/Arztpraxis)
-* custodian = Reference(Organization/Arztpraxis)
+* author = Reference(PractitionerRole/MarcMustermannGruppenpraxis)
+* authenticator = Reference(Organization/Gruppenpraxis)
+* custodian = Reference(Organization/Gruppenpraxis)
 * relatesTo.code = #appends
 * relatesTo.target = Reference(example)
 * description = "Physical"

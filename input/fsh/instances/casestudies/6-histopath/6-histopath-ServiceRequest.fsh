@@ -20,7 +20,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/SimoneStuder)
-* requester = Reference(MarcelMustermannGruppenpraxis)
+* requester = Reference(ArminAhrensArztpraxis)
 * reasonCode = $sct#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
 * reasonReference = Reference(DiagnosticReport/skin-dermatoscopy)
@@ -73,6 +73,36 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+Instance: ArminAhrensArztpraxis
+InstanceOf: CHCorePractitionerRole
+Title: "Marc Mustermann at Arztpraxis"
+Description: "PractitionerRole, refers to 1-tvt"
+Usage: #example
+* practitioner = Reference(Practitioner/ArminAhrens)
+* organization = Reference(Organization/Arztpraxis)
+
+Instance: ArminAhrens
+InstanceOf: CHCorePractitioner
+Title: "Armin Ahrens"
+Description: "Practitioner, works in Arztpraxis, refers to 6-histopath"
+Usage: #example
+* identifier[0].system = "urn:oid:2.51.1.3"
+* identifier[=].value = "7601000050700"
+* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[=].value = "A123309"
+* name.use = #official
+* name.family = "Ahrens"
+* name.given = "Armin"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[=].value = "033 123 22 11"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "armin.ahrens@arztpraxis.ch"
+* telecom[=].use = #work
+
 Instance: HealthInsuranceCardSimoneStuder
 InstanceOf: Coverage
 Title: "HealthInsuranceCard"
@@ -105,7 +135,7 @@ Usage: #example
 // ---- only in R5: ----
 //* feature.type = $sct#181469002 "Entire skin (body structure)"  //  The physical property of a specimen
 //* feature.Description = "29 x 11 x 5 mm skin ellipse"
-* collection.collector = Reference(MarcelMustermannGruppenpraxis)
+* collection.collector = Reference(ArminAhrensArztpraxis)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#1149541002 "Entire skin of lumbar region of back (body structure)"
 * container.type = $sct#701394007 "General specimen receptacle transport container (physical object)"
