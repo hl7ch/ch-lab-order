@@ -22,8 +22,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
-// * reasonCode = $sct#90688005
-// * reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 * specimen[+] = Reference(Specimen/Urine-24h)
