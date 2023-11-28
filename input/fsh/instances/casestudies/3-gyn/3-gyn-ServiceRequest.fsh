@@ -3,7 +3,7 @@ InstanceOf: ChOrfServiceRequest
 Title: "laborder 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example
-* id = "3-gyn"
+* id = "3-gyn-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -128,7 +128,7 @@ Usage: #example
 * status = #available
 * type = $sct#430387006 "Combined specimen of cytologic material from endocervix, ectocervix, and vaginal fornix (specimen)"
 * subject = Reference(Patient/MarinaRubella)
-* request = Reference(ServiceRequest/3-gyn)
+* request = Reference(ServiceRequest/3-gyn-service-request)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#706053007 "General specimen container (physical object)"
@@ -141,7 +141,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/MarinaRubella)
-* request = Reference(ServiceRequest/3-gyn)
+* request = Reference(ServiceRequest/3-gyn-service-request)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -158,7 +158,7 @@ Usage: #example
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
 * subject = Reference(Patient/MarinaRubella)
-* request = Reference(ServiceRequest/3-gyn)
+* request = Reference(ServiceRequest/3-gyn-service-request)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
@@ -176,7 +176,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/MarinaRubella)
 * receivedTime = "2020-08-16T16:40:17Z"
-* request = Reference(ServiceRequest/3-gyn)
+* request = Reference(ServiceRequest/3-gyn-service-request)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"

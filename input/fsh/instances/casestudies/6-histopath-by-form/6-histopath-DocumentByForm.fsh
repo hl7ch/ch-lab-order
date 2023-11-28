@@ -1,9 +1,9 @@
-Instance: 6-histopath-Document
-InstanceOf: ChLabOrderDocument
-Title: "Document 6-histopath"
+Instance: 6-histopath-DocumentByForm
+InstanceOf: ChOrfDocument
+Title: "CH-LAB-Order 6-histopath"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "6-histopath-document"
+* id = "6-histopath-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/6-histopath"
-* entry[=].resource = 6-histopath-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/6-histopath-composition-by-form"
+* entry[=].resource = 6-histopath-CompositionByForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SimoneStuder"
 * entry[=].resource = SimoneStuder
@@ -26,8 +26,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
 * entry[=].resource = PeterPresto
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-* entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
@@ -51,10 +49,10 @@ Usage: #example
 * entry[=].resource = SkinDermatoscopyImage
 
 
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath"
-// * entry[=].resource = 6-histopath-Questionnaire
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
-// * entry[=].resource = 6-histopath-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request"
-* entry[=].resource = 6-histopath-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath"
+* entry[=].resource = 6-histopath-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
+* entry[=].resource = 6-histopath-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request-by-form"
+* entry[=].resource = 6-histopath-ServiceRequestByForm
 

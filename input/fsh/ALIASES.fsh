@@ -34,6 +34,9 @@ Alias:  $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v
 Alias:  $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
 Alias:  $document-entry-language-code  = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode
 
+//---- Practitioner ----
+Alias:  $hcSpecialisation              = http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcSpecialisation
+
 // Order
 Alias:  $request-priority              = http://hl7.org/fhir/request-priority
 Alias:  $servicerequest-categories     = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories

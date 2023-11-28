@@ -1,9 +1,9 @@
-Instance: 5-biol-monit-Document
-InstanceOf: ChLabOrderDocument
-Title: "Document 5-biol-monit"
+Instance: 5-biol-monit-DocumentByForm
+InstanceOf: ChOrfDocument
+Title: "CH-LAB-Order 5-biol-monit"
 Description: "Example Bundle for referral/order for toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit-document"
+* id = "5-biol-monit-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit"
-* entry[=].resource = 5-biol-monit-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit-composition-by-form"
+* entry[=].resource = 5-biol-monit-CompositionByForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
 * entry[=].resource = BeatBorer
@@ -53,6 +53,11 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-biol-monit"
 * entry[=].resource = Urine-biol-monit
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-service-request"
-* entry[=].resource = 5-biol-monit-ServiceRequest
+
+* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/5-biol-monit"
+* entry[=].resource = 5-biol-monit-Questionnaire
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/5-biol-monit"
+* entry[=].resource = 5-biol-monit-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-service-request-by-form"
+* entry[=].resource = 5-biol-monit-ServiceRequestByForm
 

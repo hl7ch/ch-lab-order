@@ -1,6 +1,6 @@
 Instance: 2-pertussis-Document
 InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 2-pertussis"
+Title: "Document 2-pertussis"
 Description: "Example Bundle for referral/order for Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document"
@@ -32,8 +32,8 @@ Usage: #example
 // * entry[=].resource = MarcMustermann
 // * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
 // * entry[=].resource = Arztpraxis
-// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
-// * entry[=].resource = MarcMustermannArztpraxis
+// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+// * entry[=].resource = MarcMustermannGruppenpraxis
 
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[10]

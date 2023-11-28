@@ -75,7 +75,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChLabOrderDiagnosisCondition) 
+* reasonReference only Reference(ChLabOrderDiagnosisCondition or ChLabOrderDiagnosticReport) 
 
 //------- insurance -------
 
@@ -122,7 +122,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -166,7 +166,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -207,7 +207,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -250,7 +250,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -294,7 +294,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)

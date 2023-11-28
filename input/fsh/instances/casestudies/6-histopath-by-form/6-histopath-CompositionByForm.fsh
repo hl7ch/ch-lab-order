@@ -1,9 +1,9 @@
-Instance: 6-histopath-Composition
-InstanceOf: ChLabOrderComposition
-Title: "Composition 6-histopath"
+Instance: 6-histopath-CompositionByForm
+InstanceOf: ChOrfComposition
+Title: "Composition by Form 6-histopath"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
 Usage: #example
-* id = "6-histopath"
+* id = "6-histopath-composition-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
@@ -35,9 +35,9 @@ Usage: #example
 * author = Reference(ArminAhrensArztpraxis)
 
 * section[orderReferral].title = "Order-Referral-Form 6-histopath"
-// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 6-histopath\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(6-histopath-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequest)
+* section[orderReferral].entry[Questionnaire] = Reference(6-histopath-Questionnaire)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-QuestionnaireResponse)
+* section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequestByForm)

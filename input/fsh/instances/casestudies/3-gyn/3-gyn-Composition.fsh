@@ -1,6 +1,6 @@
 Instance: 3-gyn-Composition
 InstanceOf: ChLabOrderComposition
-Title: "3-gyn"
+Title: "Composition 3-gyn"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
 Usage: #example
 * id = "3-gyn"
@@ -16,7 +16,7 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(MarcMustermannArztpraxis)
+* extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final

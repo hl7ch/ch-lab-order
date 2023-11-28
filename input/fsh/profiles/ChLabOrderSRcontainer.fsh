@@ -57,7 +57,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChLabOrderDiagnosisCondition) 
+* reasonReference only Reference(ChLabOrderDiagnosisCondition or ChLabOrderDiagnosticReport) 
 
 //------- insurance -------
 
@@ -99,7 +99,7 @@ Usage: #example
 * category = $sct#721963009 "Order (record artifact)"
 
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 
 // ---- Container containing 2 Tests ----------
 // ######################################################################
@@ -137,7 +137,7 @@ Usage: #example
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -186,7 +186,7 @@ Usage: #example
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)

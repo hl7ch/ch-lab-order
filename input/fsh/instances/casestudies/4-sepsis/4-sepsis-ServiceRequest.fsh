@@ -3,7 +3,7 @@ InstanceOf: ChLabOrderSRContainer
 Title: "Service Request 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
-* id = "4-sepsis"
+* id = "4-sepsis-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -143,7 +143,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/SaraSpeckmann)
-* request = Reference(ServiceRequest/4-sepsis)
+* request = Reference(ServiceRequest/4-sepsis-service-request)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -158,7 +158,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/SaraSpeckmann)
-* request = Reference(ServiceRequest/4-sepsis)
+* request = Reference(ServiceRequest/4-sepsis-service-request)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -176,7 +176,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/SaraSpeckmann)
 * receivedTime = "2020-08-16T16:40:17Z"
-* request = Reference(ServiceRequest/4-sepsis)
+* request = Reference(ServiceRequest/4-sepsis-service-request)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2020-08-16T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"

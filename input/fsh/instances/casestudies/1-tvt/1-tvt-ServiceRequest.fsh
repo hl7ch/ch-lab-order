@@ -25,7 +25,7 @@ Usage: #example
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity"
+* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
@@ -64,9 +64,12 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+// ---- PractitionerRole --------
+
+/*
 Instance: MarcMustermannGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "Marc Mustermann at Arztpraxis"
+Title: "Marcel Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #example
 * practitioner = Reference(Practitioner/MarcMustermann)
@@ -74,7 +77,7 @@ Usage: #example
 
 Instance: MarcMustermann
 InstanceOf: CHCorePractitioner
-Title: "Marc Mustermann"
+Title: "Marcel Mustermann"
 Description: "Practitioner, works in Arztpraxis, refers to 1-tvt and 5-biol-monit"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3"
@@ -83,7 +86,7 @@ Usage: #example
 * identifier[=].value = "A123309"
 * name.use = #official
 * name.family = "Mustermann"
-* name.given = "Marc"
+* name.given = "Marcel"
 * name.prefix = "Dr. med."
 * name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 * name.prefix.extension.valueCode = #AC
@@ -91,8 +94,9 @@ Usage: #example
 * telecom[=].value = "033 333 22 11"
 * telecom[=].use = #work
 * telecom[+].system = #email
-* telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
+* telecom[=].value = "marcel.mustermann@gruppenpraxis.ch"
 * telecom[=].use = #work
+*/
 
 Instance: HealthInsuranceCardTobiasTimmermann
 InstanceOf: Coverage

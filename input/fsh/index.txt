@@ -77,7 +77,7 @@ KlebsiellaKeller                            Instance    instances/KlebsiellaKell
 LaborPipette                                Instance    instances/Organization/LaborPipette.fsh
 HansHauser                                  Instance    instances/Practitioner/HansHauser.fsh
 MarcMustermann                              Instance    instances/Practitioner/MarcMustermann.fsh
-MarcMustermannArztpraxis                    Instance    instances/MarcMustermannArztpraxis.fsh
+MarcMustermannGruppenpraxis                    Instance    instances/MarcMustermannGruppenpraxis.fsh
 MarinaRubella                               Instance    instances/Patient/MarinaRubella.fsh
 OrfQrToBundle                               Instance    instances/OrfQrToBundle.fsh
 PauloPorcellini                             Instance    instances/Practitioner/PauloPorcellini.fsh

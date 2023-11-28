@@ -1,6 +1,6 @@
 Instance: 3-gyn-Document
 InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order 3-gyn"
+Title: "Document 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn"
@@ -17,12 +17,12 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
-* entry[=].resource = MarcMustermann
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
-* entry[=].resource = Arztpraxis
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannArztpraxis"
-* entry[=].resource = MarcMustermannArztpraxis
+// * entry[+].fullUrl = "http://example.com/fhir/Practitioner/ArminAhrens"
+// * entry[=].resource = ArminAhrens
+// * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
+// * entry[=].resource = Arztpraxis
+// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/ArminAhrensArztpraxis"
+// * entry[=].resource = ArminAhrensArztpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[5]
 * entry[=].resource = EvaErlenmeyer
@@ -55,5 +55,5 @@ Usage: #example
 // * entry[=].resource = 3-gyn-Questionnaire
 // * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
 // * entry[=].resource = 3-gyn-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request"
 * entry[=].resource = 3-gyn-ServiceRequest

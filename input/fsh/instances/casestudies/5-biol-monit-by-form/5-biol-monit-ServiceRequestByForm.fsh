@@ -1,9 +1,9 @@
-Instance: 5-biol-monit-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+Instance: 5-biol-monit-ServiceRequestByForm
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit-service-request"
+* id = "5-biol-monit-service-request-by-form"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123123"
@@ -31,6 +31,7 @@ Usage: #example
 * specimen[0] = Reference(Specimen/Blood-biol-monit)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
+/*
 // ---- Patient --------
 Instance: BeatBorer
 InstanceOf: CHCorePatient
@@ -218,3 +219,4 @@ Usage: #example
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
 
+*/

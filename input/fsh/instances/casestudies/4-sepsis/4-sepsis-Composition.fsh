@@ -1,6 +1,6 @@
 Instance: 4-sepsis-Composition
 InstanceOf: ChLabOrderComposition
-Title: "4-sepsis"
+Title: "Composition 4-sepsis"
 Description: "Composition: Storyboard for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis"
@@ -21,7 +21,7 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(MarcMustermannArztpraxis)
+* extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(Patient/SaraSpeckmann)
 
