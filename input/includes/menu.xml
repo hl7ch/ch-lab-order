@@ -62,9 +62,6 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-            <li>
-        <a href="Questionnaire-1-tvt.html">Tiefe Venenthrombose</a>
-      </li>
       <li>
         <a href="Questionnaire-2-pertussis.html">Pertussis</a>
       </li>
@@ -79,6 +76,20 @@
       </li>
       <li>
         <a href="Questionnaire-6-histopath.html">Histopathologische Untersuchung</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Document<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="document-lo-by-form.html">Lab-Order Document by form</a>
+      </li>
+      <li>
+        <a href="document-lo.html">Lab-Order Document by Service Request</a>
       </li>
     </ul>
   </li>

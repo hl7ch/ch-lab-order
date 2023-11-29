@@ -11,9 +11,9 @@ Usage: #example
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(Practitioner/MarcMustermann)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
-* processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
-* processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
+* collection.collectedDateTime = "2020-08-16T17:00:17Z"
+* processing.timePeriod.start = "2020-08-16T17:00:17Z" // usually same time as collectedDateTime
+* processing.timePeriod.end = "2020-08-16T17:30:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"

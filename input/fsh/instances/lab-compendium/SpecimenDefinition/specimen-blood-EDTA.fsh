@@ -13,9 +13,9 @@ Usage: #example
 * typeTested[=].container.type = $sct#706049005 "Blood tube (physical object)"
 * typeTested[=].container.cap = $container-cap#red
 * typeTested[=].container.cap.text = "red cap"
-* typeTested[=].container.description = "red cap plastic tube 10 mL"
-* typeTested[=].container.capacity = 10 'mL' "milliliter"
-* typeTested[=].container.minimumVolumeQuantity = 5 'mL' "milliliter"
+* typeTested[=].container.description = "S-Monovette® EDTA"
+* typeTested[=].container.capacity = 4.9 'mL' "milliliter"
+* typeTested[=].container.minimumVolumeQuantity = 4.0 'mL' "milliliter"
 * typeTested[=].retentionTime = 2 'h' "hour"
 * typeTested[=].rejectionCriterion[0] = $rejection-criteria#hemolized
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
@@ -23,4 +23,3 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
 * typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
 * typeTested[=].handling[=].maxDuration = 2 'h' "hour"
-// TODO exact values and container, maybe Sarstedt

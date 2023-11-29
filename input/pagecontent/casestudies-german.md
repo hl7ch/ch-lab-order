@@ -76,7 +76,7 @@ Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
 
 ### Fallbeispiel 6: Verdacht auf Melanom, Anordnung einer histopathologischen Untersuchung
 
-Eine 45-jährige Patientin kam zu ihrer regelmäßigen Hautuntersuchung und es wurde diese Läsion festgestellt: Verbindungsnävi, bestehend aus einem seborrhoischen Bereich am oberen Ende und einem atypischen Netzwerk aus vielen einzelnen Punkten, Strukturen usw., was auf eine melanozytäre Beteiligung hindeutet. Exzision. Beifügung dermatoskopischer Bilder // TODO Präparat: 29 x 11 x 5 mm Hautellipse Körperstelle: Rücken paralumbar links
+Eine 45-jährige Patientin kam zu ihrer regelmäßigen Hautuntersuchung und es wurde diese Läsion festgestellt: Verbindungsnävi, bestehend aus einem seborrhoischen Bereich am oberen Ende und einem atypischen Netzwerk aus vielen einzelnen Punkten, Strukturen usw., was auf eine melanozytäre Beteiligung hindeutet. Exzision. Beifügung dermatoskopischer Bilder Präparat: 29 x 11 x 5 mm Hautellipse Körperstelle: Rücken paralumbar links
 
 Die Hautprobe wird zusammen mit dem Auftragsformular und dem dermatoskopischen Bild an das Labor gesandt.
 

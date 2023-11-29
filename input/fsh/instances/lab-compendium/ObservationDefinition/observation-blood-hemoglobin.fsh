@@ -20,5 +20,3 @@ Usage: #example
 * qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
 * qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
 * qualifiedInterval[=].age.low = 20 'a'
-
-// TODO observation-blood-hematocrit

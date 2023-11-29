@@ -1,7 +1,7 @@
 Profile: ChLabOrderSRSingletest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-singletest
-Title: "CH LAB-Order-SR Labtest"
+Title: "CH LAB-Order-SR Single-test"
 Description: "Definition of a ServiceRequests of a single LabTest in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"
@@ -20,17 +20,13 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
 
-* instantiatesCanonical 1..1 MS
+* instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
 * basedOn only Reference(ChLabOrderSRSingletest) // Labtest
-* requisition 1..1 MS
+* requisition 0..1 MS
 
-//---- Use only Code from LOINC or Snomed CT -----
-//---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
-
-// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 * code 1..1
@@ -79,7 +75,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChLabOrderDiagnosisCondition) 
+* reasonReference only Reference(ChLabOrderDiagnosisCondition or ChLabOrderDiagnosticReport) 
 
 //------- insurance -------
 
@@ -114,7 +110,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -126,7 +122,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -159,7 +155,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -170,7 +166,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -200,7 +196,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -211,7 +207,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -243,7 +239,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -254,7 +250,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -287,7 +283,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -298,7 +294,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)

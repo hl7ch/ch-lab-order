@@ -24,34 +24,10 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * instantiatesCanonical 0.. MS
 
 // * Is based On ChLabOrderSRSingletest or other SRContainer
-* basedOn 1.. MS
+* basedOn 0.. MS
 * basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest or Selfreferential
-* requisition 1..1 MS
+* requisition 0..1 MS
 
-// ---- Canonical --- url to PlanDefinition | ActivityDefinition
-// * instantiatesCanonical ^slicing.discriminator.type = #value
-// * instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
-// * instantiatesCanonical ^slicing.rules = #open
-// * instantiatesCanonical ^slicing.description = "choose desired PlanDefinition of test/panel"
-// * instantiatesCanonical ^slicing.ordered = false
-
-// ---- basedOn 1..n ---- Reference to further SR
-// * basedOn ^slicing.discriminator.type = #value
-// * basedOn ^slicing.discriminator.path = "this"
-// * basedOn ^slicing.rules = #open
-// * basedOn ^slicing.description = ""
-// * basedOn ^slicing.ordered = false
-
-// ---- requisition 1 ---- grouperID
-
-//------- category -------
-// * category 1..1
-// * category from ServiceRequestCategories (required)
-// * category ^short = "Classification of Service Request: order of lab or histopathological tests/panels, request for test-results or request for 2nd opinion"
-// * category ^binding.description = "High-level kind of a clinical document at a macro level."
-
-// ------ code -------
-// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 
@@ -81,7 +57,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChLabOrderDiagnosisCondition) 
+* reasonReference only Reference(ChLabOrderDiagnosisCondition or ChLabOrderDiagnosticReport) 
 
 //------- insurance -------
 
@@ -120,17 +96,17 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 
 // ---- Container containing 2 Tests ----------
 // ######################################################################
 
 Instance: SR-CreaClearance
 InstanceOf: ChLabOrderSRContainer
-Title: "ChLabOrderSRContainer containing the Creatinine Clearance Panel"
+Title: "CH LAB-Order SRContainer containing the Creatinine Clearance Panel"
 Description: "Example for Service Request for Creatinine-Clearance Container"
 Usage: #example
 * id = "CreaClearance"
@@ -151,7 +127,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#167181009 "Measurement of renal clearance of creatinine (procedure)"
@@ -161,7 +137,7 @@ Usage: #example
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -200,7 +176,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // ---- Code, LOINC or SNOMED CT ----
 // * code.coding[0] = $sct#20109005 "Electrolytes measurement, serum (procedure)"
@@ -210,7 +186,7 @@ Usage: #example
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#723188008
 * reasonCode.text = "Renal insufficiency (disorder)"
 * insurance = Reference(HealthInsuranceCard)

@@ -1,7 +1,7 @@
 Instance: MarcMustermann
 InstanceOf: CHCorePractitioner
-Title: "Marc Mustermann"
-Description: "Practitioner, works in Arztpraxis, refers to 1-tvt"
+Title: "Marc Mustermann, Practitioner"
+Description: "Practitioner, works in Gruppenpraxis"
 Usage: #example
 * identifier[0].system = "urn:oid:2.51.1.3"
 * identifier[=].value = "7601000050700"
@@ -14,7 +14,7 @@ Usage: #example
 * name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 * name.prefix.extension.valueCode = #AC
 * telecom[0].system = #phone
-* telecom[=].value = "033 333 22 11"
+* telecom[=].value = "033 444 22 11"
 * telecom[=].use = #work
 * telecom[+].system = #email
 * telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
