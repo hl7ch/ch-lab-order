@@ -24,4 +24,3 @@ Usage: #example
 // CodeSystem: ch-ehealth-codesystem-medreg
 * qualification.code.coding.code = #1021
 * qualification.code.text = "Dermatology and venereology"
-
