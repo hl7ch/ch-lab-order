@@ -20,7 +20,8 @@ Usage: #example
 * telecom[+].system = #email
 * telecom[=].value = "armin.ahrens@arztpraxis.ch"
 * telecom[=].use = #work
-* qualification.code.coding.system = "urn:oid:2.16.756.5.30.1.127.3.5"
+* qualification.code.coding.system = "urn:oid:2.16.756.5.30.1.127.3.5" 
+// CodeSystem: ch-ehealth-codesystem-medreg
 * qualification.code.coding.code = #1021
 * qualification.code.text = "Dermatology and venereology"
 
