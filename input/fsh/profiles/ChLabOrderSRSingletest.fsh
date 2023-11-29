@@ -20,7 +20,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
 
-* instantiatesCanonical 1..1 MS   // canonical(ActivityDefinition | PlanDefinition)
+* instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 

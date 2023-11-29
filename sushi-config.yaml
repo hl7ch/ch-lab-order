@@ -25,8 +25,8 @@ contact:
 dependencies:
   ch.fhir.ig.ch-epr-term: 2.0.9
   hl7.terminology: 5.1.0
-  ch.fhir.ig.ch-orf: 2.0.0-ballot
-  ch.fhir.ig.ch-core: 4.0.0-ballot
+  ch.fhir.ig.ch-orf: current
+  ch.fhir.ig.ch-core: current
   hl7.fhir.uv.order-catalog: 0.1.0 
    
 pages:
