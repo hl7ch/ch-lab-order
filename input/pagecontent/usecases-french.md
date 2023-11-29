@@ -1,3 +1,11 @@
+<!-- markdownlint-disable MD001 MD033 MD041 -->
+
+<!--
+╭───────────────────── UC -german ──────────────────────────╮
+│  UC - english is original, this is a traduction           │
+╰───────────────────────────────────────────────────────────╯
+-->
+
 ### Cas d'utilisation 1: Résultats des Tests au sens classique du terme
 
 Le donneur d'ordre (par ex. le médecin) a besoin de différents examens de laboratoire pour la suite du diagnostic. Pour ce faire, il crée dans le système d'information de son cabinet un document de commande contenant les informations nécessaires sur le patient, le test de laboratoire, les échantillons, etc. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien) sont collectés dans des récipients correspondants et clairement attribués au document de commande (Specimen.identifier, Specimen.container.identifier). Les échantillons peuvent être analysés dans le laboratoire de l'entreprise ou doivent être envoyés par courrier ou par coursier au laboratoire externe. Le système d'information du laboratoire leur attribue alors un identifiant propre (Specimen.accessionIdentifier).

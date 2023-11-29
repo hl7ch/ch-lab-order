@@ -130,7 +130,7 @@ Usage: #example
 
 Instance: SR-CreaClearance
 InstanceOf: ChLabOrderSRContainer
-Title: "ChLabOrderSRContainer containing the Creatinin Clearance Panel"
+Title: "ChLabOrderSRContainer containing the Creatinine Clearance Panel"
 Description: "Example for Service Request for Creatinine-Clearance Container"
 Usage: #example
 * id = "CreaClearance"
@@ -138,7 +138,8 @@ Usage: #example
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/Creatinine-Clearance"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/Creatinine-Clearance"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance"
 
 * basedOn = Reference(SR-Creatinine-Serum)
 * basedOn = Reference(SR-Creatinine-24h-Urine)

@@ -2,6 +2,7 @@
 Alias:  $sct                           = http://snomed.info/sct
 Alias:  $loinc                         = http://loinc.org
 Alias:  $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:  $v2-0038                       = http://terminology.hl7.org/CodeSystem/v2-0038  // orderStatus
 Alias:  $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371
 Alias:  $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2-0373
 Alias:  $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
@@ -16,6 +17,7 @@ Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/l
 Alias:  $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 Alias:  $shareablevalueset             = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
+Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
 // Alias:  $L-Forms                       = http://terminology.hl7.org/3.1.0/CodeSystem/forms-codes
 
 // ---- Patient

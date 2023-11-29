@@ -16,7 +16,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance" // Canonical identifier
 * version = "0.1.0"
 * name = "UrineCreatinineClearancePanel"
 * title = "24-hour urine creatinine clearance panel"
@@ -26,7 +26,7 @@ Usage: #example
 * date = "2020-02-12T19:00:00+01:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
-* description = "This 24-hour urine creatinine clearance panel is reusing the procedures from the          serum creatinine test as well as the procedure from the 24h urine creatinine panel."
+* description = "This 24-hour urine creatinine clearance panel is reusing the procedures from the serum creatinine test as well as the procedure from the 24h urine creatinine panel."
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE // "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
@@ -54,6 +54,6 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine-clearance"
+* action.definitionCanonical           = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine-clearance"
 * action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
 * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine"

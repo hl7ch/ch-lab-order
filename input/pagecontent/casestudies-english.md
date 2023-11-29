@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD001 MD033 MD041 -->
+
 ### Case study 1: Suspicion of deep vein thrombosis
 
 A patient, Hans Guggindieluft, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He verbally identifies himself via his master data as Hans Guggindieluft, 01.01.1981. He reports unclear leg pain in the left lower leg as well as simultaneously occurring respiratory pain and cough. The doctor carries out the anamnesis and physical examination and prescribes the following laboratory parameters:
