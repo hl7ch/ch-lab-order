@@ -1,5 +1,5 @@
 Instance: 6-histopath-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 0-generic"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example

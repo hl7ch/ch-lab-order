@@ -28,13 +28,10 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
-// * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
-// * entry[=].resource = MarcMustermann
-// * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
-// * entry[=].resource = Arztpraxis
-// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
-// * entry[=].resource = MarcMustermannGruppenpraxis
-
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+* entry[=].resource = MarcMustermannGruppenpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[10]
 * entry[=].resource = EvaErlenmeyer

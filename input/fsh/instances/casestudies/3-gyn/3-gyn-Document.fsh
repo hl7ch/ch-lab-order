@@ -3,7 +3,7 @@ InstanceOf: ChLabOrderDocument
 Title: "CH-LAB-Order 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
 Usage: #example
-* id = "3-gyn"
+* id = "3-gyn-document"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -17,12 +17,12 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella
 
-// * entry[+].fullUrl = "http://example.com/fhir/Practitioner/ArminAhrens"
-// * entry[=].resource = ArminAhrens
-// * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
-// * entry[=].resource = Arztpraxis
-// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/ArminAhrensArztpraxis"
-// * entry[=].resource = ArminAhrensArztpraxis
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+* entry[=].resource = Gruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+* entry[=].resource = MarcMustermannGruppenpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[5]
 * entry[=].resource = EvaErlenmeyer
@@ -33,8 +33,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPap"
 * entry[=].resource = PeterPap
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-* entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis" // entry[10]
 * entry[=].resource = PeterPapGruppenpraxis
 

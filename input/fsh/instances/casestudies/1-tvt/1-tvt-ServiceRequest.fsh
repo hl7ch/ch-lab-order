@@ -1,5 +1,5 @@
 Instance: 1-tvt-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "Service Request 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -89,8 +89,8 @@ Usage: #example
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
-// * specimen[+] = Reference(Specimen/Blood-1-tvt)
+* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+* specimen[+] = Reference(Specimen/Blood-1-tvt)
 
 // ---- Patient --------
 Instance: TobiasTimmermann

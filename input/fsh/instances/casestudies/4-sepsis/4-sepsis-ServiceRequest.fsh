@@ -1,5 +1,5 @@
 Instance: 4-sepsis-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
