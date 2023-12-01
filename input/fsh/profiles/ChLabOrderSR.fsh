@@ -24,7 +24,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
-* basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest
+* basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
 * requisition 0..1 MS
 
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
@@ -92,7 +92,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // ######################################################################
 
 Instance: SR-Chloride
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Chloride"
 Description: "Example for Service Request of Chloride in Serum"
 Usage: #example
@@ -137,7 +137,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Creatinine-24h-Urine
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Creatinine24 h Urine"
 Description: "Example for Service Request"
 Usage: #example
@@ -178,7 +178,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Creatinine-Serum
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Creatinine-Serum"
 Description: "Example for Service Request"
 Usage: #example
@@ -221,7 +221,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Potassium
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Potassium"
 Description: "Example for Service Request of Potassium in Serum"
 Usage: #example
@@ -264,7 +264,7 @@ Usage: #example
 // ######################################################################
 
 Instance: SR-Sodium
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Sodium"
 Description: "Example for Service Request of Sodium in Serum"
 Usage: #example

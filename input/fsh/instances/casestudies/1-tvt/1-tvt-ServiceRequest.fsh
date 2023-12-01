@@ -1,5 +1,5 @@
 Instance: 1-tvt-ServiceRequest
-InstanceOf: ChLabOrderSR
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -7,8 +7,8 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* basedOn[+] = Reference(1-tvt-ServiceRequest-D-Dimer)
-* basedOn[+] = Reference(1-tvt-ServiceRequest-CRP)
+// * basedOn[+] = Reference(1-tvt-ServiceRequest-D-Dimer)
+// * basedOn[+] = Reference(1-tvt-ServiceRequest-CRP)
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
@@ -19,8 +19,8 @@ Usage: #example
 * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-// * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-// * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
 * priority = #urgent
@@ -29,10 +29,11 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-// specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+* specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
+* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
 
+/*
 Instance: 1-tvt-ServiceRequest-D-Dimer
 InstanceOf: ChLabOrderSRSingletest
 Title: "Service Request 1-tvt d-Dimer"
@@ -57,7 +58,9 @@ Usage: #example
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+*/
 
+/*
 Instance: 1-tvt-ServiceRequest-CRP
 InstanceOf: ChLabOrderSRSingletest
 Title: "Service Request 1-tvt CRP"
@@ -91,6 +94,7 @@ Usage: #example
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
+*/
 
 // ---- Patient --------
 Instance: TobiasTimmermann
