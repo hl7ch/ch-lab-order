@@ -136,7 +136,7 @@ InstanceOf: Coverage
 Title: "Health Insurance Card Tobias Timmermann"
 Description: "Example for Insurance"
 Usage: #example
-* id = "health-insurance-card-tobias-timmermann"
+// * id = "health-insurance-card-tobias-timmermann"
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
@@ -199,3 +199,37 @@ Usage: #example
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
+
+Instance: ConditionTobiasTimmermann
+InstanceOf: Condition
+Description: "Problem list of Tobias Timmermann"
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category = $sct#439401001 "diagnosis"
+* severity = $sct#6736007 "Moderate (severity modifier)"
+* code = $sct#368009 "Heart valve disorder"
+* bodySite = $sct#40768004 "Left thorax"
+* bodySite.text = "heart structure"
+* subject = Reference(Patient/TobiasTimmermann) "Tobias Zimmermann"
+// * encounter = Reference(Encounter/f001)
+* onsetDateTime = "2023-08-05"
+* recordedDate = "2023-10-05"
+* asserter = Reference(Patient/TobiasTimmermann) "Tobias Zimmermann"
+* evidence.code = $sct#426396005 "Cardiac chest pain"
+
+/*
+Instance: Insurance-Company
+InstanceOf: Coverage
+Usage: #example
+* identifier.system = "http://ehic.com/insurer/123456789/member"
+* identifier.value = "A123456781"
+* status = #active
+* type = $v3-ActCode#EHCPOL "extended healthcare"
+* subscriber = Reference(Patient/TobiasTimmermann)
+* beneficiary = Reference(Patient/TobiasTimmermann)
+* relationship.coding.code = #self
+* period.end = "2025-03-17"
+* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.value = "1234567891"
+*/

@@ -3,7 +3,7 @@ InstanceOf: ChOrfDocument
 Title: "CH-LAB-Order by Form 5-biol-monit"
 Description: "Example Bundle for referral/order for toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit-by-form"
+* id = "5-biol-monit-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
