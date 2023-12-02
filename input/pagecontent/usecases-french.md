@@ -36,13 +36,13 @@ Un formulaire (Questionnaire) est présenté au donneur d'ordre, qui contient le
 
 En dehors de ce cas d'utilisation : les résultats sont ensuite communiqués au donneur d'ordre.
 
-Exemple de formulaire pour l'hématologie, la coagulation et la chimie clinique : [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
+Exemple de formulaire pour l'hématologie, la coagulation et la chimie clinique : [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt-by-form.html).
 Exemple de formulaire pour la microbiologie, l'hématologie et la chimie clinique : [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
 ### Cas d'utilisation 2: Prescription de laboratoire sans utilisation de Questionnaire et QuestionnaireResponse
 
 Dans le cas de la prescription de laboratoire interne (prescription à partir du SIH vers le système de laboratoire au sein du même hôpital), les systèmes de prescription de laboratoire propres avec CDS connecté jouent un rôle essentiel, de sorte qu'il doit être possible de représenter les prescriptions de laboratoire sans questionnaire. Afin de pouvoir prescrire plusieurs analyses pour le même échantillon, plusieurs demandes de service doivent pouvoir être représentées au moyen de 'Request Pattern'.
-Exemple de formulaire TODO sans Q/QR
+Exemple de formulaire sans Q/QR
 
 ### Cas d'utilisation 3: Demande d'analyses supplémentaires du même échantillon
 
@@ -58,7 +58,7 @@ Parfois, le médecin souhaite également obtenir des informations sur des examen
 * Données relatives au service demandé
 * La catégorie Servicerequest.category est RequestForPrecedentReport ou RequestForPrecedentReportAndImages.
 
-TODO Exemple de formulaire avec ServiceRequestCategory RequestForPrecedentReport
+Exemple de formulaire avec ServiceRequestCategory RequestForPrecedentReport
 
 ### Cas d'utilisation 5: Ordre de collecte pour les analyses toxicologiques (surveillance biologique)
 

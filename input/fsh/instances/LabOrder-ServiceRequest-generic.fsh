@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-generic
 InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request some single test"
+Title: "CH LAB-Order example Service Request some single test"
 Description: "Example for Service Request single test"
 Usage: #example
 * id = "LabOrder-generic"
@@ -16,7 +16,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -27,9 +27,42 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+* supportingInfo = Reference(MedicationStatement/Medication-aspirin)
 * specimen[0] = Reference(Specimen/Blood) "Blood"
 // * specimen[+] = Reference(Specimen/Blood)
+
+Instance: Medication-aspirin
+InstanceOf: MedicationStatement
+Description: "Example of Medication Record"
+Usage: #example
+* status = #active
+* medicationReference = Reference(Medication/Aspirin)
+* subject = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+* effectiveDateTime = "2023-11-11"
+* dateAsserted = "2023-11-11"
+* informationSource = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+// * reason.reference.reference = "Observation/backache"
+* note.text = "Patient takes it every day in the morning back pain"
+* dosage.sequence = 1
+* dosage.text = "1 tablet per day"
+
+Instance: Aspirin
+InstanceOf: Medication
+Description: "Example of a Medication Product"
+Usage: #example
+* contained = sub02
+* code = $sct#774656009 "Product containing only aspirin (medicinal product)"
+* form = $sct#385055001 "Tablet (basic dose form)"
+* ingredient.itemReference = Reference(sub02)
+* ingredient.strength.numerator = 250 'mg'
+* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+
+Instance: sub02
+InstanceOf: Substance
+Description: "Example of a medication substance"
+Usage: #inline
+* code = $sct#387458008 "Aspirin (substance)"

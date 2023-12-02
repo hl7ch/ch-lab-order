@@ -9,16 +9,24 @@ Please add your feedback via the ‘Propose a change’-link in the footer on th
 
 </div>
 
-### HL7 Swiss FHIR Implementation Guide for generic laboratory order forms
+### HL7 Swiss FHIR Implementation Guide for generic laboratory orders
 
-This is the HL7 Swiss FHIR implementation guide for Laboratory Orders by forms, which is based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
+This is the HL7 Swiss FHIR implementation guide for Laboratory Orders, which can be implemented as Orders by Forms or as Orders by ServiceRequest only.
+
+#### Order by Form
+
+Orders are based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
 
 It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
 There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested.
 
-This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives guidiance for the implementaion of the user interface.
+This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives guidance for the implementation of the user interface.
 
-Many laboratories also offer services for monitoring vital signs, such as Blood pressure, ECG, pulse, which can be ordered. This Use Case is out of scope of this implemantation guide, since there is a specific FHIR-Resource named DeviceRequest - Content
+Since many laboratories offer possibilities for monitoring vital signs, such as Blood pressure, ECG, pulse, these services can be ordered. But these use cases are out of scope of this implemantation guide, since there is a specific FHIR-Resource named DeviceRequest - Content, which should be used for this purose.
+
+#### Order by ServiceRequest
+
+This case primarily occurs in hospitals that operate their own medical laboratory. There is no Questonnaire, no QuestionnaireResponse, only the ServiceRequest, which contains what is beeing requested in a CodeableConcept. Therefore the service can be requested as a LOINC Code witĥ supplementary text string. Additional order information can be supplied in an 'orderDetail' element.
 
 #### Download
 
@@ -66,6 +74,13 @@ Using specific case histories, we have created five everyday examples of commiss
 This artefact includes content from SNOMED Clinical Terms&reg; (SNOMED CT&reg;) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact <http://www.snomed.org/snomed-ct/getsnomed-ct> or <info@snomed.org>.
 
 This artefact includes content from LOINC®. This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at <http://loinc.org/terms-of-use>.
+
+### Safety Considerations
+
+This implementation guide defines data elements, resources, formats, and methods for exchanging healthcare data between different participants in the healthcare process. As such, clinical safety is a key concern. Additional guidance regarding safety for the specification’s many and various implementations is available at: [https://www.hl7.org/FHIR/safety.html](https://www.hl7.org/FHIR/safety.html).
+
+Although the present specification gives users the opportunity to observe data protection and data security regulations, its use does not guarantee compliance with these regulations. Effective compliance must be ensured by appropriate measures during implementation projects and in daily operations. The corresponding implementation measures are explained in the standard. 
+In addition, the present specification can only influence compliance with the security regulations in the technical area of standardisation. It cannot influence organisational and contractual matters.
 
 ### IP Statements
 

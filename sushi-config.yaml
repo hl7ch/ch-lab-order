@@ -2,16 +2,16 @@ canonical: http://fhir.ch/ig/ch-lab-order
 id: ch.fhir.ig.ch-lab-order
 name: CH_LAB_ORDER by Form
 title: CH LAB-Order (R4)
-description: Implementation guide CH LAB-Order by Form(R4)
+description: Implementation guide CH CH LAB-Order by Form(R4)
 status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2023-06-29
-version: 2.0.0-ballot
+date: 2023-11-30
+version: 2.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: ballot
+releaseLabel: ci-build
 publisher:
   name: HL7 Switzerland
   url: https://www.hl7.ch
@@ -25,8 +25,8 @@ contact:
 dependencies:
   ch.fhir.ig.ch-epr-term: 2.0.9
   hl7.terminology: 5.1.0
-  ch.fhir.ig.ch-orf: 2.0.0-ballot
-  ch.fhir.ig.ch-core: 4.0.0-ballot
+  ch.fhir.ig.ch-orf: current
+  ch.fhir.ig.ch-core: current
   hl7.fhir.uv.order-catalog: 0.1.0 
    
 pages:
@@ -44,6 +44,10 @@ pages:
     title: Use Cases in German
   usecases-french.md:
     title: Use Cases in French
+  document-lo-by-form.md:
+    title: CH LAB-Order by form
+  document-lo.md:
+    title: CH LAB-Order by Service Request
   profiles.md:
     title: Profiles
   terminology.md:

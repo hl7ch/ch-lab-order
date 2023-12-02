@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-container-example
 InstanceOf: ChLabOrderSRContainer
-Title: "LabOrder Service Request for Creatinine Clearance and Electrolytes in Serum"
+Title: "CH LAB-Order example Service Request for Creatinine Clearance and Electrolytes in Serum"
 Description: "Example for Service Request as container for multiple Service Requests"
 Usage: #example
 * id = "LabOrder-container-example"
@@ -19,11 +19,11 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)

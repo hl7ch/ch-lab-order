@@ -1,3 +1,4 @@
+/*
 Instance: Cervix-swab
 InstanceOf: Specimen
 Title: "Cervix-swab Sample"
@@ -11,3 +12,4 @@ Usage: #example
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#706053007 "General specimen container (physical object)"
+*/

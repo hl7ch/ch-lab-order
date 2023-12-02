@@ -1,7 +1,7 @@
 Profile: ChLabOrderSRSingletest
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR-singletest
-Title: "CH LAB-Order-SR Labtest"
+Title: "CH LAB-Order-SR Single-test"
 Description: "Definition of a ServiceRequests of a single LabTest in the context of CH LAB-Order"
 
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"
@@ -20,17 +20,13 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
 
-* instantiatesCanonical 1..1 MS
+* instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
 * basedOn only Reference(ChLabOrderSRSingletest) // Labtest
-* requisition 1..1 MS
+* requisition 0..1 MS
 
-//---- Use only Code from LOINC or Snomed CT -----
-//---- https://www.devdays.com/wp-content/uploads/2021/12/Daniel-Vreeman-LOINC-_-DevDays-2019-Amsterdam-1.pdf
-
-// TODO: remove the line below as soon as ERROR in Service Request Resource is solved
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 * code 1..1
@@ -79,7 +75,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChLabOrderDiagnosisCondition) 
+* reasonReference only Reference(ChLabOrderDiagnosisCondition or ChLabOrderDiagnosticReport) 
 
 //------- insurance -------
 
@@ -91,219 +87,3 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // ######################################################################
 // ---- Examples of Service Request of for single tests ----
 // ######################################################################
-
-// ---- Service Request of single Test Chloride ------------------------------
-// ######################################################################
-
-Instance: SR-Chloride
-InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for single Test: Chloride"
-Description: "Example for Service Request of Chloride in Serum"
-Usage: #example
-* id = "SR-Chloride"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
-
-// ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
-* status = #active
-* intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
-
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-// * code.coding[0] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
-* code = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
-
-// orderDetails: Additional order information, codeableConcept
-
-* priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#723188008
-* reasonCode.text = "Renal insufficiency (disorder)"
-* insurance = Reference(HealthInsuranceCard)
-
-// ---- Specimen ----
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Serum-capillary)
-// * specimen[+] = Reference(Specimen/Blood)
-
-
-// ---- Service Request of single Test Creatinine-24h-Urine ------------------------------
-// ######################################################################
-
-Instance: SR-Creatinine-24h-Urine
-InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for single Test: Creatinine24 h Urine"
-Description: "Example for Service Request"
-Usage: #example
-* id = "SR-Creatinine-24h-Urine"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine"
-
-// ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
-* status = #active
-* intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
-
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-* code = $loinc#20624-3 "Creatinine [Mass/volume] in 24 hour Urine"
-
-// orderDetails: Additional order information, codeableConcept
-
-* priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#723188008
-* reasonCode.text = "Renal insufficiency (disorder)"
-* insurance = Reference(HealthInsuranceCard)
-
-// ---- Specimen ----
-* specimen[0] = Reference(Specimen/Urine-24h) "Urin 24h Sample"
-
-// ---- Service Request of single Test Creatinine-Serum ------------------------------
-// ######################################################################
-
-Instance: SR-Creatinine-Serum
-InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for single Test: Creatinine-Serum"
-Description: "Example for Service Request"
-Usage: #example
-* id = "SR-Creatinine-Serum"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
-
-// ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
-* status = #active
-* intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
-
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-* code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-
-// orderDetails: Additional order information, codeableConcept
-
-* priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#723188008
-* reasonCode.text = "Renal insufficiency (disorder)"
-* insurance = Reference(HealthInsuranceCard)
-
-// ---- Specimen ----
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Serum-capillary)
-// * specimen[+] = Reference(Specimen/Blood)
-
-// ---- Service Request of single Test Potassium ------------------------------
-// ######################################################################
-
-Instance: SR-Potassium
-InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for single Test: Potassium"
-Description: "Example for Service Request of Potassium in Serum"
-Usage: #example
-* id = "SR-Potassium"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
-
-// ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
-* status = #active
-* intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
-
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-* code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
-
-// orderDetails: Additional order information, codeableConcept
-
-* priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#723188008
-* reasonCode.text = "Renal insufficiency (disorder)"
-* insurance = Reference(HealthInsuranceCard)
-
-// ---- Specimen ----
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Serum-capillary)
-// * specimen[+] = Reference(Specimen/Blood)
-
-// ---- Service Request of single Test Sodium ------------------------------
-// ######################################################################
-
-Instance: SR-Sodium
-InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for single Test: Sodium"
-Description: "Example for Service Request of Sodium in Serum"
-Usage: #example
-* id = "SR-Sodium"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"
-
-// ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
-
-* status = #active
-* intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
-
-// What is being ordered
-// * basedOn = Reference(SR-example)
-// ---- Clinical Chemistry Tests ----
-* code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
-
-// orderDetails: Additional order information, codeableConcept
-
-* priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
-* reasonCode = $sct#723188008
-* reasonCode.text = "Renal insufficiency (disorder)"
-* insurance = Reference(HealthInsuranceCard)
-
-// ---- Specimen ----
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Serum-capillary)
-// * specimen[+] = Reference(Specimen/Blood)
