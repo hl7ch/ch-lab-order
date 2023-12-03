@@ -8,9 +8,10 @@
 * [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/develop/index.html)
 * [CI Build IG-ohne-Q](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/IG-ohne-Q/index.html)
 
-This is a HL7 Swiss FHIR implementation guide.
-The implementation guide is based on CH_ORF (v0.9.1 STU Draft)
-Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>
+This is a HL7 Swiss FHIR implementation guide. It describes mainly two use cases of laboratory orders. 
+The first one composes the order by the choices given from the Laboratory Information System (LIS) and stores them in the FHIR resource ServiceRequest. 
+The second use case offers Questionnaire (Form) curated by the responsible laboratory, which can be prepopulated with administratives informations by the clinic or pracice information system; the client, mostly the ordering practitioner, may complete the Questionnaire with the informations needed to fullfill the request of laboratory tests and test panels. He may add supplementary clinical informations from his information system, such as a problem list, or a medication list.
+The second use case is based on CH_ORF Order & Referral by Form - Implementation Guide (CH:ORF) <http://fhir.ch/ig/ch-orf/index.html>
 
 ## Swiss Laboratory professional societies
 
