@@ -156,7 +156,7 @@ Description: "Example for best-practice of laboratory order"
 Usage: #example
 * status = #in-progress
 * class = $v3-ActCode#IMP "inpatient encounter"
-* subject = Reference(Patient/FranzMuster)
+* subject = Reference(Patient/BirgitBlum)
 
 Instance: Liquemin
 InstanceOf: Medication

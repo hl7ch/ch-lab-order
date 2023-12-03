@@ -32,6 +32,9 @@
     <ul class="dropdown-menu">
       <p><strong> Service Request: </strong></p>
       <li>
+        <a href="Bundle-0-best-practice-document.html">Best practice Example</a>
+      </li>
+      <li>
         <a href="Bundle-1-tvt-document.html">Tiefe Venenthrombose</a>
       </li>
       <li>
