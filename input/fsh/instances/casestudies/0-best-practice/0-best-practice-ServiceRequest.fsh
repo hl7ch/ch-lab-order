@@ -1,5 +1,5 @@
 Instance: 0-best-practice-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "Service Request 0-best-practice"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
