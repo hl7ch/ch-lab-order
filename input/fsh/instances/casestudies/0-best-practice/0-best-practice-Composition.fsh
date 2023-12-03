@@ -1,9 +1,9 @@
-Instance: 1-tvt-Composition
+Instance: 0-best-practice-Composition
 InstanceOf: ChLabOrderComposition
-Title: "Composition 1-tvt"
+Title: "Composition 0-best-practice"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
-* id = "1-tvt"
+* id = "0-best-practice"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
@@ -28,13 +28,14 @@ Usage: #example
 * status = #final
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721965002 "Laboratory order (record artifact)"
-* subject = Reference(Patient/TobiasTimmermann)
+* subject = Reference(Patient/BirgitBlum)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(MarcMustermannGruppenpraxis)
-* title = "Laboratory order 1-tvt"
+* title = "Laboratory order 0-best-practice"
 
-* section[orderReferral].title = "Laboratory Order by Service Request 1-tvt"
+* section[orderReferral].title = "Laboratory Order by Service Request 0-best-practice"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 1-tvt\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest)
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 0-best-practice\n </div>"
+* section[orderReferral].entry[ServiceRequest] = Reference(0-best-practice-ServiceRequest)
+
 
