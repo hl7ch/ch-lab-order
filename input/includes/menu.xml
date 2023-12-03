@@ -8,24 +8,6 @@
 
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-      Case Studies
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="casestudies-english.html">Englisch</a>
-      </li>
-      <li>
-        <a href="casestudies-german.html">German</a>
-      </li>
-      <li>
-        <a href="casestudies-french.html">Français</a>
-      </li>
-    </ul>
-  </li>
-
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
       Use Cases
       <b class="caret"></b>
     </a>

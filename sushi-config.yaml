@@ -32,12 +32,6 @@ dependencies:
 pages:
   index.md:
     title: Home
-  casestudies-english.md:
-    title: Case Studies in English
-  casestudies-german.md:
-    title: Case Studies in German
-  casestudies-french.md:
-    title: Case Studies in French
   usecases-english.md:
     title: Use Cases in English
   usecases-german.md:
