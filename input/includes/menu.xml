@@ -25,26 +25,12 @@
   </li>
 
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Questionnaire<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Questionnaire-LabOrder-form.html">Specification</a>
-      </li>
-      <li>
-        <a href="https://laborprojektgruppe.ch/questionnaire/">Form</a> <!-- questionnaire-form.html -->
-      </li>
-    </ul>
-  </li>
-
-  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-      Case Studies Documents
+      Case Studie Documents
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <p><strong>Service Request: </strong></p>
+      <p><strong> Service Request: </strong></p>
       <li>
         <a href="Bundle-1-tvt-document.html">Tiefe Venenthrombose</a>
       </li>
@@ -63,7 +49,7 @@
       <li>
         <a href="Bundle-6-histopath-document.html">Histopathologische Untersuchung</a>
       </li>
-      <p><strong>Form:</strong></p>
+      <p><strong> Form:</strong></p>
       <li>
         <a href="Bundle-1-tvt-document-by-form.html">Tiefe Venenthrombose</a>
       </li>
@@ -95,6 +81,20 @@
       </li>
       <li>
         <a href="document-lo.html">Lab-Order Document by Service Request</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Questionnaire<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Questionnaire-LabOrder-form.html">Specification</a>
+      </li>
+      <li>
+        <a href="https://laborprojektgruppe.ch/questionnaire/">Form</a> <!-- questionnaire-form.html -->
       </li>
     </ul>
   </li>

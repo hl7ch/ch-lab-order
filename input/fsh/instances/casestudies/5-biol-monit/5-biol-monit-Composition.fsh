@@ -29,8 +29,8 @@ Usage: #inline
 * author = Reference(PauloPorcelliniSuva)
 * title = "Laboratory order 5-biol-monit"
 
-* section[orderReferral].title = "Laboratory order 5-biol-monit"
+* section[orderReferral].title = "Laboratory Order by Service Request 5-biol-monit"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory order 5-biol-monit\n </div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 5-biol-monit\n </div>"
 * section[orderReferral].entry[ServiceRequest] = Reference(5-biol-monit-ServiceRequest)
 
