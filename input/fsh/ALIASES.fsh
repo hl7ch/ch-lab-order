@@ -19,6 +19,7 @@ Alias:  $condition-ver-status          = http://terminology.hl7.org/CodeSystem/c
 Alias:  $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias:  $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
 Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
+Alias:  $substance-category            = http://terminology.hl7.org/CodeSystem/substance-category 
 Alias:  $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
 Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias:  $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
