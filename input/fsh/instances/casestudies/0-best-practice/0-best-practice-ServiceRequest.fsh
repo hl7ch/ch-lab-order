@@ -34,7 +34,8 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Some blood test just to be shure"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* supportingInfo = Reference(Liquemin)
+* supportingInfo[+] = Reference(ConditionBirgitBlum)
+* supportingInfo[+] = Reference(Liquemin)
 // * specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
 // * specimen[+] = Reference(Specimen/Blood-0-best-practice)
@@ -108,8 +109,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(MarcMustermannGruppenpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
+* reasonCode = $sct#171201007
+* reasonCode.text = "Anemia screening (procedure)"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * specimen = Reference(Specimen/Blood-0-best-practice)
 
@@ -251,11 +252,13 @@ InstanceOf: Specimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
+* identifier.value = "48736-55555-75465"
+* accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/BirgitBlum)
 * collection.collector = Reference(Practitioner/MarcMustermann)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
