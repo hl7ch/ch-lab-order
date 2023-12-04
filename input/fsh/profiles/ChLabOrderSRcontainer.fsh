@@ -28,7 +28,9 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest or Selfreferential
 * requisition 0..1 MS
 
-* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+// if not based on a Reference, a code must be present
+
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
 
 
 // * code ^short = "Only allow code from LOINC and/or SNOMED CT"

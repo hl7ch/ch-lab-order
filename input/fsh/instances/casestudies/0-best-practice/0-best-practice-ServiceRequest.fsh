@@ -1,5 +1,5 @@
 Instance: 0-best-practice-ServiceRequest-0
-InstanceOf: ChLabOrderSR
+InstanceOf: ChLabOrderSRContainer
 Title: "Service Request 0-best-practice"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -15,7 +15,6 @@ Usage: #example
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 /*
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
@@ -31,8 +30,6 @@ Usage: #example
 * subject = Reference(Patient/BirgitBlum)
 * encounter = Reference(FirstEncounter)
 * requester = Reference(MarcMustermannGruppenpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Some blood test just to be shure"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * supportingInfo[+] = Reference(ConditionBirgitBlum)
 * supportingInfo[+] = Reference(Liquemin)

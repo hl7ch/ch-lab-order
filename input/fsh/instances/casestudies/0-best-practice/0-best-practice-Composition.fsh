@@ -37,8 +37,8 @@ Usage: #example
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 0-best-practice\n </div>"
 * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-0)
-// * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-1)
-// * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-2)
-// * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-3)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-1)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-2)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-3)
 
 
