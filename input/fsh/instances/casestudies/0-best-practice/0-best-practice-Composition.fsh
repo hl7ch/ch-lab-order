@@ -22,7 +22,7 @@ Usage: #example
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis) 
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[=].valueReference = Reference(Patient/TobiasTimmermann)
+* extension[=].valueReference = Reference(Patient/BirgitBlum)
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
@@ -36,6 +36,9 @@ Usage: #example
 * section[orderReferral].title = "Laboratory Order by Service Request 0-best-practice"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 0-best-practice\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(0-best-practice-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-0)
+// * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-1)
+// * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-2)
+// * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-3)
 
 

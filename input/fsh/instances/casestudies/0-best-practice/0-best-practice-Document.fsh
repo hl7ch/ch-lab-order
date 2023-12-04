@@ -28,7 +28,7 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
-* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"   // entry[5]
 * entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
 * entry[=].resource = MarcMustermannGruppenpraxis
@@ -39,18 +39,26 @@ Usage: #example
 * entry[=].resource = LaborPipette
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
-
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardBirgitBlum"
-* entry[=].resource = HealthInsuranceCardBirgitBlum
+                      
+//* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardBirgitBlum"   // entry[10]
+//* entry[=].resource = HealthInsuranceCardBirgitBlum
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-0-best-practice"
 * entry[=].resource = Serum-0-best-practice
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-0-best-practice"  // entry[10]
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-0-best-practice"  // entry[12]
 * entry[=].resource = Blood-coag-0-best-practice
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-0-best-practice"  
 * entry[=].resource = Blood-0-best-practice
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request" // entry[12]
-* entry[=].resource = 0-best-practice-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-0" // entry[14]
+* entry[=].resource = 0-best-practice-ServiceRequest-0
 
+/*
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-1" // entry[15]
+* entry[=].resource = 0-best-practice-ServiceRequest-1
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-2" // entry[16]
+* entry[=].resource = 0-best-practice-ServiceRequest-2
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3" // entry[17]
+* entry[=].resource = 0-best-practice-ServiceRequest-3
+*/
 
