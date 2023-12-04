@@ -149,7 +149,7 @@ Usage: #example
 
 // ---- PractitionerRole --------> Folder
 
-/* issue: orf wants a VS, in FSH a CS is required ???
+// issue: orf wants a VS, in FSH a CS is required ???
 Instance: HealthInsuranceCardBirgitBlum
 InstanceOf: Coverage
 Title: "Health Insurance Card Birgit Blum"
@@ -164,7 +164,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
-*/
+
 
 // ---- encounter -----
 Instance: FirstEncounter

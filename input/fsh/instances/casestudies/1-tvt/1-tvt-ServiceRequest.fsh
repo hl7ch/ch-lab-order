@@ -140,7 +140,7 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/TobiasTimmermann)
 * beneficiary = Reference(Patient/TobiasTimmermann)
 * period.end = "2024-12-31"
