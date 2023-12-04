@@ -178,7 +178,7 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#UVG "According to UVG"
 * subscriber = Reference(Patient/BeatBorer)
 * beneficiary = Reference(Patient/BeatBorer)
 * period.end = "2024-12-31"
