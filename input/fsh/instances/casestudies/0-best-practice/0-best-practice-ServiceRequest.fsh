@@ -61,7 +61,7 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Patient gets Heparin injections"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
+* specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-2
 InstanceOf: ChLabOrderSRSingletest
@@ -86,7 +86,7 @@ Usage: #example
 * reasonCode = $sct#171183004
 * reasonCode.text = "Diabetes mellitus screening (procedure)"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
+* specimen = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
 
 
 Instance: 0-best-practice-ServiceRequest-3
@@ -111,7 +111,7 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* specimen[+] = Reference(Specimen/Blood-0-best-practice)
+* specimen = Reference(Specimen/Blood-0-best-practice)
 
 
 // ---- Patient --------
