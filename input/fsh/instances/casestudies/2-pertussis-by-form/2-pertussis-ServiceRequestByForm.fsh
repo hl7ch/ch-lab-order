@@ -113,10 +113,10 @@ Usage: #example
 * status = #available
 * type = $sct#258529004 "Throat swab (specimen)"
 * subject = Reference(Patient/EmilKummer)
-* receivedTime = "2020-08-16T16:40:17Z"
+* receivedTime = "2023-12-01T16:40:17Z"
 * request = Reference(2-pertussis-ServiceRequest)  // reference to SR 
 * collection.collector = Reference(Practitioner/PeterPresto)
-* collection.collectedDateTime = "2020-08-16T06:40:17Z"
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * collection.method = $sct#418932006 "Oral swab (specimen)"
 * collection.bodySite = $sct#264231000 "Entire throat (surface region of neck) (body structure)"
 * container.identifier.value = "4e88a-bc987-dd888-12345"
