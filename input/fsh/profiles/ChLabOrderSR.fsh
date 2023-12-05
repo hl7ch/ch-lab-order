@@ -24,7 +24,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
-// * basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
+* basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
 * requisition 0..1 MS
 
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
