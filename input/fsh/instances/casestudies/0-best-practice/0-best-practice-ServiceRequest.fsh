@@ -226,6 +226,7 @@ Usage: #example
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
 * container.type = $sct#706053007 "General specimen container (physical object)"
+* container.description = "General specimen container (physical object)"
 
 Instance: Blood-coag-0-best-practice
 InstanceOf: Specimen
@@ -247,7 +248,8 @@ Usage: #example
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
-* container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
+* container.additiveCodeableConcept = $v2-0371#C38 ""
+* container.description = "Blood collection Luer adaptor, 3.8% Citrate"
 
 Instance: Blood-0-best-practice
 InstanceOf: Specimen
