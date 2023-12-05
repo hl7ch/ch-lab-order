@@ -7,7 +7,7 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div><div>      <h3>Best practice example: Control of Anticoagulation effect</h3>      <p>A patient, Birgit Blum,        </p>         <p>As she gets daily injections or Heparin, the effect must me controlled. Dr Eva Erlenmeier from the Pipette laboratory sends feedback to etc.    </p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 0</div><div>      <h3>Best practice example: Control of Anticoagulation effect</h3>      <p>Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragmentary tibial plateau fracture. She was transferred to the centre hospital by helicopter and is waiting there for her operation. The patient is administered Liquemin 5000 E s.c. daily to prevent thromboembolic events, and the effect. To monitor the effect of this treatment, regular blood tests are carried out to determine anti-Xa activity. A special sample vessel with citrate additive is used for this purpose. The sample must be centrifuged and cooled within one hour. </p>  </div></div>"
 
 // ---- Sender and Receiver ----
 * extension[0].extension.url = "enterer"
