@@ -140,7 +140,7 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/TobiasTimmermann)
 * beneficiary = Reference(Patient/TobiasTimmermann)
 * period.end = "2024-12-31"
@@ -217,19 +217,3 @@ Usage: #example
 * recordedDate = "2023-10-05"
 * asserter = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
 * evidence.code = $sct#426396005 "Cardiac chest pain"
-
-/*
-Instance: Insurance-Company
-InstanceOf: Coverage
-Usage: #example
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456781"
-* status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
-* subscriber = Reference(Patient/TobiasTimmermann)
-* beneficiary = Reference(Patient/TobiasTimmermann)
-* relationship.coding.code = #self
-* period.end = "2025-03-17"
-* payor.identifier.system = "http://ehic.com/insurer"
-* payor.identifier.value = "1234567891"
-*/

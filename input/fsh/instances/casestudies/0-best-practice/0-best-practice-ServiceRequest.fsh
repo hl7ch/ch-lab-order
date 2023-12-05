@@ -1,19 +1,22 @@
-Instance: 0-best-practice-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+Instance: 0-best-practice-ServiceRequest-0
+InstanceOf: ChLabOrderSR
 Title: "Service Request 0-best-practice"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-best-practice-service-request"
+* id = "0-best-practice-service-request-0"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-// * basedOn[+] = Reference(0-best-practice-ServiceRequest-D-Dimer)
-// * basedOn[+] = Reference(0-best-practice-ServiceRequest-CRP)
+
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-1)
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-2)
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
+
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+/*
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
@@ -21,54 +24,53 @@ Usage: #example
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+*/
 
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * encounter = Reference(FirstEncounter)
 * requester = Reference(MarcMustermannGruppenpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardBirgitBlum)
-* supportingInfo = Reference(Liquemin)
+// * insurance = Reference(HealthInsuranceCardBirgitBlum)
+* supportingInfo[+] = Reference(ConditionBirgitBlum)
+* supportingInfo[+] = Reference(Liquemin)
+
+/*
 * specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
 * specimen[+] = Reference(Specimen/Blood-0-best-practice)
+*/
 
-/*
-Instance: 0-best-practice-ServiceRequest-D-Dimer
+Instance: 0-best-practice-ServiceRequest-1
 InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 0-best-practice d-Dimer"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Title: "Service Request 0-best-practice Anti-Xa-Aktivität"
+Description: "Example for Service Request for Anti-Xa-Aktivität"
 Usage: #example
-* id = "0-best-practice-service-request-d-dimer"
+* id = "0-best-practice-service-request-1"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-// * instantiatesCanonical = canonical("http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-d-dimer")
+* identifier[placerOrderIdentifier].value = "123111"
 
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* code.coding[+] = $loinc#80627-3 "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardBirgitBlum)
-* specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
-*/
+* reasonCode.text = "Patient gets Heparin injections"
+// * insurance = Reference(HealthInsuranceCardBirgitBlum)
+* specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
-/*
-Instance: 0-best-practice-ServiceRequest-CRP
+Instance: 0-best-practice-ServiceRequest-2
 InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 0-best-practice CRP"
+Title: "Service Request 0-best-practice Glucose"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-best-practice-service-request-crp"
+* id = "0-best-practice-service-request-2"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -77,26 +79,42 @@ Usage: #example
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-// * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-// * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-// * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-// * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-// * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+] = $loinc#47622-6 "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
 
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(MarcMustermannGruppenpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardBirgitBlum)
-* specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
-* specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
-* specimen[+] = Reference(Specimen/Blood-0-best-practice)
-*/
+* reasonCode = $sct#171183004
+* reasonCode.text = "Diabetes mellitus screening (procedure)"
+// * insurance = Reference(HealthInsuranceCardBirgitBlum)
+* specimen = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
+
+
+Instance: 0-best-practice-ServiceRequest-3
+InstanceOf: ChLabOrderSRSingletest
+Title: "Service Request 0-best-practice Hemoglobin Hematocrit panel"
+Description: "Example for Service Request due to suspected deep vein thrombosis"
+Usage: #example
+* id = "0-best-practice-service-request-3"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+* status = #active
+* intent = #original-order
+* category = $sct#721963009 "Order (record artifact)"
+* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+
+// orderDetails: Additional order information
+* priority = #urgent
+* subject = Reference(Patient/BirgitBlum)
+* requester = Reference(MarcMustermannGruppenpraxis)
+* reasonCode = $sct#171201007
+* reasonCode.text = "Anemia screening (procedure)"
+// * insurance = Reference(HealthInsuranceCardBirgitBlum)
+* specimen = Reference(Specimen/Blood-0-best-practice)
+
 
 // ---- Patient --------
 Instance: BirgitBlum
@@ -133,6 +151,7 @@ Usage: #example
 
 // ---- PractitionerRole --------> Folder
 
+// issue: orf wants a VS, in FSH a CS is required ???
 Instance: HealthInsuranceCardBirgitBlum
 InstanceOf: Coverage
 Title: "Health Insurance Card Birgit Blum"
@@ -142,12 +161,12 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
-* subscriber = Reference(Patient/BirgitBlum)
+* type = $coverage-type#UVG "According to UVG"
 * beneficiary = Reference(Patient/BirgitBlum)
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
+
 
 // ---- encounter -----
 Instance: FirstEncounter
@@ -234,11 +253,13 @@ InstanceOf: Specimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
+* identifier.value = "48736-55555-75465"
+* accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/BirgitBlum)
 * collection.collector = Reference(Practitioner/MarcMustermann)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
@@ -268,7 +289,7 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456781"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/BirgitBlum)
 * beneficiary = Reference(Patient/BirgitBlum)
 * relationship.coding.code = #self

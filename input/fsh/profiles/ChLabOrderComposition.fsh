@@ -38,7 +38,7 @@ Description: "Definition for Composition resource in the context of CH CH LAB-Or
 
 // ---------- Composition.section:orderReferral ----------
 * section contains orderReferral 1..1 MS
-* section[orderReferral] ^short = "Contains the data that supports the order and referral by form."
+* section[orderReferral] ^short = "Contains the data that supports the order by ServiceRequest."
 * section[orderReferral].title 1..1 MS
 * section[orderReferral].title ^short = "Laboratory Order by Service Request"
 * section[orderReferral].code 1..1 MS

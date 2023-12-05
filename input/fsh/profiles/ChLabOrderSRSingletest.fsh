@@ -1,5 +1,5 @@
 Profile: ChLabOrderSRSingletest
-Parent: ChOrfServiceRequest
+Parent: ChLabOrderSR
 Id: ch-lab-order-SR-singletest
 Title: "CH LAB-Order-SR Single-test"
 Description: "Definition of a ServiceRequests of a single LabTest in the context of CH LAB-Order"
@@ -24,12 +24,12 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
-* basedOn only Reference(ChLabOrderSRSingletest) // Labtest
+* basedOn 0..0 // since this is a SR for a Labtest, there are no further Labtests based on.
 * requisition 0..1 MS
 
-* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
 
-* code 1..1
+* code 1..1 //  What is being requested/ordered
 
 
 // * code from https://fhir.loinc.org/ValueSet/LL1162-8 // warning not found by validator
