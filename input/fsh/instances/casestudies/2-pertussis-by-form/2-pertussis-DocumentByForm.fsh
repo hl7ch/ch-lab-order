@@ -54,5 +54,5 @@ Usage: #example
 * entry[=].resource = 2-pertussis-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
 * entry[=].resource = 2-pertussis-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request-by-form"
 * entry[=].resource = 2-pertussis-ServiceRequestByForm
