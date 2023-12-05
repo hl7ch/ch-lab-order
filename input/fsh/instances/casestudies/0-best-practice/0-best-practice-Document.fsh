@@ -1,6 +1,6 @@
 Instance: BestPracticeDocument
 InstanceOf: ChLabOrderDocument
-Title: "CH-LAB-Order best-practice"
+Title: "CH LAB-Order best-practice"
 Description: "Example Bundle for laboratory order"
 Usage: #example
 * id = "0-best-practice-document"
