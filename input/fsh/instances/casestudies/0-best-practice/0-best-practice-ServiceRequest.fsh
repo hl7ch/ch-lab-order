@@ -1,5 +1,5 @@
 Instance: 0-best-practice-ServiceRequest-0
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "Service Request 0-best-practice"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -7,15 +7,16 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+/*
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-1)
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-2)
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-2)
-
+*/
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 
-/*
+
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
@@ -23,7 +24,7 @@ Usage: #example
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-*/
+
 
 // orderDetails: Additional order information
 * priority = #urgent
@@ -33,12 +34,12 @@ Usage: #example
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * supportingInfo[+] = Reference(ConditionBirgitBlum)
 * supportingInfo[+] = Reference(Liquemin)
-// * specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
-// * specimen[+] = Reference(Specimen/Blood-0-best-practice)
+* specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
+* specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
+* specimen[+] = Reference(Specimen/Blood-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-1
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "Service Request 0-best-practice Anti-Xa-Aktivität"
 Description: "Example for Service Request for Anti-Xa-Aktivität"
 Usage: #example
@@ -62,7 +63,7 @@ Usage: #example
 * specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-2
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "Service Request 0-best-practice Glucose"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -88,7 +89,7 @@ Usage: #example
 
 
 Instance: 0-best-practice-ServiceRequest-3
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "Service Request 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example

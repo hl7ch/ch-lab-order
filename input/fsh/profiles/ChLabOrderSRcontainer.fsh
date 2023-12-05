@@ -1,5 +1,5 @@
 Profile: ChLabOrderSRContainer
-Parent: ChOrfServiceRequest
+Parent: ChLabOrderSR
 Id: ch-lab-order-SR-container
 Title: "CH LAB-Order-SR Container"
 Description: "Definition for ServiceRequest Container in the context of CH LAB-Order"
@@ -24,7 +24,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * instantiatesCanonical 0.. MS
 
 // * Is based On ChLabOrderSRSingletest or other SRContainer
-* basedOn 0.. MS
+* basedOn 1.. MS
 * basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest or Selfreferential
 * requisition 0..1 MS
 
