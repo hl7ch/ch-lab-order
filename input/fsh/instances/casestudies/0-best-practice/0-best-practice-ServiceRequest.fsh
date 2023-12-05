@@ -279,7 +279,7 @@ Usage: #example
 * bodySite = $sct#40768004 "Left thorax"
 * bodySite.text = "heart structure"
 * subject = Reference(Patient/BirgitBlum) "Birgit Blum"
-// * encounter = Reference(Encounter/f001)
+* encounter = Reference(Encounter/FirstEncounter)
 * onsetDateTime = "2023-08-05"
 * recordedDate = "2023-10-05"
 * asserter = Reference(Patient/BirgitBlum) "Birgit Blum"
