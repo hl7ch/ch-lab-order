@@ -13,7 +13,7 @@ equal one Filler Order equal one Laboratory Service Request."
 * ^experimental = false
 
 * ^publisher = "eHealth Suisse"
-* . ^short = "CH LAB-ORDER Document"
+* . ^short = "CH LAB-Order Document"
 * identifier MS
 * identifier ^short = "Document Identifier"
 * identifier.system MS

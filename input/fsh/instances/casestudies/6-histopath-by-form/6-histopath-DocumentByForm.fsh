@@ -1,9 +1,9 @@
 Instance: 6-histopath-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH-LAB-Order by Form 6-histopath"
+Title: "CH LAB-Order by Form 6-histopath"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "6-histopath-by-form"
+* id = "6-histopath-document-by-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"

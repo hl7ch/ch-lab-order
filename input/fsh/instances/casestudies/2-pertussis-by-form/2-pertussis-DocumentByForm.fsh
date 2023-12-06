@@ -1,6 +1,6 @@
 Instance: 2-pertussis-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH-LAB-Order by Form 2-pertussis"
+Title: "CH LAB-Order by Form 2-pertussis"
 Description: "Example Bundle for referral/order for Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document-by-form"
@@ -28,13 +28,10 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
-// * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
-// * entry[=].resource = MarcMustermann
-// * entry[+].fullUrl = "http://example.com/fhir/Organization/Arztpraxis"
-// * entry[=].resource = Arztpraxis
-// * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
-// * entry[=].resource = MarcMustermannGruppenpraxis
-
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+* entry[=].resource = MarcMustermannGruppenpraxis
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[10]
 * entry[=].resource = EvaErlenmeyer
@@ -57,5 +54,5 @@ Usage: #example
 * entry[=].resource = 2-pertussis-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
 * entry[=].resource = 2-pertussis-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request-by-form"
 * entry[=].resource = 2-pertussis-ServiceRequestByForm

@@ -1,5 +1,5 @@
 Instance: 4-sepsis-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
@@ -128,7 +128,7 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/SaraSpeckmann)
 * beneficiary = Reference(Patient/SaraSpeckmann)
 * period.end = "2024-12-31"
@@ -175,10 +175,10 @@ Usage: #example
 * status = #available
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/SaraSpeckmann)
-* receivedTime = "2020-08-16T16:40:17Z"
+* receivedTime = "2023-12-01T16:40:17Z"
 * request = Reference(ServiceRequest/4-sepsis-service-request)
 * collection.collector = Reference(Practitioner/HansHauser)
-* collection.collectedDateTime = "2020-08-16T06:40:17Z"
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"

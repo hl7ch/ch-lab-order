@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// moved to 6-histopath-ServiceRequest
+>>>>>>> d8dd1068ca04fbf47ccb1302bd76728d94c0e925
 Instance: ArminAhrens
 InstanceOf: CHCorePractitioner
 Title: "Armin Ahrens"

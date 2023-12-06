@@ -1,6 +1,6 @@
 Instance: LabOrder-Document-by-Form
 InstanceOf: ChLabOrderDocumentByForm
-Title: "CH LAB-ORDER Document by Form"
+Title: "CH LAB-Order Document by Form"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "ch-lab-order-by-form"

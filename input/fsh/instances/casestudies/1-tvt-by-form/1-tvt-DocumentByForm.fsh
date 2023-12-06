@@ -1,6 +1,6 @@
 Instance: 1-tvt-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH-LAB-Order by Form 1-tvt"
+Title: "CH LAB-Order by Form 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document-by-form"
@@ -24,6 +24,11 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
 * entry[=].resource = MarcMustermannGruppenpraxis
 
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
+* entry[=].resource = PeterPresto
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
+* entry[=].resource = PeterPrestoGruppenpraxis
+
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
@@ -31,15 +36,18 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-tobias-timmermann"
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardTobiasTimmermann"  // entry[10]
 * entry[=].resource = HealthInsuranceCardTobiasTimmermann
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-1-tvt"
 * entry[=].resource = Serum-1-tvt
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-1-tvt"  // entry[10]
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-1-tvt"
 * entry[=].resource = Blood-coag-1-tvt
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[11]
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-1-tvt"  // entry[13]
 * entry[=].resource = Blood-1-tvt
+
+* entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionTobiasTimmermann"  // entry[14]
+* entry[=].resource = ConditionTobiasTimmermann
 
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/1-tvt"
 * entry[=].resource = 1-tvt-Questionnaire

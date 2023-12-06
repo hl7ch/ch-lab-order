@@ -1,5 +1,5 @@
 Instance: 6-histopath-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 0-generic"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example
@@ -81,7 +81,7 @@ Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "B123456780"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/SimoneStuder)
 * beneficiary = Reference(Patient/SimoneStuder)
 * period.end = "2024-12-31"

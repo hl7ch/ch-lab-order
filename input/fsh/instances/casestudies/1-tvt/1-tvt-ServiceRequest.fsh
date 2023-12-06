@@ -1,5 +1,5 @@
 Instance: 1-tvt-ServiceRequest
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChOrfServiceRequest
 Title: "Service Request 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -7,8 +7,8 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* basedOn[+] = Reference(1-tvt-ServiceRequest-D-Dimer)
-* basedOn[+] = Reference(1-tvt-ServiceRequest-CRP)
+// * basedOn[+] = Reference(1-tvt-ServiceRequest-D-Dimer)
+// * basedOn[+] = Reference(1-tvt-ServiceRequest-CRP)
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
@@ -19,8 +19,8 @@ Usage: #example
 * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-// * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-// * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
 * priority = #urgent
@@ -29,10 +29,11 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-// specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+* specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
+* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
 
+/*
 Instance: 1-tvt-ServiceRequest-D-Dimer
 InstanceOf: ChLabOrderSRSingletest
 Title: "Service Request 1-tvt d-Dimer"
@@ -57,7 +58,9 @@ Usage: #example
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+*/
 
+/*
 Instance: 1-tvt-ServiceRequest-CRP
 InstanceOf: ChLabOrderSRSingletest
 Title: "Service Request 1-tvt CRP"
@@ -89,8 +92,9 @@ Usage: #example
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
-// * specimen[+] = Reference(Specimen/Blood-1-tvt)
+* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+* specimen[+] = Reference(Specimen/Blood-1-tvt)
+*/
 
 // ---- Patient --------
 Instance: TobiasTimmermann
@@ -132,11 +136,11 @@ InstanceOf: Coverage
 Title: "Health Insurance Card Tobias Timmermann"
 Description: "Example for Insurance"
 Usage: #example
-* id = "health-insurance-card-tobias-timmermann"
+// * id = "health-insurance-card-tobias-timmermann"
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
-* type = $v3-ActCode#EHCPOL "extended healthcare"
+* type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/TobiasTimmermann)
 * beneficiary = Reference(Patient/TobiasTimmermann)
 * period.end = "2024-12-31"
@@ -171,12 +175,12 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/TobiasTimmermann)
-* receivedTime = "2020-08-16T16:40:17Z"
+* receivedTime = "2023-12-01T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(Practitioner/MarcMustermann)
-* collection.collectedDateTime = "2020-08-16T17:00:17Z"
-* processing.timePeriod.start = "2020-08-16T17:00:17Z" // usually same time as collectedDateTime
-* processing.timePeriod.end = "2020-08-16T17:30:17Z" // when processing should be terminated
+* collection.collectedDateTime = "2023-12-01T17:00:17Z"
+* processing.timePeriod.start = "2023-12-01T17:00:17Z" // usually same time as collectedDateTime
+* processing.timePeriod.end = "2023-12-01T17:30:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
@@ -195,3 +199,21 @@ Usage: #example
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
+
+Instance: ConditionTobiasTimmermann
+InstanceOf: Condition
+Description: "Problem list of Tobias Timmermann"
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category = $sct#439401001 "diagnosis"
+* severity = $sct#6736007 "Moderate (severity modifier)"
+* code = $sct#368009 "Heart valve disorder"
+* bodySite = $sct#40768004 "Left thorax"
+* bodySite.text = "heart structure"
+* subject = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
+// * encounter = Reference(Encounter/f001)
+* onsetDateTime = "2023-08-05"
+* recordedDate = "2023-10-05"
+* asserter = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
+* evidence.code = $sct#426396005 "Cardiac chest pain"

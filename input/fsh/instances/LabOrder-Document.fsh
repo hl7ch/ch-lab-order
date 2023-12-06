@@ -1,6 +1,6 @@
 Instance: LabOrder-Document
 InstanceOf: ChLabOrderDocument
-Title: "CH LAB-ORDER Document by Service Request"
+Title: "CH LAB-Order Document by Service Request"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "ch-lab-order-document"

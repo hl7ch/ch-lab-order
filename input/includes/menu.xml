@@ -8,24 +8,6 @@
 
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-      Case Studies
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="casestudies-english.html">Englisch</a>
-      </li>
-      <li>
-        <a href="casestudies-german.html">German</a>
-      </li>
-      <li>
-        <a href="casestudies-french.html">Français</a>
-      </li>
-    </ul>
-  </li>
-
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
       Use Cases
       <b class="caret"></b>
     </a>
@@ -43,39 +25,51 @@
   </li>
 
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Questionnaire<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Questionnaire-LabOrder-form.html">Specification</a>
-      </li>
-      <li>
-        <a href="https://laborprojektgruppe.ch/questionnaire/">Form</a> <!-- questionnaire-form.html -->
-      </li>
-    </ul>
-  </li>
-
-  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-      Questionnaire Case Studies
+      Case Study Documents
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <p><strong> Service Request: </strong></p>
       <li>
-        <a href="Questionnaire-2-pertussis.html">Pertussis</a>
+        <a href="Bundle-0-best-practice-document.html">Best practice Example</a>
       </li>
       <li>
-        <a href="Questionnaire-3-gyn.html">Gynäkologische Vorsorge</a>
+        <a href="Bundle-1-tvt-document.html">Deep vein thrombosis</a>
       </li>
       <li>
-        <a href="Questionnaire-4-sepsis.html">Sepsis</a>
+        <a href="Bundle-2-pertussis-document.html">Pertussis</a>
       </li>
       <li>
-        <a href="Questionnaire-5-biol-monit.html">Biologisches Monitoring</a>
+        <a href="Bundle-3-gyn-document.html">Gynaecological screening</a>
       </li>
       <li>
-        <a href="Questionnaire-6-histopath.html">Histopathologische Untersuchung</a>
+        <a href="Bundle-4-sepsis-document.html">Sepsis</a>
+      </li>
+      <li>
+        <a href="Bundle-5-biol-monit-document.html">Biological monitoring</a>
+      </li>
+      <li>
+        <a href="Bundle-6-histopath-document.html">Histopathological examination</a>
+      </li>
+      <p><strong> Form:</strong></p>
+      <li>
+        <a href="Bundle-1-tvt-document-by-form.html">Deep vein thrombosis</a>
+      </li>
+      <li>
+        <a href="Bundle-2-pertussis-document-by-form.html">Pertussis</a>
+      </li>
+      <li>
+        <a href="Bundle-3-gyn-document-by-form.html">Gynaecological screening</a>
+      </li>
+      <li>
+        <a href="Bundle-4-sepsis-document-by-form.html">Sepsis</a>
+      </li>
+      <li>
+        <a href="Bundle-5-biol-monit-document-by-form.html">Biological monitoring</a>
+      </li>
+      <li>
+        <a href="Bundle-6-histopath-document-by-form.html">Histopathological examination</a>
       </li>
     </ul>
   </li>
@@ -90,6 +84,20 @@
       </li>
       <li>
         <a href="document-lo.html">Lab-Order Document by Service Request</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Questionnaire<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Questionnaire-LabOrder-form.html">Specification</a>
+      </li>
+      <li>
+        <a href="https://laborprojektgruppe.ch/questionnaire/">Form</a> <!-- questionnaire-form.html -->
       </li>
     </ul>
   </li>

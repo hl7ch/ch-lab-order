@@ -1,6 +1,6 @@
 Instance: 4-sepsis-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH-LAB-Order by Form 4-sepsis"
+Title: "CH LAB-Order by Form 4-sepsis"
 Description: "Example Bundle for referral/order for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-document-by-form"
