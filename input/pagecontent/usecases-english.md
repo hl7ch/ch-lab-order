@@ -6,11 +6,14 @@
 -->
 ### Use Case 1: Lab Order
 
-The customer (e.g. a doctor) requires various laboratory tests for further diagnostics. He creates an order document in his Electronic Medical Records (EMR) system, which contains the administrative data structured in accordance with the CH ORF implementation guide and whose contents are available in the EMR. From the analyses provided by the LIS, he can select those that help him with his question, and he can also determine the samples corresponding to the analyses. For example, he wants to have glucose analysed in the blood and cerebrospinal fluid. The laboratory system can store the information on the required containers and any additives in the system. The pre-analytical conditions are specified. 
+The customer (e.g. a doctor) requires various laboratory tests for further diagnostics. He creates an order document in his Electronic Medical Records (EMR) system, which contains the administrative data structured in accordance with the CH ORF implementation guide and whose contents are available in the EMR. From the analyses provided by the LIS, he can select those that help him with his question, and he can also determine the samples corresponding to the analyses. For example, he wants to have glucose analysed in the blood and cerebrospinal fluid. The laboratory system can store the information on the required containers and any additives in the system. The pre-analytical conditions are specified.
 The order document is sent to the laboratory information system (LIS).
 
 He can also add information about the clinical context to the laboratory order: problem list, current medication list, questions about the prescribed analyses
 
+Example document:
+
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-0-best-practice-document.html'>best-practice</a>
 
 ### Use Case 2: Lab Order by Form
 
@@ -42,18 +45,24 @@ A form (Questionnaire) is presented to the client, which contains the following 
 
 Outside of this use case: the results are then reported back to the client.
 
-### Use Case 2: Requesting additional examinations of the same sample
+Example document:
+
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt by Form</a>
+
+
+
+### Use Case 3: Requesting additional examinations of the same sample
 
 It is not uncommon for the results of laboratory tests to lead to the request for additional tests on the same sample. In the example 1-tvt, venous thrombophilia may be suspected, so that further laboratory tests can detect hereditary causes such as factor V Leiden mutation, prothrombin gene mutation, antithrombin deficiency, etc.
 
 * Details of the requested service
   * ServiceRequest.category is RequestForAdditionalExam
 
-### Use Case 3: Requesting existing lab results and images
+### Use Case 4: Requesting existing lab results and images
 
 Sometimes the physician also wants information about previous laboratory tests, e.g., to assess the prostate-specific antigen (PSA) trend.
 
-### Use Case 4: Collective request for toxicological testing (biological monitoring)
+### Use Case 5: Collective request for toxicological testing (biological monitoring)
 
 This use case corresponds to example 5-biol-monit. In order to assess the exposure of workers to chemical substances, measurements at the workplace are supplemented by occupational health checkups. The toxic substances themselves or their metabolites in serum or urine can be determined. The order is initiated by the occupational physician of the company or the insurance company. The problem of employee fluctuations must be kept in mind.
 
@@ -81,7 +90,7 @@ If this is of particular interest for the interpretation of the prescribed exami
 
 ### Use Case 7: Information on the sample, preanalytics
 
-For certain tests, the order and sample alone are not sufficient to determine the laboratory result. In such cases, observations on the sample collection must be supplied to the laboratory. An example of this is the determination of creatinine clearance in 24 h urine. For this purpose, the laboratory must know the amount of urine collected during a certain period of time. For this purpose, the ordering party provides the laboratory with the urine volume, as well as a sample of the urine and serum.
+For certain tests, the order and sample alone are not sufficient to determine the laboratory result. In such cases, observations on the sample collection must be supplied to the laboratory. An example of this is the determination of creatinine clearance in 24 h urine. For this purpose, the laboratory must know the amount of urine collected during a certain period of time. Therefore the ordering party provides the laboratory with the urine volume, as well as a sample of the urine and serum.
 
 * Collected urine quantity: Specimen.collection.quantity.
 
@@ -97,10 +106,3 @@ For Blood gas analyses, the amount of oxygen administered to the patient is some
 
 * ServiceRequest.reasonReference (Condition | Observation | DiagnosticReport)
 * ServiceRequest.supportingInfo, e.g. O2 4 liters/min.
-
-### Use Case 9: Requesting monitoring examinations
-
-Laboratories often offer the option of monitoring vital functions with appropriate medical devices, such as 24-hour Blood pressure monitoring, long-term ECG monitoring, or sleep medicine monitoring. For this purpose, the medical device is either sent to the client, or the patient picks it up from the lab himself.
-
-* However, the procedure of including this use case in the present implementation guide seems unsatisfactory, since such monitoring investigations of vital data fall outside the actual laboratory domain, and since FHIR provides us with more specific resources: The [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) resource lends itself here, with the required device referenced in the [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html) resource. The corresponding use case can be implemented analogously to the laboratory regulation as a bundle with a composition, which contains the [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) instead of the Service Request. It therefore makes more sense to deal with the monitoring request in a separate Implementation Guide.
-Based on the above considerations, the corresponding ServiceRequestCategories for monitoring were commented out in the ValueSet of the Implementation Guide.
