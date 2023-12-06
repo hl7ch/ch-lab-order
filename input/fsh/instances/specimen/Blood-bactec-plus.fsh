@@ -1,3 +1,4 @@
+/*
 Instance: Blood-bactec-plus
 InstanceOf: Specimen
 Title: "Blood Sample Bacteriology"
@@ -8,7 +9,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/FranzMuster)
-* receivedTime = "2020-08-16T16:40:17Z"
+* receivedTime = "2023-12-01T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
@@ -17,3 +18,4 @@ Usage: #example
 * container.description = "Sarstedt Blutkultur-Adapter Universal"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
 * container.additiveCodeableConcept = $v2-0371#BACTM "Bacterial Transport medium"
+*/

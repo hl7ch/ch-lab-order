@@ -1,1 +1,9 @@
 == Suppressed Messages ==
+
+# Unchecked Valuesets
+
+Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode|2.0.9
+Unable to check whether the code is in the value set http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode|2.0.9
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/languages|4.0.1
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1
+Unable to check whether the code is in the value set http://hl7.org/fhir/ValueSet/ucum-units|4.0.1

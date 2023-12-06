@@ -1,11 +1,6 @@
-
-// Alias: $request-priority = http://hl7.org/fhir/request-priority
-// Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
-// Alias: $ech-11-maritalstatus = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
-// Alias: $loinc = http://loinc.org
-
 Instance: LabOrder-form
 InstanceOf: Questionnaire
+Title: "CH LAB-Order Form example"
 Description: "assembled from LabOrder-form-modular"
 Usage: #example
 * meta.versionId = "1"
