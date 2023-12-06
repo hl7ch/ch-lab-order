@@ -202,7 +202,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //         condition.subject as subject,
 //           subject.reference = ('urn:uuid:'+patient.id) then {
             
-//             // FIXME TODO answer.item as item2 where (linkId.value = 'caveat.renalInsufficiency.creatinineClearance') then RenalInsufficiencyCreatinineServiceItems(item2, patient, bundle, serviceRequest, condition) "RenalInsufficiencyCreatinineServiceItems";
+//             // FIXME answer.item as item2 where (linkId.value = 'caveat.renalInsufficiency.creatinineClearance') then RenalInsufficiencyCreatinineServiceItems(item2, patient, bundle, serviceRequest, condition) "RenalInsufficiencyCreatinineServiceItems";
 //             answer.item as item2 where (linkId.value = 'caveat.renalInsufficiency.creatinine') then RenalInsufficiencyCreatinineServiceItems(item2, patient, bundle, serviceRequest, condition) "RenalInsufficiencyCreatinineServiceItems";
 //           } "caveat.renalInsufficiency";
 //     } "answer.valueString";
@@ -400,7 +400,7 @@ group ReasonServiceItems(source src : BackboneElement, target serviceRequest: Se
 //              coding.display = 'Problem List Item',
 //         condition.code as code,
 //             code.coding as coding2,
-//             coding2.code = '182817000',
+//             coding2.code = '761938008',
 //             coding2.system = '$sct',
 //             coding2.display = 'Drug prescription (situation)',
 //         condition.subject as subject,

@@ -8,10 +8,10 @@ Usage: #example
 * status = #available
 * type = $sct#258450006 "Cerebrospinal fluid sample"
 * subject = Reference(Patient/FranzMuster)
-* receivedTime = "2020-08-16T16:40:17Z"
+* receivedTime = "2023-12-01T16:40:17Z"
 * request = Reference(LabOrder-ServiceRequest-generic)
 * collection.collector = Reference(Practitioner/MarcMustermann)
-* collection.collectedDateTime = "2020-08-16T06:40:17Z"
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * collection.method = $sct#277762005 "Lumbar puncture (procedure)"
 * container[0].identifier.value = "4e88a-bc987-dd888-12345-cc"
 * container[=].description = "Container for Chemistry"

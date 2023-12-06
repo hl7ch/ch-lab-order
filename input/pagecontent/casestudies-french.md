@@ -77,7 +77,7 @@ Questionnaire FHIR correspondant à cette spécification:
 
 ### Étude de cas n° 6 : suspicion de mélanome, demande d'examen histopathologique
 
-Une patiente de 45 ans s'est présentée pour un examen régulier de la peau et cette lésion a été observée : Naevus de jonction composé d'une zone séborrhéique à l'extrémité supérieure et d'un réseau atypique constitué de nombreux points, structures, etc. distincts, suggérant une implication mélanocytaire. Excision. Joindre les images dermatoscopiques // TODO Spécimen : Ellipse cutanée de 29 x 11 x 5 mm Site corporel : Dos paralombaire gauche
+Une patiente de 45 ans s'est présentée pour un examen régulier de la peau et cette lésion a été observée : Naevus de jonction composé d'une zone séborrhéique à l'extrémité supérieure et d'un réseau atypique constitué de nombreux points, structures, etc. distincts, suggérant une implication mélanocytaire. Excision. Joindre les images dermatoscopiques Spécimen : Ellipse cutanée de 29 x 11 x 5 mm Site corporel : Dos paralombaire gauche
 
 L'échantillon de peau, le formulaire de commande et l'image dermatoscopique sont envoyés au laboratoire.
 

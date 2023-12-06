@@ -8,7 +8,7 @@ Usage: #example
 * identifier.use = #official
 * identifier.value = "Cl_serum_test"
 * version = "0.1.0"
-* name = "D-DimerMeasurementProcedure"
+* name = "D_DimerMeasurementProcedure"
 * title = "Procedure - d-dimer measurement on in vitro blood serum"
 * status = #draft
 * experimental = true

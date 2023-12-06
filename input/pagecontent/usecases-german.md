@@ -5,9 +5,9 @@
 │  UC - english is original, this is a traduction           │
 ╰───────────────────────────────────────────────────────────╯
 -->
-### Use Case 1: Auftrag im herkömmlichen Sinne
+### Use Case 1: Auftrag im herkömmlichen Sinne, analog Papierformular
 
-Der Auftraggeber (z.B. Arzt) benötigt für die weitere Diagnostik verschiedene Labor-Untersuchungen. Dazu erstellt er in seinem Praxisinformationssystem ein Auftragsdokument mit den nötigen Angaben zu Patient, Labor-Test, Proben usw. Das notwendige Probenmaterial (Serum, Urin, Liquor) wird in entsprechenden Behältern gesammelt und dem Auftragsdokument eindeutig zugeordnet (Specimen.identifier, Specimen.container.identifier). Proben können im eigenen Labor untersucht werden, oder sie müssen via Post oder Kurier ins externe Labor verschickt werden. Dort weist ihnen das Laborinformationssystem einen eigenen Identifier (Specimen.accessionIdentifier) zu.
+Der Auftraggeber (z.B. Arzt) benötigt für die weitere Diagnostik verschiedene Labor-Untersuchungen. Dazu erstellt und speichert er in seinem Praxisinformationssystem ein Auftragsdokument mit den nötigen Angaben zu Patient, Labor-Test, Proben usw. Das notwendige Probenmaterial (Serum, Urin, Liquor) wird in entsprechenden Behältern gesammelt und dem Auftragsdokument eindeutig zugeordnet (Specimen.identifier, Specimen.container.identifier). Proben können im eigenen Labor untersucht werden, oder sie müssen via Post oder Kurier ins externe Labor verschickt werden. Dort weist ihnen das Laborinformationssystem einen eigenen Identifier (Specimen.accessionIdentifier) zu. Innerhalb einer Spitalinfrastruktur kann auf diese Zuweisung (relabelling) verzichtet werden, indem das Auftragsystem, die Proben-Entnahmestelle und das Laborinformationssystem denselben Identifier verwenden.
 
 Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende Angaben enthält:
 
@@ -24,24 +24,25 @@ Dem Auftraggeber wird ein Formular (Questionnaire) präsentiert, das folgende An
   * Type: zum Beispiel Serum, Vollblut, Liquor
   * Subject:Verweis auf den Patienten
   * Collection: Angaben zur Entnahme, Entnahme-Zeitpunkt, Menge, Methode, Entnahmestelle (z.B. rechter Arm), Nüchternperiode
-  * Behälter, Gefäss: Identifier, Type
-  * und Other mehr
+  * Container: Behälter, Gefäss: Identifier, Type
+  * und anderes mehr
 
 * Angaben zum angeforderten Service
   * Servicerequest.category ist RequestForLabExam
   * Fragestellung, Untersuchungsgrund (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
   * Kostenträger (Krankenkasse, Unfallversicherung usw.)
-  * und Other mehr
+  * und anderes mehr
 
-Ausserhalb dieses Use Cases: Die Resultate werden danach dem Auftraggeber zurückgemeldet.
-
-Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt.html).
+Beispielformular für Hämatologie, Koagulation und Klinische Chemie: [1-tvt](http://fhir.ch/ig/ch-lab-order/Questionnaire-1-tvt-by-form.html).
 Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
-### Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe
+### Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
-Es ist nicht ungewöhnlich, dass die Ergebnisse von Labortests dazu führen, dass weitere Tests für dieselbe Probe angefordert werden. Im Beispiel 1-tvt kann der Verdacht auf venöse Thrombophilie bestehen, so dass weitere Labortests erbliche Ursachen wie Faktor-V-Leiden-Mutation, Prothrombin-Gen-Mutation, Antithrombin-Mangel usw. aufdecken können.
-TODO [Beispielformular ohne Q/QR](http://hl7.org/fhir/2020May/request.html#requisitionid)
+Bei der Inhouse Laborverordnung (Verordnung aus den KIS ins Laborsystem innerhalb desselben Spitals) spielen eigene Laborverordnungssysteme mit angebundenem CDS eine wesentliche Rolle, sodass die Möglichkeit bestehen muss, Laborverordnungen ohne Questionnaire abzubilden. Um mehrere Analysen für dieselbe Probe verordnet werden können, sollen mehrere Service Requests mittels 'Request Pattern' dargestellt werden können.
+
+<!--
+Beispieldokument ohne Q/QR ([XML](Bundle-ch-lab-order.xml.html), [JSON](Bundle-ch-lab-order.json.html))
+-->
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
@@ -50,14 +51,9 @@ Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere T
 * Angaben zum angeforderten Service
 * Im ValueSet Servicerequest.category wird RequestForAdditionalExam angewählt
 
-### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern
+### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern (out of scope)
 
-Manchmal möchte der Arzt auch Aufschluss über frühere Laboruntersuchungen, z.B. um den Verlauf von Prostata-spezifische Antigen (PSA) zu beurteilen.
-
-* Angaben zum angeforderten Service
-* Servicerequest.category ist RequestForPrecedentReport beziehungsweise RequestForPrecedentReportAndImages
-
-TODO Beispielformular mit ServiceRequestCategory RequestForPrecedentReport
+Dieser Use Case, der durchaus für den Laborauftrag relevant sein kann, muss über eine HTTP Abfrage beim Repository der Laborresultate angefordert werden. Er wird hier nicht behandelt.
   
 ### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
 
@@ -80,11 +76,11 @@ Nach Erhalt des Laborauftrages und dessen Bearbeitung kann sich die Situation er
 * ServiceRequest.category: ProposalForAdditionalExam
 
 Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
-Beispielformular mir Vorschlag für zusätzliche Untersuchungen als Antwort
+Beispielformular mit Vorschlag für zusätzliche Untersuchungen als Antwort
 
 ### Use Case 7: Fragestellung, Befunde und weiteren Daten zum Gesundheitszustand des Patienten
 
-Die Fragestellung ist für den Laborauftrag von besonderem Interesse. Dazu stellt die der ServiceRequest.reasonCode das nötige Feld zur Verfügung. Der Grund für den Auftrag (ReasonCode) kann codiert, z.B. als SNOMED-CT Procedure dargestellt werden; auch ist reiner Freitext möglich, z.B. 'Abklärung einer adypischen Pneumonie'.  Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, können weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können, wie vorhandene Befunde, medizische Berichte und Dokumente.
+Die Fragestellung ist für den Laborauftrag von besonderem Interesse. Dazu stellt die der ServiceRequest.reasonCode das nötige Feld zur Verfügung. Der Grund für den Auftrag (ReasonCode) kann codiert, z.B. als SNOMED-CT Procedure dargestellt werden; auch ist reiner Freitext möglich, z.B. 'Abklärung einer atypischen Pneumonie'. Wenn es für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, können weitere Daten zum Gesundheitszustand des Patienten im Laborauftrag aufgenommen werden können, wie vorhandene Befunde, medizische Berichte und Dokumente.
 
 * ServiceRequest.reasonCode ServiceRequest.reasonCode.text
 
@@ -100,7 +96,7 @@ Es gibt zwingende oder gewünschte Angaben zur vollständigen Auftragsstellung b
 
 Ein weiteres Beispiel ist der Synacthen(ACTH) Funktionstest, bei dem eine basale Blutprobe am morgen nüchtern abgenommen wird, danach sofort das Synacthen gespritzt wird, und eine Stunde später eine zweite Blutprobe entnommen wird.
 
-* Basale Serum-Probe nüchtern und Verabreichen von Synacthe: Specimen.collection.collected[collectedDateTime]
+* Basale Serum-Probe nüchtern und Verabreichen von Synacthen: Specimen.collection.collected[collectedDateTime]
 
 * Zweite Serum-Probe 60 Minuten später: Specimen.collection.collected[collectedDateTime]
 
@@ -109,19 +105,12 @@ bei Blutgas-Analysen, wo die dem Patienten zum Zeitpunkt der Probeentnahme verab
 
 * ServiceRequest.supportingInfo, z.Bsp. O2 4 Liter/Min.
 
-### Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
-
-Labore bieten häufig die Möglichkeit an, Vitalfunktionen mit entsprechenden Medizingeräten zu überwachen, wie z.B. die 24 Stunden Blutdrucküberwachung, EKG Langzeitüberwachung, oder schlafmedizinisches Monitoring. Dazu wird das Medizingerät entweder dem Auftraggeber zugeschickt, oder der Patient holt es sich selber im Labor ab. Es wurde versucht, diese Verordnungen über die ServiceRequest.catogories abzubilden:
-
-* Das Vorgehen, diesen use case im vorliegenden Implementation guide aufzunehmen, erscheint aber unbefriedigend, da solche Monitoring Untersuchungen von Vitaldaten ausserhalb der eigentlichen Labordomäne fallen, und da uns FHIR spezifischere Resourcen zur Verfügung stellt: Die Resource [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) bietet sich hier an, wobei das benötigte Gerät in der [DeviceDefinition](https://hl7.org/fhir/R4B/devicedefinition.html) Resource referenziert wird. Der dazugeörige Use Case kann analog der Laborverordnung als Bundle mit einer Composition, welche an Stelle des Service Request den [Device Request](https://hl7.org/fhir/R4B/devicerequest.html#DeviceRequest) enthält, implementiert werden. Es ist somit sinnvoller, die Anforderung von Monitoring-Untersuchungen in einem eigenen Implementation Guide abzuhandeln.
-Aufgrund obiger Überlegungen wurden die entsprechenden ServiceRequestCategories für das Monitoring im ValueSet des Implementation Guide auskommentiert.
-
-### Use Case 10: Laborverordnung aus dem Labor-Katalog
+### Use Case 9: Laborverordnung aus dem Labor-Katalog
 
 Dieser Use Case bewegt sich ausserhalb des Bereiches dieses Implementationsguides, obschon er ein wesentlicher Bestandteil von jeder Laborverordnunbg darstellt. Auftraggeber brauchen die Auswahl der Laboruntersuchungen, die das Labor auch wirklich zur Verfügung stellen kann. Ausserdem brauchen sie Orientierung in der Vielzahl von möglichen Untersuchungen in den verschiedenen Sparten, sowie Vorgaben für das präanalytische Vorgehen, Vorgaben für die richtigen Gefässe und Transportmedien, für die Minimalvolumen der Proben usw. Eine zukünftigen Version sollte diese Möglichkeit bieten.
 
-Die Labore stellen dazu ihren Kunden einen Katalog von derjenigen Laboruntersuchungen zu Verfügung, welche sie zur Verfügung stellen können. Dabei kann es sich um Einzeluntersuchungen handeln, wie zum Beispiel Natriumkonzentration im Serum, oder um eine Kollektion von Untersuchungen, wie zum Beispiel Na, K und Cl im Serum handeln. Häufig in Form eines Laborhandbuches machen sie die Vorgaben zu Transport-Temperatur, minimale Probenmenge, Art des Transportgefässes usw. zugänglich.
+Die Labore stellen dazu ihren Kunden einen Katalog von derjenigen Laboruntersuchungen zu Verfügung, welche sie zur Verfügung stellen können. Dabei kann es sich um Einzeluntersuchungen handeln, wie zum Beispiel Natriumkonzentration im Serum, oder um eine Kollektion von Untersuchungen (Panel), wie zum Beispiel Na, K und Cl im Serum handeln. Häufig in Form eines Labor-Kompendium machen sie die Vorgaben zu Transport-Temperatur, minimale Probenmenge, Art des Transportgefässes usw. zugänglich.
 
 Es wird dazu verschiedene Typen von Katalogeinträgen (CatalogEntries) geben: Einzel-Analysen, Mehrfach-Analysen (panels), Proben-Gefässe, präanalytische Vorbedingungen.
 Der einzelne Datensatz einer Laboruntersuchung oder einer Probe lässt sich als mittels der Resource CatalogEntry abbilden. Eine Composition mit einem Profile for Catalog ist dann das Dokument, das den Katalog darstellt und repräsentiert die Gesamtheit der enthaltenen CatalogEntries. Dabei ist wichtig, dass der Catalog immer den aktuellen Gegebenheiten des Labors entspricht, und beispielsweise sofort neue Laboruntersuchungen oder veränderte Vorgaben der Präanalytik aufnehmen kann.
-[StructureDefinition:Catalog](http://hl7.org/fhir/catalog.html)
+[Order Catalog Implementation Guide](https://build.fhir.org/ig/HL7/fhir-order-catalog/)

@@ -2,7 +2,7 @@
 
 ### Case study 1: Suspicion of deep vein thrombosis
 
-A patient, Hans Guggindieluft, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He verbally identifies himself via his master data as Hans Guggindieluft, 01.01.1981. He reports unclear leg pain in the left lower leg as well as simultaneously occurring respiratory pain and cough. The doctor carries out the anamnesis and physical examination and prescribes the following laboratory parameters:
+A patient, Tomas Timmermann, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He verbally identifies himself via his master data as Tomas Timmermann, 01.01.1984. He reports unclear leg pain in the left lower leg as well as simultaneously occurring respiratory pain and cough. The doctor carries out the anamnesis and physical examination and prescribes the following laboratory parameters:
 
 * Blood cell count incl. differentiation
 * CRP
@@ -50,7 +50,7 @@ Matching FHIR questionnaire that meets this specification:
 
 ### Case study 4: Suspected sepsis
 
-The patient Klebsiella Keller, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample.
+The patient Sara Speckmann, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample.
 All five samples are further processed in the external laboratory Pipette. There, germs are detected in all materials and then identified by mass spectrometry. The pathogens "Klebsiella pneumoniae" and "Escherichia coli" were detected in the four Blood culture bottles, and the bacterium "Streptococcus mitis" was also detected in one aerobic bottle. The germ identified in the urine sample is normally not pathogenic.
 An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances "amoxicillin+clavulanic acid" and "ceftriaxone" are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
 
@@ -76,8 +76,8 @@ Matching FHIR questionnaire that corresponds to this specification:
 
 ### Case study 6: Suspected Melanoma, order for histopathology examination
 
-A 45-year-old female patient came for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
-Attachement of dermatoscopic images // TODO
+The 45-year-old female patient SimoneStuder came to Dr. med. Marc Mustermann in Arztpraxis for her regular skin check and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision.
+Attachement of dermatoscopic images
 Specimen: 29 x 11 x 5 mm skin ellipse
 Body Site: Back paralumbar left
 

@@ -1,4 +1,5 @@
-Instance: questionnaire-sdc-profile-example-cap // TODO delete this file
+/*
+Instance: questionnaire-sdc-profile-example-cap // delete this file
 InstanceOf: Questionnaire
 Description: "Pathology Service of Lab"
 Usage: #example
@@ -129,3 +130,4 @@ Usage: #example
 * item[=].item[=].item[=].text = "Other (specify)"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].required = true
+*/

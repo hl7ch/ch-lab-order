@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-urine24h-creatinine
 InstanceOf: ChLabOrderSRSingletest
-Title: "LabOrder Service Request for Clinical Chemistry Tests"
+Title: "CH LAB-Order example Service Request for Clinical Chemistry Tests"
 Description: "Example for Service Request of Creatinine [Moles/volume] in Urine"
 Usage: #example
 * id = "LabOrder-u24-creatinine"
@@ -16,7 +16,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -27,7 +27,7 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)

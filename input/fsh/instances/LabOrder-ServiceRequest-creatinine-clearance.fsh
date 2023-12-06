@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance
 InstanceOf: ChLabOrderSRContainer
-Title: "LabOrder Service Request for Creatinine clearance"
+Title: "CH LAB-Order example Service Request for Creatinine clearance"
 Description: "Example for Service Request of Creatinine [Moles/volume] and 24h Urin Creatinen"
 Usage: #example
 * id = "LabOrder-creatinine-clearance"
@@ -22,7 +22,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+* category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -33,9 +33,61 @@ Usage: #example
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+* supportingInfo[+] = Reference(MedicationStatement/Medication-diclofenac)
+* supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
+
+Instance: Medication-diclofenac
+InstanceOf: MedicationStatement
+Description: "Example of medication record"
+Usage: #example
+* status = #active
+* medicationReference = Reference(Medication/Voltaren)
+* subject = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+* effectiveDateTime = "2023-11-11"
+* dateAsserted = "2023-11-11"
+* informationSource = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+// * reason.reference.reference = "Observation/backache"
+* note.text = "Patient takes it every day in the morning back pain"
+* dosage.sequence = 1
+* dosage.text = "1 tablet per day"
+
+Instance: Voltaren
+InstanceOf: Medication
+Description: "Example of a medication product"
+Usage: #example
+* contained = sub01
+* code = $sct#775563008 "Product containing only diclofenac (medicinal product)"
+* form = $sct#385055001 "Tablet (basic dose form)"
+* ingredient.itemReference = Reference(sub01)
+* ingredient.strength.numerator = 50 'mg'
+* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+
+Instance: sub01
+InstanceOf: Substance
+Description: "Example of a medication substance"
+Usage: #inline
+* code = $sct#62039007 "Diclofenac sodium (substance)"
+
+Instance: Renal-insufficiency
+InstanceOf: Condition
+Description: "Example of a Condition or Problem"
+Usage: #example
+* identifier.value = "12345"
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding[0] = $sct#55607006 "Problem"
+* category.coding[+] = $condition-category#problem-list-item
+* severity = $sct#255604002 "Mild (qualifier value)"
+* code = $sct#723190009 "Chronic renal insufficiency (disorder)"
+* bodySite = $sct#181414000 "Entire kidney (body structure)"
+* subject = Reference(Patient/HansGuggindieluft) "HansGuggindieluft"
+* onsetDateTime = "2013-04-02"
+* recordedDate = "2013-04-04"
+* recorder = Reference(Practitioner/MarcMustermann)
+* asserter = Reference(Practitioner/MarcMustermann)
