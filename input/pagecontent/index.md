@@ -8,23 +8,13 @@
 
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory orders
 
-This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders, which can be implemented as Orders by ServiceRequest or optionally as Orders by Forms.
+This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electronic Medical Records (EMR) systems can send an electronic laboratory order to a Laboratory Information System (LIS). The lab order takes the form of a FHIR bundle resource of type 'document' and uses the CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html> to structure the administrative data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author). The analyses that are requested are available as code and as text in the ServiceRequest resource. This resource contains further important information about the requester and performer, the reason for the order, the medication, the conditions (the clinical context), the insurance and the material sample. This specimen ressource, in turn, contains information about the collection, the processing details, any required additives, and the container type to be used, among other things. So all the necessary information for executing the laboratory order is available for the receiving laboratory, and there is no necessity for a Questionnaire and QuestionnaireResponse resource. This quite common use case primarily occurs in hospitals that operate their own medical laboratory.
 
-#### Order by ServiceRequest
+[CH Core (R4) profiles](https://fhir.ch/ig/ch-core/index.html) and [CH EPR Term](https://fhir.ch/ig/ch-epr-term/2.0.9/index.html) are used to take account of national requirements.
 
- This quite common case primarily occurs in hospitals that operate their own medical laboratory. There is no Questonnaire, no QuestionnaireResponse, only the ServiceRequest, which contains what is beeing requested in a CodeableConcept. Therefore the service can be requested as a LOINC Code witĥ supplementary text string. Additional order information can be supplied in an 'orderDetail' element. Further elements references the coded reason, the insurance, the specimen. Supporting info may reference any Resource, such as medication, allergy/intolerace, condition (problem list). And the specimen resource points at the sample which has to be analyzed, like blood, serum, urine etc. The preanalytic conditions of the sample are also contained in this resource.
+#### Order by Form (optional)
 
-#### Order by Form
-
-In addition to the ServiceRequest, the laboratory order can provide a form. In this optional situation the order is
-based on CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html>, which refers on the CH Core Profiles of Switzerland and on CH EPR Term.
-
-It also refers to FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) and targets forms that can be presented to the user with pre-filled input fields, and also provide guidance with searchable value sets.
-There are some enhancements to the general Order and Referral implementation guide. Above all, samples play a major role in the laboratory and pathology area and must be closely linked to the order so that they can be correctly assigned in the executing laboratory. In general, the Laboratory Implementation Guide can also be used for pathology orders, which often follow the same path and are passed on from the laboratories to specialized pathology departments. And similar to other divisions, previous findings and images can also be requested.
-
-This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives guidance for the implementation of the user interface.
-
-Since many laboratories offer possibilities for monitoring vital signs, such as Blood pressure, ECG, pulse, these services can be ordered. But these use cases are out of scope of this implemantation guide, since there is a specific FHIR-Resource named DeviceRequest - Content, which should be used for this purose.
+There is another use case in which the commissioning laboratory provides the client with a form, similar to how laboratories used to serve clients with paper-based forms. This situation is implemented here by including the two resources Questionnaire (form) and QuestionnaireResponse (completed form) in the document in addition to the ServiceRequest resource. CH-ORF (R4) Implementation Guide is also used here, which in turn uses the FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) to offer user-friendly forms with pre-filled fields and selectable ValueSets.
 
 #### Download
 
