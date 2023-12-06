@@ -49,6 +49,8 @@ Example document:
 
 <a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt by Form</a>
 
+
+
 ### Use Case 3: Requesting additional examinations of the same sample
 
 It is not uncommon for the results of laboratory tests to lead to the request for additional tests on the same sample. In the example 1-tvt, venous thrombophilia may be suspected, so that further laboratory tests can detect hereditary causes such as factor V Leiden mutation, prothrombin gene mutation, antithrombin deficiency, etc.
