@@ -40,8 +40,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 * [Issue #253](https://github.com/hl7ch/ch-lab-order/issues/253) shift license to CC0 1.0 Universal (CC0 1.0) - Switched to CC
 
-#### Open Issues for STU
-
 #### Follow up of changes in CH-orf
 
 * [Change Log CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/changelog.html):
