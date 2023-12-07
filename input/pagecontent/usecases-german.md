@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD001 MD033 MD041 -->
-
 <!--
 ╭───────────────────── UC -german ──────────────────────────╮
 │  UC - english is original, this is a traduction           │
@@ -44,7 +43,7 @@ Außerhalb dieses Anwendungsfalls: Die Ergebnisse werden dann dem Kunden zurück
 
 Beispiel-Dokument:
 
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt by Form</a>
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt by Form</a>
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 

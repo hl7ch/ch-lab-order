@@ -47,7 +47,7 @@ Outside of this use case: the results are then reported back to the client.
 
 Example document:
 
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt by Form</a>
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt by Form</a>
 
 ### Use Case 3: Requesting additional examinations of the same sample
 
