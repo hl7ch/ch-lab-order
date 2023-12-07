@@ -11,9 +11,7 @@ The order document is sent to the laboratory information system (LIS).
 
 He can also add information about the clinical context to the laboratory order: problem list, current medication list, questions about the prescribed analyses
 
-Example document:
-
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-0-best-practice-document.html'>best-practice</a>
+Example document: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
 
 ### Use Case 2: Lab Order by Form
 
@@ -45,9 +43,7 @@ A form (Questionnaire) is presented to the client, which contains the following 
 
 Outside of this use case: the results are then reported back to the client.
 
-Example document:
-
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt by Form</a>
+Example document: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
 
 ### Use Case 3: Requesting additional examinations of the same sample
 
@@ -73,7 +69,7 @@ Examples are:
 * Food industry: investigation on employee hygiene (e.g. salmonella contamination)
 * Police investigations
 
-Example document: [CH LAB-Order 5-biol-monit](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-5-biol-monit-document.html). Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
+Example document: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
 
 ### Use Case 6: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
 

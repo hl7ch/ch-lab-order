@@ -10,8 +10,7 @@ Der Auftraggeber (zum Beispiel ein Arzt) benötigt verschiedene Laboruntersuchun
 
 Er kann auch Informationen zum klinischen Kontext der Laborbestellung hinzufügen: Problemliste, aktuelle Medikamentenliste, Fragen zu den verordneten Analysen.
 
-Beispielformular:
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-0-best-practice-document.html'>best-practice</a>
+Beispielformular: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
 
 ### Use Case 2: Laborverordnung unter Verwendung von Questionnaire und QuestionnaireResponse
 
@@ -41,9 +40,7 @@ Dem Kunden wird ein Formular (Fragebogen) vorgelegt, das folgende Informationen 
   
 Außerhalb dieses Anwendungsfalls: Die Ergebnisse werden dann dem Kunden zurückgemeldet.
 
-Beispiel-Dokument:
-
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt by Form</a>
+Beispiel-Dokument: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
@@ -68,7 +65,7 @@ Beispiele dazu sind:
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
-Beispielformular: [CH LAB-Order 5-biol-monit](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-5-biol-monit-document.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
+Beispielformular: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
 ### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
