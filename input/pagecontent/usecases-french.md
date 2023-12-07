@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD001 MD033 MD041 -->
-
 <!--
 ╭───────────────────── UC -german ──────────────────────────╮
 │  UC - english is original, this is a traduction           │
@@ -46,7 +45,7 @@ Un formulaire (Questionnaire) est présenté au donneur d'ordre, qui contient le
 
 En dehors de ce cas d'utilisation : les résultats sont ensuite communiqués au donneur d'ordre.
 
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt par Formulaire</a>
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt par Formulaire</a>
 
 ### Cas d'utilisation 3: Demande d'analyses supplémentaires du même échantillon
 
@@ -71,7 +70,7 @@ En voici quelques exemples :
 * Industrie alimentaire : enquête sur l'hygiène des employés (p.ex. contamination par salmonelles)
 * Enquêtes de police
 
-Exemple de formulaire : [5-biol-monit](http://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
+Exemple de formulaire : [CH LAB-Order 5-biol-monit](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-5-biol-monit-document.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
 
 ### Cas d'utilisation 6: Suggestion d'examens supplémentaires ou alternatifs par le médecin de laboratoire (destinataire de l'ordonnance)
 
@@ -84,8 +83,6 @@ Après réception et traitement de l'ordonnance du laboratoire, il peut arriver 
 Si cela présente un intérêt particulier pour l'interprétation de l'examen prescrit, il doit être possible d'inclure d'autres données sur l'état de santé du patient dans la commande du laboratoire. Il s'agit de résultats existants, de rapports médicaux et de documents.
 
 * ServiceRequest.reasonCode ServiceRequest.reasonReference
-
-Exemple de formulaire avec proposition d'investigations supplémentaires pour des tests microbiologiques, hématologiques et chimiques en réponse : [2-pertussis] (<http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html>).
 
 ### Cas d'utilisation 8: Informations sur l'échantillon, pré-analytique
 

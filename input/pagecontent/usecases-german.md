@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD001 MD033 MD041 -->
-
 <!--
 ╭───────────────────── UC -german ──────────────────────────╮
 │  UC - english is original, this is a traduction           │
@@ -44,7 +43,7 @@ Außerhalb dieses Anwendungsfalls: Die Ergebnisse werden dann dem Kunden zurück
 
 Beispiel-Dokument:
 
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt by Form</a>
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt by Form</a>
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
@@ -69,7 +68,7 @@ Beispiele dazu sind:
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
-Beispielformular: [5-biol-monit](http://fhir.ch/ig/ch-lab-order/Questionnaire-5-biol-monit.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
+Beispielformular: [CH LAB-Order 5-biol-monit](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-5-biol-monit-document.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
 ### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
@@ -85,8 +84,6 @@ Beispielformular mit Vorschlag für zusätzliche Untersuchungen als Antwort
 Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, muss es möglich sein, weitere Daten zum Gesundheitszustand des Patienten in den Laborauftrag aufzunehmen. Dies sind vorhandene Befunde, medizinische Berichte und Dokumente.
 
 * ServiceRequest.reasonCode ServiceRequest.reasonReference
-
-Musterformular mit Vorschlag für zusätzliche Untersuchungen für mikrobiologische, hämatologische und chemische Tests als Antwort: [2-Pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
 ### Use Case 8: Informationen über die Probe, Präanalytik
 

@@ -47,7 +47,7 @@ Outside of this use case: the results are then reported back to the client.
 
 Example document:
 
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form-document.html'>tvt by Form</a>
+<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt by Form</a>
 
 ### Use Case 3: Requesting additional examinations of the same sample
 
@@ -55,6 +55,7 @@ It is not uncommon for the results of laboratory tests to lead to the request fo
 
 * Details of the requested service
   * ServiceRequest.category is RequestForAdditionalExam
+  *
 
 ### Use Case 4: Requesting existing lab results and images (out of scope)
 
@@ -72,7 +73,7 @@ Examples are:
 * Food industry: investigation on employee hygiene (e.g. salmonella contamination)
 * Police investigations
 
-Example document: [5-biol-monit.xml](https://github.com/hl7ch/ch-lab-order/tree/master/input/examples/bundle/5-biol-monit.xml). Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
+Example document: [CH LAB-Order 5-biol-monit](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-5-biol-monit-document.html). Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
 
 ### Use Case 6: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
 
@@ -85,8 +86,6 @@ After the laboratory order has been received and processed, the situation may ar
 If this is of particular interest for the interpretation of the prescribed examination, it must be possible to include further data on the patient's state of health in the laboratory order. These are existing findings, medical reports and documents.
 
 * ServiceRequest.reasonCode ServiceRequest.reasonReference
-
-Sample form with proposal for additional investigations for microbioligical, haematological und chemistry tests in response: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
 
 ### Use Case 8: Information on the sample, preanalytics
 

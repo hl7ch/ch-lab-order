@@ -2,19 +2,43 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 2 Ballot
-
 #### Open Issues for STU 3
 
-* [Issue #260](https://github.com/hl7ch/ch-lab-order/issues/260) Using Laboratory Catalogue: Most of the issues below are based on this issue.
-* [Issue #253](https://github.com/hl7ch/ch-lab-order/issues/253) shift license to CC0 1.0 Universal (CC0 1.0)
-* [Issue #128](https://github.com/hl7ch/ch-lab-order/issues/128) Mapping reasonCode und reasonReference from Q to SR
-* [Issue #127](https://github.com/hl7ch/ch-lab-order/issues/127) Mapping Questionnaire code to Service Request code
-* [Issue #88](https://github.com/hl7ch/ch-lab-order/issues/88) The pre-analytical conditions and any limitations are specified in the laboratory catalogue. These include, for example, the fasting of the patient, the type of sample container, the storage period and temperature of the sample, the reasons for rejection, etc. In addition, the costs of Vitamim D determination are only covered by health insurance in certain situations, e.g. rickets, osteoporosis, etc.
-* [Issue #87](https://github.com/hl7ch/ch-lab-order/issues/87) Relations between Specimens and Tests. Refer to [Issue #72](https://github.com/hl7ch/ch-lab-order/issues/72)
-* [Issue #80](https://github.com/hl7ch/ch-lab-order/issues/80) User should be able to select analyses or analyse panels from a Laboratory Catalog. The applies to Specimens
-* [Issue #79](https://github.com/hl7ch/ch-lab-order/issues/79) Pick desired Analyses and Specimens from am Catalog
+* [Issue#296](https://github.com/hl7ch/ch-lab-order/issues/296) Add task resource to enable workflow communication
+
+* [Issue #260](https://github.com/hl7ch/ch-lab-order/issues/260) Using Laboratory Catalogue
+
 * [Issue #72](https://github.com/hl7ch/ch-lab-order/issues/72) Relation between Tests and Specimens my be needed. The relation should be established by a test-specific PlanDefinition as extension specimenRequested, which points to the test-specific SpecimenDefinition. The test-specific PlanDefinition and SpecimenDefinitin should be provided by a LabCatalog/Compendium. So the Lab Organization can independently define their tests with all the needed preanalytic conditions.
+
+* [Issue #128](https://github.com/hl7ch/ch-lab-order/issues/128) Mapping reasonCode und reasonReference from Q to SR
+
+* [Issue #127](https://github.com/hl7ch/ch-lab-order/issues/127) Mapping Questionnaire code to Service Request code
+
+### STU 2 Ballot
+
+* [Isssue # 284](https://github.com/hl7ch/ch-lab-order/issues/284) Home - IG Fragments (Safety Considerations) (Patrick Jolo eHealth Suisse) - changed
+
+* [Isssue # 282](https://github.com/hl7ch/ch-lab-order/issues/282) Examples needed that indicate request of analyses and linked information (Corina von Känel) - Example added
+
+* [Isssue # 281](https://github.com/hl7ch/ch-lab-order/issues/281) Use Cases in German: use case 10 a specialised case of use case 2? (Emmanuel Eschmann, CISTEC) - All Use Cases and translations refactored because of making the order using Questionnaire and QuestionnaireResponse as option
+
+* [Isssue # 280](https://github.com/hl7ch/ch-lab-order/issues/280) FHIR IGs must not have a TODO to be eligible for FMM Level 3 (Emmanuel Eschmann, CISTEC) - open TODOs resolved
+
+* [Isssue # 279](https://github.com/hl7ch/ch-lab-order/issues/279) Use Cases in German: Profile for use case 2? (Emmanuel Eschmann, CISTEC) - All Use Cases and translations refactored because of making the order using Questionnaire and QuestionnaireResponse as option
+
+* [Isssue # 278](https://github.com/hl7ch/ch-lab-order/issues/278) Mismatch between use case 2 in English and in German (Emmanuel Eschmann, CISTEC) - All Use Cases and translations refactored because of making the order using Questionnaire and QuestionnaireResponse as option
+
+* [Isssue # 277](https://github.com/hl7ch/ch-lab-order/issues/277) Management Summary Change - rewording (Corina von Känel, CISTEC AG) - Management summary text has been modified.
+
+* [Isssue # 276](https://github.com/hl7ch/ch-lab-order/issues/276) Ordering of Containers, Blood Pressure instruments should not be covered by lab order (Corina von Känel, CISTEC AG) - Ordering of non laboratory sample measurments is no more part of the IG
+
+* [Isssue # 275](https://github.com/hl7ch/ch-lab-order/issues/275) Home: Typos (Michaela Ziegler, ahdis ag) - Typos fixed
+
+* [Isssue # 274](https://github.com/hl7ch/ch-lab-order/issues/274) CH LAB-ORDER Document Profile: Spelling (Michaela Ziegler, ahdis ag) - Spelling is unfied
+
+* [Isssue # 272](https://github.com/hl7ch/ch-lab-order/issues/272) Case Studies in German (Gabriel Hess, BFH I4MI) #272 - Links fixed
+
+* [Issue #253](https://github.com/hl7ch/ch-lab-order/issues/253) shift license to CC0 1.0 Universal (CC0 1.0) - Switched to CC
 
 #### Follow up of changes in CH-orf
 
@@ -23,6 +47,14 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Changed / Updated
 
 * [Issue #132](https://github.com/hl7ch/ch-lab-order/issues/132) Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](http://build.fhir.org/ig/hl7ch/ch-lab-order/Questionnaire-LabOrder-form.html)
+
+* [Issue #88](https://github.com/hl7ch/ch-lab-order/issues/88) The pre-analytical conditions and any limitations are specified in the laboratory catalogue. These include, for example, the fasting of the patient, the type of sample container, the storage period and temperature of the sample, the reasons for rejection, etc. In addition, the costs of Vitamim D determination are only covered by health insurance in certain situations, e.g. rickets, osteoporosis, etc.
+
+* [Issue #87](https://github.com/hl7ch/ch-lab-order/issues/87) Relations between Specimens and Tests. Refer to [Issue #72](https://github.com/hl7ch/ch-lab-order/issues/72)
+
+* [Issue #80](https://github.com/hl7ch/ch-lab-order/issues/80) User should be able to select analyses or analyse panels from a Laboratory Catalog. The applies to Specimens
+
+* [Issue #79](https://github.com/hl7ch/ch-lab-order/issues/79) Pick desired Analyses and Specimens from am Catalog
 
 * [Issue #78](https://github.com/hl7ch/ch-lab-order/issues/78) Test to be performed is missing in ServiceRequest.code
 
@@ -50,14 +82,8 @@ correct assignment of the patient identification number. In principle, several i
 
 * Replace: Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe with Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 
-<<<<<<< HEAD
-* Remove: Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
-
-* Remove: Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern. 
-=======
 * Add example:  Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
 * Modify: Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern.
 
 * Remove: Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
->>>>>>> IG-ohne-Q
