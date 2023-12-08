@@ -11,9 +11,7 @@ Le client (par exemple, un médecin) nécessite divers examens de laboratoire po
 
 Il peut également ajouter des informations sur le contexte clinique à la commande de laboratoire : liste des problèmes, liste des médicaments en cours, questions sur les analyses prescrites.
 
-Document d'exemple :
-
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-0-best-practice-document.html'>Meilleure pratique</a>
+Document d'exemple: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
 
 ### Cas d'utilisation 2: Laboratoire Commande par Formulaire
 
@@ -45,7 +43,7 @@ Un formulaire (Questionnaire) est présenté au donneur d'ordre, qui contient le
 
 En dehors de ce cas d'utilisation : les résultats sont ensuite communiqués au donneur d'ordre.
 
-<a href='https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-1-tvt-document-by-form.html'>tvt par Formulaire</a>
+Document d'exemple: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
 
 ### Cas d'utilisation 3: Demande d'analyses supplémentaires du même échantillon
 
@@ -70,7 +68,7 @@ En voici quelques exemples :
 * Industrie alimentaire : enquête sur l'hygiène des employés (p.ex. contamination par salmonelles)
 * Enquêtes de police
 
-Exemple de formulaire : [CH LAB-Order 5-biol-monit](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/Bundle-5-biol-monit-document.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
+Exemple de formulaire : [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
 
 ### Cas d'utilisation 6: Suggestion d'examens supplémentaires ou alternatifs par le médecin de laboratoire (destinataire de l'ordonnance)
 
