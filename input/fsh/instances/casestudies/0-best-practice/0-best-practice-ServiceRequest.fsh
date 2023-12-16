@@ -283,16 +283,17 @@ Usage: #example
 * verificationStatus = $condition-ver-status#confirmed
 * category.coding[+] = $condition-category#problemlist-item
 * category = $sct#439401001 "diagnosis"
-* severity = $sct#6736007 "Moderate (severity modifier)" // TBD change to strong
-* code = $sct#368009 "Heart valve disorder"  // TBD change to tibia fracture
-* bodySite = $sct#40768004 "Left thorax"  // TBD change to left tibia
-* bodySite.text = "heart structure"
+* severity = $sct#24484000 "Severe (severity modifier) (qualifier value)"
+* code = $sct#446980008 "Open fracture of tibial plateau (disorder)"
+* bodySite = $sct#719496004
+* bodySite.text = "Bone structure of proximal left tibia (body structure)"
 * subject = Reference(Patient/BirgitBlum) "Birgit Blum"
 * encounter = Reference(Encounter/FirstEncounter)
-* onsetDateTime = "2023-11-05"
-* recordedDate = "2023-11-05"
+* onsetDateTime = "2023-12-05"
+* recordedDate = "2023-12-05"
 * asserter = Reference(PractitionerRole/HansHauserKantonsspital) "Birgit Blum"
-* evidence.code = $sct#426396005 "Cardiac chest pain"
+* evidence.code = $sct#111645003 "Open fracture of upper end of tibia (disorder)"
+
 /*
 Instance: Insurance-Company
 InstanceOf: Coverage
