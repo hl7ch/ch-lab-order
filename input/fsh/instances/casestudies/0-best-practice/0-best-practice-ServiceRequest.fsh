@@ -16,30 +16,15 @@ Usage: #example
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 
-/*
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-*/
-
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * encounter = Reference(FirstEncounter)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* requester = Reference(HansHauserKantonsspital)
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* supportingInfo[+] = Reference(ConditionBirgitBlum)
+* supportingInfo[+] = Reference(ConditionHeartDisorder)
+* supportingInfo[+] = Reference(ConditionTibiaFracture)
 * supportingInfo[+] = Reference(Liquemin)
-
-/*
-* specimen[0] = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
-* specimen[+] = Reference(Specimen/Blood-coag-0-best-practice)
-* specimen[+] = Reference(Specimen/Blood-0-best-practice)
-*/
 
 Instance: 0-best-practice-ServiceRequest-1
 InstanceOf: ChLabOrderSRSingletest
@@ -59,7 +44,7 @@ Usage: #example
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Patient gets Heparin injections"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
@@ -78,13 +63,12 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
-
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+] = $loinc#47622-6 "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
-
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#171183004
 * reasonCode.text = "Diabetes mellitus screening (procedure)"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
@@ -104,12 +88,12 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-
 // orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#171201007
 * reasonCode.text = "Anemia screening (procedure)"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
@@ -187,7 +171,7 @@ Usage: #example
 * code.coding[GTIN] = urn:oid:2.51.1.1#7680388470010 "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
 * code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#6687498
 * code.coding[ATC] = $atc#B01AB01 "Heparin"
-// * code = $sct#412201008 "Porcine heparin (substance)"
+* code = $sct#412201008 "Porcine heparin (substance)"
 * code.text = "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
 
 * status = #active
@@ -272,12 +256,13 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-Instance: ConditionBirgitBlum
-InstanceOf: Condition
-Description: "Problem list of Birgit Blum"
+Instance: ConditionHeartDisorder
+InstanceOf: ChLabOrderDiagnosisCondition
+Description: "Problem list of Birgit Blum Heart Disorder"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
+* category.coding[+] = $condition-category#problemlist-item
 * category = $sct#439401001 "diagnosis"
 * severity = $sct#6736007 "Moderate (severity modifier)"
 * code = $sct#368009 "Heart valve disorder"
@@ -287,9 +272,27 @@ Usage: #example
 * encounter = Reference(Encounter/FirstEncounter)
 * onsetDateTime = "2023-08-05"
 * recordedDate = "2023-10-05"
-* asserter = Reference(Patient/BirgitBlum) "Birgit Blum"
+* asserter = Reference(PractitionerRole/MarcMustermannGruppenpraxis) "Birgit Blum"
 * evidence.code = $sct#426396005 "Cardiac chest pain"
 
+Instance: ConditionTibiaFracture
+InstanceOf: ChLabOrderDiagnosisCondition
+Description: "Problem list of Birgit Blum Tibia Fracture"
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding[+] = $condition-category#problemlist-item
+* category = $sct#439401001 "diagnosis"
+* severity = $sct#6736007 "Moderate (severity modifier)" // TBD change to strong
+* code = $sct#368009 "Heart valve disorder"  // TBD change to tibia fracture
+* bodySite = $sct#40768004 "Left thorax"  // TBD change to left tibia
+* bodySite.text = "heart structure"
+* subject = Reference(Patient/BirgitBlum) "Birgit Blum"
+* encounter = Reference(Encounter/FirstEncounter)
+* onsetDateTime = "2023-11-05"
+* recordedDate = "2023-11-05"
+* asserter = Reference(PractitionerRole/HansHauserKantonsspital) "Birgit Blum"
+* evidence.code = $sct#426396005 "Cardiac chest pain"
 /*
 Instance: Insurance-Company
 InstanceOf: Coverage
