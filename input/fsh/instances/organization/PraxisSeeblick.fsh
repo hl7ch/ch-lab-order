@@ -3,8 +3,8 @@ InstanceOf: CHCoreOrganization
 Title: "Praxis Seeblick"
 Description: "Example for practice"
 Usage: #example
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601230235526"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601230235526"
 * name = "Arztpraxis Messen"
 * telecom[0].system = #phone
 * telecom[=].value = "44 567 78 90"

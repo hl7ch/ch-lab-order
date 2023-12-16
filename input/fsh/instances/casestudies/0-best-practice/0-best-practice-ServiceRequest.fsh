@@ -178,13 +178,18 @@ Usage: #example
 * subject = Reference(Patient/BirgitBlum)
 
 Instance: Liquemin
-InstanceOf: Medication
+InstanceOf: ChLabOrderMedication
 Description: "Example for best-practice of laboratory order"
 Usage: #example
-//* contained = mmanu
-* identifier.id = "123456789"
-* code = $sct#412201008 "Porcine heparin (substance)"
+
+/*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
+
+* code.coding[GTIN] = urn:oid:2.51.1.1#7680388470010 "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
+* code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#6687498
+* code.coding[ATC] = $atc#B01AB01 "Heparin"
+// * code = $sct#412201008 "Porcine heparin (substance)"
 * code.text = "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
+
 * status = #active
 // * marketingAuthorizationHolder.reference = "#mmanu"
 // * doseForm.coding.system = "http://snomed.info/sct"
