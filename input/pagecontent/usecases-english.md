@@ -4,12 +4,13 @@
 │  UC-english is original, german and french are dependent  │
 ╰───────────────────────────────────────────────────────────╯
 -->
-### Use Case 1: Lab Order
+### Use Case 1: Lab Order (Service Request only)
 
-The customer (e.g. a doctor) requires various laboratory tests for further diagnostics. He creates an order document in his Electronic Medical Records (EMR) system, which contains the administrative data structured in accordance with the CH ORF implementation guide and whose contents are available in the EMR. From the analyses provided by the LIS, he can select those that help him with his question, and he can also determine the samples corresponding to the analyses. For example, he wants to have glucose analysed in the blood and cerebrospinal fluid. The laboratory system can store the information on the required containers and any additives in the system. The pre-analytical conditions are specified.
+The customer (e.g. a doctor) requires various laboratory tests to supplement the diagnostic process. He creates an order document in his Electronic Medical Records (EMR) system, which contains the administrative data structured in accordance with the CH Core implementation guide and whose contents are available in the EMR. From the analyses provided by the LIS, he can select those that help him with his question, and he can also determine the samples corresponding to the analyses. For example, he wants to have glucose analysed in the blood and cerebrospinal fluid. The laboratory system can store the information on the required specimen containers and any additives in the system. The pre-analytical conditions are specified.
+
+He can also add information about the clinical context to the laboratory order: problem list, current medication list, questions about the prescribed analyses.
+
 The order document is sent to the laboratory information system (LIS).
-
-He can also add information about the clinical context to the laboratory order: problem list, current medication list, questions about the prescribed analyses
 
 Example document: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
 

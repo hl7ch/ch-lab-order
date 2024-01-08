@@ -77,10 +77,10 @@ InstanceOf: CHCorePractitioner
 Title: "Hans Hauser"
 Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
 Usage: #example
-* identifier[0].system = "urn:oid:2.51.1.3"
-* identifier[=].value = "7601000050700"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123313"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000050700"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "A123313"
 * name.use = #official
 * name.family = "Hauser"
 * name.given = "Hans"
@@ -99,8 +99,8 @@ InstanceOf: CHCoreOrganization
 Title: "Kantonsspital"
 Description: "Example for Hospital"
 Usage: #example
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235503"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000235503"
 * name = "Kantonsspital Zug"
 * telecom[0].system = #phone
 * telecom[=].value = "+41 45 334 55 66"

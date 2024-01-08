@@ -3,8 +3,8 @@ InstanceOf: CHCoreOrganization
 Title: "Labor Pipette"
 Description: "Laboratory Organization, refers to all Storyboards"
 Usage: #example
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234407"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000234407"
 * name = "Labor Pipette"
 * telecom[0].system = #phone
 * telecom[=].value = "+41223345566"
