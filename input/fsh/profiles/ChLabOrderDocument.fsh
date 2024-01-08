@@ -1,9 +1,9 @@
 Profile: ChLabOrderDocument
 Parent: CHCoreDocument
 Id: ch-lab-order-document
-Title: "CH LAB-Order Document Profile by Service Requests"
-Description: "Definition of the bundle for the lab order document"
-* . ^short = "CH Lab-Order Bundle"
+Title: "CH LAB-Order Document by Service Requests only"
+Description: "Definition of the bundle for the lab order document, parent is CHCoreDocument"
+* . ^short = "CH Lab-Order Bundle by Service Request only"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
 (which is concept commonly used in HL7) or Laboratory Service Request (Concept commonly used in DICOM). 
@@ -11,7 +11,6 @@ Consequently one CH Lab-Order Document contains one CH Lab-Order ServiceRequest 
 equal one Filler Order equal one Laboratory Service Request."
 * ^version = "0.1.0"
 * ^experimental = false
-
 * ^publisher = "eHealth Suisse"
 * . ^short = "CH LAB-Order Document"
 * identifier MS
@@ -29,11 +28,9 @@ equal one Filler Order equal one Laboratory Service Request."
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
+
+// ---------- Bundle.entry:Composition ----------
 * entry[Composition] 1..1
 * entry[Composition] ^short = "Lab order composition"
 * entry[Composition].resource 1..
 * entry[Composition].resource only ChLabOrderComposition
-
-// ---------- Bundle.entry:Composition ----------
-// * entry[Composition].resource ^type.profile = Canonical(ChLabOrderComposition)
-// * entry[Composition].resource only ChLabOrderComposition
