@@ -4,8 +4,8 @@ Id: ch-lab-order-document
 Title: "CH LAB-Order Document by Service Requests only"
 Description: "Definition of the bundle for the lab order document, parent is CHCoreDocument"
 * . ^short = "CH Lab-Order Bundle by Service Request only"
-* . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
-An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
+* . ^definition = "This IG follows the IHE Laboratory Testing Workflow (LTW) Profile: 
+An Order Filler (LIS) accepts from an Order Placer a single Order, which is sent to automation manager (LIS, LAS, Analyzer Manager). The automation manager converts the the laboratory order into “Analytical Work Order Steps” (AWOS). The intended IVD Device (Analyzer) queries the Analyzer manager for AWOS related to a specimen-in-container, performs the requested tests and sends the results back to the analyzer manager and Order Filler 
 (which is concept commonly used in HL7) or Laboratory Service Request (Concept commonly used in DICOM). 
 Consequently one CH Lab-Order Document contains one CH Lab-Order ServiceRequest which depicts one Placer Order 
 equal one Filler Order equal one Laboratory Service Request."
