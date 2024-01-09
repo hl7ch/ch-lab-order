@@ -22,7 +22,7 @@ Usage: #example
 * encounter = Reference(FirstEncounter)
 * requester = Reference(HansHauserKantonsspital)
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* supportingInfo[+] = Reference(ConditionHeartDisorder)
+// * supportingInfo[+] = Reference(ConditionHeartDisorder)
 * supportingInfo[+] = Reference(ConditionTibiaFracture)
 * supportingInfo[+] = Reference(Liquemin)
 
