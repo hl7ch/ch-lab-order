@@ -43,10 +43,10 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
                       
-//* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardBirgitBlum"   // entry[10]
-//* entry[=].resource = HealthInsuranceCardBirgitBlum
-* entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionHeartDisorder"
-* entry[=].resource = ConditionHeartDisorder
+// * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardBirgitBlum"   // entry[10]
+// * entry[=].resource = HealthInsuranceCardBirgitBlum
+// * entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionHeartDisorder"
+// * entry[=].resource = ConditionHeartDisorder
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-0-best-practice"
 * entry[=].resource = Serum-0-best-practice
