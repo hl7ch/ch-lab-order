@@ -1,6 +1,6 @@
-@startuml LabOrder Workflow Diagram
+@startuml DiagnosticReport state Diagram
 
--> "OrderPlacer\n Computer-based Patient-Record-System"
+(*) -> "Register Orders\n and Specimens"
   --> if "successful?" then
 
   -->[true] "process tests"
