@@ -1,0 +1,32 @@
+@startuml LabOrderWorkflow
+skinparam rectangle<<resource>> {
+  roundCorner 12
+}
+sprite $bProcess jar:archimate/business-object
+sprite $aService jar:archimate/application-service
+
+rectangle "Order Placer\n\nPatient Record System" as OP <<$bProcess>><<resource>> #Application
+rectangle "Order Filler (OF)\n\nLIS or LAS"  as OF <<$bProcess>><<resource>> #Application
+rectangle "Order Result\n Tracker"  as RT <<$bProcess>><<resource>> #Application
+rectangle "Automation Manager (AM)\nLaboratory Device Manager"  as AM <<$aService>><<resource>> #Business
+rectangle "Laboratory Device (LD)\nAnalyzer"  as LD <<$aService>><<resource>> #Business
+
+OF <-left- OP : [LAB-1]: Placer Order Management
+OF -left-> OP : [LAB-2]: Filler Order Management
+OF -down-> RT : [LAB-3]:\nOrder Result\nManagement
+OF -down-> AM : [LAB-4]:\nWork Order\nManagement
+OF <-down- AM : [LAB-5]:\nTest Results\nManagement
+AM <-down- LD: [LAB-22]:\nQuery for\nWOS
+AM -down-> LD: [LAB-21]:\nWOS\nDownload
+AM <-down- LD: [LAB-23]:\nWOS\nStatus\nChange
+
+
+legend left
+Meaning of sprites in Rectangels
+====
+<$bProcess> : HIS, PIS, LIS, Result Repo
+====
+<$aService> : Laboratory Service
+
+endlegend
+@enduml
