@@ -81,8 +81,9 @@ Usage: #example
 * identifier.value = "12345"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[0] = $sct#55607006 "Problem"
-* category.coding[+] = $condition-category#problem-list-item
+// * category.coding[0] = $sct#55607006 "Problem"
+// * category.coding[+] = $condition-category#problem-list-item
+* category = $condition-category#problem-list-item
 * severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"
 * bodySite = $sct#181414000 "Entire kidney (body structure)"

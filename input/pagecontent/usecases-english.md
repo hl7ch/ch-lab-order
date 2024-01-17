@@ -63,7 +63,7 @@ Example document: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pe
 
 ### Use Case 4: Requesting existing lab results and images (out of scope)
 
-Sometimes the physician also wants information about previous laboratory tests, e.g., to assess the prostate-specific antigen (PSA) trend. It is not covered here.
+Sometimes the physician also wants information about previous laboratory tests, e.g., to assess the prostate-specific antigen (PSA) trend. As the exchange format for the laboratory result is still being developed, this use case is not yet available.
 
 ### Use Case 5: Collective request for toxicological testing (biological monitoring)
 
@@ -77,7 +77,11 @@ Examples are:
 * Food industry: investigation on employee hygiene (e.g. salmonella contamination)
 * Police investigations
 
-Example document: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
+Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
+
+Example order document by ServiceRequest: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html).
+
+Example order document by Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-by-form.html).
 
 ### Use Case 6: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
 
