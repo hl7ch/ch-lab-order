@@ -61,11 +61,7 @@ In the 2-pertussis example, the in-house laboratory tests (automated blood count
 
 Example document: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
 
-### Use Case 4: Requesting existing lab results and images (out of scope)
-
-Sometimes the physician also wants information about previous laboratory tests, e.g., to assess the prostate-specific antigen (PSA) trend. As the exchange format for the laboratory result is still being developed, this use case is not yet available.
-
-### Use Case 5: Collective request for toxicological testing (biological monitoring)
+### Use Case 4: Collective request for toxicological testing (biological monitoring)
 
 This use case corresponds to example 5-biol-monit. In order to assess the exposure of workers to chemical substances, measurements at the workplace are supplemented by occupational health checkups. The toxic substances themselves or their metabolites in serum or urine can be determined. The order is initiated by the occupational physician of the company or the insurance company. The problem of employee fluctuations must be kept in mind.
 

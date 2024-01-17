@@ -38,6 +38,12 @@ pages:
     title: Use Cases in German
   usecases-french.md:
     title: Use Cases in French
+  case-studies-english.md:
+    title: Case Studies in English
+  case-studies-german.md:
+    title: Case Studies in German
+  case-studies-french.md:
+    title: Case Studies in French
   document-lo-by-form.md:
     title: CH LAB-Order by form
   document-lo.md:
