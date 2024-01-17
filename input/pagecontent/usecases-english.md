@@ -52,11 +52,14 @@ Example document: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.htm
 
 ### Use Case 3: Requesting additional tests of the same sample
 
-It is not uncommon for the results of laboratory tests to lead to the request for additional tests on the same sample. In the example 1-tvt, venous thrombophilia may be suspected, so that further laboratory tests can detect hereditary causes such as factor V Leiden mutation, prothrombin gene mutation, antithrombin deficiency, etc.
+It is not uncommon for the results of laboratory tests to lead to the request for additional tests on the same sample. Or in-house laboratory analyses are supplemented by further tests that can only be carried out in an external laboratory.
 
-* Details of the requested service
-  * ServiceRequest.category is RequestForAdditionalExam
-  *
+In the 2-pertussis example, the in-house laboratory tests (automated blood count, CRP) are supplemented by a search for Bordetella pertussis and parapertussis DNA in the throat swab, carried out by an external contract laboratory, in order to rule out whooping cough.
+
+* The 2-pertussis-ServiceRequest is replaced by the
+  * 2-pertussis-ServiceRequest-add-test, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
+
+Example document: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
 
 ### Use Case 4: Requesting existing lab results and images (out of scope)
 

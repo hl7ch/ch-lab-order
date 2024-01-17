@@ -1,6 +1,6 @@
 Instance: 2-pertussis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "laborder 2-pertussis"
+Title: "CH LAB-Order 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis-service-request"
@@ -11,10 +11,8 @@ Usage: #example
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-// orderDetails: Additional order information
+* code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
