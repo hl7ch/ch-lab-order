@@ -16,7 +16,7 @@ He can also add information about the clinical context to the laboratory order: 
 
 The order document is sent to the laboratory information system (LIS).
 
-Example document: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
+Example order document by ServiceRequest: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
 
 #### Lab Order by Form
 
@@ -48,7 +48,7 @@ A form (Questionnaire) is presented to the client, which contains the following 
 
 Outside of this use case: the results are then reported back to the client.
 
-Example document: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
+Example order document by form: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
 
 ### Use Case 3: Requesting additional tests of the same sample
 
@@ -88,28 +88,3 @@ Example order document by Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-m
 After the laboratory order has been received and processed, the situation may arise in which the laboratory physician wishes to make suggestions for additional or alternative examinations to the author of the order. He can use the received order document for this purpose, exchange the personal data of the sender and receiver through his information system, and send it back with the suggestions for further or alternative laboratory examinations.
 
 * ServiceRequest.category: ProposalForAdditionalExam
-
-### Use Case 7: Findings and further data on the patient's health status
-
-If this is of particular interest for the interpretation of the prescribed examination, it must be possible to include further data on the patient's state of health in the laboratory order. These are existing findings, medical reports and documents.
-
-* ServiceRequest.reasonCode ServiceRequest.reasonReference
-
-### Use Case 8: Information on the sample, preanalytics
-
-For certain tests, the order and sample alone are not sufficient to determine the laboratory result. In such cases, observations on the sample collection must be supplied to the laboratory. An example of this is the determination of creatinine clearance in 24 h urine. For this purpose, the laboratory must know the amount of urine collected during a certain period of time. Therefore the ordering party provides the laboratory with the urine volume, as well as a sample of the urine and serum.
-
-* Collected urine quantity: Specimen.collection.quantity.
-
-* Start and end of urine collection: Specimen.collection.collected[collectedPeriod] - start - end
-
-Another example is the Synacthen(ACTH) function test, where a basal Blood sample is collected in the morning fasting, followed immediately by the Synacthen injection, and a second Blood sample is collected an hour later.
-
-* Basal serum sample fasting and administration of Synacthen(ACTH): Specimen.collection.collected[collectedDateTime], a second sample is collected 60 minutes later: Specimen.collection.collected[collectedDateTime]
-
-### Use Case 9: Additional information on the context of the sample
-
-For Blood gas analyses, the amount of oxygen administered to the patient is of concern
-
-* ServiceRequest.reasonReference (Condition | Observation | DiagnosticReport)
-* ServiceRequest.supportingInfo, e.g. O2 4 liters/min.
