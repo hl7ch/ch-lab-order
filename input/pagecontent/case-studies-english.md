@@ -39,11 +39,24 @@ A mother visits the family doctor Peter Presto of the Olten group practice with 
 
 ### CH LAB-Order 3-gyn
 
+#### Annual gynaecological check-up
+
+The doctor`s assistent of the gynaecology department in the Olten group practice, Dr Peter Pap, prepares the next day`s consultations. As the practice only has a minimal laboratory of its own, certain patients are sent to the nearby Pipette laboratory outpatient clinic before the appointment, including the young patient Ms Marina Rubella, born 8. 8. 1992. In her practice software, the MPA prescribes the standard analyses agreed with the laboratory for the gynaecological 3-year check-up for patient Rubella. This also includes the Blood sample for the serotonary for any follow-up prescriptions. The laboratory transmits the results to the practice no later than 90 minutes after the Blood sample has been taken. Dr Pap prescribes the following orders during the consultation:
+
+* Gynaecological cervical cytology: Pap smear - if indicated, detection and typing of HPV (human papilloma virus) should also be performed. Collection material according to the laboratory`s instructions. The cytological examination is carried out in the Pipette laboratory. The Pipette laboratory does not perform the typing itself.
+* Partial urine status (Combur9 test): carried out by the MPA in the practice: the following parameters are examined: pH, leucocytes, erythrocytes, nitrite, protein, glucose, ketones, urobilinogen, bilirubin (semi-quantitative examinations, results are probably entered manually into the practice laboratory system).
+* Urine bacteriology: collection material according to the laboratory`s instructions. General bact, incl. fungi to the laboratory pipette Transmission of the order is triggered by the MPA (collection time)
+* Supplementary order “Screening before pregnancy”: All tests can be carried out from the materials (serum, EDTA Blood) taken in advance in the outpatient clinic (hepatitis-Bc antibodies, HIV 1+2 (Ak+p24), rubella IgG, lues/syphilis screening test)
+
 [Order Document only ServiceRequest](Bundle-3-gyn-document.html)
 
 [Order Document by Form](Bundle-3-gyn-document-by-form.html)
 
 ### CH LAB-Order 4-sepsis
+
+#### Case study 4: Suspected sepsis
+
+The patient Sara Speckmann, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample. All five samples are further processed in the external laboratory Pipette. There, germs are detected in all materials and then identified by mass spectrometry. The pathogens “Klebsiella pneumoniae” and “Escherichia coli” were detected in the four Blood culture bottles, and the bacterium “Streptococcus mitis” was also detected in one aerobic bottle. The germ identified in the urine sample is normally not pathogenic. An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances “amoxicillin+clavulanic acid” and “ceftriaxone” are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
 
 [Order Document only ServiceRequest](Bundle-4-sepsis-document.html)
 
@@ -51,11 +64,28 @@ A mother visits the family doctor Peter Presto of the Olten group practice with 
 
 ### CH LAB-Order 5-biol-monit
 
+#### Collective order “SUVA biological monitoring”
+
+Companies that work with substances hazardous to health and in which employees are exposed to special risks are subject to occupational health screening by SUVA. Biological monitoring is one of the control options. This assesses the exposure of workers to chemical agents by determining the agents or metabolites in biological material (e.g. urine). The Occupational Medical Prevention (AMV) of SUVA sends the laboratory a monthly list with the following information per company (collective order):
+
+* Establishment (name, address, establishment number)
+* Number of employees for biological monitoring
+* Examinations to be carried out (e.g. arsenic, lead, mercury, mandelic acid). The companies receive a list from the AMV including labels with the affected employees. Here we take the document of an employee Beat Borer, born 6. 6. 1986. The laboratory prints the order forms with the company number and sends the necessary number of urine cups and order forms to the companies. In the company, order forms and urine cups are labelled with the labels supplied by the AMV and given to the employees. The samples, including the order form, are sent from the company to the laboratory.
+
+[Biological monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
+
 [Order Document only ServiceRequest](Bundle-5-biol-document.html)
 
 [Order Document by Form](Bundle-2-pertussis-5-biol-by-form.html)
 
 ### CH LAB-Order 6-histopath
+
+#### Suspected Melanoma, order for histopathology examination
+
+A 45-year-old female patient Simone Studer came for her regular skin check to the Arztpraxis of Dermatologist Armin Ahrens, and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision. Attachement of dermatoscopic images Specimen: 29 x 11 x 5 mm skin ellipse Body Site:
+
+* Back paralumbar left
+* The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
 
 [Order Document only ServiceRequest](Bundle-6-histopath-document.html)
 
