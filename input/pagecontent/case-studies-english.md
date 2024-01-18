@@ -74,9 +74,9 @@ Companies that work with substances hazardous to health and in which employees a
 
 [Biological monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
 
-[Order Document only ServiceRequest](Bundle-5-biol-document.html)
+[Order Document only ServiceRequest](Bundle-5-biol-monit-document.html)
 
-[Order Document by Form](Bundle-2-pertussis-5-biol-by-form.html)
+[Order Document by Form](Bundle-5-biol-monit-document-by-form.html)
 
 ### CH LAB-Order 6-histopath
 
