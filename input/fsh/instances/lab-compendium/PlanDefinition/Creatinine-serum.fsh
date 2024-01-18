@@ -19,7 +19,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "SerumCreatinineTest"
 * title = "Serum creatinine test"
-* type = http://fhir.ch/ig/ch-lab-order/lab-compendium/CodeSystem/laboratory-service-definition-type#test
+* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #draft
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"

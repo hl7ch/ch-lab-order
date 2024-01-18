@@ -1,0 +1,26 @@
+@startuml my simple order Require
+
+actor "Web User" as WebUser
+participant "Front End" as Portal
+participant Gateway
+participant "Identity \nServer" as IdentityServer
+
+WebUser -> Portal ++: Orders Request
+group Step: Authentication
+  Portal -> Gateway ++: GET /api/v1/orders \nBaerer Token
+  Gateway -> IdentityServer ++: Authenticate Token
+  IdentityServer --> IdentityServer : Validate\nToken
+  IdentityServer -> Gateway : Success, Token Validated
+else Authentication Failed
+  IdentityServer -> Gateway --: Request failed!
+  Gateway -> Portal : Authentication failure!
+  Portal -> WebUser : Login again
+  else Authentication Failed 3
+  IdentityServer -> Gateway --: Request failed!
+  Gateway -> Portal : Authentication failure!
+  Portal -> WebUser : Login again
+  note right : Authentication has failed
+end
+Portal -> WebUser --: Response
+
+@enduml
