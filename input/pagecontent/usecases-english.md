@@ -79,7 +79,7 @@ Example order document by ServiceRequest: [CH LAB-Order 5-biol-monit](Bundle-5-b
 
 Example order document by Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-by-form.html).
 
-### Use Case 6: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
+### Use Case 5: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
 
 After the laboratory order has been received and processed, the situation may arise in which the laboratory physician wishes to make suggestions for additional or alternative examinations to the author of the order. He can use the received order document for this purpose, exchange the personal data of the sender and receiver through his information system, and send it back with the suggestions for further or alternative laboratory examinations.
 

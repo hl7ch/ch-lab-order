@@ -1,7 +1,7 @@
 Profile: ChLabOrderDocumentByForm
 Parent: ChOrfDocument
 Id: ch-lab-order-document-by-form
-Title: "CH LAB-Order Document by Form"
+Title: "CH LAB-Order Document with Service Request and Form"
 Description: "Definition of the bundle for the lab order document by Form, parent is ChOrfDocument"
 * . ^short = "CH Lab-Order Bundle by Form"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 

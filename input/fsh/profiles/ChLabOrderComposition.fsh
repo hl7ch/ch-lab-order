@@ -1,7 +1,7 @@
 Profile: ChLabOrderComposition
 Parent: CHCoreComposition
 Id: ch-lab-order-composition
-Title: "CH LAB-Order Composition by Service Request only"
+Title: "CH LAB-Order Composition with Service Request"
 Description: "Definition for Composition resource in the context of CH LAB-Order by Service Request only, parent is CHCoreComposition"
 * . ^short = "CH LAB-Order Composition"
 * ^version = "0.9.0"

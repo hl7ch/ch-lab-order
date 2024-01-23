@@ -1,7 +1,7 @@
 Profile: ChLabOrderDocument
 Parent: CHCoreDocument
 Id: ch-lab-order-document
-Title: "CH LAB-Order Document by Service Requests only"
+Title: "CH LAB-Order Document with Service Request"
 Description: "Definition of the bundle for the lab order document, parent is CHCoreDocument"
 * . ^short = "CH Lab-Order Bundle by Service Request only"
 * . ^definition = "This IG follows the IHE Laboratory Testing Workflow (LTW) Profile: 

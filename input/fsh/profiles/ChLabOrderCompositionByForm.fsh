@@ -1,7 +1,7 @@
 Profile: ChLabOrderCompositionByForm
 Parent: ChOrfComposition
 Id: ch-lab-order-composition-form
-Title: "CH LAB-Order Composition by Form"
+Title: "CH LAB-Order Composition with ServiceRequest and Form"
 Description: "Definition for Composition resource in the context of CH LAB-Order by Form, parent is ChOrfComposition"
 * . ^short = "CH LAB-Order Composition"
 * ^version = "0.9.0"
