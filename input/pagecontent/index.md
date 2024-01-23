@@ -30,7 +30,7 @@ The ServiceRequest may instantiate a ActivityDefinition, a coded procedure to ex
 
 #### Laboratory order by form (optional)
 
-The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is based on ORF. This allows the data for the laboratory order to be placed in a structured form.
+The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured form.
 
 ### Management Summary
 

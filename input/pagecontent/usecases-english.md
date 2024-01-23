@@ -59,7 +59,7 @@ In the 2-pertussis example, the in-house laboratory tests (automated blood count
 * The 2-pertussis-ServiceRequest is replaced by the
   * 2-pertussis-ServiceRequest-add-test, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
 
-Example document: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
+Example Service Request: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
 
 ### Use Case 4: Collective request for toxicological testing (biological monitoring)
 
