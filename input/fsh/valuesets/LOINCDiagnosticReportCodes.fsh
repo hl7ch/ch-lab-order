@@ -1,4 +1,4 @@
-
+/*
 ValueSet: LOINCDiagnosticReportCodes
 Id: report-codes
 Title: "LOINC Diagnostic Report Codes"
@@ -17,3 +17,4 @@ Description: "This value set includes LOINC codes that relate to Diagnostic Obse
 * ^contact.telecom.value = "http://hl7.org/fhir"
 * ^copyright = "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."
 * include codes from system $loinc
+*/
