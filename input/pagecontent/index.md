@@ -24,13 +24,13 @@ You can download this Implementation Guide in [NPM-format](https://confluence.hl
 
 ### Foundation
 
-#### Laboratory order (Service Request only)
+#### Laboratory order with Service Request
 
 This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc.). A section element has an entry with the Service request reference.
 
 The ServiceRequest may instantiate a ActivityDefinition, a coded procedure to execute a single laboratory test (e.g. Sodium concentration in Serum), or to execute an entire test panel (e.g. concentration of Electrolytes in Serum). Using a ServiceRequest Container we can reference to other ServiceRequest Containers or to Single Test Service Requests.
 
-#### Laboratory order by form (optional)
+#### Laboratory order with Service Request and Form
 
 The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured form.
 

@@ -48,10 +48,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="document-lo.html">Lab-Order Document (ServiceRequest only)</a>
+        <a href="document-lo-sr.html">CH LAB-Order Document with Service Request</a>
       </li>
       <li>
-        <a href="document-lo-by-form.html">Lab-Order Document by form</a>
+        <a href="document-lo-sr-and-form.html">CH LAB-Order Document with Service Request and Form</a>
       </li>
     </ul>
   </li>
