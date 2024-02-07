@@ -1,5 +1,5 @@
 Instance: 2-pertussis-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 2-pertussis"
 Description: "Example Bundle for referral/order for Pertussis investigation"
 Usage: #example

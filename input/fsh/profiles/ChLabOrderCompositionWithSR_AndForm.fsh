@@ -1,10 +1,9 @@
-/*
-Profile: ChLabOrderCompositionByForm
+Profile: ChLabOrderCompositionWithSR_AndForm
 Parent: ChOrfComposition
-Id: ch-lab-order-composition-form
+Id: ch-lab-order-composition-with-sr-and-form
 Title: "CH LAB-Order Composition with ServiceRequest and Form"
-Description: "Definition for Composition resource in the context of CH LAB-Order by Form, parent is ChOrfComposition"
-* . ^short = "CH LAB-Order Composition"
+Description: "Definition for Composition resource in the context of CH LAB-Order with ServiceReauest and Form, parent is ChOrfComposition"
+* . ^short = "CH LAB-Order Composition with ServiceRequest and Form"
 * ^version = "0.9.0"
 * ^status = #draft
 * ^date = "2019-01-30"
@@ -31,4 +30,3 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 
 // ---------- Composition.section.entry:ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest]  // ^type.targetProfile = Canonical(ChLabOrderSRContainer)
-*/

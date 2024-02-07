@@ -1,5 +1,5 @@
 Instance: 4-sepsis-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 4-sepsis"
 Description: "Example Bundle for referral/order for Sepsis Investigation"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: BestPracticeDocument
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order best-practice"
 Description: "Example Bundle for laboratory order"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: 1-tvt-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 1-tvt"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example

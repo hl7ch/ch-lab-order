@@ -1,5 +1,5 @@
 Instance: 3-gyn-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionWithSR
 Title: "Composition 3-gyn"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
 Usage: #example

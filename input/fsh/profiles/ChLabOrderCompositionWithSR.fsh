@@ -1,10 +1,9 @@
-/*
-Profile: ChLabOrderComposition
+Profile: ChLabOrderCompositionWithSR
 Parent: CHCoreComposition
-Id: ch-lab-order-composition
+Id: ch-lab-order-composition-with-sr
 Title: "CH LAB-Order Composition with Service Request"
-Description: "Definition for Composition resource in the context of CH LAB-Order by Service Request only, parent is CHCoreComposition"
-* . ^short = "CH LAB-Order Composition"
+Description: "Definition for Composition resource in the context of CH LAB-Order with Service Request, parent is CHCoreComposition"
+* . ^short = "CH LAB-Order Composition with ServiceRequest"
 * ^version = "0.9.0"
 * ^status = #draft
 * ^date = "2019-01-30"
@@ -61,4 +60,3 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 * section[orderReferral].entry[DocumentReference] only Reference(ChLabDocumentReference)
 * section[orderReferral].entry[DocumentReference] ^short = "DocumentReference"
 * section[orderReferral].entry[DocumentReference].reference 1.. MS
-*/

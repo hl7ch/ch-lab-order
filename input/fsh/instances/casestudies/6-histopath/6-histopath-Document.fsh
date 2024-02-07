@@ -1,5 +1,5 @@
 Instance: 6-histopath-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 6-histopath"
 Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
 Usage: #example

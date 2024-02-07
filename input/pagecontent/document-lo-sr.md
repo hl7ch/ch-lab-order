@@ -6,6 +6,6 @@ This exchange format is defined as a [document type](https://www.hl7.org/fhir/do
 
 {% include img.html img="LabOrderWithSR.png" caption="Fig. 1: Laboratory Order without Questionnaire" width="40%" %}
 
-* **Profile:** [CH LAB-Order Document with Service Request](StructureDefinition-ch-lab-order-document.html)
+* **Profile:** [CH LAB-Order Document with Service Request](StructureDefinition-ch-lab-order-document-with-sr.html)
 
-* **Example**: CH LAB-Order Example Document with Service Request ([XML](Bundle-ch-lab-order-document.xml.html), [JSON](Bundle-ch-lab-order-document.json.html))
+* **Example**: CH LAB-Order Example Document with Service Request ([XML](Bundle-ch-lab-order-document-with-sr.xml.html), [JSON](Bundle-ch-lab-order-document-with-sr.json.html))

@@ -1,5 +1,5 @@
 Instance: 3-gyn-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 3-gyn"
 Description: "Example Bundle for referral/order for preventive gynaecological check-up"
 Usage: #example

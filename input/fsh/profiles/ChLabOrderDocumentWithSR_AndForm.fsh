@@ -1,7 +1,6 @@
-/*
-Profile: ChLabOrderDocumentByForm
+Profile: ChLabOrderDocumentWithSR_AndForm
 Parent: ChOrfDocument
-Id: ch-lab-order-document-by-form
+Id: ch-lab-order-document-with-sr-and-form
 Title: "CH LAB-Order Document with Service Request and Form"
 Description: "Definition of the bundle for the lab order document by Form, parent is ChOrfDocument"
 * . ^short = "CH Lab-Order Bundle by Form"
@@ -33,4 +32,3 @@ Consequently one CH Lab-Order Document contains one CH Lab-Order ServiceRequest 
 * entry[Composition] ^short = "Lab order composition"
 * entry[Composition].resource 1..
 * entry[Composition].resource only ChLabOrderCompositionWithSR_AndForm
-*/

@@ -1,5 +1,5 @@
 Instance: 0-best-practice-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionWithSR
 Title: "Composition 0-best-practice"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
