@@ -1,6 +1,6 @@
 Instance: Blood
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, generic"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available

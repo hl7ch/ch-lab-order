@@ -103,7 +103,7 @@ Usage: #example
 // ---- Patient --------
 Instance: BirgitBlum
 InstanceOf: CHCorePatient
-Title: "Birgit Blum"
+Title: "Patient: Birgit Blum"
 Description: "CH-Core-Patient, refers to 0-best-practice"
 Usage: #example
 * text.status = #additional
@@ -219,7 +219,7 @@ Usage: #example
 
 Instance: Blood-coag-0-best-practice
 InstanceOf: Specimen
-Title: "Blood Sample Coagulation"
+Title: "Blood Sample Coagulation, 0-best-practice"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"
@@ -242,7 +242,7 @@ Usage: #example
 
 Instance: Blood-0-best-practice
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 0-best-practice"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"

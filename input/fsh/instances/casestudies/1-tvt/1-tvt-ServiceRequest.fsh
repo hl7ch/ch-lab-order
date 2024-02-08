@@ -97,7 +97,7 @@ Usage: #example
 // ---- Patient --------
 Instance: TobiasTimmermann
 InstanceOf: CHCorePatient
-Title: "Tobias Timmermann"
+Title: "Patient: Tobias Timmermann"
 Description: "CH-Core-Patient, refers to 1-tvt"
 Usage: #example
 * text.status = #additional
@@ -165,7 +165,7 @@ Usage: #example
 
 Instance: Blood-coag-1-tvt
 InstanceOf: Specimen
-Title: "Blood Sample Coagulation"
+Title: "Blood Sample Coagulation, 1-tvt"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"
@@ -186,7 +186,7 @@ Usage: #example
 
 Instance: Blood-1-tvt
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 1-tvt"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available

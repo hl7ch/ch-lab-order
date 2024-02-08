@@ -1,7 +1,7 @@
 Instance: 4-sepsis-Document
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 4-sepsis"
-Description: "Example Bundle for referral/order for Sepsis Investigation"
+Description: "Example Document for referral/order Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-document"
 * meta.versionId = "1"

@@ -1,6 +1,6 @@
 Instance: Serum-capillary
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample, capillary"
 Description: "Example for Specimen of Serum from capillary blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"

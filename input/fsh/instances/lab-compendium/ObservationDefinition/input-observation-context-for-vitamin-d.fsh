@@ -1,5 +1,6 @@
 Instance: input-observation-context-for-vitamin-d
 InstanceOf: ObservationDefinition
+Title: "Observation Definition: Vitamin D"
 Description: "Context des Vitamin-D Befundes"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"

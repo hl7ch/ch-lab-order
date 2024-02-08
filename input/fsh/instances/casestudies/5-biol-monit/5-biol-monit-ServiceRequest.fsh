@@ -34,7 +34,7 @@ Usage: #example
 // ---- Patient --------
 Instance: BeatBorer
 InstanceOf: CHCorePatient
-Title: "Beat Borer"
+Title: "Patient: Beat Borer"
 Description: "Example for CH-Core-Patient"
 Usage: #example
 * text.status = #additional
@@ -67,7 +67,7 @@ Usage: #example
 // ---- PractitionerRole --------
 Instance: PauloPorcelliniSuva
 InstanceOf: CHCorePractitionerRole
-Title: "Paulo Porcellini Suva"
+Title: "PractitionerRole: Paulo Porcellini Suva"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
 * practitioner = Reference(Practitioner/PauloPorcellini)
@@ -75,7 +75,7 @@ Usage: #example
 
 Instance: PauloPorcellini
 InstanceOf: CHCorePractitionerEPR
-Title: "Paulo Porcellini"
+Title: "Practitioner: Paulo Porcellini"
 Description: "Specialist for Occupational Medicine, works at SUVA, refers to 1-tvt"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -97,7 +97,7 @@ Usage: #example
 
 Instance: Suva
 InstanceOf: CHCoreOrganization
-Title: "SUVA"
+Title: "Organization: SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"
@@ -120,7 +120,7 @@ Usage: #example
 // ---- PractitionerRole --------
 Instance: WoodyWorkdocSpeiserRails
 InstanceOf: CHCorePractitionerRole
-Title: "Woody Workdoc Speiser Rails"
+Title: "PractitionerRole: Woody Workdoc Speiser Rails"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
 * practitioner = Reference(Practitioner/WoodyWorkdoc)
@@ -128,7 +128,7 @@ Usage: #example
 
 Instance: WoodyWorkdoc
 InstanceOf: CHCorePractitionerEPR
-Title: "Woody Worksdoc"
+Title: "Practitioner: Woody Worksdoc"
 Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
@@ -150,7 +150,7 @@ Usage: #example
 
 Instance: SpeiserRails
 InstanceOf: CHCoreOrganization
-Title: "Speiser Rails"
+Title: "Organization: Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
@@ -171,7 +171,7 @@ Usage: #example
 
 Instance: HealthInsuranceCardBeatBorer
 InstanceOf: Coverage
-Title: "HealthInsuranceCard"
+Title: "Coverage: HealthInsuranceCard"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
@@ -187,7 +187,7 @@ Usage: #example
 // ---- Specimen ---------------
 Instance: Blood-biol-monit
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 5-biol-monit"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
@@ -202,7 +202,7 @@ Usage: #example
 
 Instance: Urine-biol-monit
 InstanceOf: Specimen
-Title: "Urine Sample"
+Title: "Urine Sample, 5-biol-monit"
 Description: "Example for Specimen of Urin"
 Usage: #example
 * identifier.value = "11111-15394-75465"

@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance
 InstanceOf: ChLabOrderSRContainer
-Title: "CH LAB-Order example Service Request for Creatinine clearance"
+Title: "CH LAB Service Request for Creatinine clearance"
 Description: "Example for Service Request of Creatinine [Moles/volume] and 24h Urin Creatinen"
 Usage: #example
 * id = "LabOrder-creatinine-clearance"
@@ -76,6 +76,7 @@ Usage: #inline
 
 Instance: Renal-insufficiency
 InstanceOf: Condition
+Title: "Condition: example of Renal Insuffiency"
 Description: "Example of a Condition or Problem"
 Usage: #example
 * identifier.value = "12345"

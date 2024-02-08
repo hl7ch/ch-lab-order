@@ -1,7 +1,7 @@
 Instance: 1-tvt-Document
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 1-tvt"
-Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
+Description: "Example Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document"
 * meta.versionId = "1"

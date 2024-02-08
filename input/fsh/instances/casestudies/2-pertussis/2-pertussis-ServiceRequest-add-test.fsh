@@ -1,7 +1,7 @@
 Instance: 2-pertussis-ServiceRequest-add-test
 InstanceOf: ChOrfServiceRequest
-Title: "CH LAB-Order 2-pertussis additional test"
-Description: "Example for Service Request for Pertussis Investigation"
+Title: "CH LAB-ServiceRequest 2-pertussis additional test"
+Description: "Example Document for referral/order for Pertussis investigation, additional test"
 Usage: #example
 * id = "2-pertussis-service-request-add-test"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

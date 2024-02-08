@@ -1,6 +1,6 @@
 Instance: ResponseReceiverSabineMeier
 InstanceOf: Practitioner
-Title: "Response Receiver Sabine Meier"
+Title: "Practitioner: Response Receiver Sabine Meier"
 Description: "Practitioner, works in Kantonsspital"
 Usage: #example
 * name.use = #official

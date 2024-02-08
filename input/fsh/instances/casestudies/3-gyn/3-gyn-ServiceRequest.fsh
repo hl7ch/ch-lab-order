@@ -90,7 +90,7 @@ Usage: #example
 
 Instance: PeterPapGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "Peter Pap Gruppenpraxis"
+Title: "PractitionerRole: Peter Pap Gruppenpraxis"
 Description: "PractitionerRole, refers to 3-gyn"
 Usage: #example
 * practitioner = Reference(Practitioner/PeterPap)
@@ -98,7 +98,7 @@ Usage: #example
 
 Instance: PeterPap
 InstanceOf: CHCorePractitioner
-Title: "Peter Pap"
+Title: "Practitioner: Peter Pap"
 Description: "Practitioner, works at Gruppenpraxis, refers to 3-gyn"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -135,7 +135,7 @@ Usage: #example
 
 Instance: Blood-gyn
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 3-gyn"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
@@ -167,7 +167,7 @@ Usage: #example
 
 Instance: Urine-gyn
 InstanceOf: Specimen
-Title: "Urine Sample"
+Title: "Urine Sample, 3-gyn"
 Description: "Example for Specimen of Urin"
 Usage: #example
 * identifier.value = "11111-15394-75465"

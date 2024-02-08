@@ -1,6 +1,6 @@
 Instance: Gruppenpraxis
 InstanceOf: CHCoreOrganizationEPR
-Title: "Praxis Seeblick"
+Title: "Organization: Praxis Gruppenpraxis"
 Description: "Example for group practice"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

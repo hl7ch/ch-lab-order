@@ -1,6 +1,6 @@
 Instance: 2-pertussis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "CH LAB-Order 2-pertussis"
+Title: "CH LAB-ServiceRequest 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis-service-request"
@@ -56,7 +56,7 @@ Usage: #example
 
 Instance: PeterPrestoGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "Peter Presto at Gruppenpraxis"
+Title: "PractitionerRole: Peter Presto at Gruppenpraxis"
 Description: "PractitionerRole, refers to 2-pertussis"
 Usage: #example
 * practitioner = Reference(Practitioner/PeterPresto)
@@ -64,7 +64,7 @@ Usage: #example
 
 Instance: PeterPresto
 InstanceOf: CHCorePractitionerEPR
-Title: "Peter Presto"
+Title: "Practitioner: Peter Presto"
 Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
@@ -123,7 +123,7 @@ Usage: #example
 
 Instance: Blood-2-pertussis
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 2-pertussis"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available

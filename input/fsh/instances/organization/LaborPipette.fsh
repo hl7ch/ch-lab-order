@@ -1,6 +1,6 @@
 Instance: LaborPipette
 InstanceOf: CHCoreOrganization
-Title: "Labor Pipette"
+Title: "Organization: Labor Pipette"
 Description: "Laboratory Organization, refers to all Storyboards"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

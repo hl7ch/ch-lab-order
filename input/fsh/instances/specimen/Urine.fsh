@@ -1,6 +1,6 @@
 Instance: Urine
 InstanceOf: Specimen
-Title: "Urine Sample"
+Title: "Urine Sample, generic"
 Description: "Example for Specimen of Urin"
 Usage: #example
 * identifier.value = "11111-15394-75465"

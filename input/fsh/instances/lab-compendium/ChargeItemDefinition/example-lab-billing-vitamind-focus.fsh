@@ -1,5 +1,6 @@
 Instance: example-lab-billing-vitamind-focus
 InstanceOf: ChargeItemDefinition
+Title: "ChargeItemDefinition: Limitation Vitamin D Bestimmung"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabChargeItemDefinition"
 * language = #de-CH

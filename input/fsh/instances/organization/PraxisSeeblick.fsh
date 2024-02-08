@@ -1,6 +1,6 @@
 Instance: PraxisSeeblick
 InstanceOf: CHCoreOrganization
-Title: "Praxis Seeblick"
+Title: "Organization: Praxis Seeblick"
 Description: "Example for practice"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

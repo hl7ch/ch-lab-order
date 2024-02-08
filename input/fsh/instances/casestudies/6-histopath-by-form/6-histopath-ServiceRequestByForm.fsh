@@ -1,6 +1,6 @@
 Instance: 6-histopath-ServiceRequestByForm
 InstanceOf: ChOrfServiceRequest
-Title: "laborder 0-generic"
+Title: "Service Requst: laborder 0-generic"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example
 * id = "6-histopath-service-request-by-form"

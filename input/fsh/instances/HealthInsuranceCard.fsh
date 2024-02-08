@@ -1,6 +1,6 @@
 Instance: HealthInsuranceCard
 InstanceOf: Coverage
-Title: "HealthInsuranceCard"
+Title: "Coverage: HealthInsuranceCard"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"

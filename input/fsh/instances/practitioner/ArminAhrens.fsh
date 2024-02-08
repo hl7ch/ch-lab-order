@@ -1,6 +1,6 @@
 Instance: ArminAhrens
 InstanceOf: CHCorePractitioner
-Title: "Armin Ahrens"
+Title: "Practitioner: Armin Ahrens"
 Description: "Practitioner, works in Arztpraxis, refers to 6-histopath"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
