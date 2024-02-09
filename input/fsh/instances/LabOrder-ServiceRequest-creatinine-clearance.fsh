@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance
 InstanceOf: ChLabOrderSRContainer
 Title: "CH LAB Service Request for Creatinine clearance"
-Description: "Example for Service Request of Creatinine [Moles/volume] and 24h Urin Creatinen"
+Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinen"
 Usage: #example
 * id = "LabOrder-creatinine-clearance"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -37,14 +37,15 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo[+] = Reference(MedicationStatement/Medication-diclofenac)
+* supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
 
-Instance: Medication-diclofenac
+Instance: Diclofenac
 InstanceOf: MedicationStatement
-Description: "Example of medication record"
+Title: "MedicationStatement: Diclofenac Verordnung"
+Description: "Medication Record: Diclofenac"
 Usage: #example
 * status = #active
 * medicationReference = Reference(Medication/Voltaren)

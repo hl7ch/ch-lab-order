@@ -1,7 +1,7 @@
 Instance: 3-gyn-DocumentByForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order by Form 3-gyn"
-Description: "Example Document for referral/order preventive gynaecological check-up"
+Description: "Document for referral/order preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn-document-by-form"
 * meta.versionId = "1"

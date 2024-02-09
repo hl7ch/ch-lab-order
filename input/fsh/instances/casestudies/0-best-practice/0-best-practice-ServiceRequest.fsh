@@ -155,6 +155,7 @@ Usage: #example
 // ---- encounter -----
 Instance: FirstEncounter
 InstanceOf: Encounter
+Title: "Encounter: First Encounter"
 Description: "Example for best-practice of laboratory order"
 Usage: #example
 * status = #in-progress
@@ -163,6 +164,7 @@ Usage: #example
 
 Instance: Liquemin
 InstanceOf: ChLabOrderMedication
+Title: "Medication: Liquemin"
 Description: "Example for best-practice of laboratory order"
 Usage: #example
 

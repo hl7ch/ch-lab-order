@@ -1,7 +1,7 @@
 Instance: 3-gyn-Document
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 3-gyn"
-Description: "Example Document for referral/order preventive gynaecological check-up"
+Description: "Document for referral/order preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn-document"
 * meta.versionId = "1"

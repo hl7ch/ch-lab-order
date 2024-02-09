@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-sodium
 InstanceOf: ChLabOrderSRSingletest
 Title: "CH LAB Service Request for Sodium"
-Description: "Example for Service Request of Sodium [Moles/volume] in Serum or Plasma"
+Description: "Service Request for Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-sodium"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

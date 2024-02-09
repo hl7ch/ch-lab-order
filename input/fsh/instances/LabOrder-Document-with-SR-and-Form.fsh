@@ -1,7 +1,7 @@
 Instance: LabOrder-Document-with-SR-and-Form
 InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "CH LAB-Order Document with ServiceRequest and Form"
-Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
+Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "ch-lab-order-with-sr-and-form"
 * meta.versionId = "1"

@@ -29,7 +29,7 @@ Usage: #example
 
 Instance: MarinaRubella
 InstanceOf: CHCorePatient
-Title: "Marina Rubella"
+Title: "Patient: Marina Rubella"
 Description: "CH-Core-Patient, refers to 3-gyn"
 Usage: #example
 * text.status = #additional

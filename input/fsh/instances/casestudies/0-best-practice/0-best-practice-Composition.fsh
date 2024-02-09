@@ -1,7 +1,7 @@
 Instance: 0-best-practice-Composition
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 0-best-practice"
-Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
+Title: "Composition 0-best-practice whith Service Request"
+Description: "Composition: Storyboard for tibial plateau fracture"
 Usage: #example
 * id = "0-best-practice"
 * meta.versionId = "1"

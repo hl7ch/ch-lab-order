@@ -94,7 +94,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 Instance: SR-Chloride
 InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Chloride"
-Description: "Example for Service Request of Chloride in Serum"
+Description: "Service Request for Chloride in Serum"
 Usage: #example
 * id = "SR-Chloride"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -223,7 +223,7 @@ Usage: #example
 Instance: SR-Potassium
 InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Potassium"
-Description: "Example for Service Request of Potassium in Serum"
+Description: "Service Request for Potassium in Serum"
 Usage: #example
 * id = "SR-Potassium"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -266,7 +266,7 @@ Usage: #example
 Instance: SR-Sodium
 InstanceOf: ChLabOrderSR
 Title: "LabOrder Service Request for single Test: Sodium"
-Description: "Example for Service Request of Sodium in Serum"
+Description: "Service Request for Sodium in Serum"
 Usage: #example
 * id = "SR-Sodium"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

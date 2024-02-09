@@ -31,13 +31,13 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo = Reference(MedicationStatement/Medication-aspirin)
+* supportingInfo = Reference(MedicationStatement/Acetylsalicylat)
 * specimen[0] = Reference(Specimen/Blood) "Blood"
 // * specimen[+] = Reference(Specimen/Blood)
 
-Instance: Medication-aspirin
+Instance: Acetylsalicylat
 InstanceOf: MedicationStatement
-Title: "MedicationStagement: Aspirin Verordnung"
+Title: "MedicationStatement: Acetylsalicylat Verordnung"
 Description: "Example of Medication Record"
 Usage: #example
 * status = #active

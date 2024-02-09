@@ -1,7 +1,7 @@
 Instance: LabOrder-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order Document with Service Request"
-Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
+Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "ch-lab-order-document-with-sr"
 * meta.versionId = "1"
