@@ -1,12 +1,13 @@
-Instance: procedure-hemoglobin-panel
+Instance: procedure-hb-ht-panel
 InstanceOf: ActivityDefinition
-Description: "Service Hemoglobin Panel"
+Title: "ActivityDefinition: Hb-Ht-panel"
+Description: "Procedure Hemoglobin-Hematocrit measurement procedure on in-vitro blood specimen"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-hemoglobin-panel"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-hb-ht-panel"
 * identifier.use = #official
-* identifier.value = "hemoglobin_panel"
+* identifier.value = "Hemoglobin and Hematocrit panel (Bld)"  // LOINC display name
 * version = "0.1.0"
 * name = "HemoglobinPanelProcedure"
 * title = "Procedure - Hemoglobin and Hematocrit panel - Blood"
@@ -15,7 +16,7 @@ Usage: #example
 * date = "2020-01-24T14:00:00+02:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
-* description = "Potassium measurement procedure on in-vitro serum specimen"
+* description = "Hemoglobin-Hematocrit measurement procedure on in-vitro blood specimen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2020-04-01"
@@ -26,7 +27,7 @@ Usage: #example
 
 * topic[+] = $sct#441689006 "Measurement of total hemoglobin concentration (procedure)"
 * kind = #ServiceRequest
-* code = $loinc#59260-0 "Hemoglobin [Moles/volume] in Blood"
+* code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * priority = #routine
 * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/specimen-blood-EDTA) 

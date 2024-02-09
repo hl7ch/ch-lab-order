@@ -1,6 +1,7 @@
 Instance: procedure-sodium-serum
 InstanceOf: ActivityDefinition
-Description: "Service Serum Natrium"
+Title: "ActivityDefinition: Sodium"
+Description: "Procedure Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US

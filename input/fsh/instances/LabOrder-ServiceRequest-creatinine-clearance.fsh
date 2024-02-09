@@ -59,6 +59,7 @@ Usage: #example
 
 Instance: Voltaren
 InstanceOf: Medication
+Title: "Medication: Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #example
 * contained = sub01
@@ -76,8 +77,8 @@ Usage: #inline
 
 Instance: Renal-insufficiency
 InstanceOf: Condition
-Title: "Condition: example of Renal Insuffiency"
-Description: "Example of a Condition or Problem"
+Title: "Condition: Renal Insuffiency"
+Description: "Problem or Diagnosis from problem list: Renal Insuffiency"
 Usage: #example
 * identifier.value = "12345"
 * clinicalStatus = $condition-clinical#active

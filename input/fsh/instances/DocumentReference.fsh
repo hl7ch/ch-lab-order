@@ -1,6 +1,6 @@
 Instance: example
 InstanceOf: ChLabDocumentReference
-Title: "DocumentReference: "
+Title: "DocumentReference: Physical"
 Usage: #example
 // * contained = a2
 * masterIdentifier.system = "urn:ietf:rfc:3986"

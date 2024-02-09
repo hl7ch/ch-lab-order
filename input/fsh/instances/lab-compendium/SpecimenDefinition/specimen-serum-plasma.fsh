@@ -1,5 +1,6 @@
 Instance: specimen-serum-plasma
 InstanceOf: SpecimenDefinition
+Title: "SpecimenDefinition: Serum of Plasma"
 Description: "Serum Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"

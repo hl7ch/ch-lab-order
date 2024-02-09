@@ -1,6 +1,7 @@
 Instance: procedure-chloride-serum
 InstanceOf: ActivityDefinition
-Description: "Service Serum Chloride"
+Title: "ActivityDefinition: Chloride"
+Description: "Procedure Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US

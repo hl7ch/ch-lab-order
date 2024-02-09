@@ -1,5 +1,6 @@
 Instance: specimen-blood-EDTA
 InstanceOf: SpecimenDefinition
+Title: "SpecimenDefinition: Blood EDTA"
 Description: "Blood EDTA"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"

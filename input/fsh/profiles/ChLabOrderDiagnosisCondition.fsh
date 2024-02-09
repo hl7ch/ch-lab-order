@@ -9,7 +9,8 @@ Description: "Definition for the Diagnosis Condition resource in the context of 
 
 Instance: ProblemItem-renal-failure
 InstanceOf: ChLabOrderDiagnosisCondition
-Description: "Problem or Diagnosis from problem list"
+Title: "Condition: Renal Failure"
+Description: "Problem or Diagnosis from problem list: Renal Failure"
 * clinicalStatus = $condition-clinical#active
 // * category.coding[0] = $sct#55607006 "Problem"
 // * category.coding[+] = $condition-category#problem-list-item

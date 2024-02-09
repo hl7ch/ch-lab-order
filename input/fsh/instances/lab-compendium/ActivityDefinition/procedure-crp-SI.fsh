@@ -1,6 +1,7 @@
 Instance: procedure-crp-SI
 InstanceOf: ActivityDefinition
-Description: "Service CRP"
+Title: "ActivityDefinition: CRP SI"
+Description: "Procedure C reactive protein [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US

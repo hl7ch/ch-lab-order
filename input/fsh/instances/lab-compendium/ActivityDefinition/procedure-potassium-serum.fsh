@@ -1,6 +1,7 @@
 Instance: procedure-potassium-serum
 InstanceOf: ActivityDefinition
-Description: "Service Serum Kalium"
+Title: "ActivityDefinition: Potassium"
+Description: "Procedure Potassium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
