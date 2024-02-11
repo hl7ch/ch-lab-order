@@ -1,5 +1,5 @@
 Instance: 1-tvt-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionWithSR
 Title: "Composition 1-tvt"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example

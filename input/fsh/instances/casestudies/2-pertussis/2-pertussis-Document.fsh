@@ -1,7 +1,7 @@
 Instance: 2-pertussis-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 2-pertussis"
-Description: "Example Bundle for referral/order for Pertussis investigation"
+Description: "Document for referral/order for Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document"
 * meta.versionId = "1"

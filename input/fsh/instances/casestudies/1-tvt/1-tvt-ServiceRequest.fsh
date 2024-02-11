@@ -14,9 +14,7 @@ Usage: #example
 * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
@@ -99,7 +97,7 @@ Usage: #example
 // ---- Patient --------
 Instance: TobiasTimmermann
 InstanceOf: CHCorePatient
-Title: "Tobias Timmermann"
+Title: "Patient: Tobias Timmermann"
 Description: "CH-Core-Patient, refers to 1-tvt"
 Usage: #example
 * text.status = #additional
@@ -167,7 +165,7 @@ Usage: #example
 
 Instance: Blood-coag-1-tvt
 InstanceOf: Specimen
-Title: "Blood Sample Coagulation"
+Title: "Blood Sample Coagulation, 1-tvt"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"
@@ -188,7 +186,7 @@ Usage: #example
 
 Instance: Blood-1-tvt
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 1-tvt"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available

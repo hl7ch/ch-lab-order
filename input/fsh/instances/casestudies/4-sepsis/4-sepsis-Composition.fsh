@@ -1,5 +1,5 @@
 Instance: 4-sepsis-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionWithSR
 Title: "Composition 4-sepsis"
 Description: "Composition: Storyboard for Sepsis Investigation"
 Usage: #example

@@ -30,46 +30,14 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <p><strong> Service Request: </strong></p>
       <li>
-        <a href="Bundle-0-best-practice-document.html">Best practice Example</a>
+        <a href="case-studies-english.html">English</a>
       </li>
       <li>
-        <a href="Bundle-1-tvt-document.html">Deep vein thrombosis</a>
+        <a href="case-studies-german.html">German</a>
       </li>
       <li>
-        <a href="Bundle-2-pertussis-document.html">Pertussis</a>
-      </li>
-      <li>
-        <a href="Bundle-3-gyn-document.html">Gynaecological screening</a>
-      </li>
-      <li>
-        <a href="Bundle-4-sepsis-document.html">Sepsis</a>
-      </li>
-      <li>
-        <a href="Bundle-5-biol-monit-document.html">Biological monitoring</a>
-      </li>
-      <li>
-        <a href="Bundle-6-histopath-document.html">Histopathological examination</a>
-      </li>
-      <p><strong> Form:</strong></p>
-      <li>
-        <a href="Bundle-1-tvt-document-by-form.html">Deep vein thrombosis</a>
-      </li>
-      <li>
-        <a href="Bundle-2-pertussis-document-by-form.html">Pertussis</a>
-      </li>
-      <li>
-        <a href="Bundle-3-gyn-document-by-form.html">Gynaecological screening</a>
-      </li>
-      <li>
-        <a href="Bundle-4-sepsis-document-by-form.html">Sepsis</a>
-      </li>
-      <li>
-        <a href="Bundle-5-biol-monit-document-by-form.html">Biological monitoring</a>
-      </li>
-      <li>
-        <a href="Bundle-6-histopath-document-by-form.html">Histopathological examination</a>
+        <a href="case-studies-french.html">French</a>
       </li>
     </ul>
   </li>
@@ -80,10 +48,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="document-lo.html">Lab-Order Document (ServiceRequest only)</a>
+        <a href="document-lo-sr.html">CH LAB-Order Document with Service Request</a>
       </li>
       <li>
-        <a href="document-lo-by-form.html">Lab-Order Document by form</a>
+        <a href="document-lo-sr-and-form.html">CH LAB-Order Document with Service Request and Form</a>
       </li>
     </ul>
   </li>

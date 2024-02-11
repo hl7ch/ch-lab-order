@@ -66,7 +66,7 @@ Usage: #example
 
 Instance: HansHauserKantonsspital
 InstanceOf: CHCorePractitionerRole
-Title: "Hans Hauser Kantonsspital"
+Title: "PractitionerRole: Hans Hauser Kantonsspital"
 Description: "PractitionerRole"
 Usage: #example
 * practitioner = Reference(Practitioner/HansHauser)
@@ -74,7 +74,7 @@ Usage: #example
 
 Instance: HansHauser
 InstanceOf: CHCorePractitioner
-Title: "Hans Hauser"
+Title: "Practitioner: Hans Hauser"
 Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -96,7 +96,7 @@ Usage: #example
 
 Instance: Kantonsspital
 InstanceOf: CHCoreOrganization
-Title: "Kantonsspital"
+Title: "Organization: Kantonsspital"
 Description: "Example for Hospital"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -122,7 +122,7 @@ Usage: #example
 
 Instance: HealthInsuranceCardSaraSpeckmann
 InstanceOf: Coverage
-Title: "HealthInsuranceCard"
+Title: "Coverage: HealthInsuranceCard Sarah Speckmann"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
@@ -137,7 +137,7 @@ Usage: #example
 
 Instance: Blood-bactec-plus
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 4-sepsis bactec-plus"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
@@ -152,7 +152,7 @@ Usage: #example
 
 Instance: Blood-sepsis
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 4-sepsis"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
@@ -167,7 +167,7 @@ Usage: #example
 
 Instance: Urine-sepsis
 InstanceOf: Specimen
-Title: "Urine Sample"
+Title: "Urine Sample, 4-sepsis"
 Description: "Example for Specimen of Urin"
 Usage: #example
 * identifier.value = "11111-15394-75465"

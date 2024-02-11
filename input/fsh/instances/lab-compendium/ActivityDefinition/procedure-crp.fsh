@@ -1,6 +1,7 @@
 Instance: procedure-crp
 InstanceOf: ActivityDefinition
-Description: "Service CRP"
+Title: "ActivityDefinition: CRP"
+Description: "Procedure C reactive protein [Mass/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
@@ -9,13 +10,13 @@ Usage: #example
 * identifier.value = "CRP_test"
 * version = "0.1.0"
 * name = "CRPMeasurementProcedure"
-* title = "Procedure - CRP measurement on in vitro blood serum - SI-Units"
+* title = "Procedure - CRP measurement on in vitro blood serum"
 * status = #draft
 * experimental = true
 * date = "2020-01-24T14:00:00+02:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
-* description = "Potassium measurement procedure on in-vitro serum specimen"
+* description = "CRP measurement procedure on in-vitro serum specimen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2020-04-01"

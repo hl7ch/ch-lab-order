@@ -1,0 +1,26 @@
+@startuml Resource Observation
+skinparam rectangle<<resource>> {
+  roundCorner 12
+}
+sprite $bProcess jar:archimate/business-object
+sprite $aService jar:archimate/application-service
+
+rectangle "Observation Results(R5)\nLaboratory" as OBS <<$aService>><<resource>> #Application
+rectangle "ObservationDefinition(R5)\nLaboratory"  as OBSD <<$bProcess>><<resource>> #Business
+rectangle "DeviceDefinition(R5)\nLaboratory"  as D <<$bProcess>><<resource>> #Business
+rectangle "Device(R5)\nLaboratory"  as DD <<$bProcess>><<resource>> #Business
+
+OBSD <-left- OBS : instantiates[x]
+OBSD -down-> D
+OBSD -down-> DD
+
+
+legend left
+Meaning of sprites in Rectangels
+====
+<$bProcess> : Other Resources
+====
+<$aService> : Resource ServiceRequest
+
+endlegend
+@enduml

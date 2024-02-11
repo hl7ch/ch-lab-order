@@ -1,5 +1,7 @@
 Instance: procedure-creatinine-serum
 InstanceOf: ActivityDefinition
+Title: "ActivityDefinition: Serum Creatinine"
+Description: "Procedure Creatinine [Mass/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US

@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-chloride
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-Order example Service Request for Clinical Chemistry Tests"
-Description: "Example for Service Request of Chloride [Moles/volume] in Serum or Plasma"
+Title: "CH LAB Service Request for Chloride"
+Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-chloride"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

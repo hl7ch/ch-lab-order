@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-creatinine
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-Order example Service Request for Serum Creatinine"
-Description: "Example for Service Request of Creatinine [Moles/volume] in Serum or Plasma"
+Title: "CH LAB Service Request for Serum Creatinine"
+Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

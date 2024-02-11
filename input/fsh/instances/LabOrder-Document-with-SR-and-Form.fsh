@@ -1,9 +1,9 @@
-Instance: LabOrder-Document-by-Form
-InstanceOf: ChLabOrderDocumentByForm
-Title: "CH LAB-Order Document by Form"
-Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
+Instance: LabOrder-Document-with-SR-and-Form
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
+Title: "CH LAB-Order Document with ServiceRequest and Form"
+Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "ch-lab-order-by-form"
+* id = "ch-lab-order-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * language = #en
@@ -12,8 +12,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition-by-form"
-* entry[=].resource = LabOrder-Composition-by-Form
+* entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition-with-sr-and-form"
+* entry[=].resource = LabOrder-CompositionWithSR_AndForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
@@ -64,4 +64,3 @@ Usage: #example
 // // ---- SR for Coagulation Tests ----
 // * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
 // * entry[=].resource = LabOrder-ServiceRequest-cc
-

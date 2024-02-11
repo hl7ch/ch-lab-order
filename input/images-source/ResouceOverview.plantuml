@@ -1,0 +1,66 @@
+@startuml Resource Overview
+skinparam rectangle<<resource>> {
+	roundCorner 12
+}
+sprite $bProcess jar:archimate/business-object
+sprite $aService jar:archimate/application-service
+
+rectangle "ServiceRequest(1):\nLaboratory Order" as SR1 <<$aService>><<resource>> #Application
+rectangle "PractitionerRole(1)\nPrimary Lab"  as PR1 <<$bProcess>><<resource>> #Business
+rectangle "Organization(1)\nPrimary Lab"  as O1 <<$bProcess>><<resource>> #Business
+rectangle "Practitioner(1)\nPrimary Lab"  as P1 <<$bProcess>><<resource>> #Business
+
+rectangle "PractitionerRole(2)\nSecondary Lab"  as PR2 <<$bProcess>><<resource>> #Business
+rectangle "Organization(2)\nSecondary Lab"  as O2 <<$bProcess>><<resource>> #Business
+rectangle "Practitioner(2)\nSecondary Lab"  as P2 <<$bProcess>><<resource>> #Business
+
+rectangle "PractitionerRole\nReporting Lab"  as PR <<$bProcess>><<resource>> #Business
+rectangle "Organization\nReporting Lab"  as O <<$bProcess>><<resource>> #Business
+rectangle "Practitioner\nReporting Lab"  as P <<$bProcess>><<resource>> #Business
+rectangle "Composition:\nLaboratory Report"  as C <<$bProcess>><<resource>> #Business
+rectangle "Patient" as PAT <<$bProcess>><<resource>> #Business
+rectangle "ObservationResult:\nLaboratory" as OR <<$bProcess>><<resource>> #Business
+rectangle "Specimen:\nLaboratory" as SP <<$bProcess>><<resource>> #Business
+rectangle "Diagnostc Report:\nLaboratory Report" as DR <<$bProcess>><<resource>> #Business
+rectangle "ServiceRequest:\nLaboratory Order" as SR <<$aService>><<resource>> #Application
+
+DR -right-> SP : 0..*
+DR -down-> C : extension:\ndiagnosticReportCompositionR5
+DR -up-> SR : 0..*\nbasedOn
+DR -up-> OR : 0..*
+DR -left-> PAT : 1..1\nsubject
+
+OR <-up- C : section.entry
+OR -right-> OR : hasMember
+OR -down-> SP : 0..1
+
+SR <-right- SR : basedOn
+SR -up-> SP : specimen
+
+PAT <-up- C : subject\n1..1
+PAT <-down- SR : subject\n1..1
+PAT <-right- OR : subject\n1..1
+PAT <-right- SP : subject
+
+C -left-> PR : author\n1..*
+PR -down-> O : organization
+PR -down-> P : practitioner
+
+PR1 <-up- SR1 : author\n1..*
+PR1 -down-> O1 : organization
+PR1 -down-> P1 : practitioner
+
+PR2 <-up- SR1 : requester\n0..*
+PR2 -down-> O2 : organization
+PR2 -down-> P2 : practitioner
+
+
+legend left
+Meaning of sprites in Rectangels
+====
+<$bProcess> : Other Resources
+====
+<$aService> : Resource ServiceRequest
+
+endlegend
+@enduml

@@ -1,5 +1,5 @@
 Instance: 5-biol-monit-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionWithSR
 Title: "Composition 5-biol-monit"
 Description: "Composition: Storyboard for Toxicological Monitoring"
 Usage: #inline

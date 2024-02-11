@@ -1,0 +1,30 @@
+@startuml DiagnosticReport state Diagram
+
+(*) -> "Register Orders\n and Specimens"
+  --> if "successful?" then
+
+  -->[true] "process tests"
+
+  if "all tests verified" then
+    ->[true] "final Report" as a3
+  else
+    if "Other tests successful" then
+      -left-> "partial Report"
+    else
+      -->[false] "send partial test"
+    endif
+  endif
+
+else
+
+  ->[false] "order cancelled"
+
+endif
+
+a3 --> if "last test" then
+  --> "action 7"
+else
+  -> "action 8"
+endif
+
+@enduml

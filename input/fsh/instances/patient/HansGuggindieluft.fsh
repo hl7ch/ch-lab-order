@@ -1,6 +1,6 @@
 Instance: HansGuggindieluft
 InstanceOf: CHCorePatient
-Title: "Hans Guggindieluft"
+Title: "Patient: Hans Guggindieluft"
 Description: "CH-Core-Patient, refers to 1-tvt"
 Usage: #example
 * text.status = #additional

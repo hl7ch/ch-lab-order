@@ -1,9 +1,9 @@
-Profile: ChLabOrderComposition
-Parent: CHCoreComposition //  ChOrfComposition replaced by Composition
-Id: ch-lab-order-composition
-Title: "CH LAB-Order Composition by Service Request"
-Description: "Definition for Composition resource in the context of CH LAB-Order by Service Request"
-* . ^short = "CH LAB-Order Composition"
+Profile: ChLabOrderCompositionWithSR
+Parent: CHCoreComposition
+Id: ch-lab-order-composition-with-sr
+Title: "CH LAB-Order Composition with Service Request"
+Description: "Definition for Composition resource in the context of CH LAB-Order with Service Request, parent is CHCoreComposition"
+* . ^short = "CH LAB-Order Composition with ServiceRequest"
 * ^version = "0.9.0"
 * ^status = #draft
 * ^date = "2019-01-30"

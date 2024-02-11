@@ -1,7 +1,7 @@
 Instance: 5-biol-monit-DocumentByForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order by Form 5-biol-monit"
-Description: "Example Bundle for referral/order for toxicological Monitoring"
+Description: "Document for referral/order toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit-document-by-form"
 * meta.versionId = "1"

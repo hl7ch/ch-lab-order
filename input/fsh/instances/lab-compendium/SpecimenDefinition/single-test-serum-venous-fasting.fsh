@@ -3,6 +3,7 @@ Instance: single-test-serum-venous-fasting
 // ---- must be renamed with single-test-venous-fasting ----
 // ---- single-test-capillary-fasting should be added ----
 InstanceOf: SpecimenDefinition
+Title: "SpecimenDefinition: Venous Blood, 12 h fasting"
 Description: "Venous Blood, 12 h fasting"
 Usage: #example
 * typeCollected = $sct#122555007 "Venous blood specimen"

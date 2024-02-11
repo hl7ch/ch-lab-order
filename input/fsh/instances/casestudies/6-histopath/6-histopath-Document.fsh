@@ -1,7 +1,7 @@
 Instance: 6-histopath-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 6-histopath"
-Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
+Description: "Document for referral/order due to suspected skin melanoma"
 Usage: #example
 * id = "6-histopath-document"
 * meta.versionId = "1"

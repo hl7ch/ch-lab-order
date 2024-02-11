@@ -1,7 +1,7 @@
 Instance: 0-best-practice-Composition
-InstanceOf: ChLabOrderComposition
-Title: "Composition 0-best-practice"
-Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
+InstanceOf: ChLabOrderCompositionWithSR
+Title: "Composition 0-best-practice whith Service Request"
+Description: "Composition: Storyboard for tibial plateau fracture"
 Usage: #example
 * id = "0-best-practice"
 * meta.versionId = "1"
@@ -37,9 +37,5 @@ Usage: #example
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 0-best-practice\n </div>"
 * section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-0)
-/*
-* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-1)
-* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-2)
-* section[orderReferral].entry[ServiceRequest][+] = Reference(0-best-practice-ServiceRequest-3)
-*/
+
 

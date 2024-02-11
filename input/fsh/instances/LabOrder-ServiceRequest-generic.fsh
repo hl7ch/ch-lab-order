@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-generic
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-Order example Service Request some single test"
+Title: "CH LAB Service Request for some single test"
 Description: "Example for Service Request single test"
 Usage: #example
 * id = "LabOrder-generic"
@@ -31,12 +31,13 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo = Reference(MedicationStatement/Medication-aspirin)
+* supportingInfo = Reference(MedicationStatement/Acetylsalicylat)
 * specimen[0] = Reference(Specimen/Blood) "Blood"
 // * specimen[+] = Reference(Specimen/Blood)
 
-Instance: Medication-aspirin
+Instance: Acetylsalicylat
 InstanceOf: MedicationStatement
+Title: "MedicationStatement: Acetylsalicylat Verordnung"
 Description: "Example of Medication Record"
 Usage: #example
 * status = #active
@@ -52,6 +53,7 @@ Usage: #example
 
 Instance: Aspirin
 InstanceOf: Medication
+Title: "Medication: Aspirin"
 Description: "Example of a Medication Product"
 Usage: #example
 * contained = sub02
@@ -63,6 +65,7 @@ Usage: #example
 
 Instance: sub02
 InstanceOf: Substance
+Title: "Substance: Aspirin Substanz"
 Description: "Example of a medication substance"
 Usage: #inline
 * code = $sct#387458008 "Aspirin (substance)"

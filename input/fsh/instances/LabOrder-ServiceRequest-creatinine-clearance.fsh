@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance
 InstanceOf: ChLabOrderSRContainer
-Title: "CH LAB-Order example Service Request for Creatinine clearance"
-Description: "Example for Service Request of Creatinine [Moles/volume] and 24h Urin Creatinen"
+Title: "CH LAB Service Request for Creatinine clearance"
+Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinen"
 Usage: #example
 * id = "LabOrder-creatinine-clearance"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -37,14 +37,15 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo[+] = Reference(MedicationStatement/Medication-diclofenac)
+* supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[0] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
 
-Instance: Medication-diclofenac
+Instance: Diclofenac
 InstanceOf: MedicationStatement
-Description: "Example of medication record"
+Title: "MedicationStatement: Diclofenac Verordnung"
+Description: "Medication Record: Diclofenac"
 Usage: #example
 * status = #active
 * medicationReference = Reference(Medication/Voltaren)
@@ -59,6 +60,7 @@ Usage: #example
 
 Instance: Voltaren
 InstanceOf: Medication
+Title: "Medication: Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #example
 * contained = sub01
@@ -76,13 +78,15 @@ Usage: #inline
 
 Instance: Renal-insufficiency
 InstanceOf: Condition
-Description: "Example of a Condition or Problem"
+Title: "Condition: Renal Insuffiency"
+Description: "Problem or Diagnosis from problem list: Renal Insuffiency"
 Usage: #example
 * identifier.value = "12345"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[0] = $sct#55607006 "Problem"
-* category.coding[+] = $condition-category#problem-list-item
+// * category.coding[0] = $sct#55607006 "Problem"
+// * category.coding[+] = $condition-category#problem-list-item
+* category = $condition-category#problem-list-item
 * severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"
 * bodySite = $sct#181414000 "Entire kidney (body structure)"

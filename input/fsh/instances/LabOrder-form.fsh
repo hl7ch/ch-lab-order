@@ -788,7 +788,7 @@ Usage: #example
 // ---- E2 Blood electrolyte test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Electrolyte"  // item[9][0][0][3]
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-blood-electrolyte"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-serum-electrolyte"
 * item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Elektrolyte"
 * item[=].item[=].item[=].item[=].code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean

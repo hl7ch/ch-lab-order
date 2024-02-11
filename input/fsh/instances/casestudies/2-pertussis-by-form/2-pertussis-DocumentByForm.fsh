@@ -1,7 +1,7 @@
 Instance: 2-pertussis-DocumentByForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order by Form 2-pertussis"
-Description: "Example Bundle for referral/order for Pertussis investigation"
+Description: "Document for referral/order Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document-by-form"
 * meta.versionId = "1"

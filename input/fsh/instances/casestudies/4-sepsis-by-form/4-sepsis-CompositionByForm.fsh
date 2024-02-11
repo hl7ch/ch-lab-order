@@ -1,6 +1,6 @@
 Instance: 4-sepsis-CompositionByForm
 InstanceOf: ChOrfComposition
-Title: "4-sepsis"
+Title: "Composition: 4-sepsis"
 Description: "Composition: Storyboard for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-composition-by-form"

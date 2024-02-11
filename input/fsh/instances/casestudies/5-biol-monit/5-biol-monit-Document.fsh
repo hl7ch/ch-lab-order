@@ -1,7 +1,7 @@
 Instance: 5-biol-monit-Document
-InstanceOf: ChLabOrderDocument
+InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 5-biol-monit"
-Description: "Example Bundle for referral/order for toxicological Monitoring"
+Description: "Document for referral/order toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit-document"
 * meta.versionId = "1"

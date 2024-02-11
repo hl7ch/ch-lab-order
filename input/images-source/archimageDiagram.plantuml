@@ -1,0 +1,135 @@
+@startuml keyword
+archimate #Technology "VPN Server" as vpnServerA <<technology-device>>
+
+rectangle GO #lightgreen
+rectangle STOP #red
+rectangle WAIT #orange
+@enduml
+
+
+@startuml junctions
+!define Junction_Or circle #black
+!define Junction_And circle #whitesmoke
+
+Junction_And JunctionAnd
+Junction_Or JunctionOr
+
+archimate #Technology "VPN Server" as vpnServerA <<technology-device>>
+
+rectangle GO #lightgreen
+rectangle STOP #red
+rectangle WAIT #orange
+GO -up-> JunctionOr
+STOP -up-> JunctionOr
+STOP -down-> JunctionAnd
+WAIT -down-> JunctionAnd
+@enduml
+
+@startuml Example Business
+skinparam rectangle<<behavior>> {
+	roundCorner 12
+}
+sprite $bProcess jar:archimate/business-process
+sprite $aService jar:archimate/application-service
+sprite $aComponent jar:archimate/application-component
+
+rectangle "Handle claim"  as HC <<$bProcess>><<behavior>> #Business
+rectangle "Capture Information"  as CI <<$bProcess>><<behavior>> #Business
+rectangle "Notify\nAdditional Stakeholders" as NAS <<$bProcess>><<behavior>> #Business
+rectangle "Validate" as V <<$bProcess>><<behavior>> #Business
+rectangle "Investigate" as I <<$bProcess>><<behavior>> #Business
+rectangle "Pay" as P <<$bProcess>><<behavior>> #Business
+
+HC *-down- CI
+HC *-down- NAS
+HC *-down- V
+HC *-down- I
+HC *-down- P
+
+CI -right->> NAS
+NAS -right->> V
+V -right->> I
+I -right->> P
+
+rectangle "Scanning" as scanning <<$aService>><<behavior>> #Application
+rectangle "Customer admnistration" as customerAdministration <<$aService>><<behavior>> #Application
+rectangle "Claims admnistration" as claimsAdministration <<$aService>><<behavior>> #Application
+rectangle Printing <<$aService>><<behavior>> #Application
+rectangle Payment <<$aService>><<behavior>> #Application
+
+scanning -up-> CI
+customerAdministration  -up-> CI
+claimsAdministration -up-> NAS
+claimsAdministration -up-> V
+claimsAdministration -up-> I
+Payment -up-> P
+
+Printing -up-> V
+Printing -up-> P
+
+rectangle "Document\nManagement\nSystem" as DMS <<$aComponent>> #Application
+rectangle "General\nCRM\nSystem" as CRM <<$aComponent>>  #Application
+rectangle "Home & Away\nPolicy\nAdministration" as HAPA <<$aComponent>> #Application
+rectangle "Home & Away\nFinancial\nAdministration" as HFPA <<$aComponent>>  #Application
+
+DMS .up.|> scanning
+DMS .up.|> Printing
+CRM .up.|> customerAdministration
+HAPA .up.|> claimsAdministration
+HFPA .up.|> Payment
+
+legend left
+Example from the "Archisurance case study" (OpenGroup).
+See
+====
+<$bProcess> :business process
+====
+<$aService> : application service
+====
+<$aComponent> : application component
+endlegend
+@enduml
+
+@startuml BusinessProcess rectangle
+skinparam roundcorner 12
+rectangle "Capture Information"  as CI <<$archimate/business-process>> #Business #LightPink
+@enduml
+
+@startuml List possible sprites
+listsprite
+@enduml
+
+@startuml Relationship left
+!include <archimate/Archimate>
+Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
+Business_Service(BService, "Business Service")
+Rel_Composition_Left(StakeholderElement, BService, "Description for the relationship")
+@enduml
+
+@startuml Relationship down
+!include <archimate/Archimate>
+Motivation_Stakeholder(StakeholderElement, "Stakeholder Description")
+Business_Service(BService, "Business Service")
+Rel_Composition_Down(StakeholderElement, BService, "Description for the relationship")
+@enduml
+
+@startuml Relation Typesg
+left to right direction
+skinparam nodesep 4
+!include <archimate/Archimate>
+Rel_Triggering(i15, j15, Triggering)
+Rel_Specialization(i14, j14, Specialization)
+Rel_Serving(i13, j13, Serving)
+Rel_Realization(i12, j12, Realization)
+Rel_Influence(i11, j11, Influence)
+Rel_Flow(i10, j10, Flow)
+Rel_Composition(i9, j9, Composition)
+Rel_Association_dir(i8, j8, Association_dir)
+Rel_Association(i7, j7, Association)
+Rel_Assignment(i6, j6, Assignment)
+Rel_Aggregation(i5, j5, Aggregation)
+Rel_Access_w(i4, j4, Access_w)
+Rel_Access_rw(i3, j3, Access_rw)
+Rel_Access_r(i2, j2, Access_r)
+Rel_Access(i1, j1, Access)
+@enduml

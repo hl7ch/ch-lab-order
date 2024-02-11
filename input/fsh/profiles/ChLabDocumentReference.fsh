@@ -1,9 +1,9 @@
 Profile: ChLabDocumentReference
 Parent: CHCoreDocumentReference
 Id: ch-lab-document-reference
-Title: "CH ORF DocumentReference"
+Title: "CH Core DocumentReference"
 Description: "Profile to describe how to provide a reference to a document to make it available to a healthcare system."
-* . ^short = "CH ORF DocumentReference"
+* . ^short = "CH Core DocumentReference"
 * status MS
 * type MS
 * type ^short = "Precise type of clinical document"

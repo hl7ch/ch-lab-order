@@ -1,7 +1,7 @@
 Instance: 1-tvt-DocumentByForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order by Form 1-tvt"
-Description: "Example Bundle for referral/order due to suspected deep vein thrombosis"
+Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document-by-form"
 * meta.versionId = "1"

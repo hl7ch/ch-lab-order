@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-electrolytes
 InstanceOf: ChLabOrderSRContainer
-Title: "CH LAB-Order example Service Request for Electrolytes in Serum"
-Description: "Example for Service Request as container for multiple Service Requests"
+Title: "CH LAB Service Request for Electrolytes in Serum"
+Description: "Service Request as container for multiple Service Requests"
 Usage: #example
 * id = "LabOrder-electrolytes"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

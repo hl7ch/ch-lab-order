@@ -38,10 +38,16 @@ pages:
     title: Use Cases in German
   usecases-french.md:
     title: Use Cases in French
-  document-lo-by-form.md:
-    title: CH LAB-Order by form
-  document-lo.md:
-    title: CH LAB-Order by Service Request
+  case-studies-english.md:
+    title: Case Studies in English
+  case-studies-german.md:
+    title: Case Studies in German
+  case-studies-french.md:
+    title: Case Studies in French
+  document-lo-sr-and-form.md:
+    title: CH LAB-Order with ServiceRequest and Form
+  document-lo-sr.md:
+    title: CH LAB-Order with Service Request
   profiles.md:
     title: Profiles
   terminology.md:

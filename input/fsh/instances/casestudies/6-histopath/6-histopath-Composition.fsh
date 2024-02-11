@@ -1,5 +1,5 @@
 Instance: 6-histopath-Composition
-InstanceOf: ChLabOrderComposition
+InstanceOf: ChLabOrderCompositionWithSR
 Title: "Composition 6-histopath"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
 Usage: #example

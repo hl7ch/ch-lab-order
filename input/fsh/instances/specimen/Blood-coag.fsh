@@ -1,6 +1,6 @@
 Instance: Blood-coag
 InstanceOf: Specimen
-Title: "Blood Sample Coagulation"
+Title: "Blood Sample Coagulation generic"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"

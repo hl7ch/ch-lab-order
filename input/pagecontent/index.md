@@ -8,13 +8,15 @@
 
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory orders
 
-This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electronic Medical Records (EMR) systems can send an electronic laboratory order to a Laboratory Information System (LIS). The lab order takes the form of a FHIR bundle resource of type 'document' and uses the CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html> to structure the administrative data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author). The analyses that are requested are available as code and as text in the ServiceRequest resource. This resource contains further important information about the requester and performer, the reason for the order, the medication, the conditions (the clinical context), the insurance and the material sample. This specimen ressource, in turn, contains information about the collection, the processing details, any required additives, and the container type to be used, among other things. So all the necessary information for executing the laboratory order is available for the receiving laboratory, and there is no necessity for a Questionnaire and QuestionnaireResponse resource. This quite common use case primarily occurs in hospitals that operate their own medical laboratory.
+#### Laboratory Order with Service Request
+
+This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electronic Medical Records (EMR) systems can send an electronic laboratory order to a Laboratory Information System (the order filler of a LIS). The analyses that are requested are available as code and as text in the ServiceRequest resource. This resource contains further important information about the requester and performer, the reason for the order, the medication, the conditions (the clinical context), the insurance and the material sample. This specimen ressource, in turn, contains information about the collection, the processing details, any required additives, and the container type to be used, among other things. So all the necessary information for executing the laboratory order is available for the receiving laboratory, and there is no necessity for a Questionnaire and QuestionnaireResponse resource. This quite common use case primarily occurs in hospitals that operate their own medical laboratory.
 
 [CH Core (R4) profiles](https://fhir.ch/ig/ch-core/index.html) and [CH EPR Term](https://fhir.ch/ig/ch-epr-term/2.0.9/index.html) are used to take account of national requirements.
 
-#### Order by Form (optional)
+#### Laboratory Order with Service Request and Form
 
-There is another use case in which the commissioning laboratory provides the client with a form, similar to how laboratories used to serve clients with paper-based forms. This situation is implemented here by including the two resources Questionnaire (form) and QuestionnaireResponse (completed form) in the document in addition to the ServiceRequest resource. CH-ORF (R4) Implementation Guide is also used here, which in turn uses the FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) to offer user-friendly forms with pre-filled fields and selectable ValueSets.
+There is another use case in which the commissioning laboratory provides the client with a form, similar to how laboratories forms are used to serve clients with paper-based forms. The lab order takes the form of a FHIR bundle resource of type 'document' and uses the CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html> to structure the administrative data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author).This situation is implemented here using CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html> to structure the administrative data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author). It includes the two resources Questionnaire (form) and QuestionnaireResponse (completed form) in the document in addition to the ServiceRequest resource. CH-ORF (R4) Implementation Guide uses the FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) to offer forms with pre-filled fields and selectable ValueSets.
 
 #### Download
 
@@ -22,11 +24,15 @@ You can download this Implementation Guide in [NPM-format](https://confluence.hl
 
 ### Foundation
 
-Applications claiming for conformance with the CH LAB-Order Implementation Guide shall:
--Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the user interface (e.g. on screen, in print).
+#### Laboratory order with Service Request
 
-For Clinical Information: Grouping of items and the order of items within shall be adequately reproduced according to the Questionnaire.
-<http://fhir.ch/ig/ch-lab-order/index.html#foundation>
+This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc.). A section element has an entry with the Service request reference.
+
+The ServiceRequest may instantiate a ActivityDefinition, a coded procedure to execute a single laboratory test (e.g. Sodium concentration in Serum), or to execute an entire test panel (e.g. concentration of Electrolytes in Serum). Using a ServiceRequest Container we can reference to other ServiceRequest Containers or to Single Test Service Requests.
+
+#### Laboratory order with Service Request and Form
+
+The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured form.
 
 ### Management Summary
 

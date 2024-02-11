@@ -1,5 +1,6 @@
 Instance: creatinine-clearance
 InstanceOf: PlanDefinition
+Title: "PlanDefinition: Creatinine Clearance"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
@@ -20,7 +21,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "UrineCreatinineClearancePanel"
 * title = "24-hour urine creatinine clearance panel"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel
+* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel "collection of tests and panels performed on one or more in vitro biologic specimens"
 * status = #draft
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"

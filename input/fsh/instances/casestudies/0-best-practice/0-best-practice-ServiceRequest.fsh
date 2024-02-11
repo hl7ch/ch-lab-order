@@ -22,7 +22,7 @@ Usage: #example
 * encounter = Reference(FirstEncounter)
 * requester = Reference(HansHauserKantonsspital)
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
-* supportingInfo[+] = Reference(ConditionHeartDisorder)
+// * supportingInfo[+] = Reference(ConditionHeartDisorder)
 * supportingInfo[+] = Reference(ConditionTibiaFracture)
 * supportingInfo[+] = Reference(Liquemin)
 
@@ -103,7 +103,7 @@ Usage: #example
 // ---- Patient --------
 Instance: BirgitBlum
 InstanceOf: CHCorePatient
-Title: "Birgit Blum"
+Title: "Patient: Birgit Blum"
 Description: "CH-Core-Patient, refers to 0-best-practice"
 Usage: #example
 * text.status = #additional
@@ -155,6 +155,7 @@ Usage: #example
 // ---- encounter -----
 Instance: FirstEncounter
 InstanceOf: Encounter
+Title: "Encounter: First Encounter"
 Description: "Example for best-practice of laboratory order"
 Usage: #example
 * status = #in-progress
@@ -163,13 +164,14 @@ Usage: #example
 
 Instance: Liquemin
 InstanceOf: ChLabOrderMedication
+Title: "Medication: Liquemin"
 Description: "Example for best-practice of laboratory order"
 Usage: #example
 
 /*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
 
 * code.coding[GTIN] = urn:oid:2.51.1.1#7680388470010 "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
-* code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#6687498
+* code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6.1#6687498
 * code.coding[ATC] = $atc#B01AB01 "Heparin"
 * code = $sct#412201008 "Porcine heparin (substance)"
 * code.text = "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
@@ -219,7 +221,7 @@ Usage: #example
 
 Instance: Blood-coag-0-best-practice
 InstanceOf: Specimen
-Title: "Blood Sample Coagulation"
+Title: "Blood Sample Coagulation, 0-best-practice"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"
@@ -242,7 +244,7 @@ Usage: #example
 
 Instance: Blood-0-best-practice
 InstanceOf: Specimen
-Title: "Blood Sample"
+Title: "Blood Sample, 0-best-practice"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * identifier.value = "48736-55555-75465"
