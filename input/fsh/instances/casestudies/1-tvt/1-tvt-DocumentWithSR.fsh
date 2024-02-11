@@ -1,9 +1,9 @@
-Instance: 1-tvt-Document
+Instance: 1-tvt-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order 1-tvt"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-document"
+* id = "1-tvt-document-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -12,7 +12,7 @@ Usage: #example
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt"
-* entry[=].resource = 1-tvt-Composition
+* entry[=].resource = 1-tvt-CompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann

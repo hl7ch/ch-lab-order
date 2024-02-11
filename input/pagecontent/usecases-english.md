@@ -48,7 +48,7 @@ A form (Questionnaire) is presented to the client, which contains the following 
 
 Outside of this use case: the results are then reported back to the client.
 
-Example order document by form: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
+Example order document by form: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 ### Use Case 3: Requesting additional tests of the same sample
 

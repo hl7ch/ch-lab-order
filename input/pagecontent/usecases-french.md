@@ -43,7 +43,7 @@ Un formulaire (Questionnaire) est présenté au donneur d'ordre, qui contient le
 
 En dehors de ce cas d'utilisation : les résultats sont ensuite communiqués au donneur d'ordre.
 
-Document d'exemple: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
+Document d'exemple: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 ### Cas d'utilisation 3: Demande d'analyses supplémentaires du même échantillon
 

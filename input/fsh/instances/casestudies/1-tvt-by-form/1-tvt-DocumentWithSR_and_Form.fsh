@@ -1,9 +1,9 @@
-Instance: 1-tvt-DocumentByForm
+Instance: 1-tvt-DocumentWithSR_and_Form
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order by Form 1-tvt"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-document-by-form"
+* id = "1-tvt-document-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-composition-by-form"
-* entry[=].resource = 1-tvt-CompositionByForm
+* entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-composition-with-sr-and-form"
+* entry[=].resource = 1-tvt-CompositionWithSR_and_Form
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann

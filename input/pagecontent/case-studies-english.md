@@ -23,9 +23,9 @@ A patient, Tobias Timmermann, presents to Dr. med. Marc Mustermann at the Olten 
 The doctor carries out the Blood count and the CRP determination himself by means of point of care diagnostics, the D-dimer diagnostics is prescribed as quantitative diagnostics in an external sending laboratory. To obtain the sample, a Blood sample is taken lying down (1 EDTA tube, 2 citrate tubes of 5 ml). The order is transmitted to the external laboratory and the sample is sent to the external dispatch laboratory by courier ordered by telephone. The results of the internal point of care diagnostics (Blood count and CRP) are entered in the patient\`s laboratory sheet in the doctor\`s office software (manually or via locally installed electronic interfaces). A prescription is therefore issued by the doctor to the patient for self-administration of an anti-thrombotic agent. The results of the sending-in laboratory arrive electronically at the GP\`s on the same evening and are also entered in the patient\`s laboratory sheet. By using the present exchange format, this process can be fully automated. After a telephone enquiry by the doctor at the sending laboratory due to a borderline D-dimer result, the information is given that a deep vein thrombosis cannot be ruled out in this situation by means of D-dimer and the patient is therefore called back the next day for a sonography of the legs.
 As it is probably a primary leg vein thrombosis, Dr Eva Erlenmeier from the Pipette laboratory sends feedback to Dr Mustermann with the recommendation to carry out a thrombophilia screening, which includes the following analyses: Quick, aPTT, fibrinogen, antithrombin (funct.), thrombin time I 2.5 NIH/ml, APC resistance, D-dimers, protein C, (aPTT method), protein S antigen. The analyses can be carried out directly from the samples of the citrate tubes sent along.
 
-[Order Document whith ServiceRequest](Bundle-1-tvt-document.html)
+[Order Document whith ServiceRequest](Bundle-1-tvt-document-with-sr.html)
 
-[Order Document with ServiceRequest and Form](Bundle-1-tvt-document-by-form.html)
+[Order Document with ServiceRequest and Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 ### CH LAB-Order 2-pertussis
 

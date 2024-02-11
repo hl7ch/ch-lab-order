@@ -40,7 +40,7 @@ Dem Kunden wird ein Formular (Fragebogen) vorgelegt, das folgende Informationen 
   
 Außerhalb dieses Anwendungsfalls: Die Ergebnisse werden dann dem Kunden zurückgemeldet.
 
-Beispiel-Dokument: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
+Beispiel-Dokument: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
