@@ -1,6 +1,6 @@
 Instance: 2-pertussis-DocumentWith_SR_and_Form
 InstanceOf: ChOrfDocument
-Title: "CH LAB-Order with ServiceRequest and Form 2-pertussis"
+Title: "CH LAB-Order 2-pertussis with ServiceRequest and Form"
 Description: "Document for referral/order Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document-with-sr-and-form"

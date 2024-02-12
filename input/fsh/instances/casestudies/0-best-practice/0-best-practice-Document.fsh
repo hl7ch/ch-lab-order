@@ -1,7 +1,7 @@
 Instance: BestPracticeDocument
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order document best-practice"
-Description: "Document whith Service Request in context of tibial plateau fracture"
+Description: "Document with Service Request in context of tibial plateau fracture"
 Usage: #example
 * id = "0-best-practice-document"
 * meta.versionId = "1"

@@ -75,9 +75,9 @@ Examples are:
 
 Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
 
-Example order document by ServiceRequest: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html).
+Example order document with ServiceRequest: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html).
 
-Example order document by Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-by-form.html).
+Example order document with ServiceRequest and Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-with-sr-and-form.html).
 
 ### Use Case 5: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
 

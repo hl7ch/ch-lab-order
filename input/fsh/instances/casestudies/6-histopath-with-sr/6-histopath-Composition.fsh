@@ -1,9 +1,9 @@
-Instance: 6-histopath-Composition
+Instance: 6-histopath-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 6-histopath"
+Title: "Composition 6-histopath with ServiceRequest"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
 Usage: #example
-* id = "6-histopath"
+* id = "6-histopath-composition-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
@@ -27,17 +27,14 @@ Usage: #example
 
 // Auftrag: subject(Ref), author(Ref), Q(Ref), QR(Ref), SR(Ref)
 * status = #final
-* title = "Pathologieauftrag"
+* title = "Histopathology order 6-histopath"
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721966001 "Pathology order (record artifact)"
 * subject = Reference(Patient/SimoneStuder)
 * date = "2019-03-31T11:46:09+02:00"
 * author = Reference(ArminAhrensArztpraxis)
 
-* section[orderReferral].title = "Laboratory Order by Service Request 6-histopath"
-// * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
+* section[orderReferral].title = "Laboratory Order with ServiceRequest 6-histopath"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 6-histopath\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(6-histopath-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-QuestionnaireResponse)
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 6-histopath\n </div>"
 * section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequest)

@@ -1,9 +1,9 @@
-Instance: 5-biol-monit-Composition
+Instance: 5-biol-monit-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 5-biol-monit"
+Title: "Composition 5-biol with ServiceRequest"
 Description: "Composition: Storyboard for Toxicological Monitoring"
 Usage: #inline
-* id = "5-biol-monit"
+* id = "5-biol-monit-composition-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
@@ -29,8 +29,8 @@ Usage: #inline
 * author = Reference(PauloPorcelliniSuva)
 * title = "Laboratory order 5-biol-monit"
 
-* section[orderReferral].title = "Laboratory Order by Service Request 5-biol-monit"
+* section[orderReferral].title = "Laboratory Order with Service Request 5-biol-monit"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 5-biol-monit\n </div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 5-biol-monit\n </div>"
 * section[orderReferral].entry[ServiceRequest] = Reference(5-biol-monit-ServiceRequest)
 

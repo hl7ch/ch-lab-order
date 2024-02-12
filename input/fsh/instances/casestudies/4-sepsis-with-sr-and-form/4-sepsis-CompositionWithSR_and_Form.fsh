@@ -1,9 +1,9 @@
-Instance: 4-sepsis-CompositionByForm
+Instance: 4-sepsis-CompositionWithSR_and_Form
 InstanceOf: ChOrfComposition
-Title: "Composition: 4-sepsis"
+Title: "Composition 4-sepsis with ServiceRequewt"
 Description: "Composition: Storyboard for Sepsis Investigation"
 Usage: #example
-* id = "4-sepsis-composition-by-form"
+* id = "4-sepsis-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional

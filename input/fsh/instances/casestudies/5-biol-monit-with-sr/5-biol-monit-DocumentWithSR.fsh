@@ -1,9 +1,9 @@
-Instance: 5-biol-monit-Document
+Instance: 5-biol-monit-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 5-biol-monit"
+Title: "CH LAB-Order 5-biol with ServiceRequest"
 Description: "Document for referral/order toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit-document"
+* id = "5-biol-monit-document-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit"
-* entry[=].resource = 5-biol-monit-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit-composition-with-sr"
+* entry[=].resource = 5-biol-monit-CompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
 * entry[=].resource = BeatBorer

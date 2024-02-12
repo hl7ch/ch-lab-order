@@ -68,7 +68,7 @@ En voici quelques exemples :
 * Industrie alimentaire : enquête sur l'hygiène des employés (p.ex. contamination par salmonelles)
 * Enquêtes de police
 
-Exemple de formulaire : [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
+Exemple de formulaire : [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
 
 ### Cas d'utilisation 6: Suggestion d'examens supplémentaires ou alternatifs par le médecin de laboratoire (destinataire de l'ordonnance)
 

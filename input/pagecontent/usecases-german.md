@@ -65,7 +65,7 @@ Beispiele dazu sind:
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
-Beispielformular: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
+Beispieldokument: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
 ### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 

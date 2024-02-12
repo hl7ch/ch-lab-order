@@ -1,9 +1,9 @@
-Instance: 3-gyn-CompositionByForm
+Instance: 3-gyn-CompositionWithSR_and_Form
 InstanceOf: ChOrfComposition
-Title: "Composition 3-gyn by Form"
+Title: "Composition 3-gyn with ServiceRequest and Form"
 Description: "Composition: Storyboard for Preventive Gynecological Check-up"
 Usage: #example
-* id = "3-gyn-composition-by-form"
+* id = "with3-gyn-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional

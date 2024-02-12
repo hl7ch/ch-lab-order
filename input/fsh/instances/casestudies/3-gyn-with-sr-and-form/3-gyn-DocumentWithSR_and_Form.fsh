@@ -1,9 +1,9 @@
-Instance: 3-gyn-DocumentByForm
+Instance: 3-gyn-DocumentWithSR_and_Form
 InstanceOf: ChOrfDocument
-Title: "CH LAB-Order by Form 3-gyn"
+Title: "CH LAB-Order 3-gyn with ServiceRequest and Form"
 Description: "Document for referral/order preventive gynaecological check-up"
 Usage: #example
-* id = "3-gyn-document-by-form"
+* id = "3-gyn-document-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/3-gyn-composition-by-form"
-* entry[=].resource = 3-gyn-CompositionByForm
+* entry[0].fullUrl = "http://example.com/fhir/Composition/with3-gyn-composition-with-sr-and-form"
+* entry[=].resource = 3-gyn-CompositionWithSR_and_Form
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella

@@ -1,9 +1,9 @@
-Instance: 4-sepsis-Composition
+Instance: 4-sepsis-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 4-sepsis"
+Title: "Composition 4-sepsis with ServiceRequest"
 Description: "Composition: Storyboard for Sepsis Investigation"
 Usage: #example
-* id = "4-sepsis"
+* id = "4-sepsis-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 
@@ -34,7 +34,7 @@ Usage: #example
 * author = Reference(HansHauserKantonsspital)
 * title = "Laboratory Order 4-sepsis"
 
-* section[orderReferral].title = "Laboratory Order by Service Request 4-sepsis"
+* section[orderReferral].title = "Laboratory Order with Service Request 4-sepsis"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 4-sepsis\n </div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 4-sepsis\n </div>"
 * section[orderReferral].entry[ServiceRequest] = Reference(4-sepsis-ServiceRequest)

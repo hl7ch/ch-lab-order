@@ -1,6 +1,6 @@
 Instance: 1-tvt-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 1-tvt"
+Title: "CH LAB-Order 1-tvt with ServiceRequest"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document-with-sr"

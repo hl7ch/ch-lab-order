@@ -1,6 +1,6 @@
-Instance: 3-gyn-Document
+Instance: 3-gyn-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 3-gyn"
+Title: "CH LAB-Order 3-gyn with ServiceRequest"
 Description: "Document for referral/order preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn-document"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/3-gyn"
-* entry[=].resource = 3-gyn-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/3-gyn-with-sr"
+* entry[=].resource = 3-gyn-CompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella

@@ -1,6 +1,6 @@
 Instance: 2-pertussis-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 2-pertussis"
+Title: "CH LAB-Order 2-pertussis with ServiceRequest"
 Description: "Document for referral/order for Pertussis investigation"
 Usage: #example
 * id = "2-pertussis-document-with-sr"
@@ -16,10 +16,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/EmilKummer"
 * entry[=].resource = EmilKummer
-// * entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
-// * entry[=].resource = FranzMuster
-// * entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
-// * entry[=].resource = BeatBorer
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
 * entry[=].resource = PeterPresto

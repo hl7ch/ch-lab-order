@@ -1,9 +1,9 @@
-Instance: 6-histopath-Document
+Instance: 6-histopath-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 6-histopath"
+Title: "CH LAB-Order 6-histopath with ServiceRequest"
 Description: "Document for referral/order due to suspected skin melanoma"
 Usage: #example
-* id = "6-histopath-document"
+* id = "6-histopath-document-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/6-histopath"
-* entry[=].resource = 6-histopath-Composition
+* entry[0].fullUrl = "http://example.com/fhir/Composition/6-histopath-composition-with-sr"
+* entry[=].resource = 6-histopath-CompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SimoneStuder"
 * entry[=].resource = SimoneStuder
