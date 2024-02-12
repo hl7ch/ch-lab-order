@@ -1,6 +1,6 @@
 Instance: 1-tvt-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 1-tvt"
+Title: "Composition 1-tvt with Service Request"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
 * id = "1-tvt"

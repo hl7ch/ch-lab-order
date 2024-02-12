@@ -1,9 +1,9 @@
-Instance: 2-pertussis-CompositionByForm
+Instance: 2-pertussis-CompositionWith_SR_and_Form
 InstanceOf: ChOrfComposition
-Title: "Composition by Form 2-pertussis"
+Title: "Composition with ServiceRequest and Form 2-pertussis"
 Description: "Composition: Storyboard for Pertussis Investigation"
 Usage: #example
-* id = "2-pertussis-composition-by-form"
+* id = "2-pertussis-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional

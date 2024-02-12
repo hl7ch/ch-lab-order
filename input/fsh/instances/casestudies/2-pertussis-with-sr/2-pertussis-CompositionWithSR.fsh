@@ -1,9 +1,9 @@
-Instance: 2-pertussis-Composition
+Instance: 2-pertussis-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 2-pertussis"
+Title: "Composition 2-pertussis with Service Request"
 Description: "Composition: Storyboard for Pertussis Investigation"
 Usage: #example
-* id = "2-pertussis"
+* id = "2-pertussis-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
@@ -27,12 +27,12 @@ Usage: #example
 * subject = Reference(Patient/EmilKummer)
 * date = "2020-03-31T11:46:09+02:00"
 * author = Reference(PeterPrestoGruppenpraxis)
-* title = "Laboratory Order 2-pertussis"
+* title = "Laboratory Order 2-pertussis with Service Request"
 
-* section[orderReferral].title = "Laboratory Order by Service Request 2-pertussis"
+* section[orderReferral].title = "Laboratory Order with Service Request 2-pertussis"
 // * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request 2-pertussis\n </div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 2-pertussis\n </div>"
 // * section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
 // * section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequest)

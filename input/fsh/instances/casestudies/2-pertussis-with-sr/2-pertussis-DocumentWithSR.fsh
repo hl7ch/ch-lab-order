@@ -1,9 +1,9 @@
-Instance: 2-pertussis-DocumentByForm
-InstanceOf: ChOrfDocument
-Title: "CH LAB-Order by Form 2-pertussis"
-Description: "Document for referral/order Pertussis investigation"
+Instance: 2-pertussis-DocumentWithSR
+InstanceOf: ChLabOrderDocumentWithSR
+Title: "CH LAB-Order 2-pertussis"
+Description: "Document for referral/order for Pertussis investigation"
 Usage: #example
-* id = "2-pertussis-document-by-form"
+* id = "2-pertussis-document-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/2-pertussis-composition-by-form"
-* entry[=].resource = 2-pertussis-CompositionByForm
+* entry[0].fullUrl = "http://example.com/fhir/Composition/2-pertussis-with-sr"
+* entry[=].resource = 2-pertussis-CompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/EmilKummer"
 * entry[=].resource = EmilKummer
@@ -33,6 +33,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
 * entry[=].resource = MarcMustermannGruppenpraxis
 
+
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[10]
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
@@ -50,9 +51,9 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-2-pertussis"
 * entry[=].resource = Blood-2-pertussis
 
-* entry[+].fullUrl = "http://example.com/fhir/Questionnaire/2-pertussis"
-* entry[=].resource = 2-pertussis-Questionnaire
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
-* entry[=].resource = 2-pertussis-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request-by-form"
-* entry[=].resource = 2-pertussis-ServiceRequestByForm
+// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/2-pertussis"
+// * entry[=].resource = 2-pertussis-Questionnaire
+// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/2-pertussis"
+// * entry[=].resource = 2-pertussis-QuestionnaireResponse
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request"
+* entry[=].resource = 2-pertussis-ServiceRequest
