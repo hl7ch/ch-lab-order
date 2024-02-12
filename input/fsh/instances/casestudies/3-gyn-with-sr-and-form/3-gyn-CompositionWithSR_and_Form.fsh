@@ -1,4 +1,4 @@
-Instance: 3-gyn-CompositionWithSR_and_Form
+Instance: 3-gyn-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
 Title: "Composition 3-gyn with ServiceRequest and Form"
 Description: "Composition: Storyboard for Preventive Gynecological Check-up"

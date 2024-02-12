@@ -1,4 +1,4 @@
-Instance: 3-gyn-DocumentWithSR_and_Form
+Instance: 3-gyn-DocumentWithSR_andForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order 3-gyn with ServiceRequest and Form"
 Description: "Document for referral/order preventive gynaecological check-up"
@@ -12,7 +12,7 @@ Usage: #example
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/with3-gyn-composition-with-sr-and-form"
-* entry[=].resource = 3-gyn-CompositionWithSR_and_Form
+* entry[=].resource = 3-gyn-CompositionWithSR_andForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/MarinaRubella"
 * entry[=].resource = MarinaRubella

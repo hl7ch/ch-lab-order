@@ -1,4 +1,4 @@
-Instance: 1-tvt-DocumentWithSR_and_Form
+Instance: 1-tvt-DocumentWithSR_andForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order 1-tvt with ServiceRequest and Form"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
@@ -12,7 +12,7 @@ Usage: #example
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-composition-with-sr-and-form"
-* entry[=].resource = 1-tvt-CompositionWithSR_and_Form
+* entry[=].resource = 1-tvt-CompositionWithSR_andForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann

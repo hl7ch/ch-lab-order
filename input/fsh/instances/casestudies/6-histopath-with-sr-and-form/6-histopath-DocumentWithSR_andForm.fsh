@@ -1,6 +1,6 @@
-Instance: 6-histopath-DocumentByForm
+Instance: 6-histopath-DocumentWithSR_andForm
 InstanceOf: ChOrfDocument
-Title: "CH LAB-Order by Form 6-histopath"
+Title: "CH LAB-Order 6-histopath with ServiceRequest and Form"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "6-histopath-document-with-sr-and-form"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/6-histopath-composition-by-form"
-* entry[=].resource = 6-histopath-CompositionByForm
+* entry[0].fullUrl = "http://example.com/fhir/Composition/6-histopath-composition-with-sr-and-form"
+* entry[=].resource = 6-histopath-CompositionWhitSR_andForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SimoneStuder"
 * entry[=].resource = SimoneStuder

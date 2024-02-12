@@ -1,9 +1,9 @@
-Instance: 5-biol-monit-CompositionByForm
+Instance: 5-biol-monit-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition by Form 5-biol-monit"
+Title: "Composition 5-biol-monit with Service Request and Form"
 Description: "Composition: Storyboard for Toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit-composition-by-form"
+* id = "5-biol-monit-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional

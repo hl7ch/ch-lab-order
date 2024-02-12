@@ -1,4 +1,4 @@
-Instance: 1-tvt-CompositionWithSR_and_Form
+Instance: 1-tvt-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
 Title: "Composition by Form 1-tvt"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"

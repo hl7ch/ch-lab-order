@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-DocumentByForm
 InstanceOf: ChOrfDocument
-Title: "CH LAB-Order by Form 5-biol-monit"
+Title: "CH LAB-Order 5-biol-monit with ServiceRequest and Form"
 Description: "Document for referral/order toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit-document-with-sr-and-form"
@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit-composition-by-form"
-* entry[=].resource = 5-biol-monit-CompositionByForm
+* entry[0].fullUrl = "http://example.com/fhir/Composition/5-biol-monit-composition-with-sr-and-form"
+* entry[=].resource = 5-biol-monit-CompositionWithSR_andForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
 * entry[=].resource = BeatBorer

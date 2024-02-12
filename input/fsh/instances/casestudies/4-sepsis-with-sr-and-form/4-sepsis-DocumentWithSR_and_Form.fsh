@@ -1,4 +1,4 @@
-Instance: 4-sepsis-DocumentWithSR_and_Form
+Instance: 4-sepsis-DocumentWithSR_andForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order 4-sepsis with ServiceRequest and Form"
 Description: "Document for referral/order Sepsis Investigation"
@@ -12,7 +12,7 @@ Usage: #example
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/4-sepsis-composition-with-sr-and-form"
-* entry[=].resource = 4-sepsis-CompositionWithSR_and_Form
+* entry[=].resource = 4-sepsis-CompositionWithSR_andForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SaraSpeckmann"
 * entry[=].resource = SaraSpeckmann
