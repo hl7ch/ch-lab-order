@@ -14,8 +14,8 @@ Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragme
 
 #### CH LAB-Order 1-tvt
 
-[Order Document only ServiceRequest](Bundle-1-tvt-document.html)
-[Order Document by Form](Bundle-1-tvt-document-by-form.html)
+[Order Document with ServiceRequest](Bundle-1-tvt-document-with-sr.html)
+[Order Document with ServiceRequest and Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 #### CH LAB-Order 2-pertussis
 

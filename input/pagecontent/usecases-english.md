@@ -48,7 +48,7 @@ A form (Questionnaire) is presented to the client, which contains the following 
 
 Outside of this use case: the results are then reported back to the client.
 
-Example order document by form: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
+Example order document by form: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 ### Use Case 3: Requesting additional tests of the same sample
 
@@ -75,9 +75,9 @@ Examples are:
 
 Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
 
-Example order document by ServiceRequest: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html).
+Example order document with ServiceRequest: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html).
 
-Example order document by Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-by-form.html).
+Example order document with ServiceRequest and Form: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-with-sr-and-form.html).
 
 ### Use Case 5: Suggestion of additional or alternative examinations by the laboratory physician (order recipient, receiver)
 

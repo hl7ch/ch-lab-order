@@ -40,7 +40,7 @@ Dem Kunden wird ein Formular (Fragebogen) vorgelegt, das folgende Informationen 
   
 Außerhalb dieses Anwendungsfalls: Die Ergebnisse werden dann dem Kunden zurückgemeldet.
 
-Beispiel-Dokument: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-by-form.html)
+Beispiel-Dokument: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
 ### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
 
@@ -65,7 +65,7 @@ Beispiele dazu sind:
 * Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
 * Polizeiliche Untersuchungen
 
-Beispielformular: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
+Beispieldokument: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
 
 ### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
 
