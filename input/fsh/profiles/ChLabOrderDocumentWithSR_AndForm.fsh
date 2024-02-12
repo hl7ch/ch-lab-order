@@ -2,8 +2,8 @@ Profile: ChLabOrderDocumentWithSR_AndForm
 Parent: ChOrfDocument
 Id: ch-lab-order-document-with-sr-and-form
 Title: "CH LAB-Order Document with Service Request and Form"
-Description: "Definition of the bundle for the lab order document by Form, parent is ChOrfDocument"
-* . ^short = "CH Lab-Order Bundle by Form"
+Description: "Definition of the bundle for the lab order document with ServiceRequest and Form, parent is ChOrfDocument"
+* . ^short = "CH Lab-Order Bundle with ServiceRequest and Form"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
 (which is concept commonly used in HL7) or Laboratory Service Request (Concept commonly used in DICOM). 
