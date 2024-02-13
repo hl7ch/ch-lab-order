@@ -34,7 +34,7 @@ Usage: #example
 // ---- Patient --------
 Instance: BeatBorer
 InstanceOf: CHCorePatient
-Title: "Patient: Beat Borer"
+Title: "Patient Beat Borer"
 Description: "Example for CH-Core-Patient"
 Usage: #example
 * text.status = #additional
@@ -97,7 +97,7 @@ Usage: #example
 
 Instance: Suva
 InstanceOf: CHCoreOrganization
-Title: "Organization: SUVA"
+Title: "Organization SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"
@@ -150,7 +150,7 @@ Usage: #example
 
 Instance: SpeiserRails
 InstanceOf: CHCoreOrganization
-Title: "Organization: Speiser Rails"
+Title: "Organization Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
@@ -171,7 +171,7 @@ Usage: #example
 
 Instance: HealthInsuranceCardBeatBorer
 InstanceOf: Coverage
-Title: "Coverage: HealthInsuranceCard Beat Borer"
+Title: "Covarage HealthInsuranceCard Beat Borer"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"

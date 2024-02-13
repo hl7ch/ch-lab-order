@@ -60,7 +60,7 @@ Usage: #example
 
 Instance: Voltaren
 InstanceOf: Medication
-Title: "Medication: Voltaren(product)"
+Title: "Medication Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #example
 * contained = sub01

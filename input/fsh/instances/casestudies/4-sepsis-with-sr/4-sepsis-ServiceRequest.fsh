@@ -34,7 +34,7 @@ Usage: #example
 
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
-Title: "Sara Speckmann"
+Title: "Patient Sara Speckmann"
 Description: "CH-Core-Patient, refers to 4-sepsis"
 Usage: #example
 * text.status = #additional
@@ -96,7 +96,7 @@ Usage: #example
 
 Instance: Kantonsspital
 InstanceOf: CHCoreOrganization
-Title: "Organization: Kantonsspital"
+Title: "Organization Kantonsspital"
 Description: "Example for Hospital"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -122,7 +122,7 @@ Usage: #example
 
 Instance: HealthInsuranceCardSaraSpeckmann
 InstanceOf: Coverage
-Title: "Coverage: HealthInsuranceCard Sarah Speckmann"
+Title: "Covarage HealthInsuranceCard Sarah Speckmann"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"

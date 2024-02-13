@@ -53,7 +53,7 @@ Usage: #example
 
 Instance: Aspirin
 InstanceOf: Medication
-Title: "Medication: Aspirin"
+Title: "Medication Aspirin"
 Description: "Example of a Medication Product"
 Usage: #example
 * contained = sub02

@@ -29,7 +29,7 @@ Usage: #example
 
 Instance: SimoneStuder
 InstanceOf: CHCorePatient
-Title: "Patient: Marina Rubella"
+Title: "Patient Marina Rubella"
 Description: "CH-Core-Patient, refers to 6-histopath"
 Usage: #example
 * text.status = #additional
@@ -75,7 +75,7 @@ Usage: #example
 
 Instance: HealthInsuranceCardSimoneStuder
 InstanceOf: Coverage
-Title: "HealthInsuranceCard"
+Title: "Health Insurance Card Simone Studer"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"

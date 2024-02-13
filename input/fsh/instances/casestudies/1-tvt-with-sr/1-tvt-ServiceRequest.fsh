@@ -97,7 +97,7 @@ Usage: #example
 // ---- Patient --------
 Instance: TobiasTimmermann
 InstanceOf: CHCorePatient
-Title: "Patient: Tobias Timmermann"
+Title: "Patient Tobias Timmermann"
 Description: "CH-Core-Patient, refers to 1-tvt"
 Usage: #example
 * text.status = #additional

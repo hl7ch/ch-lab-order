@@ -103,7 +103,7 @@ Usage: #example
 // ---- Patient --------
 Instance: BirgitBlum
 InstanceOf: CHCorePatient
-Title: "Patient: Birgit Blum"
+Title: "Patient Birgit Blum"
 Description: "CH-Core-Patient, refers to 0-best-practice"
 Usage: #example
 * text.status = #additional
@@ -164,7 +164,7 @@ Usage: #example
 
 Instance: Liquemin
 InstanceOf: ChLabOrderMedication
-Title: "Medication: Liquemin"
+Title: "Medication Liquemin"
 Description: "Example for best-practice of laboratory order"
 Usage: #example
 

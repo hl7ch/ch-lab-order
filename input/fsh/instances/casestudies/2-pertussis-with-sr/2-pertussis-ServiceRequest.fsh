@@ -26,7 +26,7 @@ Usage: #example
 
 Instance: EmilKummer
 InstanceOf: CHCorePatient
-Title: "Patient: Emil Kummer"
+Title: "Patient Emil Kummer"
 Description: "CH-Core-Patient, refers to 2-pertussis"
 Usage: #example
 * text.status = #additional

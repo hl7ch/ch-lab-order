@@ -1,6 +1,6 @@
 Instance: CoverageFranzMuster
 InstanceOf: CHCoreCoverage
-Title: "Coverage: FranzMuster"
+Title: "Coverage FranzMuster"
 Description: "Example for Insurance Coverage"
 Usage: #example
 * meta.source = "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
