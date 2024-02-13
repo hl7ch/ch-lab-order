@@ -1,7 +1,7 @@
 Instance: 0-best-practice-ServiceRequest-0
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
 * id = "0-best-practice-service-request-0"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -204,7 +204,7 @@ Usage: #example
 // ---- Specimen ---------------
 Instance: Serum-0-best-practice
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample 0-best-practice"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"
@@ -213,7 +213,7 @@ Usage: #example
 * type = $sct#119364003 "Serum specimen (specimen)"
 * subject = Reference(Patient/BirgitBlum)
 * collection.collector = Reference(Practitioner/MarcMustermann)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedDateTime = "2023-12-01T16:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
 * container.type = $sct#706053007 "General specimen container (physical object)"

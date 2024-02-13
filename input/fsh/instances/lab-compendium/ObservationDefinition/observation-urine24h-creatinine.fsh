@@ -1,5 +1,6 @@
 Instance: observation-urine24h-creatinine
 InstanceOf: ObservationDefinition
+Title: "ObservationDefinition Creatinine in 24h Urine"
 Description: "Mass of creatinine collected during 24h"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

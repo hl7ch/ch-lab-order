@@ -1,6 +1,6 @@
 Instance: 1-tvt-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire 1-tvt by Form"
+Title: "CH LAB-Questionnaire 1-tvt"
 Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #inline
 * id = "1-tvt"

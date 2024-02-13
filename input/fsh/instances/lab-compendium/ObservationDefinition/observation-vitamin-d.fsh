@@ -1,5 +1,6 @@
 Instance: observation-vitamin-d
 InstanceOf: ObservationDefinition
+Title: "ObservationDefinition 25-hydroxyvitamin D3 [Moles/Vol]"
 Description: "Vitamin-D"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

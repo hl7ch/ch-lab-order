@@ -84,7 +84,7 @@ Usage: #example
 // ---- Specimen ---------------
 Instance: Serum-1-tvt
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample 1-tvt"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"

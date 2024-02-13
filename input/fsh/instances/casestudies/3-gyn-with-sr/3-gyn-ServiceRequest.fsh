@@ -150,7 +150,7 @@ Usage: #example
 
 Instance: Serum-gyn
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample 3-gyn"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"

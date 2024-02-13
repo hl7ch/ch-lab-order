@@ -1,102 +1,92 @@
 <!-- markdownlint-disable MD001 MD033 MD041 -->
 <!--
-╭───────────────────── UC -german ──────────────────────────╮
-│  UC - english is original, this is a traduction           │
+╭───────────────────── UC-german  ──────────────────────────╮
+│  UC-english is original, german and french are dependent  │
 ╰───────────────────────────────────────────────────────────╯
 -->
-### Use Case 1: Labor-Auftrag
+### Anwendungsfall 1: Ein Laborauftragsdokument generieren
 
-Der Auftraggeber (zum Beispiel ein Arzt) benötigt verschiedene Laboruntersuchungen für weitere Diagnosen. Er erstellt ein Bestelldokument in seinem elektronischen Patientenakten (EMR)-System, das die administrativen Daten gemäß dem CH ORF Implementierungsleitfaden strukturiert enthält und dessen Inhalt im EMR verfügbar ist. Aus den Analysen, die vom LIS bereitgestellt werden, kann er diejenigen auswählen, die ihm bei seiner Fragestellung helfen, und er kann auch die Proben bestimmen, die den Analysen entsprechen. Zum Beispiel möchte er Glukose im Blut und Liquor analysieren lassen. Das Laborsystem kann die Informationen zu den erforderlichen Behältern und eventuellen Zusätzen im System speichern. Die präanalytischen Bedingungen sind festgelegt. Das Bestelldokument wird an das Laborinformationssystem (LIS) gesendet.
+{% include img.html img="LabOrderWorkflow.svg" caption="Fig.: Arbeitsablauf bei Laboraufträgen und Tests" width="60%" %}
 
-Er kann auch Informationen zum klinischen Kontext der Laborbestellung hinzufügen: Problemliste, aktuelle Medikamentenliste, Fragen zu den verordneten Analysen.
+#### Laborauftragsdokument mit Serviceanforderung
 
-Beispielformular: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
+Der Auftraggeber (z.B. ein Arzt) benötigt zur Ergänzung der Diagnostik verschiedene Laboruntersuchungen. Er erstellt in seinem Electronic Medical Records (EMR)-System ein Auftragsdokument, das die administrativen Daten enthält, die nach dem CH Core Implementation Guide strukturiert sind und deren Inhalte im EMR verfügbar sind. Aus den vom LIS bereitgestellten Analysen kann er diejenigen auswählen, die ihm bei seiner Fragestellung weiterhelfen, und er kann auch die den Analysen entsprechenden Stichproben bestimmen. Er möchte zum Beispiel die Glukose im Blut und im Liquor analysieren lassen. Das Laborsystem kann die Informationen über die benötigten Probengefäße und eventuelle Zusatzstoffe im System hinterlegen. Die präanalytischen Bedingungen sind festgelegt.
 
-### Use Case 2: Laborverordnung unter Verwendung von Questionnaire und QuestionnaireResponse
+Er kann dem Laborauftrag auch Informationen über den klinischen Kontext hinzufügen: Problemliste, aktuelle Medikamentenliste, Fragen zu den verordneten Analysen.
 
-Der Auftraggeber (zum Beispiel ein Arzt) benötigt verschiedene Laboruntersuchungen für weitere Diagnosen. Hierfür erstellt er ein Bestelldokument in seinem Praxisinformationssystem mit den erforderlichen Informationen zum Patienten, Laboruntersuchung, Proben, etc. Das notwendige Probenmaterial (Serum, Urin, Liquor, etc.) wird in den entsprechenden Bestelldokumenten gespeichert. Das erforderliche Probenmaterial (Serum, Urin, Liquor) wird in geeigneten Behältern gesammelt und eindeutig dem Bestelldokument zugeordnet (Specimen.identifier, Specimen.container.identifier). Proben können im eigenen Labor untersucht werden, oder sie müssen per Post oder Kurier an das externe Labor geschickt werden. Dort weist das Laborinformationssystem ihnen eine eigene Kennung zu (Specimen.accessionIdentifier).
+Das Auftragsdokument wird an das Laborinformationssystem (LIS) gesendet.
 
-Dem Kunden wird ein Formular (Fragebogen) vorgelegt, das folgende Informationen enthält:
+Beispiel Auftragsdokument per ServiceRequest: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document-with-sr.html)
 
-* Metadaten der Bestellung
-* Informationen zur Bestellung
-* Informationen zum Empfänger der Bestellung
-* Informationen zum Patienten
-* Informationen zum Besteller (Absender)
-* Details zu Empfängern einer Kopie der Ergebnisse
-* Details zur Laborspezialität
-* Informationen zu den angeforderten Untersuchungen
+#### Laborauftragsdokument mit Serviceanforderung und Formular
 
-* Informationen zum Probenmaterial, Specimen
-  * Typ: z.B. Serum, Vollblut, Liquor
-  * Subjekt: Verweis auf den Patienten
-  * Sammlung: Informationen zur Sammlung, Sammelzeit, Menge, Methode, Sammelort (z.B. rechter Arm), Nüchternzeit
-  * Behälter, Gefäß: Kennung, Typ und mehr
+Der Auftraggeber (z.B. Arzt) benötigt zur weiteren Diagnostik verschiedene Laboruntersuchungen. Dazu erstellt er in seinem Praxisinformationssystem ein Auftragsdokument mit den notwendigen Angaben zu Patient, Laboruntersuchung, Proben usw. Das benötigte Probenmaterial (Serum, Urin, Liquor, etc.) wird in den entsprechenden Auftragsdokumenten hinterlegt. Das benötigte Probenmaterial (Serum, Urin, Liquor) wird in entsprechenden Behältnissen gesammelt und dem Auftragsdokument eindeutig zugeordnet (Specimen.identifier, Specimen.container.identifier). Die Proben können im eigenen Labor untersucht werden, oder sie müssen per Post oder Kurier an das externe Labor geschickt werden. Dort werden sie vom Laborinformationssystem mit einem eigenen Identifikator (Specimen.accessionIdentifier) versehen.
 
-* Informationen zum angeforderten Service
-  * Kategorie des Serviceantrags ist RequestForLabExam
-  * Frage, Grund für die Untersuchung (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
-  * Zahlungspflichtiger (Krankenversicherung, Unfallversicherung, etc.) und mehr
-  
-Außerhalb dieses Anwendungsfalls: Die Ergebnisse werden dann dem Kunden zurückgemeldet.
+Dem Auftraggeber wird ein Formular (Fragebogen) vorgelegt, das die folgenden Informationen enthält:
 
-Beispiel-Dokument: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
+* Metadaten des Auftrags
+* Informationen über die Bestellung
+* Informationen über den Empfänger der Bestellung (Receiver)
+* Informationen über den Patienten
+* Informationen über den Auftraggeber (Absender)
+* Angaben zu eventuellen Empfängern einer Kopie der Ergebnisse (receiverCopies)
+* Angaben zum Laborfachgebiet
+* Angaben zu den angeforderten Untersuchungen
+* Informationen über das Probenmaterial, Probe
+  * Art: z. B. Serum, Vollblut, Liquor cerebrospinalis
+  * Thema: Bezug auf den Patienten
+  * Entnahme: Informationen zur Entnahme, Entnahmezeit, Menge, Methode, Entnahmestelle (z. B. rechter Arm), Nüchternzeit
+  * Behälter, Gefäß: Kennung, Typ
+  * und andere mehr
 
-### Use Case 3: Anfordern von zusätzlichen Untersuchungen der gleichen Probe
+* Informationen über das Probenmaterial, Probe
+  * Art: z. B. Serum, Vollblut, Liquor cerebrospinalis
+  * Thema: Bezug auf den Patienten
+  * Entnahme: Informationen zur Entnahme, Entnahmezeit, Menge, Methode, Entnahmestelle (z. B. rechter Arm), Nüchternzeit
+  * Behälter, Gefäß: Kennung, Typ
+  * und andere mehr
 
-Nicht selten führen Resultate von Laboruntersuchungen dazu, dass noch weitere Test mit der gleichen Probe gewünscht werden. So kann im Beispiel 1-tvt eine venöse Thrombophilie vermutet werden, sodass weitere Laboruntersuchungen hereditäre Ursachen, wie Faktor-V-Leiden-Mutaion, Prothrombin-Genmutation, Antithrombinmangel usw. auffinden können.
+* Informationen über die angeforderte Dienstleistung
+  * Service request.category ist RequestForLabExam
+  * Frage, Grund der Untersuchung (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
+  * Kostenträger (Krankenkasse, Unfallversicherung, etc.)
+  * und mehr
 
-* Angaben zum angeforderten Service
-  * Im ValueSet Servicerequest.category wird RequestForAdditionalExam angewählt
+Außerhalb dieses Anwendungsfalles: Die Ergebnisse werden dann an den Auftraggeber zurückgemeldet.
 
-### Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern (nicht behandelt)
+Beispiel Auftragsdokument per Formular: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
-Manchmal möchte der Arzt auch Informationen über frühere Laboruntersuchungen, z. B. zur Beurteilung des Trends des prostataspezifischen Antigens (PSA). Dies wird hier nicht behandelt.
-  
-### Use Case 5: Sammelauftrag für toxikologische Untersuchungen (biologisches Monitoring)
+### Anwendungsfall 2: Anforderung zusätzlicher Tests für dieselbe Probe
 
-Dieser Use Case entspricht dem Beispiel 5-biol-monit. Um die Gefährdung von Arbeitern gegenüber chemischen Stoffen zu beurteilen werden Messungen am Arbeitsplatz ergänzt durch arbeitsmedizinische Vorsorgeuntersuchungen. Es können die toxischen Arbeitsstoffe selbst oder deren Metaboliten im Serum oder Urin bestimmt werden. Der Auftrag wird vom Arbeitsmediziner der Firma oder der Versicherung veranlasst. Dabei muss die Problematik der Mitarbeiterfluktuationen im Auge behalten werden.
+Es ist nicht ungewöhnlich, dass die Ergebnisse von Laboruntersuchungen dazu führen, dass zusätzliche Untersuchungen derselben Probe angefordert werden. Oder interne Laboranalysen werden durch weitere Tests ergänzt, die nur in einem externen Labor durchgeführt werden können.
 
-Beispiele dazu sind:
+Im 2-Pertussis-Beispiel werden die internen Laboruntersuchungen (automatisiertes Blutbild, CRP) durch eine Suche nach Bordetella pertussis- und parapertussis-DNA im Rachenabstrich ergänzt, die von einem externen Vertragslabor durchgeführt wird, um Keuchhusten auszuschließen.
 
-* Arbeitsmedizin: Bestellung von Laboruntersuchungen zu einer Arbeitergruppe
-  * ServiceRequest.subject referenziet auf eine Gruppe
-  * ServiceRequest.specimen referenziert auf mehrere Proben (0 .. *)
-* Lebensmittelindustrie: Untersuchung zu Mitarbeiterhygiene (z.B. Salmonellen-Kontaminierung)
-* Polizeiliche Untersuchungen
+* Der 2-pertussis-ServiceRequest wird ersetzt durch den
+  * 2-pertussis-ServiceRequest-add-test, der die Untersuchung des Rachenabstrichs auf Pertussis- oder Parapertussis-DNA anfordert
 
-Beispieldokument: [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html). Es werden Arbeitslisten abgearbeitet, welche über eine längere Zeit (Tage/Wochen) andauern. In der Regel werden bestimmte Untersuchungen zu mehreren Patienten angefordert.
+Beispiel für eine Serviceanfrage: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
 
-### Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
+### Anwendungsfall 3: Sammelauftrag für toxikologische Tests (biologische Überwachung)
 
-Nach Erhalt des Laborauftrages und dessen Bearbeitung kann sich die Situation ergeben, dass der Laborarzt dem Author des Auftrages Vorschläge für weitere oder alternative Untersuchungen machen möchte. Er kann dazu das erhaltene Auftragsdokument verwenden, durch sein Informationssystem die Personendaten von Sender und Receiver austauschen, und mit den Vorschlägen zu weiteren oder alternativen Laboruntersuchungen zurückschicken.
+Dieser Anwendungsfall entspricht dem Beispiel 5-biol-monit. Um die Exposition von Arbeitnehmern gegenüber chemischen Stoffen zu beurteilen, werden die Messungen am Arbeitsplatz durch arbeitsmedizinische Untersuchungen ergänzt. Dabei können die toxischen Substanzen selbst oder deren Metaboliten im Serum oder Urin bestimmt werden. Die Anordnung erfolgt durch den Arbeitsmediziner des Unternehmens oder die Versicherung. Die Problematik der Fluktuation der Mitarbeiter muss beachtet werden.
+
+Beispiele sind:
+
+* Arbeitsmedizin: Bestellung von Laboruntersuchungen bei einer Gruppe von Arbeitnehmern
+  * ServiceRequest.subject bezieht sich auf eine Gruppe
+  * ServiceRequest.specimen bezieht sich auf mehrere Proben (0 .. *)
+* Lebensmittelindustrie: Untersuchung der Mitarbeiterhygiene (z. B. Salmonellenkontamination)
+* Polizeiliche Ermittlungen
+
+Es werden Arbeitslisten bearbeitet, die sich über einen längeren Zeitraum (Tage/Wochen) erstrecken. In der Regel werden bestimmte Untersuchungen bei mehreren Patienten angefordert.
+
+Beispiel Auftragsdokument mit ServiceRequest: [CH LAB-Auftrag 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html).
+
+Beispiel Auftragsdokument mit ServiceRequest und Formular: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-with-sr-and-form.html).
+
+### Anwendungsfall 4: Vorschlag von Zusatz- oder Alternativuntersuchungen durch den Laborarzt (Auftragsempfänger, Empfänger)
+
+Nach Eingang und Bearbeitung des Laborauftrags kann die Situation eintreten, dass der Laborarzt dem Auftragsverfasser Vorschläge für zusätzliche oder alternative Untersuchungen machen möchte. Dazu kann er das empfangene Auftragsdokument verwenden, die persönlichen Daten von Absender und Empfänger über sein Informationssystem austauschen und mit den Vorschlägen für weitere oder alternative Laboruntersuchungen zurücksenden.
 
 * ServiceRequest.category: ProposalForAdditionalExam
-
-Beispielformular für Mikrobiologie, Hämatologie und Klinische Chemie: [2-pertussis](http://fhir.ch/ig/ch-lab-order/Questionnaire-2-pertussis.html).
-Beispielformular mit Vorschlag für zusätzliche Untersuchungen als Antwort
-
-### Use Case 7: Befunde und weitere Daten zum Gesundheitszustand des Patienten
-
-Wenn dies für die Interpretation der verordneten Untersuchung von besonderem Interesse ist, muss es möglich sein, weitere Daten zum Gesundheitszustand des Patienten in den Laborauftrag aufzunehmen. Dies sind vorhandene Befunde, medizinische Berichte und Dokumente.
-
-* ServiceRequest.reasonCode ServiceRequest.reasonReference
-
-### Use Case 8: Informationen über die Probe, Präanalytik
-
-Bei bestimmten Tests reichen der Auftrag und die Probe allein nicht aus, um das Laborergebnis zu ermitteln. In solchen Fällen müssen dem Labor Beobachtungen zur Probenentnahme mitgeteilt werden. Ein Beispiel hierfür ist die Bestimmung der Kreatinin-Clearance im 24-Stunden-Urin. Hierfür muss das Labor die in einem bestimmten Zeitraum gesammelte Urinmenge kennen. Deshalb stellt der Auftraggeber dem Labor die Urinmenge sowie eine Urin- und Serumprobe zur Verfügung.
-
-* Gesammelte Urinmenge: Specimen.collection.quantity.
-
-* Beginn und Ende der Urinsammlung: Specimen.collection.collected[collectedPeriod] - start - end
-
-Ein weiteres Beispiel ist der Synacthen(ACTH)-Funktionstest, bei dem morgens nüchtern eine Basalblutprobe entnommen wird, unmittelbar danach die Synacthen-Injektion erfolgt und eine Stunde später eine zweite Blutprobe entnommen wird.
-
-* Basisserumprobe nüchtern und Verabreichung von Synacthen(ACTH): Specimen.collection.collected[collectedDateTime], eine zweite Probe wird 60 Minuten später entnommen: Specimen.collection.collected[collectedDateTime]
-
-### Use Case 9: Zusätzliche Informationen über den Kontext der Probe
-
-Bei Blutgasanalysen ist die Menge des dem Patienten verabreichten Sauerstoffs von Bedeutung
-
-* ServiceRequest.reasonReference (Zustand | Beobachtung | DiagnosticReport)
-* ServiceRequest.supportingInfo, z.B. O2 4 Liter/min.

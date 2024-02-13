@@ -1,6 +1,6 @@
 Instance: 3-gyn-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response 3-gyn"
+Title: "CH LAB-QuestionnaireResponse 3-gyn"
 Description: "Example for Laboratory Order Questionnaire response for preventive gynecological check-up"
 Usage: #example
 * id = "3-gyn"

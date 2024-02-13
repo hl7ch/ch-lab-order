@@ -91,7 +91,7 @@ Usage: #example
 
 Instance: Skin
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Skin Sample 6-histopath"
 Description: "Example for Specimen of Serum"
 Usage: #example
 * identifier.value = "48736-12345-75465"
@@ -113,7 +113,7 @@ Usage: #example
 Instance: SkinDermatoscopy
 InstanceOf: ChLabOrderDiagnosticReport
 Title: "Report about the dermatiscopy of skin"
-Description: "Report about the dermatiscopy of skin"
+Description: "DiagnosticReport about the dermatiscopy of skin"
 Usage: #example
 * id = "skin-dermatoscopy"
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
@@ -136,8 +136,8 @@ Usage: #example
 
 Instance: SkinDermatoscopyImage
 InstanceOf: Media
+Title: "Media Dermatoscopic image of the skin excision"
 Description: "Example of an image sent together with a histopathological examination order"
-Title: "Dermatoscopic image of the skin excision"
 Usage: #example
 * id = "skin-dermatoskopy-image"
 * status = #completed

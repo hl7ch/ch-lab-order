@@ -1,5 +1,6 @@
 Instance: observation-blood-hemoglobin
 InstanceOf: ObservationDefinition
+Title: "ObservationDefinition Hemoglobin blood"
 Description: "Hemoglobin blood [Moles/volume]"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

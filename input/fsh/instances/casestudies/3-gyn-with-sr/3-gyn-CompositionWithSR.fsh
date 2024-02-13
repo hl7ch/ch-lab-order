@@ -1,6 +1,6 @@
 Instance: 3-gyn-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "CH LAB-Composition 3-gyn with Service Request"
+Title: "CH LAB-Composition 3-gyn with ServiceRequest"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
 Usage: #example
 * id = "3-gyn-with-sr"

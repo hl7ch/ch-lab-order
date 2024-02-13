@@ -1,9 +1,9 @@
-Instance: BestPracticeDocument
+Instance: 0-best-practice-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "CH LAB-Order document best-practice"
 Description: "Document with Service Request in context of tibial plateau fracture"
 Usage: #example
-* id = "0-best-practice-document"
+* id = "0-best-practice-document-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"

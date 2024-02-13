@@ -1,6 +1,6 @@
 Instance: 2-pertussis-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response 2-pertussis"
+Title: "CH LAB-QuestionnaireResponse 2-pertussis"
 Description: "Example Laboratory Order Questionnaire Response for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis"

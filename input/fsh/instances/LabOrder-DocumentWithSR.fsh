@@ -1,6 +1,6 @@
 Instance: LabOrder-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order Document with Service Request"
+Title: "CH LAB-Order Document with ServiceRequest"
 Description: "Document for referral/order of Potassium in Serum"
 Usage: #example
 * id = "ch-lab-order-document-with-sr"

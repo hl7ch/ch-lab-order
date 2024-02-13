@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-sodium
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-Service Request for Sodium"
+Title: "CH LAB-ServiceRequest for Sodium"
 Description: "Service Request for Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-sodium"

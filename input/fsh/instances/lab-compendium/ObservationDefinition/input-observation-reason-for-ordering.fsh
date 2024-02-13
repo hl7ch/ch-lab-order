@@ -1,5 +1,6 @@
 Instance: input-observation-reason-for-ordering
 InstanceOf: ObservationDefinition
+Title: "ObservationDefinition generic"
 Description: "For which reason is the test ordered"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"

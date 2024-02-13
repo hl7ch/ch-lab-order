@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "questionnaire response 5-biol-monit"
+Title: "CH LAB-QuestionnaireResponse 5-biol-monit"
 Description: "Example for Laboratory Order Questionnaire response for toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit"

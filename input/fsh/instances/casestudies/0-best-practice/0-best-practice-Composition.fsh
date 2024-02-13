@@ -1,6 +1,6 @@
 Instance: 0-best-practice-Composition
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 0-best-practice with Service Request"
+Title: "CH LAB-Composition 0-best-practice with ServiceRequest"
 Description: "Composition: Storyboard for tibial plateau fracture"
 Usage: #example
 * id = "0-best-practice"

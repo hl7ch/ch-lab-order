@@ -1,6 +1,6 @@
 Instance: 4-sepsis-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 4-sepsis"
+Title: "CH LAB-Questionnaire 4-sepsis"
 Description: "Example for Laboratory Order Questionnaire for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis"
