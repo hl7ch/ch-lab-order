@@ -66,7 +66,7 @@ Usage: #example
 
 Instance: HansHauserKantonsspital
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Hans Hauser Kantonsspital"
+Title: "PractitionerRole Hans Hauser Kantonsspital"
 Description: "PractitionerRole"
 Usage: #example
 * practitioner = Reference(Practitioner/HansHauser)
@@ -74,7 +74,7 @@ Usage: #example
 
 Instance: HansHauser
 InstanceOf: CHCorePractitioner
-Title: "Practitioner: Hans Hauser"
+Title: "Practitioner Hans Hauser"
 Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

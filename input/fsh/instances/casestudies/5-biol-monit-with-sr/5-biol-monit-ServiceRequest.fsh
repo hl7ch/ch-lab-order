@@ -67,7 +67,7 @@ Usage: #example
 // ---- PractitionerRole --------
 Instance: PauloPorcelliniSuva
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Paulo Porcellini Suva"
+Title: "PractitionerRole Paulo Porcellini Suva"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
 * practitioner = Reference(Practitioner/PauloPorcellini)
@@ -75,7 +75,7 @@ Usage: #example
 
 Instance: PauloPorcellini
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner: Paulo Porcellini"
+Title: "Practitioner Paulo Porcellini"
 Description: "Specialist for Occupational Medicine, works at SUVA, refers to 1-tvt"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -120,7 +120,7 @@ Usage: #example
 // ---- PractitionerRole --------
 Instance: WoodyWorkdocSpeiserRails
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Woody Workdoc Speiser Rails"
+Title: "PractitionerRole Woody Workdoc Speiser Rails"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
 * practitioner = Reference(Practitioner/WoodyWorkdoc)
@@ -128,7 +128,7 @@ Usage: #example
 
 Instance: WoodyWorkdoc
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner: Woody Worksdoc"
+Title: "Practitioner Woody Worksdoc"
 Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN

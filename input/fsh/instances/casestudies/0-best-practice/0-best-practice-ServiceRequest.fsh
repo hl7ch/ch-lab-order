@@ -1,6 +1,6 @@
 Instance: 0-best-practice-ServiceRequest-0
 InstanceOf: ChLabOrderSR
-Title: "Service Request 0-best-practice"
+Title: "ServiceRequest 0-best-practice"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * id = "0-best-practice-service-request-0"

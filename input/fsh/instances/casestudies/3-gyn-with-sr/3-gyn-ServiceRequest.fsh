@@ -1,6 +1,6 @@
 Instance: 3-gyn-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "laborder 3-gyn"
+Title: "ServiceRequest 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn-service-request"
@@ -90,7 +90,7 @@ Usage: #example
 
 Instance: PeterPapGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Peter Pap Gruppenpraxis"
+Title: "PractitionerRole Peter Pap Gruppenpraxis"
 Description: "PractitionerRole, refers to 3-gyn"
 Usage: #example
 * practitioner = Reference(Practitioner/PeterPap)
@@ -98,7 +98,7 @@ Usage: #example
 
 Instance: PeterPap
 InstanceOf: CHCorePractitioner
-Title: "Practitioner: Peter Pap"
+Title: "Practitioner Peter Pap"
 Description: "Practitioner, works at Gruppenpraxis, refers to 3-gyn"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

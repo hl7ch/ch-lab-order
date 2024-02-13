@@ -10,6 +10,7 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
+
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
@@ -56,7 +57,7 @@ Usage: #example
 
 Instance: PeterPrestoGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Peter Presto at Gruppenpraxis"
+Title: "PractitionerRole Peter Presto at Gruppenpraxis"
 Description: "PractitionerRole, refers to 2-pertussis"
 Usage: #example
 * practitioner = Reference(Practitioner/PeterPresto)
@@ -64,7 +65,7 @@ Usage: #example
 
 Instance: PeterPresto
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner: Peter Presto"
+Title: "Practitioner Peter Presto"
 Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN

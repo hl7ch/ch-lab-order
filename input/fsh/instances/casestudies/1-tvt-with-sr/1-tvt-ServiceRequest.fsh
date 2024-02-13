@@ -1,14 +1,12 @@
 Instance: 1-tvt-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "Service Request 1-tvt"
+Title: "ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-// * basedOn[+] = Reference(1-tvt-ServiceRequest-D-Dimer)
-// * basedOn[+] = Reference(1-tvt-ServiceRequest-CRP)
 * status = #active
 * intent = #original-order
 * category = $sct#721963009 "Order (record artifact)"
@@ -30,69 +28,6 @@ Usage: #example
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
-
-/*
-Instance: 1-tvt-ServiceRequest-D-Dimer
-InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 1-tvt d-Dimer"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
-* id = "1-tvt-service-request-d-dimer"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-// * instantiatesCanonical = canonical("http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-d-dimer")
-
-* status = #active
-* intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-// orderDetails: Additional order information
-* priority = #urgent
-* subject = Reference(Patient/TobiasTimmermann)
-* requester = Reference(MarcMustermannGruppenpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
-*/
-
-/*
-Instance: 1-tvt-ServiceRequest-CRP
-InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 1-tvt CRP"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
-* id = "1-tvt-service-request-crp"
-* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
-* status = #active
-* intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
-
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-// * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-// * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-// * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-// * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-// * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-
-// orderDetails: Additional order information
-* priority = #urgent
-* subject = Reference(Patient/TobiasTimmermann)
-* requester = Reference(MarcMustermannGruppenpraxis)
-* reasonCode = $sct#404223003
-* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-* specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
-* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
-* specimen[+] = Reference(Specimen/Blood-1-tvt)
-*/
 
 // ---- Patient --------
 Instance: TobiasTimmermann
@@ -198,6 +133,7 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
+/*
 Instance: ConditionTobiasTimmermann
 InstanceOf: Condition
 Description: "Problem list of Tobias Timmermann"
@@ -215,3 +151,4 @@ Usage: #example
 * recordedDate = "2023-10-05"
 * asserter = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
 * evidence.code = $sct#426396005 "Cardiac chest pain"
+*/

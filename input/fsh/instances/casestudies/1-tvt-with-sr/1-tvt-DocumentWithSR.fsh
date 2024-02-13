@@ -34,6 +34,11 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardTobiasTimmermann"
 * entry[=].resource = HealthInsuranceCardTobiasTimmermann
 
+/*
+* entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionTobiasTimmermann"  // entry[11]
+* entry[=].resource = ConditionTobiasTimmermann
+*/
+
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-1-tvt"
 * entry[=].resource = Serum-1-tvt
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-coag-1-tvt"  // entry[10]
@@ -43,11 +48,3 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request" // entry[12]
 * entry[=].resource = 1-tvt-ServiceRequest
-
-/*
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-d-dimer" // entry[12]
-* entry[=].resource = 1-tvt-ServiceRequest-D-Dimer
-
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-crp" // entry[12]
-* entry[=].resource = 1-tvt-ServiceRequest-CRP
-*/

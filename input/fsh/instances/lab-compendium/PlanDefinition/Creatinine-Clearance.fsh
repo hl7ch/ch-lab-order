@@ -1,6 +1,6 @@
 Instance: creatinine-clearance
 InstanceOf: PlanDefinition
-Title: "PlanDefinition: Creatinine Clearance"
+Title: "PlanDefinition Creatinine Clearance"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
