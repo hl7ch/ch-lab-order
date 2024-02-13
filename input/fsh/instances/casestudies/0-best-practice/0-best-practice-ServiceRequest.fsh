@@ -28,8 +28,8 @@ Usage: #example
 
 Instance: 0-best-practice-ServiceRequest-1
 InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 0-best-practice Anti-Xa-Aktivität"
-Description: "Example for Service Request for Anti-Xa-Aktivität"
+Title: "ServiceRequest 0-best-practice Anti-Xa-Aktivität"
+Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
 * id = "0-best-practice-service-request-1"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -52,8 +52,8 @@ Usage: #example
 
 Instance: 0-best-practice-ServiceRequest-2
 InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 0-best-practice Glucose"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Title: "ServiceRequest 0-best-practice Glucose"
+Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
 * id = "0-best-practice-service-request-2"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -77,8 +77,8 @@ Usage: #example
 
 Instance: 0-best-practice-ServiceRequest-3
 InstanceOf: ChLabOrderSRSingletest
-Title: "Service Request 0-best-practice Hemoglobin Hematocrit panel"
-Description: "Example for Service Request due to suspected deep vein thrombosis"
+Title: "ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
+Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
 * id = "0-best-practice-service-request-3"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
