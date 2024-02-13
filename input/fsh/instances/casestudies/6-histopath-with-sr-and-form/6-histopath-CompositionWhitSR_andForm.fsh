@@ -40,4 +40,4 @@ Usage: #example
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 6-histopath\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(6-histopath-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequestByForm)
+* section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequest)

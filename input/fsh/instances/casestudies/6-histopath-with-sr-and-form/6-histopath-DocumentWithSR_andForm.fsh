@@ -53,6 +53,6 @@ Usage: #example
 * entry[=].resource = 6-histopath-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
 * entry[=].resource = 6-histopath-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request-by-form"
-* entry[=].resource = 6-histopath-ServiceRequestByForm
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request"
+* entry[=].resource = 6-histopath-ServiceRequest
 

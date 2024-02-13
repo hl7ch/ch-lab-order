@@ -58,6 +58,6 @@ Usage: #example
 * entry[=].resource = 5-biol-monit-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/5-biol-monit"
 * entry[=].resource = 5-biol-monit-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-service-request-by-form"
-* entry[=].resource = 5-biol-monit-ServiceRequestByForm
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-service-request"
+* entry[=].resource = 5-biol-monit-ServiceRequest
 
