@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-potassium
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB Service Request for Potassium"
+Title: "CH LAB-Service Request for Potassium"
 Description: "Service Request for Potassium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-potassium"

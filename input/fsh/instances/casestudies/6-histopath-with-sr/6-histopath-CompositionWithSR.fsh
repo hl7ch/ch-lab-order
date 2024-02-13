@@ -1,6 +1,6 @@
 Instance: 6-histopath-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 6-histopath with ServiceRequest"
+Title: "CH LAB-Composition 6-histopath with ServiceRequest"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
 Usage: #example
 * id = "6-histopath-composition-with-sr"

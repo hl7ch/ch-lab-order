@@ -1,6 +1,6 @@
 Instance: procedure-urine24h-creatinine
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: Creatinine 24h Urine"
+Title: "ActivityDefinition Creatinine 24h Urine"
 Description: "Procedure Creatinine 24 hour urine panel - 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

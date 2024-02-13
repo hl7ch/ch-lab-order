@@ -1,6 +1,6 @@
 Instance: procedure-d-dimer
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: D-Dimer"
+Title: "ActivityDefinition D-Dimer"
 Description: "Procedure Short Fibrin D-dimer FEU and DDU panel"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

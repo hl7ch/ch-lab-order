@@ -1,6 +1,6 @@
 Instance: 4-sepsis-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition 4-sepsis with ServiceRequewt"
+Title: "CH LAB-Composition 4-sepsis with ServiceRequest and Form"
 Description: "Composition: Storyboard for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-composition-with-sr-and-form"

@@ -1,6 +1,6 @@
 Instance: 2-pertussis-CompositionWith_SR_and_Form
 InstanceOf: ChOrfComposition
-Title: "Composition 2-pertussis with ServiceRequest and Form"
+Title: "CH LAB-Composition 2-pertussis with ServiceRequest and Form"
 Description: "Composition: Storyboard for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis-composition-with-sr-and-form"

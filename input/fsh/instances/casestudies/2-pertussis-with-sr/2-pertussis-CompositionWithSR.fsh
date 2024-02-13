@@ -1,6 +1,6 @@
 Instance: 2-pertussis-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 2-pertussis with Service Request"
+Title: "CH LAB-Composition 2-pertussis with Service Request"
 Description: "Composition: Storyboard for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis-with-sr"

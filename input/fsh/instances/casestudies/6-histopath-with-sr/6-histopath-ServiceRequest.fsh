@@ -1,6 +1,6 @@
 Instance: 6-histopath-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "CH LAB-ServiceRequest 0-generic"
+Title: "CH LAB-ServiceRequest 6-histopath"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example
 * id = "6-histopath-service-request"

@@ -1,6 +1,6 @@
 Instance: 3-gyn-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition 3-gyn with ServiceRequest and Form"
+Title: "CH LAB-Composition 3-gyn with ServiceRequest and Form"
 Description: "Composition: Storyboard for Preventive Gynecological Check-up"
 Usage: #example
 * id = "with3-gyn-composition-with-sr-and-form"

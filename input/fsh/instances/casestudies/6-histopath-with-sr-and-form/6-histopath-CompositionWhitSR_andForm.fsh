@@ -1,6 +1,6 @@
 Instance: 6-histopath-CompositionWhitSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition 6-histopath with ServiceRequest and Form"
+Title: "CH LAB-Composition 6-histopath with ServiceRequest and Form"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
 Usage: #example
 * id = "6-histopath-composition-with-sr-and-form"

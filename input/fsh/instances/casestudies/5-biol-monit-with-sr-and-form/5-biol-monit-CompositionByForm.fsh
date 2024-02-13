@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition 5-biol-monit with Service Request and Form"
+Title: "CH LAB-Composition 5-biol-monit with Service Request and Form"
 Description: "Composition: Storyboard for Toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit-composition-with-sr-and-form"

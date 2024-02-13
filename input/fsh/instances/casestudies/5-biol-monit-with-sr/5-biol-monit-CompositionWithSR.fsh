@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 5-biol with ServiceRequest"
+Title: "CH LAB-Composition 5-biol-monit with ServiceRequest"
 Description: "Composition: Storyboard for Toxicological Monitoring"
 Usage: #inline
 * id = "5-biol-monit-composition-with-sr"
