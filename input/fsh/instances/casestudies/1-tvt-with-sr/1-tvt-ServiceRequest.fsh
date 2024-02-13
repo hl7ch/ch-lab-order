@@ -1,6 +1,6 @@
 Instance: 1-tvt-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "ServiceRequest 1-tvt"
+Title: "CH LAB-ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-service-request"

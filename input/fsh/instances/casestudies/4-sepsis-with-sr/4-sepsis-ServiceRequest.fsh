@@ -1,6 +1,6 @@
 Instance: 4-sepsis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "Service Request 4-sepsis"
+Title: "CH LAB-ServiceRequest 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-service-request"

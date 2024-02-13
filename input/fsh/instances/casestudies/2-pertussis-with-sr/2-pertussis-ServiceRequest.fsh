@@ -1,6 +1,6 @@
 Instance: 2-pertussis-ServiceRequest
 InstanceOf: ChOrfServiceRequest
-Title: "CH LAB-Service Request 2-pertussis"
+Title: "CH LAB-ServiceRequest 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis-service-request"
