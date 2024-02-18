@@ -4,11 +4,11 @@
 │  UC-english is original, german and french are dependent  │
 ╰───────────────────────────────────────────────────────────╯
 -->
-### CH LAB-Order 0-best-practice case-study
+### CH LAB-Order 0-best-practice
 
 <!-- some explanations for the case studies -->
 
-#### Best practice example: Contrôle de l'effet de l'anticoagulation
+#### Best practice example: Contrôle de l'effet de l'anticoagulation szenario
 
 Mme Birgit Blum a fait une chute malencontreuse en skiant et a subi une fracture multifragmentaire du plateau tibial. Elle a été transférée par hélicoptère au Kantonsspital, un hôpital central, où elle attend son opération. La patiente reçoit quotidiennement Liquemin 5000 E s.c. pour prévenir les événements thromboemboliques, et l'effet. A Pour surveiller l'effet de ce traitement, des analyses sanguines régulières sont effectuées pour déterminer l'activité anti-Xa. Un récipient spécial contenant un additif au citrate est utilisé à cet effet. L'échantillon doit être centrifugé et refroidi dans l'heure qui suit. Les maladies cardiaques constituent un élément important de la liste des problèmes de la patiente.
 
