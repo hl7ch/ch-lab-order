@@ -61,7 +61,7 @@ The lab-order system should define the structure of the lab-order so it can be u
 
 ### Six Case studies with examples for the Order Document
 
-Using specific case histories, we have created six everyday examples of commissioned documents. These are requirements of examinations in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
+Using concrete case studies, we have created six everyday examples of documents that contain a laboratory order. These are requirements of laboratory analyses in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
 
 ### Copyright
 

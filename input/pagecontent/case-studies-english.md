@@ -10,7 +10,7 @@
 
 #### Best practice example: Control of Anticoagulation effect case study
 
-Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragmentary tibial plateau fracture. She was transferred to the Kantonsspital, a centre hospital, by helicopter and is waiting there for her operation. The patient is administered Liquemin 5000 E s.c. daily to prevent thromboembolic events, and the effect. A To monitor the effect of this treatment, regular blood tests are carried out to determine anti-Xa activity. A special sample vessel with citrate additive is used for this purpose. The sample must be centrifuged and cooled within one hour. An important entry from her list of problems is heart disease.
+Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragmentary tibial plateau fracture. She was transferred to the Kantonsspital, a centre hospital, by helicopter and is waiting there for her operation. The patient is administered Liquemin 5000 E s.c. daily to prevent thromboembolic events. A To monitor the effect of this treatment, regular blood tests are carried out to determine anti-Xa activity. A special sample vessel with citrate additive is used for this purpose. The sample must be centrifuged and cooled within one hour. An important entry from her list of problems is heart disease.
 
 [Order Document with Service Request](Bundle-0-best-practice-document-with-sr.html)
 
@@ -18,9 +18,9 @@ Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragme
 
 #### Suspicion of deep vein thrombosis case study
 
-A patient, Tobias Timmermann, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He verbally identifies himself via his master data as   Tobias Timmermann, 01.01.1984. He reports unclear leg pain in the left lower leg as well as simultaneously occurring respiratory pain and cough. The doctor carries out the anamnesis and physical examination and prescribes the following laboratory parameters:
+The patient Tobias Timmermann presents to Dr. Marc Mustermann in the Olten group practice. He identifies himself verbally via his master data as Tobias Timmermann, born on 01.01.1984. He reports unclear leg pain in the left lower leg as well as respiratory pain and coughing occurring at the same time. The doctor takes a medical history and performs a physical examination and orders the following laboratory parameters:
 
-* Blood cell count incl. differentiation
+* Blood count incl. differentiation
 * CRP
 * D-dimer
 
@@ -45,7 +45,7 @@ A mother visits the family doctor Peter Presto of the Olten group practice with 
 
 #### Annual gynaecological check-up case study
 
-The doctor\`s assistent of the gynaecology department in the Olten group practice, Dr Peter Pap, prepares the next day\`s consultations. As the practice only has a minimal laboratory of its own, certain patients are sent to the nearby Pipette laboratory outpatient clinic before the appointment, including the young patient Ms Marina Rubella, born 8. 8. 1992. In her practice software, the MPA prescribes the standard analyses agreed with the laboratory for the gynaecological 3-year check-up for patient Rubella. This also includes the Blood sample for the serotonary for any follow-up prescriptions. The laboratory transmits the results to the practice no later than 90 minutes after the Blood sample has been taken. Dr Pap prescribes the following orders during the consultation:
+The assistant doctor in the gynaecology department at the Olten group practice, Dr. Peter Pap, prepares for the next day's consultation. As the practice only has a minimal in-house laboratory, some patients are sent to the nearby Pipette laboratory outpatient clinic before the appointment, including the young patient Ms. Marina Rubella, born on 8 August 1992. In her practice software, the MPA prescribes the standard analyses agreed with the laboratory for the gynaecological 3-year examination of patient Rubella. This also includes the blood serum collection for possible follow-up prescriptions. The laboratory will send the results to the practice no later than 90 minutes after the blood sample has been taken. Dr. Pap prescribes the following tests during the consultation:
 
 * Gynaecological cervical cytology: Pap smear - if indicated, detection and typing of HPV (human papilloma virus) should also be performed. Collection material according to the laboratory\`s instructions. The cytological examination is carried out in the Pipette laboratory. The Pipette laboratory does not perform the typing itself.
 * Partial urine status (Combur9 test): carried out by the MPA in the practice: the following parameters are examined: pH, leucocytes, erythrocytes, nitrite, protein, glucose, ketones, urobilinogen, bilirubin (semi-quantitative examinations, results are probably entered manually into the practice laboratory system).
@@ -74,7 +74,7 @@ Companies that work with substances hazardous to health and in which employees a
 
 * Establishment (name, address, establishment number)
 * Number of employees for biological monitoring
-* Examinations to be carried out (e.g. arsenic, lead, mercury, mandelic acid). The companies receive a list from the AMV including labels with the affected employees. Here we take the document of an employee Beat Borer, born 6. 6. 1986. The laboratory prints the order forms with the company number and sends the necessary number of urine cups and order forms to the companies. In the company, order forms and urine cups are labelled with the labels supplied by the AMV and given to the employees. The samples, including the order form, are sent from the company to the laboratory.
+* Examinations to be carried out (e.g. arsenic, lead, mercury, mandelic acid). The companies receive a list from the AMV including labels with the affected employees. Here we take the document of an employee Beat Borer, born 6. 6. 1986. The laboratory prints the order documents with the company number and sends the necessary number of urine cups and order documents to the companies. In the company, order documents and urine cups are labelled with the labels supplied by the AMV and given to the employees. The samples, including the order document, are sent from the company to the laboratory.
 
 [Biological monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
 
@@ -89,7 +89,7 @@ Companies that work with substances hazardous to health and in which employees a
 A 45-year-old female patient Simone Studer came for her regular skin check to the Arztpraxis of Dermatologist Armin Ahrens, and this lesion was noted: Junctions nevi consisting of seborrheic area top end and atypical network constructed of many seperate dots, structures , etc , suggesting melanocytic involvement. Excision. Attachement of dermatoscopic images Specimen: 29 x 11 x 5 mm skin ellipse Body Site:
 
 * Back paralumbar left
-* The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
+* The skin sample, including the order document and the dermatoscopic image are sent to the laboratory.
 
 [Order Document with ServiceRequest](Bundle-6-histopath-document-with-sr.html)
 
