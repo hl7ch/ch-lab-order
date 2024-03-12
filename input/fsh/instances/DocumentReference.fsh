@@ -20,7 +20,7 @@ Usage: #example
 * relatesTo.target = Reference(example)
 * description = "Physical"
 * securityLabel = $v3-Confidentiality#N "normal"
-* content.attachment.contentType = #application/hl7-v3+xml
+* content.attachment.contentType = #application/fhir+xml
 * content.attachment.language = #en-US
 * content.attachment.url = "http://example.org/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"
 * content.attachment.size = 3654
