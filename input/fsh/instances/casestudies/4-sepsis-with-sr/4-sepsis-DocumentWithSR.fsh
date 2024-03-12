@@ -24,6 +24,13 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/HansHauserKantonsspital"
 * entry[=].resource = HansHauserKantonsspital
 
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"  // entry[5]
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
+* entry[=].resource = Gruppenpraxis
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
+* entry[=].resource = MarcMustermannGruppenpraxis
+
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
@@ -43,4 +50,3 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-service-request"  // entry[15]
 * entry[=].resource = 4-sepsis-ServiceRequest
-
