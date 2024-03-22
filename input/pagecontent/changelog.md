@@ -78,6 +78,8 @@ correct assignment of the patient identification number. In principle, several i
 
 #### Issues resolved without amendment
 
+* removed not used ValuSets
+
 ##### usecases-german.md
 
 * Replace: Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe with Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
