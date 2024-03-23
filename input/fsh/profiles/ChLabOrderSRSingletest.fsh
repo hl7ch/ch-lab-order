@@ -27,44 +27,9 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * basedOn 0..0 // since this is a SR for a Labtest, there are no further Labtests based on.
 * requisition 0..1 MS
 
-* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
-
+// if not based on a Reference, a code must be present
 * code 1..1 //  What is being requested/ordered
-
-
-// * code from https://fhir.loinc.org/ValueSet/LL1162-8 // warning not found by validator
-
-// * code from $microbiol-procedures (extensible)
-
-// * code from http://hl7.org/fhir/ValueSet/report-codes or $microbiol-procedures
-
-// Includes all codes defined in $loinc
-// * code from $microbiol-procedures
-// * code from $sct
-// error 'Found a reference to a CodeSystem ($sct) where a ValueSet belongs'
-
-// * code from $sct (example)
-// * code ^binding.extension[=].valueString = "LOINC_Code"
-
-// * code ^binding.extension[=].valueString = "AllergyCode"
-// * code ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"
-// * code ^binding.extension[=].valueBoolean = true
-// * code ^binding.description = "The code for allergy."
-
-// ---- Canonical --- url to PlanDefinition | ActivityDefinition
-//* instantiatesCanonical ^slicing.discriminator.type = #value
-//* instantiatesCanonical ^slicing.discriminator.path = "Catalog/PlanDefinition"
-//* instantiatesCanonical ^slicing.rules = #open
-//* instantiatesCanonical ^slicing.description = "choose desired PlanDefinition of test/panel"
-//* instantiatesCanonical ^slicing.ordered = false
-
-
-// ---- Reference to further SR
-// * basedOn ^slicing.discriminator.type = #value
-// * basedOn ^slicing.discriminator.path = "this"
-// * basedOn ^slicing.rules = #open
-// * basedOn ^slicing.description = ""
-// * basedOn ^slicing.ordered = false
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
 
 //------- orderDetail -------
 
@@ -83,7 +48,3 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- specimen ----
 * specimen ^short = "Must be present, if order category is #RequestForLabExam or #RequestForHistopathExam"
-
-// ######################################################################
-// ---- Examples of Service Request of for single tests ----
-// ######################################################################

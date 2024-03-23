@@ -79,6 +79,7 @@ correct assignment of the patient identification number. In principle, several i
 #### Issues resolved without amendment
 
 * removed not used ValuSets
+* put serviceRequest.categories into ChLabOrderSR, replace it's value with fixed value 'Laboratory procedure (procedure)' for all ServiceRequests.
 
 ##### usecases-german.md
 

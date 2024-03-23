@@ -11,7 +11,7 @@ Usage: #example
 * replaces = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
