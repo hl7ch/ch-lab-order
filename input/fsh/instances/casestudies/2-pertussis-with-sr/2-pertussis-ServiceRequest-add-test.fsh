@@ -19,6 +19,8 @@ Usage: #example
 // adding an additional Test, 2-pertussis-ServiceRequest is replaced
 * code.coding[+] = $loinc#90441-7 "Bordetella pertussis and Bordetella parapertussis DNA panel - Nasopharynx"
 
+* orderDetail = $v2-119#RO "Replacement order"
+
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
