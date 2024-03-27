@@ -1,5 +1,5 @@
 Instance: 3-gyn-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example

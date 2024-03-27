@@ -1,5 +1,5 @@
 Instance: 6-histopath-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 6-histopath"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example

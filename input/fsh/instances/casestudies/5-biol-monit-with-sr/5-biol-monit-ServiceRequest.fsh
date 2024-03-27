@@ -1,5 +1,5 @@
 Instance: 5-biol-monit-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
