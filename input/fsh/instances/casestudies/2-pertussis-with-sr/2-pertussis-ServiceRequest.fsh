@@ -1,5 +1,5 @@
 Instance: 2-pertussis-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
