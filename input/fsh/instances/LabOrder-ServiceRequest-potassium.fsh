@@ -23,7 +23,9 @@ Usage: #example
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 
-// orderDetails: Additional order information, codeableConcept
+// orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
+
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

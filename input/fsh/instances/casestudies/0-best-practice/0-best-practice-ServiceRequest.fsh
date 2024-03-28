@@ -14,9 +14,9 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
+
 // * category = $sct#721963009 "Order (record artifact)"
 
-// orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * encounter = Reference(FirstEncounter)
@@ -42,6 +42,8 @@ Usage: #example
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+] = $loinc#80627-3 "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
 // orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -66,6 +68,8 @@ Usage: #example
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+] = $loinc#47622-6 "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
 // orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -90,6 +94,9 @@ Usage: #example
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Hb)
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Ht)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+// orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -109,6 +116,9 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+// orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -127,6 +137,9 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
+// orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)

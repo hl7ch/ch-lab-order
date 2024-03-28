@@ -31,10 +31,6 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * category = $sct#108252007 "Laboratory procedure (procedure)"
 
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
-// * code 0..1
-
-//------- orderDetail -------
-* orderDetail from Hl7VSOrderControl (required) // for UC additional tests
 
 //------- reasonCode -------
 * reasonCode MS
@@ -48,13 +44,3 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 //------- insurance -------
 
 //------- supportingInfo -------
-
-/*
-* obeys obs-1
-
-Invariant: obs-1
-Severity: #error
-Description: "If Observation.orderDetail = RO (Replace Order), then the element 'replaces' must be present"
-Expression: "orderDetail = 'RO' implies replaces.exists()"
-
-*/

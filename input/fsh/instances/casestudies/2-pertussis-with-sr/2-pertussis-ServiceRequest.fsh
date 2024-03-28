@@ -14,6 +14,8 @@ Usage: #example
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+// orderDetails: Additional order information
+* orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)

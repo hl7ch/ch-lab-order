@@ -31,7 +31,10 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * code 1..1 //  What is being requested/ordered
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
 
+* obeys obs-1
+
 //------- orderDetail -------
+* orderDetail from Hl7VSOrderControl (required) // for UC additional tests
 
 //------- reasonCode -------
 * reasonCode MS
@@ -48,3 +51,8 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- specimen ----
 * specimen ^short = "Must be present, if order category is #RequestForLabExam or #RequestForHistopathExam"
+
+Invariant: obs-1
+Severity: #error
+Description: "If servoceRequest.orderDetail = RO (Replace Order), then the element 'replaces' must be present"
+Expression: "orderDetail = 'RO' implies replaces.exists()"
