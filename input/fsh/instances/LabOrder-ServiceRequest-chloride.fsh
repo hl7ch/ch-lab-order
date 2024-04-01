@@ -24,7 +24,8 @@ Usage: #example
 * code.coding[0] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
-* orderDetail = $v2-0119#NW "New order/service"
+* orderDetail[0] = $v2-0119#NW "New order/service"
+* orderDetail[=].text = "Order Control code"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
