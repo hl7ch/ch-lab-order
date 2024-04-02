@@ -8,7 +8,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 // this ServiceRequest adds an examination of the throat-swab looking for pertussis
-* replaces = Reference(2-pertussis-ServiceRequest)
+//* replaces = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
@@ -19,7 +19,7 @@ Usage: #example
 // adding an additional Test, 2-pertussis-ServiceRequest is replaced
 * code.coding[+] = $loinc#90441-7 "Bordetella pertussis and Bordetella parapertussis DNA panel - Nasopharynx"
 
-* orderDetail = $v2-0119#RO "Replacement order"
+* orderDetail = $v2-CS-0119#RP "Order/service replace request"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
