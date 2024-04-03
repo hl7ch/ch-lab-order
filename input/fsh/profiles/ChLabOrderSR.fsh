@@ -34,18 +34,8 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
 
 //------- orderDetail -------
-/*
-* orderDetail ^slicing.discriminator.type = #value
-* orderDetail ^slicing.discriminator.path = "orderDetail"
-* orderDetail ^slicing.ordered = false
-* orderDetail ^slicing.rules = #open
-* orderDetail contains
-    orderControl 1..1 MS
-*/
-
 * orderDetail.coding. 0..1
 * orderDetail.coding.code from Hl7VSOrderControl (required) // for UC with additional tests
-
 
 //------- reasonCode -------
 * reasonCode MS

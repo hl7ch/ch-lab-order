@@ -1,9 +1,10 @@
-Alias: $v2-CS-0119 = http://terminology.hl7.org/CodeSystem/v2-0119
-
 ValueSet: ChLabVSOrderControl
-Description: "Contains only one Code from v2-0119"
+Description: "Contains some codes of placer applications from v2-0119 table"
 Id: ch-lab-vs-order-control
-Title: "Single code RP from $v2-CS-0119"
-* ^status = #draft
+Title: "Order Control Codes used in CH Lab-Order"
+// * ^status = #draft
 * ^experimental = true
-* $v2-CS-0119#RP "Order/service replace request"
+* $v2-0119#RP "Order/service replace request"
+* $v2-0119#CA "Cancel order/service request"
+* $v2-0119#HD "Hold order request"
+* $v2-0119#RL "Release previous hold"

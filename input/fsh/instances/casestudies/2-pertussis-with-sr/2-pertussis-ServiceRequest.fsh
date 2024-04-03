@@ -17,6 +17,11 @@ Usage: #example
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
