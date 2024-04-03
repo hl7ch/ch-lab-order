@@ -26,7 +26,8 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
 * basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
-* replaces only Reference(ChLabOrderSR) // for UC additional tests
+* replaces only Reference(ChLabOrderSR)
+  * ^short = "references the previous ServiceRequest in the situation of ordering supplemental laboratory tests"
 
 // * requisition 0..1 MS
 * category = $sct#108252007 "Laboratory procedure (procedure)"

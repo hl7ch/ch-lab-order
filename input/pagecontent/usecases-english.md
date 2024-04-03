@@ -56,13 +56,17 @@ It is not uncommon for the results of laboratory tests to lead to the request fo
 
 In the 2-pertussis example, the in-house laboratory tests (automated blood count, CRP) are supplemented by a search for Bordetella pertussis and parapertussis DNA in the throat swab, carried out by an external contract laboratory, in order to rule out whooping cough.
 
-* The 2-pertussis-ServiceRequest is replaced by the
-  * 2-pertussis-ServiceRequest-add-test, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
+When the placer system request additional tests the existing samples, it copies the original ServiceRequest, adds the required laboratory tests and an Order Control Code 'RP', which means an order/service replace request. A special invariant rule 'sr-1' ensures that a reference to the original ServiceRequest is created.
 
-Example referenced Servic Request: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html) The code in the element 'orderDetail' would be NW (New order/service), or the element could be completely omitted.
+The Order Control Codes can also be used to cancel, hold or release holded order requests. In this cases too the reference to the original order has to created.
+
+* The 2-pertussis-ServiceRequest is replaced by the
+* 2-pertussis-ServiceRequest-add-test, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
+
+Example of referenced Servic Request: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html) The code in the element 'orderDetail' would be NW for "New order/service", or the element could be completely omitted.
 
 Example Service Replace Request: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
-The Replace Request contains a Reference to the previous ServiceRequest and an element 'orderDetail', carries the order Control Code from the Code System v2-0119. If the service request 
+The Replace Request contains a Reference to the previous ServiceRequest and an element 'orderDetail', carries the order Control Code from the Code System v2-0119: RP for "Order/service replace request", CA for "Cancel order/service request", HD for "Hold order request", and RL for "Release previous hold"
 
 ### Use Case 3: Collective request for toxicological testing (biological monitoring)
 

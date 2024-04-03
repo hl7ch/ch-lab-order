@@ -8,19 +8,25 @@ Usage: #example
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
-// this ServiceRequest adds an examination of the throat-swab looking for pertussis
-
+// this ServiceRequest replaces a previous Laboratory Service Request
 * replaces = Reference(2-pertussis-ServiceRequest)
 
 * status = #active
 * intent = #original-order
-// * category = $sct#721963009 "Order (record artifact)"
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+
+// code: what has been requeste requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[0].system = $loinc
+* code.coding[=].code = #58410-2
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+* code.text = "Laboratory Order"
+* code.coding[+].system = $loinc
+* code.coding[=].code = #1988-5 
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 // adding an additional Test, 2-pertussis-ServiceRequest is replaced
-* code.coding[+] = $loinc#90441-7 "Bordetella pertussis and Bordetella parapertussis DNA panel - Nasopharynx"
+* code.coding[+].system = $loinc
+* code.coding[=].code = #90441-7
+* code.coding[=].display = "Bordetella pertussis and Bordetella parapertussis DNA panel - Nasopharynx"
 
 * orderDetail.coding.code = #RP
 * orderDetail.coding.system = $v2-0119
