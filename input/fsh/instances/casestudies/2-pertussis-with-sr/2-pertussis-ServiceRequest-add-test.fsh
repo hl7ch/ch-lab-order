@@ -10,7 +10,7 @@ Usage: #example
 
 // this ServiceRequest adds an examination of the throat-swab looking for pertussis
 
-// * replaces = Reference(2-pertussis-ServiceRequest)
+* replaces = Reference(2-pertussis-ServiceRequest)
 
 * status = #active
 * intent = #original-order
