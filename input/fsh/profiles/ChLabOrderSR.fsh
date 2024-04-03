@@ -63,4 +63,4 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 Invariant: sr-1
 Severity: #error
 Description: "If serviceRequest.orderDetail = RP (Order/service replace request), then the element 'replaces' must be present"
-Expression: "orderDetail.exists() and orderDetail.coding.where($this.memberOf('ChLabVSOrderControl')).exists() implies replaces.exists()"
+Expression: "orderDetail.exists() and orderDetail.where($this.memberOf('ChLabVSOrderControl')).exists() implies replaces.exists()"
