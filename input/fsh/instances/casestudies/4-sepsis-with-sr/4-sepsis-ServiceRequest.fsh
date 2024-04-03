@@ -19,7 +19,7 @@ Usage: #example
 * code.coding[+] = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
 // orderDetails: Additional order information
-* orderDetail = $v2-0119#NW "New order/service"
+// * orderDetail = $v2-0119#NW "New order/service"
 
 * status = #active
 * intent = #original-order

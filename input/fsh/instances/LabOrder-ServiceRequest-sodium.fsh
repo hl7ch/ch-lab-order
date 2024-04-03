@@ -24,7 +24,7 @@ Usage: #example
 * code.coding[0] = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
-* orderDetail = $v2-0119#NW "New order/service"
+// * orderDetail.coding = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

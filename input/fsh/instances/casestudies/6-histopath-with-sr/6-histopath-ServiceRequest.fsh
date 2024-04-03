@@ -16,7 +16,7 @@ Usage: #example
 // Pathology
 * code.coding[0] = $loinc#11526-1 "Pathology study"
 // orderDetails: Additional order information
-* orderDetail = $v2-0119#NW "New order/service"
+// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/SimoneStuder)

@@ -31,21 +31,6 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * code 1..1 //  What is being requested/ordered
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
 
-* obeys sr-1
-
-//------- orderDetail -------
-/*
-* orderDetail ^slicing.discriminator.type = #value
-* orderDetail ^slicing.discriminator.path = "orderDetail"
-* orderDetail ^slicing.ordered = false
-* orderDetail ^slicing.rules = #open
-* orderDetail contains
-    orderControl 1..1 MS
-*/
-
-* orderDetail.coding. 0..1
-* orderDetail.coding.code from Hl7VSOrderControl (required) // for UC with additional tests
-
 //------- reasonCode -------
 * reasonCode MS
 * reasonCode ^short = "Clinical Question in free text"
@@ -61,20 +46,3 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- specimen ----
 * specimen ^short = "Must be present, if order category is #RequestForLabExam or #RequestForHistopathExam"
-
-Invariant: sr-1
-Severity: #error
-Description: "If serviceRequest.orderDetail = RP (Order/service replace request), then the element 'replaces' must be present"
-// Expression: "orderDetail = 'RP' implies replaces.exists()"
-Expression: "orderDetail.exists() and orderDetail.where($this.memberOf('ChLabVSOrderControl')).exists() implies replaces.exists()"
-
-
-
-/*
-warning
-=======
-fsh-generated/resources/StructureDefinition-ch-lab-order-SR-singletest.json Show Validation Information (1)
-Path	Severity	Message
-StructureDefinition​.snapshot​.element[0]​.constraint[6] (l1​/c21479)	warning	sr-1: The left side is inherently a collection, and so the expression 'orderDetail = 'RO'' may fail or return false if there is more than one item in the content being evaluated
-StructureDefinition​.snapshot​.element[37]​.pattern​.ofType(CodeableConcept)	information	The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-*/
