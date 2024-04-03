@@ -9,6 +9,8 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
 
+* replaces = Reference(LabOrder-ServiceRequest-sodium)
+
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
@@ -23,7 +25,11 @@ Usage: #example
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 
-// orderDetails: Additional order information, codeableConcept
+// ---- orderDetails ----
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

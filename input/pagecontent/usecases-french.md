@@ -54,12 +54,19 @@ Exemple de document de commande par formulaire: [CH LAB-Order 1-tvt by Form](Bun
 
 Il n'est pas rare que les résultats des tests de laboratoire conduisent à demander des tests supplémentaires sur le même échantillon. Ou bien les analyses de laboratoire internes sont complétées par d'autres tests qui ne peuvent être effectués que dans un laboratoire externe.
 
-Dans l'exemple de la coqueluche 2, les analyses de laboratoire internes (hémogramme automatisé, CRP) sont complétées par une recherche d'ADN de Bordetella pertussis et parapertussis dans le prélèvement de gorge, effectuée par un laboratoire externe sous contrat, afin d'exclure la coqueluche.
+Dans l'exemple 2-pertussis, les analyses de laboratoire internes (numération sanguine automatisée, CRP) sont complétées par une recherche d'ADN de Bordetella pertussis et parapertussis dans le prélèvement de gorge, effectuée par un laboratoire contractuel externe, afin d'exclure la coqueluche.
 
-* La "2-pertussis-ServiceRequest" est remplacée par la "2-pertussis-ServiceRequest".
-  * 2-pertussis-ServiceRequest-add-test, qui demande l'examen du prélèvement de gorge à la recherche de l'ADN de la coqueluche ou du parapertussis.
+Lorsque le système de placement demande des tests supplémentaires pour les échantillons existants, il copie la demande de service originale, ajoute les tests de laboratoire requis et un code de commande "RP", qui signifie une demande de remplacement d'une commande ou d'un service. Une règle invariante spéciale "sr-1" garantit la création d'une référence à la demande de service originale.
 
-Exemple de demande de service: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
+Les codes de commande peuvent également être utilisés pour annuler, mettre en attente ou libérer des demandes de commande mises en attente. Dans ce cas également, la référence à l'ordre original doit être créée.
+
+* La demande de 2-pertussis-ServiceRequest est remplacée par la demande de service
+* 2-pertussis-ServiceRequest-add-test, qui demande l'examen du prélèvement de gorge à la recherche de l'ADN de la coqueluche ou de la para-coqueluche.
+
+Exemple de demande de service référencée : [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html) Le code de l'élément 'orderDetail' serait NW pour "New order/service", ou l'élément pourrait être complètement omis.
+
+Exemple de demande de remplacement de service : [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
+La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : RP pour "Order/service replace request", CA pour "Cancel order/service request", HD pour "Hold order request", et RL pour "Release previous hold"
 
 ### Cas d'application 3: Demande collective d'essais toxicologiques (surveillance biologique)
 

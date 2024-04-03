@@ -1,5 +1,5 @@
 Instance: 5-biol-monit-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
@@ -20,8 +20,9 @@ Usage: #example
 * code.coding[+] = $loinc#29587-3 "Toxicology panel - Blood"
 * code.coding[+] = $loinc#54454-4 "Arsenic fractions panel - Urine"
 * code.coding[+] = $loinc#29589-9 "Heavy metals panel - Urine"
-
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)

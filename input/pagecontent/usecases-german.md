@@ -58,14 +58,21 @@ Beispiel Auftragsdokument per Formular: [CH LAB-Order 1-tvt by Form](Bundle-1-tv
 
 ### Anwendungsfall 2: Anforderung zusätzlicher Tests für dieselbe Probe
 
-Es ist nicht ungewöhnlich, dass die Ergebnisse von Laboruntersuchungen dazu führen, dass zusätzliche Untersuchungen derselben Probe angefordert werden. Oder interne Laboranalysen werden durch weitere Tests ergänzt, die nur in einem externen Labor durchgeführt werden können.
+Es ist nicht ungewöhnlich, dass die Ergebnisse von Laboruntersuchungen dazu führen, dass weitere Untersuchungen an derselben Probe angefordert werden. Oder die internen Laboranalysen werden durch weitere Tests ergänzt, die nur in einem externen Labor durchgeführt werden können.
 
-Im 2-Pertussis-Beispiel werden die internen Laboruntersuchungen (automatisiertes Blutbild, CRP) durch eine Suche nach Bordetella pertussis- und parapertussis-DNA im Rachenabstrich ergänzt, die von einem externen Vertragslabor durchgeführt wird, um Keuchhusten auszuschließen.
+Im Beispiel des 2-pertussis Falles werden die internen Labortests (automatisiertes Blutbild, CRP) durch die Suche nach Bordetella pertussis- und parapertussis-DNA im Rachenabstrich ergänzt, die von einem externen Vertragslabor durchgeführt wird, um Keuchhusten auszuschließen.
+
+Wenn das placer System zusätzliche Tests für die vorhandenen Proben anfordert, kopiert es die ursprüngliche ServiceAnforderung, fügt die erforderlichen Labortests und einen Auftragskontrollcode 'RP' hinzu, was eine Auftrags-/Leistungsersetzungsanforderung bedeutet. Eine spezielle Invarianzregel 'sr-1' sorgt dafür, dass ein Verweis auf die ursprüngliche ServiceAnforderung hergestellt wird.
+
+Die Order Control Codes können auch zum Stornieren, Halten oder Freigeben von gehaltenen Bestellanforderungen verwendet werden. Auch in diesen Fällen muss der Verweis auf die ursprüngliche Bestellung hergestellt werden.
 
 * Der 2-pertussis-ServiceRequest wird ersetzt durch den
-  * 2-pertussis-ServiceRequest-add-test, der die Untersuchung des Rachenabstrichs auf Pertussis- oder Parapertussis-DNA anfordert
+* 2-Pertussis-ServiceRequest-add-test, der die Untersuchung des Rachenabstrichs auf Pertussis- oder Parapertussis-DNA anfordert
 
-Beispiel für eine Serviceanfrage: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
+Beispiel für eine referenzierte Serviceanfrage: [CH LAB-Bestellung 2-Pertussis](ServiceAnfrage-2-Pertussis-Service-Anfrage.html) Der Code im Element 'orderDetail' wäre NW für "Neue Bestellung/Leistung", oder das Element könnte ganz weggelassen werden.
+
+Beispiel Service Replace Request: [CH LAB-Bestellung-2-Pertussis Zusatztest](ServiceRequest-2-pertussis-service-request-add-test.html)
+Der Replace Request enthält einen Verweis auf den vorherigen ServiceRequest und ein Element 'orderDetail', das den Order Control Code aus dem Code System v2-0119 trägt: RP für "Order/service replace request", CA für "Cancel order/service request", HD für "Hold order request", und RL für "Release previous hold"
 
 ### Anwendungsfall 3: Sammelauftrag für toxikologische Tests (biologische Überwachung)
 

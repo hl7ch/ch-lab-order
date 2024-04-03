@@ -19,22 +19,24 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^contact[=].telecom.value = "hanselmann48@gmail.com"
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
+* obeys sr-1
 
 * instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
 * basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
-* replaces only Reference(ChLabOrderSR) // for UC additional tests
+* replaces only Reference(ChLabOrderSR)
+  * ^short = "references the previous ServiceRequest in the situation of ordering supplemental laboratory tests"
 
 // * requisition 0..1 MS
 * category = $sct#108252007 "Laboratory procedure (procedure)"
 
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
-// * code 0..1
 
 //------- orderDetail -------
-* orderDetail from Hl7VSOrderControl (required) // for UC additional tests
+* orderDetail.coding. 0..1
+* orderDetail.coding.code from Hl7VSOrderControl (required) // for UC with additional tests
 
 //------- reasonCode -------
 * reasonCode MS
@@ -49,12 +51,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 //------- supportingInfo -------
 
-/*
-* obeys obs-1
-
-Invariant: obs-1
+Invariant: sr-1
 Severity: #error
-Description: "If Observation.orderDetail = RO (Replace Order), then the element 'replaces' must be present"
-Expression: "orderDetail = 'RO' implies replaces.exists()"
-
-*/
+Description: "If serviceRequest.orderDetail = RP (Order/service replace request), then the element 'replaces' must be present"
+Expression: "orderDetail.exists() and orderDetail.where($this.memberOf('http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-vs-order-control')).exists() implies replaces.exists()"

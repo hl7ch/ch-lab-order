@@ -31,8 +31,6 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * code 1..1 //  What is being requested/ordered
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
 
-//------- orderDetail -------
-
 //------- reasonCode -------
 * reasonCode MS
 * reasonCode ^short = "Clinical Question in free text"

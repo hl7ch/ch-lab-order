@@ -1,5 +1,5 @@
 Instance: 1-tvt-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
@@ -17,8 +17,9 @@ Usage: #example
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
-
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)

@@ -1,5 +1,5 @@
 Instance: 3-gyn-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example
@@ -15,6 +15,8 @@ Usage: #example
 * code.coding[+] = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
 * code.coding[+] = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
 * code.coding[+] = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)

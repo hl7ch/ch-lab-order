@@ -1,5 +1,5 @@
 Instance: 0-best-practice-ServiceRequest-0
-InstanceOf: ChLabOrderSR
+InstanceOf: ChLabOrderSRContainer
 Title: "CH LAB-ServiceRequest 0-best-practice"
 Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
@@ -14,9 +14,9 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
+
 // * category = $sct#721963009 "Order (record artifact)"
 
-// orderDetails: Additional order information
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * encounter = Reference(FirstEncounter)
@@ -42,6 +42,8 @@ Usage: #example
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+] = $loinc#80627-3 "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -66,6 +68,8 @@ Usage: #example
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+] = $loinc#47622-6 "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -76,7 +80,7 @@ Usage: #example
 
 
 Instance: 0-best-practice-ServiceRequest-3
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSRContainer
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
@@ -87,18 +91,59 @@ Usage: #example
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
-// * category = $sct#721963009 "Order (record artifact)"
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Hb)
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Ht)
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#171201007
 * reasonCode.text = "Anemia screening (procedure)"
-// * insurance = Reference(HealthInsuranceCardBirgitBlum)
+
+Instance: 0-best-practice-ServiceRequest-3-Hb
+InstanceOf: ChLabOrderSRSingletest
+Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
+Description: "Example for Service Request to exclude excessiv blood lost by fracture"
+Usage: #example
+* id = "0-best-practice-service-request-3-hb"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+* status = #active
+* intent = #original-order
+* code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
+* priority = #urgent
+* subject = Reference(Patient/BirgitBlum)
+* requester = Reference(HansHauserKantonsspital)
 * specimen = Reference(Specimen/Blood-0-best-practice)
 
+Instance: 0-best-practice-ServiceRequest-3-Ht
+InstanceOf: ChLabOrderSRSingletest
+Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
+Description: "Example for Service Request to exclude excessiv blood lost by fracture"
+Usage: #example
+* id = "0-best-practice-service-request-3-ht"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+* status = #active
+* intent = #original-order
+* code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
+* priority = #urgent
+* subject = Reference(Patient/BirgitBlum)
+* requester = Reference(HansHauserKantonsspital)
+* specimen = Reference(Specimen/Blood-0-best-practice)
 
 // ---- Patient --------
 Instance: BirgitBlum

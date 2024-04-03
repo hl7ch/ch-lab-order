@@ -69,5 +69,10 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3" // entry[17]
 * entry[=].resource = 0-best-practice-ServiceRequest-3
 
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3-hb" // entry[18]
+* entry[=].resource = 0-best-practice-ServiceRequest-3-Hb
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3-ht" // entry[19]
+* entry[=].resource = 0-best-practice-ServiceRequest-3-Ht
+
 * entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionTibiaFracture"
 * entry[=].resource = ConditionTibiaFracture

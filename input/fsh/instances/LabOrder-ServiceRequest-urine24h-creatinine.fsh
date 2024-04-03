@@ -23,7 +23,8 @@ Usage: #example
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#25886-3 "Creatinine [Moles/volume] in 24 hour Urine"
 
-// orderDetails: Additional order information, codeableConcept
+// orderDetails: Additional order information
+// * orderDetail.coding = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

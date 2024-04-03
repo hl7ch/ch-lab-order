@@ -1,5 +1,5 @@
 Instance: 6-histopath-ServiceRequest
-InstanceOf: ChOrfServiceRequest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 6-histopath"
 Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example
@@ -15,8 +15,8 @@ Usage: #example
 
 // Pathology
 * code.coding[0] = $loinc#11526-1 "Pathology study"
-
-// orderDetails: Additional order information, codeableConcept
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/SimoneStuder)
