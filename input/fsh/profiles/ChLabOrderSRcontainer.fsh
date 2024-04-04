@@ -1,14 +1,14 @@
-Profile: ChLabOrderSRSingletest
+Profile: ChLabOrderSRContainer
 Parent: ChLabOrderSR
-Id: ch-lab-order-SR-singletest
-Title: "CH LAB-Order-SR Single-test"
-Description: "Definition of a ServiceRequests of a single LabTest in the context of CH LAB-Order"
+Id: ch-lab-order-SR-container
+Title: "CH LAB-Order-SR Container"
+Description: "Definition for ServiceRequest Container in the context of CH LAB-Order"
 
-* . ^short = "CH LAB-Order ServiceRequest for a labtest"
+* . ^short = "CH LAB-Order ServiceRequest Container"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
 
 * ^version = "0.9.0"
-* ^status = #draft
+* ^status = #active
 * ^date = "2019-02-05"
 * ^publisher = "HL7 Switzerland"
 * ^contact[0].name = "HL7 Switzerland"
@@ -20,16 +20,37 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
 
-* instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
+// ---- instantiates Canonical
+* instantiatesCanonical 0.. MS
 
-// ---- SR Container and SR Labtest must have same requisition identifier ----
-
-* basedOn 0..0 // since this is a SR for a Labtest, there are no further Labtests based on.
+// * Is based On ChLabOrderSRSingletest or other SRContainer
+* basedOn 1.. MS
+* basedOn only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer) // Labtest or Selfreferential
 * requisition 0..1 MS
 
 // if not based on a Reference, a code must be present
-* code 1..1 //  What is being requested/ordered
+
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred, SNOMED CT may be used in particular situations, microbiology etc."
+
+
+// * code ^short = "Only allow code from LOINC and/or SNOMED CT"
+// 
+// * code.coding ^slicing.discriminator.type = #value
+// * code.coding ^slicing.discriminator.path = "this"
+// * code.coding ^slicing.rules = #closed
+// * code.coding ^slicing.description = ""
+// * code.coding ^slicing.ordered = false
+// * code.coding.version = ""
+// * code.coding contains
+//     LoincCode 0..1 and
+//     SnomedCode 0..1
+// * code.coding[LoincCode] MS
+// * code.coding[LoincCode] from LOINC
+// * code.coding[SnomedCode] MS
+// * code.coding[SnomedCode] from SCT 
+
+
+//------- orderDetail -------
 
 //------- reasonCode -------
 * reasonCode MS

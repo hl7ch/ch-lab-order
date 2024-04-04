@@ -4,6 +4,10 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues for STU 3
 
+* [Issue#314](https://github.com/hl7ch/ch-lab-order/issues/314) 
+
+* [Issue#313](https://github.com/hl7ch/ch-lab-order/issues/313) ch.fhir.ig.ch-lab-order#2.0.0-ballot /terminology.html -- replaced status = #draft with status = #active in all occurrencies
+
 * [Issue#312](https://github.com/hl7ch/ch-lab-order/issues/312) Rename ChLabOrderLabSpecialies to ChLabOrderLabStudyTypes, change title to "Laboratory Study Types". Translate all Titles of ValueSets to english.
 
 * [Issue#311](https://github.com/hl7ch/ch-lab-order/issues/311) removed from Aliases.fsh:

@@ -26,7 +26,7 @@ Usage: #example
 * name = "BloodElectrolytePanel"
 * title = "Blood electrolyte panel (serum or plasma)"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel "collection of tests and panels performed on one or more in vitro biologic specimens"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-11T20:00:00+02:00"
 * contact.telecom.system = #url

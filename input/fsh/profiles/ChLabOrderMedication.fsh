@@ -1,5 +1,5 @@
 Profile : ChLabOrderMedication
-Parent: Medication
+Parent: CHCoreMedication
 Title: "CH LAB-Order Medication"
 Description: "Medication in Lab Order"
 

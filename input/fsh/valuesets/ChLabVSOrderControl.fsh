@@ -2,7 +2,7 @@ ValueSet: ChLabVSOrderControl
 Description: "Contains some codes of placer applications from v2-0119 table"
 Id: ch-lab-vs-order-control
 Title: "Order Control Codes used in CH Lab-Order"
-// * ^status = #draft
+// * ^status = #active
 * ^experimental = true
 * $v2-0119#RP "Order/service replace request"
 * $v2-0119#CA "Cancel order/service request"
