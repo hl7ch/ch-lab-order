@@ -76,7 +76,7 @@ Usage: #example
 * communication.preferred = true
 
 Instance: HealthInsuranceCardMarinaRubella
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Coverage Marina Rubella"
 Description: "Example for Insurance"
 Usage: #example

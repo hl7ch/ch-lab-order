@@ -66,7 +66,7 @@ Usage: #example
 // ---- PractitionerRole --------> Folder
 
 Instance: HealthInsuranceCardTobiasTimmermann
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Tobias Timmermann"
 Description: "Example for Insurance"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: HealthInsuranceCard
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Franz Muster"
 Description: "Example for Insurance"
 Usage: #example

@@ -182,7 +182,7 @@ Usage: #example
 
 // issue: orf wants a VS, in FSH a CS is required ???
 Instance: HealthInsuranceCardBirgitBlum
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Birgit Blum"
 Description: "Example for Insurance"
 Usage: #example
@@ -327,7 +327,7 @@ Usage: #example
 
 /*
 Instance: Insurance-Company
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456781"

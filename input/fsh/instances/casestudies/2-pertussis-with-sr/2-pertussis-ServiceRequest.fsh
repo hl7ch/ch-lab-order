@@ -97,7 +97,7 @@ Usage: #example
 * telecom[=].use = #work
 
 Instance: HealthInsuranceCardEmilKummer
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Emil Kummer"
 Description: "Example for Insurance"
 Usage: #example
