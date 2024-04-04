@@ -1,6 +1,6 @@
 ValueSet: NormalReasonsVitaminD
 Id: normal-contexts-vitamin-d
-Title: "Kontexte für die Erstattung des Vitamin-D-Tests"
+Title: "Contexts for reimbursement of the vitamin D test"
 Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verordnungskontext für den Vitamin-D-Test\" auf, die eine Erstattung dieses Tests erlauben."
 * ^meta.lastUpdated = "2020-03-10T07:30:00.000+00:00"
 * ^meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ObservationValueSet"
@@ -26,6 +26,5 @@ Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verord
 * include codes from system SNOMED_CT where concept is-a #73132005  // Disorder of parathyroid gland (disorder)
 * include codes from system SNOMED_CT where concept is-a #119292006 // Disorder of gastrointestinal tract (disorder)
 * include codes from system SNOMED_CT where concept is-a #32230006  // Malabsorption syndrome (disorder)
-
 * include codes from system SNOMED_CT where concept is-a #235856003 // Disorder of liver (disorder) 
 * include codes from system SNOMED_CT where concept is-a #761938008 // Medicinal prescription record (record artifact)

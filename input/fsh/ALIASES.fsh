@@ -44,8 +44,7 @@ Alias:  $hcSpecialisation              = http://fhir.ch/ig/ch-epr-term/ValueSet/
 // Order
 Alias:  $request-priority              = http://hl7.org/fhir/request-priority
 Alias:  $servicerequest-categories     = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
-// Alias:  $documentEntryClassCode        = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
-// Alias:  $documentEntryTypeCode         = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
+
 
 // Encounter, appointment
 Alias:  $CHCoreCSEncounterType         = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype

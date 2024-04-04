@@ -4,6 +4,11 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues for STU 3
 
+* [Issue#312](https://github.com/hl7ch/ch-lab-order/issues/312) Rename ChLabOrderLabSpecialies to ChLabOrderLabStudyTypes, change title to "Laboratory Study Types". Translate all Titles of ValueSets to english.
+
+* [Issue#311](https://github.com/hl7ch/ch-lab-order/issues/311) removed from Aliases.fsh:
+Alias:  $documentEntryClassCode, Alias:  $documentEntryTypeCode
+
 * [Issue#296](https://github.com/hl7ch/ch-lab-order/issues/296) Add task resource to enable workflow communication
 
 * [Issue #260](https://github.com/hl7ch/ch-lab-order/issues/260) Using Laboratory Catalogue

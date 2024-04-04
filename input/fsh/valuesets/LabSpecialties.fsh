@@ -1,6 +1,6 @@
-ValueSet: ChLabOrderLabSpecialities
-Id: ch-lab-order-labSpecialties
-Title: "Labor Spezialität"
+ValueSet: ChLabOrderLabStudyTypes
+Id: ch-lab-order-study-types
+Title: "Laboratory Study Types"
 Description: "refers to https://wiki.ihe.net/index.php/1.3.6.1.4.1.19376.1.3.3.2.1, but without some errors"
 * ^experimental = true
 * $loinc#18716-1 "Allergy studies (set)"
