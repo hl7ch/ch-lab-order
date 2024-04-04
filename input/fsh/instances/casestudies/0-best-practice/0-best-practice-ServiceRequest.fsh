@@ -196,7 +196,6 @@ Usage: #example
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
-
 // ---- encounter -----
 Instance: FirstEncounter
 InstanceOf: Encounter
@@ -218,33 +217,18 @@ Usage: #example
 * code.coding[GTIN] = urn:oid:2.51.1.1#7680388470010 "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
 * code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6.1#6687498
 * code.coding[ATC] = $atc#B01AB01 "Heparin"
-* code = $sct#412201008 "Porcine heparin (substance)"
+// * code = $sct#412201008 "Porcine heparin (substance)"
 * code.text = "LIQUEMIN 5000 IE/0.5ml s.c. (aH 06/23)"
 
 * status = #active
-// * marketingAuthorizationHolder.reference = "#mmanu"
-// * doseForm.coding.system = "http://snomed.info/sct"
 * form = $sct#385219001 "Conventional release solution for injection (dose form)"
-// * doseForm.coding.display = "Injection Solution (qualifier value)"
-// * ingredient.item.concept.coding.system = "http://www.nlm.nih.gov/research/umls/rxnorm"
-// * ingredient.item.concept.coding.code = "66955"
-// * ingredient.item.concept.coding.display = "Vancomycin Hydrochloride"
 * ingredient.itemCodeableConcept = $sct#372877000 "Heparin (substance)"
-* ingredient.strength.numerator = 5000 'U'
-* ingredient.strength.denominator = 0.5 'mL'
+* ingredient.strength.numerator = 5000 '[iU]' "international unit"
+* ingredient.strength.denominator = 0.5 'mL' "milliliter"
+
 * batch.lotNumber = "9494788"
 * batch.expirationDate = "2024-05-22"
 
-/*
-Instance: Heparin
-InstanceOf: Substance
-Description: "Example for best-practice of laboratory order"
-Usage: #example
-* identifier.system = "http://acme.org/identifiers/substances"
-* identifier.value = "1234"
-* category = $substance-category#biological "Biological Substance"
-* code = $sct#372877000 "Heparin (substance)"
-*/
 
 // ---- Specimen ---------------
 Instance: Serum-0-best-practice

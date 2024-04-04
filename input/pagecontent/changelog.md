@@ -4,7 +4,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues for STU 3
 
-* [Issue#314](https://github.com/hl7ch/ch-lab-order/issues/314) 
+* [Issue#314](https://github.com/hl7ch/ch-lab-order/issues/314) Profile : ChLabOrderMedication -> Parent: CHCoreMedication, Profile: MedicationStatement -> CHCoreMedicationStatement, Profile: ChLabOrderDiagnosisCondition -> Parent: CHCoreCondition
 
 * [Issue#313](https://github.com/hl7ch/ch-lab-order/issues/313) ch.fhir.ig.ch-lab-order#2.0.0-ballot /terminology.html -- replaced status = #draft with status = #active in all occurrencies
 

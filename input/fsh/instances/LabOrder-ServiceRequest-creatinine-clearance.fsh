@@ -43,7 +43,7 @@ Usage: #example
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Diclofenac
-InstanceOf: MedicationStatement
+InstanceOf: CHCoreMedicationStatement
 Title: "MedicationStatement: Diclofenac Verordnung"
 Description: "Medication Record: Diclofenac"
 Usage: #example
@@ -59,16 +59,18 @@ Usage: #example
 * dosage.text = "1 tablet per day"
 
 Instance: Voltaren
-InstanceOf: Medication
+InstanceOf: CHCoreMedication
 Title: "Medication Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #example
 * contained = sub01
 * code = $sct#775563008 "Product containing only diclofenac (medicinal product)"
+* code.text = "VOLTAREN Drag 50 mg"
 * form = $sct#385055001 "Tablet (basic dose form)"
 * ingredient.itemReference = Reference(sub01)
-* ingredient.strength.numerator = 50 'mg'
-* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+// * ingredient.strength.numerator = 50 'mg'
+* ingredient.strength.numerator = 50 'mg' "milligram"
+* ingredient.strength.denominator = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 
 Instance: sub01
 InstanceOf: Substance
@@ -95,3 +97,17 @@ Usage: #example
 * recordedDate = "2013-04-04"
 * recorder = Reference(Practitioner/MarcMustermann)
 * asserter = Reference(Practitioner/MarcMustermann)
+
+Instance: Triatec
+InstanceOf: CHCoreMedication
+Usage: #inline
+* code = urn:oid:2.51.1.1#7680538751228 "TRIATEC Tabl 2.5 mg 20 Stk"
+* code.text = "TRIATEC Tabl 2.5 mg"
+* form = urn:oid:0.4.0.127.0.16.1.1.2.1#10219000 "Tablet"
+* form.text = "Tablette"
+* amount.numerator = 20 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
+* amount.denominator = 1 http://snomed.info/sct#1681000175101 "Package - unit of product usage (qualifier value)"
+* ingredient.itemCodeableConcept = $sct#386872004 "Ramipril (substance)"
+* ingredient.itemCodeableConcept.text = "Ramipril"
+* ingredient.strength.numerator = 2.5 'mg' "milligram"
+* ingredient.strength.denominator = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
