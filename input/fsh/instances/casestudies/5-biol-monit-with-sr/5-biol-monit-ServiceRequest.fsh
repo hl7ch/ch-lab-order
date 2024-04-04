@@ -171,7 +171,7 @@ Usage: #example
 * address.country = "CH"
 
 Instance: HealthInsuranceCardBeatBorer
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Beat Borer"
 Description: "Example for Insurance"
 Usage: #example

@@ -37,8 +37,8 @@ Usage: #example
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Acetylsalicylat
-InstanceOf: MedicationStatement
-Title: "MedicationStatement: Acetylsalicylat Verordnung"
+InstanceOf: CHCoreMedicationStatement
+Title: "CHCoreMedicationStatement: Acetylsalicylat Verordnung"
 Description: "Example of Medication Record"
 Usage: #example
 * status = #active
@@ -53,7 +53,7 @@ Usage: #example
 * dosage.text = "1 tablet per day"
 
 Instance: Aspirin
-InstanceOf: Medication
+InstanceOf: CHCoreMedication
 Title: "Medication Aspirin"
 Description: "Example of a Medication Product"
 Usage: #example
@@ -61,8 +61,8 @@ Usage: #example
 * code = $sct#774656009 "Product containing only aspirin (medicinal product)"
 * form = $sct#385055001 "Tablet (basic dose form)"
 * ingredient.itemReference = Reference(sub02)
-* ingredient.strength.numerator = 250 'mg'
-* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+* ingredient.strength.numerator = 250 'mg' "milligram"
+* ingredient.strength.denominator = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 
 Instance: sub02
 InstanceOf: Substance

@@ -44,7 +44,7 @@ Usage: #example
 
 Instance: Diclofenac
 InstanceOf: CHCoreMedicationStatement
-Title: "MedicationStatement: Diclofenac Verordnung"
+Title: "CH CoreMedicationStatement: Diclofenac Verordnung"
 Description: "Medication Record: Diclofenac"
 Usage: #example
 * status = #active
@@ -79,7 +79,7 @@ Usage: #inline
 * code = $sct#62039007 "Diclofenac sodium (substance)"
 
 Instance: Renal-insufficiency
-InstanceOf: Condition
+InstanceOf: CHCoreCondition
 Title: "Condition Renal Insuffiency"
 Description: "Problem or Diagnosis from problem list: Renal Insuffiency"
 Usage: #example
@@ -98,6 +98,7 @@ Usage: #example
 * recorder = Reference(Practitioner/MarcMustermann)
 * asserter = Reference(Practitioner/MarcMustermann)
 
+/*
 Instance: Triatec
 InstanceOf: CHCoreMedication
 Usage: #inline
@@ -111,3 +112,4 @@ Usage: #inline
 * ingredient.itemCodeableConcept.text = "Ramipril"
 * ingredient.strength.numerator = 2.5 'mg' "milligram"
 * ingredient.strength.denominator = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
+*/
