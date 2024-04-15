@@ -93,10 +93,10 @@ correct assignment of the patient identification number. In principle, several i
 
 ##### usecases-german.md
 
-* Replace: Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe with Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
-
+* Replace: Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe with Use Case 9: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 * Add example:  Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
-
 * Modify: Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern.
-
 * Remove: Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
+* Add orderDetail into Profile ChLabOrderSR to handle orderControlCode
+* Add orderControl valueSet
+* Modify example in Use Case 2: add orderDetail

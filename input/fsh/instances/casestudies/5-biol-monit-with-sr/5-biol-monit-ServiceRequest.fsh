@@ -102,7 +102,7 @@ Title: "Organization SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"
-* identifier.value = "CHE-108.955.179"
+* identifier.value = "A62088168"
 * name = "Suva"
 * telecom[0].system = #phone
 * telecom[=].value = "+41322345566"
@@ -155,7 +155,7 @@ Title: "Organization Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
-* identifier.value = "CHE-108.444.179"
+* identifier.value = "A62088168"
 * telecom[0].system = #phone
 * telecom[=].value = "+41412345566"
 * telecom[=].use = #work
