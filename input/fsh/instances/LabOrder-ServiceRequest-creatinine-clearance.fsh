@@ -43,7 +43,7 @@ Usage: #example
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Diclofenac
-InstanceOf: CHCoreMedicationStatement
+InstanceOf: MedicationStatement
 Title: "CH CoreMedicationStatement: Diclofenac Verordnung"
 Description: "Medication Record: Diclofenac"
 Usage: #example
@@ -59,7 +59,7 @@ Usage: #example
 * dosage.text = "1 tablet per day"
 
 Instance: Voltaren
-InstanceOf: CHCoreMedication
+InstanceOf: Medication
 Title: "Medication Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #example
@@ -79,7 +79,7 @@ Usage: #inline
 * code = $sct#62039007 "Diclofenac sodium (substance)"
 
 Instance: Renal-insufficiency
-InstanceOf: CHCoreCondition
+InstanceOf: Condition
 Title: "Condition Renal Insuffiency"
 Description: "Problem or Diagnosis from problem list: Renal Insuffiency"
 Usage: #example
