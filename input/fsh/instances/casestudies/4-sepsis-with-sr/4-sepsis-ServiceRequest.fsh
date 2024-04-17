@@ -66,10 +66,11 @@ Usage: #example
 * communication.preferred = true
 
 Instance: HealthInsuranceCardSaraSpeckmann
-InstanceOf: CHCoreCoverage
+InstanceOf: ChOrfCoverage
 Title: "Covarage HealthInsuranceCard Sarah Speckmann"
 Description: "Example for Insurance"
 Usage: #example
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active

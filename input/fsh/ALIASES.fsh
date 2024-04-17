@@ -25,6 +25,7 @@ Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/c
 Alias:  $substance-category            = http://terminology.hl7.org/CodeSystem/substance-category 
 Alias:  $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
 Alias:  $coverage-type                 = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype // must by a CS!
+Alias:  $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype
 Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias:  $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 Alias:  $shareablevalueset             = http://hl7.org/fhir/StructureDefinition/shareablevalueset

@@ -76,10 +76,11 @@ Usage: #example
 * communication.preferred = true
 
 Instance: HealthInsuranceCardMarinaRubella
-InstanceOf: CHCoreCoverage
+InstanceOf: ChOrfCoverage
 Title: "Coverage Marina Rubella"
 Description: "Example for Insurance"
 Usage: #example
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active

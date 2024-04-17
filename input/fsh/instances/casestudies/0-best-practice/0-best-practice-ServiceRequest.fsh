@@ -182,11 +182,12 @@ Usage: #example
 
 // issue: orf wants a VS, in FSH a CS is required ???
 Instance: HealthInsuranceCardBirgitBlum
-InstanceOf: CHCoreCoverage
+InstanceOf: ChOrfCoverage
 Title: "Health Insurance Card Birgit Blum"
 Description: "Example for Insurance"
 Usage: #example
 // * id = "health-insurance-card-Birgit-Blum"
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
@@ -327,7 +328,7 @@ Usage: #example
 
 /*
 Instance: Insurance-Company
-InstanceOf: CHCoreCoverage
+InstanceOf: ChOrfCoverage
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456781"

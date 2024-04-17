@@ -97,11 +97,12 @@ Usage: #example
 * telecom[=].use = #work
 
 Instance: HealthInsuranceCardEmilKummer
-InstanceOf: CHCoreCoverage
+InstanceOf: ChOrfCoverage
 Title: "Health Insurance Card Emil Kummer"
 Description: "Example for Insurance"
 Usage: #example
 * id = "health-insurance-card-emil-kummer"
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
