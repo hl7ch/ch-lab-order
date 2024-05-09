@@ -26,7 +26,7 @@ You can download this Implementation Guide in [NPM-format](https://confluence.hl
 
 #### Laboratory order with Service Request
 
-This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc.). A section element has an entry with the Service request reference.
+This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc). A section element has an entry with the Service request reference.
 
 The ServiceRequest may instantiate an ActivityDefinition, a coded procedure to execute a single laboratory test (e.g. Sodium concentration in Serum), or to execute an entire test panel (e.g. concentration of Electrolytes in Serum). Using a ServiceRequest Container we can reference to other ServiceRequest Containers or to Single Test Service Requests.
 
@@ -38,7 +38,7 @@ The lab order can optionally and in addition to the ServiceRequest contain forms
 
 The lab-order system should define the structure of the lab-order so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
 
-1. The partly or fully filled electronic order should be safeble in the order placer system (practice system, hospital system), so it can be changed until the samples are scanned by the receiver laboratory.
+1. The partly or fully filled electronic order should be storable in the order placer system (practice system, hospital system), so it can be changed until the samples are scanned by the receiver laboratory.
 
 2. Data about practitioner, patient and treatment should be transferable to the electronic order.
 
