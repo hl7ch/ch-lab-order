@@ -12,13 +12,13 @@
 
 Le client (par exemple un médecin) a besoin de divers tests de laboratoire pour compléter le processus de diagnostic. Il crée un document de commande dans son système de dossiers médicaux électroniques (DME), qui contient les données administratives structurées conformément au guide de mise en œuvre du CH Core et dont le contenu est disponible dans le DME. Parmi les analyses fournies par le SIL, il peut sélectionner celles qui l'aident à répondre à sa question, et il peut également déterminer les échantillons correspondant aux analyses. Par exemple, il veut faire analyser le glucose dans le sang et le liquide céphalo-rachidien. Le système de laboratoire peut stocker les informations sur les récipients d'échantillons requis et les additifs éventuels dans le système. Les conditions pré-analytiques sont spécifiées.
 
-Il peut également ajouter des informations sur le contexte clinique à la commande du laboratoire : liste des problèmes, liste des médicaments en cours, questions sur les analyses prescrites.
+Il peut de plus ajouter des informations sur le contexte clinique à la commande du laboratoire : liste des problèmes, liste des médicaments en cours, questions sur les analyses prescrites.
 
 Le document de commande est envoyé au système d'information du laboratoire (LIS).
 
 Exemple de document de commande par ServiceRequest: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document-with-sr.html)
 
-#### Document de commande de laboratoire avec demande de service et et formulaire
+#### Document de commande de laboratoire avec demande de service et formulaire
 
 Le client (par exemple, le médecin) a besoin de divers tests de laboratoire pour un diagnostic plus approfondi. À cette fin, il crée un document de commande dans le système d'information de son cabinet, avec les informations nécessaires sur le patient, le test de laboratoire, les échantillons, etc. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien, etc.) sont stockés dans les documents de commande correspondants. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien) sont collectés dans des récipients appropriés et clairement affectés au document de commande (Specimen.identifier, Specimen.container.identifier). Les échantillons peuvent être examinés dans le propre laboratoire ou doivent être envoyés par courrier ou par service de messagerie au laboratoire externe. Là, le système d'information du laboratoire leur attribue leur propre identifiant (Specimen.accessionIdentifier).
 
@@ -44,9 +44,7 @@ Un formulaire (Questionnaire) est présenté au client, qui contient les informa
   Information sur le service demandé : * service request.category is RequestForLabExam
   * Question, raison de l'investigation (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
   * payeur (assurance maladie, assurance accident, etc.)
-  * et plus encore
-
-En dehors de ce cas d'application : les résultats sont ensuite communiqués au client.
+  * et plus encore.
 
 Exemple de document de commande par formulaire: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
@@ -56,17 +54,17 @@ Il n'est pas rare que les résultats des tests de laboratoire conduisent à dema
 
 Dans l'exemple 2-pertussis, les analyses de laboratoire internes (numération sanguine automatisée, CRP) sont complétées par une recherche d'ADN de Bordetella pertussis et parapertussis dans le prélèvement de gorge, effectuée par un laboratoire contractuel externe, afin d'exclure la coqueluche.
 
-Lorsque le système de placement demande des tests supplémentaires pour les échantillons existants, il copie la demande de service originale, ajoute les tests de laboratoire requis et un code de commande "RP", qui signifie une demande de remplacement d'une commande ou d'un service. Une règle invariante spéciale "sr-1" garantit la création d'une référence à la demande de service originale.
+Lorsque le système de placement demande des tests supplémentaires pour les échantillons existants, il copie la demande de service originale, ajoute les tests de laboratoire requis et un code de commande 'RP', qui signifie une demande de remplacement d'une commande ou d'un service. Une règle invariante spéciale "sr-1" garantit la création d'une référence à la demande de service originale.
 
-Les codes de commande peuvent également être utilisés pour annuler, mettre en attente ou libérer des demandes de commande mises en attente. Dans ce cas également, la référence à l'ordre original doit être créée.
+Les codes de commande peuvent par ailleurs être utilisés pour annuler, mettre en attente ou libérer des demandes de commande mises en attente. Dans ce cas, la référence à l'ordre original doit être créée.
 
 * La demande de 2-pertussis-ServiceRequest est remplacée par la demande de service
 * 2-pertussis-ServiceRequest-add-test, qui demande l'examen du prélèvement de gorge à la recherche de l'ADN de la coqueluche ou de la para-coqueluche.
 
-Exemple de demande de service référencée : [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html) Le code de l'élément 'orderDetail' serait NW pour "New order/service", ou l'élément pourrait être complètement omis.
+Exemple de demande de service référencée : [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html), le code de l'élément 'orderDetail' serait 'NW' pour "New order/service", ou l'élément pourrait être complètement omis.
 
 Exemple de demande de remplacement de service : [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
-La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : RP pour "Order/service replace request", CA pour "Cancel order/service request", HD pour "Hold order request", et RL pour "Release previous hold"
+La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : 'RP' pour "Order/service replace request", 'CA' pour "Cancel order/service request", 'HD' pour "Hold order request", et 'RL' pour "Release previous hold"
 
 ### Cas d'application 3: Demande collective d'essais toxicologiques (surveillance biologique)
 
