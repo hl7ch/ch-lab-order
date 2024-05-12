@@ -5,7 +5,7 @@
 ## CI Build
 
 * [CI Build master](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html)
-* [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/develop/index.html)
+* [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/2.0.0-STU-ballot/index.html)
 * [CI Build IG-ohne-Q](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/IG-ohne-Q/index.html)
 
 This is a HL7 Swiss FHIR implementation guide. It describes mainly two use cases of laboratory orders. 
