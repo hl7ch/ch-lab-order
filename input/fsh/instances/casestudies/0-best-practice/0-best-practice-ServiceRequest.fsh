@@ -24,7 +24,7 @@ Usage: #example
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 // * supportingInfo[+] = Reference(ConditionHeartDisorder)
 * supportingInfo[+] = Reference(ConditionTibiaFracture)
-* supportingInfo[+] = Reference(Liquemin)
+
 
 Instance: 0-best-practice-ServiceRequest-1
 InstanceOf: ChLabOrderSRSingletest
@@ -50,6 +50,7 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Patient gets Heparin injections"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
+* supportingInfo[+] = Reference(Liquemin)
 * specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-2
