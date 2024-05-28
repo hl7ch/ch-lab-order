@@ -17,6 +17,8 @@ Usage: #example
 * code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
 * code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
 * code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+] = $loinc#62292-8 "25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma"
+
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
@@ -26,6 +28,7 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* supportingInfo = Reference(Condition/ConditionTobiasTimmermann)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
@@ -154,3 +157,20 @@ Usage: #example
 * asserter = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
 * evidence.code = $sct#426396005 "Cardiac chest pain"
 */
+
+Instance: ConditionTobiasTimmermann
+InstanceOf: Condition
+Description: "Problem list of Tobias Timmermann"
+Usage: #example
+* clinicalStatus = $condition-clinical#inactive
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding[0] = $sct#55607006 "Problem"
+* category.coding[+] = $condition-category#problem-list-item
+* severity = $sct#255604002 "Mild (qualifier value)"
+* code = $sct#723190009 "Chronic renal insufficiency (disorder)"
+* bodySite = $sct#181414000 "Entire kidney (body structure)"
+* subject = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
+* onsetDateTime = "2020-03-11"
+* recordedDate = "2020-03-11"
+* asserter = Reference(Practitioner/MarcMustermann)
+* stage.summary = $sct#62459000 "Chronic persistent (qualifier value)"
