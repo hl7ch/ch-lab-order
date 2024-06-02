@@ -561,7 +561,7 @@ Usage: #example
 * item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[+].linkId = "microbiology"
 * item[=].text = "Mikrobiologie"
 * item[=].type = #group

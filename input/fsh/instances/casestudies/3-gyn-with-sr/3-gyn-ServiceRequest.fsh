@@ -24,7 +24,7 @@ Usage: #example
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCardMarinaRubella)
-* specimen[0] = Reference(Specimen/Cervix-swab)
+* specimen[+] = Reference(Specimen/Cervix-swab)
 * specimen[+] = Reference(Specimen/Blood-gyn)
 * specimen[+] = Reference(Specimen/Serum-gyn)
 * specimen[+] = Reference(Specimen/Urine-gyn)

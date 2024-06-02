@@ -33,7 +33,7 @@ Usage: #example
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 * supportingInfo = Reference(MedicationStatement/Acetylsalicylat)
-* specimen[0] = Reference(Specimen/Blood) "Blood"
+* specimen[+] = Reference(Specimen/Blood) "Blood"
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Acetylsalicylat
