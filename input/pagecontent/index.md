@@ -24,6 +24,8 @@ You can download this Implementation Guide in [NPM-format](https://confluence.hl
 
 ### Foundation
 
+Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardised order interface is the more favourable solution in the long run.
+
 #### Laboratory order with Service Request
 
 This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc). A section element has an entry with the Service request reference.
@@ -34,16 +36,16 @@ The ServiceRequest may instantiate an ActivityDefinition, a coded procedure to e
 
 The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured way.
 
-### Management Summary
+### Requirements
 
-The lab-order system should define the structure of the lab-order so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
+The lab-order should define the structure of the order details so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
 
 1. The partly or fully filled electronic order should be storable in the order placer system (practice system, hospital system), so it can be changed until the samples are scanned by the receiver laboratory.
 
 2. Data about practitioner, patient and treatment should be transferable to the electronic order.
 
-3. In the electronic order system all available analyses should be presentable, a search option should be available. The content of panels should be visible.
-   * The the electronic order system should contain analyses and test-panels. Groups of tests, e.g. for "blood count" are usually requested as panels. They are split into service requests for single analyses in the ServiceRequest Container. If the LIS (Laboratory Information System) knows the components of the panels, it can do the splitting itself.
+3. In the electronic order all available analyses should be presentable, a search option should be available. The content of panels should be visible.
+   * The the electronic order should contain analyses and test-panels. Groups of tests, e.g. for "blood count" are usually requested as panels. They are split into service requests for single analyses in the ServiceRequest Container. If the LIS (Laboratory Information System) knows the components of the panels, it can do the splitting itself.
 
 4. Analyses, Sample type, required Sample additives and preanalytic handling should be presented to the order filler.
 
@@ -51,13 +53,11 @@ The lab-order system should define the structure of the lab-order so it can be u
 
    * A numbering system should be supported, so that relabeling at the laboratory can be limited (eg. practitionar number + number-range).
 
-5. The electronic order system should be able to handle the request of analyses for samples that were sent at an earlier point of time.
+5. The electronic order should be able to handle the request of analyses for samples that were sent at an earlier point of time.
 
-6. The electronic order system should receive updates on the process of the laboratory analyses: as sample received in laboratory, first results available, report finished. [Domain of Lab-Report].
+6. The electronic order should receive updates on the process of the laboratory analyses: as sample received in laboratory, first results available, report finished [Domain of Lab-Report].
 
    * The status of the order at the practitionor site should be supported as well: new order, replaced order (enhanced or partly deleted), printed sample lables, documentation of blood take (additional Information as urine volume and Date and Time of withdrawl of blood).
-
-   * Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardised order system is not the more favourable solution in the long run.
 
 ### Six Case studies with examples for the Order Document
 

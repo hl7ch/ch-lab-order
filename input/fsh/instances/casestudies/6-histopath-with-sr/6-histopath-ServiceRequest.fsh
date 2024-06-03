@@ -25,7 +25,7 @@ Usage: #example
 * reasonCode.text = "Suspicion Melanoma Skin"
 * reasonReference = Reference(DiagnosticReport/skin-dermatoscopy)
 * insurance = Reference(HealthInsuranceCardSimoneStuder)
-* specimen[0] = Reference(Specimen/Skin) "Skin specimen"
+* specimen[+] = Reference(Specimen/Skin) "Skin specimen"
 
 Instance: SimoneStuder
 InstanceOf: CHCorePatient

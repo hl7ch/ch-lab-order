@@ -16,7 +16,7 @@ Usage: #example
 * code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
+* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * code.coding[+] = $loinc#29587-3 "Toxicology panel - Blood"
 * code.coding[+] = $loinc#54454-4 "Arsenic fractions panel - Urine"
 * code.coding[+] = $loinc#29589-9 "Heavy metals panel - Urine"
@@ -29,7 +29,7 @@ Usage: #example
 * reasonCode = $sct#314076009
 * reasonCode.text = "Toxicology screening test (procedure)"
 * insurance = Reference(HealthInsuranceCardBeatBorer)
-* specimen[0] = Reference(Specimen/Blood-biol-monit)
+* specimen[+] = Reference(Specimen/Blood-biol-monit)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
 // ---- Patient --------

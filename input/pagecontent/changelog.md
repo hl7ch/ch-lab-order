@@ -103,3 +103,7 @@ correct assignment of the patient identification number. In principle, several i
 * Add orderDetail into Profile ChLabOrderSR to handle orderControlCode
 * Add orderControl valueSet
 * Modify example in Use Case 2: add orderDetail
+
+### Discouraged LOINC codes
+
+ * replace all 'Auto Differential panel - Blood' with 'CBC W Auto Differential panel - Blood'

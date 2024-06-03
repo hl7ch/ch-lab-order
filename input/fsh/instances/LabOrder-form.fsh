@@ -506,7 +506,7 @@ Usage: #example
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item.item[+].linkId = "coagulation"
 * item[=].item[=].item.item[=].text = "Coagulation"
 * item[=].item[=].item.item[=].type = #group
@@ -614,7 +614,7 @@ Usage: #example
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item.item[+].linkId = "microbiology-4"
 * item[=].item[=].item.item[=].text = "Mikrobiologie"
 * item[=].item[=].item.item[=].type = #group
@@ -660,7 +660,7 @@ Usage: #example
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item.item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item.item[+].linkId = "toxicology"
 * item[=].item[=].item.item[=].text = "Toxicology"
 * item[=].item[=].item.item[=].type = #group
@@ -970,7 +970,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 
 // ################################################################
 // ---- Compendium Labor Schildknecht, takes container concept ----

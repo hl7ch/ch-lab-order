@@ -39,6 +39,6 @@ Usage: #example
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCardEmilKummer)
-* specimen[0] = Reference(Specimen/Throat-swab-2-pertussis)
+* specimen[+] = Reference(Specimen/Throat-swab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
