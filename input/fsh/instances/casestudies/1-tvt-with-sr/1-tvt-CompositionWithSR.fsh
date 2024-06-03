@@ -33,8 +33,7 @@ Usage: #example
 * author = Reference(MarcMustermannGruppenpraxis)
 * title = "Laboratory order 1-tvt"
 
-* section[orderReferral].title = "Laboratory Order with Service Request 1-tvt 0"
+* section[orderReferral].title = "Laboratory Order with Service Request 1-tvt"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 1-tvt 0\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest-0)
-
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 1-tvt\n </div>"
+* section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest)
