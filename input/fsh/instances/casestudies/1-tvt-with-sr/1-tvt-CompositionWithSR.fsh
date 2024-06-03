@@ -39,4 +39,6 @@ Usage: #example
 * section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-0)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-1)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-2)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-3)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-4)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-5)

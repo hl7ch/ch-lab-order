@@ -8,10 +8,11 @@ Usage: #example
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
-* basedOn = Reference(1-tvt-ServiceRequest-1)
-* basedOn = Reference(1-tvt-ServiceRequest-2)
-
-* basedOn = Reference(1-tvt-ServiceRequest-5)
+* basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
+* basedOn = Reference(1-tvt-ServiceRequest-2)   // CBC diff
+* basedOn = Reference(1-tvt-ServiceRequest-3)   // D-Dimer
+* basedOn = Reference(1-tvt-ServiceRequest-4)   // CRP
+* basedOn = Reference(1-tvt-ServiceRequest-5)   // Vit. D
 
 * status = #active
 * intent = #original-order
@@ -19,10 +20,7 @@ Usage: #example
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 // * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
@@ -32,10 +30,6 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-
-* specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
-* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
-* specimen[+] = Reference(Specimen/Blood-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-1
 InstanceOf: ChLabOrderSR
@@ -76,6 +70,46 @@ Usage: #example
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
+
+Instance: 1-tvt-ServiceRequest-3
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 1-tvt-3"
+Description: "Example for Service Request due to suspected deep vein thrombosis"
+Usage: #example
+* id = "1-tvt-service-request-3"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* status = #active
+* intent = #original-order
+* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* priority = #urgent
+* subject = Reference(Patient/TobiasTimmermann)
+* requester = Reference(MarcMustermannGruppenpraxis)
+* reasonCode = $sct#404223003
+* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
+* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
+
+Instance: 1-tvt-ServiceRequest-4
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 1-tvt-4"
+Description: "Example for Service Request due to suspected deep vein thrombosis"
+Usage: #example
+* id = "1-tvt-service-request-4"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* status = #active
+* intent = #original-order
+* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* priority = #urgent
+* subject = Reference(Patient/TobiasTimmermann)
+* requester = Reference(MarcMustermannGruppenpraxis)
+* reasonCode = $sct#404223003
+* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
+* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* specimen[+] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
 
 Instance: 1-tvt-ServiceRequest-5

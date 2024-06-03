@@ -53,5 +53,10 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-2" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-2
 
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-3" // entry[14]
+* entry[=].resource = 1-tvt-ServiceRequest-3
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-4" // entry[14]
+* entry[=].resource = 1-tvt-ServiceRequest-4
+
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-5" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-5
