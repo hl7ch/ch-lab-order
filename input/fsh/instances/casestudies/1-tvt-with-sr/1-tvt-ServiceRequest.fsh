@@ -1,9 +1,9 @@
-Instance: 1-tvt-ServiceRequest
+Instance: 1-tvt-ServiceRequest-0
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request"
+* id = "1-tvt-service-request-0"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -26,6 +26,7 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* supportingInfo[+] = Reference(ConditionTobiasTimmermann)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
@@ -135,22 +136,19 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-/*
 Instance: ConditionTobiasTimmermann
 InstanceOf: Condition
+Title: "Problem List"
 Description: "Problem list of Tobias Timmermann"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $sct#439401001 "diagnosis"
-* severity = $sct#6736007 "Moderate (severity modifier)"
-* code = $sct#368009 "Heart valve disorder"
-* bodySite = $sct#40768004 "Left thorax"
-* bodySite.text = "heart structure"
+* severity = $sct#371923003 "Mild to moderate (qualifier value)"
+* code = $sct#723190009 "Chronic renal insufficiency (disorder)"
 * subject = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
 // * encounter = Reference(Encounter/f001)
 * onsetDateTime = "2023-08-05"
 * recordedDate = "2023-10-05"
 * asserter = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
-* evidence.code = $sct#426396005 "Cardiac chest pain"
-*/
+
