@@ -7,6 +7,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+
+* basedOn = Reference(1-tvt-ServiceRequest-5)
+
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
@@ -26,10 +29,40 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-* supportingInfo[+] = Reference(ConditionTobiasTimmermann)
+
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
+
+Instance: 1-tvt-ServiceRequest-5
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 1-tvt-5"
+Description: "Example for Service Request due to suspected deep vein thrombosis"
+Usage: #example
+* id = "1-tvt-service-request-5"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+
+* status = #active
+* intent = #original-order
+// * category = $sct#721963009 "Order (record artifact)"
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+
+* code.coding[+] = $loinc#62292-8 "25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma"
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
+* priority = #urgent
+* subject = Reference(Patient/TobiasTimmermann)
+* requester = Reference(MarcMustermannGruppenpraxis)
+* reasonCode = $sct#404223003
+* reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
+* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* supportingInfo[+] = Reference(ConditionTobiasTimmermann)
+* specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
 // ---- Patient --------
 Instance: TobiasTimmermann
