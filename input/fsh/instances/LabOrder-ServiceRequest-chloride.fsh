@@ -23,7 +23,9 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* code.coding.code = #2075-0
+* code.coding.system = $loinc
+* code.coding.display = "Chloride [Moles/volume] in Serum or Plasma"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW

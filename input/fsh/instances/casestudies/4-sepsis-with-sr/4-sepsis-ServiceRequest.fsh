@@ -10,14 +10,35 @@ Usage: #example
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
-* code.coding[+] = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+].code = #24360-0 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+
+* code.coding[+].code = #43113-0 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
+
+* code.coding[+].code = #57021-8 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC W Auto Differential panel - Blood"
+
+* code.coding[+].code = #58410-2 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+
+
+* code.coding[+].code = #90423-5
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
+
+* code.coding[+].code = #85421-6 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Bacterial identification and susceptibility panel - Isolate"
+
+* code.coding[+].code = #1988-5 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 

@@ -21,7 +21,9 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#59260-0 "Hemoglobin [Moles/volume] in Blood"
+* code.coding.code = #59260-0
+* code.coding.system = $loinc
+* code.coding.display = "Hemoglobin [Moles/volume] in Blood"
 
 // orderDetails: Additional order information
 // * orderDetail.coding = $v2-0119#NW "New order/service"

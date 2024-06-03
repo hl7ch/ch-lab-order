@@ -19,7 +19,7 @@ Usage: #example
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+// * code.coding.code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
@@ -42,7 +42,11 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code.coding[+].code = #58410-2 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+
+
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)
@@ -62,7 +66,10 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
+* code.coding[+].code = #57021-8
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC W Auto Differential panel - Blood"
+
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)
@@ -82,7 +89,10 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* code.coding[+] = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+* code.coding[+].code = #55398-2
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
+
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)
@@ -102,7 +112,10 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+].code = #1988-5
+* code.coding[=].system = $loinc
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)
 * requester = Reference(MarcMustermannGruppenpraxis)
@@ -123,7 +136,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* code.coding[+] = $loinc#62292-8 "25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma"
+* code.coding[+].code = #62292-8
+* code.coding[=].system = $loinc
+* code.coding[=].display = "25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma"
 
 * priority = #urgent
 * subject = Reference(Patient/TobiasTimmermann)

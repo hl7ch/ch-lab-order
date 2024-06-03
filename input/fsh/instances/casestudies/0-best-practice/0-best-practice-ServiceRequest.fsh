@@ -67,7 +67,9 @@ Usage: #example
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+] = $loinc#47622-6 "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
+* code.coding[+].code = #47622-6
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
@@ -94,7 +96,9 @@ Usage: #example
 * intent = #original-order
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Hb)
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Ht)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.coding.code = #24360-0
+* code.coding.system = $loinc
+* code.coding.display = "Hemoglobin and Hematocrit panel - Blood"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
@@ -116,7 +120,9 @@ Usage: #example
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
-* code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* code.coding.code = #718-7
+* code.coding.system = $loinc
+* code.coding.display = "Hemoglobin [Mass/volume] in Blood"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
@@ -137,7 +143,10 @@ Usage: #example
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
-* code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
+
+* code.coding.code = #20570-8
+* code.coding.system = $loinc
+* code.coding.display = "Hematocrit [Volume Fraction] of Blood"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 

@@ -12,14 +12,35 @@ Usage: #example
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#29587-3 "Toxicology panel - Blood"
-* code.coding[+] = $loinc#54454-4 "Arsenic fractions panel - Urine"
-* code.coding[+] = $loinc#29589-9 "Heavy metals panel - Urine"
+* code.coding[+].code = #24360-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+
+* code.coding[+].code = #43113-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
+
+* code.coding[+].code = #57021-8
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC W Auto Differential panel - Blood"
+
+* code.coding[+].code = #58410-2
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+
+
+* code.coding[+].code = #29587-3
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Toxicology panel - Blood"
+
+* code.coding[+].code = #54454-4
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Arsenic fractions panel - Urine"
+
+* code.coding[+].code = #29589-9
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Heavy metals panel - Urine"
+
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 

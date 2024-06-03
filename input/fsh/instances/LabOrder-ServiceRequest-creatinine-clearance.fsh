@@ -27,7 +27,9 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
+* code.coding.code = #2164-2
+* code.coding.system = $loinc
+* code.coding.display = "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 

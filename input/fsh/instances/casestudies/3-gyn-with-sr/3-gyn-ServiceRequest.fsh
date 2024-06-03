@@ -11,10 +11,22 @@ Usage: #example
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
-* code.coding[+] = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
-* code.coding[+] = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
-* code.coding[+] = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* code.coding[+].code = #86662-4
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Pap smear tests - FPAR 2.0 set"
+
+* code.coding[+].code = #14503-7
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+
+* code.coding[+].code = #50556-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Urinalysis dipstick panel - Urine by Automated test strip"
+
+* code.coding[+].code = #24364-2
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Obstetric 1996 Pnl Ser+Bld"
+
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
