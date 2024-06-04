@@ -37,22 +37,24 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
+* priority = #urgent
 // * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+].code = #80627-3
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
+* code.coding.code = #80627-3
+* code.coding.system = $loinc
+* code.coding.display = "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
-* priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
+// * reasonCode = $sct#250361003 "Heparin control test (procedure)"
 * reasonCode.coding.code = #250361003
 * reasonCode.coding.system = $sct
 * reasonCode.coding.display = "Heparin control test (procedure)"
 * reasonCode.text = "Patient gets Heparin injections"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
+* reasonReference = Reference(ConditionAnticoagulation)
 * supportingInfo[+] = Reference(Liquemin)
 * specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
@@ -341,8 +343,24 @@ Usage: #example
 * bodySite.text = "Bone structure of proximal left tibia (body structure)"
 * subject = Reference(Patient/BirgitBlum) "Birgit Blum"
 * encounter = Reference(Encounter/FirstEncounter)
-* onsetDateTime = "2023-12-05"
-* recordedDate = "2023-12-05"
+* onsetDateTime = "2024-02-05"
+* recordedDate = "2024-02-05"
+* asserter = Reference(PractitionerRole/HansHauserKantonsspital) "Birgit Blum"
+* evidence.code = $sct#111645003 "Open fracture of upper end of tibia (disorder)"
+
+Instance: ConditionAnticoagulation
+InstanceOf: ChLabOrderDiagnosisCondition
+Description: "Problem list of Birgit Blum Tibia Fracture"
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category.coding[+] = $condition-category#problemlist-item
+* category = $sct#71388002 "Procedure (procedure)"
+* code = $sct#122621000119109 "Prophylactic anticoagulation given (situation)"
+* subject = Reference(Patient/BirgitBlum) "Birgit Blum"
+* encounter = Reference(Encounter/FirstEncounter)
+* onsetDateTime = "2024-02-05"
+* recordedDate = "2024-02-05"
 * asserter = Reference(PractitionerRole/HansHauserKantonsspital) "Birgit Blum"
 * evidence.code = $sct#111645003 "Open fracture of upper end of tibia (disorder)"
 
