@@ -14,7 +14,6 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-
 // * category = $sct#721963009 "Order (record artifact)"
 
 * priority = #urgent
@@ -40,14 +39,18 @@ Usage: #example
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+] = $loinc#80627-3 "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
+* code.coding[+].code = #80627-3
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#404223003
+* reasonCode.coding.code = #250361003
+* reasonCode.coding.system = $sct
+* reasonCode.coding.display = "Heparin control test (procedure)"
 * reasonCode.text = "Patient gets Heparin injections"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * supportingInfo[+] = Reference(Liquemin)
@@ -67,20 +70,22 @@ Usage: #example
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+].code = #47622-6
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
+* code.coding.code = #47622-6
+* code.coding.system = $loinc
+* code.coding.display = "Glucose [Moles/volume] in Serum or Plasma --pre dose glucose"
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#171183004
-* reasonCode.text = "Diabetes mellitus screening (procedure)"
+* reasonCode.coding.code = #171183004
+* reasonCode.coding.system = $sct
+* reasonCode.coding.display = "Diabetes mellitus screening (procedure)"
+* reasonCode.text = "Diabetes mellitus screening"
+
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * specimen = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
-
 
 Instance: 0-best-practice-ServiceRequest-3
 InstanceOf: ChLabOrderSRContainer
@@ -99,14 +104,17 @@ Usage: #example
 * code.coding.code = #24360-0
 * code.coding.system = $loinc
 * code.coding.display = "Hemoglobin and Hematocrit panel - Blood"
+
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#171201007
-* reasonCode.text = "Anemia screening (procedure)"
+* reasonCode.coding.code = #171201007
+* reasonCode.coding.system = $sct
+* reasonCode.coding.display = "Anemia screening (procedure)"
+* reasonCode.text = "Anemia screening"
 
 Instance: 0-best-practice-ServiceRequest-3-Hb
 InstanceOf: ChLabOrderSRSingletest
