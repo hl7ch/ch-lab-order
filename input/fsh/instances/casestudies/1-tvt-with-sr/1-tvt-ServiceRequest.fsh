@@ -146,7 +146,7 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
-* supportingInfo[+] = Reference(ConditionTobiasTimmermann)
+* supportingInfo[+] = Reference(ConditionRenalInsufficiency)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
 // ---- Patient --------
@@ -254,7 +254,7 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-Instance: ConditionTobiasTimmermann
+Instance: ConditionRenalInsufficiency
 InstanceOf: Condition
 Title: "Problem List"
 Description: "Problem list of Tobias Timmermann"
