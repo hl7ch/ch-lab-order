@@ -72,3 +72,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionTibiaFracture"
 * entry[=].resource = ConditionTibiaFracture
+
+* entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionAnticoagulation"
+* entry[=].resource = ConditionAnticoagulation

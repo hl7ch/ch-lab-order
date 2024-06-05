@@ -10,7 +10,7 @@
 
 #### Best practice example: Control of Anticoagulation effect case study
 
-Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragmentary tibial plateau fracture. She was transferred to the Kantonsspital, a centre hospital, by helicopter and is waiting there for her operation. The patient is administered Liquemin 5000 E s.c. daily to prevent thromboembolic events. A To monitor the effect of this treatment, regular blood tests are carried out to determine anti-Xa activity. A special sample vessel with citrate additive is used for this purpose. The sample must be centrifuged and cooled within one hour. An important entry from her list of problems is heart disease.
+Mrs Birgit Blum had an unfortunate fall while skiing and sustained a multifragmentary tibial plateau fracture. She was transferred to the Kantonsspital, a centre hospital, by helicopter and is waiting there for her operation. The patient is administered Liquemin 5000 E s.c. daily to prevent thromboembolic events. To monitor the effect of this treatment, regular blood tests are carried out to determine anti-Xa activity. A special sample vessel with citrate additive is used for this purpose. The sample must be centrifuged and cooled within one hour. An important entry from her list of problems is heart disease.
 
 [Order Document with Service Request](Bundle-0-best-practice-document-with-sr.html)
 
