@@ -145,6 +145,13 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
+
+* reasonCode.coding.code = #723190009
+* reasonCode.coding.system = $sct
+* reasonCode.coding.display = "Chronic renal insufficiency (disorder)"
+* reasonCode.text = "Patient gets Heparin injections"
+* reasonReference = Reference(ConditionRenalInsufficiency)
+
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
 * supportingInfo[+] = Reference(ConditionRenalInsufficiency)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
