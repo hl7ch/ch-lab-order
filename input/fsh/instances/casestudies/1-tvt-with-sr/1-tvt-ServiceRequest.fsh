@@ -149,7 +149,7 @@ Usage: #example
 * reasonCode.coding.code = #723190009
 * reasonCode.coding.system = $sct
 * reasonCode.coding.display = "Chronic renal insufficiency (disorder)"
-* reasonCode.text = "Patient gets Heparin injections"
+* reasonCode.text = "Limitation of Vit. D Lab Analyse"
 * reasonReference = Reference(ConditionRenalInsufficiency)
 
 * insurance = Reference(HealthInsuranceCardTobiasTimmermann)
