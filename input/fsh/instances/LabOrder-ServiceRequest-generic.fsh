@@ -1,13 +1,13 @@
 Instance: LabOrder-ServiceRequest-generic
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB Service Request for some single test"
-Description: "Example for Service Request single test"
+Title: "CH LAB-ServiceRequest for some single test"
+Description: "Hemoglobin [Moles/volume] in Blood"
 Usage: #example
 * id = "LabOrder-generic"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-hemoglobine-panel"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-hb"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -16,14 +16,17 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#59260-0 "Hemoglobin [Moles/volume] in Blood"
+* code.coding.code = #59260-0
+* code.coding.system = $loinc
+* code.coding.display = "Hemoglobin [Moles/volume] in Blood"
 
-// orderDetails: Additional order information, codeableConcept
+// orderDetails: Additional order information
+// * orderDetail.coding = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
@@ -32,7 +35,7 @@ Usage: #example
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 * supportingInfo = Reference(MedicationStatement/Acetylsalicylat)
-* specimen[0] = Reference(Specimen/Blood) "Blood"
+* specimen[+] = Reference(Specimen/Blood) "Blood"
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Acetylsalicylat
@@ -53,15 +56,15 @@ Usage: #example
 
 Instance: Aspirin
 InstanceOf: Medication
-Title: "Medication: Aspirin"
+Title: "Medication Aspirin"
 Description: "Example of a Medication Product"
 Usage: #example
 * contained = sub02
 * code = $sct#774656009 "Product containing only aspirin (medicinal product)"
 * form = $sct#385055001 "Tablet (basic dose form)"
 * ingredient.itemReference = Reference(sub02)
-* ingredient.strength.numerator = 250 'mg'
-* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+* ingredient.strength.numerator = 250 'mg' "milligram"
+* ingredient.strength.denominator = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 
 Instance: sub02
 InstanceOf: Substance

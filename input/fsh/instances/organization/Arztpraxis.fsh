@@ -2,7 +2,7 @@
 
 Instance: Arztpraxis
 InstanceOf: CHCoreOrganization
-Title: "Organization: Arztpraxis"
+Title: "Organization Arztpraxis"
 Description: "Practice, refers to 2-pertussis and 3-gyn and 6-histopath"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

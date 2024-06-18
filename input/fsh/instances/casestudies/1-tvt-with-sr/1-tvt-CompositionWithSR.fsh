@@ -1,6 +1,6 @@
 Instance: 1-tvt-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "Composition 1-tvt with Service Request"
+Title: "CH LAB-Composition 1-tvt with ServiceRequest"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
 * id = "1-tvt"
@@ -36,5 +36,9 @@ Usage: #example
 * section[orderReferral].title = "Laboratory Order with Service Request 1-tvt"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 1-tvt\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequest)
-
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-0)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-1)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-2)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-3)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-4)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-5)

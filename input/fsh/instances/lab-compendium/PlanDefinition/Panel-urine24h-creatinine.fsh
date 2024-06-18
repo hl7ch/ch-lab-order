@@ -1,6 +1,6 @@
 Instance: panel-urine24h-creatinine
 InstanceOf: PlanDefinition
-Title: "PlanDefinition: 24-hour urine creatinine panel"
+Title: "PlanDefinition 24-hour urine creatinine panel"
 Description: "Creatinine [Mass/time] 24 hour urine panel - 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -21,7 +21,7 @@ Usage: #example
 * name = "UrineCreatininePanel"
 * title = "24-hour urine creatinine panel"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"
 * contact.telecom.system = #url

@@ -1,6 +1,6 @@
 Instance: procedure-vitamin-d-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: Vit. D3"
+Title: "ActivityDefinition Vit. D3"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #de-CH
@@ -10,7 +10,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "VitaminDProcedure"
 * title = "ActivityDefinition: Vit. D3"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-19T14:00:00+02:00"
 * contact.telecom.system = #url

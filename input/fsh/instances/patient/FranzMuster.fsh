@@ -1,6 +1,6 @@
 Instance: FranzMuster
 InstanceOf: CHCorePatient
-Title: "Patient: FranzMuster"
+Title: "Patient FranzMuster"
 Description: "Example for CH-Core-Patient, used in coverage"
 Usage: #example
 * text.status = #additional

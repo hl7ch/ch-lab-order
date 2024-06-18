@@ -1,6 +1,6 @@
 Instance: procedure-crp-highsens-SI
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: CRP highsens SI"
+Title: "ActivityDefinition CRP highsens SI"
 Description: "Procedure C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -11,7 +11,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "CRPMeasurementProcedure"
 * title = "Procedure - CRP measurement on in vitro blood serum - SI-Units"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-01-24T14:00:00+02:00"
 * contact.telecom.system = #url

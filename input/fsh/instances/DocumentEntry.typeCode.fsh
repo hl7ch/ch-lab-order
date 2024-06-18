@@ -1,3 +1,4 @@
+/*
 Instance: DocumentEntry.typeCode
 InstanceOf: $shareableValueSet
 Usage: #example
@@ -63,3 +64,5 @@ Usage: #example
 // * compose.include.concept[=].designation[=].value = "Referto istologico"
 // * compose.include.concept[=].designation[+].language = #en-US
 // * compose.include.concept[=].designation[=].value = "Pathology report"
+
+*/

@@ -1,6 +1,6 @@
 Instance: potassium-serum
 InstanceOf: PlanDefinition
-Title: "PlanDefinition: Serum Potassium"
+Title: "PlanDefinition Serum Potassium"
 Description: "Lab Service for Serum Potassium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -34,7 +34,7 @@ Usage: #example
 * title.extension.extension[=].valueString = "Dosage du potassium sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2023-06-05T20:00:00+02:00"
 * contact.telecom.system = #url

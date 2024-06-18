@@ -53,5 +53,5 @@ Usage: #example
 * entry[=].resource = 3-gyn-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
 * entry[=].resource = 3-gyn-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request-by-form"
-* entry[=].resource = 3-gyn-ServiceRequestByForm
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request"
+* entry[=].resource = 3-gyn-ServiceRequest

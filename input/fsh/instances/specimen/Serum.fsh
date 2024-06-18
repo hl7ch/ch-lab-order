@@ -1,6 +1,6 @@
 Instance: Serum
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample generic"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"

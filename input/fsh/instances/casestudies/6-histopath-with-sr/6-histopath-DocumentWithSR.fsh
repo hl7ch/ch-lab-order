@@ -50,11 +50,6 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Media/skin-dermatoskopy-image" // entry[14] 
 * entry[=].resource = SkinDermatoscopyImage
 
-
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/6-histopath"
-// * entry[=].resource = 6-histopath-Questionnaire
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
-// * entry[=].resource = 6-histopath-QuestionnaireResponse
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request"
 * entry[=].resource = 6-histopath-ServiceRequest
 

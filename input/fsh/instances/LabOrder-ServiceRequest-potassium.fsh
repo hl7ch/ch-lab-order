@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-potassium
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB Service Request for Potassium"
+Title: "CH LAB-ServiceRequest for Potassium"
 Description: "Service Request for Potassium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "LabOrder-potassium"
@@ -16,14 +16,18 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* code.coding.code = #2823-3 
+* code.coding.system = $loinc
+* code.coding.display = "Potassium [Moles/volume] in Serum or Plasma"
 
-// orderDetails: Additional order information, codeableConcept
+// orderDetails: Additional order information
+// * orderDetail.coding = $v2-0119#NW "New order/service"
+
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
@@ -31,5 +35,5 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)

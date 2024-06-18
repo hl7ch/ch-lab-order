@@ -1,7 +1,7 @@
 Instance: LabOrder-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "CH LAB-Order Composition with Service Request"
-Description: "Composition multiple SR whithout Questionnaire/QuestionnaireResponse"
+Title: "CH LAB-Order Composition with ServiceRequest"
+Description: "Composition with ServiceRequest for Potassium"
 Usage: #example
 * id = "ch-lab-order-composition-with-sr"
 * meta.versionId = "1"

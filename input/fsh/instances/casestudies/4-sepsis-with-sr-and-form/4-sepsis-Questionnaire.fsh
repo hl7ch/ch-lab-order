@@ -1,6 +1,6 @@
 Instance: 4-sepsis-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 4-sepsis"
+Title: "CH LAB-Questionnaire 4-sepsis"
 Description: "Example for Laboratory Order Questionnaire for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis"
@@ -157,7 +157,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[+].linkId = "receiver.organization.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
+* item[=].item[=].item[=].definition = "GLNIdentifier"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 
@@ -561,7 +561,7 @@ Usage: #example
 * item[=].item.answerOption[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item.answerOption[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answerOption[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answerOption[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[+].linkId = "microbiology"
 * item[=].text = "Mikrobiologie"
 * item[=].type = #group

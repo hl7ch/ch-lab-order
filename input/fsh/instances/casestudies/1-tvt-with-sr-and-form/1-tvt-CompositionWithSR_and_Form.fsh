@@ -1,6 +1,6 @@
 Instance: 1-tvt-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition by Form 1-tvt"
+Title: "CH LAB-Composition 1-tvt with ServiceRequest and Form"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
 * id = "1-tvt-composition-with-sr-and-form"
@@ -39,6 +39,12 @@ Usage: #example
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 1-tvt\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(1-tvt-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(1-tvt-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(1-tvt-ServiceRequestByForm)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-0)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-1)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-2)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-3)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-4)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(1-tvt-ServiceRequest-5)
+
 
 

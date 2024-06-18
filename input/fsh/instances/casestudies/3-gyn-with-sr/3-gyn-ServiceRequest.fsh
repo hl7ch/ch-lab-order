@@ -1,6 +1,6 @@
 Instance: 3-gyn-ServiceRequest
-InstanceOf: ChOrfServiceRequest
-Title: "laborder 3-gyn"
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 3-gyn"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example
 * id = "3-gyn-service-request"
@@ -9,12 +9,26 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#86662-4 "Pap smear tests - FPAR 2.0 set"
-* code.coding[+] = $loinc#14503-7 "Human papilloma virus 16+18 Ag [Presence] in Cervix"
-* code.coding[+] = $loinc#50556-0 "Urinalysis dipstick panel - Urine by Automated test strip"
-* code.coding[+] = $loinc#24364-2 "Obstetric 1996 Pnl Ser+Bld"
+* code.coding[+].code = #86662-4
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Pap smear tests - FPAR 2.0 set"
+
+* code.coding[+].code = #14503-7
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Human papilloma virus 16+18 Ag [Presence] in Cervix"
+
+* code.coding[+].code = #50556-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Urinalysis dipstick panel - Urine by Automated test strip"
+
+* code.coding[+].code = #24364-2
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Obstetric 1996 Pnl Ser+Bld"
+
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
@@ -22,14 +36,14 @@ Usage: #example
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCardMarinaRubella)
-* specimen[0] = Reference(Specimen/Cervix-swab)
+* specimen[+] = Reference(Specimen/Cervix-swab)
 * specimen[+] = Reference(Specimen/Blood-gyn)
 * specimen[+] = Reference(Specimen/Serum-gyn)
 * specimen[+] = Reference(Specimen/Urine-gyn)
 
 Instance: MarinaRubella
 InstanceOf: CHCorePatient
-Title: "Patient: Marina Rubella"
+Title: "Patient Marina Rubella"
 Description: "CH-Core-Patient, refers to 3-gyn"
 Usage: #example
 * text.status = #additional
@@ -74,10 +88,11 @@ Usage: #example
 * communication.preferred = true
 
 Instance: HealthInsuranceCardMarinaRubella
-InstanceOf: Coverage
-Title: "HealthInsuranceCard"
+InstanceOf: ChOrfCoverage
+Title: "Coverage Marina Rubella"
 Description: "Example for Insurance"
 Usage: #example
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active
@@ -90,7 +105,7 @@ Usage: #example
 
 Instance: PeterPapGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Peter Pap Gruppenpraxis"
+Title: "PractitionerRole Peter Pap Gruppenpraxis"
 Description: "PractitionerRole, refers to 3-gyn"
 Usage: #example
 * practitioner = Reference(Practitioner/PeterPap)
@@ -98,7 +113,7 @@ Usage: #example
 
 Instance: PeterPap
 InstanceOf: CHCorePractitioner
-Title: "Practitioner: Peter Pap"
+Title: "Practitioner Peter Pap"
 Description: "Practitioner, works at Gruppenpraxis, refers to 3-gyn"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -150,7 +165,7 @@ Usage: #example
 
 Instance: Serum-gyn
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample 3-gyn"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"

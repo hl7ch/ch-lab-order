@@ -1,6 +1,6 @@
 Instance: 1-tvt-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "Questionnaire Response 1-tvt by Form"
+Title: "CH LAB-QuestionnaireResponse 1-tvt"
 Description: "Example for Questionnaire Response due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt"
@@ -282,7 +282,7 @@ Usage: #example
 * item[=].item.answer[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
 * item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[=].item.answer[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = $loinc#57023-4 "Auto Differential panel - Blood"
+* item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
 * item[+].linkId = "coagulation"
 * item[=].text = "Coagulation"
 * item[=].item.linkId = "d-dimer"

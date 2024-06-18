@@ -1,6 +1,6 @@
 Instance: EvaErlenmeyer
 InstanceOf: CHCorePractitioner
-Title: "Practitioner: Eva Erlenmeyer"
+Title: "Practitioner Eva Erlenmeyer"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"

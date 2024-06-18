@@ -1,6 +1,6 @@
 Instance: 3-gyn-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 3-gyn"
+Title: "CH LAB-Questionnaire 3-gyn"
 Description: "Example for Laboratory Order Questionnaire for gynaecological check-up"
 Usage: #example
 * id = "3-gyn"
@@ -156,7 +156,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[+].linkId = "receiver.organization.gln"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization-definitions.html#Organization.identifier:GLN"
+* item[=].item[=].item[=].definition = "GLNIdentifier"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 

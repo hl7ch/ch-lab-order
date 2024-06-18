@@ -1,6 +1,6 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance
 InstanceOf: ChLabOrderSRContainer
-Title: "CH LAB Service Request for Creatinine clearance"
+Title: "CH LAB-ServiceRequest for Creatinine clearance"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinen"
 Usage: #example
 * id = "LabOrder-creatinine-clearance"
@@ -22,12 +22,14 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
+* code.coding.code = #2164-2
+* code.coding.system = $loinc
+* code.coding.display = "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
 
 // orderDetails: Additional order information, codeableConcept
 
@@ -39,12 +41,12 @@ Usage: #example
 * insurance = Reference(HealthInsuranceCard)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Diclofenac
 InstanceOf: MedicationStatement
-Title: "MedicationStatement: Diclofenac Verordnung"
+Title: "CH CoreMedicationStatement: Diclofenac Verordnung"
 Description: "Medication Record: Diclofenac"
 Usage: #example
 * status = #active
@@ -60,15 +62,17 @@ Usage: #example
 
 Instance: Voltaren
 InstanceOf: Medication
-Title: "Medication: Voltaren(product)"
+Title: "Medication Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #example
 * contained = sub01
 * code = $sct#775563008 "Product containing only diclofenac (medicinal product)"
+* code.text = "VOLTAREN Drag 50 mg"
 * form = $sct#385055001 "Tablet (basic dose form)"
 * ingredient.itemReference = Reference(sub01)
-* ingredient.strength.numerator = 50 'mg'
-* ingredient.strength.denominator = 1 http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm#TAB
+// * ingredient.strength.numerator = 50 'mg'
+* ingredient.strength.numerator = 50 'mg' "milligram"
+* ingredient.strength.denominator = 1 http://snomed.info/sct#732936001 "Tablet (unit of presentation)"
 
 Instance: sub01
 InstanceOf: Substance
@@ -78,7 +82,7 @@ Usage: #inline
 
 Instance: Renal-insufficiency
 InstanceOf: Condition
-Title: "Condition: Renal Insuffiency"
+Title: "Condition Renal Insuffiency"
 Description: "Problem or Diagnosis from problem list: Renal Insuffiency"
 Usage: #example
 * identifier.value = "12345"

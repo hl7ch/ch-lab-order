@@ -10,13 +10,13 @@
 
 #### Laboratory Order with Service Request
 
-This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electronic Medical Records (EMR) systems can send an electronic laboratory order to a Laboratory Information System (the order filler of a LIS). The analyses that are requested are available as code and as text in the ServiceRequest resource. This resource contains further important information about the requester and performer, the reason for the order, the medication, the conditions (the clinical context), the insurance and the material sample. This specimen ressource, in turn, contains information about the collection, the processing details, any required additives, and the container type to be used, among other things. So all the necessary information for executing the laboratory order is available for the receiving laboratory, and there is no necessity for a Questionnaire and QuestionnaireResponse resource. This quite common use case primarily occurs in hospitals that operate their own medical laboratory.
+This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electronic Medical Records (EMR) systems can send an electronic laboratory order to a Laboratory Information System (the order filler of a LIS). This laboratory order consists of a FHIR bundle resource of type 'document' with the necessary information about the patient, his medication and his conditions (the clinical context), the ordering practitioner, the organization, the laboratory, etc. The analyses that are requested are available as code and as text in the ServiceRequest resource. This resource contains further important information about the reason for the order, the payer, and the material sample. This specimen resource, in turn, contains information about the collection, the processing details, any required additives, and the container type to be used, among other things. So all the necessary information for executing the laboratory order is available for the receiving laboratory, and there is no necessity for a Questionnaire and QuestionnaireResponse resource. This quite common use case primarily occurs in hospitals that operate their own medical laboratory.
 
 [CH Core (R4) profiles](https://fhir.ch/ig/ch-core/index.html) and [CH EPR Term](https://fhir.ch/ig/ch-epr-term/2.0.9/index.html) are used to take account of national requirements.
 
-#### Laboratory Order with Service Request and Form
+#### Laboratory Order with Service Request and Form (optional)
 
-There is another use case in which the commissioning laboratory provides the client with a form, similar to how laboratories forms are used to serve clients with paper-based forms. The lab order takes the form of a FHIR bundle resource of type 'document' and uses the CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html> to structure the administrative data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author).This situation is implemented here using CH ORF (R4), Order & Referral by Form - Implementation Guide <http://fhir.ch/ig/ch-orf/index.html> to structure the administrative data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author). It includes the two resources Questionnaire (form) and QuestionnaireResponse (completed form) in the document in addition to the ServiceRequest resource. CH-ORF (R4) Implementation Guide uses the FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) to offer forms with pre-filled fields and selectable ValueSets.
+There is another use case in which the commissioning laboratory provides the client with a form, similar to how laboratories forms are used to serve clients with paper-based forms. The lab order appears again as a FHIR bundle resource of type 'document'. This situation is implemented here using [CH ORF (R4), Order & Referral by Form - Implementation Guide](http://fhir.ch/ig/ch-orf/index.html) to structure the input of the administrative and clinical data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author, tests, specimen etc). It includes the two resources Questionnaire (form) and QuestionnaireResponse (completed form) in the document in addition to the ServiceRequest resource. CH-ORF (R4) Implementation Guide uses the FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) to offer forms with pre-filled fields and selectable ValueSets.
 
 #### Download
 
@@ -24,26 +24,28 @@ You can download this Implementation Guide in [NPM-format](https://confluence.hl
 
 ### Foundation
 
+Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardised order interface is the more favourable solution in the long run.
+
 #### Laboratory order with Service Request
 
-This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc.). A section element has an entry with the Service request reference.
+This implementation Guide uses FHIR Resources. The complete laboratory order is a bundle resource of type document. The first entry is the composition containing the structured data of the order (status, type, category, subject, encounter, date, author, confidentiality, attester etc). A section element has an entry with the Service request reference.
 
-The ServiceRequest may instantiate a ActivityDefinition, a coded procedure to execute a single laboratory test (e.g. Sodium concentration in Serum), or to execute an entire test panel (e.g. concentration of Electrolytes in Serum). Using a ServiceRequest Container we can reference to other ServiceRequest Containers or to Single Test Service Requests.
+The ServiceRequest may instantiate an ActivityDefinition, a coded procedure to execute a single laboratory test (e.g. Sodium concentration in Serum), or to execute an entire test panel (e.g. concentration of Electrolytes in Serum). Using a ServiceRequest Container we can reference to other ServiceRequest Containers or to Single Test Service Requests.
 
 #### Laboratory order with Service Request and Form
 
-The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured form.
+The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured way.
 
-### Management Summary
+### Requirements
 
-The lab-order system should define the structure of the lab-order so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
+The lab-order should define the structure of the order details so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
 
-1. The partly or fully filled electronic order should be safeble in the order filler system (practice system, clinic system), so it can be changed until the samples are scanned by the receiver laboratory.
+1. The partly or fully filled electronic order should be storable in the order placer system (practice system, hospital system), so it can be changed until the samples are scanned by the receiver laboratory.
 
 2. Data about practitioner, patient and treatment should be transferable to the electronic order.
 
-3. In the electronic order system all available analyses should be presentable, a search option should be available. The content of panels should be visible.
-   * The the electronic order system should contain analyses and test-panels. Groups of tests, e.g. for "blood count" are usually requested as panels. They are split into service requests for single analyses in the ServiceRequest Container. If the LIS (Laboratory Information System) knows the components of the panels, it can do the splitting itself.
+3. In the electronic order all available analyses should be presentable, a search option should be available. The content of panels should be visible.
+   * The the electronic order should contain analyses and test-panels. Groups of tests, e.g. for "blood count" are usually requested as panels. They are split into service requests for single analyses in the ServiceRequest Container. If the LIS (Laboratory Information System) knows the components of the panels, it can do the splitting itself.
 
 4. Analyses, Sample type, required Sample additives and preanalytic handling should be presented to the order filler.
 
@@ -53,15 +55,13 @@ The lab-order system should define the structure of the lab-order so it can be u
 
 5. The electronic order should be able to handle the request of analyses for samples that were sent at an earlier point of time.
 
-6. The electronic order system should receive updates on the process of the laboratory analyses: as sample received in laboratory, first results available, report finished. [Domain of Lab-Report for a System dealing with Forms].
+6. The electronic order should receive updates on the process of the laboratory analyses: as sample received in laboratory, first results available, report finished [Domain of Lab-Report].
 
    * The status of the order at the practitionor site should be supported as well: new order, replaced order (enhanced or partly deleted), printed sample lables, documentation of blood take (additional Information as urine volume and Date and Time of withdrawl of blood).
 
-   * Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardised order system is not the more favourable solution in the long run.
-
 ### Six Case studies with examples for the Order Document
 
-Using specific case histories, we have created five everyday examples of commissioned documents. These are requirements of examinations in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The last example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
+Using concrete case studies, we have created six everyday examples of documents that contain a laboratory order. These are requirements of laboratory analyses in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
 
 ### Copyright
 

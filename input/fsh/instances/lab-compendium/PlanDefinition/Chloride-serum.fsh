@@ -1,6 +1,6 @@
 Instance: chloride-serum
 InstanceOf: PlanDefinition
-Title: "Plandefinition: Chloride measurement on in vitro blood serum"
+Title: "PlanDefinition Chloride measurement on in vitro blood serum"
 Description: "Lab Service of Pipette Lab for Serum Chloride"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -34,7 +34,7 @@ Usage: #example
 * title.extension.extension[=].valueString = "Konzentration Chlorid Serum"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2023-06-05T20:00:00+02:00"
 * contact.telecom.system = #url

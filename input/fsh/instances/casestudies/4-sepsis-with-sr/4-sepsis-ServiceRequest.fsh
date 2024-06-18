@@ -1,25 +1,47 @@
 Instance: 4-sepsis-ServiceRequest
-InstanceOf: ChOrfServiceRequest
-Title: "Service Request 4-sepsis"
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * id = "4-sepsis-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-* code.coding[+] = $loinc#90423-5 "Microorganism preliminary growth detection panel - Blood by Culture"
-* code.coding[+] = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[+].code = #24360-0 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+
+* code.coding[+].code = #43113-0 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
+
+* code.coding[+].code = #57021-8 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC W Auto Differential panel - Blood"
+
+* code.coding[+].code = #58410-2 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+
+
+* code.coding[+].code = #90423-5
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
+
+* code.coding[+].code = #85421-6 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Bacterial identification and susceptibility panel - Isolate"
+
+* code.coding[+].code = #1988-5 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * status = #active
 * intent = #original-order
 * priority = #urgent
@@ -28,13 +50,13 @@ Usage: #example
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[0] = Reference(Specimen/Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/Blood-bactec-plus)
 * specimen[+] = Reference(Specimen/Blood-sepsis)
 * specimen[+] = Reference(Specimen/Urine-sepsis)
 
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
-Title: "Sara Speckmann"
+Title: "Patient Sara Speckmann"
 Description: "CH-Core-Patient, refers to 4-sepsis"
 Usage: #example
 * text.status = #additional
@@ -64,67 +86,12 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-Instance: HansHauserKantonsspital
-InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Hans Hauser Kantonsspital"
-Description: "PractitionerRole"
-Usage: #example
-* practitioner = Reference(Practitioner/HansHauser)
-* organization = Reference(Organization/Kantonsspital)
-
-Instance: HansHauser
-InstanceOf: CHCorePractitioner
-Title: "Practitioner: Hans Hauser"
-Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
-Usage: #example
-* identifier[GLN].system = "urn:oid:2.51.1.3"
-* identifier[GLN].value = "7601000050700"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123313"
-* name.use = #official
-* name.family = "Hauser"
-* name.given = "Hans"
-* name.prefix = "Dr. med."
-* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-* name.prefix.extension.valueCode = #AC
-* telecom[0].system = #phone
-* telecom[=].value = "038 888 22 11"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "hans.hauser@gruppenpraxis.ch"
-* telecom[=].use = #work
-
-Instance: Kantonsspital
-InstanceOf: CHCoreOrganization
-Title: "Organization: Kantonsspital"
-Description: "Example for Hospital"
-Usage: #example
-* identifier[GLN].system = "urn:oid:2.51.1.3"
-* identifier[GLN].value = "7601000235503"
-* name = "Kantonsspital Zug"
-* telecom[0].system = #phone
-* telecom[=].value = "+41 45 334 55 66"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "info@kantonsspital.zug.ch"
-* telecom[=].use = #work
-* telecom[+].system = #url
-* telecom[=].value = "http://www.kanstonsspital.zug.ch"
-* telecom[=].use = #work
-* address.use = #work
-* address.line[0] = "Seestrasse 14"
-* address.line[+] = "Postfach 14"
-* address.city = "Zug"
-* address.postalCode = "8000"
-* address.country = "Schweiz"
-
-
-
 Instance: HealthInsuranceCardSaraSpeckmann
-InstanceOf: Coverage
-Title: "Coverage: HealthInsuranceCard Sarah Speckmann"
+InstanceOf: ChOrfCoverage
+Title: "Covarage HealthInsuranceCard Sarah Speckmann"
 Description: "Example for Insurance"
 Usage: #example
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active

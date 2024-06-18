@@ -1,10 +1,12 @@
 // Terminologies, CodeSystems
 Alias:  $sct                           = http://snomed.info/sct
 Alias:  $loinc                         = http://loinc.org
+Alias:  $ucum                          = http://unitsofmeasure.org
 Alias:  $atc                           = http://www.whocc.no/atc
 Alias:  $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:  $v2-0038                       = http://terminology.hl7.org/CodeSystem/v2-0038  // orderStatus
 Alias:  $v2-0074                       = http://terminology.hl7.org/CodeSystem/v2-0074  // diagnosticServiceSectionId
+Alias:  $v2-0119                       = http://terminology.hl7.org/CodeSystem/v2-0119  // order control codes
 Alias:  $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371
 Alias:  $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2-0373
 Alias:  $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
@@ -23,11 +25,12 @@ Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/c
 Alias:  $substance-category            = http://terminology.hl7.org/CodeSystem/substance-category 
 Alias:  $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
 Alias:  $coverage-type                 = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype // must by a CS!
+Alias:  $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype
 Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias:  $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 Alias:  $shareablevalueset             = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
-Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
+// Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
 // Alias:  $L-Forms                       = http://terminology.hl7.org/3.1.0/CodeSystem/forms-codes
 
 // ---- Patient
@@ -43,9 +46,7 @@ Alias:  $hcSpecialisation              = http://fhir.ch/ig/ch-epr-term/ValueSet/
 // Order
 Alias:  $request-priority              = http://hl7.org/fhir/request-priority
 Alias:  $servicerequest-categories     = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
-Alias:  $shareableValueSet             = http://hl7.org/fhir/StructureDefinition/shareablevalueset
-Alias:  $documentEntryClassCode        = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
-Alias:  $documentEntryTypeCode         = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
+
 
 // Encounter, appointment
 Alias:  $CHCoreCSEncounterType         = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype

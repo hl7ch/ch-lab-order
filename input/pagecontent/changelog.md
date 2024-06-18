@@ -4,6 +4,15 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues for STU 3
 
+* [Issue#314](https://github.com/hl7ch/ch-lab-order/issues/314) Profile : ChLabOrderMedication -> Parent: Medication, Profile: MedicationStatement -> CHCoreCHCoreMedicationStatement, Profile: ChLabOrderDiagnosisCondition -> Parent: Condition
+
+* [Issue#313](https://github.com/hl7ch/ch-lab-order/issues/313) ch.fhir.ig.ch-lab-order#2.0.0-ballot /terminology.html -- replaced status = #draft with status = #active in all occurrencies
+
+* [Issue#312](https://github.com/hl7ch/ch-lab-order/issues/312) Rename ChLabOrderLabSpecialies to ChLabOrderLabStudyTypes, change title to "Laboratory Study Types". Translate all Titles of ValueSets to english.
+
+* [Issue#311](https://github.com/hl7ch/ch-lab-order/issues/311) removed from Aliases.fsh:
+Alias:  $documentEntryClassCode, Alias:  $documentEntryTypeCode
+
 * [Issue#296](https://github.com/hl7ch/ch-lab-order/issues/296) Add task resource to enable workflow communication
 
 * [Issue #260](https://github.com/hl7ch/ch-lab-order/issues/260) Using Laboratory Catalogue
@@ -78,12 +87,23 @@ correct assignment of the patient identification number. In principle, several i
 
 #### Issues resolved without amendment
 
+* removed not used ValuSets
+* put serviceRequest.categories into ChLabOrderSR, replace it's value with fixed value 'Laboratory procedure (procedure)' for all ServiceRequests.
+* replace in casestudies parent ChOrfServiceRequest with ChLabOrderSR
+* reset dependencies ch.fhir.ig.ch-orf: current to 2.0.1
+* reset dependencies ch.fhir.ig.ch-core: current to 4.0.1
+* adapt profiles to Condition, DiagnosisCondition, Medication, MedicationStatement
+
 ##### usecases-german.md
 
-* Replace: Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe with Use Case 2: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
-
+* Replace: Use Case 2: Verordnung zusätzlicher Untersuchungen der gleichen Probe with Use Case 9: Laborverordnung ohne Verwendung von Questionnaire und QuestionnaireResponse
 * Add example:  Use Case 6: Vorschlag von zusätzlichen oder alternativen Untersuchungen durch den Laborarzt (Auftragsempfänger, receiver)
-
 * Modify: Use Case 4: Anfordern von vorhandenen Laborresultaten und Bildern.
-
 * Remove: Use Case 9: Anfordern von Monitoring-Untersuchungen (nicht empfohlen)
+* Add orderDetail into Profile ChLabOrderSR to handle orderControlCode
+* Add orderControl valueSet
+* Modify example in Use Case 2: add orderDetail
+
+### Discouraged LOINC codes
+
+ * replace all 'Auto Differential panel - Blood' with 'CBC W Auto Differential panel - Blood'

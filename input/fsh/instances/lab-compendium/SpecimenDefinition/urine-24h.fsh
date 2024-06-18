@@ -1,6 +1,6 @@
 Instance: urine-24h
 InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition: 24 h Urin"
+Title: "SpecimenDefinition 24 h Urin"
 Description: "24 Stunden Urin"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"

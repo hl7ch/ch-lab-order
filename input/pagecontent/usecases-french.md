@@ -1,102 +1,91 @@
 <!-- markdownlint-disable MD001 MD033 MD041 -->
 <!--
-╭───────────────────── UC -german ──────────────────────────╮
-│  UC - english is original, this is a traduction           │
+╭───────────────────── UC-french  ──────────────────────────╮
+│  UC-english is original, german and french are dependent  │
 ╰───────────────────────────────────────────────────────────╯
 -->
+### Cas d'application 1: Générer un document d'ordre de laboratoire
 
-### Cas d'utilisation 1: Commande de laboratoire
+{% include img.html img="LabOrderWorkflow.svg" caption="Fig.: Commande de laboratoire et flux de travail des tests" width="60%" %}
 
-Le client (par exemple, un médecin) nécessite divers examens de laboratoire pour des diagnostics ultérieurs. Il crée un document de commande dans son système d'enregistrement médical électronique (EMR), qui contient les données administratives structurées conformément au guide de mise en œuvre CH ORF et dont le contenu est disponible dans l'EMR. À partir des analyses fournies par le LIS, il peut sélectionner celles qui l'aident dans sa question, et il peut également déterminer les échantillons correspondant aux analyses. Par exemple, il souhaite faire analyser la glycémie dans le sang et le liquide céphalorachidien. Le système de laboratoire peut stocker les informations sur les contenants nécessaires et les éventuels additifs dans le système. Les conditions préanalytiques sont spécifiées. Le document de commande est envoyé au système d'information de laboratoire (LIS).
+#### Document de commande de laboratoire avec demande de service
 
-Il peut également ajouter des informations sur le contexte clinique à la commande de laboratoire : liste des problèmes, liste des médicaments en cours, questions sur les analyses prescrites.
+Le client (par exemple un médecin) a besoin de divers tests de laboratoire pour compléter le processus de diagnostic. Il crée un document de commande dans son système de dossiers médicaux électroniques (DME), qui contient les données administratives structurées conformément au guide de mise en œuvre du CH Core et dont le contenu est disponible dans le DME. Parmi les analyses fournies par le SIL, il peut sélectionner celles qui l'aident à répondre à sa question, et il peut également déterminer les échantillons correspondant aux analyses. Par exemple, il veut faire analyser le glucose dans le sang et le liquide céphalo-rachidien. Le système de laboratoire peut stocker les informations sur les récipients d'échantillons requis et les additifs éventuels dans le système. Les conditions pré-analytiques sont spécifiées.
 
-Document d'exemple: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document.html)
+Il peut de plus ajouter des informations sur le contexte clinique à la commande du laboratoire : liste des problèmes, liste des médicaments en cours, questions sur les analyses prescrites.
 
-### Cas d'utilisation 2: Laboratoire Commande par Formulaire
+Le document de commande est envoyé au système d'information du laboratoire (LIS).
 
-Le donneur d'ordre (par ex. le médecin) a besoin de différents examens de laboratoire pour la suite du diagnostic. Pour ce faire, il crée dans le système d'information de son cabinet un document de commande contenant les informations nécessaires sur le patient, le test de laboratoire, les échantillons, etc. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien) sont collectés dans des récipients correspondants et clairement attribués au document de commande (Specimen.identifier, Specimen.container.identifier). Les échantillons peuvent être analysés dans le laboratoire de l'entreprise ou doivent être envoyés par courrier ou par coursier au laboratoire externe. Le système d'information du laboratoire leur attribue alors un identifiant propre (Specimen.accessionIdentifier).
+Exemple de document de commande par ServiceRequest: [CH LAB-Order 0-best-practice](Bundle-0-best-practice-document-with-sr.html)
 
-Un formulaire (Questionnaire) est présenté au donneur d'ordre, qui contient les informations suivantes :
+#### Document de commande de laboratoire avec demande de service et formulaire
 
-* métadonnées de la commande
-* Données relatives à l'ordre (order)
-* Données sur le destinataire de la commande (receiver)
-* Données relatives au patient
-* Données relatives au donneur d'ordre (sender)
-* Indications sur les éventuels destinataires d'une copie des résultats (receiverCopies)
-* Indications sur la spécialité du laboratoire (lab specialty)
-* Indications sur les examens demandés
+Le client (par exemple, le médecin) a besoin de divers tests de laboratoire pour un diagnostic plus approfondi. À cette fin, il crée un document de commande dans le système d'information de son cabinet, avec les informations nécessaires sur le patient, le test de laboratoire, les échantillons, etc. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien, etc.) sont stockés dans les documents de commande correspondants. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien) sont collectés dans des récipients appropriés et clairement affectés au document de commande (Specimen.identifier, Specimen.container.identifier). Les échantillons peuvent être examinés dans le propre laboratoire ou doivent être envoyés par courrier ou par service de messagerie au laboratoire externe. Là, le système d'information du laboratoire leur attribue leur propre identifiant (Specimen.accessionIdentifier).
 
-* Indications sur le matériel d'échantillon, Specimen
-  * Type : par exemple sérum, sang total, liquide céphalorachidien
-  * Subject:Référence au patient
-  * Collection : Indications sur le prélèvement, l'heure de prélèvement, la quantité, la méthode, le site de prélèvement (par ex. bras droit), la période de jeûne.
-  * Conteneur, récipient : Identifier, Type
-  * et autres
+Un formulaire (Questionnaire) est présenté au client, qui contient les informations suivantes :
 
-* Données relatives au service demandé
-  * Servicerequest.category est RequestForLabExam
-  * Question, motif de l'examen (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
-  * organisme payeur (caisse maladie, assurance accident, etc.)
-  * et autres
+* Métadonnées de la commande
+* Informations sur la commande
+* Informations sur le destinataire de la commande (receiver)
+* Informations sur le patient
+* Informations sur le donneur d'ordre (expéditeur)
+* Informations sur les destinataires éventuels d'une copie des résultats (receiverCopies)
+* Informations sur la spécialité du laboratoire
+* Informations sur les examens demandés
 
-En dehors de ce cas d'utilisation : les résultats sont ensuite communiqués au donneur d'ordre.
-
-Document d'exemple: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
-
-### Cas d'utilisation 3: Demande d'analyses supplémentaires du même échantillon
-
-Il n'est pas rare que les résultats d'examens de laboratoire conduisent à demander d'autres tests sur le même échantillon. Ainsi, dans l'exemple 1-tvt, une thrombophilie veineuse peut être suspectée, de sorte que d'autres examens de laboratoire peuvent trouver des causes héréditaires telles que la mutation du facteur V de Leiden, la mutation du gène de la prothrombine, le déficit en antithrombine, etc.
+* Informations sur le matériau de l'échantillon, Spécimen
+  * Type : par exemple, sérum, sang total, liquide céphalo-rachidien
+  * Sujet : référence au patient
+  * Prélèvement : informations sur le prélèvement, l'heure du prélèvement, la quantité, la méthode, le site de prélèvement (par exemple, bras droit), la période de jeûne.
+  * Conteneur, récipient : identifiant, type
+  * et autres informations
 
 * Informations sur le service demandé
-  * Dans le ValueSet Servicerequest.category, RequestForAdditionalExam est sélectionné.
+  Information sur le service demandé : * service request.category is RequestForLabExam
+  * Question, raison de l'investigation (ServiceRequest.reasonCode, ServiceRequest.reasonReference)
+  * payeur (assurance maladie, assurance accident, etc.)
+  * et plus encore.
 
-### Cas d'utilisation 4: Demande de résultats de laboratoire et d'images existants
+Exemple de document de commande par formulaire: [CH LAB-Order 1-tvt by Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
-Parfois, le médecin souhaite également obtenir des informations sur les analyses de laboratoire antérieures, par exemple pour évaluer la tendance de l'antigène prostatique spécifique (PSA). Cette question n'est pas abordée ici.
+### Cas d'application 2: Demande de tests supplémentaires sur le même échantillon
 
-### Cas d'utilisation 5: Demande collective d'essais toxicologiques (surveillance biologique)
+Il n'est pas rare que les résultats des tests de laboratoire conduisent à demander des tests supplémentaires sur le même échantillon. Ou bien les analyses de laboratoire internes sont complétées par d'autres tests qui ne peuvent être effectués que dans un laboratoire externe.
 
-Ce cas d'utilisation correspond à l'exemple 5-biol-monit. Pour évaluer l'exposition des travailleurs aux substances chimiques, des mesures sur le lieu de travail sont complétées par des examens préventifs de la médecine du travail. Il est possible de déterminer les agents toxiques eux-mêmes ou leurs métabolites dans le sérum ou l'urine. La demande est lancée par le médecin du travail de l'entreprise ou de l'assurance. Il faut garder à l'esprit la problématique des fluctuations du personnel.
+Dans l'exemple 2-pertussis, les analyses de laboratoire internes (numération sanguine automatisée, CRP) sont complétées par une recherche d'ADN de Bordetella pertussis et parapertussis dans le prélèvement de gorge, effectuée par un laboratoire contractuel externe, afin d'exclure la coqueluche.
 
-En voici quelques exemples :
+Lorsque le système de placement demande des tests supplémentaires pour les échantillons existants, il copie la demande de service originale, ajoute les tests de laboratoire requis et un code de commande 'RP', qui signifie une demande de remplacement d'une commande ou d'un service. Une règle invariante spéciale "sr-1" garantit la création d'une référence à la demande de service originale.
 
-* Médecine du travail : commande d'analyses de laboratoire pour un groupe d'ouvriers.
-  * ServiceRequest.subject fait référence à un groupe
-  * ServiceRequest.specimen fait référence à plusieurs échantillons (0 .. *)
-* Industrie alimentaire : enquête sur l'hygiène des employés (p.ex. contamination par salmonelles)
+Les codes de commande peuvent par ailleurs être utilisés pour annuler, mettre en attente ou libérer des demandes de commande mises en attente. Dans ce cas, la référence à l'ordre original doit être créée.
+
+* La demande de 2-pertussis-ServiceRequest est remplacée par la demande de service
+* 2-pertussis-ServiceRequest-add-test, qui demande l'examen du prélèvement de gorge à la recherche de l'ADN de la coqueluche ou de la para-coqueluche.
+
+Exemple de demande de service référencée : [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html), le code de l'élément 'orderDetail' serait 'NW' pour "New order/service", ou l'élément pourrait être complètement omis.
+
+Exemple de demande de remplacement de service : [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
+La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : 'RP' pour "Order/service replace request", 'CA' pour "Cancel order/service request", 'HD' pour "Hold order request", et 'RL' pour "Release previous hold"
+
+### Cas d'application 3: Demande collective d'essais toxicologiques (surveillance biologique)
+
+Ce cas d'application correspond à l'exemple 5-biol-monit. Afin d'évaluer l'exposition des travailleurs aux substances chimiques, les mesures sur le lieu de travail sont complétées par des examens de santé au travail. Les substances toxiques elles-mêmes ou leurs métabolites dans le sérum ou l'urine peuvent être déterminés. La demande est initiée par le médecin du travail de l'entreprise ou de la compagnie d'assurance. Le problème des fluctuations des employés doit être pris en compte.
+
+Voici quelques exemples :
+
+* Médecine du travail : demande d'analyses de laboratoire pour un groupe de travailleurs
+  * ServiceRequest.subject se réfère à un groupe
+  * ServiceRequest.specimen se réfère à plusieurs échantillons (0 .. *)
+* Industrie alimentaire : enquête sur l'hygiène des employés (par exemple, contamination par la salmonelle)
 * Enquêtes de police
 
-Exemple de formulaire : [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html). Des listes de travail sont traitées, qui s'étendent sur une longue période (jours/semaines). En règle générale, certains examens sont demandés pour plusieurs patients.
+Les listes de travail sont traitées sur une période plus longue (jours/semaines). En général, des examens spécifiques sont demandés pour plusieurs patients.
 
-### Cas d'utilisation 6: Suggestion d'examens supplémentaires ou alternatifs par le médecin de laboratoire (destinataire de l'ordonnance)
+Exemple de document de commande avec ServiceRequest : [CH LAB-Order 5-biol-monit](Bundle-5-biol-monit-document-with-sr.html).
 
-Après réception et traitement de l'ordonnance du laboratoire, il peut arriver que le médecin du laboratoire souhaite suggérer à l'auteur de l'ordonnance des examens complémentaires ou alternatifs. Il peut utiliser le document de commande reçu à cette fin, échanger les données personnelles de l'expéditeur et du destinataire par l'intermédiaire de son système d'information et le renvoyer avec les suggestions d'examens de laboratoire supplémentaires ou alternatifs.
+Exemple de document de commande avec ServiceRequest et Formulaire: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-with-sr-and-form.html).
+
+### Cas d'application 4: Suggestion d'examens supplémentaires ou alternatifs par le médecin de laboratoire (destinataire de l'ordonnance, récepteur)
+
+Après réception et traitement de l'ordonnance du laboratoire, il peut arriver que le médecin du laboratoire souhaite suggérer à l'auteur de l'ordonnance des examens supplémentaires ou alternatifs. Il peut utiliser le document de commande reçu à cette fin, échanger les données personnelles de l'expéditeur et du destinataire par l'intermédiaire de son système d'information et le renvoyer avec les suggestions d'examens de laboratoire supplémentaires ou alternatifs.
 
 * ServiceRequest.category : ProposalForAdditionalExam
-
-### Cas d'utilisation 7: Constatations et données complémentaires sur l'état de santé du patient
-
-Si cela présente un intérêt particulier pour l'interprétation de l'examen prescrit, il doit être possible d'inclure d'autres données sur l'état de santé du patient dans la commande du laboratoire. Il s'agit de résultats existants, de rapports médicaux et de documents.
-
-* ServiceRequest.reasonCode ServiceRequest.reasonReference
-
-### Cas d'utilisation 8: Informations sur l'échantillon, pré-analytique
-
-Pour certains tests, la commande et l'échantillon ne suffisent pas à déterminer le résultat du laboratoire. Dans ce cas, des observations sur le prélèvement de l'échantillon doivent être fournies au laboratoire. La détermination de la clairance de la créatinine dans les urines de 24 heures en est un exemple. À cette fin, le laboratoire doit connaître la quantité d'urine collectée au cours d'une certaine période. Le donneur d'ordre fournit donc au laboratoire le volume d'urine, ainsi qu'un échantillon d'urine et de sérum.
-
-* Quantité d'urine collectée : Specimen.collection.quantity.
-
-* Début et fin de la collecte d'urine : Specimen.collection.collected[collectedPeriod] - start - end
-
-Un autre exemple est le test de fonction Synacthène (ACTH), où un échantillon de sang basal est prélevé le matin à jeun, suivi immédiatement par l'injection de Synacthène, et un second échantillon de sang est prélevé une heure plus tard.
-
-* Échantillon de sérum basal à jeun et administration de Synacthène (ACTH) : Specimen.collection.collected[collectedDateTime], un second échantillon est prélevé 60 minutes plus tard : Specimen.collection.collected[collectedDateTime]
-
-### Cas d'utilisation 9: Informations complémentaires sur le contexte de l'échantillon
-
-Pour les analyses des gaz du sang, la quantité d'oxygène administrée au patient est un sujet de préoccupation.
-
-* ServiceRequest.reasonReference (Condition | Observation | DiagnosticReport)
-* ServiceRequest.supportingInfo, par exemple O2 4 litres/min.

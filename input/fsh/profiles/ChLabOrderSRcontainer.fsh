@@ -8,7 +8,7 @@ Description: "Definition for ServiceRequest Container in the context of CH LAB-O
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
 
 * ^version = "0.9.0"
-* ^status = #draft
+* ^status = #active
 * ^date = "2019-02-05"
 * ^publisher = "HL7 Switzerland"
 * ^contact[0].name = "HL7 Switzerland"

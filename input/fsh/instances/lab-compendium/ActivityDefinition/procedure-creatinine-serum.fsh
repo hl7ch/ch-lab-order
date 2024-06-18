@@ -1,6 +1,6 @@
 Instance: procedure-creatinine-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: Serum Creatinine"
+Title: "ActivityDefinition Serum Creatinine"
 Description: "Procedure Creatinine [Mass/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -9,7 +9,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "UrineCreatinineProcedure"
 * title = "Procedure - serum creatinine - venous blood"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-13T12:00:00+01:00"
 * contact.telecom.system = #url

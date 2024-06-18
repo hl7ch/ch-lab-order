@@ -1,7 +1,7 @@
 Instance: LabOrder-ServiceRequest-electrolytes
 InstanceOf: ChLabOrderSRContainer
-Title: "CH LAB Service Request for Electrolytes in Serum"
-Description: "Service Request as container for multiple Service Requests"
+Title: "Service Request as container for multiple Service Requests"
+Description: "CH LAB-ServiceRequest for Electrolytes in Serum"
 Usage: #example
 * id = "LabOrder-electrolytes"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -23,7 +23,7 @@ Usage: #example
 
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)
@@ -31,5 +31,5 @@ Usage: #example
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
 * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/Serum) "Serum specimen"
+* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)

@@ -1,6 +1,6 @@
 Instance: 2-pertussis-ServiceRequest
-InstanceOf: ChOrfServiceRequest
-Title: "CH LAB-Service Request 2-pertussis"
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * id = "2-pertussis-service-request"
@@ -9,10 +9,22 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#1988-5 "C reactive protein [Mass/Volume] in Serum or Plasma"
+* code.coding[0].system = $loinc
+* code.coding[=].code = #58410-2
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+* code.text = "Laboratory Order"
+* code.coding[+].system = $loinc
+* code.coding[=].code = #1988-5 
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
@@ -20,13 +32,13 @@ Usage: #example
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCardEmilKummer)
-* specimen[0] = Reference(Specimen/Throat-swab-2-pertussis)
+* specimen[+] = Reference(Specimen/Throat-swab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
 Instance: EmilKummer
 InstanceOf: CHCorePatient
-Title: "Patient: Emil Kummer"
+Title: "Patient Emil Kummer"
 Description: "CH-Core-Patient, refers to 2-pertussis"
 Usage: #example
 * text.status = #additional
@@ -56,7 +68,7 @@ Usage: #example
 
 Instance: PeterPrestoGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Peter Presto at Gruppenpraxis"
+Title: "PractitionerRole Peter Presto at Gruppenpraxis"
 Description: "PractitionerRole, refers to 2-pertussis"
 Usage: #example
 * practitioner = Reference(Practitioner/PeterPresto)
@@ -64,7 +76,7 @@ Usage: #example
 
 Instance: PeterPresto
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner: Peter Presto"
+Title: "Practitioner Peter Presto"
 Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
@@ -85,11 +97,12 @@ Usage: #example
 * telecom[=].use = #work
 
 Instance: HealthInsuranceCardEmilKummer
-InstanceOf: Coverage
+InstanceOf: ChOrfCoverage
 Title: "Health Insurance Card Emil Kummer"
 Description: "Example for Insurance"
 Usage: #example
 * id = "health-insurance-card-emil-kummer"
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780-1"
 * status = #active
@@ -136,7 +149,7 @@ Usage: #example
 
 Instance: Serum-2-pertussis
 InstanceOf: Specimen
-Title: "Serum Sample"
+Title: "Serum Sample 2-pertussis"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #example
 * identifier.value = "48736-12345-75465"

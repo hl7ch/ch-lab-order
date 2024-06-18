@@ -1,10 +1,11 @@
 Instance: CoverageFranzMuster
-InstanceOf: CHCoreCoverage
-Title: "Coverage: FranzMuster"
+InstanceOf: ChOrfCoverage
+Title: "Coverage FranzMuster"
 Description: "Example for Insurance Coverage"
 Usage: #example
 * meta.source = "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
 * contained = Sanitas
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier.value = "80756015090002640000"
 * status = #active

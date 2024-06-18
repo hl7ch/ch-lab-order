@@ -1,4 +1,4 @@
-Instance: LabOrder-Document-with-SR-and-Form
+Instance: LabOrder-DocumentwithSR_andForm
 InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "CH LAB-Order Document with ServiceRequest and Form"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
@@ -38,8 +38,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
 * entry[=].resource = PeterPresto
-// * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-// * entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
@@ -53,14 +51,5 @@ Usage: #example
 * entry[=].resource = LabOrder-form
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[9]
 * entry[=].resource = LabOrder-QuestionnaireResponse
-
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-potassium"  // entry[10]
 * entry[=].resource = LabOrder-ServiceRequest-potassium
-
-// // ---- SR for Coagulation Tests ----
-// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
-// * entry[=].resource = LabOrder-ServiceRequest-coag
-// 
-// // ---- SR for Coagulation Tests ----
-// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
-// * entry[=].resource = LabOrder-ServiceRequest-cc

@@ -1,10 +1,11 @@
 Instance: vitamind-serum
 InstanceOf: PlanDefinition
+Title: "PlanDefinition 25-hydroxyvitamin D3 [Moles/Vol]"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #de-CH
 * text.status = #additional
-* text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Zusätzliche Informationen in deutscher Sprache | Informationen in deutscher Sprache: </b></p>\n            <p>Monoparametrischer medizinischer Biologietest :</p>\n            <p>Konzentration von 25-(OH)-vitamine D (D2 + D3)</p>\n            <p>Beschreibung : Vitamine D Konzentration in Serum-Probe</p>\n            <p>verschreibbar : ja</p>\n            <p>Laufzeit : 120 Minuten</p>\n        </div>"
+* text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Zusätzliche Informationen in deutscher Sprache | Informationen in deutscher Sprache: </b></p>\n            <p>Monoparametrischer medizinischer Biologietest :</p>\n            <p>Konzentration von 25-hydroxyvitamin D3 [Moles/Vol]</p>\n            <p>Beschreibung : Vitamine D Konzentration in Serum-Probe</p>\n            <p>verschreibbar : ja</p>\n            <p>Laufzeit : 120 Minuten</p>\n        </div>"
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
@@ -21,14 +22,14 @@ Usage: #example
 * url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-vitamind-serum"
 * version = "0.1.0"
 * name = "VitaminDMeasurement"
-* title = "Dosage de la vitamine D dans le sang"
+* title = "25-hydroxyvitamin D3 [Moles/Vol]"
 * title.extension.extension[0].url = "lang"
 * title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
-* title.extension.extension[=].valueString = "Dosage de la 25-(OH)-vitamine D (D2 + D3)"
+* title.extension.extension[=].valueString = "25-hydroxyvitamin D3 [Moles/Vol]"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-19T20:00:00+02:00"
 * contact.telecom.system = #url
@@ -39,8 +40,6 @@ Usage: #example
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
-// * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"
-// * topic[+] = http://www.codage.ext.cnamts.fr/codif/nabm#12 "PROTEINES - MARQUEURS TUMORAUX - VITAMINES"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"

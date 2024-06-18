@@ -1,6 +1,6 @@
 Instance: procedure-serum-electrolyte
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: Electrolytes"
+Title: "ActivityDefinition Electrolytes"
 Description: "Procedure Electrolytes 1998 panel - Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -9,7 +9,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "BloodElectrolyteProcedure"
 * title = "Procedure - blood electrolyte (serum or plasma)"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-11T14:00:00+02:00"
 * contact.telecom.system = #url

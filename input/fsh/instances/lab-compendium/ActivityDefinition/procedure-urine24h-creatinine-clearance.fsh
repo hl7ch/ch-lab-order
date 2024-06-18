@@ -1,6 +1,6 @@
 Instance: procedure-urine24h-creatinine-clearance
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: Creatinine Clearance"
+Title: "ActivityDefinition Creatinine Clearance"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
@@ -8,7 +8,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "UrineCreatinineClearanceProcedure"
 * title = "Procedure - 24-hour urine creatinine clearance"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-02-13T18:00:00+01:00"
 * contact.telecom.system = #url

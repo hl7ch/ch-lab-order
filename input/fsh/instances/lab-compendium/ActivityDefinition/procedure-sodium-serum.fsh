@@ -1,6 +1,6 @@
 Instance: procedure-sodium-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition: Sodium"
+Title: "ActivityDefinition Sodium"
 Description: "Procedure Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -11,7 +11,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "SodiumSerumMeasurementProcedure"
 * title = "Procedure - sodium measurement on in vitro blood serum"
-* status = #draft
+* status = #active
 * experimental = true
 * date = "2020-01-24T14:00:00+02:00"
 * contact.telecom.system = #url

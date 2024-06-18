@@ -5,7 +5,7 @@ Title: "CH LAB-Order Composition with Service Request"
 Description: "Definition for Composition resource in the context of CH LAB-Order with Service Request, parent is CHCoreComposition"
 * . ^short = "CH LAB-Order Composition with ServiceRequest"
 * ^version = "0.9.0"
-* ^status = #draft
+* ^status = #active
 * ^date = "2019-01-30"
 * ^publisher = "HL7 Switzerland"
 * ^contact[0].name = "HL7 Switzerland"

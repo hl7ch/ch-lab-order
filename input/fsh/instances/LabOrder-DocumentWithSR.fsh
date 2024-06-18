@@ -1,7 +1,7 @@
 Instance: LabOrder-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order Document with Service Request"
-Description: "Document for referral/order due to suspected deep vein thrombosis"
+Title: "CH LAB-Order Document with ServiceRequest"
+Description: "Document for referral/order of Potassium in Serum"
 Usage: #example
 * id = "ch-lab-order-document-with-sr"
 * meta.versionId = "1"
@@ -38,8 +38,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/PeterPresto"
 * entry[=].resource = PeterPresto
-// * entry[+].fullUrl = "http://example.com/fhir/Organization/Gruppenpraxis"
-// * entry[=].resource = Gruppenpraxis
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
@@ -49,17 +47,5 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
 * entry[=].resource = Serum
 
-// * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/LabOrder-form" // entry[8]
-// * entry[=].resource = LabOrder-form
-// * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[9]
-// * entry[=].resource = LabOrder-QuestionnaireResponse
-
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-potassium"  // entry[10]
 * entry[=].resource = LabOrder-ServiceRequest-potassium
-// // ---- SR for Coagulation Tests ----
-// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-coag"
-// * entry[=].resource = LabOrder-ServiceRequest-coag
-// 
-// // ---- SR for Coagulation Tests ----
-// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-cc"
-// * entry[=].resource = LabOrder-ServiceRequest-cc

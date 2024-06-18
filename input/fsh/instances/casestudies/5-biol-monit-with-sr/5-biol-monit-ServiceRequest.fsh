@@ -1,6 +1,6 @@
 Instance: 5-biol-monit-ServiceRequest
-InstanceOf: ChOrfServiceRequest
-Title: "Service Request 5-biol-monit"
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * id = "5-biol-monit-service-request"
@@ -9,32 +9,54 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123123"
 * status = #active
 * intent = #original-order
-* category = $sct#721963009 "Order (record artifact)"
+// * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.coding[+] = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* code.coding[+] = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* code.coding[+] = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.coding[+] = $loinc#57023-4 "Auto Differential panel - Blood"
-* code.coding[+] = $loinc#29587-3 "Toxicology panel - Blood"
-* code.coding[+] = $loinc#54454-4 "Arsenic fractions panel - Urine"
-* code.coding[+] = $loinc#29589-9 "Heavy metals panel - Urine"
+* code.coding[+].code = #24360-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+
+* code.coding[+].code = #43113-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
+
+* code.coding[+].code = #57021-8
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC W Auto Differential panel - Blood"
+
+* code.coding[+].code = #58410-2
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+
+
+* code.coding[+].code = #29587-3
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Toxicology panel - Blood"
+
+* code.coding[+].code = #54454-4
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Arsenic fractions panel - Urine"
+
+* code.coding[+].code = #29589-9
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Heavy metals panel - Urine"
 
 // orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = $sct#314076009
 * reasonCode.text = "Toxicology screening test (procedure)"
 * insurance = Reference(HealthInsuranceCardBeatBorer)
-* specimen[0] = Reference(Specimen/Blood-biol-monit)
+* specimen[+] = Reference(Specimen/Blood-biol-monit)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
 // ---- Patient --------
 Instance: BeatBorer
 InstanceOf: CHCorePatient
-Title: "Patient: Beat Borer"
+Title: "Patient Beat Borer"
 Description: "Example for CH-Core-Patient"
 Usage: #example
 * text.status = #additional
@@ -67,7 +89,7 @@ Usage: #example
 // ---- PractitionerRole --------
 Instance: PauloPorcelliniSuva
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Paulo Porcellini Suva"
+Title: "PractitionerRole Paulo Porcellini Suva"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
 * practitioner = Reference(Practitioner/PauloPorcellini)
@@ -75,7 +97,7 @@ Usage: #example
 
 Instance: PauloPorcellini
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner: Paulo Porcellini"
+Title: "Practitioner Paulo Porcellini"
 Description: "Specialist for Occupational Medicine, works at SUVA, refers to 1-tvt"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -97,11 +119,11 @@ Usage: #example
 
 Instance: Suva
 InstanceOf: CHCoreOrganization
-Title: "Organization: SUVA"
+Title: "Organization SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"
-* identifier.value = "CHE-108.955.179"
+* identifier.value = "A62088168"
 * name = "Suva"
 * telecom[0].system = #phone
 * telecom[=].value = "+41322345566"
@@ -120,7 +142,7 @@ Usage: #example
 // ---- PractitionerRole --------
 Instance: WoodyWorkdocSpeiserRails
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole: Woody Workdoc Speiser Rails"
+Title: "PractitionerRole Woody Workdoc Speiser Rails"
 Description: "PractitionerRole, refers to 5-biol-monit"
 Usage: #example
 * practitioner = Reference(Practitioner/WoodyWorkdoc)
@@ -128,7 +150,7 @@ Usage: #example
 
 Instance: WoodyWorkdoc
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner: Woody Worksdoc"
+Title: "Practitioner Woody Worksdoc"
 Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
@@ -150,11 +172,11 @@ Usage: #example
 
 Instance: SpeiserRails
 InstanceOf: CHCoreOrganization
-Title: "Organization: Speiser Rails"
+Title: "Organization Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
 Usage: #example
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
-* identifier.value = "CHE-108.444.179"
+* identifier.value = "A62088168"
 * telecom[0].system = #phone
 * telecom[=].value = "+41412345566"
 * telecom[=].use = #work
@@ -170,10 +192,11 @@ Usage: #example
 * address.country = "CH"
 
 Instance: HealthInsuranceCardBeatBorer
-InstanceOf: Coverage
-Title: "Coverage: HealthInsuranceCard Beat Borer"
+InstanceOf: ChOrfCoverage
+Title: "Covarage HealthInsuranceCard Beat Borer"
 Description: "Example for Insurance"
 Usage: #example
+* identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456780"
 * status = #active

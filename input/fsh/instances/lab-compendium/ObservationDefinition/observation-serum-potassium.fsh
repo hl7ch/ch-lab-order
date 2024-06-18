@@ -1,5 +1,6 @@
 Instance: observation-serum-potassium
 InstanceOf: ObservationDefinition
+Title: "ObservationDefinition Potassium in Serum"
 Description: "Kalium im Blut [Moles/volume]"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

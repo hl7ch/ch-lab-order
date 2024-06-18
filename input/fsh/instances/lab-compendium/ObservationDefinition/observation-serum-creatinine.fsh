@@ -1,5 +1,6 @@
 Instance: observation-creatinine-serum
 InstanceOf: ObservationDefinition
+Title: "ObservationDefinition Creatinine Serum"
 Description: "Kreatinin [Masse/Volumen] im Serum oder Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"

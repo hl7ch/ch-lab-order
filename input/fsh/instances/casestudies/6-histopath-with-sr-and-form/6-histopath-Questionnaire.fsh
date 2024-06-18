@@ -1,6 +1,6 @@
 Instance: 6-histopath-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "questionnaire 6-histopath"
+Title: "CH LAB-Questionnaire 6-histopath"
 Description: "Example for Questionnaire of Histopathology Examination"
 Usage: #example
 * id = "6-histopath"

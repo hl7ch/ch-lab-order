@@ -1,6 +1,6 @@
 Instance: 6-histopath-CompositionWhitSR_andForm
 InstanceOf: ChOrfComposition
-Title: "Composition 6-histopath with ServiceRequest and Form"
+Title: "CH LAB-Composition 6-histopath with ServiceRequest and Form"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
 Usage: #example
 * id = "6-histopath-composition-with-sr-and-form"
@@ -40,4 +40,4 @@ Usage: #example
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 6-histopath\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(6-histopath-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(6-histopath-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequestByForm)
+* section[orderReferral].entry[ServiceRequest] = Reference(6-histopath-ServiceRequest)

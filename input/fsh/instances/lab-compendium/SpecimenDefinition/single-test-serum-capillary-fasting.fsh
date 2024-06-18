@@ -1,6 +1,6 @@
 Instance: single-test-serum-capillary-fasting
 InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition: Capillary Blood, 12 h fasting"
+Title: "SpecimenDefinition Capillary Blood, 12 h fasting"
 Description: "Capillary Blood, 12 h fasting"
 Usage: #example
 * typeCollected = $sct#122554006 "Capillary blood specimen"

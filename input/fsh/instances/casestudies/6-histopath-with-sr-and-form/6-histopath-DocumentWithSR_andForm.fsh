@@ -1,7 +1,7 @@
 Instance: 6-histopath-DocumentWithSR_andForm
 InstanceOf: ChOrfDocument
 Title: "CH LAB-Order 6-histopath with ServiceRequest and Form"
-Description: "Document for referral/order due to suspected deep vein thrombosis"
+Description: "Document for referral/order due to suspected skin melanoma"
 Usage: #example
 * id = "6-histopath-document-with-sr-and-form"
 * meta.versionId = "1"
@@ -53,6 +53,6 @@ Usage: #example
 * entry[=].resource = 6-histopath-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/6-histopath"
 * entry[=].resource = 6-histopath-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request-by-form"
-* entry[=].resource = 6-histopath-ServiceRequestByForm
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/6-histopath-service-request"
+* entry[=].resource = 6-histopath-ServiceRequest
 
