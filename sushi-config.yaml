@@ -7,11 +7,11 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-05-10
+date: 2024-06-18
 version: 2.0.0
 fhirVersion: 4.0.1
-copyrightYear: 2023+
-releaseLabel: ci-build
+copyrightYear: 2021+
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
   url: https://www.hl7.ch
@@ -45,7 +45,7 @@ pages:
   case-studies-french.md:
     title: Case Studies in French
   document-lo-sr-and-form.md:
-    title: CH LAB-Order with ServiceRequest and Form
+    title: CH LAB-Order with Service Request and Form
   document-lo-sr.md:
     title: CH LAB-Order with Service Request
   profiles.md:
