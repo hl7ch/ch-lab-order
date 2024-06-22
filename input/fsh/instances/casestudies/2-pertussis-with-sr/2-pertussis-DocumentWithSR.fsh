@@ -29,23 +29,25 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
 * entry[=].resource = MarcMustermannGruppenpraxis
 
-
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[10]
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
 * entry[=].resource = LaborPipette
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-emil-kummer"
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-emil-kummer" // entry[10]
 * entry[=].resource = HealthInsuranceCardEmilKummer
+
+// * entry[+].fullUrl = "http://example.com/fhir/Observation/cough"
+// * entry[=].resource = Cough
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-2-pertussis"
 * entry[=].resource = Serum-2-pertussis
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Throat-swab-2-pertussis" // entry[15]
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Throat-swab-2-pertussis"
 * entry[=].resource = Throat-swab-2-pertussis
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-2-pertussis"
 * entry[=].resource = Blood-2-pertussis
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request"  // entry[15]
 * entry[=].resource = 2-pertussis-ServiceRequest
