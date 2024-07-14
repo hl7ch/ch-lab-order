@@ -29,6 +29,6 @@ Usage: #example
 * kind = #ServiceRequest
 * code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * priority = #routine
-* timingDuration = 30 'mn' "minutes"
+// * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/specimen-blood-EDTA) 
 * observationResultRequirement = Reference(ObservationDefinition/observation-blood-hemoglobin) 

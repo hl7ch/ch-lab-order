@@ -52,7 +52,7 @@ Usage: #example
 
 //
 * action.code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
-* action.timingDuration = 2 'h' "hours"
+// * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
 * action.definitionCanonical           = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine-clearance"

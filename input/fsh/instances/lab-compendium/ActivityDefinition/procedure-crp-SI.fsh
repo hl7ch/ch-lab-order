@@ -29,6 +29,6 @@ Usage: #example
 * kind = #ServiceRequest
 * code = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma"
 * priority = #routine
-* timingDuration = 30 'mn' "minutes"
+// * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-potassium)
