@@ -2,6 +2,11 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### Changes
+
+* [Issue#329](https://github.com/hl7ch/ch-lab-order/issues/329) ObservationDefinition Hemoglobin blood -> fix erroneous entries
+
+
 ### Open Issues for STU 3
 
 * [Issue #314](https://github.com/hl7ch/ch-lab-order/issues/314) Profile : ChLabOrderMedication -> Parent: Medication, Profile: MedicationStatement -> CHCoreCHCoreMedicationStatement, Profile: ChLabOrderDiagnosisCondition -> Parent: Condition

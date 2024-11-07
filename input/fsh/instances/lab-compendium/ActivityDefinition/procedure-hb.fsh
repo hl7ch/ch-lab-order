@@ -29,6 +29,6 @@ Usage: #example
 * kind = #ServiceRequest
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * priority = #routine
-* timingDuration = 30 'mn' "minutes"
+// * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/specimen-blood-EDTA) 
 * observationResultRequirement = Reference(ObservationDefinition/observation-blood-hemoglobin) 
