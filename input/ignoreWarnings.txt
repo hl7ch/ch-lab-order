@@ -1,1 +1,16 @@
 == Suppressed Messages ==
+
+# Different display values (language)
+Der Displayname%
+
+# External CodeSystem
+A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
+A definition for CodeSystem 'urn:oid:2.16.756.5.30.2.6.1' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://medcodesearch.ch/de/AL/laboratory_analyses' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://testdirectory.questdiagnostics.com/' could not be found, so the code cannot be validated
+
+# No OIDs at the moment 
+This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# Reference to draft CodeSystem 
+Reference to draft CodeSystem%
