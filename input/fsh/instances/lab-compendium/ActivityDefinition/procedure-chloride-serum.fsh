@@ -27,6 +27,6 @@ Usage: #example
 * kind = #ServiceRequest
 * code = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * priority = #routine
-// // * timingDuration = 30 'mn' "minutes"
+// * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-chloride)
