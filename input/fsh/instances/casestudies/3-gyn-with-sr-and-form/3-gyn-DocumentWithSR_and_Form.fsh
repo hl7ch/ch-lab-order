@@ -53,5 +53,13 @@ Usage: #example
 * entry[=].resource = 3-gyn-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/3-gyn"
 * entry[=].resource = 3-gyn-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request"
-* entry[=].resource = 3-gyn-ServiceRequest
+
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request-smear-test"
+* entry[=].resource = 3-gyn-ServiceRequest-SmearTest
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request-hpv"
+* entry[=].resource = 3-gyn-ServiceRequest-HPV
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request-urine-panel"
+* entry[=].resource = 3-gyn-ServiceRequest-Urine-Panel
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/3-gyn-service-request-obstetric-panel"
+* entry[=].resource = 3-gyn-ServiceRequest-Obstetric-Panel
+
