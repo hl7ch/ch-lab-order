@@ -1,5 +1,6 @@
 // Terminologies, CodeSystems
 Alias:  $sct                           = http://snomed.info/sct
+Alias:  $sctswiss                      = http://snomed.info/sct|http://snomed.info/sct/2011000195101
 Alias:  $loinc                         = http://loinc.org
 Alias:  $ucum                          = http://unitsofmeasure.org
 Alias:  $atc                           = http://www.whocc.no/atc

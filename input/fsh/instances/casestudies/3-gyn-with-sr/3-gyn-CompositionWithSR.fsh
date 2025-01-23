@@ -30,5 +30,8 @@ Usage: #example
 * section[orderReferral].title = "Laboratory Order with Service Request 3-gyn"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 3-gyn\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(3-gyn-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(3-gyn-ServiceRequest-SmearTest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(3-gyn-ServiceRequest-HPV)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(3-gyn-ServiceRequest-Urine-Panel)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(3-gyn-ServiceRequest-Obstetric-Panel)
  

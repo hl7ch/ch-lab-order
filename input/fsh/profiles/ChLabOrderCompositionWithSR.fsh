@@ -32,7 +32,7 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 // ---------- Composition.section.entry:ServiceRequest ----------
 
 * section MS
-* section ^slicing.discriminator.type = #pattern
+* section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
 

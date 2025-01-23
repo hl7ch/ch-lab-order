@@ -1,9 +1,9 @@
-Instance: 3-gyn-ServiceRequest
+Instance: 3-gyn-ServiceRequest-SmearTest
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 3-gyn"
+Title: "CH LAB-ServiceRequest 3-gyn SmearTest"
 Description: "Example for Service Request for preventive gynaecological check-up"
 Usage: #example
-* id = "3-gyn-service-request"
+* id = "3-gyn-service-request-smear-test"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -15,20 +15,29 @@ Usage: #example
 * code.coding[=].system = $loinc
 * code.coding[=].display = "Pap smear tests - FPAR 2.0 set"
 
+* priority = #routine
+* subject = Reference(Patient/MarinaRubella)
+* requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
+* reasonCode = $sct#702601001
+* reasonCode.text = "Routine gynecologic examination (procedure)"
+* insurance = Reference(HealthInsuranceCardMarinaRubella)
+* specimen[+] = Reference(Specimen/Cervix-swab)
+
+Instance: 3-gyn-ServiceRequest-HPV
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 3-gyn HPV"
+Description: "Example for Service Request for preventive gynaecological check-up"
+Usage: #example
+* id = "3-gyn-service-request-hpv"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* status = #active
+* intent = #original-order
+
 * code.coding[+].code = #14503-7
 * code.coding[=].system = $loinc
 * code.coding[=].display = "Human papilloma virus 16+18 Ag [Presence] in Cervix"
-
-* code.coding[+].code = #50556-0
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Urinalysis dipstick panel - Urine by Automated test strip"
-
-* code.coding[+].code = #24364-2
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Obstetric 1996 Pnl Ser+Bld"
-
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
@@ -37,9 +46,55 @@ Usage: #example
 * reasonCode.text = "Routine gynecologic examination (procedure)"
 * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
+
+Instance: 3-gyn-ServiceRequest-Urine-Panel
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 3-gyn Urine Panel"
+Description: "Example for Service Request for preventive gynaecological check-up"
+Usage: #example
+* id = "3-gyn-service-request-urine-panel"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* status = #active
+* intent = #original-order
+
+* code.coding[+].code = #50556-0
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Urinalysis dipstick panel - Urine by Automated test strip"
+
+* priority = #routine
+* subject = Reference(Patient/MarinaRubella)
+* requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
+* reasonCode = $sct#702601001
+* reasonCode.text = "Routine gynecologic examination (procedure)"
+* insurance = Reference(HealthInsuranceCardMarinaRubella)
+* specimen[+] = Reference(Specimen/Urine-gyn)
+
+Instance: 3-gyn-ServiceRequest-Obstetric-Panel
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 3-gyn Obstetric Panel"
+Description: "Example for Service Request for preventive gynaecological check-up"
+Usage: #example
+* id = "3-gyn-service-request-obstetric-panel"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* status = #active
+* intent = #original-order
+
+* code.coding[+].code = #24364-2
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Obstetric 1996 Pnl Ser+Bld"
+
+* priority = #routine
+* subject = Reference(Patient/MarinaRubella)
+* requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
+* reasonCode = $sct#702601001
+* reasonCode.text = "Routine gynecologic examination (procedure)"
+* insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Blood-gyn)
 * specimen[+] = Reference(Specimen/Serum-gyn)
-* specimen[+] = Reference(Specimen/Urine-gyn)
 
 Instance: MarinaRubella
 InstanceOf: CHCorePatient
@@ -143,7 +198,7 @@ Usage: #example
 * status = #available
 * type = $sct#430387006 "Combined specimen of cytologic material from endocervix, ectocervix, and vaginal fornix (specimen)"
 * subject = Reference(Patient/MarinaRubella)
-* request = Reference(ServiceRequest/3-gyn-service-request)
+* request = Reference(ServiceRequest/3-gyn-service-request-smear-test)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#706053007 "General specimen container (physical object)"
@@ -156,7 +211,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/MarinaRubella)
-* request = Reference(ServiceRequest/3-gyn-service-request)
+* request = Reference(ServiceRequest/3-gyn-service-request-obstetric-panel)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -173,7 +228,7 @@ Usage: #example
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
 * subject = Reference(Patient/MarinaRubella)
-* request = Reference(ServiceRequest/3-gyn-service-request)
+* request = Reference(ServiceRequest/3-gyn-service-request-obstetric-panel)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
@@ -191,7 +246,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/MarinaRubella)
 * receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(ServiceRequest/3-gyn-service-request)
+* request = Reference(ServiceRequest/3-gyn-service-request-urine-panel)
 * collection.collector = Reference(Practitioner/PeterPap)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
