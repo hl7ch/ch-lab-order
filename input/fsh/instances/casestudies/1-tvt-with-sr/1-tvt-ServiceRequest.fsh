@@ -269,7 +269,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $sct#439401001 "diagnosis"
-* severity = $sct#371923003 "Mild to moderate (qualifier value)"
+* severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"
 * subject = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
 // * encounter = Reference(Encounter/f001)
