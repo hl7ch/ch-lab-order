@@ -11,7 +11,7 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt"
+* entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-composition-with-sr"
 * entry[=].resource = 1-tvt-CompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"

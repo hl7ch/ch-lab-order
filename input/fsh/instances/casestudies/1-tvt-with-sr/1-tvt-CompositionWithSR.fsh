@@ -3,7 +3,7 @@ InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Composition 1-tvt with ServiceRequest"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
-* id = "1-tvt"
+* id = "1-tvt-composition-with-sr"  // 1-tvt-composition-with-sr
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
