@@ -56,8 +56,8 @@ pages:
     title: Changelog
 
 parameters:
-  allow-extensible-warnings: true
-  display-warnings: true  
+#   allow-extensible-warnings: true
+#   display-warnings: true  
   path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension
 
 FSHOnly: false
