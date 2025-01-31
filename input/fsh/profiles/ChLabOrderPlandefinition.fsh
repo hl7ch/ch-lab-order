@@ -37,7 +37,8 @@ PlanDefinition is therefore selected to represent a laboratory service, and the 
 * ^publisher = "HL7 Switzerland"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.ch"
-* ^jurisdiction = $m49.htm#756
+* ^jurisdiction = urn:iso:std:iso:3166#CH
+
 * . ^short = "The definition of a plan for a series of actions"
 * . ^comment = "The LChLabLabServiceDefinition profile constrains the resource LabServiceDefinition to represent a laboratory diagnostic service made visible to clinicians: the potential consumers of this service."
 // * extension ^slicing.discriminator[0].type = #value
