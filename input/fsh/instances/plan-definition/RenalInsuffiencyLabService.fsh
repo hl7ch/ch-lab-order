@@ -24,8 +24,8 @@
 // * action[=].relatedAction[=].relationship = #before-start
 
 // Alias: $nabm = http://www.codage.ext.cnamts.fr/codif/nabm
-Alias: $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type
-Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
+// Alias: $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type
+// Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
 // Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 // Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 // Alias: $loinc = http://loinc.org
