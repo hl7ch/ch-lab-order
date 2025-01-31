@@ -32,7 +32,7 @@
 // Alias: $sct = http://snomed.info/sct
 // Alias: $SH-REF-08 = http://tools.cofrac.fr/documentation/SH-REF-08
 
-Instance: example-lab-panel-renal-insufficiency
+Instance: RenalInsuffiencyLabService   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -86,6 +86,6 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-* action.definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-urine24h-creatinine-clearance"
-* action.action[0].definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-procedure-serum-creatinine"
-* action.action[+].definitionCanonical = "http://hl7.org/fhir/uv/order-catalog/ActivityDefinition/example-lab-urine24h-creatinine"
+* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-panel-renal-insufficiency"
+* action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-eGFR-ckd-epi"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-uACR"

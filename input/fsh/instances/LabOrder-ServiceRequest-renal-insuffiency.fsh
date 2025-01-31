@@ -12,7 +12,7 @@ Usage: #example
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
+* requisition.value = "ReqID-123456789"
 
 * status = #active
 * intent = #original-order
