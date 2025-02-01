@@ -71,6 +71,7 @@ Usage: #example
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
+// TODO: adapt actions
 * action.extension[0].extension[0].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
