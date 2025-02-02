@@ -1,5 +1,7 @@
 Instance: CreatinineClearanceLabService   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
+Title: "CH LAB-Order Creatinin Clearance Service"
+Description: "Plan Definition for Creatinine Clearance"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #de-CH
@@ -21,13 +23,13 @@ Usage: #example
 * title = "Renal Insufficiendy Panel"
 * type = $laboratory-service-definition-type#panel
 * status = #draft
-* experimental = true
+* experimental = false
 * date = "2020-02-12T19:00:00+01:00"
 * publisher = "HL7 Switzerland"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://hl7.ch"
 
-* description = "This renal insufficiendy panel is using the procedures from the 
+* description = "This creatinin clearance panel is using the procedures from the 
     serum creatinine test as well as the procedure from the 24h urine creatinine panel."
 * useContext.code = $usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE "laboratory test order entry task"
@@ -53,6 +55,6 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-panel-renal-insufficiency"
-* action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-eGFR-ckd-epi"
-* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-uACR"
+* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine-clearance"
+* action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-creatinine-serum"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine"
