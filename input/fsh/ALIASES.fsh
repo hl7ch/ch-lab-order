@@ -16,6 +16,7 @@ Alias:  $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v
 Alias:  $v3-Confidentiality            = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias:  $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
 Alias:  $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
+Alias:  $catalogType                   = http://terminology.hl7.org/CodeSystem/catalogType
 Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
 Alias:  $condition-ver-status          = http://terminology.hl7.org/CodeSystem/condition-ver-status
