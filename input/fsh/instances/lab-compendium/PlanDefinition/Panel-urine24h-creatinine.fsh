@@ -1,7 +1,7 @@
-Instance: panel-urine24h-creatinine
+Instance: PanelUrine24hCreatinine
 InstanceOf: PlanDefinition
-Title: "PlanDefinition 24-hour urine creatinine panel"
-Description: "Creatinine [Mass/time] 24 hour urine panel - 24 hour Urine"
+Title: "CH LAB-Order 24-hour Urine Creatinine Panel Service"
+Description: "PlanDefinition for mesurement of Creatinine [Mass/time] in 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
@@ -16,7 +16,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/panel-urine24h-creatinine"
+* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/PanelUrine24hCreatinine"
 * version = "0.1.0"
 * name = "UrineCreatininePanel"
 * title = "24-hour urine creatinine panel"
@@ -33,7 +33,7 @@ Usage: #example
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext[=].valueCodeableConcept = $v3-ActCode#LABRREV // "laboratory results review task"
 * useContext[=].valueCodeableConcept.text = "This panel may be added upon the pathologist initiative after result review of the order"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 
 * topic[0] = $loinc#18729-4 "Urinalysis studies (set)"
 * topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"

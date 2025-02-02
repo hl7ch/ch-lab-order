@@ -12,7 +12,7 @@ Usage: #example
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance"
 
 // der SR referenziert auf 3 weitere SR
-* basedOn[0] = Reference(LabOrder-ServiceRequest-urine24h-creatinine)
+* basedOn[0] = Reference(Urine24hCreatinineOrder)
 * basedOn[+] = Reference(LabOrder-ServiceRequest-creatinine)
 
 // ---- grouperID, must be repeated in all dependent SR ----

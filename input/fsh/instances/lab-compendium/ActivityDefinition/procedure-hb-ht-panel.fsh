@@ -17,7 +17,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Hemoglobin-Hematocrit measurement procedure on in-vitro blood specimen"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"

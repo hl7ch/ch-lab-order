@@ -67,7 +67,7 @@ Usage: #example
 * useContext[=].valueCodeableConcept = $sct#761938008 "Medicinal prescription record (record artifact)"
 * useContext[=].valueCodeableConcept.text = "Patienten, die Medikamente, die den Vit. D Stoffwechsel beeinflussen, einnehmen"
 
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001   // Code for 
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756   // Code for 
 * code = https://medcodesearch.ch/de/AL/laboratory_analyses#1006.00 "Vitamin D"  // needs API connection
 
 * propertyGroup.priceComponent.type = #base

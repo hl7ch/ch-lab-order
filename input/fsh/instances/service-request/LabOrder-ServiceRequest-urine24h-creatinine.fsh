@@ -1,9 +1,9 @@
-Instance: LabOrder-ServiceRequest-urine24h-creatinine
+Instance: Urine24hCreatinineOrder
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-ServiceRequest for Creatinine in 24h Urine"
-Description: "Service Request for Creatinine [Moles/volume] in Urine"
+Title: "CH LAB-Order ServiceRequest for Creatinine in 24h Urine"
+Description: "Creatinine [Moles/volume] in Urine Order"
 Usage: #example
-* id = "LabOrder-u24-creatinine"
+* id = "urine-24h-creatinine-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

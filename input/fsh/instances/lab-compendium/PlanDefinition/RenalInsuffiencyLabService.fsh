@@ -51,7 +51,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-panel-urine24h-creatinine-clearance"
+* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-PanelUrine24hCreatinine-clearance"
 * version = "current"
 * name = "RenalInsufficiendyPanel"
 * title = "Renal Insufficiendy Panel"

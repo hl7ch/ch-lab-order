@@ -16,7 +16,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Procedure 25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2022-12-25"
 

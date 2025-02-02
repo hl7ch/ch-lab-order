@@ -42,7 +42,7 @@ Usage: #example
 * description = "Chloride measurement on serum specimen"
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE // "laboratory test order entry task"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 

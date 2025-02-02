@@ -12,7 +12,7 @@ Usage: #example
 * publisher = "HL7 International - FHIR Infrastructure Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/fiwg"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * item[0].linkId = "1"
 * item[=].text = "MARGINS"
 * item[=].type = #group

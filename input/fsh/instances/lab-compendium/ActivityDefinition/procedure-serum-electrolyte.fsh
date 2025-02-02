@@ -15,7 +15,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Na, K, Cl level measurements on serum or plasma"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input specimens and input and output observations for blood electrolyte.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
