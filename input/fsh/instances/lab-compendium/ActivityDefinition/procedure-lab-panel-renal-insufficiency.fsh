@@ -1,5 +1,7 @@
 Instance: procedure-lab-panel-renal-insufficiency
 InstanceOf: ActivityDefinition
+Title: "CH LAB-Order Panel for Renal Insufficiency Assessment"
+Description: "Procedure for estimated Glomerual Filtration Rate and and Urine Albumine-Creatinine Ratio"
 Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
 * identifier.system = "urn:ietf:rfc:3986"

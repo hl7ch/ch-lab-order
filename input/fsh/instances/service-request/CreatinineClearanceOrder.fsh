@@ -3,13 +3,11 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine 24H renal clearance panel"
 Description: "Service Request for Serum Creatinine and 24h Urin Creatinin"
 Usage: #example
-
-* id = "LabOrder-creatinine-clearance-order"
+* id = "creatinine-clearance-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-Compendium/PlanDefinition/CreatinineClearanceLabService"
-// * instantiatesCanonical = http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/CreatinineClearanceLabService"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

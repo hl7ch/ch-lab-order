@@ -1,6 +1,7 @@
-Instance: creatinine-clearance
+Instance: Creatinine-Clearance
 InstanceOf: PlanDefinition
-Title: "PlanDefinition Creatinine Clearance"
+Title: "CH LAB-Order PlanDefinition Creatinine Clearance Service"
+Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
@@ -17,7 +18,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance" // Canonical identifier
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/Creatinine-Clearance" // Canonical identifier
 * version = "0.1.0"
 * name = "UrineCreatinineClearancePanel"
 * title = "24-hour urine creatinine clearance panel"
@@ -33,6 +34,7 @@ Usage: #example
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
+* topic[+] = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 // ---- Serum Specimen, venous serum or capillary serum ----

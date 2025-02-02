@@ -1,5 +1,7 @@
 Instance: procedure-lab-uACR
 InstanceOf: ActivityDefinition
+Title: "CH LAB-Order ActivityDefinition Chloride"
+Description: "Procedure Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-uACR"
 * identifier.system = "urn:ietf:rfc:3986"

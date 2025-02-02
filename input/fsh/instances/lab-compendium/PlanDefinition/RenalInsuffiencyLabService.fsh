@@ -34,11 +34,13 @@
 
 Instance: RenalInsuffiencyLabService   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
+Title: "CH LAB-Order Renal Insufficiency Assessment Service"
+Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #de-CH
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-* extension[=].valueReference = Reference(Composition/example-lab-compendium-header)
+* extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 // * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode" // insert AL for Switzerland
 
 // * extension[=].valueCodeableConcept = $nabm#0407
@@ -55,20 +57,21 @@ Usage: #example
 * title = "Renal Insufficiendy Panel"
 * type = $laboratory-service-definition-type#panel
 * status = #draft
-* experimental = true
-* date = "2020-02-12T19:00:00+01:00"
+* experimental = false
+* date = "2025-01-12T19:00:00+01:00"
 * publisher = "HL7 Switzerland"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://hl7.ch"
 
-* description = "This renal insufficiendy panel is using the procedures from the 
-    serum creatinine test as well as the procedure from the 24h urine creatinine panel."
+* description = "This renal insufficiency panel is using the procedure from the 
+    eGFK CKD EPI 2021 test as well as the procedure from the uACR test."
 * useContext.code = $usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
-* topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate"
+* topic[+] = $sct#269858003 "Biochemical evaluation of blood urea/renal function (procedure)"
+* topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
 // TODO: adapt actions
@@ -87,6 +90,6 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-panel-renal-insufficiency"
-* action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-eGFR-ckd-epi"
-* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-uACR"
+* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
+* action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-uACR"
