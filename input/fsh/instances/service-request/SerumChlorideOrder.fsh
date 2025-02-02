@@ -1,9 +1,9 @@
-Instance: LabOrder-ServiceRequest-chloride
+Instance: SerumChlorideOrder
 InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-ServiceRequest for Chloride"
+Title: "CH LAB-Order for Chloride"
 Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
-* id = "LabOrder-chloride"
+* id = "serum-chloride-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
