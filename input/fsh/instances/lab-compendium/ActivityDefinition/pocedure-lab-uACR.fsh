@@ -1,7 +1,7 @@
-Instance: example-lab-uACR
+Instance: procedure-lab-uACR
 InstanceOf: ActivityDefinition
 Usage: #example
-* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-uACR"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-uACR"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.102"
 * status = #draft

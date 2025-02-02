@@ -1,7 +1,7 @@
-Instance: example-lab-eGFR-ckd-epi
+Instance: procedure-lab-eGFR-ckd-epi
 InstanceOf: ActivityDefinition
 Usage: #example
-* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-eGFR-ckd-epi"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.101"
 * status = #draft
