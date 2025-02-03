@@ -1,20 +1,18 @@
-Instance: LabOrder-ServiceRequest-chloride
-InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-ServiceRequest for Chloride"
-Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
+Instance: LabOrder-ServiceRequest-panel-renal-insufficiency
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest of Panel for Renal Insufficiency"
+Description: "Example of Service Request for a Laboratory Panel (Battery)"
 Usage: #example
-* id = "LabOrder-chloride"
+* id = "LabOrder-panel-renal-insufficiency"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
-
-* replaces = Reference(LabOrder-ServiceRequest-sodium)
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
+* requisition.value = "ReqID-123456789"
 
 * status = #active
 * intent = #original-order
@@ -23,9 +21,9 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #2075-0
-* code.coding.system = $loinc
-* code.coding.display = "Chloride [Moles/volume] in Serum or Plasma"
+* code.coding.code = #108252007
+* code.coding.system = $sct
+* code.coding.display = "Laboratory procedure (procedure)"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -40,4 +38,4 @@ Usage: #example
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood)
+* specimen[+] = Reference(Specimen/Urine) "Urine specimen"

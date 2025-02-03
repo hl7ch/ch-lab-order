@@ -1,6 +1,7 @@
 Instance: creatinine-serum
 InstanceOf: PlanDefinition
-Description: "Lab Service of Pipette Lab for Serum Creatinine"
+Title: "CH LAB-Order Creatinine Serum"
+Description: "Plan Definition of Lab Service for Serum Creatinine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
@@ -29,7 +30,7 @@ Usage: #example
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE // "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 // * topic[+] = http://tools.cofrac.fr/documentation/SH-REF-08#BIOCHBM "Biochimie générale et spécialisée"

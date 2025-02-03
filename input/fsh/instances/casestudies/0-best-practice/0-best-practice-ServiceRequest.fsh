@@ -316,8 +316,8 @@ Description: "Problem list of Birgit Blum Heart Disorder"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[+] = $condition-category#problemlist-item
-* category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item	
+// * category = $sct#439401001 "diagnosis"
 * severity = $sct#6736007 "Moderate (severity modifier)"
 * code = $sct#368009 "Heart valve disorder"
 * bodySite = $sct#40768004 "Left thorax"
@@ -335,8 +335,8 @@ Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[+] = $condition-category#problemlist-item
-* category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item	
+// * category = $sct#439401001 "diagnosis"
 * severity = $sct#24484000 "Severe (severity modifier) (qualifier value)"
 * code = $sct#446980008 "Open fracture of tibial plateau (disorder)"
 * bodySite = $sct#719496004
@@ -354,8 +354,8 @@ Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[+] = $condition-category#problemlist-item
-* category = $sct#71388002 "Procedure (procedure)"
+* category = $condition-category#problem-list-item	
+// * category = $sct#71388002 "Procedure (procedure)"
 * code = $sct#122621000119109 "Prophylactic anticoagulation given (situation)"
 * subject = Reference(Patient/BirgitBlum) "Birgit Blum"
 * encounter = Reference(Encounter/FirstEncounter)

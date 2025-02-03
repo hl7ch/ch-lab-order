@@ -1,6 +1,6 @@
 Instance: procedure-crp-highsens-SI
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition CRP highsens SI"
+Title: "CH LAB-Order ActivityDefinition CRP highsens SI"
 Description: "Procedure C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -17,7 +17,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2022-04-01"
 * effectivePeriod.end = "2023-12-25"

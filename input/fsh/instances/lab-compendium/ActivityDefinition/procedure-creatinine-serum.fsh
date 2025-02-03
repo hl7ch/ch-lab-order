@@ -1,13 +1,13 @@
 Instance: procedure-creatinine-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Serum Creatinine"
+Title: "CH LAB-Order ActivityDefinition Serum Creatinine"
 Description: "Procedure Creatinine [Mass/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
 * version = "0.1.0"
-* name = "UrineCreatinineProcedure"
+* name = "SerumCreatinineProcedure"
 * title = "Procedure - serum creatinine - venous blood"
 * status = #active
 * experimental = true
@@ -15,7 +15,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "creatinine measurements on serum specimen obtained from venous or capillary blood"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input serum specimen and the output observation for serum creatinine.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
 
 * effectivePeriod.start = "2020-04-01"
