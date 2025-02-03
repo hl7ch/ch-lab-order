@@ -25,18 +25,18 @@ Usage: #example
 * title = "24-hour urine creatinine clearance panel"
 * type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel "collection of tests and panels performed on one or more in vitro biologic specimens"
 * status = #active
-* experimental = true
+* experimental = false
 * date = "2020-02-12T19:00:00+01:00"
 * contact.telecom.system = #url
-* contact.telecom.value = "http://hl7.org/Special/committees/orders"
-* description = "This 24-hour urine creatinine clearance panel is reusing the procedures from the serum creatinine test as well as the procedure from the 24h urine creatinine panel."
+* contact.telecom.value = "http://hl7.ch"
+* description = "Creatinine measurement on serum specimen"
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE // "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#166312007 "Blood chemistry"
 * topic[+] = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* topic[+] = $sct#409091002 "24 hour urine measurement (procedure)"
 
 // ---- Serum Specimen, venous serum or capillary serum ----
 * action.extension[0].extension[0].extension.url = "Material"
@@ -46,18 +46,15 @@ Usage: #example
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
+* action.code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* action.timingDuration = 1 'h' "hour"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
 
-// ---- Urine Specimen ----
-* action.extension[+].extension.extension.url = "Material"
-* action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/urine-24h) "example-specimen-urine-24h"
-* action.extension[=].extension.url = "ExclusiveGroup"
-* action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-
-//
+/*
 * action.code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
 // * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
 * action.definitionCanonical           = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine-clearance"
-* action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-CreatinineSerumLabService"
 * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine"
+*/

@@ -14,7 +14,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Procedures conveying the creatinine renal clearance in 24h urine observation"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * purpose = "This procedures only hooks the creatinine renal clearance in 24h urine observation to the laboratory service \"Creatinine 24H renal clearance\""
 
 * effectivePeriod.start = "2020-04-01"

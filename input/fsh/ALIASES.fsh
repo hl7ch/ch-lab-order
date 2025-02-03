@@ -21,6 +21,7 @@ Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/c
 Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
 Alias:  $condition-ver-status          = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias:  $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type
+Alias:  $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 Alias:  $usage-context-type            = http://terminology.hl7.org/CodeSystem/usage-context-type
 
 Alias:  $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
