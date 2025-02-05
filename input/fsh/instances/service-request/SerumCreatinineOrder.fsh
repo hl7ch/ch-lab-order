@@ -1,6 +1,6 @@
 Instance: SerumCreatinineOrder
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Creatinine 24H renal clearance panel"
+Title: "CH LAB-ServiceRequest for Creatinine 24H renal clearance panel- old version"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #example
 

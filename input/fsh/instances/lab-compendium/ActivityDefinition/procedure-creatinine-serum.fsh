@@ -1,11 +1,11 @@
-Instance: procedure-creatinine-serum
+Instance: procedure-serum-creatinine
 InstanceOf: ActivityDefinition
 Title: "CH LAB-Order ActivityDefinition Serum Creatinine"
 Description: "Procedure Creatinine [Mass/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-creatinine-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-serum-creatinine"
 * version = "0.1.0"
 * name = "SerumCreatinineProcedure"
 * title = "Procedure - serum creatinine - venous blood"
@@ -26,4 +26,5 @@ Usage: #example
 
 * kind = #ServiceRequest
 * code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* observationRequirement = Reference(ObservationDefinition/observation-creatinine-serum)
 * observationResultRequirement = Reference(ObservationDefinition/observation-creatinine-serum)

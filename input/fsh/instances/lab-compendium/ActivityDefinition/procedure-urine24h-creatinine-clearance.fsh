@@ -1,6 +1,7 @@
 Instance: procedure-urine24h-creatinine-clearance
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Creatinine Clearance"
+Title: "CH LAB-Order ActivityDefinition Creatinine Clearance"
+Description: "Procedure to get the renal clearance in 24h Urine and Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
@@ -29,8 +30,5 @@ Usage: #example
 * code = $loinc#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
 // * observationResultRequirement = Reference(ObservationDefinition/example-observation-creatinine-renal-clearance)
 
-* observationRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
-* observationRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
-* observationResultRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-urine24h-creatinine)
+* observationRequirement[0] = Reference(ObservationDefinition/observation-creatinine-clearance)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observation-creatinine-clearance)

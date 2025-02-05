@@ -844,7 +844,7 @@ Usage: #example
 // ---- E4 Creatinine concentration serum ----
 // ===========================================
 * item[=].item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum"  // item[9][0][0][6]
-* item[=].item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-creatinine-serum"
+* item[=].item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-serum-creatinine"
 * item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine Serum"
 * item[=].item[=].item[=].item[=].item[=].code = $loinc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item[=].type = #boolean
