@@ -1,7 +1,7 @@
 Instance: procedure-urine-albumin
 InstanceOf: ActivityDefinition
 Title: "CH LAB-Order ActivityDefinition Urine Albumin"
-Description: "Activity Definition for Albumin [Moles/volume] in Urine Procedure"
+Description: "Procedure for Albumin [Mass/volume] in Urine Procedure"
 Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-albumin"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -19,5 +19,5 @@ Usage: #example
 * participant.type = #practitioner
 * kind = #ServiceRequest
 
-* observationRequirement[0] = Reference(ObservationDefinition/observation-urine-albumin)
-* observationResultRequirement[0] = Reference(ObservationDefinition/observation-urine-albumin)
+* observationRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
+* observationResultRequirement[0] = Reference(ObservationDefinition/urineAlbumin)

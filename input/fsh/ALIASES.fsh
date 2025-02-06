@@ -35,6 +35,7 @@ Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/l
 Alias:  $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 Alias:  $shareablevalueset             = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias:  $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
+Alias:  $ValidityPeriod = http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ValidityPeriod
 // Alias:  $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
 // Alias:  $L-Forms                       = http://terminology.hl7.org/3.1.0/CodeSystem/forms-codes
 

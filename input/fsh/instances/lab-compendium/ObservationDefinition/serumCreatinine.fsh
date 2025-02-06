@@ -1,7 +1,7 @@
-Instance: observation-creatinine-serum  // TODO merge with serumCreatinine
+Instance: serumCreatinine
 InstanceOf: ObservationDefinition
-Title: "ObservationDefinition Creatinine Serum"
-Description: "Kreatinin [Masse/Volumen] im Serum oder Plasma"
+Title: "CH LAB-Order ObservationDefinition Creatinine Serum"
+Description: "Kreatinin [Mass/Volumen] im Serum oder Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US

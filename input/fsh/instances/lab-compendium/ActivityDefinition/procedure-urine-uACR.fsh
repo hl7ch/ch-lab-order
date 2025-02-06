@@ -23,8 +23,6 @@ Usage: #example
 * code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"
 // * observationResultRequirement = Reference(ObservationDefinition/example-observation-creatinine-renal-clearance)
 
-* observationRequirement[0] = Reference(ObservationDefinition/observation-urine-albumin)
-* observationRequirement[+] = Reference(ObservationDefinition/observation-urine-creatinine)
-* observationResultRequirement[0] = Reference(ObservationDefinition/observation-urine-albumin)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-urine-creatinine)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/observation-urine-albumin-creatinine-ratio)
+* observationResultRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
+* observationResultRequirement[+] = Reference(ObservationDefinition/urineCreatinine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/uACR)

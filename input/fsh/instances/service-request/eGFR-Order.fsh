@@ -1,9 +1,10 @@
-Instance: LabOrder-ServiceRequest-panel-renal-insufficiency
+Instance: eGFR-Order
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest of Panel for Renal Insufficiency"
-Description: "Example of Service Request for a Laboratory Panel (Battery)"
+
+Title: "CH LAB-Order eGFR CKD-EPI 2021"
+Description: "Service Request serum creatinine and Calculation of eGFR"
 Usage: #example
-* id = "LabOrder-panel-renal-insufficiency"
+* id = "egfr-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -13,17 +14,15 @@ Usage: #example
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-123456789"
-
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
-// * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #108252007
-* code.coding.system = $sct
-* code.coding.display = "Laboratory procedure (procedure)"
+* code.coding.code = #98979-8
+* code.coding.system = $loinc
+* code.coding.display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -37,5 +36,6 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+// * specimen[+] = Reference(Specimen/Urine) "Urine specimen"

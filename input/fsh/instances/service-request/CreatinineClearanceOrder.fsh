@@ -12,20 +12,18 @@ Usage: #example
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
+* requisition.value = "ReqID-1234567.100"
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
-
 // ---- Clinical Chemistry Tests ----
 * code.coding.code = #34555-3
 * code.coding.system = $loinc
 * code.coding.display = "Creatinine 24H renal clearance panel"
 
-// * orderDetails[+]: // codeableConcept
+// ---- orderDetails ----
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

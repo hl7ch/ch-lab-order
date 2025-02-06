@@ -27,5 +27,5 @@ Usage: #example
 * timingTiming.event.extension.valueExpression.expression = "Now()"
 * participant.type = #practitioner
 
-* observationRequirement = Reference(ObservationDefinition/observation-creatinine-serum)
-* observationResultRequirement = Reference(ObservationDefinition/observation-creatinine-serum)
+// * observationRequirement = Reference(Patient/ age )
+* observationResultRequirement = Reference(ObservationDefinition/serumCreatinine)
