@@ -1,7 +1,7 @@
-Instance: specimen-serum-plasma
+Instance: specimenSerumPlasma
 InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Serum or Plasma"
-Description: "Serum Plasma"
+Title: "CH LAB-Order SpecimenDefinition Serum or Plasma"
+Description: "Serum, Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US
