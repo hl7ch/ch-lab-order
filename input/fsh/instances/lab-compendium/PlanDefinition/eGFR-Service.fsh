@@ -19,7 +19,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/eGFR-Service"
 * version = "current"
 * name = "RenalInsufficiendyPanelServiceGFR"
-* title = "Renal Insufficiendy Panel: eGFR"
+* title = "Renal Insufficiendy Panel: Service eGFR"
 * type = $laboratory-service-definition-type#panel
 * status = #draft
 * experimental = false
