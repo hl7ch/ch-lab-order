@@ -28,7 +28,7 @@ Usage: #example
 * code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * observationRequirement[0] = Reference(ObservationDefinition/collection-urine-duration)
 * observationRequirement[+] = Reference(ObservationDefinition/24h-collection-urine-volume)
-// * observationRequirement[+] = Reference(ObservationDefinition/observation-urine24h-creatinine)
+// * observationRequirement[+] = Reference(ObservationDefinition/24h-urine-creatinine)
 * observationResultRequirement[0] = Reference(ObservationDefinition/collection-urine-duration)
 * observationResultRequirement[+] = Reference(ObservationDefinition/24h-collection-urine-volume)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-urine24h-creatinine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/24h-urine-creatinine)

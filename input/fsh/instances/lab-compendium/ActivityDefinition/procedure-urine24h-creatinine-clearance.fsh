@@ -34,5 +34,5 @@ Usage: #example
 * code = $loinc#2164-2 "Creatinine renal clearance in 24 hour Urine and Serum or Plasma"
 // * observationResultRequirement = Reference(ObservationDefinition/example-observation-creatinine-renal-clearance)
 
-// * observationRequirement[0] = Reference(ObservationDefinition/observation-creatinine-clearance)
-* observationResultRequirement[0] = Reference(ObservationDefinition/observation-creatinine-clearance)
+// * observationRequirement[0] = Reference(ObservationDefinition/creatinine-clearance)
+* observationResultRequirement[0] = Reference(ObservationDefinition/creatinine-clearance)

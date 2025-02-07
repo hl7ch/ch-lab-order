@@ -1,4 +1,4 @@
-Instance: observation-urine24h-creatinine
+Instance: 24h-urine-creatinine
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Creatinine in 24h Urine"
 Description: "Mass of creatinine in urine collected during 24h"
