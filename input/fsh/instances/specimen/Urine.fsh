@@ -12,6 +12,6 @@ Usage: #example
 * request = Reference(LabOrder-ServiceRequest-generic)
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
-* container.identifier.value = "4e88a-bc987-dd888-12345-urin"
-* container.description = "Uriswab™ : Urine Collection System"
+* container.identifier.value = "UDI-DI 805938689URINECOEM"
+* container.description = "Urine Monovette®"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
