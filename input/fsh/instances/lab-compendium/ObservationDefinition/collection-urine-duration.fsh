@@ -1,6 +1,6 @@
 Instance: collection-urine-duration
 InstanceOf: ObservationDefinition
-Title: "ObservationDefinition Collection duration"
+Title: "CH LAB-Order ObservationDefinition Collection duration"
 Description: "Collection duration [h] of specimen"
 Usage: #example
 * meta.profile[0] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"

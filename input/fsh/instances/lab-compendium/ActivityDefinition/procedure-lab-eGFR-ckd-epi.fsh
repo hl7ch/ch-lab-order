@@ -10,7 +10,7 @@ Usage: #example
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.101"
 * version = "0.1.0"
 // * name = "Lab_eGFK_CKD_EPI_Procedure"
-* title = "Procedure to assess the estimated glomerular filtration rate"
+* title = "Procedure to assess the estimated glomerular filtration rate (eGFR CKD EPI 2021)"
 * status = #draft
 * experimental = false
 * date = "2024-12-13T18:00:00+01:00"

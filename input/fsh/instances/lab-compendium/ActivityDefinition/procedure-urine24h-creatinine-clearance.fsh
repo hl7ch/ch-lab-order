@@ -35,4 +35,4 @@ Usage: #example
 // * observationResultRequirement = Reference(ObservationDefinition/example-observation-creatinine-renal-clearance)
 
 // * observationRequirement[0] = Reference(ObservationDefinition/creatinine-clearance)
-* observationResultRequirement[0] = Reference(ObservationDefinition/creatinine-clearance)
+* observationResultRequirement = Reference(ObservationDefinition/creatinine-clearance)

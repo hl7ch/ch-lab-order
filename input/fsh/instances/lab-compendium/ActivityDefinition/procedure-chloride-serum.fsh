@@ -16,13 +16,13 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Chloride measurement procedure on in-vitro serum specimen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
-* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform              chloride level test on serum, and the output observation.              It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
+// * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform              chloride level test on serum, and the output observation.              It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 
-* topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+// * topic[0].coding.code = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+// * topic[+].coding.code = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 
 * kind = #ServiceRequest
 * code = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
