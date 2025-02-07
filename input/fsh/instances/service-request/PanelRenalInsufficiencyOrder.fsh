@@ -1,4 +1,4 @@
-Instance: PanelRenalInsufficiencyOrder
+Instance: RenalInsufficiencyPanelOrder
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order: Panel for eGFR and Albumin/Creatinin Ratio in Urine"
 Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency"

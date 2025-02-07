@@ -1,7 +1,7 @@
 Instance: serumCreatinine
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Creatinine Serum"
-Description: "Kreatinin [Mass/Volumen] im Serum oder Plasma"
+Description: "Kreatinine [Mass/Volumen] in Serum oder Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US

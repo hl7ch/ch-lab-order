@@ -1,4 +1,4 @@
-Instance: observation-collection-duration
+Instance: collection-urine-duration
 InstanceOf: ObservationDefinition
 Title: "ObservationDefinition Collection duration"
 Description: "Collection duration [h] of specimen"

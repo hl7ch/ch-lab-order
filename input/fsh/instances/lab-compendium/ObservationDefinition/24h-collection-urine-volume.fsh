@@ -1,4 +1,4 @@
-Instance: observation-collection-volume
+Instance: 24h-collection-urine-volume
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Collection volumen"
 Description: "Collection volume [mL] of specimen"
