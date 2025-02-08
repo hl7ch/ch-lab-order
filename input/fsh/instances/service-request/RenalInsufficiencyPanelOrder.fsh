@@ -36,8 +36,8 @@ Usage: #example
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 
-* supportingInfo[+] = Reference(ServiceRequest/egfr-order)
-* supportingInfo[+] = Reference(ServiceRequest/uacr-order)
+// * supportingInfo[+] = Reference(ServiceRequest/egfr-order)
+// * supportingInfo[+] = Reference(ServiceRequest/uacr-order)
 
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
