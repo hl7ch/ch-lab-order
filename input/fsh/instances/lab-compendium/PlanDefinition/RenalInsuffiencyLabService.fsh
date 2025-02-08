@@ -76,13 +76,18 @@ Usage: #example
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = urn:iso:std:iso:3166#CH
+
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#269858003 "Biochemical evaluation of blood urea/renal function (procedure)"
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
+
+* relatedArtifact.type = #documentation
+* relatedArtifact.citation = "Clinically, the most practical tests for assessing renal function are those that estimate the glomerular filtration rate (eGFR) and quantify proteinuria (albuminuria)."
+* relatedArtifact.document.url = "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
 // TODO: adapt actions
-* action.extension[0].extension[0].extension.url = "Material"
+* action.extension[+].extension[+].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].extension[+].extension.url = "Material"
