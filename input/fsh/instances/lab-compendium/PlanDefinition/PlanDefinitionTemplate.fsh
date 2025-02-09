@@ -1,10 +1,3 @@
-// Alias: $nabm = http://www.codage.ext.cnamts.fr/codif/nabm
-// Alias: $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type
-// Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
-// Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-// Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-// Alias: $SH-REF-08 = http://tools.cofrac.fr/documentation/SH-REF-08
-
 Instance: example-lab-panel-urine24h-creatinine-clearance
 InstanceOf: PlanDefinition
 Title: "CH LAB-Order Template for planDefinition"
@@ -23,13 +16,14 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
+
 * url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-panel-urine24h-creatinine-clearance"
 * version = "current"
 * name = "UrineCreatinineClearancePanel"
 * title = "24-hour urine creatinine clearance panel"
 * type = $laboratory-service-definition-type#panel
 * status = #draft
-* experimental = true
+* experimental = false
 * date = "2020-02-12T19:00:00+01:00"
 * publisher = "HL7 Switzerland Laborgruppe"
 * contact.telecom.system = #url

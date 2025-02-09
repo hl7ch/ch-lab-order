@@ -1,37 +1,3 @@
-/*
-// Define the PlanDefinition resource
-Instance: RenalInsuffiencyLabService
-InstanceOf: ChLab_LabServiceDefinition
-Usage: #example
-* title = "Renal Insuffiency Lab Service"
-* description = "A clinical guideline for managing diabetes, including regular HbA1c testing and lifestyle recommendations."
-* status = #active
-* experimental = true
-* date = "2023-10-01"
-* publisher = "Example Healthcare Organization"
-* jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* purpose = "To provide a standardized approach for managing diabetes in adult patients."
-* action[+].title = "Perform HbA1c Test"
-* action[=].description = "Order an HbA1c test every 3 months for diabetic patients."
-* action[=].code = http://snomed.info/sct#43396009 "Hemoglobin A1c measurement"
-* action[=].timingTiming.repeat.frequency = 1
-* action[=].timingTiming.repeat.period = 3
-* action[=].timingTiming.repeat.periodUnit = #mo
-* action[+].title = "Lifestyle Recommendations"
-* action[=].description = "Provide lifestyle recommendations, including diet and exercise."
-* action[=].code = http://snomed.info/sct#386358003 "Diet education"
-* action[=].relatedAction[+].actionId = "1"
-* action[=].relatedAction[=].relationship = #before-start
-Alias: $nabm = http://www.codage.ext.cnamts.fr/codif/nabm
-Alias: $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type
-Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
-Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $loinc = http://loinc.org
-Alias: $sct = http://snomed.info/sct
-Alias: $SH-REF-08 = http://tools.cofrac.fr/documentation/SH-REF-08
-*/
-
 Instance: RenalInsuffiencyLabService   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
 Title: "CH LAB-Order Renal Insufficiency Assessment Service"
@@ -53,15 +19,18 @@ Usage: #example
 
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabService"
 * identifier.use = #official
-* identifier.value = "RenalInsufficiendyPanel"
+* identifier.value = "RenalInsufficiendyLabPanel"
 * version = "current"
-* name = "RenalInsufficiendyPanel"
-* title = "Renal Insufficiendy Panel"
+* name = "RenalInsufficiendyLabPanel"
+* title = "Renal Insufficiendy Lab Panel"
+/*
 * title.extension.extension[0].url = "lang"
 * title.extension.extension[=].valueCode = #de-CH
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Niereninsuffizienz Panel"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
+*/
+
 * type = $laboratory-service-definition-type#panel
 * status = #draft
 * experimental = false
@@ -82,10 +51,13 @@ Usage: #example
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
-
+/* publisher problem? 
+throws: Exception generating Narrative: unexpected non-end of element null::a at line 173 column 50
 * relatedArtifact.type = #documentation
 * relatedArtifact.citation = "Clinically, the most practical tests for assessing renal function are those that estimate the glomerular filtration rate (eGFR) and quantify proteinuria (albuminuria)."
 * relatedArtifact.document.url = "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
+*/
+
 // TODO: adapt actions
 * action.extension[+].extension[+].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
