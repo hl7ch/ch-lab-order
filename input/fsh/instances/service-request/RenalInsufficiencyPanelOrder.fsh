@@ -1,7 +1,7 @@
 Instance: RenalInsufficiencyPanelOrder
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order: Panel for eGFR and Albumin/Creatinin Ratio in Urine"
-Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency"
+Title: "CH LAB-Order Renal Insufficiency Panel"
+Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #example
 * id = "panel-renal-insufficiency-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -35,9 +35,8 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
+* supportingInfo[+] = Reference(ServiceRequest/egfr-order)
+* supportingInfo[+] = Reference(ServiceRequest/uacr-order)
 
-// * supportingInfo[+] = Reference(ServiceRequest/egfr-order)
-// * supportingInfo[+] = Reference(ServiceRequest/uacr-order)
-
-* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+// * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
+// * specimen[+] = Reference(Specimen/Urine) "Urine specimen"

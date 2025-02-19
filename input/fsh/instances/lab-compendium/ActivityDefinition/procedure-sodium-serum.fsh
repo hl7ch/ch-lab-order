@@ -1,6 +1,6 @@
 Instance: procedure-sodium-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Sodium"
+Title: "CH LAB-Order Procedure Sodium"
 Description: "Procedure Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

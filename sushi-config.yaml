@@ -8,7 +8,7 @@ license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
 date: 2025-01-30
-version: 3.0.0-ci-build
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

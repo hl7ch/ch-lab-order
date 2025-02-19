@@ -1,6 +1,6 @@
 Instance: procedure-serum-electrolyte
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Electrolytes"
+Title: "CH LAB-Order Procedure Electrolytes"
 Description: "Procedure Electrolytes 1998 panel - Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

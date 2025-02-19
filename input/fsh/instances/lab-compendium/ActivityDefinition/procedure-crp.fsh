@@ -1,6 +1,6 @@
 Instance: procedure-crp
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition CRP"
+Title: "CH LAB-Order Procedure CRP"
 Description: "Procedure C reactive protein [Mass/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

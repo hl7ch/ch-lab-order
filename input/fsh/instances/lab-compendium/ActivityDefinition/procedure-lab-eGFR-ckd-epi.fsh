@@ -1,6 +1,6 @@
 Instance: procedure-lab-eGFR-ckd-epi
 InstanceOf: ActivityDefinition
-Title: "CH LAB-Order ActivityDefinition eGFK CKD-EPI"
+Title: "CH LAB-Order Procedure eGFK CKD-EPI"
 Description: "Procedure to get the estimated GFR [Moles/volume] using CKD-EPI 2021 calculator, and mesurement of serum creatinine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

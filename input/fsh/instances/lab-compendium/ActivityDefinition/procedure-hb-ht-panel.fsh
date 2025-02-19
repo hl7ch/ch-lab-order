@@ -1,6 +1,6 @@
 Instance: procedure-hb-ht-panel
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Hb-Ht-panel"
+Title: "CH LAB-Order Proceduren Hb-Ht-panel"
 Description: "Procedure Hemoglobin-Hematocrit measurement procedure on in-vitro blood specimen"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

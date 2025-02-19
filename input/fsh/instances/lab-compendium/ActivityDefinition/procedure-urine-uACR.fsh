@@ -1,6 +1,6 @@
 Instance: procedure-urine-uACR
 InstanceOf: ActivityDefinition
-Title: "CH LAB-Order ActivityDefinition Urine Albumin/Creatinine Ratio"
+Title: "CH LAB-Order Procedure Urine Albumin/Creatinine Ratio"
 Description: "Procedure Albumin/Creatinine Ratio [Mass Ratio] in Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

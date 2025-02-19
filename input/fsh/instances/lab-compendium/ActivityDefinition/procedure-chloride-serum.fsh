@@ -1,6 +1,6 @@
 Instance: procedure-chloride-serum
 InstanceOf: ActivityDefinition
-Title: "CH LAB-Order ActivityDefinition Chloride"
+Title: "CH LAB-Order Procedure Chloride"
 Description: "Procedure Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

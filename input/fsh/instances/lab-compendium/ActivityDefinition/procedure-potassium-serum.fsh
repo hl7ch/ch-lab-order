@@ -1,6 +1,6 @@
 Instance: procedure-potassium-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Potassium"
+Title: "CH LAB-Order Procedure Potassium"
 Description: "Procedure Potassium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"

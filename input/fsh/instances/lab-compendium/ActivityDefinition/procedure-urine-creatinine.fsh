@@ -1,6 +1,6 @@
 Instance: procedure-urine-creatinine
 InstanceOf: ActivityDefinition
-Title: "CH LAB-Order ActivityDefinition Urine Creatinine"
+Title: "CH LAB-Order Procedure Urine Creatinine"
 Description: "Procedure Creatinine [Mass/volume] in Urine"
 Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-creatinine"

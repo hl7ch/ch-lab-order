@@ -1,6 +1,6 @@
 Instance: procedure-urine-albumin
 InstanceOf: ActivityDefinition
-Title: "CH LAB-Order ActivityDefinition Urine Albumin"
+Title: "CH LAB-Order Procedure Urine Albumin"
 Description: "Procedure for Albumin [Mass/volume] in Urine Procedure"
 Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-albumin"
