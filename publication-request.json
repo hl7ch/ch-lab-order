@@ -1,6 +1,6 @@
 {
   "package-id" : "ch.fhir.ig.ch-lab-order",
-  "version" : "3.0.0-ci-build",
+  "version" : "3.0.0",
   "path" : "http://fhir.ch/ig/ch-lab-order/2.0.0",
   "mode" : "working",
   "status" : "trial-use",

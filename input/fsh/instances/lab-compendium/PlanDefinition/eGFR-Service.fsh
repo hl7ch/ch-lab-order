@@ -41,10 +41,10 @@ Usage: #example
 
 // TODO: adapt actions
 * action.extension[0].extension[0].extension.url = "Material"
-* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
+* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "SpecimenDefinition Single Test Venous blood"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].extension[+].extension.url = "Material"
-* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-capillary-serum-single-test) "example-specimen-capillary-serum-single-test"
+* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "SpecimenDefinition Single Test Capillary blood"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 // * action.extension[+].extension.extension.url = "Material"

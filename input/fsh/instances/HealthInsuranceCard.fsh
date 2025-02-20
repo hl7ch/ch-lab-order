@@ -10,6 +10,7 @@ Usage: #example
 * type = $coverage-type#KVG "According to KVG"
 * subscriber = Reference(Patient/FranzMuster)
 * beneficiary = Reference(Patient/FranzMuster)
+* period.start = "2024-01-01"
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"

@@ -47,7 +47,7 @@ Usage: #example
 // * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.extension[=].extension.extension.url = "Material"
-* action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
+* action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/specimenUrineSpot) "Urine Spot"
 * action.extension[=].extension.url = "ExclusiveGroup"
 // * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"
