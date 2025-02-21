@@ -22,9 +22,9 @@ Usage: #example
 // What is being ordered
 
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #34555-3
+* code.coding.code = #2149-3
 * code.coding.system = $loinc
-* code.coding.display = "Creatinine 24H renal clearance panel"
+* code.coding.display = "Creatine [Mass/volume] in Urine"
 
 // * orderDetails[+]: // codeableConcept
 

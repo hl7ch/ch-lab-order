@@ -1,7 +1,7 @@
 Instance: UrineAlbuminOrder
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
-Description: "Service Request for a Albumin and Creatine test in Urine, and Ratio Calculation"
+Title: "CH LAB-Order Albumin in Urine"
+Description: "Service Request for a Albumin test in Urine"
 Usage: #example
 * id = "urine-albumine-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -19,9 +19,9 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #32294-1
+* code.coding.code = #1754-1
 * code.coding.system = $loinc
-* code.coding.display = "Albumin/Creatinine [Ratio] in Urine"
+* code.coding.display = "Albumin [Mass/volume] in Urine"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
