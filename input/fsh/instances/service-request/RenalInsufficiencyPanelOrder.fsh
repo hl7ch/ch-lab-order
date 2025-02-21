@@ -19,9 +19,13 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #108252007
-* code.coding.system = $sct
-* code.coding.display = "Laboratory procedure (procedure)"
+// * code.coding.code = #108252007
+// * code.coding.system = $sct
+// * code.coding.display = "Laboratory procedure (procedure)"
+
+* code.coding.code = #LP31398-8
+* code.coding.system = $loinc
+* code.coding.display = "Renal function"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
