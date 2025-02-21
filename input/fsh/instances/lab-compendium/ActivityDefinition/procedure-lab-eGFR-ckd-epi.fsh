@@ -50,4 +50,5 @@ Usage: #example
 
 // * observationRequirement = Reference(Patient/ age grösse gewicht )
 * specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
-* observationResultRequirement = Reference(ObservationDefinition/serumCreatinine)
+* observationRequirement = Reference(ObservationDefinition/serumCreatinine)
+* observationResultRequirement = Reference(ObservationDefinition/eGFR)

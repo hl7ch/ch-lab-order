@@ -10,4 +10,4 @@ Usage: #example
 * permittedDataType = #Quantity
 * multipleResultsAllowed = false
 * preferredReportName = "urine albumin/creatinine Mass ratio"
-// * quantitativeDetails.unit = http://unitsofmeasure.org#mg/dL
+* quantitativeDetails.unit = http://unitsofmeasure.org#ug/mg{creat} 
