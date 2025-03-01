@@ -9,7 +9,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 
 // der SR referenziert auf 3 weitere SR
-* basedOn[0] = Reference(LabOrder-ServiceRequest-creatinine-clearance)
+* basedOn[0] = Reference(LabOrderCreatinineClearance)
 * basedOn[+] = Reference(LabOrderSerumElectrolytes)
 
 // ---- grouperID, must be repeated in all dependent SR ----

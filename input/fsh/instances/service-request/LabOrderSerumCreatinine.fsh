@@ -1,14 +1,16 @@
-Instance: SerumCreatinineOrder
+Instance: LabOrderSerumCreatinine
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine 24H renal clearance panel- old version"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #example
 
-// * id = "serum-creatinine-order"
+* id = "lab-order-serum-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"
-// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
+
+* basedOn = Reference(LabOrderCreatinineClearance)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -36,8 +38,6 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo[+] = Reference(ServiceRequest/SerumCreatinineOrder)
-* supportingInfo[+] = Reference(ServiceRequest/UrineCreatinineOrder)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."

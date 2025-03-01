@@ -1,4 +1,4 @@
-Instance: UrineCreatinineOrder
+Instance: LabOrderUrineCreatinine
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for 24h urine Creatinine"
 Description: "Service Request for urine Creatinine [Moles/volume] in 24h Urin"
@@ -36,8 +36,6 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-* supportingInfo[+] = Reference(ServiceRequest/SerumCreatinineOrder)
-* supportingInfo[+] = Reference(ServiceRequest/UrineCreatinineOrder)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."

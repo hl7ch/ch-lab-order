@@ -9,7 +9,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/FranzMuster)
 * receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(Urine24hCreatinineOrder)
+* request = Reference(LabOrderUrine24hCreatinine)
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"

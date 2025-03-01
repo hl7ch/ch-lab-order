@@ -1,14 +1,16 @@
-Instance: Urine24hCreatinineOrder
+Instance: LabOrderUrine24hCreatinine
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order ServiceRequest for Creatinine in 24h Urine"
 Description: "Creatinine [Moles/volume] in Urine Order"
 Usage: #example
+
 * id = "urine-24h-creatinine-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-serum-creatinine"
 
+* basedOn = Reference(LabOrderCreatinineClearance)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
