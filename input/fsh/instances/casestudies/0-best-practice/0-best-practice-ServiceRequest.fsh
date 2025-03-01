@@ -1,5 +1,5 @@
 Instance: 0-best-practice-ServiceRequest-0
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice"
 Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
@@ -26,7 +26,7 @@ Usage: #example
 
 
 Instance: 0-best-practice-ServiceRequest-1
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Anti-Xa-Aktivität"
 Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
@@ -59,7 +59,7 @@ Usage: #example
 * specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-2
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Glucose"
 Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
@@ -90,7 +90,7 @@ Usage: #example
 * specimen = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
 
 Instance: 0-best-practice-ServiceRequest-3
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
@@ -119,7 +119,7 @@ Usage: #example
 * reasonCode.text = "Anemia screening"
 
 Instance: 0-best-practice-ServiceRequest-3-Hb
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
@@ -142,7 +142,7 @@ Usage: #example
 * specimen = Reference(Specimen/Blood-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-3-Ht
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example

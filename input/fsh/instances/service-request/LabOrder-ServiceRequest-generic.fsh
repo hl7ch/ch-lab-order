@@ -1,5 +1,5 @@
 Instance: LabOrder-ServiceRequest-generic
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for some single test"
 Description: "Hemoglobin [Moles/volume] in Blood"
 Usage: #example

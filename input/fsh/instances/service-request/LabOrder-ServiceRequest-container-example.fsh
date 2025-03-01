@@ -1,5 +1,5 @@
 Instance: LabOrder-ServiceRequest-container-example
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "Service Request as container for multiple Service Requests"
 Description: "CH LAB-ServiceRequest for Creatinine Clearance and Electrolytes in Serum"
 Usage: #example
@@ -10,7 +10,7 @@ Usage: #example
 
 // der SR referenziert auf 3 weitere SR
 * basedOn[0] = Reference(LabOrder-ServiceRequest-creatinine-clearance)
-* basedOn[+] = Reference(LabOrder-ServiceRequest-electrolytes)
+* basedOn[+] = Reference(LabOrderSerumElectrolytes)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

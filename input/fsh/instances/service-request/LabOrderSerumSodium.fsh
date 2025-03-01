@@ -1,16 +1,16 @@
-Instance: SerumChlorideOrder
-InstanceOf: ChLabOrderSRSingletest
-Title: "CH LAB-Order for Chloride"
-Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
+Instance: LabOrderSerumSodium
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest for Sodium"
+Description: "Service Request for Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
-* id = "serum-chloride-order"
+* id = "laborder-serum-sodium"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"
 
-* replaces = Reference(LabOrder-ServiceRequest-sodium)
-
+// is part of panel 
+* basedOn = Reference(LabOrderSerumElectrolytes)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
@@ -23,15 +23,12 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #2075-0
+* code.coding.code = #2951-2 
 * code.coding.system = $loinc
-* code.coding.display = "Chloride [Moles/volume] in Serum or Plasma"
+* code.coding.display = "Sodium [Moles/volume] in Serum or Plasma"
 
-// ---- orderDetails ----
-* orderDetail.coding.code = #NW
-* orderDetail.coding.system = $v2-0119
-* orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+// orderDetails: Additional order information
+// * orderDetail.coding = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

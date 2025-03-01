@@ -1,5 +1,5 @@
 Instance: LabOrder-ServiceRequest-creatinine-clearance // Obsolete
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine clearance"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #example

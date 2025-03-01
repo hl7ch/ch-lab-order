@@ -1,5 +1,5 @@
 Instance: LabOrder-ServiceRequest-creatinine
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Serum Creatinine"
 Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma"
 Usage: #example
