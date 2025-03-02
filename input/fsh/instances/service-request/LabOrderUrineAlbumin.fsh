@@ -1,9 +1,9 @@
-Instance: UrineAlbuminOrder
+Instance: LabOrderUrineAlbumin
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Albumin in Urine"
 Description: "Service Request for a Albumin test in Urine"
 Usage: #example
-* id = "urine-albumine-order"
+* id = "lab-order-urine-albumin"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -19,9 +19,9 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #1754-1
+* code.coding.code = #77158-4
 * code.coding.system = $loinc
-* code.coding.display = "Albumin [Mass/volume] in Urine"
+* code.coding.display = "Microalbumin [Moles/volume] in Urine by Detection limit <= 3.0 mg/L"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW

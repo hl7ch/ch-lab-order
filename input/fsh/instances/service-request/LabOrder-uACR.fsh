@@ -1,7 +1,7 @@
 Instance: LabOrder-uACR
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
-Description: "Service Request for a Albumin and Creatine test in Urine, and Ratio Calculation"
+Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
 Usage: #example
 * id = "lab-order-uACR"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -26,6 +26,15 @@ Usage: #example
 * code.coding.code = #32294-1
 * code.coding.system = $loinc
 * code.coding.display = "Albumin/Creatinine [Ratio] in Urine"
+// 
+// * code.coding.code = #9318-7
+// * code.coding.system = $loinc
+// * code.coding.display = "Albumin/Creatinine [Mass Ratio] in Urine"
+// 
+// * code.coding.code = #14585-4
+// * code.coding.system = $loinc
+// * code.coding.display = "Albumin/Creatinine [Molar Ratio] in Urine"
+// Units of Measure for the ratio 
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW

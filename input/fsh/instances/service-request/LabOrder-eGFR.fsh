@@ -1,8 +1,7 @@
 Instance: LabOrder-eGFR
 InstanceOf: ChLabOrderSR
-
 Title: "CH LAB-Order eGFR CKD-EPI 2021"
-Description: "Service Request serum creatinine and Calculation of eGFR"
+Description: "Service Request for serum creatinine and calculation of eGFR"
 Usage: #example
 * id = "lab-order-eGFR"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -19,7 +18,6 @@ Usage: #example
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
-// * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
