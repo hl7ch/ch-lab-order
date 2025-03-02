@@ -1,17 +1,17 @@
-Instance: uACR-Order
+Instance: LabOrder-eGFR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
-Description: "Service Request for a Albumin and Creatine test in Urine, and Ratio Calculation"
+
+Title: "CH LAB-Order eGFR CKD-EPI 2021"
+Description: "Service Request serum creatinine and Calculation of eGFR"
 Usage: #example
-* id = "uacr-order"
+* id = "lab-order-eGFR"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
-
 // Reference to superior order
-* basedOn[+] = Reference(RenalInsufficiencyPanelOrder)
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/eGFR-Service"
+* basedOn[+] = Reference(LabOrderRenalInsufficiencyPanel)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -23,9 +23,9 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #32294-1
+* code.coding.code = #98979-8
 * code.coding.system = $loinc
-* code.coding.display = "Albumin/Creatinine [Ratio] in Urine"
+* code.coding.display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -40,5 +40,5 @@ Usage: #example
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
 
-// * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-* specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
+

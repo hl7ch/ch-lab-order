@@ -1,13 +1,17 @@
-Instance: RenalInsufficiencyPanelOrder
+Instance: LabOrder-uACR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Renal Insufficiency Panel"
-Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
+Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
+Description: "Service Request for a Albumin and Creatine test in Urine, and Ratio Calculation"
 Usage: #example
-* id = "panel-renal-insufficiency-order"
+* id = "lab-order-uACR"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabService"
+
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
+
+// Reference to superior order
+* basedOn[+] = Reference(LabOrderRenalInsufficiencyPanel)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -19,13 +23,9 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-// * code.coding.code = #108252007
-// * code.coding.system = $sct
-// * code.coding.display = "Laboratory procedure (procedure)"
-
-* code.coding.code = #LP31398-8
+* code.coding.code = #32294-1
 * code.coding.system = $loinc
-* code.coding.display = "Renal function"
+* code.coding.display = "Albumin/Creatinine [Ratio] in Urine"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -39,8 +39,5 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-// * supportingInfo[+] = Reference(ServiceRequest/egfr-order)
-// * supportingInfo[+] = Reference(ServiceRequest/uacr-order)
 
-// * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+* specimen[+] = Reference(Specimen/Urine) "Urine specimen"

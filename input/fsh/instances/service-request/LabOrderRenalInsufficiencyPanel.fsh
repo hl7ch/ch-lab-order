@@ -1,17 +1,13 @@
-Instance: eGFR-Order
+Instance: LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
-
-Title: "CH LAB-Order eGFR CKD-EPI 2021"
-Description: "Service Request serum creatinine and Calculation of eGFR"
+Title: "CH LAB-Order Renal Insufficiency Panel"
+Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #example
-* id = "egfr-order"
+* id = "panel-renal-insufficiency-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-
-// Reference to superior order
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/eGFR-Service"
-* basedOn[+] = Reference(RenalInsufficiencyPanelOrder)
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabService"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -23,9 +19,13 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #98979-8
+// * code.coding.code = #108252007
+// * code.coding.system = $sct
+// * code.coding.display = "Laboratory procedure (procedure)"
+
+* code.coding.code = #LP31398-8
 * code.coding.system = $loinc
-* code.coding.display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+* code.coding.display = "Renal function"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -39,6 +39,3 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-
-* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
