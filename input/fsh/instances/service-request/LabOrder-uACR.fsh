@@ -7,12 +7,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
-
 // Reference to superior order
 * basedOn[+] = Reference(LabOrderRenalInsufficiencyPanel)
-
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
@@ -23,18 +20,18 @@ Usage: #example
 
 // What is being ordered
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #32294-1
-* code.coding.system = $loinc
-* code.coding.display = "Albumin/Creatinine [Ratio] in Urine"
+// * code.coding.code = #32294-1
+// * code.coding.system = $loinc
+// * code.coding.display = "Albumin/Creatinine [Ratio] in Urine"
 // 
 // * code.coding.code = #9318-7
 // * code.coding.system = $loinc
 // * code.coding.display = "Albumin/Creatinine [Mass Ratio] in Urine"
 // 
-// * code.coding.code = #14585-4
-// * code.coding.system = $loinc
-// * code.coding.display = "Albumin/Creatinine [Molar Ratio] in Urine"
-// Units of Measure for the ratio 
+* code.coding.code = #14585-4
+* code.coding.system = $loinc
+* code.coding.display = "Albumin/Creatinine [Molar Ratio] in Urine"
+// Units of Measure for the ratio mmol/mol{creat}
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -48,5 +45,6 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
-
+* supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
+* supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
