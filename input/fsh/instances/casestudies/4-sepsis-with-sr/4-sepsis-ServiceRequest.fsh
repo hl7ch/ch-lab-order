@@ -50,7 +50,7 @@ Usage: #example
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[+] = Reference(Specimen/Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 * specimen[+] = Reference(Specimen/Blood-sepsis)
 * specimen[+] = Reference(Specimen/Urine-sepsis)
 
@@ -102,7 +102,7 @@ Usage: #example
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
-Instance: Blood-bactec-plus
+Instance: Blood-bactec-plus-4-sepsis
 InstanceOf: Specimen
 Title: "Blood Sample, 4-sepsis bactec-plus"
 Description: "Example for Specimen for Haematological Examination"
