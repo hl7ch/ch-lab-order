@@ -52,7 +52,6 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 * section[orderReferral].entry ^slicing.rules = #open
  
 * section[orderReferral].entry contains ServiceRequest 1..* MS
-// * section[orderReferral].entry[ServiceRequest] only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer)
 * section[orderReferral].entry[ServiceRequest] only Reference(ChLabOrderSR)
 * section[orderReferral].entry[ServiceRequest] ^short = "ServiceRequest"
 * section[orderReferral].entry[ServiceRequest].reference 1.. MS
