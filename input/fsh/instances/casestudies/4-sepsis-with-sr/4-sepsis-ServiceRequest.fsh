@@ -51,8 +51,8 @@ Usage: #example
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
-* specimen[+] = Reference(Specimen/Blood-sepsis)
-* specimen[+] = Reference(Specimen/Urine-sepsis)
+* specimen[+] = Reference(Specimen/Blood-4-sepsis)
+* specimen[+] = Reference(Specimen/Urine-4-sepsis)
 
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
@@ -117,7 +117,7 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-Instance: Blood-sepsis
+Instance: Blood-4-sepsis
 InstanceOf: Specimen
 Title: "Blood Sample, 4-sepsis"
 Description: "Example for Specimen for Haematological Examination"
@@ -132,7 +132,7 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-Instance: Urine-sepsis
+Instance: Urine-4-sepsis
 InstanceOf: Specimen
 Title: "Urine Sample, 4-sepsis"
 Description: "Example for Specimen of Urin"

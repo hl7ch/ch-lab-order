@@ -43,10 +43,10 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-bactec-plus-4-sepsis"
 * entry[=].resource = Blood-bactec-plus-4-sepsis
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-sepsis"
-* entry[=].resource = Blood-sepsis
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-sepsis"
-* entry[=].resource = Urine-sepsis
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-4-sepsis"
+* entry[=].resource = Blood-4-sepsis
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-4-sepsis"
+* entry[=].resource = Urine-4-sepsis
 
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/4-sepsis"
 * entry[=].resource = 4-sepsis-Questionnaire
