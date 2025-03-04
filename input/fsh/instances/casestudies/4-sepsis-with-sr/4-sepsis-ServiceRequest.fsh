@@ -65,17 +65,12 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-// * category = $sct#721963009 "Order (record artifact)"
-
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #24360-0 
 * code.coding[=].system = $loinc
 * code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
-
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
 
 * status = #active
 * intent = #original-order
@@ -88,6 +83,81 @@ Usage: #example
 // * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 // * specimen[+] = Reference(Specimen/Urine-4-sepsis)
+
+Instance: 4-sepsis-ServiceRequestCBCDiff   // Service request for CBC with Differential
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis CBC with Differential"
+Description: "Example for Service Request for Sepsis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(4-sepsis-ServiceRequest)
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[+].code = #57021-8 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "CBC W Auto Differential panel - Blood"
+
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+* specimen[+] = Reference(Specimen/Blood-4-sepsis)
+
+Instance: 4-sepsis-ServiceRequestGrowth   // Service request for Hemoglobin and Hematocrit
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
+Description: "Example for Service Request for Sepsis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(4-sepsis-ServiceRequest)
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[+].code = #90423-5
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
+
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+// * specimen[+] = Reference(Specimen/Blood-4-sepsis)
+// * specimen[+] = Reference(Specimen/Urine-4-sepsis)
+
+Instance: 4-sepsis-ServiceRequestCRP   // Service request for C reactive protein
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis C reactive protein"
+Description: "Example for Service Request for Sepsis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(4-sepsis-ServiceRequest)
+* code.coding[+].code = #1988-5 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+* specimen[+] = Reference(Specimen/Serum-4-sepsis)
 
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
@@ -184,3 +254,19 @@ Usage: #example
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
+
+Instance: Serum-4-sepsis
+InstanceOf: Specimen
+Title: "Serum Sample, 4-sepsis"
+Description: "Example for Specimen of Serum"
+Usage: #example
+* identifier.value = "11111-15394-75465"
+* accessionIdentifier.value = "22222-bc987-dd888"
+* status = #available
+* type = $sct#119364003 "Serum specimen (specimen)"
+* subject = Reference(Patient/SaraSpeckmann)
+* receivedTime = "2023-12-01T16:40:17Z"
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
+* container.type = $sct#706053007 "General specimen container (physical object)"

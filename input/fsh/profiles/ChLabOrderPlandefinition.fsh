@@ -77,11 +77,11 @@ PlanDefinition is therefore selected to represent a laboratory service, and the 
 // * description.extension[OtherDescription] ^short = "Translation in a specified language"
 // * description.extension[OtherDescription] ^definition = "Translation of the description of the laboratory service in a specified language"
 // * useContext MS
-// * useContext ^slicing.discriminator[0].type = #pattern
+// * useContext ^slicing.discriminator[0].type = #value
 // * useContext ^slicing.discriminator[=].path = "code"
 // * useContext ^slicing.discriminator[+].type = #type
 // * useContext ^slicing.discriminator[=].path = "value"
-// * useContext ^slicing.discriminator[+].type = #pattern
+// * useContext ^slicing.discriminator[+].type = #value
 // * useContext ^slicing.discriminator[=].path = "value"
 // * useContext ^slicing.rules = #open
 // * useContext ^comment = "When multiple useContexts are specified, in this LabServiceDefinition profile, all contexts apply to the defined laboratory service."
