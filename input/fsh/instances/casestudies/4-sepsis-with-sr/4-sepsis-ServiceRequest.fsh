@@ -3,13 +3,13 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
-* id = "4-sepsis-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+/*
 * code.coding[+].code = #24360-0 
 * code.coding[=].system = $loinc
 * code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
@@ -38,6 +38,7 @@ Usage: #example
 * code.coding[+].code = #1988-5 
 * code.coding[=].system = $loinc
 * code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+*/
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
@@ -50,9 +51,43 @@ Usage: #example
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+/*
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
+*/
+
+Instance: 4-sepsis-ServiceRequestHbHt   // Service request for Hemoglobin and Hematocrit
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
+Description: "Example for Service Request for Sepsis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+// * category = $sct#721963009 "Order (record artifact)"
+
+* basedOn = Reference(4-sepsis-ServiceRequest)
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[+].code = #24360-0 
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* specimen[+] = Reference(Specimen/Blood-4-sepsis)
+// * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
@@ -110,7 +145,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/SaraSpeckmann)
-* request = Reference(ServiceRequest/4-sepsis-service-request)
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -125,7 +160,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/SaraSpeckmann)
-* request = Reference(ServiceRequest/4-sepsis-service-request)
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -143,7 +178,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/SaraSpeckmann)
 * receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(ServiceRequest/4-sepsis-service-request)
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"
