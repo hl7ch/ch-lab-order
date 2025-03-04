@@ -3,7 +3,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice"
 Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
-// * id = "0-best-practice-service-request-0"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -26,7 +25,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Anti-Xa-Aktivität"
 Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
-// * id = "0-best-practice-service-request-1"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -56,7 +54,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Glucose"
 Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
-// * id = "0-best-practice-service-request-2"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -88,7 +85,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
-// * id = "0-best-practice-service-request-3"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -115,7 +111,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
-// * id = "0-best-practice-service-request-3-hb"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -138,7 +133,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
-// * id = "0-best-practice-service-request-3-ht"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

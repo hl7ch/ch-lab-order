@@ -1,9 +1,8 @@
-Instance: 1-tvt-CompositionWithSR_andForm
+Instance: 1-tvt-CompositionWithSRandForm
 InstanceOf: ChOrfComposition
 Title: "CH LAB-Composition 1-tvt with ServiceRequest and Form"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
-* id = "1-tvt-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
