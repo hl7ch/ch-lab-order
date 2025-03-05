@@ -24,9 +24,9 @@ Usage: #example
 * code.coding[=].system = $loinc
 * code.coding[=].display = "CBC W Auto Differential panel - Blood"
 
-* code.coding[+].code = #58410-2
-* code.coding[=].system = $loinc
-* code.coding[=].display = "CBC panel - Blood by Automated count"
+// * code.coding[+].code = #58410-2
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "CBC panel - Blood by Automated count"
 
 
 * code.coding[+].code = #29587-3

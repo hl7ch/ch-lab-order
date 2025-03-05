@@ -33,4 +33,12 @@ Usage: #example
 * section[orderReferral].entry[Questionnaire] = Reference(5-biol-monit-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(5-biol-monit-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(5-biol-monit-ServiceRequest)
+/*
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHbHt)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHbElectro)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestCBC)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestToxPanelBlood)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestArsenic)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHeavyMetals)
+*/
 
