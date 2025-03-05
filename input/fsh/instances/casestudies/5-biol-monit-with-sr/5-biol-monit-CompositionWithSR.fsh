@@ -33,12 +33,12 @@ Usage: #inline
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 5-biol-monit\n </div>"
 * section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestToxPanelBlood)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHeavyMetalsUrine)
 
 /*
 * section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHbHt)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHbElectro)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestCBC)
-* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestToxPanelBlood)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestArsenic)
-* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHeavyMetals)
 */
