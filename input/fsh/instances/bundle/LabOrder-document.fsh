@@ -1,0 +1,185 @@
+Instance: LabOrder-document
+InstanceOf: ChLabOrderDocumentWithSR
+Title: "CH LAB-Order Document ordering a Laboratory Panel for Renal Insufficiency"
+Description: "Document containing a Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine"
+Usage: #example
+* identifier.system = "urn:ietf:rfc:3986"  // Must be a valid URI
+* identifier.value = "urn:uuid:bc4715e6-c46d-4794-a379-b809f24ef05d"  // Must be a valid UUID
+* type = #document
+* timestamp = "2025-03-05T12:00:00Z"
+* entry[0].fullUrl = "urn:uuid:1b7b58b1-b952-4190-a0e0-59b4936573a5"    // Composition
+* entry[=].resource = 1b7b58b1-b952-4190-a0e0-59b4936573a5
+
+* entry[+].fullUrl = "urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54"    // Patient
+* entry[=].resource = b82ca08b-9476-44a7-9893-74adbe93ab54
+
+* entry[+].fullUrl = "urn:uuid:d6917aad-86bd-4bb6-af13-795372344206"   // Practitioner
+* entry[=].resource = d6917aad-86bd-4bb6-af13-795372344206
+
+* entry[+].fullUrl = "urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c"   // Practitionerrole
+* entry[=].resource = 1301bc1f-9d23-4529-b30d-f1a0e792823c
+
+* entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"   // Organization
+* entry[=].resource = 9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0
+
+* entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request, entry 5
+* entry[=].resource = 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec
+
+Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
+InstanceOf: ChLabOrderCompositionWithSR
+Usage: #inline
+* meta.versionId = "1"
+* meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
+* text.status = #additional
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 0</div><div>      <h3>Order for Renal Insufficiency Panel</h3>      <p>Hans Guggindiluft suffers from a chronic renal insufficiency. His doctor wants to determine the stage for further action.</p>  </div></div>"
+
+// ---- Sender and Receiver ----
+* extension[0].extension.url = "enterer"
+* extension[=].extension.valueReference = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
+* extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
+// * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"
+// * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
+* extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
+* extension[=].valueReference = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
+// * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
+// * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
+// * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
+// * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis) 
+* extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
+* extension[=].valueReference = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* status = #final
+* category = $sct#721963009 "Order (record artifact)"
+* type = $sct#721965002 "Laboratory order (record artifact)"
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* date = "2025-03-05T12:00:00Z"
+* author = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)  // Practitionerrole
+* title = "CH LAB-Order Renal Insufficiency Panel Document"
+
+* section[orderReferral].title = "Laboratory Order by Service Request 0-best-practice"
+* section[orderReferral].text.status = #generated
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request\n </div>"
+* section[orderReferral].entry[ServiceRequest] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
+
+Instance: b82ca08b-9476-44a7-9893-74adbe93ab54
+InstanceOf: CHCorePatient
+Title: "Patient Hans Guggindieluft"
+Description: "CH-Core-Patient, refers to 1-tvt"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: HansGuggindieluft\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+* extension[=].valueAddress.city = "Zürich"
+* extension[=].valueAddress.country = "Schweiz"
+* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+* extension[=].valueAddress.city = "Breitenbach"
+* extension[=].valueAddress.state = "BL"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+* identifier.type = $v2-0203#MR
+* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
+* identifier.value = "012/08.111111"
+* name.family = "Guggindieluft"
+* name.given = "Hans"
+* telecom[0].system = #phone
+* telecom[=].value = "079 979 79 79"
+* telecom[=].use = #home
+* telecom[+].system = #email
+* telecom[=].value = "hans.guggindieluft@example.ch"
+* gender = #male
+* birthDate = "1981-01-01"
+* maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
+* communication.language = urn:ietf:bcp:47#de-CH
+* communication.language.text = "Deutsch (Schweiz)"
+* communication.preferred = true
+
+Instance: d6917aad-86bd-4bb6-af13-795372344206
+InstanceOf: CHCorePractitioner
+Title: "Practitioner Marc Mustermann Gruppenpraxis"
+Description: "Practitioner, works in Gruppenpraxis"
+Usage: #example
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000050700"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[ZSR].value = "A123309"
+* name.use = #official
+* name.family = "Mustermann"
+* name.given = "Marc"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[=].value = "033 444 22 11"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
+* telecom[=].use = #work
+
+Instance: 1301bc1f-9d23-4529-b30d-f1a0e792823c
+InstanceOf: CHCorePractitionerRole
+Title: "PractitionerRole Marc Mustermann at Gruppenpraxis"
+Description: "PractitionerRole"
+Usage: #example
+* practitioner = Reference(urn:uuid:d6917aad-86bd-4bb6-af13-795372344206)
+* organization = Reference(urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0)
+
+Instance: 9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0
+InstanceOf: CHCoreOrganizationEPR
+Title: "Organization Praxis Gruppenpraxis"
+Description: "Example for group practice"
+Usage: #example
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000241115"
+* name = "Gruppenpraxis Olten"
+* telecom[0].system = #phone
+* telecom[=].value = "+41555556677"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "info@gruppenpraxis.ch"
+* telecom[=].use = #work
+* telecom[+].system = #url
+* telecom[=].value = "http://www.gruppenpraxis.ch"
+* telecom[=].use = #work
+* address.line = "Gerbergasse 12"
+* address.city = "Olten"
+* address.postalCode = "4600"
+* address.country = "CH"
+
+Instance: 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-Order Service Request Renal Insufficiency Panel"
+Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabService"
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-123456789"
+* status = #active
+* intent = #original-order
+
+// What is being ordered
+// ---- Clinical Chemistry Tests ----
+// * code.coding.code = #108252007
+// * code.coding.system = $sct
+// * code.coding.display = "Laboratory procedure (procedure)"
+
+* code.coding.code = #LP31398-8
+* code.coding.system = $loinc
+* code.coding.display = "Renal function"
+
+// ---- orderDetails ----
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+
