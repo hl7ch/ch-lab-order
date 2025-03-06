@@ -42,10 +42,16 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-2-pertussis"
 * entry[=].resource = Serum-2-pertussis
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Throat-swab-2-pertussis" // entry[15]
-* entry[=].resource = Throat-swab-2-pertussis
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/ThroatSwab-2-pertussis" // entry[15]
+* entry[=].resource = ThroatSwab-2-pertussis
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-2-pertussis"
 * entry[=].resource = Blood-2-pertussis
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-service-request"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-ServiceRequest"
 * entry[=].resource = 2-pertussis-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-ServiceRequestCBC"
+* entry[=].resource = 2-pertussis-ServiceRequestCBC
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-ServiceRequestCRP"
+* entry[=].resource = 2-pertussis-ServiceRequestCRP
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/2-pertussis-ServiceRequestAddTest"
+* entry[=].resource = 2-pertussis-ServiceRequestAddTest

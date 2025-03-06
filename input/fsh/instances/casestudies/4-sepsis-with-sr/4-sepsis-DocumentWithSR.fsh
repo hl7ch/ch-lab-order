@@ -50,7 +50,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequest"  // entry[15]
 * entry[=].resource = 4-sepsis-ServiceRequest
-
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestHbHt"  // entry[16]
 * entry[=].resource = 4-sepsis-ServiceRequestHbHt
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestCBCDiff"  // entry[16]

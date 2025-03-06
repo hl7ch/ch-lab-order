@@ -3,7 +3,7 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-0"
+
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -36,7 +36,7 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-1"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-1"
+
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -60,7 +60,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-2"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-2"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -83,7 +82,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-3"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-3"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -106,7 +104,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-4"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-4"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -130,7 +127,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-5"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-5"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

@@ -55,19 +55,19 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-0-best-practice"   // entry[15]
 * entry[=].resource = Blood-0-best-practice
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-0"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-ServiceRequest-0"
 * entry[=].resource = 0-best-practice-ServiceRequest-0
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-1"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-ServiceRequest-1"
 * entry[=].resource = 0-best-practice-ServiceRequest-1
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-2"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-ServiceRequest-2"
 * entry[=].resource = 0-best-practice-ServiceRequest-2
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-ServiceRequest-3"
 * entry[=].resource = 0-best-practice-ServiceRequest-3
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3-hb" // entry[20]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-ServiceRequest-3-Hb" // entry[20]
 * entry[=].resource = 0-best-practice-ServiceRequest-3-Hb
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-service-request-3-ht"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/0-best-practice-ServiceRequest-3-Ht"
 * entry[=].resource = 0-best-practice-ServiceRequest-3-Ht
 
 * entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionTibiaFracture"

@@ -59,11 +59,11 @@ When the placer system request additional tests the existing samples, it copies 
 The Order Control Codes can also be used to cancel, hold or release order requests on hold. In these cases as well the reference to the original order has to be created.
 
 * The 2-pertussis-ServiceRequest is replaced by the
-* 2-pertussis-ServiceRequest-add-test, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
+* 2-pertussis-ServiceRequestAddTest, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
 
-Example of referenced Service Request: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html) The code in the element 'orderDetail' would be 'NW' for "New order/service", or the element could be completely omitted.
+Example of referenced Service Request: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-ServiceRequest.html) The code in the element 'orderDetail' would be 'NW' for "New order/service", or the element could be completely omitted.
 
-Example Service Replace Request: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-service-request-add-test.html)
+Example Service Replace Request: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-ServiceRequestAddTest.html)
 The Replace Request contains a Reference to the previous ServiceRequest and an element 'orderDetail', carries the order Control Code from the Code System v2-0119: RP for "Order/service replace request", 'CA' for "Cancel order/service request", 'HD' for "Hold order request", and 'RL' for "Release previous hold"
 
 ### Use Case 3: Collective request for toxicological testing (biological monitoring)

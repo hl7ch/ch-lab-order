@@ -3,7 +3,6 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
-* id = "2-pertussis-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -32,8 +31,84 @@ Usage: #example
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCardEmilKummer)
-* specimen[+] = Reference(Specimen/Throat-swab-2-pertussis)
+// * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
+// * specimen[+] = Reference(Specimen/Blood-2-pertussis)
+// * specimen[+] = Reference(Specimen/Serum-2-pertussis)
+
+Instance: 2-pertussis-ServiceRequestCBC
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 2-pertussis CBC"
+Description: "Example for Service Request for Pertussis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(2-pertussis-ServiceRequest)
+* status = #active
+* intent = #original-order
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[0].system = $loinc
+* code.coding[=].code = #58410-2
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+* code.text = "Laboratory Order"
+* code.coding[+].system = $loinc
+* code.coding[=].code = #1988-5 
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(Patient/EmilKummer)
+* requester = Reference(PeterPrestoGruppenpraxis)
+* reasonCode = $sct#772146005
+* reasonCode.text = "Pertussis suspected (situation)"
+* insurance = Reference(HealthInsuranceCardEmilKummer)
+// * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
+// * specimen[+] = Reference(Specimen/Serum-2-pertussis)
+
+Instance: 2-pertussis-ServiceRequestCRP
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 2-pertussis CRP"
+Description: "Example for Service Request for Pertussis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(2-pertussis-ServiceRequest)
+* status = #active
+* intent = #original-order
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[0].system = $loinc
+* code.coding[=].code = #58410-2
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+* code.text = "Laboratory Order"
+* code.coding[+].system = $loinc
+* code.coding[=].code = #1988-5 
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(Patient/EmilKummer)
+* requester = Reference(PeterPrestoGruppenpraxis)
+* reasonCode = $sct#772146005
+* reasonCode.text = "Pertussis suspected (situation)"
+* insurance = Reference(HealthInsuranceCardEmilKummer)
+// * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
+// * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
 Instance: EmilKummer
@@ -113,7 +188,7 @@ Usage: #example
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
-Instance: Throat-swab-2-pertussis
+Instance: ThroatSwab-2-pertussis
 InstanceOf: Specimen
 Title: "Throat Swab"
 Description: "Example for Specimen of Throat Swab"
