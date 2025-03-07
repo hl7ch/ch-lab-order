@@ -12,28 +12,24 @@ Usage: #example
 
 * entry[+].fullUrl = "urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54"    // Patient Hans Guggindieluft
 * entry[=].resource = b82ca08b-9476-44a7-9893-74adbe93ab54
-
 * entry[+].fullUrl = "urn:uuid:d6917aad-86bd-4bb6-af13-795372344206"    // Practitioner Marc Mustermann
 * entry[=].resource = d6917aad-86bd-4bb6-af13-795372344206
-
 * entry[+].fullUrl = "urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c"    // Practitionerrole Marc Mustermann at Gruppenpraxis
 * entry[=].resource = 1301bc1f-9d23-4529-b30d-f1a0e792823c
-
 * entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"    // Organization Praxis Gruppenpraxis
 * entry[=].resource = 9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0
 
 * entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request LabOrderRenalInsufficiencyPanel, entry 5
 * entry[=].resource = 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec
-
 * entry[+].fullUrl = "urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b"    // Service Request eGFR, entry 6
 * entry[=].resource = 9ed971bb-247d-446a-80fb-f6aa7eaf374b
-
-* entry[+].fullUrl = "urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af"    // Service Request uACR, entry 7
+* entry[+].fullUrl = "urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207"    // Service Request LabOrderSerumCreatinine, entry 7
+* entry[=].resource = 87c6a2f7-981d-469e-a5f5-e5ecf6286207
+* entry[+].fullUrl = "urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af"    // Service Request uACR, entry 8
 * entry[=].resource = 62dd8013-6145-4bbb-8588-b172caaa13af
-
-* entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request LabOrderUrineAlbumin-ServiceRequest, entry 8
+* entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request LabOrderUrineAlbumin-ServiceRequest, entry 9
 * entry[=].resource = d1be525d-a58c-410e-9dfb-aef46ce6f0fa
-* entry[+].fullUrl = "urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41"    // Service Request LabOrderUrineCreatinine-ServiceRequest, entry 9
+* entry[+].fullUrl = "urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41"    // Service Request LabOrderUrineCreatinine-ServiceRequest, entry 10
 * entry[=].resource = 5d616c75-34c9-47f0-8e15-2df623755c41
 
 Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
@@ -66,13 +62,14 @@ Usage: #inline
 * author = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)  // Practitionerrole
 * title = "CH LAB-Order Renal Insufficiency Panel Document"
 
-* section[orderReferral].title = "Laboratory Order by Service Request 0-best-practice"
+* section[orderReferral].title = "Laboratory Order by Service Request for Renal Insufficiency Panel"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request\n </div>"
-* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // Service Request LabOrderRenalInsufficiencyPanel
-* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // Service Request eGFR
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by LabOrderRenalInsufficiencyPanel Service Request\n </div>"
+* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-Service Request 
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // eGFR-ServiceRequest
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // LabOrderSerumCreatinine-ServiceRequest
 
-* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)    // Service Request uACR
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)    // uACR-Service Request 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa)    // LabOrderUrineAlbumin-ServiceRequest
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41)    // LabOrderUrineCreatinine-ServiceRequest
 
@@ -240,6 +237,48 @@ Usage: #example
 
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 
+Instance: 87c6a2f7-981d-469e-a5f5-e5ecf6286207  // LabOrderSerumCreatinine
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest for Creatinine in Serum in eGFR"
+Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123987"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
+
+* basedOn = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+// * category = $sct#721963009 "Order (record artifact)"
+
+// What is being ordered
+
+// ---- Clinical Chemistry Tests ----
+* code.coding.code = #34555-3
+* code.coding.system = $loinc
+* code.coding.display = "Creatinine 24H renal clearance panel"
+
+// * orderDetails[+]: // codeableConcept
+
+* priority = #urgent
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
+
+* occurrenceDateTime = "2025-01-15"
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+* supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
+* supportingInfo[+] = Reference(Condition/Renal-insufficiency)
+* note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
+* specimen[0] = Reference(Specimen/Serum) "Serum Sample"
 
 Instance: 62dd8013-6145-4bbb-8588-b172caaa13af  // Service Request uACR
 InstanceOf: ChLabOrderSR
