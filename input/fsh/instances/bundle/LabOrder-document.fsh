@@ -39,7 +39,7 @@ Usage: #inline
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study chronic renal insufficiency</div><div>      <h3>Order for Renal Insufficiency Panel</h3>      <p>Hans Guggindiluft suffers from a chronic renal insufficiency. His doctor wants to determine the stage for further action.</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study Chronic Renal Insufficiency</div><div>      <h3>Order for Renal Insufficiency Panel</h3>      <p>Urs Schmid suffers from a chronic renal insufficiency. His doctor wants to determine the stage for further action.</p>  </div></div>"
 
 // ---- Sender and Receiver ----
 * extension[0].extension.url = "enterer"
@@ -65,7 +65,7 @@ Usage: #inline
 
 * section[orderReferral].title = "Laboratory Order by Service Request for Renal Insufficiency Panel"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests\n </div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests.\n estimated GFR and Albumin/Creatinine Ratio</div>"
 * section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-ServiceRequest 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // eGFR-ServiceRequest
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // LabOrderSerumCreatinine-ServiceRequest
@@ -79,9 +79,8 @@ InstanceOf: CHCorePatient
 Title: "Patient Urs Schmid"
 Description: "CH-Core-Patient Urs Schmid"
 Usage: #example
-// * id ="hans-guggindieluft"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: Urs Schmid\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: Urs Schmid\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Urs Schmid \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
@@ -112,7 +111,6 @@ InstanceOf: CHCorePractitioner
 Title: "Practitioner Esther Meier Gruppenpraxis Olten"
 Description: "Practitioner, works in GruppenpraxisOlten"
 Usage: #example
-// * id ="marc-mustermann"
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -143,7 +141,6 @@ InstanceOf: CHCoreOrganizationEPR
 Title: "Organization Praxis GruppenpraxisOlten"
 Description: "Example for group practice"
 Usage: #example
-// * id ="praxis-gruppenpraxisolten"
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000241115"
 * name = "Gruppenpraxis Olten"
