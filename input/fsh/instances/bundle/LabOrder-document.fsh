@@ -64,8 +64,8 @@ Usage: #inline
 
 * section[orderReferral].title = "Laboratory Order by Service Request for Renal Insufficiency Panel"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by LabOrderRenalInsufficiencyPanel Service Request\n </div>"
-* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-Service Request 
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests\n </div>"
+* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-ServiceRequest 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // eGFR-ServiceRequest
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // LabOrderSerumCreatinine-ServiceRequest
 
@@ -78,6 +78,7 @@ InstanceOf: CHCorePatient
 Title: "Patient Hans Guggindieluft"
 Description: "CH-Core-Patient, refers to 1-tvt"
 Usage: #example
+* id = "hans-guggindieluft"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: HansGuggindieluft\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
@@ -110,6 +111,7 @@ InstanceOf: CHCorePractitioner
 Title: "Practitioner Marc Mustermann Gruppenpraxis"
 Description: "Practitioner, works in Gruppenpraxis"
 Usage: #example
+* id = "marc-mustermann"
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -140,6 +142,7 @@ InstanceOf: CHCoreOrganizationEPR
 Title: "Organization Praxis Gruppenpraxis"
 Description: "Example for group practice"
 Usage: #example
+* id = "praxis-gruppenpraxis"
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000241115"
 * name = "Gruppenpraxis Olten"
@@ -162,6 +165,7 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Service Request Renal Insufficiency Panel"
 Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #example
+* id = "lab-order-renal-insufficiency-panel"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -169,7 +173,7 @@ Usage: #example
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "urn:oid:2.16.756.5.40"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -201,6 +205,7 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order eGFR CKD-EPI 2021"
 Description: "Service Request for serum creatinine and calculation of eGFR"
 Usage: #example
+* id = "lab-order-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -211,7 +216,7 @@ Usage: #example
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "urn:oid:2.16.756.5.40"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -242,6 +247,7 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine in Serum in eGFR"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #example
+* id = "lab-order-serum-creatinine-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"
@@ -251,9 +257,8 @@ Usage: #example
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
-
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
@@ -285,6 +290,7 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
 Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
 Usage: #example
+* id = "lab-order-urine-albumin-creatinine-ratio"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -293,7 +299,7 @@ Usage: #example
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "urn:oid:2.16.756.5.40"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -332,7 +338,7 @@ Usage: #example
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "urn:oid:2.16.756.5.40"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -371,7 +377,7 @@ Usage: #example
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "urn:oid:2.16.756.5.40"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
