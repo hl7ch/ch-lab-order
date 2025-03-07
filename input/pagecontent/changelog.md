@@ -74,7 +74,7 @@ Alias:  $documentEntryClassCode, Alias:  $documentEntryTypeCode
 * [Issue #78](https://github.com/hl7ch/ch-lab-order/issues/78) Test to be performed is missing in ServiceRequest.code
 
 * [Issue #77](https://github.com/hl7ch/ch-lab-order/issues/77) Pathology Order: Case Study and Instance is added: Case study 6: Suspected Melanoma, order for histopathology examination
-* [Issue #89](https://github.com/hl7ch/ch-lab-order/issues/89): Case Study 0-generic has been deleted.
+* [Issue #89](https://github.com/hl7ch/ch-lab-order/issues/89): Case study chronic renal insufficiency-generic has been deleted.
 * [Issue #86](https://github.com/hl7ch/ch-lab-order/issues/86): Add Term 'Nachverordnung' in [ChLabOrderServiceRequestCategories codesystem](https://fhir.ch/ig/ch-lab-order/CodeSystem-ServiceRequest.categories.html)
 * [Issue #85](https://github.com/hl7ch/ch-lab-order/issues/85): Remove SR of Vital Monitoring Devices; should be realized under a separate IG
 * Issue #84: The Resource Service Request provides that reasonCode and/or a reasonReference can be added to the job as Condition | Observation | Diagnostic Report | DocumentReference; the descrption of UC 7 has been completed

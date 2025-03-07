@@ -10,20 +10,31 @@ Usage: #example
 * entry[0].fullUrl = "urn:uuid:1b7b58b1-b952-4190-a0e0-59b4936573a5"    // Composition
 * entry[=].resource = 1b7b58b1-b952-4190-a0e0-59b4936573a5
 
-* entry[+].fullUrl = "urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54"    // Patient
+* entry[+].fullUrl = "urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54"    // Patient Hans Guggindieluft
 * entry[=].resource = b82ca08b-9476-44a7-9893-74adbe93ab54
 
-* entry[+].fullUrl = "urn:uuid:d6917aad-86bd-4bb6-af13-795372344206"   // Practitioner
+* entry[+].fullUrl = "urn:uuid:d6917aad-86bd-4bb6-af13-795372344206"    // Practitioner Marc Mustermann
 * entry[=].resource = d6917aad-86bd-4bb6-af13-795372344206
 
-* entry[+].fullUrl = "urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c"   // Practitionerrole
+* entry[+].fullUrl = "urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c"    // Practitionerrole Marc Mustermann at Gruppenpraxis
 * entry[=].resource = 1301bc1f-9d23-4529-b30d-f1a0e792823c
 
-* entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"   // Organization
+* entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"    // Organization Praxis Gruppenpraxis
 * entry[=].resource = 9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0
 
-* entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request, entry 5
+* entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request LabOrderRenalInsufficiencyPanel, entry 5
 * entry[=].resource = 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec
+
+* entry[+].fullUrl = "urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b"    // Service Request eGFR, entry 6
+* entry[=].resource = 9ed971bb-247d-446a-80fb-f6aa7eaf374b
+
+* entry[+].fullUrl = "urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af"    // Service Request uACR, entry 7
+* entry[=].resource = 62dd8013-6145-4bbb-8588-b172caaa13af
+
+* entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request LabOrderUrineAlbumin-ServiceRequest, entry 8
+* entry[=].resource = d1be525d-a58c-410e-9dfb-aef46ce6f0fa
+* entry[+].fullUrl = "urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41"    // Service Request LabOrderUrineCreatinine-ServiceRequest, entry 9
+* entry[=].resource = 5d616c75-34c9-47f0-8e15-2df623755c41
 
 Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
 InstanceOf: ChLabOrderCompositionWithSR
@@ -31,7 +42,7 @@ Usage: #inline
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 0</div><div>      <h3>Order for Renal Insufficiency Panel</h3>      <p>Hans Guggindiluft suffers from a chronic renal insufficiency. His doctor wants to determine the stage for further action.</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study chronic renal insufficiency</div><div>      <h3>Order for Renal Insufficiency Panel</h3>      <p>Hans Guggindiluft suffers from a chronic renal insufficiency. His doctor wants to determine the stage for further action.</p>  </div></div>"
 
 // ---- Sender and Receiver ----
 * extension[0].extension.url = "enterer"
@@ -58,7 +69,12 @@ Usage: #inline
 * section[orderReferral].title = "Laboratory Order by Service Request 0-best-practice"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order by Service Request\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
+* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // Service Request LabOrderRenalInsufficiencyPanel
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // Service Request eGFR
+
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)    // Service Request uACR
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa)    // LabOrderUrineAlbumin-ServiceRequest
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41)    // LabOrderUrineCreatinine-ServiceRequest
 
 Instance: b82ca08b-9476-44a7-9893-74adbe93ab54
 InstanceOf: CHCorePatient
@@ -144,7 +160,7 @@ Usage: #example
 * address.postalCode = "4600"
 * address.country = "CH"
 
-Instance: 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec
+Instance: 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec  // Service Request LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Service Request Renal Insufficiency Panel"
 Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
@@ -183,3 +199,164 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 
+Instance: 9ed971bb-247d-446a-80fb-f6aa7eaf374b  // Service Request eGFR
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-Order eGFR CKD-EPI 2021"
+Description: "Service Request for serum creatinine and calculation of eGFR"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+
+// Reference to superior order
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/eGFR-Service"
+* basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-123456789"
+* status = #active
+* intent = #original-order
+
+// What is being ordered
+// ---- Clinical Chemistry Tests ----
+* code.coding.code = #98979-8
+* code.coding.system = $loinc
+* code.coding.display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+
+// ---- orderDetails ----
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+
+* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
+
+
+Instance: 62dd8013-6145-4bbb-8588-b172caaa13af  // Service Request uACR
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
+Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
+// Reference to superior order
+* basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-123456789"
+* status = #active
+* intent = #original-order
+
+* code.coding.code = #14585-4
+* code.coding.system = $loinc
+* code.coding.display = "Albumin/Creatinine [Molar Ratio] in Urine"
+// Units of Measure for the ratio mmol/mol{creat}
+
+// ---- orderDetails ----
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)    // Patient/HansGuggindieluft
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)  // MarcMustermannGruppenpraxis
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+* supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
+* supportingInfo[+] = Reference(Condition/Renal-insufficiency)
+* specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+
+Instance: d1be525d-a58c-410e-9dfb-aef46ce6f0fa  // LabOrderUrineAlbumin-ServiceRequest
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-Order Albumin [Moles/volume] in Urine"
+Description: "This term was created for, but not limited in use to, the cobas Tina-quant Albumin test kit. (Conversion factors: mg/L x 0.0152 = μmol/L, g/L x 15.2 = μmol/L)"
+Usage: #example
+* id = "lab-order-urine-albumin"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
+* basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-123456789"
+* status = #active
+* intent = #original-order
+
+// What is being ordered
+// ---- Clinical Chemistry Tests ----
+* code.coding.code = #77158-4
+* code.coding.system = $loinc
+* code.coding.display = "Microalbumin [Moles/volume] in Urine by Detection limit <= 3.0 mg/L"
+
+// ---- orderDetails ----
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(Patient/HansGuggindieluft)
+* requester = Reference(MarcMustermannGruppenpraxis)
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+* specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+* note.text = "Please use umol/L as Unit for the ratio calculation umol[albumin]/mmol[creatinine]."
+
+Instance: 5d616c75-34c9-47f0-8e15-2df623755c41  // LabOrderUrineCreatinine-ServiceRequest
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest for Creatinine [Moles/volume] in Urine"
+Description: "Service Request for Creatinine [Moles/volume] in Urine"
+Usage: #example
+* id = "lab-order-urine-creatinine"
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123987"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
+* basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-123456789"
+* status = #active
+* intent = #original-order
+
+// What is being ordered
+// ---- Clinical Chemistry Tests ----
+* code.coding.code = #14683-7
+* code.coding.system = $loinc
+* code.coding.display = "Creatinine [Moles/volume] in Urine"
+
+// * orderDetails[+]: // codeableConcept
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
+
+* priority = #urgent
+* subject = Reference(Patient/HansGuggindieluft)
+* requester = Reference(MarcMustermannGruppenpraxis)
+* reasonCode = $sct#90688005
+* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+* insurance = Reference(HealthInsuranceCard)
+* specimen[+] = Reference(Specimen/Urine) "Urine specimen"
+* note.text = "Please use mmol/L for the ratio calculation mol[albumin]/mmol[creatinine]. Most labs in Switzerland use mg[albumin]/mmol[creatinine] as unit for the ratio calculation."
+
+// Viollier, Bioanalytica, Medisyn, Unilabs, Synlab, Medics, laborteam: mg[albumin]/mmol[creatinine]
+// Risch: mg[albumin]/mmol[creatinine]
