@@ -10,27 +10,28 @@ Usage: #example
 * entry[0].fullUrl = "urn:uuid:1b7b58b1-b952-4190-a0e0-59b4936573a5"    // Composition
 * entry[=].resource = 1b7b58b1-b952-4190-a0e0-59b4936573a5
 
-* entry[+].fullUrl = "urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54"    // Patient Hans Guggindieluft
-* entry[=].resource = b82ca08b-9476-44a7-9893-74adbe93ab54
-* entry[+].fullUrl = "urn:uuid:d6917aad-86bd-4bb6-af13-795372344206"    // Practitioner Marc Mustermann
-* entry[=].resource = d6917aad-86bd-4bb6-af13-795372344206
-* entry[+].fullUrl = "urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c"    // Practitionerrole Marc Mustermann at Gruppenpraxis
-* entry[=].resource = 1301bc1f-9d23-4529-b30d-f1a0e792823c
-* entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"    // Organization Praxis Gruppenpraxis
-* entry[=].resource = 9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0
+* entry[+].fullUrl = "urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54"    // Patient Urs Schmid
+* entry[=].resource = UrsSchmid
+* entry[+].fullUrl = "urn:uuid:d6917aad-86bd-4bb6-af13-795372344206"    // Practitioner Esther Meier
+* entry[=].resource = EstherMeier
+* entry[+].fullUrl = "urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c"    // Practitionerrole Esther Meier at Gruppenpraxis Olten
+* entry[=].resource = EstherMeierGruppenpraxisOlten
+* entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"    // Organization Praxis GruppenpraxisOlten
+* entry[=].resource = GruppenpraxisOlten
 
 * entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request LabOrderRenalInsufficiencyPanel, entry 5
-* entry[=].resource = 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec
+* entry[=].resource = LabOrderRenalInsufficiencyPanel
+
 * entry[+].fullUrl = "urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b"    // Service Request eGFR, entry 6
-* entry[=].resource = 9ed971bb-247d-446a-80fb-f6aa7eaf374b
+* entry[=].resource = LabOrder-eGFR
 * entry[+].fullUrl = "urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207"    // Service Request LabOrderSerumCreatinine, entry 7
-* entry[=].resource = 87c6a2f7-981d-469e-a5f5-e5ecf6286207
+* entry[=].resource = LabOrderSerumCreatinine-eGFR
 * entry[+].fullUrl = "urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af"    // Service Request uACR, entry 8
-* entry[=].resource = 62dd8013-6145-4bbb-8588-b172caaa13af
+* entry[=].resource = LabOrder-uACR
 * entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request LabOrderUrineAlbumin-ServiceRequest, entry 9
-* entry[=].resource = d1be525d-a58c-410e-9dfb-aef46ce6f0fa
+* entry[=].resource = LabOrderUrineAlbumin
 * entry[+].fullUrl = "urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41"    // Service Request LabOrderUrineCreatinine-ServiceRequest, entry 10
-* entry[=].resource = 5d616c75-34c9-47f0-8e15-2df623755c41
+* entry[=].resource = LabOrderUrineCreatinine
 
 Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
 InstanceOf: ChLabOrderCompositionWithSR
@@ -51,7 +52,7 @@ Usage: #inline
 // * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 // * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 // * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-// * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis) 
+// * extension[=].valueReference = Reference(EstherMeierGruppenpraxisOlten) 
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
 * status = #final
@@ -73,14 +74,14 @@ Usage: #inline
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa)    // LabOrderUrineAlbumin-ServiceRequest
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41)    // LabOrderUrineCreatinine-ServiceRequest
 
-Instance: b82ca08b-9476-44a7-9893-74adbe93ab54
+Instance: UrsSchmid
 InstanceOf: CHCorePatient
-Title: "Patient Hans Guggindieluft"
-Description: "CH-Core-Patient, refers to 1-tvt"
+Title: "Patient Urs Schmid"
+Description: "CH-Core-Patient Urs Schmid"
 Usage: #example
-* id = "hans-guggindieluft"
+// * id ="hans-guggindieluft"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: HansGuggindieluft\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: Urs Schmid\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
@@ -98,7 +99,7 @@ Usage: #example
 * telecom[=].value = "079 979 79 79"
 * telecom[=].use = #home
 * telecom[+].system = #email
-* telecom[=].value = "hans.guggindieluft@example.ch"
+* telecom[=].value = "urs.schmid@example.ch"
 * gender = #male
 * birthDate = "1981-01-01"
 * maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
@@ -106,19 +107,19 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-Instance: d6917aad-86bd-4bb6-af13-795372344206
+Instance: EstherMeier
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Marc Mustermann Gruppenpraxis"
-Description: "Practitioner, works in Gruppenpraxis"
+Title: "Practitioner Esther Meier Gruppenpraxis Olten"
+Description: "Practitioner, works in GruppenpraxisOlten"
 Usage: #example
-* id = "marc-mustermann"
+// * id ="marc-mustermann"
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[ZSR].value = "A123309"
 * name.use = #official
-* name.family = "Mustermann"
-* name.given = "Marc"
+* name.family = "Meier"
+* name.given = "Esther"
 * name.prefix = "Dr. med."
 * name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 * name.prefix.extension.valueCode = #AC
@@ -126,23 +127,23 @@ Usage: #example
 * telecom[=].value = "033 444 22 11"
 * telecom[=].use = #work
 * telecom[+].system = #email
-* telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
+* telecom[=].value = "esther.meier@gruppenpraxisolten.ch"
 * telecom[=].use = #work
 
-Instance: 1301bc1f-9d23-4529-b30d-f1a0e792823c
+Instance: EstherMeierGruppenpraxisOlten
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole Marc Mustermann at Gruppenpraxis"
+Title: "PractitionerRole Esther Meier at Gruppenpraxis Olten"
 Description: "PractitionerRole"
 Usage: #example
 * practitioner = Reference(urn:uuid:d6917aad-86bd-4bb6-af13-795372344206)
 * organization = Reference(urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0)
 
-Instance: 9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0
+Instance: GruppenpraxisOlten
 InstanceOf: CHCoreOrganizationEPR
-Title: "Organization Praxis Gruppenpraxis"
+Title: "Organization Praxis GruppenpraxisOlten"
 Description: "Example for group practice"
 Usage: #example
-* id = "praxis-gruppenpraxis"
+// * id ="praxis-gruppenpraxisolten"
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000241115"
 * name = "Gruppenpraxis Olten"
@@ -150,22 +151,22 @@ Usage: #example
 * telecom[=].value = "+41555556677"
 * telecom[=].use = #work
 * telecom[+].system = #email
-* telecom[=].value = "info@gruppenpraxis.ch"
+* telecom[=].value = "info@gruppenpraxisolten.ch"
 * telecom[=].use = #work
 * telecom[+].system = #url
-* telecom[=].value = "http://www.gruppenpraxis.ch"
+* telecom[=].value = "http://www.gruppenpraxisolten.ch"
 * telecom[=].use = #work
 * address.line = "Gerbergasse 12"
 * address.city = "Olten"
 * address.postalCode = "4600"
 * address.country = "CH"
 
-Instance: 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec  // Service Request LabOrderRenalInsufficiencyPanel
+Instance: LabOrderRenalInsufficiencyPanel   // 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec  // Service Request LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Service Request Renal Insufficiency Panel"
 Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #example
-* id = "lab-order-renal-insufficiency-panel"
+// // * id ="248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -200,12 +201,12 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 
-Instance: 9ed971bb-247d-446a-80fb-f6aa7eaf374b  // Service Request eGFR
+Instance: LabOrder-eGFR  // Service Request eGFR
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order eGFR CKD-EPI 2021"
 Description: "Service Request for serum creatinine and calculation of eGFR"
 Usage: #example
-* id = "lab-order-egfr"
+// // * id ="lab-order-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -242,12 +243,12 @@ Usage: #example
 
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 
-Instance: 87c6a2f7-981d-469e-a5f5-e5ecf6286207  // LabOrderSerumCreatinine
+Instance: LabOrderSerumCreatinine-eGFR  // LabOrderSerumCreatinine-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine in Serum in eGFR"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #example
-* id = "lab-order-serum-creatinine-egfr"
+// * id ="lab-order-serum-creatinine-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"
@@ -285,12 +286,12 @@ Usage: #example
 * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
 * specimen[0] = Reference(Specimen/Serum) "Serum Sample"
 
-Instance: 62dd8013-6145-4bbb-8588-b172caaa13af  // Service Request uACR
+Instance: LabOrder-uACR  // Service Request uACR
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
 Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
 Usage: #example
-* id = "lab-order-urine-albumin-creatinine-ratio"
+// * id ="lab-order-urine-albumin-creatinine-ratio"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -316,8 +317,8 @@ Usage: #example
 * orderDetail.text = "Order Control code"
 
 * priority = #urgent
-* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)    // Patient/HansGuggindieluft
-* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)  // MarcMustermannGruppenpraxis
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)    // Patient/UrsSchmid
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)  // EstherMeierGruppenpraxisOlten
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -325,12 +326,12 @@ Usage: #example
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 
-Instance: d1be525d-a58c-410e-9dfb-aef46ce6f0fa  // LabOrderUrineAlbumin-ServiceRequest
+Instance: LabOrderUrineAlbumin  // LabOrderUrineAlbumin-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order Albumin [Moles/volume] in Urine"
 Description: "This term was created for, but not limited in use to, the cobas Tina-quant Albumin test kit. (Conversion factors: mg/L x 0.0152 = μmol/L, g/L x 15.2 = μmol/L)"
 Usage: #example
-* id = "lab-order-urine-albumin"
+// * id ="lab-order-urine-albumin"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
@@ -364,12 +365,12 @@ Usage: #example
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 * note.text = "Please use umol/L as Unit for the ratio calculation umol[albumin]/mmol[creatinine]."
 
-Instance: 5d616c75-34c9-47f0-8e15-2df623755c41  // LabOrderUrineCreatinine-ServiceRequest
+Instance: LabOrderUrineCreatinine  // LabOrderUrineCreatinine-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine [Moles/volume] in Urine"
 Description: "Service Request for Creatinine [Moles/volume] in Urine"
 Usage: #example
-* id = "lab-order-urine-creatinine"
+// * id ="lab-order-urine-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"
