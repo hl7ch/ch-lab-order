@@ -27,7 +27,7 @@ Usage: #example
 * topic[+] = $sct#86236002 "Circulating anticoagulant assay (procedure)" // not shure correct code
 
 * kind = #ServiceRequest
-* code = $loinc#91556-1 "Fibrin D-dimer DDU [Mass/volume] in Blood by Immunoassay"
+* code = $loinc#91556-1 "Fibrin D-dimer [Mass/volume] in Blood by Immunoassay.DDU"
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 // * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)

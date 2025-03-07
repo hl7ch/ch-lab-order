@@ -220,7 +220,7 @@ Usage: #example
 // ---- Clinical Chemistry Tests ----
 * code.coding.code = #98979-8
 * code.coding.system = $loinc
-* code.coding.display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+* code.coding.display = "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -350,8 +350,8 @@ Usage: #example
 * orderDetail.text = "Order Control code"
 
 * priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
@@ -389,8 +389,8 @@ Usage: #example
 * orderDetail.text = "Order Control code"
 
 * priority = #urgent
-* subject = Reference(Patient/HansGuggindieluft)
-* requester = Reference(MarcMustermannGruppenpraxis)
+* subject = Reference(urn:uuid:b82ca08b-9476-44a7-9893-74adbe93ab54)
+* requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 * insurance = Reference(HealthInsuranceCard)
