@@ -65,7 +65,7 @@ Usage: #inline
 
 * section[orderReferral].title = "Laboratory Order by Service Request for Renal Insufficiency Panel"
 * section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests.\n estimated GFR and Albumin/Creatinine Ratio</div>"
+* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests, estimated GFR and Albumin/Creatinine Ratio</div>"
 * section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-ServiceRequest 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // eGFR-ServiceRequest
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // LabOrderSerumCreatinine-ServiceRequest
