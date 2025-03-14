@@ -6,12 +6,8 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+// * basedOn = Reference(2-pertussis-ServiceRequest)
 * basedOn = Reference(2-pertussis-ServiceRequest)
-// * extension.url = "http://terminology.hl7.org/CodeSystem/v2-0119"
-// * extension.valueCode = #XO
-// this ServiceRequest replaces a previous Laboratory Service Request
-// * replaces = Reference(2-pertussis-ServiceRequest)
-
 * status = #active
 * intent = #order
 
@@ -32,5 +28,3 @@ Usage: #example
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCardEmilKummer)
 * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
-// * specimen[+] = Reference(Specimen/Blood-2-pertussis)
-// * specimen[+] = Reference(Specimen/Serum-2-pertussis)
