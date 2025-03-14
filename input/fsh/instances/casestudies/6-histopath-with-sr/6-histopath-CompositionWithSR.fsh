@@ -31,7 +31,7 @@ Usage: #example
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721966001 "Pathology order (record artifact)"
 * subject = Reference(Patient/SimoneStuder)
-* date = "2019-03-31T11:46:09+02:00"
+* date = "2025-03-05T11:46:09+02:00"
 * author = Reference(ArminAhrensArztpraxis)
 
 * section[orderReferral].title = "Laboratory Order with ServiceRequest 6-histopath"
