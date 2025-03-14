@@ -10,20 +10,17 @@ Usage: #example
 * intent = #original-order
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0].system = $loinc
-* code.coding[=].code = #58410-2
-* code.coding[=].display = "CBC panel - Blood by Automated count"
+* code.coding[0].system = $sct
+* code.coding[=].code = #171228002
+* code.coding[=].display = "Respiratory disease screening (procedure)"
 * code.text = "Laboratory Order"
-* code.coding[+].system = $loinc
-* code.coding[=].code = #1988-5 
-* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
@@ -61,7 +58,7 @@ Usage: #example
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
@@ -99,7 +96,7 @@ Usage: #example
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
