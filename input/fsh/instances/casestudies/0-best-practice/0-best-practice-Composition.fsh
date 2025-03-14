@@ -29,7 +29,7 @@ Usage: #example
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * subject = Reference(Patient/BirgitBlum)
-* date = "2019-03-31T11:46:09+02:00"
+* date = "2025-03-05T11:46:09+02:00"
 * author = Reference(MarcMustermannGruppenpraxis)
 * title = "Laboratory order 0-best-practice"
 

@@ -35,6 +35,7 @@ Usage: #example
 
 Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
 InstanceOf: ChLabOrderCompositionWithSR
+Title: "CH LAB-Order Composition containing the Service Requests of Laboratory Panel for Renal Insufficiency"
 Usage: #inline
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
