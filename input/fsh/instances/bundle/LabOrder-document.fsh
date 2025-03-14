@@ -1,6 +1,6 @@
 Instance: LabOrder-document
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order Document ordering a Laboratory Panel for Renal Insufficiency"
+Title: "Renal Insufficiency Panel: Laboratory Order Document"
 Description: "Document containing a Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"  // Must be a valid URI
@@ -35,7 +35,7 @@ Usage: #example
 
 Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "CH LAB-Order Composition containing the Service Requests of Laboratory Panel for Renal Insufficiency"
+Title: "Renal Insufficiency Panel: Laboratory Order Composition"
 Usage: #inline
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
@@ -78,7 +78,7 @@ Usage: #inline
 Instance: UrsSchmid
 InstanceOf: CHCorePatient
 Title: "Patient Urs Schmid"
-Description: "CH-Core-Patient Urs Schmid"
+Description: "CH Core Patient Urs Schmid"
 Usage: #example
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: Urs Schmid\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Urs Schmid \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
@@ -109,7 +109,7 @@ Usage: #example
 
 Instance: EstherMeier
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Esther Meier Gruppenpraxis Olten"
+Title: "CH Core Practitioner Esther Meier Gruppenpraxis Olten"
 Description: "Practitioner, works in GruppenpraxisOlten"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -131,7 +131,7 @@ Usage: #example
 
 Instance: EstherMeierGruppenpraxisOlten
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole Esther Meier at Gruppenpraxis Olten"
+Title: "CH Core PractitionerRole Esther Meier at Gruppenpraxis Olten"
 Description: "PractitionerRole"
 Usage: #example
 * practitioner = Reference(urn:uuid:d6917aad-86bd-4bb6-af13-795372344206)
@@ -139,7 +139,7 @@ Usage: #example
 
 Instance: GruppenpraxisOlten
 InstanceOf: CHCoreOrganizationEPR
-Title: "Organization Praxis GruppenpraxisOlten"
+Title: "CH Core Organization Praxis GruppenpraxisOlten"
 Description: "Example for group practice"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
@@ -161,8 +161,8 @@ Usage: #example
 
 Instance: LabOrderRenalInsufficiencyPanel   // 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec  // Service Request LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Service Request Renal Insufficiency Panel"
-Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
+Title: "Renal Insufficiency Panel: Laboratory Order"
+Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine"
 Usage: #example
 // // * id ="248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -201,8 +201,8 @@ Usage: #example
 
 Instance: LabOrder-eGFR  // Service Request eGFR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order eGFR CKD-EPI 2021"
-Description: "Service Request for serum creatinine and calculation of eGFR"
+Title: "Renal Insufficiency Panel: Laboratory Order for eGFR CKD-EPI 2021"
+Description: "Service Request for calculation of eGFR, using serum creatinine and the CKD-EPI 2021 formula"
 Usage: #example
 // // * id ="lab-order-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -243,8 +243,8 @@ Usage: #example
 
 Instance: LabOrderSerumCreatinine-eGFR  // LabOrderSerumCreatinine-ServiceRequest
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Creatinine in Serum in eGFR"
-Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
+Title: "Renal Insufficiency Panel: Laboratory Order for Creatinine in Serum or Plasma"
+Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma, used for calculation of eGFR"
 Usage: #example
 // * id ="lab-order-serum-creatinine-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -265,9 +265,9 @@ Usage: #example
 // What is being ordered
 
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #34555-3
+* code.coding.code = #14682-9
 * code.coding.system = $loinc
-* code.coding.display = "Creatinine 24H renal clearance panel"
+* code.coding.display = "Creatinine [Moles/volume] in Serum or Plasma"
 
 // * orderDetails[+]: // codeableConcept
 
@@ -281,13 +281,13 @@ Usage: #example
 * insurance = Reference(HealthInsuranceCard)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
-* note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
+// * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
 * specimen[0] = Reference(Specimen/Serum) "Serum Sample"
 
 Instance: LabOrder-uACR  // Service Request uACR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
-Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
+Title: "Renal Insufficiency Panel: Laboratory Order for Albumin/Creatinine Ratio in Urine"
+Description: "Service Request for Calculation of Albumin/Creatinine Ratio in Urine"
 Usage: #example
 // * id ="lab-order-urine-albumin-creatinine-ratio"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -326,7 +326,7 @@ Usage: #example
 
 Instance: LabOrderUrineAlbumin  // LabOrderUrineAlbumin-ServiceRequest
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Albumin [Moles/volume] in Urine"
+Title: "Renal Insufficiency Panel: Laboratory Order for Albumin [Moles/volume] in Urine"
 Description: "This term was created for, but not limited in use to, the cobas Tina-quant Albumin test kit. (Conversion factors: mg/L x 0.0152 = μmol/L, g/L x 15.2 = μmol/L)"
 Usage: #example
 // * id ="lab-order-urine-albumin"
@@ -365,7 +365,7 @@ Usage: #example
 
 Instance: LabOrderUrineCreatinine  // LabOrderUrineCreatinine-ServiceRequest
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Creatinine [Moles/volume] in Urine"
+Title: "Renal Insufficiency Panel: Laboratory Order for for Creatinine [Moles/volume] in Urine"
 Description: "Service Request for Creatinine [Moles/volume] in Urine"
 Usage: #example
 // * id ="lab-order-urine-creatinine"
