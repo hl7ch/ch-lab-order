@@ -23,7 +23,7 @@ Usage: #example
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
@@ -61,7 +61,7 @@ Usage: #example
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
@@ -99,7 +99,7 @@ Usage: #example
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)

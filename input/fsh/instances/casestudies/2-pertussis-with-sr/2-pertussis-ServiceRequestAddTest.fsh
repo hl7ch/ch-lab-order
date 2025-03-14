@@ -23,7 +23,7 @@ Usage: #example
 * orderDetail.coding.code = #XO
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "Change order/service request"
-* orderDetail.text = "Order Control code, add test to existing order"
+* orderDetail.text = "Order Control code, change order/service request"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
