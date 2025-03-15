@@ -16,7 +16,6 @@ Usage: #example
 * code.text = "Laboratory Order"
 
 // orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
@@ -28,9 +27,6 @@ Usage: #example
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
 * insurance = Reference(HealthInsuranceCardEmilKummer)
-// * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
-// * specimen[+] = Reference(Specimen/Blood-2-pertussis)
-// * specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
 Instance: 2-pertussis-ServiceRequestCBC
 InstanceOf: ChLabOrderSR

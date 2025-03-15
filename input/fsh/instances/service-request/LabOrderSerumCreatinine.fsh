@@ -1,16 +1,17 @@
 Instance: LabOrderSerumCreatinine
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Creatinine 24H renal clearance panel- old version"
-Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
+Title: "CH LAB-ServiceRequest for Creatinine in Serum"
+Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma"
 Usage: #example
 
 * id = "lab-order-serum-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/CreatinineSerumLabService"
 
-* basedOn = Reference(LabOrderCreatinineClearance)
+* basedOn[+] = Reference(LabOrderCreatinineClearance)
+* basedOn[+] = Reference(LabOrder-eGFR)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -24,9 +25,9 @@ Usage: #example
 // What is being ordered
 
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #34555-3
+* code.coding.code = #14682-9
 * code.coding.system = $loinc
-* code.coding.display = "Creatinine 24H renal clearance panel"
+* code.coding.display = "Creatinine [Moles/volume] in Serum or Plasma"
 
 // * orderDetails[+]: // codeableConcept
 

@@ -27,7 +27,7 @@ dependencies:
   hl7.terminology: 5.1.0
   ch.fhir.ig.ch-orf: 2.0.1
   ch.fhir.ig.ch-core: 4.0.1
-  hl7.fhir.uv.order-catalog: 0.1.0 
+  hl7.fhir.uv.order-catalog: 0.1.0
    
 pages:
   index.md:
