@@ -1,6 +1,6 @@
 Instance: procedure-chloride-serum
 InstanceOf: ActivityDefinition
-Title: "CH LAB-Order Procedure Chloride"
+Title: "CH LAB-Order Procedure Chloride in Serum"
 Description: "Procedure Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -29,4 +29,4 @@ Usage: #example
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
-* observationResultRequirement = Reference(ObservationDefinition/observation-serum-chloride)
+* observationResultRequirement = Reference(ObservationDefinition/observation-chloride-serum)

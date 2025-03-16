@@ -1,4 +1,4 @@
-Instance: observation-serum-chloride
+Instance: observation-chloride-serum
 InstanceOf: ObservationDefinition
 Title: "ObservationDefinition Chloride"
 Description: "Chlorid im Blut Befund"

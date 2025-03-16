@@ -28,4 +28,4 @@ Usage: #example
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-chloride)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-chloride-serum)

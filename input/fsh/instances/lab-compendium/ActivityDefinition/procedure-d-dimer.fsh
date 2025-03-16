@@ -31,4 +31,3 @@ Usage: #example
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 // * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
-// * observationResultRequirement = Reference(ObservationDefinition/observation-serum-chloride)

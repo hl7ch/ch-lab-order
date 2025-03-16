@@ -1,7 +1,7 @@
 Instance: chloride-serum
 InstanceOf: PlanDefinition
-Title: "CH LAB-Order PlanDefinition Chloride measurement on in vitro blood serum"
-Description: "Lab Service of Pipette Lab for Serum Chloride"
+Title: "CH LAB-Order Service for Chloride in Serum"
+Description: "Lab Service of Pipette Lab for Chloride in Serum"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
