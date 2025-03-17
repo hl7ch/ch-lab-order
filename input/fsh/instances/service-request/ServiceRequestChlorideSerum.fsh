@@ -1,13 +1,16 @@
-Instance: ServiceRequestCreatinineSerum
+Instance: ServiceRequestChlorideSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Serum Creatinine"
-Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma"
+Title: "CH LAB-Order for Chloride"
+Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
-* id = "service-request-creatinine-serum"
+* id = "service-request-chloride-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-serum-creatinine"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
+
+// is part of panel Serum-Electrolytes
+* basedOn = Reference(ServiceRequestElectrolytesSerum)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -21,12 +24,15 @@ Usage: #example
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #14682-9 
+* code.coding.code = #2075-0
 * code.coding.system = $loinc
-* code.coding.display = "Creatinine [Moles/volume] in Serum or Plasma"
+* code.coding.display = "Chloride [Moles/volume] in Serum or Plasma"
 
-// orderDetails: Additional order information
-// * orderDetail.coding = $v2-0119#NW "New order/service"
+// ---- orderDetails ----
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code"
 
 * priority = #urgent
 * subject = Reference(Patient/HansGuggindieluft)

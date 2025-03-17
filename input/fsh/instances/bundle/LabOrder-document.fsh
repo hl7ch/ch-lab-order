@@ -24,8 +24,8 @@ Usage: #example
 
 * entry[+].fullUrl = "urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b"    // Service Request eGFR, entry 6
 * entry[=].resource = LabOrder-eGFR
-* entry[+].fullUrl = "urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207"    // Service Request LabOrderSerumCreatinine, entry 7
-* entry[=].resource = LabOrderSerumCreatinine-eGFR
+* entry[+].fullUrl = "urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207"    // Service Request ServiceRequestCreatinineSerum, entry 7
+* entry[=].resource = ServiceRequestCreatinineSerum-eGFR
 * entry[+].fullUrl = "urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af"    // Service Request uACR, entry 8
 * entry[=].resource = LabOrder-uACR
 * entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request LabOrderUrineAlbumin-ServiceRequest, entry 9
@@ -69,7 +69,7 @@ Usage: #inline
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests, estimated GFR and Albumin/Creatinine Ratio</div>"
 * section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-ServiceRequest 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // eGFR-ServiceRequest
-* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // LabOrderSerumCreatinine-ServiceRequest
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // ServiceRequestCreatinineSerum-ServiceRequest
 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)    // uACR-Service Request 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa)    // LabOrderUrineAlbumin-ServiceRequest
@@ -241,12 +241,12 @@ Usage: #example
 
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 
-Instance: LabOrderSerumCreatinine-eGFR  // LabOrderSerumCreatinine-ServiceRequest
+Instance: ServiceRequestCreatinineSerum-eGFR  // ServiceRequestCreatinineSerum-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order for Creatinine in Serum or Plasma"
 Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma, used for calculation of eGFR"
 Usage: #example
-// * id ="lab-order-serum-creatinine-egfr"
+// * id ="service-request-creatinine-serum-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123987"

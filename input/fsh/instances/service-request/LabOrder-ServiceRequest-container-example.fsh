@@ -10,7 +10,7 @@ Usage: #example
 
 // der SR referenziert auf 3 weitere SR
 * basedOn[0] = Reference(ServiceRequestCreatinineClearance)
-* basedOn[+] = Reference(LabOrderSerumElectrolytes)
+* basedOn[+] = Reference(ServiceRequestElectrolytesSerum)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

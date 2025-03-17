@@ -36,4 +36,4 @@ Usage: #example
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                Order-Referral-Form\n            </div>"
 
-* section[orderReferral].entry[ServiceRequest] = Reference(LabOrderSerumPotassium)
+* section[orderReferral].entry[ServiceRequest] = Reference(ServiceRequestPotassiumSerum)

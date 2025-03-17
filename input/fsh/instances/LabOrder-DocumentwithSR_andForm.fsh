@@ -51,5 +51,5 @@ Usage: #example
 * entry[=].resource = LabOrder-form
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/LabOrder-qr" //entry[9]
 * entry[=].resource = LabOrder-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/lab-order-serum-potassium"  // entry[10]
-* entry[=].resource = LabOrderSerumPotassium
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/service-request-potassium-serum"  // entry[10]
+* entry[=].resource = ServiceRequestPotassiumSerum
