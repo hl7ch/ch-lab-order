@@ -1,16 +1,12 @@
-Instance: LabOrder-ServiceRequest-container-example
+Instance: ServiceRequestPanelExample
 InstanceOf: ChLabOrderSR
 Title: "Service Request as container for multiple Service Requests"
 Description: "CH LAB-ServiceRequest for Creatinine Clearance and Electrolytes in Serum"
 Usage: #example
-* id = "LabOrder-container-example"
+* id = "service-request-panel-example"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-
-// der SR referenziert auf 3 weitere SR
-* basedOn[0] = Reference(ServiceRequestCreatinineClearance)
-* basedOn[+] = Reference(ServiceRequestElectrolytesSerum)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

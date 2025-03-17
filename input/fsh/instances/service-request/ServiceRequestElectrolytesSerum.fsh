@@ -11,7 +11,8 @@ Usage: #example
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
 
-// der SR referenziert auf 3 weitere SR
+// der SR is part of panel
+* basedOn[0] = Reference(ServiceRequestPanelExample)
 // * basedOn[0] = Reference(LabOrder-ServiceRequest-sodium)
 // * basedOn[+] = Reference(ServiceRequestPotassiumSerum)
 // * basedOn[+] = Reference(SerumChlorideOrder)
