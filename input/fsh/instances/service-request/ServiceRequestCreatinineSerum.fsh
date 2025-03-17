@@ -11,7 +11,7 @@ Usage: #example
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/CreatinineSerumLabService"
 
 * basedOn[+] = Reference(ServiceRequestCreatinineClearance)
-* basedOn[+] = Reference(LabOrder-eGFR)
+* basedOn[+] = Reference(ServiceRequest-eGFR)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

@@ -1,4 +1,4 @@
-Instance: LabOrder-document
+Instance: LabOrderDocument
 InstanceOf: ChLabOrderDocumentWithSR
 Title: "Renal Insufficiency Panel: Laboratory Order Document"
 Description: "Document containing a Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine"
@@ -19,19 +19,19 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:9c8584fb-6a33-4ec9-bacd-489c5e1e6bb0"    // Organization Praxis GruppenpraxisOlten
 * entry[=].resource = GruppenpraxisOlten
 
-* entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request LabOrderRenalInsufficiencyPanel, entry 5
-* entry[=].resource = LabOrderRenalInsufficiencyPanel
+* entry[+].fullUrl = "urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"    // Service Request ServiceRequestRenalInsufficiencyPanel, entry 5
+* entry[=].resource = ServiceRequestRenalInsufficiencyPanel
 
 * entry[+].fullUrl = "urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b"    // Service Request eGFR, entry 6
-* entry[=].resource = LabOrder-eGFR
+* entry[=].resource = ServiceRequest-eGFR
 * entry[+].fullUrl = "urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207"    // Service Request ServiceRequestCreatinineSerum, entry 7
 * entry[=].resource = ServiceRequestCreatinineSerum-eGFR
 * entry[+].fullUrl = "urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af"    // Service Request uACR, entry 8
-* entry[=].resource = LabOrder-uACR
-* entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request LabOrderUrineAlbumin-ServiceRequest, entry 9
-* entry[=].resource = LabOrderUrineAlbumin
-* entry[+].fullUrl = "urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41"    // Service Request LabOrderUrineCreatinine-ServiceRequest, entry 10
-* entry[=].resource = LabOrderUrineCreatinine
+* entry[=].resource = ServiceRequest-uACR
+* entry[+].fullUrl = "urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa"    // Service Request ServiceRequestAlbuminUrine-ServiceRequest, entry 9
+* entry[=].resource = ServiceRequestAlbuminUrine
+* entry[+].fullUrl = "urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41"    // Service Request ServiceRequestCreatinineUrine-ServiceRequest, entry 10
+* entry[=].resource = ServiceRequestCreatinineUrine
 
 Instance: 1b7b58b1-b952-4190-a0e0-59b4936573a5
 InstanceOf: ChLabOrderCompositionWithSR
@@ -67,13 +67,13 @@ Usage: #inline
 * section[orderReferral].title = "Laboratory Order by Service Request for Renal Insufficiency Panel"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order: Composition containing the needed Service Requests, estimated GFR and Albumin/Creatinine Ratio</div>"
-* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // LabOrderRenalInsufficiencyPanel-ServiceRequest 
+* section[orderReferral].entry[ServiceRequest][0] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)    // ServiceRequestRenalInsufficiencyPanel-ServiceRequest 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)    // eGFR-ServiceRequest
-* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // ServiceRequestCreatinineSerum-ServiceRequest
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:87c6a2f7-981d-469e-a5f5-e5ecf6286207)    // ServiceRequestCreatinineSerum-eGFR
 
 * section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)    // uACR-Service Request 
-* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa)    // LabOrderUrineAlbumin-ServiceRequest
-* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41)    // LabOrderUrineCreatinine-ServiceRequest
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:d1be525d-a58c-410e-9dfb-aef46ce6f0fa)    // ServiceRequestAlbuminUrine-ServiceRequest
+* section[orderReferral].entry[ServiceRequest][+] = Reference(urn:uuid:5d616c75-34c9-47f0-8e15-2df623755c41)    // ServiceRequestCreatinineUrine-ServiceRequest
 
 Instance: UrsSchmid
 InstanceOf: CHCorePatient
@@ -159,7 +159,7 @@ Usage: #example
 * address.postalCode = "4600"
 * address.country = "CH"
 
-Instance: LabOrderRenalInsufficiencyPanel   // 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec  // Service Request LabOrderRenalInsufficiencyPanel
+Instance: ServiceRequestRenalInsufficiencyPanel   // 248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec  // Service Request ServiceRequestRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order"
 Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine"
@@ -199,7 +199,7 @@ Usage: #example
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
 
-Instance: LabOrder-eGFR  // Service Request eGFR
+Instance: ServiceRequest-eGFR  // Service Request eGFR
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order for eGFR CKD-EPI 2021"
 Description: "Service Request for calculation of eGFR, using serum creatinine and the CKD-EPI 2021 formula"
@@ -241,7 +241,7 @@ Usage: #example
 
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 
-Instance: ServiceRequestCreatinineSerum-eGFR  // ServiceRequestCreatinineSerum-ServiceRequest
+Instance: ServiceRequestCreatinineSerum-eGFR  // Service Request Creatinine Serum to calculate eGFR
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order for Creatinine in Serum or Plasma"
 Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma, used for calculation of eGFR"
@@ -284,7 +284,7 @@ Usage: #example
 // * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
 * specimen[0] = Reference(Specimen/Serum) "Serum Sample"
 
-Instance: LabOrder-uACR  // Service Request uACR
+Instance: ServiceRequest-uACR  // Service Request uACR
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order for Albumin/Creatinine Ratio in Urine"
 Description: "Service Request for Calculation of Albumin/Creatinine Ratio in Urine"
@@ -324,7 +324,7 @@ Usage: #example
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 
-Instance: LabOrderUrineAlbumin  // LabOrderUrineAlbumin-ServiceRequest
+Instance: ServiceRequestAlbuminUrine  // ServiceRequestAlbuminUrine-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order for Albumin [Moles/volume] in Urine"
 Description: "This term was created for, but not limited in use to, the cobas Tina-quant Albumin test kit. (Conversion factors: mg/L x 0.0152 = μmol/L, g/L x 15.2 = μmol/L)"
@@ -363,7 +363,7 @@ Usage: #example
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 * note.text = "Please use umol/L as Unit for the ratio calculation umol[albumin]/mmol[creatinine]."
 
-Instance: LabOrderUrineCreatinine  // LabOrderUrineCreatinine-ServiceRequest
+Instance: ServiceRequestCreatinineUrine  // ServiceRequestCreatinineUrine-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "Renal Insufficiency Panel: Laboratory Order for for Creatinine [Moles/volume] in Urine"
 Description: "Service Request for Creatinine [Moles/volume] in Urine"
