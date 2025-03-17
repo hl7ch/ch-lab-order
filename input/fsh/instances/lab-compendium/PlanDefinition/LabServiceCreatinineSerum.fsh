@@ -1,4 +1,4 @@
-Instance: creatinine-serum
+Instance: LabServiceCreatinineSerum
 InstanceOf: PlanDefinition
 Title: "CH LAB-Order Creatinine Serum"
 Description: "Plan Definition of Lab Service for Serum Creatinine"
@@ -16,7 +16,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/creatinine-serum"
+* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/LabServiceCreatinineSerum"
 * version = "0.1.0"
 * name = "SerumCreatinineTest"
 * title = "Serum creatinine test"

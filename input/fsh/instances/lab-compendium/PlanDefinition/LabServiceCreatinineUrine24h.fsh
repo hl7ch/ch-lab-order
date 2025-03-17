@@ -1,4 +1,4 @@
-Instance: PanelUrine24hCreatinine
+Instance: LabServiceCreatinineUrine24h
 InstanceOf: PlanDefinition
 Title: "CH LAB-Order 24-hour Urine Creatinine Panel Service"
 Description: "PlanDefinition for mesurement of Creatinine [Mass/time] in 24 hour Urine"
@@ -16,7 +16,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/PanelUrine24hCreatinine"
+* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/LabServiceCreatinineUrine24h"
 * version = "0.1.0"
 * name = "UrineCreatininePanel"
 * title = "24-hour urine creatinine panel"
