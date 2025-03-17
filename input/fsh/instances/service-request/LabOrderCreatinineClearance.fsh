@@ -1,4 +1,4 @@
-Instance: LabOrderCreatinineClearance
+Instance: ServiceRequestCreatinineClearance
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Creatinine clearance"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
@@ -13,7 +13,7 @@ Usage: #example
 
 // der SR referenziert auf 3 weitere SR
 // * basedOn[0] = Reference(LabOrderUrine24hCreatinine)
-// * basedOn[+] = Reference(LabOrder-ServiceRequest-creatinine)
+// * basedOn[+] = Reference(ServiceRequestCreatinineSerum)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

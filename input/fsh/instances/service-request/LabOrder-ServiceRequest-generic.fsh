@@ -1,9 +1,9 @@
-Instance: LabOrder-ServiceRequest-generic
+Instance: ServiceRequestGeneric
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for some single test"
 Description: "Hemoglobin [Moles/volume] in Blood"
 Usage: #example
-* id = "LabOrder-generic"
+* id = "service-request-generic"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"

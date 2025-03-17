@@ -9,7 +9,7 @@ Usage: #example
 * type = $sct#258450006 "Cerebrospinal fluid sample"
 * subject = Reference(Patient/FranzMuster)
 * receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(LabOrder-ServiceRequest-generic)
+* request = Reference(ServiceRequestGeneric)
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * collection.method = $sct#277762005 "Lumbar puncture (procedure)"

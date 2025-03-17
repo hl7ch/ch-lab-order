@@ -1,4 +1,4 @@
-Instance: LabOrderSerumChloride
+Instance: ServiceRequestChlorideSerum
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order for Chloride"
 Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"

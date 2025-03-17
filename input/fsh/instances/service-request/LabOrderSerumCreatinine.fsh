@@ -10,7 +10,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123987"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/CreatinineSerumLabService"
 
-* basedOn[+] = Reference(LabOrderCreatinineClearance)
+* basedOn[+] = Reference(ServiceRequestCreatinineClearance)
 * basedOn[+] = Reference(LabOrder-eGFR)
 
 // ---- grouperID, must be repeated in all dependent SR ----

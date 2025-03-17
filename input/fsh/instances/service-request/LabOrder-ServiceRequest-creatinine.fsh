@@ -1,9 +1,9 @@
-Instance: LabOrder-ServiceRequest-creatinine
+Instance: ServiceRequestCreatinineSerum
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest for Serum Creatinine"
 Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma"
 Usage: #example
-* id = "LabOrder-creatinine"
+* id = "service-request-creatinine-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
