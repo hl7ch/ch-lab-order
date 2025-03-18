@@ -26,5 +26,5 @@ Usage: #example
 
 * kind = #ServiceRequest
 * code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
-* observationRequirement = Reference(ObservationDefinition/serumCreatinine)
-* observationResultRequirement = Reference(ObservationDefinition/serumCreatinine)
+* observationRequirement = Reference(ObservationDefinition/observationCreatinineSerum)
+* observationResultRequirement = Reference(ObservationDefinition/observationCreatinineSerum)

@@ -1,4 +1,4 @@
-Instance: serumCreatinine
+Instance: observationCreatinineSerum
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Creatinine Serum"
 Description: "Kreatinine [Mass/Volumen] in Serum oder Plasma"
