@@ -1,7 +1,7 @@
-Instance: eGFR-Service   // PlanDefinition
+Instance: LabServiceRenalInsufficiency  // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
-Title: "CH LAB-Order eGFR Service"
-Description: "Plan Definition for eGFK procedures"
+Title: "CH LAB-Order Renal Insufficiency Assessment Service"
+Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #de-CH
@@ -16,10 +16,21 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/eGFR-Service"
+
+* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceRenalInsufficiency"
+* identifier.use = #official
+* identifier.value = "RenalInsufficiendyLabPanel"
 * version = "current"
-* name = "RenalInsufficiendyPanelServiceGFR"
-* title = "Renal Insufficiendy Panel: Service eGFR"
+* name = "RenalInsufficiendyLabPanel"
+* title = "Renal Insufficiendy Lab Panel"
+/*
+* title.extension.extension[0].url = "lang"
+* title.extension.extension[=].valueCode = #de-CH
+* title.extension.extension[+].url = "content"
+* title.extension.extension[=].valueString = "Niereninsuffizienz Panel"
+* title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
+*/
+
 * type = $laboratory-service-definition-type#panel
 * status = #draft
 * experimental = false
@@ -27,31 +38,39 @@ Usage: #example
 * publisher = "HL7 Switzerland"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://hl7.ch"
+* description = "This renal insufficiency panel is using the procedure from the 
+    eGFK CKD EPI 2021 test as well as the procedure from the uACR test."
 
-* description = "This part of renal insufficiency plan is using the procedure from the 
-    eGFK CKD EPI 2021 test."
 * useContext.code = $usage-context-type#task
 * useContext.valueCodeableConcept = $v3-ActCode#LABOE "laboratory test order entry task"
 * useContext.valueCodeableConcept.text = "this panel is orderable"
 * jurisdiction = urn:iso:std:iso:3166#CH
+
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#269858003 "Biochemical evaluation of blood urea/renal function (procedure)"
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
-// * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
+* topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
+
+/* publisher problem? 
+throws: Exception generating Narrative: unexpected non-end of element null::a at line 173 column 50
+* relatedArtifact.type = #documentation
+* relatedArtifact.citation = "Clinically, the most practical tests for assessing renal function are those that estimate the glomerular filtration rate (eGFR) and quantify proteinuria (albuminuria)."
+* relatedArtifact.document.url = "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
+*/
 
 // TODO: adapt actions
-* action.extension[0].extension[0].extension.url = "Material"
-* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "SpecimenDefinition Single Test Venous blood"
+* action.extension[+].extension[+].extension.url = "Material"
+* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].extension[+].extension.url = "Material"
-* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "SpecimenDefinition Single Test Capillary blood"
+* action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-capillary-serum-single-test) "example-specimen-capillary-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-// * action.extension[+].extension.extension.url = "Material"
-// * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
-// * action.extension[=].extension.url = "ExclusiveGroup"
-// * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+* action.extension[+].extension.extension.url = "Material"
+* action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
+* action.extension[=].extension.url = "ExclusiveGroup"
+* action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
+* action.code = $sct#441915005 "Measurement of renal function (procedure)"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
@@ -60,4 +79,4 @@ Usage: #example
 // * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
 * action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
 * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-// * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"

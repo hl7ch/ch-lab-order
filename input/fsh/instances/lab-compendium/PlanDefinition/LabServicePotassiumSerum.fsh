@@ -1,4 +1,4 @@
-Instance: potassium-serum
+Instance: LabServicePotassiumSerum
 InstanceOf: PlanDefinition
 Title: "PlanDefinition Serum Potassium"
 Description: "Lab Service for Serum Potassium"
@@ -22,7 +22,7 @@ Usage: #example
 * extension[=].valueString = "No specific limitation for this test"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/RegulatorySummary"
 * extension[=].valueString = "CLIA Law & Regulations apply"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-potassium-serum"
+* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/LabServicePotassiumSerum"
 * identifier.use = #official
 * identifier.value = "K_serum_test"
 * version = "0.1.0"

@@ -729,7 +729,7 @@ Usage: #example
 // ---- E1 Blood potassium test ----
 // =================================
 * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium" // item[9][0][0][0]
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/potassium-serum"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServicePotassiumSerum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
 * item[=].item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium.specimenDefinition"
@@ -925,7 +925,7 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 // not allowed: Questionnaire.item.answerOption.value[x], data type cannot repeat - they must have a maximum cardinality of 1 :
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/potassium-serum)
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/LabServicePotassiumSerum)
 
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"

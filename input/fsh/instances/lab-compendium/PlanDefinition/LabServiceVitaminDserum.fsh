@@ -1,4 +1,4 @@
-Instance: vitamind-serum
+Instance: LabServiceVitaminDserum
 InstanceOf: PlanDefinition
 Title: "PlanDefinition 25-hydroxyvitamin D3 [Moles/Vol]"
 Usage: #example
@@ -19,7 +19,7 @@ Usage: #example
 * extension[=].valueString = "Set up: Mon-Sat (Day shift or Night shift), Sun (Day shift); Report available: 1 day"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LimitationSummary"
 * extension[=].valueString = "No specific limitation for this test"
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-vitamind-serum"
+* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-service-LabServiceVitaminDserum"
 * version = "0.1.0"
 * name = "VitaminDMeasurement"
 * title = "25-hydroxyvitamin D3 [Moles/Vol]"
