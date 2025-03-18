@@ -20,6 +20,6 @@ Usage: #example
 
 // * observationResultRequirement = Reference(ObservationDefinition/example-observation-creatinine-renal-clearance)
 
-* observationRequirement = Reference(ObservationDefinition/urineCreatinine)
-* observationResultRequirement = Reference(ObservationDefinition/urineCreatinine)
+* observationRequirement = Reference(ObservationDefinition/observationCreatinineUrine)
+* observationResultRequirement = Reference(ObservationDefinition/observationCreatinineUrine)
 // * observationResultRequirement[+] = Reference(ObservationDefinition/urineCreatinine-creatinine-ratio)

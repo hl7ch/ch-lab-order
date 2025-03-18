@@ -40,6 +40,6 @@ Usage: #example
 // * participant.type = #practitioner
 
 * specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
-* observationRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
-* observationRequirement[+] = Reference(ObservationDefinition/urineCreatinine)
-* observationResultRequirement[+] = Reference(ObservationDefinition/uACR)
+* observationRequirement[0] = Reference(ObservationDefinition/observationAlbuminUrine)
+* observationRequirement[+] = Reference(ObservationDefinition/observationCreatinineUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-uACR)

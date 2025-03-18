@@ -1,4 +1,4 @@
-Instance: urineAlbumin
+Instance: observationAlbuminUrine
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Albumin in Urine"
 Description: "Observation Definition for Albumin [Mass/volume] in Urine"

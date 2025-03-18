@@ -19,5 +19,5 @@ Usage: #example
 * participant.type = #practitioner
 * kind = #ServiceRequest
 
-* observationRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
-* observationResultRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
+* observationRequirement[0] = Reference(ObservationDefinition/observationAlbuminUrine)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observationAlbuminUrine)

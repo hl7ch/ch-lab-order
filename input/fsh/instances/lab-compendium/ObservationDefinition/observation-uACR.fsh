@@ -1,4 +1,4 @@
-Instance: uACR
+Instance: observation-uACR
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Albumin/Creatinine Ratio in Urine"
 Description: "Observation Definition for Albumin/Creatinine [MassRatio] in Urine"

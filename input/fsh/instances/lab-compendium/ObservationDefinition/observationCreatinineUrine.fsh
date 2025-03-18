@@ -1,4 +1,4 @@
-Instance: urineCreatinine
+Instance: observationCreatinineUrine
 InstanceOf: ObservationDefinition
 Title: "CH LAB-Order ObservationDefinition Creatinine in Urine"
 Description: "Observation Definition for Creatinine [Mass/volume] in Urine"
