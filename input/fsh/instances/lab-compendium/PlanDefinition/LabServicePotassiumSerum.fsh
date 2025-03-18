@@ -1,6 +1,6 @@
 Instance: LabServicePotassiumSerum
 InstanceOf: PlanDefinition
-Title: "PlanDefinition Serum Potassium"
+Title: "CH LAB-Order Service for Potassium in Serum"
 Description: "Lab Service for Serum Potassium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

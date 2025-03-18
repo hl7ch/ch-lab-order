@@ -1,6 +1,6 @@
 Instance: LabService-uACR   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
-Title: "CH LAB-Order uACR Service"
+Title: "CH LAB-Order Service for uACR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

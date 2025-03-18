@@ -1,6 +1,6 @@
 Instance: LabServiceSodiumSerum
 InstanceOf: PlanDefinition
-Title: "PlanDefinition Sodium measurement on in vitro blood serum"
+Title: "CH LAB-Order Service for Sodium in Serum"
 Description: "Lab Service of Pipette Lab for Serum Sodium"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

@@ -1,7 +1,7 @@
 Instance: procedure-hb
 InstanceOf: ActivityDefinition
 Title: "CH LAB-Order Procedure Hb"
-Description: "Procedure Hemoglobin-Hematocrit measurement procedure on in-vitro blood specimen"
+Description: "Procedure Hemoglobin measurement procedure on in-vitro blood specimen"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
@@ -31,4 +31,4 @@ Usage: #example
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/specimen-blood-EDTA) 
-* observationResultRequirement = Reference(ObservationDefinition/observation-blood-hemoglobin) 
+* observationResultRequirement = Reference(ObservationDefinition/observation-blood-hemoglobin)

@@ -1,6 +1,6 @@
 Instance: LabServiceCreatinineUrine24h
 InstanceOf: PlanDefinition
-Title: "CH LAB-Order 24-hour Urine Creatinine Panel Service"
+Title: "CH LAB-Order Service for  Creatinine in 24-hour Urine collection"
 Description: "PlanDefinition for mesurement of Creatinine [Mass/time] in 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

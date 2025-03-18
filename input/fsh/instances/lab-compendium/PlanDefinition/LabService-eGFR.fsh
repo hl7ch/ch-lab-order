@@ -1,6 +1,6 @@
 Instance: LabService-eGFR   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
-Title: "CH LAB-Order eGFR Service"
+Title: "CH LAB-Order Service for eGFR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

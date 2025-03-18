@@ -1,6 +1,6 @@
 Instance: LabServiceCreatinineSerum
 InstanceOf: PlanDefinition
-Title: "CH LAB-Order Creatinine Serum"
+Title: "CH LAB-Order Service for Creatinine in Serum"
 Description: "Plan Definition of Lab Service for Serum Creatinine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

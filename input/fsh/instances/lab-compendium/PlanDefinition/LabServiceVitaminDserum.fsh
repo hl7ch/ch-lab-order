@@ -1,6 +1,6 @@
 Instance: LabServiceVitaminDserum
 InstanceOf: PlanDefinition
-Title: "PlanDefinition 25-hydroxyvitamin D3 [Moles/Vol]"
+Title: "CH LAB-Order Service for 25-hydroxyvitamin D3 [Moles/Vol] in Serum"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 // * language = #de-CH

@@ -1,6 +1,6 @@
 Instance: LabServiceRenalInsufficiency  // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
-Title: "CH LAB-Order Renal Insufficiency Assessment Service"
+Title: "CH LAB-Order Service for Renal Insufficiency Assessment Panel"
 Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"

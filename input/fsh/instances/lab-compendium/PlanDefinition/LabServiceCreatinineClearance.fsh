@@ -1,6 +1,6 @@
 Instance: LabServiceCreatinineClearance   // PlanDefinition
 InstanceOf: ChLab_LabServiceDefinition
-Title: "CH LAB-Order Creatinin Clearance Service"
+Title: "CH LAB-Order Service for Creatinin Clearance Panel"
 Description: "Plan Definition for Creatinine Clearance"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
