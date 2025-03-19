@@ -209,7 +209,7 @@ Usage: #example
 
 Instance: Blood-bactec-plus-4-sepsis
 InstanceOf: Specimen
-Title: "Blood Sample, 4-sepsis bactec-plus"
+Title: "Blood collection in blood culture bottles, 4-sepsis bactec-plus"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
@@ -217,10 +217,22 @@ Usage: #example
 * subject = Reference(Patient/SaraSpeckmann)
 * request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
 * collection.collector = Reference(Practitioner/HansHauser)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedPeriod.start = "2025-03-16T06:20:17Z"
+* collection.collectedPeriod.end = "2025-03-16T06:50:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
+
+// 2 types of containers, aerobic and anaerobic, each with a different cap color and identifier
+* container[+].identifier.value = "95ab0fb1-6d1c-40f0-9aaa-a68f29238a4e-bactec-plus"
 * container.type = $sct#706053007 "General specimen container (physical object)"
-* note.text = "Specimen is grossly lipemic"
+//* container[=].type = $sct#1352024000 "Blood culture storage container (physical object)"
+* container[=].description = "BACTEC™ PLUS Aerobic/F Culture Vial, cap color: grey-blue"
+
+* container[+].identifier.value = "92af0fee-1aeb-472e-8b57-a885ba33b745-bactec-plus"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+//* container[=].type = $sct#1352024000 "Blood culture storage container (physical object)"
+* container[=].description = "BACTEC™ PLUS Anaerobic/F Culture Vial, cap color: purple"
+
+* note.text = "Each container type contains two blood samples taken 30 minutes apart, so we get 4 vials in total"
 
 Instance: Blood-4-sepsis
 InstanceOf: Specimen
@@ -251,7 +263,7 @@ Usage: #example
 * request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
-* container.identifier.value = "4e88a-bc987-dd888-12345-urin"
+* container.identifier.value = "659e1c5b-5c5a-4829-b7fa-fb7da2276e0d-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
 
@@ -270,3 +282,21 @@ Usage: #example
 * collection.collector = Reference(Practitioner/HansHauser)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.type = $sct#706053007 "General specimen container (physical object)"
+
+Instance: DiagnosticReport-4-sepsis  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
+InstanceOf: ChLabOrderDiagnosticReport
+Title: "CH LAB-Order DiagnosticReport 4-sepsis"
+Description: "Diagnostic Report for Sepsis Investigation"
+Usage: #example
+* identifier.system = "http://example.com/fhir/DiagnosticReport/4-sepsis"
+* identifier.value = "4-sepsis-diagnostic-report"
+* basedOn = Reference(4-sepsis-ServiceRequest)
+* status = #final
+* category = $loinc#26436-6 "Laboratory studies (set)"
+* code.coding[+].code = #90423-5
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
+* subject = Reference(Patient/SaraSpeckmann)
+* performer = Reference(EvaErlenmeyerLaborPipette)
+* result[+] = Reference(observationMicrobiolGrowthAerobe)
+* result[+] = Reference(observationMicrobiolGrowthAnaerobe)
