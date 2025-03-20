@@ -3,7 +3,7 @@ InstanceOf: Observation
 Title: "CH LAB-Order Observation Example of Microbiological Growth"
 Description: "Observation Definition for Microbiological Growth"
 Usage: #example
-
+* basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final
 // * code.coding[+].system = http://acmelabs.org
 // * code.coding[=].code = 123-456-789-observation
@@ -16,7 +16,7 @@ Usage: #example
 * effectivePeriod.start = "2025-03-16T06:20:17Z"
 * effectivePeriod.end = "2025-03-16T06:50:17Z"
 * issued = "2025-03-16T07:10:17Z"
-* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * valueBoolean = true
 //* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
 * interpretation = $v3-ObservationInterpretation#POS
@@ -40,7 +40,7 @@ Usage: #example
 * effectivePeriod.start = "2025-03-16T06:20:17Z"
 * effectivePeriod.end = "2025-03-16T06:50:17Z"
 * issued = "2025-03-11T10:28:00+01:00"
-* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * valueBoolean = false
 //* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
 * interpretation = $v3-ObservationInterpretation#NEG

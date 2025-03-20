@@ -1,4 +1,4 @@
-Instance: 4-sepsis-ServiceRequest
+Instance: 4-sepsis-ServiceRequestFollowUp   // Service request for Follow-Up
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
@@ -6,42 +6,18 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-// * category = $sct#721963009 "Order (record artifact)"
+* basedOn = Reference(4-sepsis-ServiceRequestGrowth)
 
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789123"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-/*
-* code.coding[+].code = #24360-0 
+* code.coding[+].code = #76346-6
 * code.coding[=].system = $loinc
-* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+* code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
 
-* code.coding[+].code = #43113-0 
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
-
-* code.coding[+].code = #57021-8 
-* code.coding[=].system = $loinc
-* code.coding[=].display = "CBC W Auto Differential panel - Blood"
-
-* code.coding[+].code = #58410-2 
-* code.coding[=].system = $loinc
-* code.coding[=].display = "CBC panel - Blood by Automated count"
-
-
-* code.coding[+].code = #90423-5
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
-
-* code.coding[+].code = #85421-6 
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Bacterial identification and susceptibility panel - Isolate"
-
-* code.coding[+].code = #1988-5 
-* code.coding[=].system = $loinc
-* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
-*/
-
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
+// orderDetail: Additional order information
+* orderDetail = $v2-0119#XO	"Change order/service request"
 
 * status = #active
 * intent = #original-order
@@ -51,12 +27,14 @@ Usage: #example
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-/*
+
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+/*
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 */
 
+/*
 Instance: 4-sepsis-ServiceRequestHbHt   // Service request for Hemoglobin and Hematocrit
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
@@ -67,10 +45,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+].code = #24360-0 
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+
 
 * status = #active
 * intent = #original-order
@@ -119,17 +94,10 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
-* requisition.value = "ReqID-123456789123"
-
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #90423-5
 * code.coding[=].system = $loinc
 * code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
-
-// orderDetailc: Additional order information
-* orderDetail = $v2-0119#NW "New order/service"
 
 * status = #active
 * intent = #original-order
@@ -165,7 +133,8 @@ Usage: #example
 * reasonCode.text = "Screening for sepsis (procedure)"
 * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Serum-4-sepsis)
-
+*/
+/*
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
 Title: "Patient Sara Speckmann"
@@ -307,3 +276,26 @@ Usage: #example
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * result[+] = Reference(observationMicrobiolGrowthAerobe)
 * result[+] = Reference(observationMicrobiolGrowthAnaerobe)
+*/
+
+Instance: 4-sepsis-ServiceRequestMALDO-TOF   // Service request for C reactive protein
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis C reactive protein"
+Description: "Example for Service Request for Sepsis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(4-sepsis-ServiceRequest)
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+
+* code.coding[+].code = #76346-6
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
