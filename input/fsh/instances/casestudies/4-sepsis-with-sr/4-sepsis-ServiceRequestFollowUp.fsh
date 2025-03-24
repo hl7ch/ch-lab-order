@@ -1,7 +1,7 @@
 Instance: 4-sepsis-ServiceRequestFollowUp   // Service request for Follow-Up
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 4-sepsis"
-Description: "Example for Service Request for Sepsis Investigation"
+Title: "CH LAB-ServiceRequest 4-sepsis Follow-Up"
+Description: "Example for Service Request for Sepsis Investigation, with reflexed observation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
@@ -280,7 +280,7 @@ Usage: #example
 
 Instance: 4-sepsis-ServiceRequestMALDO-TOF   // Service request for C reactive protein
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 4-sepsis C reactive protein"
+Title: "CH LAB-ServiceRequest 4-sepsis MALDI-TOF, follow-up ServiceRequest"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
