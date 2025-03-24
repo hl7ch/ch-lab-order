@@ -48,3 +48,31 @@ Usage: #example
 
 
 // https://confluence.ihtsdotools.org/display/DOCEG/Observable+Entity+and+Microbiology+Test+Results
+
+Instance: observationMALDI-TOF
+InstanceOf: ChLabObservationR4R5
+Title: "CH LAB-Order Observation Example of MALDI-TOF"
+Description: "Observation Definition for MALDI-TOF"
+Usage: #example
+* basedOn = Reference(4-sepsis-ServiceRequest)
+// * extension[triggeredBy].extension[type].valueCodeableConcept = $observation-triggered-by-type#reflex 
+// * extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobe) "Microbiological Growth Aerobe"
+
+// TriggeredBy Extension
+* extension[triggeredBy].extension[type].valueCodeableConcept.coding.system = "http://fhir.ch/ig/ch-lab-order/CodeSystem/triggeredby-type"
+* extension[triggeredBy].extension[type].valueCodeableConcept.coding.code = #reflex
+* extension[triggeredBy].extension[type].valueCodeableConcept.coding.display = "Reflex test"
+* extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobe) "Microbiological Growth Aerobe"
+
+* status = #final
+* code.coding[+].system = $loinc
+* code.coding[=].code = #76346-6
+* code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
+* subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
+* effectivePeriod.start = "2025-03-16T06:20:17Z"   
+* effectivePeriod.end = "2025-03-16T06:50:17Z"
+* issued = "2025-03-16T07:10:17Z"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
+* valueCodeableConcept.coding.code = #3092008
+* valueCodeableConcept.coding.system = $sct
+* valueCodeableConcept.coding.display = "Staphylococcus aureus"
