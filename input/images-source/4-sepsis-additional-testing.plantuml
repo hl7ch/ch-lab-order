@@ -1,0 +1,24 @@
+@startuml 4-sepsis-additional-testing
+skinparam rectangle<<resource>> {
+  roundCorner 12
+  BackgroundColor Blue
+  BorderColor Black
+  ArrowColor Black
+  FontName Arial
+  FontSize 16
+  FontStyle Bold
+}
+
+rectangle "4-sepsis ServiceRequest" as SR <<$bProcess>><<resource>> #BUSINESS
+rectangle "4-sepsis DiagnosticReport" as DR <<$bProcess>><<resource>> #APPLICATION
+rectangle "4-sepsis Observation\nMicrobiological Growth Aerobe" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "4-sepsis Observation\nMicrobiological Growth Anaerobe" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "4-sepsis Observation\nMALDI-TOF" as OMT <<$bProcess>><<resource>> #APPLICATION
+
+SR <-right- DR : [LAB-1]: basedOn
+DR -down-> OMA : [LAB-2]: result
+DR -down-> OMANA : [LAB-3]: result
+OMA -down-> OMT : [LAB-4]: if reflexed
+OMT -up-> SR : [LAB-5]: .basedOn
+
+@enduml

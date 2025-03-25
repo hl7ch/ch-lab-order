@@ -46,15 +46,13 @@ Usage: #example
 * interpretation = $v3-ObservationInterpretation#NEG
 * method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
 
-
-// https://confluence.ihtsdotools.org/display/DOCEG/Observable+Entity+and+Microbiology+Test+Results
-
-Instance: observationMALDI-TOF
+Instance: observationMALDI-TOF  // reflexed observation
 InstanceOf: ChLabObservationR4R5
 Title: "CH LAB-Order Observation Example of MALDI-TOF"
 Description: "Observation Definition for MALDI-TOF"
 Usage: #example
-* basedOn = Reference(4-sepsis-ServiceRequest)
+* basedOn[+] = Reference(4-sepsis-ServiceRequest)
+// * basedOn[+] = Reference(4-sepsis-ServiceRequestFollowUp)
 // * extension[triggeredBy].extension[type].valueCodeableConcept = $observation-triggered-by-type#reflex 
 // * extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobe) "Microbiological Growth Aerobe"
 
@@ -76,3 +74,7 @@ Usage: #example
 * valueCodeableConcept.coding.code = #3092008
 * valueCodeableConcept.coding.system = $sct
 * valueCodeableConcept.coding.display = "Staphylococcus aureus"
+
+* derivedFrom = Reference(observationMicrobiolGrowthAerobe)
+
+// https://confluence.ihtsdotools.org/display/DOCEG/Observable+Entity+and+Microbiology+Test+Results
