@@ -64,17 +64,45 @@ Usage: #example
 
 * status = #final
 * code.coding[+].system = $loinc
-* code.coding[=].code = #76346-6
-* code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
+* code.coding[=].code = #41852-5
+* code.coding[=].display = "Microorganism or agent identified in Specimen"
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
 * effectivePeriod.start = "2025-03-16T06:20:17Z"   
 * effectivePeriod.end = "2025-03-16T06:50:17Z"
 * issued = "2025-03-16T07:10:17Z"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-* valueCodeableConcept.coding.code = #3092008
-* valueCodeableConcept.coding.system = $sct
-* valueCodeableConcept.coding.display = "Staphylococcus aureus"
 
 * derivedFrom = Reference(observationMicrobiolGrowthAerobe)
+
+* component[0].code.coding[+].system = $loinc
+* component[=].code.coding[=].code = #76346-6
+* component[=].code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
+* component[=].valueCodeableConcept.coding[+].system = $sct
+* component[=].valueCodeableConcept.coding[=].code = #56415008
+* component[=].valueCodeableConcept.coding[=].display = "Klebsiella pneumoniae (organism)"
+* component[=].valueCodeableConcept.text = "Klebsiella pneumoniae (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
+//* component[=].interpretation
+
+* component[1].code.coding[+].system = $loinc
+* component[=].code.coding[=].code = #76346-6
+* component[=].code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
+* component[=].code.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
+* component[=].valueCodeableConcept.coding[+].system = $sct
+* component[=].valueCodeableConcept.coding[=].code = #112283007
+* component[=].valueCodeableConcept.coding[=].display = "Escherichia coli (organism)"
+* component[=].valueCodeableConcept.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
+// * component[=].interpretation
+
+/*
+* component[=].code.coding[=].code = #1000004
+* valueCodeableConcept.coding[+].code = #56415008
+* valueCodeableConcept.coding[=].system = $sct
+* valueCodeableConcept.coding[=].display = "Klebsiella pneumoniae (organism)"
+* valueCodeableConcept.coding[+].code = #112283007
+* valueCodeableConcept.coding[=].system = $sct
+* valueCodeableConcept.coding[=].display = "Escherichia coli (organism)"
+* valueString = "Klebsiella pneumoniae, Escherichia coli, both sensitive to amoxicillin+clavulanic acid and to ceftriaxone"
+*/
+
 
 // https://confluence.ihtsdotools.org/display/DOCEG/Observable+Entity+and+Microbiology+Test+Results
