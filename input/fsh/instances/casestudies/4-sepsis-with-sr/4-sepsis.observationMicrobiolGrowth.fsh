@@ -1,7 +1,7 @@
 Instance: observationMicrobiolGrowthAerobe
 InstanceOf: Observation
-Title: "CH LAB-Order Observation Example of Microbiological Growth"
-Description: "Observation Definition for Microbiological Growth"
+Title: "CH LAB-Order Observation Example of Microbiological Growth aerobe"
+Description: "Observation Definition for Microbiological Growth aerobe"
 Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final
@@ -24,8 +24,8 @@ Usage: #example
 
 Instance: observationMicrobiolGrowthAnaerobe
 InstanceOf: Observation
-Title: "CH LAB-Order Observation Example of Microbiological Growth"
-Description: "Observation Definition for Microbiological Growth"
+Title: "CH LAB-Order Observation Example of Microbiological Growth anaerobe"
+Description: "Observation Definition for Microbiological Growth anaerobe"
 Usage: #example
 
 * status = #final
@@ -92,17 +92,5 @@ Usage: #example
 * component[=].valueCodeableConcept.coding[=].display = "Escherichia coli (organism)"
 * component[=].valueCodeableConcept.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
 // * component[=].interpretation
-
-/*
-* component[=].code.coding[=].code = #1000004
-* valueCodeableConcept.coding[+].code = #56415008
-* valueCodeableConcept.coding[=].system = $sct
-* valueCodeableConcept.coding[=].display = "Klebsiella pneumoniae (organism)"
-* valueCodeableConcept.coding[+].code = #112283007
-* valueCodeableConcept.coding[=].system = $sct
-* valueCodeableConcept.coding[=].display = "Escherichia coli (organism)"
-* valueString = "Klebsiella pneumoniae, Escherichia coli, both sensitive to amoxicillin+clavulanic acid and to ceftriaxone"
-*/
-
 
 // https://confluence.ihtsdotools.org/display/DOCEG/Observable+Entity+and+Microbiology+Test+Results

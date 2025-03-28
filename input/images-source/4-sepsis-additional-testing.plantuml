@@ -9,11 +9,11 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
-rectangle "4-sepsis ServiceRequest" as SR <<$bProcess>><<resource>> #BUSINESS
-rectangle "4-sepsis DiagnosticReport" as DR <<$bProcess>><<resource>> #APPLICATION
-rectangle "4-sepsis Observation\nMicrobiological Growth Aerobe" as OMA <<$bProcess>><<resource>> #APPLICATION
-rectangle "4-sepsis Observation\nMicrobiological Growth Anaerobe" as OMANA <<$bProcess>><<resource>> #APPLICATION
-rectangle "4-sepsis Observation\nMALDI-TOF" as OMT <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #BUSINESS
+rectangle "[[DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport]]" as DR <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-observationMALDI-TOF.html 4-sepsis Observation\nMALDI-TOF]]" as OMT <<$bProcess>><<resource>> #APPLICATION
 
 SR <-right- DR : [LAB-1]: basedOn
 DR -down-> OMA : [LAB-2]: result
