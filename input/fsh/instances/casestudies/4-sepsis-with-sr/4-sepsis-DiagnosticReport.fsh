@@ -1,6 +1,6 @@
 Instance: 4-sepsis-DiagnosticReport  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
 InstanceOf: ChLabOrderDiagnosticReport
-Title: "CH LAB-Order 4-sepsis DiagnosticReport 4-sepsis"
+Title: "CH LAB-Order 4-sepsis DiagnosticReport"
 Description: "Diagnostic Report for Sepsis Investigation"
 Usage: #example
 * identifier.system = "http://example.com/fhir/DiagnosticReport/4-sepsis"
