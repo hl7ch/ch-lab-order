@@ -33,8 +33,8 @@ Usage: #example
 // * code.coding[=].code = 123-456-789-observation
 // * code.coding[=].display = "Blood culture for bacteria, including anaerobic screen"
 * code.coding[+].system = $loinc
-* code.coding[=].code = #90435-9
-* code.coding[=].display = "Microorganism preliminary growth [Presence] in Blood by Aerobe culture"
+* code.coding[=].code = #90437-5
+* code.coding[=].display = "Microorganism preliminary growth [Presence] in Blood by Anaerobe culture"
 
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
 * effectivePeriod.start = "2025-03-16T06:20:17Z"
