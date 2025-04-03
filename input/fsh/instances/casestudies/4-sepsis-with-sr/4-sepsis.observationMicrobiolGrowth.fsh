@@ -46,10 +46,10 @@ Usage: #example
 * interpretation = $v3-ObservationInterpretation#NEG
 * method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
 
-Instance: observationMALDI-TOF  // reflexed observation
+Instance: observationMALDI-TOF-Kpneu  // reflexed observation
 InstanceOf: ChLabObservationR4R5
-Title: "CH LAB-Order Observation Example of MALDI-TOF"
-Description: "Observation Definition for MALDI-TOF"
+Title: "CH LAB-Order Observation Example of MALDI-TOF Klebsiella pneumoniae"
+Description: "Observation Definition for MALDI-TOF Klebsiella pneumoniae"
 Usage: #example
 * basedOn[+] = Reference(4-sepsis-ServiceRequest)
 // * basedOn[+] = Reference(4-sepsis-ServiceRequestFollowUp)
@@ -74,23 +74,59 @@ Usage: #example
 
 * derivedFrom = Reference(observationMicrobiolGrowthAerobe)
 
-* component[0].code.coding[+].system = $loinc
-* component[=].code.coding[=].code = #76346-6
-* component[=].code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
-* component[=].valueCodeableConcept.coding[+].system = $sct
-* component[=].valueCodeableConcept.coding[=].code = #56415008
-* component[=].valueCodeableConcept.coding[=].display = "Klebsiella pneumoniae (organism)"
-* component[=].valueCodeableConcept.text = "Klebsiella pneumoniae (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
+// component microorganism identified
+* component[0].code = $loinc#76346-6 "Microorganism identified in Isolate by MS.MALDI-TOF"
+* component[=].code.text = "Klebsiella pneumoniae (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
+* component[=].valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
+
+// component susceptibility of microorganism
+* component[+].code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
+* component[=].valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
+* component[+].code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
+* component[=].valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
+* component[=].valueCodeableConcept.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
 //* component[=].interpretation
 
-* component[1].code.coding[+].system = $loinc
-* component[=].code.coding[=].code = #76346-6
-* component[=].code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
+Instance: observationMALDI-TOF-Ecoli  // reflexed observation
+InstanceOf: ChLabObservationR4R5
+Title: "CH LAB-Order Observation Example of MALDI-TOF Escherichia coli"
+Description: "Observation Definition for MALDI-TOF Escherichia coli"
+Usage: #example
+* basedOn[+] = Reference(4-sepsis-ServiceRequest)
+// * basedOn[+] = Reference(4-sepsis-ServiceRequestFollowUp)
+// * extension[triggeredBy].extension[type].valueCodeableConcept = $observation-triggered-by-type#reflex 
+// * extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobe) "Microbiological Growth Aerobe"
+
+// TriggeredBy Extension
+* extension[triggeredBy].extension[type].valueCodeableConcept.coding.system = "http://fhir.ch/ig/ch-lab-order/CodeSystem/triggeredby-type"
+* extension[triggeredBy].extension[type].valueCodeableConcept.coding.code = #reflex
+* extension[triggeredBy].extension[type].valueCodeableConcept.coding.display = "Reflex test"
+* extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobe) "Microbiological Growth Aerobe"
+
+* status = #final
+* code.coding[+].system = $loinc
+* code.coding[=].code = #41852-5
+* code.coding[=].display = "Microorganism or agent identified in Specimen"
+* subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
+* effectivePeriod.start = "2025-03-16T06:20:17Z"   
+* effectivePeriod.end = "2025-03-16T06:50:17Z"
+* issued = "2025-03-16T07:10:17Z"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
+
+* derivedFrom = Reference(observationMicrobiolGrowthAerobe)
+
+// component microorganism identified
+* component[0].code = $loinc#76346-6 "Microorganism identified in Isolate by MS.MALDI-TOF"
 * component[=].code.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
-* component[=].valueCodeableConcept.coding[+].system = $sct
-* component[=].valueCodeableConcept.coding[=].code = #112283007
-* component[=].valueCodeableConcept.coding[=].display = "Escherichia coli (organism)"
+* component[=].valueCodeableConcept = $sct#112283007 "Escherichia coli"
+
+// component susceptibility of microorganism
+* component[+].code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
+* component[=].valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
+* component[+].code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
+* component[=].valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
 * component[=].valueCodeableConcept.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
-// * component[=].interpretation
+//* component[=].interpretation
+
 
 // https://confluence.ihtsdotools.org/display/DOCEG/Observable+Entity+and+Microbiology+Test+Results
