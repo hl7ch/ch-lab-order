@@ -16,6 +16,7 @@ Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3
 Alias: $v3-Confidentiality            = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
+Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
 Alias: $catalogType                   = http://terminology.hl7.org/CodeSystem/catalogType
 Alias: $condition-clinical            = http://terminology.hl7.org/CodeSystem/condition-clinical
@@ -25,6 +26,7 @@ Alias: $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalo
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $referencerange-meaning        = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $usage-context-type            = http://terminology.hl7.org/CodeSystem/usage-context-type
+Alias: $task-code                     = http://hl7.org/fhir/CodeSystem/task-code
 
 Alias: $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias: $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
