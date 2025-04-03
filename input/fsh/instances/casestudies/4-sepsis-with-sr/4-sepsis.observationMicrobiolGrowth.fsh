@@ -27,7 +27,7 @@ InstanceOf: Observation
 Title: "CH LAB-Order Observation Example of Microbiological Growth anaerobe"
 Description: "Observation Definition for Microbiological Growth anaerobe"
 Usage: #example
-
+* basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final
 // * code.coding[+].system = http://acmelabs.org
 // * code.coding[=].code = 123-456-789-observation
