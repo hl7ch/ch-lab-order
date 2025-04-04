@@ -132,7 +132,7 @@ Usage: #example
 // #    Tasks
 // # ##########################################################
 
-Instance: example1
+Instance: SepsisWorkup
 InstanceOf: Task
 Description: "Example Task for Sepsis Workup"
 Usage: #example
@@ -144,7 +144,7 @@ Usage: #example
 * groupIdentifier.use = #official
 * groupIdentifier.system = "urn:oid:2.16.756.5.40"  //  requisition.system
 * groupIdentifier.value = "ReqID-123456789123"      //  requisition.value
-* status = #in-progress
+* status = #requested
 * businessStatus.text = "waiting for specimen"
 * intent = #original-order
 * priority = #urgent
@@ -165,6 +165,8 @@ Usage: #example
 * relevantHistory = Reference(signature) "Author's Signature"
 * restriction.repetitions = 1
 * restriction.period.end = "2025-03-29T06:45:05+10:00"
+* input.type = $sct#119297000 "Blood sample"
+* input.valueReference = Reference(Specimen/Blood-bactec-plus-4-sepsis) "Blood sample for sepsis workup"
 
 Instance: signature
 InstanceOf: Provenance
