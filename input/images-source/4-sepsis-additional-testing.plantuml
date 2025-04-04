@@ -19,9 +19,9 @@ rectangle "[[Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nM
 SR <-right- DR : [LAB-1]: basedOn
 DR -down-> OMA : [LAB-2]: result
 DR -down-> OMANA : [LAB-3]: result
-OMA -down-> OMTE : [LAB-4]: if reflexed
+OMA -down-> OMTE : [LAB-4]: triggeredBy
 OMTE -up-> SR : [LAB-5]: .basedOn
-OMA -down-> OMTK : [LAB-4]: if reflexed
+OMA -down-> OMTK : [LAB-4]: triggeredBy
 OMTK -up-> SR : [LAB-5]: .basedOn
 
 @enduml
