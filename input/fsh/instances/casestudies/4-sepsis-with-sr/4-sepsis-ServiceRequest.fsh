@@ -191,15 +191,16 @@ Usage: #example
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 
 // 2 types of containers, aerobic and anaerobic, each with a different cap color and identifier
-* container[+].identifier.value = "95ab0fb1-6d1c-40f0-9aaa-a68f29238a4e-bactec-plus"
-* container.type = $sct#706053007 "General specimen container (physical object)"
-//* container[=].type = $sct#1352024000 "Blood culture storage container (physical object)"
-* container[=].description = "BACTEC™ PLUS Aerobic/F Culture Vial, cap color: grey-blue"
 
+// 2 aerobic blood culture bottles
+* container[+].identifier.value = "95ab0fb1-6d1c-40f0-9aaa-a68f29238a4e-bactec-plus"
+* container[=].type = $sct#767385003 "Aerobic blood culture bottle (physical object)"
+* container[=].description = "Two BACTEC™ PLUS Aerobic/F Culture Vial, cap color: grey-blue"
+
+// 2 anaerobic blood culture bottles
 * container[+].identifier.value = "92af0fee-1aeb-472e-8b57-a885ba33b745-bactec-plus"
-* container.type = $sct#706053007 "General specimen container (physical object)"
-//* container[=].type = $sct#1352024000 "Blood culture storage container (physical object)"
-* container[=].description = "BACTEC™ PLUS Anaerobic/F Culture Vial, cap color: purple"
+* container[=].type = $sct#767383005 "Anaerobic blood culture bottle (physical object)"
+* container[=].description = "Two BACTEC™ PLUS Anaerobic/F Culture Vial, cap color: purple"
 
 * note.text = "Each container type contains two blood samples taken 30 minutes apart, so we get 4 vials in total"
 
