@@ -21,7 +21,7 @@ Usage: #example
 //* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
 * interpretation = $v3-ObservationInterpretation#POS
 * method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
-* hasMember = Reference(observationMicrobiolIdentGramStaining) "Result of Gram Staining"
+* hasMember = Reference(observationGramStainAndSusceptibility) "Result of Gram Staining"
 * hasMember = Reference(observationMALDI-TOF-Kpneu) "MALDI-TOF Klebsiella pneumoniae"
 * hasMember = Reference(observationMALDI-TOF-Ecoli) "MALDI-TOF Escherichia coli"
 
@@ -48,31 +48,6 @@ Usage: #example
 //* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
 * interpretation = $v3-ObservationInterpretation#NEG
 * method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
-
-Instance: observationMicrobiolIdentGramStaining
-InstanceOf: Observation
-Title: "CH LAB-Order Observation reporting result of Gram Staining"
-Description: "Result of Gram Staining, which is a test to identify the type of bacteria present in a sample."
-Usage: #example
-* basedOn = Reference(4-sepsis-ServiceRequest)
-* status = #final
-// * code.coding[+].system = http://acmelabs.org
-// * code.coding[=].code = 123-456-789-observation
-// * code.coding[=].display = "Blood culture for bacteria, including anaerobic screen"
-* code.coding[+].system = $loinc
-* code.coding[=].code = #11475-1
-* code.coding[=].display = "Microorganism identified in Specimen by Culture"
-
-* subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
-* effectivePeriod.start = "2025-03-16T06:20:17Z"
-* effectivePeriod.end = "2025-03-16T06:50:17Z"
-* issued = "2025-03-11T10:28:00+01:00"
-* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-// * valueBoolean = false
-* valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* interpretation = $v3-ObservationInterpretation#POS
-* method = $sct#62777006 "Gram stain method (procedure)"
-
 
 Instance: observationMALDI-TOF-Kpneu  // reflexed observation
 InstanceOf: ChLabObservationR4R5
