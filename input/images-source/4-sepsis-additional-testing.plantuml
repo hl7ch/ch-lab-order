@@ -16,7 +16,7 @@ rectangle "[[Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observ
 rectangle "[[Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF E. coli]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Observation-observationGramStainAndSusceptibility.html 4-sepsis Observation\nGram stain and susceptibility]]" as OMGR <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-OrganismIdentification.html Organism Identification ]]" as OI <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-OrganismIdentification.html Organism Identification\t E.coli ]]" as OI <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Observation-SusceptibilityTest.html Susceptibility Test ]]" as ST <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Task-SepsisWorkup.html Task\n Sepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
 rectangle "[[Specimen-Blood-bactec-plus-4-sepsis.html Blood Specimen\nBactec Plus 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral

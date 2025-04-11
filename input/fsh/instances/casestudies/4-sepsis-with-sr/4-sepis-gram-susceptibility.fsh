@@ -29,6 +29,7 @@ InstanceOf: ChLabObservationR4R5
 Title: "Organism Identification"
 Description: "Identified microorganism"
 Usage: #example
+* basedOn = Reference(4-sepsis-ServiceRequest)
 
 * status = #final
 // * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
@@ -43,7 +44,7 @@ InstanceOf: ChLabObservationR4R5
 Title: "Antibiotic Susceptibility"
 Description: "Susceptibility of organism to Amoxicillin + Clavulanate"
 Usage: #example
-
+* basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final
 // * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $loinc#29576-6 "Bacterial susceptibility panel"

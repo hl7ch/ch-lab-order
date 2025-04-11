@@ -61,6 +61,7 @@ parameters:
 #   allow-extensible-warnings: true
 #   display-warnings: true  
   path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension
+  auto-oid-root: 2.16.756.5.30
 
 FSHOnly: false
 applyExtensionMetadataToRoot: false
