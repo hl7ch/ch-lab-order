@@ -8,11 +8,11 @@ Usage: #example
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
-* basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
-* basedOn = Reference(1-tvt-ServiceRequest-2)   // CBC diff
-* basedOn = Reference(1-tvt-ServiceRequest-3)   // D-Dimer
-* basedOn = Reference(1-tvt-ServiceRequest-4)   // CRP
-* basedOn = Reference(1-tvt-ServiceRequest-5)   // Vit. D
+// * basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
+// * basedOn = Reference(1-tvt-ServiceRequest-2)   // CBC diff
+// * basedOn = Reference(1-tvt-ServiceRequest-3)   // D-Dimer
+// * basedOn = Reference(1-tvt-ServiceRequest-4)   // CRP
+// * basedOn = Reference(1-tvt-ServiceRequest-5)   // Vit. D
 
 * status = #active
 * intent = #original-order
@@ -40,6 +40,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #58410-2 
@@ -63,6 +64,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #57021-8
@@ -85,6 +87,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #55398-2
@@ -107,6 +110,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #1988-5
@@ -130,6 +134,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0)
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #62292-8

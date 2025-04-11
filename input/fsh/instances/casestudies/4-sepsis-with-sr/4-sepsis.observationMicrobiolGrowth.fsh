@@ -21,10 +21,13 @@ Usage: #example
 //* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
 * interpretation = $v3-ObservationInterpretation#POS
 * method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
+* hasMember = Reference(observationGramStainAndSusceptibility) "Result of Gram Staining"
+* hasMember = Reference(observationMALDI-TOF-Kpneu) "MALDI-TOF Klebsiella pneumoniae"
+* hasMember = Reference(observationMALDI-TOF-Ecoli) "MALDI-TOF Escherichia coli"
 
 Instance: observationMicrobiolGrowthAnaerobe
 InstanceOf: Observation
-Title: "CH LAB-Order Observation Example of Microbiological Growth anaerobe"
+Title: "CH LAB-Order Observation Example reporting anaerobic growth of bacteria"
 Description: "Observation Definition for Microbiological Growth anaerobe"
 Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequest)

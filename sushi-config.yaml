@@ -26,6 +26,7 @@ dependencies:
   ch.fhir.ig.ch-epr-term: 2.0.10
   hl7.terminology: 5.1.0
   hl7.fhir.extensions.r5: 4.0.1
+  # ch.fhir.ig.ch-lab-report: 1.0.0
   ch.fhir.ig.ch-orf: 2.0.1
   ch.fhir.ig.ch-core: 4.0.1
   hl7.fhir.uv.order-catalog: 0.1.0
@@ -60,6 +61,7 @@ parameters:
 #   allow-extensible-warnings: true
 #   display-warnings: true  
   path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension
+  auto-oid-root: 2.16.756.5.30
 
 FSHOnly: false
 applyExtensionMetadataToRoot: false
