@@ -19,8 +19,8 @@ Usage: #example
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 // * valueBoolean = false
 // * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[0] = Reference(ObservationEcoli)
-* hasMember[1] = Reference(ObservationKpneumoniae)
+* hasMember[0] = Reference(ObservationEcoli) "Escherichia coli"
+* hasMember[1] = Reference(ObservationKpneumoniae) "Klebsiella pneumoniae"
 
 // Result found: Microorganism # 1 : Escherichia coli
 Instance: ObservationEcoli
@@ -31,6 +31,7 @@ Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final
 // * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+// * code = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#43409-2 "Bacteria identified in Isolate by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
@@ -72,7 +73,7 @@ Usage: #example
 * code = $loinc#87975-9 "Microscopic observation [Identifier] in Isolate by Gram stain"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
-* method = $sct#359872008  // TODO: check SCT code and concept for Gram stain
+// * method = $sct#359872008  // TODO: check SCT code and concept for Gram stain
 * valueCodeableConcept = http://snomed.info/sct#87172008 "Gram-negative bacillus"  // check SCT code and concept for Gram stain
 
 // Result found: Microorganism # 2 : Klebsiella pneumoniae
@@ -86,6 +87,7 @@ Usage: #example
 
 * status = #final
 // * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+// * code = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#43409-2 "Bacteria identified in Isolate by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
@@ -128,5 +130,4 @@ Usage: #example
 * code = $loinc#87975-9 "Microscopic observation [Identifier] in Isolate by Gram stain"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
-* method = $sct#359872008 "Disk diffusion susceptibility test (procedure)" // TODO: check LOINC code
 * valueCodeableConcept = http://snomed.info/sct#87172008 "Gram-negative bacillus"
