@@ -15,9 +15,17 @@ rectangle "[[Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observat
 rectangle "[[Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-observationGramStainAndSusceptibility.html 4-sepsis Observation\nGram stain and susceptibility]]" as OMGR <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-OrganismIdentification.html Organism Identification: E.coli ]]" as OI <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-SusceptibilityTest.html Susceptibility Test ]]" as ST <<$bProcess>><<resource>> #APPLICATION
+
+rectangle "[[Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility]]" as OIGR <<$bProcess>><<resource>> #APPLICATION
+
+rectangle "[[Observation-ObservationEcoli.html Organism Identification: E.coli ]]" as OIE <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-ObservationSusceptibilityEcoli.html Susceptibility\nE.coli ]]" as STE <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-ObservationGramStainResultEcoli.html Gram Stain\nE.coli ]]" as GSE <<$bProcess>><<resource>> #APPLICATION
+
+rectangle "[[Observation-ObservationKpneumoniae.html Organism Identification: K.Pneumoniae ]]" as OIK <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-ObservationSusceptibilityKpneumoniae.html Susceptibility\nK.Pneumoniae ]]" as STK <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[Observation-ObservationGramStainResultKpneumoniae.html Gram Stain\nK.Pneumoniae ]]" as GSK <<$bProcess>><<resource>> #APPLICATION
+
 rectangle "[[Task-SepsisWorkup.html Task\n Sepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
 rectangle "[[Specimen-Blood-bactec-plus-4-sepsis.html Blood Specimen\nBactec Plus 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
 
@@ -28,9 +36,14 @@ OMA -down-> OMTE : [LAB-4]: triggeredBy
 OMTE -up-> SR : [LAB-5]: basedOn
 OMA -down-> OMTK : [LAB-4]: triggeredBy
 OMTK -up-> SR : [LAB-5]: basedOn
-OMA -down-> OMGR : [LAB-4]: triggeredBy
-OMGR -down-> OI : [LAB-5]: hasMember
-OMGR -down-> ST : [LAB-5]: hasMember
+OMA -down-> OIGR : [LAB-4]: triggeredBy
+OIGR -down-> OIE : [LAB-5]: hasMember
+OIE -down-> GSE : [LAB-5]: hasMember
+OIE -down-> STE : [LAB-5]: hasMember
+OIGR -down-> OIK : [LAB-5]: hasMember
+OIK -down-> GSK : [LAB-5]: hasMember
+OIK -down-> STK : [LAB-5]: hasMember
+
 SR <-right- T1 : [LAB-6]: basedOn
 T1 <-right- BS : [LAB-7]: input
 
