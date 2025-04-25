@@ -21,9 +21,9 @@ Usage: #example
 //* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
 * interpretation = $v3-ObservationInterpretation#POS
 * method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
-* hasMember = Reference(observationMicroorgIdentAndSuscept) "Result of Gram Staining"
-* hasMember = Reference(observationMALDI-TOF-Kpneu) "MALDI-TOF Klebsiella pneumoniae"
-* hasMember = Reference(observationMALDI-TOF-Ecoli) "MALDI-TOF Escherichia coli"
+* hasMember[+] = Reference(observationMicroorgIdentAndSuscept) "Microorganism Identification and Susceptibility"
+* hasMember[+] = Reference(observationMALDI-TOF-Kpneu) "MALDI-TOF Klebsiella pneumoniae"
+* hasMember[+] = Reference(observationMALDI-TOF-Ecoli) "MALDI-TOF Escherichia coli"
 
 Instance: observationMALDI-TOF-Kpneu  // reflexed observation
 InstanceOf: ChLabObservationR4R5
