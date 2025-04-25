@@ -25,32 +25,6 @@ Usage: #example
 * hasMember = Reference(observationMALDI-TOF-Kpneu) "MALDI-TOF Klebsiella pneumoniae"
 * hasMember = Reference(observationMALDI-TOF-Ecoli) "MALDI-TOF Escherichia coli"
 
-/*
-Instance: observationMicrobiolGrowthAnaerobe
-InstanceOf: Observation
-Title: "CH LAB-Order Observation Example reporting anaerobic growth of bacteria"
-Description: "Observation Definition for Microbiological Growth anaerobe"
-Usage: #example
-* basedOn = Reference(4-sepsis-ServiceRequest)
-* status = #final
-// * code.coding[+].system = http://acmelabs.org
-// * code.coding[=].code = 123-456-789-observation
-// * code.coding[=].display = "Blood culture for bacteria, including anaerobic screen"
-* code.coding[+].system = $loinc
-* code.coding[=].code = #90437-5
-* code.coding[=].display = "Microorganism preliminary growth [Presence] in Blood by Anaerobe culture"
-
-* subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
-* effectivePeriod.start = "2025-03-16T06:20:17Z"
-* effectivePeriod.end = "2025-03-16T06:50:17Z"
-* issued = "2025-03-11T10:28:00+01:00"
-* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-* valueBoolean = false
-//* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
-* interpretation = $v3-ObservationInterpretation#NEG
-* method = $sct#104177005 "Blood culture for bacteria, including anaerobic screen"
-*/
-
 Instance: observationMALDI-TOF-Kpneu  // reflexed observation
 InstanceOf: ChLabObservationR4R5
 Title: "CH LAB-Order Observation Example of MALDI-TOF Klebsiella pneumoniae"
