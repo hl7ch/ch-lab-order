@@ -9,7 +9,7 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
-rectangle "[[ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 rectangle "[[DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport]]" as DR <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
@@ -29,13 +29,15 @@ rectangle "[[Observation-ObservationGramStainResultKpneumoniae.html Gram Stain\n
 rectangle "[[Task-SepsisWorkup.html Task\n Sepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
 rectangle "[[Specimen-Blood-bactec-plus-4-sepsis.html Blood Specimen\nBactec Plus 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
 
-SR <-right- DR : [LAB-1]: basedOn
+rectangle "[[ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #LightYellow
+SR <-down- SRG : [LAB-1]: basedOn
+SRG <-right- DR : [LAB-1]: basedOn
 DR -down-> OMA : [LAB-2]: result
 DR -down-> OMANA : [LAB-3]: result
 OMA -down-> OMTE : [LAB-4]: triggeredBy
-OMTE -up-> SR : [LAB-5]: basedOn
+OMTE -up-> SRG : [LAB-5]: basedOn
 OMA -down-> OMTK : [LAB-4]: triggeredBy
-OMTK -up-> SR : [LAB-5]: basedOn
+OMTK -up-> SRG : [LAB-5]: basedOn
 OMA -down-> OIGR : [LAB-4]: triggeredBy
 OIGR -down-> OIE : [LAB-5]: hasMember
 OIE -down-> GSE : [LAB-5]: hasMember
@@ -44,7 +46,7 @@ OIGR -down-> OIK : [LAB-5]: hasMember
 OIK -down-> GSK : [LAB-5]: hasMember
 OIK -down-> STK : [LAB-5]: hasMember
 
-SR <-right- T1 : [LAB-6]: basedOn
+SRG <-right- T1 : [LAB-6]: basedOn
 T1 <-right- BS : [LAB-7]: input
 
 @enduml
