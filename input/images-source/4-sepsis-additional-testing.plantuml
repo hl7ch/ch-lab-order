@@ -9,44 +9,58 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestHbHt.html 4-sepsis ServiceRequest HbHt ]] " as SRHBHT <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCBCDiff.html 4-sepsis ServiceRequest CBC Diff ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCRP.html 4-sepsis ServiceRequest CRP ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
-rectangle "[[DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport]]" as DR <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
 
-rectangle "[[Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility]]" as OIGR <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport Growth ]]" as DR <<$bProcess>><<resource>> #LightSkyBlue
 
-rectangle "[[Observation-ObservationEcoli.html Organism Identification: E.coli ]]" as OIE <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-ObservationSusceptibilityEcoli.html Susceptibility\nE.coli ]]" as STE <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-ObservationGramStainResultEcoli.html Gram Stain\nE.coli ]]" as GSE <<$bProcess>><<resource>> #APPLICATION
 
-rectangle "[[Observation-ObservationKpneumoniae.html Organism Identification: K.Pneumoniae ]]" as OIK <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-ObservationSusceptibilityKpneumoniae.html Susceptibility\nK.Pneumoniae ]]" as STK <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[Observation-ObservationGramStainResultKpneumoniae.html Gram Stain\nK.Pneumoniae ]]" as GSK <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
 
-rectangle "[[Task-SepsisWorkup.html Task\n Sepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
-rectangle "[[Specimen-Blood-bactec-plus-4-sepsis.html Blood Specimen\nBactec Plus 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility]]" as OMIS <<$bProcess>><<resource>> #APPLICATION
 
-rectangle "[[ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ Observation-ObservationEcoli.html Organism Identification: E.coli ]]" as OIE <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-ObservationSusceptibilityEcoli.html Susceptibility\nE.coli ]]" as STE <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-ObservationGramStainResultEcoli.html Gram Stain\nE.coli ]]" as GSE <<$bProcess>><<resource>> #APPLICATION
+
+rectangle "[[ Observation-ObservationKpneumoniae.html Organism Identification: K.Pneumoniae ]]" as OIK <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-ObservationSusceptibilityKpneumoniae.html Susceptibility\nK.Pneumoniae ]]" as STK <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-ObservationGramStainResultKpneumoniae.html Gram Stain\nK.Pneumoniae ]]" as GSK <<$bProcess>><<resource>> #APPLICATION
+
+rectangle "[[ Task-SepsisWorkup.html Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
+rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nBactec Plus 4-sepsis]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis]]" as SS <<$bProcess>><<resource>> #LightCoral
+
 SR <-down- SRG : [LAB-1]: basedOn
-SRG <-right- DR : [LAB-1]: basedOn
+SR <-down- SRHBHT : [LAB-1]: basedOn
+SR <-down- SRDIFF : [LAB-1]: basedOn
+SR <-down- SRCRP : [LAB-1]: basedOn
+SRG <-down- DR : [LAB-1]: basedOn
 DR -down-> OMA : [LAB-2]: result
 DR -down-> OMANA : [LAB-3]: result
 OMA -down-> OMTE : [LAB-4]: triggeredBy
 OMTE -up-> SRG : [LAB-5]: basedOn
 OMA -down-> OMTK : [LAB-4]: triggeredBy
 OMTK -up-> SRG : [LAB-5]: basedOn
-OMA -down-> OIGR : [LAB-4]: triggeredBy
-OIGR -down-> OIE : [LAB-5]: hasMember
+OMA -down-> OMIS : [LAB-4]: triggeredBy
+OMIS -left-> SRG : [LAB-5]: basedOn
+OMIS -down-> OIE : [LAB-5]: hasMember
 OIE -down-> GSE : [LAB-5]: hasMember
 OIE -down-> STE : [LAB-5]: hasMember
-OIGR -down-> OIK : [LAB-5]: hasMember
+OMIS -down-> OIK : [LAB-5]: hasMember
 OIK -down-> GSK : [LAB-5]: hasMember
 OIK -down-> STK : [LAB-5]: hasMember
 
-SRG <-right- T1 : [LAB-6]: basedOn
+SR <-right- T1 : [LAB-6]: basedOn
+T1 <-right- BBS : [LAB-7]: input
 T1 <-right- BS : [LAB-7]: input
+T1 <-right- SS : [LAB-7]: input
 
 @enduml
