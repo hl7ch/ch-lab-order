@@ -25,7 +25,7 @@ Usage: #example
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-* valueQuantity = 107 'g/L' "g/L"* hasMember[0] = Reference(ObservationHb)
+* valueQuantity = 107 'g/L' "g/L"
 
 Instance: ObservationHt
 InstanceOf: ChLabObservationR4R5
@@ -35,7 +35,7 @@ Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequestHbHt)
 * status = #final
 
-* code = $loinc#220570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
+* code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"

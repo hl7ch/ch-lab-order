@@ -44,19 +44,24 @@ Usage: #example
 * input[=].valueReference = Reference(Specimen/Serum-4-sepsis) "Serum Sample, 4-sepsis"
 
 * output[0].type.text = "DiagnosticReport generated"
-* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport"
+* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport Growth"
 * output[+].type.text = "collected specimen"
 * output[=].valueReference = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 
-* output[0].type.text = "DiagnosticReport generated"
-* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport"
+* output[+].type.text = "DiagnosticReport generated"
+* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportHbHt) "CH LAB-Order 4-sepsis DiagnosticReport Hb and Ht"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* output[=].valueReference = Reference(Specimen/Blood-4-sepsis)
 
-* output[0].type.text = "DiagnosticReport generated"
-* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport"
+* output[+].type.text = "DiagnosticReport generated"
+* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportCBCDiff) "CH LAB-Order 4-sepsis DiagnosticReport CBCDiff"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* output[=].valueReference = Reference(Specimen/Blood-4-sepsis)
+
+* output[+].type.text = "DiagnosticReport generated"
+* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportCRP) "CH LAB-Order 4-sepsis DiagnosticReport CRP"
+* output[+].type.text = "collected specimen"
+* output[=].valueReference = Reference(Specimen/Serum-4-sepsis)
 
 Instance: signature
 InstanceOf: Provenance

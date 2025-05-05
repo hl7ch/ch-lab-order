@@ -9,13 +9,16 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #Yellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestHbHt.html 4-sepsis ServiceRequest HbHt ]] " as SRHBHT <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCBCDiff.html 4-sepsis ServiceRequest CBC Diff ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCRP.html 4-sepsis ServiceRequest CRP ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport Growth ]]" as DR <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportHbHt.html 4-sepsis DiagnosticReport Hb and Ht ]]" as DRHBHT <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportDIF.html 4-sepsis DiagnosticReport CBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport CRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
 
 
 rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
@@ -42,9 +45,12 @@ SR <-down- SRG : [LAB-1]: basedOn
 SR <-down- SRHBHT : [LAB-1]: basedOn
 SR <-down- SRDIFF : [LAB-1]: basedOn
 SR <-down- SRCRP : [LAB-1]: basedOn
-SRG <-down- DR : [LAB-1]: basedOn
-DR -down-> OMA : [LAB-2]: result
-DR -down-> OMANA : [LAB-3]: result
+SRG <-down- DRG : [LAB-1]: basedOn
+SRHBHT <-down- DRHBHT : [LAB-1]: basedOn
+DRG -down-> OMA : [LAB-2]: result
+SRDIFF <-down- DRDIFF : [LAB-1]: basedOn
+SRCRP <-down- DRCRP : [LAB-1]: basedOn
+DRG -down-> OMANA : [LAB-3]: result
 OMA -down-> OMTE : [LAB-4]: triggeredBy
 OMTE -up-> SRG : [LAB-5]: basedOn
 OMA -down-> OMTK : [LAB-4]: triggeredBy
@@ -58,9 +64,9 @@ OMIS -down-> OIK : [LAB-5]: hasMember
 OIK -down-> GSK : [LAB-5]: hasMember
 OIK -down-> STK : [LAB-5]: hasMember
 
-SR <-right- T1 : [LAB-6]: basedOn
-T1 <-right- BBS : [LAB-7]: input
-T1 <-right- BS : [LAB-7]: input
-T1 <-right- SS : [LAB-7]: input
+SR <-up- T1 : [LAB-6]: basedOn
+T1 <-left- BBS : [LAB-7]: input
+T1 <-left- BS : [LAB-7]: input
+T1 <-left- SS : [LAB-7]: input
 
 @enduml
