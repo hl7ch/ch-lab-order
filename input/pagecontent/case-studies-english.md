@@ -62,7 +62,8 @@ The assistant doctor in the gynaecology department at the Olten group practice, 
 
 The patient Sara Speckmann, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample. All five samples are further processed in the external laboratory Pipette. There, germs are detected in some materials and then identified by mass spectrometry. The pathogens “Klebsiella pneumoniae” and “Escherichia coli” were detected in the aerobic Blood culture bottles. The germ identified in the urine sample is normally not pathogenic. An antibiogram is made of both pathogens detected in the Blood. This shows that the two active substances “amoxicillin+clavulanic acid” and “ceftriaxone” are effective against both germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
 
-{% include img.html img="4-sepsis-additional-testing.svg" caption="Fig. 1: reflexed observation" width="60%" %}
+{% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="60%" %}
+{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
 
 [Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
 
