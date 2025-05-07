@@ -15,7 +15,7 @@ rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observa
 rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli ]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[ Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility ]]" as OIGR <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility ]]" as OMIS <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-ObservationEcoli.html Organism Identification: E.coli ]]" as OIE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-ObservationSusceptibilityEcoli.html Susceptibility\nE.coli ]]" as STE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-ObservationGramStainResultEcoli.html Gram Stain\nE.coli ]]" as GSE <<$bProcess>><<resource>> #APPLICATION
@@ -31,13 +31,13 @@ OMA -down-> OMTE : [LAB-4]: triggeredBy
 OMTE -up-> SRG : [LAB-5]: basedOn
 OMA -down-> OMTK : [LAB-4]: triggeredBy
 OMTK -up-> SRG : [LAB-5]: basedOn
-OMA -down-> OIGR : [LAB-4]: triggeredBy
-OIGR -down-> OIE : [LAB-5]: hasMember
-OIE -down-> GSE : [LAB-5]: hasMember
-OIE -down-> STE : [LAB-5]: hasMember
-OIGR -down-> OIK : [LAB-5]: hasMember
-OIK -down-> GSK : [LAB-5]: hasMember
-OIK -down-> STK : [LAB-5]: hasMember
+OMA -down-> OMIS : [LAB-5]: triggeredBy
+OMIS -down-> OIE : [LAB-6]: hasMember
+OIE -down-> GSE : [LAB-7]: hasMember
+OIE -down-> STE : [LAB-7]: hasMember
+OMIS -down-> OIK : [LAB-6]: hasMember
+OIK -down-> GSK : [LAB-7]: hasMember
+OIK -down-> STK : [LAB-7]: hasMember
 
 
 @enduml

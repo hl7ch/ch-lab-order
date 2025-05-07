@@ -29,20 +29,20 @@ rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nB
 rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis]]" as SS <<$bProcess>><<resource>> #LightCoral
 
-SR <-down- SRG : [LAB-1]: basedOn
-SR <-down- SRHBHT : [LAB-1]: basedOn
-SR <-down- SRDIFF : [LAB-1]: basedOn
-SR <-down- SRCRP : [LAB-1]: basedOn
-SRG <-down- DRG : [LAB-1]: basedOn
-SRHBHT <-down- DRHBHT : [LAB-1]: basedOn
-DRG -down-> OMA : [LAB-2]: result
-SRDIFF <-down- DRDIFF : [LAB-1]: basedOn
-SRCRP <-down- DRCRP : [LAB-1]: basedOn
-DRG -down-> OMANA : [LAB-3]: result
+SR <-down- SRG : [LAB-3]: basedOn
+SR <-down- SRHBHT : [LAB-3]: basedOn
+SR <-down- SRDIFF : [LAB-3]: basedOn
+SR <-down- SRCRP : [LAB-3]: basedOn
+SRG <-down- DRG : [LAB-4]: basedOn
+SRHBHT <-down- DRHBHT : [LAB-4]: basedOn
+SRDIFF <-down- DRDIFF : [LAB-4]: basedOn
+SRCRP <-down- DRCRP : [LAB-4]: basedOn
+DRG -down-> OMA : [LAB-5]: result
+DRG -down-> OMANA : [LAB-5]: result
 
-SR <-up- T1 : [LAB-6]: basedOn
-T1 <-left- BBS : [LAB-7]: input
-T1 <-left- BS : [LAB-7]: input
-T1 <-left- SS : [LAB-7]: input
+SR <-up- T1 : [LAB-1]: basedOn
+T1 <-left- BBS : [LAB-2]: input
+T1 <-left- BS : [LAB-2]: input
+T1 <-left- SS : [LAB-2]: input
 
 @enduml

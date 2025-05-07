@@ -43,6 +43,7 @@ Usage: #example
 * input[+].type = $sct#119364003 "Serum specimen (specimen)" //TODO: check if this is the right code and display text
 * input[=].valueReference = Reference(Specimen/Serum-4-sepsis) "Serum Sample, 4-sepsis"
 
+/*
 * output[0].type.text = "DiagnosticReport generated"
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport Growth"
 * output[+].type.text = "collected specimen"
@@ -62,13 +63,14 @@ Usage: #example
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportCRP) "CH LAB-Order 4-sepsis DiagnosticReport CRP"
 * output[+].type.text = "collected specimen"
 * output[=].valueReference = Reference(Specimen/Serum-4-sepsis)
+*/
 
 Instance: signature
 InstanceOf: Provenance
 Usage: #inline
 * target = Reference(ServiceRequest/4-sepsis-ServiceRequest) "Request for Sepsis Investigation"
 * recorded = "2025-03-28T06:45:05+10:00"
-* agent.role = $v3-ParticipationType#AUT
+* agent.role = $v3-ParticipationType#AUT    // "author"
 * agent.who = Reference(Practitioner/HansHauser) "Hans Hauser"
 * signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
 * signature.when = "2025-03-28T06:45:05+10:00"
