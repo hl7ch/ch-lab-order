@@ -24,11 +24,9 @@ contact:
 
 dependencies:
   ch.fhir.ig.ch-core: 5.0.0
-  ch.fhir.ig.ch-term: 3.1.x
-  hl7.terminology.r4: 6.1.0
-  hl7.fhir.extensions.r5: 4.0.1
-  # ch.fhir.ig.ch-lab-report: 1.0.0
-  ch.fhir.ig.ch-orf: 2.0.1
+  ch.fhir.ig.ch-term: 3.1.0
+  hl7.terminology.r4: 6.3.0
+  ch.fhir.ig.ch-orf: 3.0.0
   hl7.fhir.uv.order-catalog: 0.1.0
    
 pages:
