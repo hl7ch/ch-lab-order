@@ -171,9 +171,9 @@ Usage: #example
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabServic"
 
 // ---- Requisition number, grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"   // 
-// * requisition.value = "ReqID-123456789"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "http://example.org/fhir/requisition-ids"  // 
+* requisition.value = "REQ-123456"
 * status = #active
 * intent = #original-order
 

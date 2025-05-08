@@ -15,8 +15,6 @@ Usage: #example
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
-
-
 Instance: HealthInsuranceCardHansGuggindieluft
 InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard HansGuggindieluft"
