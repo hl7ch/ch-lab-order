@@ -15,12 +15,12 @@ Usage: #example
 * entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition-with-sr-and-form"
 * entry[=].resource = LabOrder-CompositionWithSR_AndForm
 
-* entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
-* entry[=].resource = HansGuggindieluft
+// * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
+// * entry[=].resource = HansGuggindieluft
 * entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
 * entry[=].resource = FranzMuster
-* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
-* entry[=].resource = BeatBorer
+// * entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
+// * entry[=].resource = BeatBorer
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
@@ -41,8 +41,8 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
-* entry[=].resource = HealthInsuranceCard
+* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardFranzMuster"
+* entry[=].resource = HealthInsuranceCardFranzMuster
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
 * entry[=].resource = Serum

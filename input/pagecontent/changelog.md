@@ -62,6 +62,12 @@ Alias:  $documentEntryClassCode, Alias:  $documentEntryTypeCode
 
 * [Change Log CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/changelog.html):
 
+#### Follow up of changes in CH TERM
+
+* [#98](https://github.com/hl7ch/ch-term/issues/98): Add NamingSystem for VEKA and GTIN
+
+
+
 #### Changed / Updated
 
 * [Issue #132](https://github.com/hl7ch/ch-lab-order/issues/132) Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](http://build.fhir.org/ig/hl7ch/ch-lab-order/Questionnaire-LabOrder-form.html)

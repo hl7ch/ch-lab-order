@@ -163,7 +163,7 @@ Title: "Patient Birgit Blum"
 Description: "CH-Core-Patient, refers to 0-best-practice"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BirgitBlum\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Birgit Blum \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BirgitBlum\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400002\n      </p><p><b>name</b>: Birgit Blum \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
@@ -172,9 +172,9 @@ Usage: #example
 * extension[=].valueAddress.state = "BL"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999777.1"
-* identifier.value = "012/08.111111"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400002"
 * name.family = "Blum"
 * name.given = "Birgit"
 * telecom[0].system = #phone
@@ -194,16 +194,16 @@ Usage: #example
 // issue: orf wants a VS, in FSH a CS is required ???
 /*
 Instance: HealthInsuranceCardBirgitBlum
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Birgit Blum"
 Description: "Example for Insurance"
 Usage: #example
 // * id = "health-insurance-card-Birgit-Blum"
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780-1"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400002"
+
 * status = #active
-* type = $coverage-type#UVG "According to UVG"
+* type = $coverage-type#4 "According to UVG"
 * beneficiary = Reference(Patient/BirgitBlum)
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
@@ -357,12 +357,12 @@ Usage: #example
 
 /*
 Instance: Insurance-Company
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Usage: #example
 * identifier.system = "http://ehic.com/insurer/123456789/member"
 * identifier.value = "A123456781"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/BirgitBlum)
 * beneficiary = Reference(Patient/BirgitBlum)
 * relationship.coding.code = #self

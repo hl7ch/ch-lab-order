@@ -83,9 +83,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
-* requisition.value = "ReqID-123456789123"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-123456789123"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #90423-5
@@ -134,7 +134,7 @@ Title: "Patient Sara Speckmann"
 Description: "CH-Core-Patient, refers to 4-sepsis"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SaraSpeckmann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111114\n      </p><p><b>name</b>: Sara Speckmann\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SaraSpeckmann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400006\n      </p><p><b>name</b>: Sara Speckmann\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Aarau"
 * extension[=].valueAddress.country = "Schweiz"
@@ -143,9 +143,9 @@ Usage: #example
 * extension[=].valueAddress.state = "AG"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1025 "Jehovah's Witnesses"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.4"
-* identifier.value = "012/08.111114"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400006"
 * name.family = "Speckmann"
 * name.given = "Sara"
 * telecom[0].system = #phone
@@ -161,15 +161,14 @@ Usage: #example
 * communication.preferred = true
 
 Instance: HealthInsuranceCardSaraSpeckmann
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Sarah Speckmann"
 Description: "Example for Insurance"
 Usage: #example
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400006"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/SaraSpeckmann)
 * beneficiary = Reference(Patient/SaraSpeckmann)
 * period.end = "2024-12-31"

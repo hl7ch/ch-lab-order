@@ -14,9 +14,9 @@ Usage: #example
 * basedOn[+] = Reference(ServiceRequest-eGFR)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-1234567"
 
 * status = #active
 * intent = #original-order
@@ -38,7 +38,7 @@ Usage: #example
 * occurrenceDateTime = "2025-01-15"
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCard)
+* insurance = Reference(HealthInsuranceCardHansGuggindieluft)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."

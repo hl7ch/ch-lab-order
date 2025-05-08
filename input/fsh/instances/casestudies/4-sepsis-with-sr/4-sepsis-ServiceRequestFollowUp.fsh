@@ -8,9 +8,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequestGrowth)
 
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
-* requisition.value = "ReqID-123456789123"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-123456789123"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #76346-6
 * code.coding[=].system = $loinc

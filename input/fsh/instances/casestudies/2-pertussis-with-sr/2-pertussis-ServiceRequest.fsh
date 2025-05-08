@@ -110,7 +110,7 @@ Title: "Patient Emil Kummer"
 Description: "CH-Core-Patient, refers to 2-pertussis"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: EmilKummer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111112\n      </p><p><b>name</b>: Emil Kummer\n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: May 05, 2014\n      </p><p><b>maritalStatus</b>: ledig \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: EmilKummer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400004\n      </p><p><b>name</b>: Emil Kummer\n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: May 05, 2014\n      </p><p><b>maritalStatus</b>: ledig \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Paris"
 * extension[=].valueAddress.country = "Frankreich"
@@ -119,12 +119,12 @@ Usage: #example
 * extension[=].valueAddress.state = "BE"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1041 "Roman Catholic Church"
-* identifier[0].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier[=].value = "012/08.111112"
-* identifier[+].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier[=].value = "012/08.111112"
+// * identifier[0].type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400004"
+// * identifier[+].type = $v2-0203#MR
+// * identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
+// * identifier[=].value = "012/08.111112"
 * name.family = "Kummer"
 * name.given = "Emil"
 * gender = #male
@@ -165,16 +165,16 @@ Usage: #example
 * telecom[=].use = #work
 
 Instance: HealthInsuranceCardEmilKummer
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Emil Kummer"
 Description: "Example for Insurance"
 Usage: #example
 * id = "health-insurance-card-emil-kummer"
 * identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780-1"
+* identifier.value = "80756011110123400004"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/EmilKummer)
 * beneficiary = Reference(Patient/EmilKummer)
 * period.end = "2024-12-31"
