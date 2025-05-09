@@ -19,7 +19,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
 
 Instance: 3-gyn-ServiceRequest-HPV
@@ -43,7 +43,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
 
 Instance: 3-gyn-ServiceRequest-Urine-Panel
@@ -67,7 +67,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Urine-gyn)
 
 Instance: 3-gyn-ServiceRequest-Obstetric-Panel
@@ -91,7 +91,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Blood-gyn)
 * specimen[+] = Reference(Specimen/Serum-gyn)
 
@@ -141,6 +141,7 @@ Usage: #example
 * communication.language.text = "Italienisch (Schweiz)"
 * communication.preferred = true
 
+/*
 Instance: HealthInsuranceCardMarinaRubella
 InstanceOf: CHCoreCoverage
 Title: "Coverage Marina Rubella"
@@ -155,6 +156,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 Instance: PeterPapGruppenpraxis
 InstanceOf: CHCorePractitionerRole

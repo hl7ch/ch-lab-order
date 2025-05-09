@@ -47,7 +47,7 @@ Usage: #example
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = $sct#314076009
 * reasonCode.text = "Toxicology screening test (procedure)"
-* insurance = Reference(HealthInsuranceCardBeatBorer)
+// * insurance = Reference(HealthInsuranceCardBeatBorer)
 // * specimen[+] = Reference(Specimen/Blood-biol-monit)
 // * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
@@ -71,7 +71,7 @@ Usage: #example
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = $sct#314076009
 * reasonCode.text = "Toxicology screening test (procedure)"
-* insurance = Reference(HealthInsuranceCardBeatBorer)
+// * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Blood-biol-monit)
 
 Instance: 5-biol-monit-ServiceRequestHeavyMetalsUrine
@@ -94,7 +94,7 @@ Usage: #example
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = $sct#314076009
 * reasonCode.text = "Toxicology screening test (procedure)"
-* insurance = Reference(HealthInsuranceCardBeatBorer)
+// * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
 // ---- Patient --------
@@ -235,6 +235,7 @@ Usage: #example
 * address.postalCode = "9320"
 * address.country = "CH"
 
+/*
 Instance: HealthInsuranceCardBeatBorer
 InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Beat Borer"
@@ -250,6 +251,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 // ---- Specimen ---------------
 Instance: Blood-biol-monit

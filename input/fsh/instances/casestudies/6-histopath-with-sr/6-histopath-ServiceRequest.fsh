@@ -26,7 +26,7 @@ Usage: #example
 * reasonCode = $sct#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
 * reasonReference = Reference(DiagnosticReport/skin-dermatoscopy)
-* insurance = Reference(HealthInsuranceCardSimoneStuder)
+// * insurance = Reference(HealthInsuranceCardSimoneStuder)
 * specimen[+] = Reference(Specimen/Skin) "Skin specimen"
 
 Instance: SimoneStuder
@@ -75,6 +75,7 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+/*
 Instance: HealthInsuranceCardSimoneStuder
 InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Simone Studer"
@@ -89,7 +90,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123444449"
-
+*/
 
 Instance: Skin
 InstanceOf: Specimen

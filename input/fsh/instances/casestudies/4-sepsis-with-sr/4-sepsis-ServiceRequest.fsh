@@ -15,7 +15,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 /*
 Specimen are not defined here, but in the respective sub-serviceRequast instances
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
@@ -45,7 +45,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 
 Instance: 4-sepsis-ServiceRequestCBCDiff
@@ -70,7 +70,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 
 Instance: 4-sepsis-ServiceRequestGrowth
@@ -102,7 +102,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 
 Instance: 4-sepsis-ServiceRequestCRP   // Service request for C reactive protein
@@ -125,7 +125,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Serum-4-sepsis)
 
 Instance: SaraSpeckmann
@@ -160,6 +160,7 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+/*
 Instance: HealthInsuranceCardSaraSpeckmann
 InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Sarah Speckmann"
@@ -174,6 +175,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 Instance: Blood-bactec-plus-4-sepsis
 InstanceOf: Specimen

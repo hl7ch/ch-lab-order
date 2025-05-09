@@ -26,7 +26,7 @@ Usage: #example
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
-* insurance = Reference(HealthInsuranceCardEmilKummer)
+// * insurance = Reference(HealthInsuranceCardEmilKummer)
 
 Instance: 2-pertussis-ServiceRequestCBC
 InstanceOf: ChLabOrderSR
@@ -61,7 +61,7 @@ Usage: #example
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
-* insurance = Reference(HealthInsuranceCardEmilKummer)
+// * insurance = Reference(HealthInsuranceCardEmilKummer)
 // * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 // * specimen[+] = Reference(Specimen/Serum-2-pertussis)
@@ -99,7 +99,7 @@ Usage: #example
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
-* insurance = Reference(HealthInsuranceCardEmilKummer)
+// * insurance = Reference(HealthInsuranceCardEmilKummer)
 // * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 // * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
@@ -164,6 +164,7 @@ Usage: #example
 * telecom[=].value = "peter.presto@arztpraxis.ch"
 * telecom[=].use = #work
 
+/*
 Instance: HealthInsuranceCardEmilKummer
 InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Emil Kummer"
@@ -180,6 +181,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 Instance: ThroatSwab-2-pertussis
 InstanceOf: Specimen

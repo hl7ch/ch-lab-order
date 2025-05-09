@@ -29,7 +29,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
+// * insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 
 Instance: 1-tvt-ServiceRequest-1
 InstanceOf: ChLabOrderSR
@@ -53,7 +53,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
+// * insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-2
@@ -76,7 +76,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
+// * insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-3
@@ -99,7 +99,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
+// * insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-4
@@ -122,7 +122,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
+// * insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
 
@@ -153,7 +153,7 @@ Usage: #example
 * reasonCode.text = "Limitation of Vit. D Lab Analyse"
 * reasonReference = Reference(ConditionRenalInsufficiency)
 
-* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
+// * insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * supportingInfo[+] = Reference(ConditionRenalInsufficiency)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
@@ -192,6 +192,7 @@ Usage: #example
 
 // ---- PractitionerRole --------> Folder
 
+/*
 Instance: HealthInsuranceCardTobiasTimmermann
 InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Tobias Timmermann"
@@ -208,7 +209,7 @@ Usage: #example
 * period.end = "2024-12-31"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
-
+*/
 
 // ---- Specimen ---------------
 Instance: Serum-1-tvt
