@@ -9,7 +9,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
-// * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #86662-4
 * code.coding[=].system = $loinc

@@ -3,7 +3,7 @@ InstanceOf: ChargeItemDefinition
 Title: "ChargeItemDefinition: Limitations on Vitamin D Test"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabChargeItemDefinition"
-* language = #de-CH
+// * language = #de-CH
 * text.status = #additional
 * text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Codage affiné (1139) et conditions d'application du dosage de la vitamine D - Nomenclature des Actes de Biologie Médicale (NABM version 56)</p>\n            <p>La prise en charge de cet acte est limitée aux situations suivantes : </p>\n            <ul>\n                <li>suspicion de rachitisme</li>\n                <li>suspicion d’ostéomalacie</li>\n                <li>suivi ambulatoire de l’adulte transplanté rénal au-delà de trois mois après transplantation</li>\n                <li>avant et après chirurgie bariatrique</li>\n                <li>évaluation et prise en charge des personnes âgées sujettes aux chutes répétées</li>\n                <li>respect des résumés des caractéristiques du produit (RCP) des médicaments préconisant la\n                    réalisation de l’acte 1139</li>\n            </ul>\n        </div>"
 * url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ChargeItemDefinition/example-lab-billing-vitamind-focus"
@@ -67,7 +67,7 @@ Usage: #example
 * useContext[=].valueCodeableConcept = $sct#761938008 "Medicinal prescription record (record artifact)"
 * useContext[=].valueCodeableConcept.text = "Patienten, die Medikamente, die den Vit. D Stoffwechsel beeinflussen, einnehmen"
 
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001   // Code for 
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756   // Code for 
 * code = https://medcodesearch.ch/de/AL/laboratory_analyses#1006.00 "Vitamin D"  // needs API connection
 
 * propertyGroup.priceComponent.type = #base

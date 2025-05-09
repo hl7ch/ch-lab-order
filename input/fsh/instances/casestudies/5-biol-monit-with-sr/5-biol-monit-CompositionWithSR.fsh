@@ -25,12 +25,20 @@ Usage: #inline
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * category = $sct#721963009 "Order (record artifact)"
 * subject = Reference(Patient/BeatBorer)
-* date = "2019-03-31T11:46:09+02:00"
+* date = "2025-03-05T11:46:09+02:00"
 * author = Reference(PauloPorcelliniSuva)
 * title = "Laboratory order 5-biol-monit"
 
 * section[orderReferral].title = "Laboratory Order with Service Request 5-biol-monit"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 5-biol-monit\n </div>"
-* section[orderReferral].entry[ServiceRequest] = Reference(5-biol-monit-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestToxPanelBlood)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHeavyMetalsUrine)
 
+/*
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHbHt)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestHbElectro)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestCBC)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(5-biol-monit-ServiceRequestArsenic)
+*/

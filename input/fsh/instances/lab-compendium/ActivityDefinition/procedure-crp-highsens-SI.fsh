@@ -1,6 +1,6 @@
 Instance: procedure-crp-highsens-SI
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition CRP highsens SI"
+Title: "CH LAB-Order Procedure CRP highsens SI"
 Description: "Procedure C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -17,14 +17,14 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
+// * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2022-04-01"
 * effectivePeriod.end = "2023-12-25"
 
-* topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
-* topic[+] = $sct#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)" // SCT Code
+// * topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+// * topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
+// * topic[+] = $sct#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)" // SCT Code
 
 * kind = #ServiceRequest
 * code = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"

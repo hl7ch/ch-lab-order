@@ -1,6 +1,21 @@
-Instance: observation-serum-chloride
+Instance: observation-chloride-serum
 InstanceOf: ObservationDefinition
 Title: "ObservationDefinition Chloride"
 Description: "Chlorid im Blut Befund"
 Usage: #example
-* code = $loinc#2069-3 "Chloride [Moles/volume] in Blood"
+* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+* language = #en-US
+* category = $observation-category#laboratory "Laboratory"
+* code = $loinc#2075-0 "chloride [Moles/volume] in Serum or Plasma"
+* permittedDataType[0] = #Quantity
+* permittedDataType[+] = #string
+* multipleResultsAllowed = false
+* method.text = "Ion Selective Electrode (ISE)"
+* preferredReportName = "chloride"
+* quantitativeDetails.customaryUnit = $ucum#g/L
+* quantitativeDetails.unit = $ucum#mmol/L
+* quantitativeDetails.decimalPrecision = 0
+* qualifiedInterval.category = #reference
+* qualifiedInterval.range.low = 98 'mmol/L'
+* qualifiedInterval.range.high = 106 'mmol/L'
+* qualifiedInterval.context = $referencerange-meaning#normal "Normal Range"

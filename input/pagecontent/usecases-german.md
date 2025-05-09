@@ -59,11 +59,11 @@ Wenn das placer System zusätzliche Tests für die vorhandenen Proben anfordert,
 Die Order Control Codes können auch zum Stornieren, Halten oder Freigeben von gehaltenen Bestellanforderungen verwendet werden. Auch in diesen Fällen muss der Verweis auf die ursprüngliche Bestellung hergestellt werden.
 
 * Der 2-pertussis-ServiceRequest wird ersetzt durch den
-* 2-Pertussis-ServiceRequest-add-test, der die Untersuchung des Rachenabstrichs auf Pertussis- oder Parapertussis-DNA anfordert
+* 2-Pertussis-ServiceRequestAddTest, der die Untersuchung des Rachenabstrichs auf Pertussis- oder Parapertussis-DNA anfordert
 
-Beispiel für eine referenzierte Serviceanfrage: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-service-request.html), der Code im Element 'orderDetail' wäre 'NW' für "Neue Bestellung/Leistung", oder das Element könnte ganz weggelassen werden.
+Beispiel für eine referenzierte Serviceanfrage: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-ServiceRequest.html), der Code im Element 'orderDetail' wäre 'NW' für "Neue Bestellung/Leistung", oder das Element könnte ganz weggelassen werden.
 
-Beispiel Service Replace Request: [CH LAB-Order 2-pertussis Zusatztest](ServiceRequest-2-pertussis-service-request-add-test.html)
+Beispiel Service Replace Request: [CH LAB-Order 2-pertussis Zusatztest](ServiceRequest-2-pertussis-ServiceRequestAddTest.html)
 Der Replace Request enthält einen Verweis auf den vorherigen ServiceRequest und ein Element 'orderDetail', das den Order Control Code aus dem Code System v2-0119 trägt: 'RP' für "Order/service replace request", 'CA' für "Cancel order/service request", 'HD' für "Hold order request", und 'RL' für "Release previous hold"
 
 ### Anwendungsfall 3: Sammelauftrag für toxikologische Tests (biologische Überwachung)

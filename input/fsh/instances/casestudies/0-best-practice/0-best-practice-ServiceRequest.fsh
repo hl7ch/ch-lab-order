@@ -1,22 +1,18 @@
 Instance: 0-best-practice-ServiceRequest-0
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice"
 Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
-* id = "0-best-practice-service-request-0"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-
-* basedOn[+] = Reference(0-best-practice-ServiceRequest-1)
-* basedOn[+] = Reference(0-best-practice-ServiceRequest-2)
-* basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
-
 * status = #active
 * intent = #original-order
-// * category = $sct#721963009 "Order (record artifact)"
-
 * priority = #urgent
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding.code = #401186003
+* code.coding.system = $sct
+* code.coding.display = "Deep vein thrombosis screening (procedure)"
 * subject = Reference(Patient/BirgitBlum)
 * encounter = Reference(FirstEncounter)
 * requester = Reference(HansHauserKantonsspital)
@@ -24,27 +20,22 @@ Usage: #example
 // * supportingInfo[+] = Reference(ConditionHeartDisorder)
 * supportingInfo[+] = Reference(ConditionTibiaFracture)
 
-
 Instance: 0-best-practice-ServiceRequest-1
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Anti-Xa-Aktivität"
 Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
-* id = "0-best-practice-service-request-1"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
-
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 * status = #active
 * intent = #original-order
 * priority = #urgent
-// * category = $sct#721963009 "Order (record artifact)"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding.code = #80627-3
 * code.coding.system = $loinc
 * code.coding.display = "Coagulation factor X activated inhibitor [Mass/volume] in Platelet poor plasma"
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
 
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -59,14 +50,14 @@ Usage: #example
 * specimen = Reference(Specimen/Blood-coag-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-2
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Glucose"
 Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
-* id = "0-best-practice-service-request-2"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
@@ -90,26 +81,23 @@ Usage: #example
 * specimen = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
 
 Instance: 0-best-practice-ServiceRequest-3
-InstanceOf: ChLabOrderSRContainer
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
-* id = "0-best-practice-service-request-3"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
-* basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Hb)
-* basedOn[+] = Reference(0-best-practice-ServiceRequest-3-Ht)
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 * code.coding.code = #24360-0
 * code.coding.system = $loinc
 * code.coding.display = "Hemoglobin and Hematocrit panel - Blood"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
-
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
@@ -119,22 +107,21 @@ Usage: #example
 * reasonCode.text = "Anemia screening"
 
 Instance: 0-best-practice-ServiceRequest-3-Hb
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
-* id = "0-best-practice-service-request-3-hb"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
+
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
 * code.coding.code = #718-7
 * code.coding.system = $loinc
 * code.coding.display = "Hemoglobin [Mass/volume] in Blood"
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
@@ -142,14 +129,15 @@ Usage: #example
 * specimen = Reference(Specimen/Blood-0-best-practice)
 
 Instance: 0-best-practice-ServiceRequest-3-Ht
-InstanceOf: ChLabOrderSRSingletest
+InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
-* id = "0-best-practice-service-request-3-ht"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
+
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
@@ -157,8 +145,11 @@ Usage: #example
 * code.coding.code = #20570-8
 * code.coding.system = $loinc
 * code.coding.display = "Hematocrit [Volume Fraction] of Blood"
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
+
+* priority = #urgent
+* subject = Reference(Patient/BirgitBlum)
+* requester = Reference(HansHauserKantonsspital)
+* specimen = Reference(Specimen/Blood-0-best-practice)
 
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
@@ -316,8 +307,8 @@ Description: "Problem list of Birgit Blum Heart Disorder"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[+] = $condition-category#problemlist-item
-* category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item	
+// * category = $sct#439401001 "diagnosis"
 * severity = $sct#6736007 "Moderate (severity modifier)"
 * code = $sct#368009 "Heart valve disorder"
 * bodySite = $sct#40768004 "Left thorax"
@@ -335,8 +326,8 @@ Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[+] = $condition-category#problemlist-item
-* category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item	
+// * category = $sct#439401001 "diagnosis"
 * severity = $sct#24484000 "Severe (severity modifier) (qualifier value)"
 * code = $sct#446980008 "Open fracture of tibial plateau (disorder)"
 * bodySite = $sct#719496004
@@ -354,8 +345,8 @@ Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category.coding[+] = $condition-category#problemlist-item
-* category = $sct#71388002 "Procedure (procedure)"
+* category = $condition-category#problem-list-item	
+// * category = $sct#71388002 "Procedure (procedure)"
 * code = $sct#122621000119109 "Prophylactic anticoagulation given (situation)"
 * subject = Reference(Patient/BirgitBlum) "Birgit Blum"
 * encounter = Reference(Encounter/FirstEncounter)

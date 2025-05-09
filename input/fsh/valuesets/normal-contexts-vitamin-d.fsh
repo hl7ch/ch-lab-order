@@ -13,7 +13,7 @@ Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verord
 * ^publisher = "HL7 International - Orders and Observations Work Group"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.org/Special/committees/orders"
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * ^immutable = false
 * include codes from system SNOMED_CT where concept is-a #41345002  // Rickets (disorder) -- Rachitis
 * include codes from system SNOMED_CT where concept is-a #4598005   // Osteomalacia (disorder)

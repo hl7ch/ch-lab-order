@@ -12,7 +12,7 @@ Description: "Broadest value set that may be referenced by ObservationDefinition
 * ^publisher = "HL7 International - Orders and Observations Work Group"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.org/Special/committees/orders"
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * ^immutable = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SNOMED_CT where concept is-a #138875005

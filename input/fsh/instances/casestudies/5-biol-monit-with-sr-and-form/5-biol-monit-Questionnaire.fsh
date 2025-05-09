@@ -32,7 +32,7 @@ Usage: #example
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"
 
 // ###############  begin of general part  ########################################
-* version = "1.0.0"
+* version = "3.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 5-biol-monit"
 * status = #active

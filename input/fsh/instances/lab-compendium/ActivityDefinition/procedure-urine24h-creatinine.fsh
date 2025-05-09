@@ -1,6 +1,6 @@
 Instance: procedure-urine24h-creatinine
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Creatinine 24h Urine"
+Title: "CH LAB-Order Procedure Creatinine 24h Urine"
 Description: "Procedure Creatinine 24 hour urine panel - 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -15,7 +15,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "creatinine measurements on 24-hour urine specimen"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input specimens and input and output observations for urine creatinine.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
 
 * effectivePeriod.start = "2020-04-01"
@@ -26,8 +26,9 @@ Usage: #example
 
 * kind = #ServiceRequest
 * code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
-* observationRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
-* observationRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
-* observationResultRequirement[0] = Reference(ObservationDefinition/observation-collection-duration)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-collection-volume)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-urine24h-creatinine)
+* observationRequirement[0] = Reference(ObservationDefinition/observationCollectionDurationUrine)
+* observationRequirement[+] = Reference(ObservationDefinition/observation24hCollectionVolumeUrine)
+// * observationRequirement[+] = Reference(ObservationDefinition/observation24hCollectionCreatinineUrine)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observationCollectionDurationUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation24hCollectionVolumeUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation24hCollectionCreatinineUrine)

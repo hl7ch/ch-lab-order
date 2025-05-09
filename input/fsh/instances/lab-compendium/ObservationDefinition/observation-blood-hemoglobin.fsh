@@ -5,7 +5,7 @@ Description: "Hemoglobin blood [Moles/volume]"
 Usage: #example
 // * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 // * language = #en-US
-* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category = $observation-category#laboratory "Laboratory"
 * code = $loinc#59260-0 "Hemoglobin [Moles/volume] in Blood"
 * permittedDataType[0] = #Quantity
 // * permittedDataType[+] = #string
@@ -19,5 +19,10 @@ Usage: #example
 * qualifiedInterval[=].range.low = 8.7 'mmol/L'
 * qualifiedInterval[=].range.high = 11.2 'mmol/L' // male adult
 * qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
+* qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
+* qualifiedInterval[=].age.low = 20 'a'
+* qualifiedInterval[+].gender = #female
+* qualifiedInterval[=].range.low = 7.4 'mmol/L'
+* qualifiedInterval[=].range.high = 9.9 'mmol/L' // female adult
 * qualifiedInterval[=].context = http://terminology.hl7.org/CodeSystem/referencerange-meaning#normal "Normal Range"
 * qualifiedInterval[=].age.low = 20 'a'

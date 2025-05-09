@@ -26,7 +26,7 @@ Usage: #example
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
-* version = "1.0.0-assembled"
+* version = "3.0.0"
 * name = "LabOrderFormCaseStudies"
 * title = "Questionnaire Lab Order Case Studies"
 * status = #active
@@ -729,7 +729,7 @@ Usage: #example
 // ---- E1 Blood potassium test ----
 // =================================
 * item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium" // item[9][0][0][0]
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/potassium-serum"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServicePotassiumSerum"
 * item[=].item[=].item[=].item[=].text = "Kalium"
 * item[=].item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].item[=].item[0].linkId = "lab-compendium.Gantenbein.labServices.Potassium.specimenDefinition"
@@ -844,7 +844,7 @@ Usage: #example
 // ---- E4 Creatinine concentration serum ----
 // ===========================================
 * item[=].item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.CreatinineSerum"  // item[9][0][0][6]
-* item[=].item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-creatinine-serum"
+* item[=].item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-serum-creatinine"
 * item[=].item[=].item[=].item[=].item[=].text = "Analysen Labor Gantenbein Creatinine Serum"
 * item[=].item[=].item[=].item[=].item[=].code = $loinc#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].item[=].type = #boolean
@@ -925,7 +925,7 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item.answerOption[0].valueCoding = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 // not allowed: Questionnaire.item.answerOption.value[x], data type cannot repeat - they must have a maximum cardinality of 1 :
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/potassium-serum)
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference = Reference(PlanDefinition/LabServicePotassiumSerum)
 
 // ---- Choose SpecimenDefinition for Potassium ----
 * item[=].item[=].item[=].item[=].item.item.linkId = "choose-specimenDefinition"

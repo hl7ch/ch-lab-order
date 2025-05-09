@@ -47,5 +47,5 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
 * entry[=].resource = Serum
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/LabOrder-potassium"  // entry[10]
-* entry[=].resource = LabOrder-ServiceRequest-potassium
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/service-request-potassium-serum"  // entry[10]
+* entry[=].resource = ServiceRequestPotassiumSerum

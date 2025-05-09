@@ -3,16 +3,16 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-0"
+
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 
-* basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
-* basedOn = Reference(1-tvt-ServiceRequest-2)   // CBC diff
-* basedOn = Reference(1-tvt-ServiceRequest-3)   // D-Dimer
-* basedOn = Reference(1-tvt-ServiceRequest-4)   // CRP
-* basedOn = Reference(1-tvt-ServiceRequest-5)   // Vit. D
+// * basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
+// * basedOn = Reference(1-tvt-ServiceRequest-2)   // CBC diff
+// * basedOn = Reference(1-tvt-ServiceRequest-3)   // D-Dimer
+// * basedOn = Reference(1-tvt-ServiceRequest-4)   // CRP
+// * basedOn = Reference(1-tvt-ServiceRequest-5)   // Vit. D
 
 * status = #active
 * intent = #original-order
@@ -36,10 +36,11 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-1"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-1"
+
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #58410-2 
@@ -60,10 +61,10 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-2"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-2"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #57021-8
@@ -83,10 +84,10 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-3"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-3"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #55398-2
@@ -106,10 +107,10 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-4"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-4"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #1988-5
@@ -130,10 +131,10 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-5"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
-* id = "1-tvt-service-request-5"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(1-tvt-ServiceRequest-0)
 * status = #active
 * intent = #original-order
 * code.coding[+].code = #62292-8
@@ -269,7 +270,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $sct#439401001 "diagnosis"
-* severity = $sct#371923003 "Mild to moderate (qualifier value)"
+* severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"
 * subject = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"
 // * encounter = Reference(Encounter/f001)
