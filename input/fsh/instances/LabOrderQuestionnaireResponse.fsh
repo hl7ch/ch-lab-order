@@ -1,12 +1,12 @@
-Instance: 1-tvt-QuestionnaireResponse
+Instance: LabOrder-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "CH LAB-QuestionnaireResponse 1-tvt"
-Description: "Example for Questionnaire Response due to suspected deep vein thrombosis"
+Title: "CH LAB-Order example Questionnaire Response"
+Description: "Example for Laboratory Order Questionnaire Response"
 Usage: #example
-* id = "1-tvt"
+* id = "LabOrder-qr"
 * meta.versionId = "1"
-* meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/1-tvt"
+* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------
@@ -17,15 +17,12 @@ Usage: #example
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "123"
-
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
 * item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30"
-
 * item[=].item[+].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
-
 * item[=].item[+].linkId = "order.notificationContactDocument"
 * item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
 * item[=].item[=].item.linkId = "order.notificationContactDocument.practitioner"
@@ -64,18 +61,11 @@ Usage: #example
 * item[=].item[=].item.item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item.item[=].text = "E-Mail"
 * item[=].item[=].item.item[=].answer.valueString = "peter.presto@arztpraxis.ch"
-
-// ---- order priority ----
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].answer.valueCoding = $request-priority#routine
-
-// ---------- Receiver item[1] ----------
-// ################################################
 * item[+].linkId = "receiver"
 * item[=].text = "Empfänger"
-
-// ---- receiver.practitioner ------------------------
 * item[=].item[0].linkId = "receiver.practitioner"
 * item[=].item[=].text = "Empfangende Person"
 * item[=].item[=].item[0].linkId = "receiver.practitioner.title"
@@ -118,19 +108,19 @@ Usage: #example
 * item[=].text = "Patient"
 * item[=].item[0].linkId = "patient.familyName"
 * item[=].item[=].text = "Name"
-* item[=].item[=].answer.valueString = "Timmermann"
+* item[=].item[=].answer.valueString = "Guggindieluft"
 * item[=].item[+].linkId = "patient.maidenName"
 * item[=].item[=].text = "Ledigname"
 * item[=].item[=].answer.valueString = "Bering"
 * item[=].item[+].linkId = "patient.givenName"
 * item[=].item[=].text = "Vorname"
-* item[=].item[=].answer.valueString = "Tobias"
+* item[=].item[=].answer.valueString = "Hans"
 * item[=].item[+].linkId = "patient.localPid"
 * item[=].item[=].text = "Lokale Patienten-ID"
 * item[=].item[=].answer.valueString = "11.22.33.5678"
 * item[=].item[+].linkId = "patient.birthDate"
 * item[=].item[=].text = "Geburtsdatum"
-* item[=].item[=].answer.valueDate = "1984-01-01"
+* item[=].item[=].answer.valueDate = "1981-01-01"
 * item[=].item[+].linkId = "patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].answer.valueCoding = $administrative-gender#male
@@ -180,7 +170,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueString = "7601000034321"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.zsr"
 * item[=].item[=].item[=].item[=].text = "ZSR"
-* item[=].item[=].item[=].item[=].answer.valueString = "L248519"
+* item[=].item[=].item[=].item[=].answer.valueString = "A123309"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].item[=].answer.valueString = "033 333 22 11"
@@ -271,27 +261,4 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
 
-// ------------Choice of Specialty-----------------
-//#################################################
-
-* item[+].linkId = "hematology"
-* item[=].text = "Hematology"
-* item[=].item.linkId = "hemato-subset"
-* item[=].item.text = "Hämatologie Subset"
-* item[=].item.answer[0].valueCoding = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#43113-0 "Hemoglobin electrophoresis panel in Blood"
-* item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[=].item.answer[+].valueCoding = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* item[=].item.answer[+].valueCoding = $loinc#57021-8 "CBC W Auto Differential panel - Blood"
-* item[+].linkId = "coagulation"
-* item[=].text = "Coagulation"
-* item[=].item.linkId = "d-dimer"
-* item[=].item.text = "D-Dimer"
-* item[=].item.answer.valueCoding = $loinc#55398-2 "Short Fibrin D-dimer FEU and DDU panel - Platelet poor plasma"
-* item[+].linkId = "cc"
-* item[=].text = "clinical chemistry"
-* item[=].item.linkId = "crp"
-* item[=].item.text = "CRP"
-* item[=].item.answer.valueCoding = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
-
-//#################################################
+// ########### specific Part ######################
