@@ -9,7 +9,9 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "123"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
 // Reference to superior order
-* basedOn[+] = Reference(248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
+
+* basedOn[0] = Reference(LabOrderRenalInsufficiencyPanel)
+// * basedOn[+] = Reference(248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
 * requisition.system = "urn:oid:2.16.756.5.30"
@@ -44,7 +46,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCard)
+// * insurance = Reference(HealthInsuranceCard)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
