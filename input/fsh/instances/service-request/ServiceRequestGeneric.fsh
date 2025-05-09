@@ -33,7 +33,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardHansGuggindieluft)
+// * insurance = Reference(HealthInsuranceCardHansGuggindieluft)
 * supportingInfo = Reference(MedicationStatement/Acetylsalicylat)
 * specimen[+] = Reference(Specimen/Blood) "Blood"
 // * specimen[+] = Reference(Specimen/Blood)

@@ -22,6 +22,6 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity"
-* insurance = Reference(HealthInsuranceCardHansGuggindieluft)
+// * insurance = Reference(HealthInsuranceCardHansGuggindieluft)
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)

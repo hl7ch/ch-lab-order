@@ -38,7 +38,7 @@ Usage: #example
 * occurrenceDateTime = "2025-01-15"
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardHansGuggindieluft)
+// * insurance = Reference(HealthInsuranceCardHansGuggindieluft)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
