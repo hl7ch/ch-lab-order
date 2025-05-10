@@ -43,22 +43,22 @@ Usage: #example
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
 
-// * reasonCode = $sct#90688005
-// * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-// //* insurance = Reference(HealthInsuranceCard)
-// * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
-// * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
-// * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
+//* reasonCode = $sct#90688005
+//* reasonCode.text = "Chronic renal failure syndrome (disorder)"
+//* insurance = Reference(HealthInsuranceCard)
+//* supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
+//* supportingInfo[+] = Reference(Condition/Renal-insufficiency)
+//* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 
 
 
-// * status = #active
-// * intent = #order
-// * code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
-// * subject = Reference(Patient/example) "John Doe"
-// * requester = Reference(Practitioner/example) "Dr. Jane Smith"
-// * performer = Reference(Organization/lab-example) "Example Clinical Laboratory"
+//* status = #active
+//* intent = #order
+//* code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
+//* subject = Reference(Patient/example) "John Doe"
+//* requester = Reference(Practitioner/example) "Dr. Jane Smith"
+//* performer = Reference(Organization/lab-example) "Example Clinical Laboratory"
 * specimen[0] = Reference(Specimen/Serum) "Serum Sample"
-// * specimen[+] = Reference(Specimen/Urine-24h) "24-hour Urine Sample"
-// * reasonCode = $sct#431855005 "Chronic kidney disease stage 3"
-// * note.text = "Please collect a 24-hour urine sample and serum creatinine level for clearance calculation."
+//* specimen[+] = Reference(Specimen/Urine-24h) "24-hour Urine Sample"
+//* reasonCode = $sct#431855005 "Chronic kidney disease stage 3"
+//* note.text = "Please collect a 24-hour urine sample and serum creatinine level for clearance calculation."
