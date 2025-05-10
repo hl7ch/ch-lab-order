@@ -4,7 +4,7 @@ Title: "CH LAB-ServiceRequest 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 // * category = $sct#721963009 "Order (record artifact)"
 
@@ -29,7 +29,7 @@ Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
 Description: "Example for Service Request for Sepsis Investigation, Hemoglobin and Hematocrit"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
@@ -54,7 +54,7 @@ Title: "CH LAB-ServiceRequest 4-sepsis CBC with Differential"
 Description: "Example for Service Request for Sepsis Investigation, CBC with Differential"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
@@ -79,7 +79,7 @@ Title: "CH LAB-ServiceRequest 4-sepsis microbiological growth in  blood culture"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
@@ -111,7 +111,7 @@ Title: "CH LAB-ServiceRequest 4-sepsis C reactive protein"
 Description: "Example for Service Request for Sepsis Investigation, C reactive protein"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * code.coding[+].code = #1988-5 

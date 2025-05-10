@@ -5,7 +5,7 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-smear-test"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
@@ -29,7 +29,7 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-hpv"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
@@ -53,7 +53,7 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-urine-panel"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
@@ -77,7 +77,7 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-obstetric-panel"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order

@@ -4,7 +4,7 @@ Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123123"
 * status = #active
 * intent = #original-order
@@ -57,7 +57,7 @@ Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123123"
 * basedOn = Reference(5-biol-monit-ServiceRequest)
 * status = #active
@@ -80,7 +80,7 @@ Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123123"
 * basedOn = Reference(5-biol-monit-ServiceRequest)
 * status = #active

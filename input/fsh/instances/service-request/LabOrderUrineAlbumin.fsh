@@ -5,7 +5,7 @@ Description: "This term was created for, but not limited in use to, the cobas Ti
 Usage: #example
 * id = "lab-order-urine-albumin"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
 * basedOn = Reference(LabOrder-uACR)

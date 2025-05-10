@@ -166,7 +166,7 @@ Description: "Service Request for a Laboratory Panel (Battery) to assess the ren
 Usage: #example
 // // * id ="248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabServic"
 
@@ -206,7 +206,7 @@ Description: "Service Request for calculation of eGFR, using serum creatinine an
 Usage: #example
 // // * id ="lab-order-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 
 // Reference to superior order
@@ -248,7 +248,7 @@ Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma, 
 Usage: #example
 // * id ="service-request-creatinine-serum-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123987"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceCreatinineSerum"
 
@@ -291,7 +291,7 @@ Description: "Service Request for Calculation of Albumin/Creatinine Ratio in Uri
 Usage: #example
 // * id ="lab-order-urine-albumin-creatinine-ratio"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
 // Reference to superior order
@@ -331,7 +331,7 @@ Description: "This term was created for, but not limited in use to, the cobas Ti
 Usage: #example
 // * id ="lab-order-urine-albumin"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
@@ -370,7 +370,7 @@ Description: "Service Request for Creatinine [Moles/volume] in Urine"
 Usage: #example
 // * id ="lab-order-urine-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123987"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)

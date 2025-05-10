@@ -4,7 +4,7 @@ Title: "CH LAB-ServiceRequest 0-best-practice"
 Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
@@ -26,7 +26,7 @@ Title: "CH LAB-ServiceRequest 0-best-practice Anti-Xa-Aktivität"
 Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 * status = #active
@@ -55,7 +55,7 @@ Title: "CH LAB-ServiceRequest 0-best-practice Glucose"
 Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
@@ -86,7 +86,7 @@ Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
@@ -112,7 +112,7 @@ Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
@@ -134,7 +134,7 @@ Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 

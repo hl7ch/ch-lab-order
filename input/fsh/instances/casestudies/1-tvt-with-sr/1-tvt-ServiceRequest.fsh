@@ -5,7 +5,7 @@ Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 
 // * basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
@@ -38,7 +38,7 @@ Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
@@ -62,7 +62,7 @@ Title: "CH LAB-ServiceRequest 1-tvt-2"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
@@ -85,7 +85,7 @@ Title: "CH LAB-ServiceRequest 1-tvt-3"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
@@ -108,7 +108,7 @@ Title: "CH LAB-ServiceRequest 1-tvt-4"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
@@ -132,7 +132,7 @@ Title: "CH LAB-ServiceRequest 1-tvt-5"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(1-tvt-ServiceRequest-0)
 * status = #active
