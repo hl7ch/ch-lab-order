@@ -30,7 +30,7 @@ Usage: #example
 
 // * relatedArtifact.type = #documentation
 // * relatedArtifact.display = "Explanation of diagnostic tests to determine the ratio of the concentration of albumin and creatinine in urine"
-// * library = "https://www.zkidney.com/mdrd-main"
+* library = "https://www.zkidney.com/mdrd-main" 
 * kind = #ServiceRequest
 // * code.text = "uACR in Urine"
 * code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"

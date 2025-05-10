@@ -4,13 +4,13 @@ Title: "CH LAB-ServiceRequest 4-sepsis Follow-Up"
 Description: "Example for Service Request for Sepsis Investigation, with reflexed observation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequestGrowth)
 
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
-* requisition.value = "ReqID-123456789123"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-123456789123"
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #76346-6
 * code.coding[=].system = $loinc
@@ -26,7 +26,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 /*
@@ -40,7 +40,7 @@ Title: "CH LAB-ServiceRequest 4-sepsis MALDI-TOF, follow-up ServiceRequest"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #active
@@ -50,7 +50,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 
 * code.coding[+].code = #76346-6
 * code.coding[=].system = $loinc

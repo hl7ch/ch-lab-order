@@ -13,14 +13,14 @@ Usage: #example
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
 * entry[0].fullUrl = "http://example.com/fhir/Composition/ch-lab-order-composition-with-sr"
-* entry[=].resource = LabOrder-CompositionWithSR
+* entry[=].resource = LabOrderCompositionWithSR
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
-* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
-* entry[=].resource = FranzMuster
-* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
-* entry[=].resource = BeatBorer
+//* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
+//* entry[=].resource = FranzMuster
+//* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
+//* entry[=].resource = BeatBorer
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
@@ -29,7 +29,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
 * entry[=].resource = MarcMustermannGruppenpraxis
 
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"   // entry[5]
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
 * entry[=].resource = LaborPipette
@@ -41,11 +41,11 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPrestoGruppenpraxis"
 * entry[=].resource = PeterPrestoGruppenpraxis
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCard"
-* entry[=].resource = HealthInsuranceCard
+// * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardFranzMuster"
+// * entry[=].resource = HealthInsuranceCardFranzMuster
 
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum"   // entry[10]
 * entry[=].resource = Serum
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/service-request-potassium-serum"  // entry[10]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/service-request-potassium-serum"  // entry[11]
 * entry[=].resource = ServiceRequestPotassiumSerum

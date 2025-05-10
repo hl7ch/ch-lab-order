@@ -1,32 +1,31 @@
-Instance: ServiceRequestChlorideSerum
+Instance: LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order for Chloride"
-Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
+Title: "CH LAB-Order Renal Insufficiency Panel"
+Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #example
-* id = "service-request-chloride-serum"
+* id = "panel-renal-insufficiency-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
-
-// is part of panel Serum-Electrolytes
-* basedOn = Reference(ServiceRequestElectrolytesSerum)
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabService"
 
 // ---- grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"
-// * requisition.value = "ReqID-1234567"
-
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 
 // What is being ordered
-// * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding.code = #2075-0
+// * code.coding.code = #108252007
+// * code.coding.system = $sct
+// * code.coding.display = "Laboratory procedure (procedure)"
+
+* code.coding.code = #LP31398-8
 * code.coding.system = $loinc
-* code.coding.display = "Chloride [Moles/volume] in Serum or Plasma"
+* code.coding.display = "Renal function"
 
 // ---- orderDetails ----
 * orderDetail.coding.code = #NW
@@ -39,6 +38,4 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-// * insurance = Reference(HealthInsuranceCardHansGuggindieluft)
-* specimen[+] = Reference(Specimen/Serum) "Serum specimen"
-// * specimen[+] = Reference(Specimen/Blood)
+//* insurance = Reference(HealthInsuranceCard)
