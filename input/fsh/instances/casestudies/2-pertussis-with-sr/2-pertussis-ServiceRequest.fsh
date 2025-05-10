@@ -149,8 +149,8 @@ Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601022050702"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123303"
+//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+//* identifier[ZSR].value = "A123303"
 * name.use = #official
 * name.family = "Presto"
 * name.given = "Peter"

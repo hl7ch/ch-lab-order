@@ -81,7 +81,7 @@ Title: "Patient Urs Schmid"
 Description: "CH Core Patient Urs Schmid"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: Urs Schmid\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400001\n      </p><p><b>name</b>: Urs Schmid \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: Urs Schmid\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Urs Schmid \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
@@ -90,9 +90,9 @@ Usage: #example
 * extension[=].valueAddress.state = "BL"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
-// * identifier.type = $v2-0203#MR
-* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
-* identifier[insuranceCardNumber].value = "80756011110123400001"
+* identifier.type = $v2-0203#MR
+* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
+* identifier.value = "012/08.111111"
 * name.family = "Guggindieluft"
 * name.given = "Hans"
 * telecom[0].system = #phone
@@ -114,8 +114,8 @@ Description: "Practitioner, works in GruppenpraxisOlten"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123309"
+//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+//* identifier[ZSR].value = "A123309"
 * name.use = #official
 * name.family = "Meier"
 * name.given = "Esther"
@@ -166,14 +166,14 @@ Description: "Service Request for a Laboratory Panel (Battery) to assess the ren
 Usage: #example
 // // * id ="248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.45"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
 * identifier[placerOrderIdentifier].value = "123"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabServic"
 
-// ---- Requisition number, grouperID, must be repeated in all dependent SR ----
+// ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "http://example.org/fhir/requisition-ids"  // 
-* requisition.value = "REQ-123456"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 
@@ -214,9 +214,9 @@ Usage: #example
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"
-// * requisition.value = "ReqID-123456789"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 
@@ -237,7 +237,7 @@ Usage: #example
 * requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardUrsSchmid)
+//* insurance = Reference(HealthInsuranceCard)
 
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 
@@ -255,9 +255,9 @@ Usage: #example
 * basedOn = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"
-// * requisition.value = "ReqID-123456789"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
@@ -278,7 +278,7 @@ Usage: #example
 * occurrenceDateTime = "2025-01-15"
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardUrsSchmid)
+//* insurance = Reference(HealthInsuranceCard)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 // * note.text = "Please collect blood sample for serum creatinine and 24-hour urine sample for urine creatinine."
@@ -297,9 +297,9 @@ Usage: #example
 // Reference to superior order
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 // ---- grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"
-// * requisition.value = "ReqID-123456789"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 
@@ -319,7 +319,7 @@ Usage: #example
 * requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)  // EstherMeierGruppenpraxisOlten
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardUrsSchmid)
+//* insurance = Reference(HealthInsuranceCard)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
@@ -336,9 +336,9 @@ Usage: #example
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"
-// * requisition.value = "ReqID-123456789"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 
@@ -359,7 +359,7 @@ Usage: #example
 * requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardUrsSchmid)
+//* insurance = Reference(HealthInsuranceCard)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 * note.text = "Please use umol/L as Unit for the ratio calculation umol[albumin]/mmol[creatinine]."
 
@@ -375,9 +375,9 @@ Usage: #example
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
-// * requisition.type = $v2-0203#PLAC "Placer Identifier"
-// * requisition.system = "urn:oid:2.16.756.5.45"
-// * requisition.value = "ReqID-123456789"
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
 
@@ -398,21 +398,9 @@ Usage: #example
 * requester = Reference(urn:uuid:1301bc1f-9d23-4529-b30d-f1a0e792823c)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCardUrsSchmid)
+//* insurance = Reference(HealthInsuranceCard)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 * note.text = "Please use mmol/L for the ratio calculation mol[albumin]/mmol[creatinine]. Most labs in Switzerland use mg[albumin]/mmol[creatinine] as unit for the ratio calculation."
 
 // Viollier, Bioanalytica, Medisyn, Unilabs, Synlab, Medics, laborteam: mg[albumin]/mmol[creatinine]
 // Risch: mg[albumin]/mmol[creatinine]
-
-Instance: HealthInsuranceCardUrsSchmid
-InstanceOf: CHCoreCoverage
-Title: "Coverage FranzMuster"
-Description: "Example for Insurance Coverage"
-Usage: #example
-* contained = Sanitas
-* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
-* identifier[insuranceCardNumber].value = "80756011110123400001"
-* status = #active
-* beneficiary = Reference(Patient/UrsSchmid)
-* payor = Reference(Organization/Sanitas)

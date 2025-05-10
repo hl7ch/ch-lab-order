@@ -33,7 +33,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-//* insurance = Reference(HealthInsuranceCard)
+////* insurance = Reference(HealthInsuranceCard)
 * specimen[+] = Reference(Specimen/Urine) "Urine specimen"
 * note.text = "Please use mmol/L for the ratio calculation mol[albumin]/mmol[creatinine]. Most labs in Switzerland use mg[albumin]/mmol[creatinine] as unit for the ratio calculation."
 

@@ -173,8 +173,8 @@ Description: "Practitioner, works at Gruppenpraxis, refers to 3-gyn"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601003050707"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123305"
+//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+//* identifier[ZSR].value = "A123305"
 * name.use = #official
 * name.family = "Pap"
 * name.given = "Peter"
