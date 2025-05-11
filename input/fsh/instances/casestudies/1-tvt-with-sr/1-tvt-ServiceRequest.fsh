@@ -200,14 +200,14 @@ Description: "Example for Insurance"
 Usage: #example
 // * id = "health-insurance-card-tobias-timmermann"
 * identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
+* identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "80756011110123400003"
 * status = #active
 * type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/TobiasTimmermann)
 * beneficiary = Reference(Patient/TobiasTimmermann)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
 */
 

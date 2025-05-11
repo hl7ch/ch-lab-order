@@ -173,7 +173,7 @@ Usage: #example
 * subscriber = Reference(Patient/SaraSpeckmann)
 * beneficiary = Reference(Patient/SaraSpeckmann)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
 */
 

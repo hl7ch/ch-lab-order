@@ -206,7 +206,7 @@ Usage: #example
 * type = $coverage-type#4 "According to UVG"
 * beneficiary = Reference(Patient/BirgitBlum)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
 */
 
@@ -358,7 +358,7 @@ Usage: #example
 Instance: Insurance-Company
 InstanceOf: CHCoreCoverage
 Usage: #example
-* identifier.system = "http://ehic.com/insurer/123456789/member"
+* identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "A123456781"
 * status = #active
 * type = $coverage-type#1 "According to KVG"
@@ -366,6 +366,6 @@ Usage: #example
 * beneficiary = Reference(Patient/BirgitBlum)
 * relationship.coding.code = #self
 * period.end = "2025-03-17"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "1234567891"
 */
