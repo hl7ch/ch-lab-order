@@ -178,8 +178,8 @@ Usage: #example
 
 Instance: Blood-bactec-plus-4-sepsis
 InstanceOf: Specimen
-Title: "Blood collection in blood culture bottles, 4-sepsis bactec-plus"
-Description: "Example for Specimen for Haematological Examination"
+Title: "Blood Collection in Blood Culture Bottles, 4-sepsis"
+Description: "Example for specimen for aerobic and anaerobic blood culture"
 Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
@@ -219,6 +219,22 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
+Instance: Serum-4-sepsis
+InstanceOf: Specimen
+Title: "Serum Sample, 4-sepsis"
+Description: "Example for Specimen of Serum"
+Usage: #example
+* identifier.value = "11111-15394-75465"
+* accessionIdentifier.value = "22222-bc987-dd888"
+* status = #available
+* type = $sct#119364003 "Serum specimen (specimen)"
+* subject = Reference(Patient/SaraSpeckmann)
+* receivedTime = "2023-12-01T16:40:17Z"
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+
 Instance: Urine-4-sepsis
 InstanceOf: Specimen
 Title: "Urine Sample, 4-sepsis"
@@ -236,19 +252,3 @@ Usage: #example
 * container.identifier.value = "659e1c5b-5c5a-4829-b7fa-fb7da2276e0d-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
-
-Instance: Serum-4-sepsis
-InstanceOf: Specimen
-Title: "Serum Sample, 4-sepsis"
-Description: "Example for Specimen of Serum"
-Usage: #example
-* identifier.value = "11111-15394-75465"
-* accessionIdentifier.value = "22222-bc987-dd888"
-* status = #available
-* type = $sct#119364003 "Serum specimen (specimen)"
-* subject = Reference(Patient/SaraSpeckmann)
-* receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
-* collection.collector = Reference(Practitioner/HansHauser)
-* collection.collectedDateTime = "2023-12-01T06:40:17Z"
-* container.type = $sct#706053007 "General specimen container (physical object)"

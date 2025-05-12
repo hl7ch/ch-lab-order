@@ -34,7 +34,7 @@ Usage: #example
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 */
 
-Instance: 4-sepsis-ServiceRequestMALDO-TOF   // Service request for C reactive protein
+Instance: 4-sepsis-ServiceRequestMALDi-TOF   // Service request for C reactive protein
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 4-sepsis MALDI-TOF, follow-up ServiceRequest"
 Description: "Example for Service Request for Sepsis Investigation"
