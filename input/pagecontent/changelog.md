@@ -8,7 +8,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [Issue#329](https://github.com/hl7ch/ch-lab-order/issues/329) ObservationDefinition Hemoglobin blood -> fix erroneous entries
 
 
-### Fixrd
+### Fixed
 * [#313](https://github.com/hl7ch/ch-core/issues/313): Add [expansion-parameter](https://build.fhir.org/codesystem-guide-parameter-code.html#:~:text=expansion%2Dparameter,as%20SNOMED%20CT) for the usage of SNOMED CT Swiss Extension 
 
 ### Open Issues for STU 3
@@ -61,6 +61,12 @@ Alias:  $documentEntryClassCode, Alias:  $documentEntryTypeCode
 #### Follow up of changes in CH ORF
 
 * [Change Log CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/changelog.html):
+
+#### Follow up of changes in CH TERM
+
+* [#98](https://github.com/hl7ch/ch-term/issues/98): Add NamingSystem for VEKA and GTIN
+
+
 
 #### Changed / Updated
 

@@ -1,16 +1,32 @@
-Instance: HealthInsuranceCard
-InstanceOf: ChOrfCoverage
+Instance: HealthInsuranceCardFranzMuster
+InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Franz Muster"
 Description: "Example for Insurance"
 Usage: #example
 * identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400000"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/FranzMuster)
 * beneficiary = Reference(Patient/FranzMuster)
 * period.start = "2024-01-01"
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
-* payor.identifier.value = "123456789"
+* payor.identifier.system = "http://example.org/insurer"
+* payor.identifier.value = "12345678900"
+
+Instance: HealthInsuranceCardHansGuggindieluft
+InstanceOf: CHCoreCoverage
+Title: "Covarage HealthInsuranceCard HansGuggindieluft"
+Description: "Example for Insurance"
+Usage: #example
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400009"
+* status = #active
+* type = $coverage-type#1 "According to KVG"
+* subscriber = Reference(Patient/FranzMuster)
+* beneficiary = Reference(Patient/FranzMuster)
+* period.start = "2024-01-01"
+* period.end = "2024-12-31"
+* payor.identifier.system = "http://example.org/insurer"
+* payor.identifier.value = "12345678901"

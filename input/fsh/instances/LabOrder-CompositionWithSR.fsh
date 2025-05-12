@@ -1,4 +1,4 @@
-Instance: LabOrder-CompositionWithSR
+Instance: LabOrderCompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Order Composition with ServiceRequest"
 Description: "Composition with ServiceRequest for Potassium"
@@ -7,14 +7,13 @@ Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order with ServiceRequest</div></div>"
+
 * extension[0].extension.url = "enterer"
 * extension[=].extension.valueReference = Reference(MarcMustermannGruppenpraxis)
 * extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
-
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
-
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
 * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
