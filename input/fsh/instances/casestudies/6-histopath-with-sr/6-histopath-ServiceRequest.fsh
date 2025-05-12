@@ -120,7 +120,7 @@ Description: "DiagnosticReport about the dermatiscopy of skin"
 Usage: #example
 * id = "skin-dermatoscopy"
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
-* identifier.system = "https://www.acmeonline.com"
+* identifier.system = "http://example.org/identifiers"
 * identifier.value = "P44444444"
 * status = #final
 * category = $v2-0074#PAT "Pathology (gross & histopath, not surgical)"
