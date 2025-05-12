@@ -104,6 +104,7 @@ Usage: #example
 // * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
+
 Instance: EmilKummer
 InstanceOf: CHCorePatient
 Title: "Patient Emil Kummer"
@@ -230,3 +231,17 @@ Usage: #example
 * collection.collector = Reference(Practitioner/PeterPresto)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#702304001 "Microcapillary blood transfer tube, clot activator (physical object)"
+
+// Instance: Cough
+// InstanceOf: Observation
+// Title: "Cough"
+// Description: "Cough as a detected symptom"
+// Usage: #example
+// * id = "cough"
+// * status = #final
+// * category.text = "Signs and Symptoms"
+// * code.coding[+] = $sct#49727002 "Cough (finding)"
+// * subject = Reference(Patient/EmilKummer)
+// * performer = Reference(Practitioner/PeterPresto)
+// * effectiveDateTime = "2023-11-01T22:33:22Z"
+// * valueCodeableConcept =  $sct#260349009 "Present +++ out of ++++ (qualifier value)"
