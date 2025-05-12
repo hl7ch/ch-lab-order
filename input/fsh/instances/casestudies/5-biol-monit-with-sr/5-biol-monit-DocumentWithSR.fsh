@@ -45,14 +45,18 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/WoodyWorkdocSpeiserRails" // entry[10]
 * entry[=].resource = WoodyWorkdocSpeiserRails
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardBeatBorer"
-* entry[=].resource = HealthInsuranceCardBeatBorer
+// * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardBeatBorer"
+// * entry[=].resource = HealthInsuranceCardBeatBorer
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-biol-monit"
 * entry[=].resource = Blood-biol-monit
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Urine-biol-monit"
 * entry[=].resource = Urine-biol-monit
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-service-request"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-ServiceRequest"
 * entry[=].resource = 5-biol-monit-ServiceRequest
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-ServiceRequestToxPanelBlood"
+* entry[=].resource = 5-biol-monit-ServiceRequestToxPanelBlood
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/5-biol-monit-ServiceRequestHeavyMetalsUrine"
+* entry[=].resource = 5-biol-monit-ServiceRequestHeavyMetalsUrine
 

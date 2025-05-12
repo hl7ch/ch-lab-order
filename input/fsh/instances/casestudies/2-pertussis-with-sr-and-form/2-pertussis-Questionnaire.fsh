@@ -31,7 +31,7 @@ Usage: #example
 
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"
 
-* version = "1.0.0"
+* version = "3.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 2-pertussis"
 * status = #active

@@ -5,7 +5,7 @@ Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #example
 * id = "6-histopath-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
 * status = #active
 * intent = #original-order
@@ -26,7 +26,7 @@ Usage: #example
 * reasonCode = $sct#1163403006 "Pigmented nevus (morphologic abnormality)"
 * reasonCode.text = "Suspicion Melanoma Skin"
 * reasonReference = Reference(DiagnosticReport/skin-dermatoscopy)
-* insurance = Reference(HealthInsuranceCardSimoneStuder)
+// * insurance = Reference(HealthInsuranceCardSimoneStuder)
 * specimen[+] = Reference(Specimen/Skin) "Skin specimen"
 
 Instance: SimoneStuder
@@ -35,7 +35,7 @@ Title: "Patient Marina Rubella"
 Description: "CH-Core-Patient, refers to 6-histopath"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SimoneStuder\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111113\n      </p><p><b>name</b>: SimoneStuder \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 08, 1992\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Italienisch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SimoneStuder\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400008\n      </p><p><b>name</b>: SimoneStuder \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 08, 1992\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Italienisch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Huttwil"
 * extension[=].valueAddress.country = "Schweiz"
@@ -44,9 +44,9 @@ Usage: #example
 * extension[=].valueAddress.state = "TI"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1077 "Protestant"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.977789.1"
-* identifier.value = "012/08.111113"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400008"
 * name[0].use = #official
 * name[=].family.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name"
 * name[=].family.extension.valueCode = #officialName
@@ -75,22 +75,22 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+/*
 Instance: HealthInsuranceCardSimoneStuder
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Simone Studer"
 Description: "Example for Insurance"
 Usage: #example
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "B123456780"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400008"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/SimoneStuder)
 * beneficiary = Reference(Patient/SimoneStuder)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123444449"
-
+*/
 
 Instance: Skin
 InstanceOf: Specimen
@@ -120,7 +120,7 @@ Description: "DiagnosticReport about the dermatiscopy of skin"
 Usage: #example
 * id = "skin-dermatoscopy"
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
-* identifier.system = "https://www.acmeonline.com"
+* identifier.system = "http://example.org/identifiers"
 * identifier.value = "P44444444"
 * status = #final
 * category = $v2-0074#PAT "Pathology (gross & histopath, not surgical)"

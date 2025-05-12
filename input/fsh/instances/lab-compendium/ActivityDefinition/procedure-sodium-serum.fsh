@@ -1,6 +1,6 @@
 Instance: procedure-sodium-serum
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Sodium"
+Title: "CH LAB-Order Procedure Sodium"
 Description: "Procedure Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -17,7 +17,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Sodium measurement procedure on in-vitro serum specimen"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform sodium level test on serum, and the output observation. It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 
 * effectivePeriod.start = "2020-04-01"
@@ -29,6 +29,6 @@ Usage: #example
 * kind = #ServiceRequest
 * code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * priority = #routine
-* timingDuration = 30 'mn' "minutes"
+// * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement = Reference(ObservationDefinition/observation-serum-sodium)

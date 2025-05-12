@@ -1,0 +1,14 @@
+Code:
+
+```plantumlcode
+@startuml
+alice-bob:hello
+@enduml
+```
+
+Output:
+```plantumlcode
+@startuml
+alice-bob:hello
+@enduml
+```

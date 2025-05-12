@@ -1,6 +1,6 @@
 Instance: procedure-serum-electrolyte
 InstanceOf: ActivityDefinition
-Title: "ActivityDefinition Electrolytes"
+Title: "CH LAB-Order Procedure Electrolytes"
 Description: "Procedure Electrolytes 1998 panel - Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
@@ -15,7 +15,7 @@ Usage: #example
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "Na, K, Cl level measurements on serum or plasma"
-* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
 * purpose = "This _ActivityDefinition_ specifies the input specimens and input and output observations for blood electrolyte.              It is referenced by any _PlanDefinition_ representing a lab service incorporating this procedure."
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
@@ -28,4 +28,4 @@ Usage: #example
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observation-serum-sodium)
 * observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-potassium)
-* observationResultRequirement[+] = Reference(ObservationDefinition/observation-serum-chloride)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-chloride-serum)

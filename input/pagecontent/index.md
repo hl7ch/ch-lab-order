@@ -1,11 +1,5 @@
 <!-- markdownlint-disable MD001 MD033 MD041 -->
 
-<div markdown="1" class="stu-note">
-
-  <a href="changelog.html">Significant Changes, Open and Closed Issues</a>
-
-</div>
-
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory orders
 
 #### Laboratory Order with Service Request
@@ -22,9 +16,15 @@ There is another use case in which the commissioning laboratory provides the cli
 
 You can download this Implementation Guide in [NPM-format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](https://fhir.ch/ig/ch-lab-order/package.tgz).
 
+<div markdown="1" class="stu-note">
+
+<a href="changelog.html">Significant changes, open and closed issues.</a>
+
+</div>
+
 ### Foundation
 
-Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardised order interface is the more favourable solution in the long run.
+Data exchange with different information systems (practice, hospital, laboratory) quickly becomes confusing due to proprietary solutions (n:m cardinality). Therefore, the question arises whether a standardized order interface is the more favorable solution in the long run.
 
 #### Laboratory order with Service Request
 
@@ -34,7 +34,7 @@ The ServiceRequest may instantiate an ActivityDefinition, a coded procedure to e
 
 #### Laboratory order with Service Request and Form
 
-The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnairResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured way.
+The lab order can optionally and in addition to the ServiceRequest contain forms as resources, which in this context are called Questionnaire and QuestionnaireResponse. The structure of these forms is [based on ORF](http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf). This allows the data for the laboratory order to be placed in a structured way.
 
 ### Requirements
 
@@ -51,13 +51,13 @@ The lab-order should define the structure of the order details so it can be used
 
    * Information for the sample taking should be available for the person preparing the taking of blood.
 
-   * A numbering system should be supported, so that relabeling at the laboratory can be limited (eg. practitionar number + number-range).
+   * A numbering system should be supported, so that relabeling at the laboratory can be limited (eg. practitioner number + number-range).
 
 5. The electronic order should be able to handle the request of analyses for samples that were sent at an earlier point of time.
 
 6. The electronic order should receive updates on the process of the laboratory analyses: as sample received in laboratory, first results available, report finished [Domain of Lab-Report].
 
-   * The status of the order at the practitionor site should be supported as well: new order, replaced order (enhanced or partly deleted), printed sample lables, documentation of blood take (additional Information as urine volume and Date and Time of withdrawl of blood).
+   * The status of the order at the practitioner site should be supported as well: new order, replaced order (enhanced or partly deleted), printed sample labels, documentation of blood take (additional Information as urine volume and Date and Time of withdrawal of blood).
 
 ### Six Case studies with examples for the Order Document
 
@@ -65,7 +65,7 @@ Using concrete case studies, we have created six everyday examples of documents 
 
 ### Copyright
 
-This artefact includes content from SNOMED Clinical Terms&reg; (SNOMED CT&reg;) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact <http://www.snomed.org/snomed-ct/getsnomed-ct> or <info@snomed.org>.
+This artefact includes content from SNOMED Clinical Terms&reg; (SNOMED CT&reg;) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artifacts must have the appropriate SNOMED CT Affiliate license - for more information contact <http://www.snomed.org/snomed-ct/getsnomed-ct> or <info@snomed.org>.
 
 This artefact includes content from LOINC®. This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at <http://loinc.org/terms-of-use>.
 

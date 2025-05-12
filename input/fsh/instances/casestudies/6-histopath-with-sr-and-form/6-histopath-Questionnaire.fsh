@@ -30,7 +30,7 @@ Usage: #example
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 * url = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
-* version = "1.0.0"
+* version = "3.0.0"
 * name = "LabOrderFormExample"
 * title = "Lab Order Form Example 6-histopath"
 * status = #active

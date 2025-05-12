@@ -3,43 +3,41 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
-* id = "5-biol-monit-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123123"
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[+].code = #24360-0
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+// * code.coding[+].code = #24360-0
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
+// 
+// * code.coding[+].code = #43113-0
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
+// 
+// * code.coding[+].code = #57021-8
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "CBC W Auto Differential panel - Blood"
+// 
+// * code.coding[+].code = #58410-2
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "CBC panel - Blood by Automated count"
 
-* code.coding[+].code = #43113-0
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
-
-* code.coding[+].code = #57021-8
-* code.coding[=].system = $loinc
-* code.coding[=].display = "CBC W Auto Differential panel - Blood"
-
-* code.coding[+].code = #58410-2
-* code.coding[=].system = $loinc
-* code.coding[=].display = "CBC panel - Blood by Automated count"
-
-
-* code.coding[+].code = #29587-3
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Toxicology panel - Blood"
-
-* code.coding[+].code = #54454-4
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Arsenic fractions panel - Urine"
-
-* code.coding[+].code = #29589-9
-* code.coding[=].system = $loinc
-* code.coding[=].display = "Heavy metals panel - Urine"
+// * code.coding[+].code = #29587-3
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "Toxicology panel - Blood"
+// 
+// * code.coding[+].code = #54454-4
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "Arsenic fractions panel - Urine"
+// 
+// * code.coding[+].code = #29589-9
+// * code.coding[=].system = $loinc
+// * code.coding[=].display = "Heavy metals panel - Urine"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
@@ -49,8 +47,54 @@ Usage: #example
 * requester = Reference(PauloPorcelliniSuva)
 * reasonCode = $sct#314076009
 * reasonCode.text = "Toxicology screening test (procedure)"
-* insurance = Reference(HealthInsuranceCardBeatBorer)
+// * insurance = Reference(HealthInsuranceCardBeatBorer)
+// * specimen[+] = Reference(Specimen/Blood-biol-monit)
+// * specimen[+] = Reference(Specimen/Urine-biol-monit)
+
+Instance: 5-biol-monit-ServiceRequestToxPanelBlood
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 5-biol-monit"
+Description: "Example for Service Request for toxicological Monitoring"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "123123"
+* basedOn = Reference(5-biol-monit-ServiceRequest)
+* status = #active
+* intent = #original-order
+* code.coding[+].code = #29587-3
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Toxicology panel - Blood"
+
+* priority = #urgent
+* subject = Reference(Patient/BeatBorer)
+* requester = Reference(PauloPorcelliniSuva)
+* reasonCode = $sct#314076009
+* reasonCode.text = "Toxicology screening test (procedure)"
+// * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Blood-biol-monit)
+
+Instance: 5-biol-monit-ServiceRequestHeavyMetalsUrine
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 5-biol-monit"
+Description: "Example for Service Request for toxicological Monitoring"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "123123"
+* basedOn = Reference(5-biol-monit-ServiceRequest)
+* status = #active
+* intent = #original-order
+* code.coding[+].code = #29589-9
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Heavy metals panel - Urine"
+
+* priority = #urgent
+* subject = Reference(Patient/BeatBorer)
+* requester = Reference(PauloPorcelliniSuva)
+* reasonCode = $sct#314076009
+* reasonCode.text = "Toxicology screening test (procedure)"
+// * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 
 // ---- Patient --------
@@ -60,7 +104,7 @@ Title: "Patient Beat Borer"
 Description: "Example for CH-Core-Patient"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BeatBorer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111115\n      </p><p><b>name</b>: Beat Borer \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jun 06, 1986\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BeatBorer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400007\n      </p><p><b>name</b>: Beat Borer \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jun 06, 1986\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Lausanne"
 * extension[=].valueAddress.country = "Schweiz"
@@ -69,9 +113,9 @@ Usage: #example
 * extension[=].valueAddress.state = "BE"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1077 "Protestant"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111115"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400007"
 * name.family = "Borer"
 * name.given = "Beat"
 * telecom[0].system = #phone
@@ -102,8 +146,8 @@ Description: "Specialist for Occupational Medicine, works at SUVA, refers to 1-t
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123307"
+//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+//* identifier[ZSR].value = "A123307"
 * name.use = #official
 * name.family = "Porcellini"
 * name.given = "Paulo"
@@ -122,7 +166,7 @@ InstanceOf: CHCoreOrganization
 Title: "Organization SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
 Usage: #example
-* identifier.system = "urn:oid:2.16.756.5.45"
+* identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
 * identifier.value = "A62088168"
 * name = "Suva"
 * telecom[0].system = #phone
@@ -155,8 +199,8 @@ Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601000050717"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123301"
+//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+//* identifier[ZSR].value = "A123301"
 * name.use = #official
 * name.family = "Worksdoc"
 * name.given = "Woody"
@@ -191,21 +235,23 @@ Usage: #example
 * address.postalCode = "9320"
 * address.country = "CH"
 
+/*
 Instance: HealthInsuranceCardBeatBorer
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Beat Borer"
 Description: "Example for Insurance"
 Usage: #example
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400007"
+
 * status = #active
-* type = $coverage-type#UVG "According to UVG"
+* type = $coverage-type#4 "According to UVG"
 * subscriber = Reference(Patient/BeatBorer)
 * beneficiary = Reference(Patient/BeatBorer)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 // ---- Specimen ---------------
 Instance: Blood-biol-monit
@@ -216,7 +262,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/BeatBorer)
-* request = Reference(ServiceRequest/5-biol-monit-service-request)
+* request = Reference(ServiceRequest/5-biol-monit-ServiceRequestToxPanelBlood)
 * collection.collector = Reference(Practitioner/PauloPorcellini)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -234,7 +280,7 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/BeatBorer)
 * receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(ServiceRequest/5-biol-monit-service-request)
+* request = Reference(ServiceRequest/5-biol-monit-ServiceRequestHeavyMetalsUrine)
 * collection.collector = Reference(Practitioner/PauloPorcellini)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.identifier.value = "4e88a-bc987-dd888-12345-urin"

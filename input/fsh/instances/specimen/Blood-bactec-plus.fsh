@@ -1,5 +1,5 @@
 /*
-Instance: Blood-bactec-plus
+Instance: Blood-bactec-plus-4-sepsis
 InstanceOf: Specimen
 Title: "Blood Sample Bacteriology"
 Description: "Example for Specimen for bacteriological Examination"

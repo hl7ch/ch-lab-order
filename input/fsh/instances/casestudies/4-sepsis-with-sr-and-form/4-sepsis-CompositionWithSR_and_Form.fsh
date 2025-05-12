@@ -29,7 +29,7 @@ Usage: #example
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * category = $sct#721963009 "Order (record artifact)"
 * subject = Reference(Patient/SaraSpeckmann)
-* date = "2019-03-31T11:46:09+02:00"
+* date = "2025-03-05T11:46:09+02:00"
 * author = Reference(HansHauserKantonsspital)
 * title = "Referral 4-sepsis"
 
@@ -39,4 +39,9 @@ Usage: #example
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Order-Referral-Form 4-sepsis\n </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(4-sepsis-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(4-sepsis-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(4-sepsis-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestHbHt)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestCBCDiff)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestGrowth)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestCRP)
+

@@ -3,7 +3,6 @@ InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Composition 1-tvt with ServiceRequest"
 Description: "Composition: Storyboard for suspected deep Vein Thrombosis"
 Usage: #example
-* id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"
 * text.status = #additional
@@ -29,7 +28,7 @@ Usage: #example
 * category = $sct#721963009 "Order (record artifact)"
 * type = $sct#721965002 "Laboratory order (record artifact)"
 * subject = Reference(Patient/TobiasTimmermann)
-* date = "2019-03-31T11:46:09+02:00"
+* date = "2025-03-05T11:46:09+02:00"
 * author = Reference(MarcMustermannGruppenpraxis)
 * title = "Laboratory order 1-tvt"
 

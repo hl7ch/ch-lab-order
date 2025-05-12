@@ -7,7 +7,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * . ^short = "CH LAB-Order ServiceRequest for a labtest"
 * . ^definition = "The IHE Laboratory Testing Workflow Profile covers the workflow related to tests performed on in vitro specimens by a clinical laboratory inside a healthcare institution, for both existing and pending orders, related to identified patients and unidentified or misidentified patients. It maintains the consistency of patient and order information from registration through ordering, scheduling, pre-analytical processing, testing, technical and clinical validation, to results reporting and usage of laoratory observations and comments by the care providers."
 
-* ^version = "0.9.0"
+* ^version = "3.0.0"
 * ^status = #active
 * ^date = "2019-02-05"
 * ^publisher = "HL7 Switzerland"
@@ -25,7 +25,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
 
-* basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
+// * basedOn only Reference(ChLabOrderSR or ChLabOrderSRContainer) // Labtest
 * replaces only Reference(ChLabOrderSR)
   * ^short = "references the previous ServiceRequest in the situation of ordering supplemental laboratory tests"
 

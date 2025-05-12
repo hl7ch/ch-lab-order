@@ -7,11 +7,11 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-05-10
-version: 2.0.0
+date: 2025-01-30
+version: 3.0.0
 fhirVersion: 4.0.1
-copyrightYear: 2023+
-releaseLabel: ci-build
+copyrightYear: 2025+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
   url: https://www.hl7.ch
@@ -23,11 +23,15 @@ contact:
         use: work
 
 dependencies:
-  ch.fhir.ig.ch-epr-term: 2.0.9
-  hl7.terminology: 5.1.0
-  ch.fhir.ig.ch-orf: 2.0.1
-  ch.fhir.ig.ch-core: 4.0.1
-  hl7.fhir.uv.order-catalog: 0.1.0 
+  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-term: 
+    uri: http://fhir.ch/ig/ch-term/ImplementationGuide/ch.fhir.ig.ch-term
+    version: 3.1.x
+  hl7.terminology.r4:
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+    version: 6.3.0
+  ch.fhir.ig.ch-orf: current
+  hl7.fhir.uv.order-catalog: 0.1.0
    
 pages:
   index.md:
@@ -45,7 +49,7 @@ pages:
   case-studies-french.md:
     title: Case Studies in French
   document-lo-sr-and-form.md:
-    title: CH LAB-Order with ServiceRequest and Form
+    title: CH LAB-Order with Service Request and Form
   document-lo-sr.md:
     title: CH LAB-Order with Service Request
   profiles.md:
@@ -54,3 +58,12 @@ pages:
     title: Terminology
   changelog.md:
     title: Changelog
+
+parameters:
+  allow-extensible-warnings: true
+  display-warnings: true  
+  path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension
+  pin-canonicals: pin-multiples
+
+FSHOnly: false
+applyExtensionMetadataToRoot: false

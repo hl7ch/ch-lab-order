@@ -9,9 +9,9 @@ Usage: #example
 * type = $sct#122575003 "Urine sample"
 * subject = Reference(Patient/FranzMuster)
 * receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(LabOrder-ServiceRequest-generic)
+* request = Reference(ServiceRequestGeneric)
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
-* container.identifier.value = "4e88a-bc987-dd888-12345-urin"
-* container.description = "Uriswab™ : Urine Collection System"
+* container.identifier.value = "UDI-DI 805938689URINECOEM"
+* container.description = "Urine Monovette®"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"

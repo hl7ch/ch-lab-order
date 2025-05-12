@@ -11,8 +11,8 @@ Usage: #example
 * type = #document
 * timestamp = "2019-04-01T20:18:41.341+00:00"
 
-* entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-composition-with-sr-and-form"
-* entry[=].resource = 1-tvt-CompositionWithSR_andForm
+* entry[0].fullUrl = "http://example.com/fhir/Composition/1-tvt-CompositionWithSRandForm"
+* entry[=].resource = 1-tvt-CompositionWithSRandForm
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/TobiasTimmermann"
 * entry[=].resource = TobiasTimmermann
@@ -36,8 +36,8 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardTobiasTimmermann"  // entry[10]
-* entry[=].resource = HealthInsuranceCardTobiasTimmermann
+// * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardTobiasTimmermann"  // entry[10]
+// * entry[=].resource = HealthInsuranceCardTobiasTimmermann
 
 * entry[+].fullUrl = "http://example.com/fhir/Condition/ConditionRenalInsufficiency"  // entry[11]
 * entry[=].resource = ConditionRenalInsufficiency
@@ -53,19 +53,19 @@ Usage: #example
 * entry[=].resource = 1-tvt-Questionnaire
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/1-tvt"
 * entry[=].resource = 1-tvt-QuestionnaireResponse
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-0"
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-ServiceRequest-0"
 * entry[=].resource = 1-tvt-ServiceRequest-0
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-1" // entry[14]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-ServiceRequest-1" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-1
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-2" // entry[14]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-ServiceRequest-2" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-2
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-3" // entry[14]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-ServiceRequest-3" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-3
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-4" // entry[14]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-ServiceRequest-4" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-4
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-service-request-5" // entry[14]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/1-tvt-ServiceRequest-5" // entry[14]
 * entry[=].resource = 1-tvt-ServiceRequest-5

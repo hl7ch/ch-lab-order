@@ -20,10 +20,6 @@ Profile for CH LAB-Order Document with Service Request and Form
 
 * [CH LAB-Order-SR](StructureDefinition-ch-lab-order-SR.html)
 Profile for CH LAB-Order Service Request
-* [CH LAB-Order-SR Container](StructureDefinition-ch-lab-order-SR-container.html)
-Profile for CH LAB-Order Service Request Container
-* [CH LAB-Order-SR Single-test](StructureDefinition-ch-lab-order-SR-singletest.html)
-Profile for CH LAB-Order Service Request Single-test
 
 ### Profile for Document Reference
 

@@ -34,3 +34,30 @@ equal one Filler Order equal one Laboratory Service Request."
 * entry[Composition] ^short = "Lab order composition"
 * entry[Composition].resource 1..
 * entry[Composition].resource only ChLabOrderCompositionWithSR
+
+
+// the entries below are not mandatory, but they are useful for the lab order
+// and the lab order document to suppress the informations about slicing mismatches. But there are issues
+// with condition and service request, so they are not included in the profile.
+
+* entry contains Coverage 0..*
+* entry[Coverage] ^short = "Health insurance card"
+* entry[Coverage].resource 0..1
+* entry[Coverage].resource only CHCoreCoverage
+
+/* 
+* entry contains Specimen 0..*
+* entry[Specimen] ^short = "CH Lab-Order Specimen"
+* entry[Specimen].resource 0..1
+* entry[Specimen].resource only Specimen
+
+* entry contains Condition 0..*
+* entry[Condition] ^short = "Condition"
+* entry[Condition].resource 0..1
+* entry[Condition].resource only CHCoreCondition
+
+* entry contains ServiceRequest 0..*
+* entry[ServiceRequest] ^short = "ServiceRequest"
+* entry[ServiceRequest].resource 0..1
+* entry[ServiceRequest].resource only ChLabOrderSR
+*/

@@ -4,7 +4,7 @@ Id: ch-lab-order-composition-with-sr-and-form
 Title: "CH LAB-Order Composition with ServiceRequest and Form"
 Description: "Definition for Composition resource in the context of CH LAB-Order with ServiceReauest and Form, parent is ChOrfComposition"
 * . ^short = "CH LAB-Order Composition with ServiceRequest and Form"
-* ^version = "0.9.0"
+* ^version = "3.0.0"
 * ^status = #active
 * ^date = "2019-01-30"
 * ^publisher = "HL7 Switzerland"

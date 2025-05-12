@@ -3,10 +3,40 @@ InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 2-pertussis"
 Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
-* id = "2-pertussis-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "123"
+* status = #active
+* intent = #original-order
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[0].system = $sct
+* code.coding[=].code = #171228002
+* code.coding[=].display = "Respiratory disease screening (procedure)"
+* code.text = "Laboratory Order"
+
+// orderDetails: Additional order information
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code, New order/service"
+
+* priority = #urgent
+* subject = Reference(Patient/EmilKummer)
+* requester = Reference(PeterPrestoGruppenpraxis)
+* reasonCode = $sct#772146005
+* reasonCode.text = "Pertussis suspected (situation)"
+// * insurance = Reference(HealthInsuranceCardEmilKummer)
+
+Instance: 2-pertussis-ServiceRequestCBC
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 2-pertussis CBC"
+Description: "Example for Service Request for Pertussis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order
 
@@ -24,17 +54,54 @@ Usage: #example
 * orderDetail.coding.code = #NW
 * orderDetail.coding.system = $v2-0119
 * orderDetail.coding.display = "New order/service"
-* orderDetail.text = "Order Control code"
+* orderDetail.text = "Order Control code, New order/service"
 
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
 * reasonCode = $sct#772146005
 * reasonCode.text = "Pertussis suspected (situation)"
-// * reasonReference = Reference(Observation/Cough)
-* insurance = Reference(HealthInsuranceCardEmilKummer)
-* specimen[+] = Reference(Specimen/Throat-swab-2-pertussis)
+// * insurance = Reference(HealthInsuranceCardEmilKummer)
+// * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
+// * specimen[+] = Reference(Specimen/Serum-2-pertussis)
+
+Instance: 2-pertussis-ServiceRequestCRP
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 2-pertussis CRP"
+Description: "Example for Service Request for Pertussis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "123"
+* basedOn = Reference(2-pertussis-ServiceRequest)
+* status = #active
+* intent = #original-order
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[0].system = $loinc
+* code.coding[=].code = #58410-2
+* code.coding[=].display = "CBC panel - Blood by Automated count"
+* code.text = "Laboratory Order"
+* code.coding[+].system = $loinc
+* code.coding[=].code = #1988-5 
+* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+
+// orderDetails: Additional order information
+// * orderDetail = $v2-0119#NW "New order/service"
+* orderDetail.coding.code = #NW
+* orderDetail.coding.system = $v2-0119
+* orderDetail.coding.display = "New order/service"
+* orderDetail.text = "Order Control code, New order/service"
+
+* priority = #urgent
+* subject = Reference(Patient/EmilKummer)
+* requester = Reference(PeterPrestoGruppenpraxis)
+* reasonCode = $sct#772146005
+* reasonCode.text = "Pertussis suspected (situation)"
+// * insurance = Reference(HealthInsuranceCardEmilKummer)
+// * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
+// * specimen[+] = Reference(Specimen/Blood-2-pertussis)
 * specimen[+] = Reference(Specimen/Serum-2-pertussis)
 
 
@@ -44,7 +111,7 @@ Title: "Patient Emil Kummer"
 Description: "CH-Core-Patient, refers to 2-pertussis"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: EmilKummer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111112\n      </p><p><b>name</b>: Emil Kummer\n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: May 05, 2014\n      </p><p><b>maritalStatus</b>: ledig \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: EmilKummer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400004\n      </p><p><b>name</b>: Emil Kummer\n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: May 05, 2014\n      </p><p><b>maritalStatus</b>: ledig \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Paris"
 * extension[=].valueAddress.country = "Frankreich"
@@ -53,12 +120,12 @@ Usage: #example
 * extension[=].valueAddress.state = "BE"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1041 "Roman Catholic Church"
-* identifier[0].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier[=].value = "012/08.111112"
-* identifier[+].type = $v2-0203#MR
-* identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier[=].value = "012/08.111112"
+// * identifier[0].type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400004"
+// * identifier[+].type = $v2-0203#MR
+// * identifier[=].system = "urn:oid:2.16.756.5.30.999999.1"
+// * identifier[=].value = "012/08.111112"
 * name.family = "Kummer"
 * name.given = "Emil"
 * gender = #male
@@ -83,8 +150,8 @@ Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601022050702"
-* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123303"
+//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+//* identifier[ZSR].value = "A123303"
 * name.use = #official
 * name.family = "Presto"
 * name.given = "Peter"
@@ -98,24 +165,26 @@ Usage: #example
 * telecom[=].value = "peter.presto@arztpraxis.ch"
 * telecom[=].use = #work
 
+/*
 Instance: HealthInsuranceCardEmilKummer
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Emil Kummer"
 Description: "Example for Insurance"
 Usage: #example
 * id = "health-insurance-card-emil-kummer"
 * identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780-1"
+* identifier.system = "http://example.org/insurer/123456789/member"
+* identifier.value = "80756011110123400004"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "According to KVG"
 * subscriber = Reference(Patient/EmilKummer)
 * beneficiary = Reference(Patient/EmilKummer)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
+*/
 
-Instance: Throat-swab-2-pertussis
+Instance: ThroatSwab-2-pertussis
 InstanceOf: Specimen
 Title: "Throat Swab"
 Description: "Example for Specimen of Throat Swab"

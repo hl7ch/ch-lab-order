@@ -33,6 +33,7 @@ Usage: #example
 // * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
 * section[orderReferral].text.status = #generated
 * section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Laboratory Order with Service Request 2-pertussis\n </div>"
-// * section[orderReferral].entry[Questionnaire] = Reference(2-pertussis-Questionnaire)
-// * section[orderReferral].entry[QuestionnaireResponse] = Reference(2-pertussis-QuestionnaireResponse)
-* section[orderReferral].entry[ServiceRequest] = Reference(2-pertussis-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(2-pertussis-ServiceRequest)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(2-pertussis-ServiceRequestCBC)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(2-pertussis-ServiceRequestCRP)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(2-pertussis-ServiceRequestAddTest)

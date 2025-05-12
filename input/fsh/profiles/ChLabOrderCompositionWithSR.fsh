@@ -4,7 +4,7 @@ Id: ch-lab-order-composition-with-sr
 Title: "CH LAB-Order Composition with Service Request"
 Description: "Definition for Composition resource in the context of CH LAB-Order with Service Request, parent is CHCoreComposition"
 * . ^short = "CH LAB-Order Composition with ServiceRequest"
-* ^version = "0.9.0"
+* ^version = "3.0.0"
 * ^status = #active
 * ^date = "2019-01-30"
 * ^publisher = "HL7 Switzerland"
@@ -32,7 +32,7 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 // ---------- Composition.section.entry:ServiceRequest ----------
 
 * section MS
-* section ^slicing.discriminator.type = #pattern
+* section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
 
@@ -52,7 +52,7 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 * section[orderReferral].entry ^slicing.rules = #open
  
 * section[orderReferral].entry contains ServiceRequest 1..* MS
-* section[orderReferral].entry[ServiceRequest] only Reference(ChLabOrderSRSingletest or ChLabOrderSRContainer)
+* section[orderReferral].entry[ServiceRequest] only Reference(ChLabOrderSR)
 * section[orderReferral].entry[ServiceRequest] ^short = "ServiceRequest"
 * section[orderReferral].entry[ServiceRequest].reference 1.. MS
 // ---------- Composition.section.entry:DocumentReference ----------
