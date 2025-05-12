@@ -19,6 +19,9 @@ There are multiple different potential matches for the url 'http://terminology.h
 # No OIDs at the moment 
 This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
+# Namesystem with private ID's: PHARMACODE of Index Database
+A definition for CodeSystem 'urn:oid:2.16.756.5.30.2.6' could not be found, so the code cannot be validated 
+
 # Reference to draft CodeSystem 
 Reference to draft CodeSystem%
 
