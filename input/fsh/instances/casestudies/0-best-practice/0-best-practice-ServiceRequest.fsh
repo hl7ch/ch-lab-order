@@ -307,7 +307,6 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item	
-// * category = $sct#439401001 "diagnosis"
 * severity = $sct#6736007 "Moderate (severity modifier)"
 * code = $sct#368009 "Heart valve disorder"
 * bodySite = $sct#40768004 "Left thorax"
@@ -325,8 +324,7 @@ Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category = $condition-category#problem-list-item	
-// * category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item
 * severity = $sct#24484000 "Severe (severity modifier) (qualifier value)"
 * code = $sct#446980008 "Open fracture of tibial plateau (disorder)"
 * bodySite = $sct#719496004
@@ -361,7 +359,7 @@ Usage: #example
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "A123456781"
 * status = #active
-* type = $coverage-type#1 "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/BirgitBlum)
 * beneficiary = Reference(Patient/BirgitBlum)
 * relationship.coding.code = #self

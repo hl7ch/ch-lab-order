@@ -150,7 +150,7 @@ Usage: #example
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400005"
 * status = #active
-* type = $coverage-type#1 "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/MarinaRubella)
 * beneficiary = Reference(Patient/MarinaRubella)
 * period.end = "2024-12-31"

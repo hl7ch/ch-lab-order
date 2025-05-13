@@ -176,7 +176,7 @@ Usage: #example
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "80756011110123400004"
 * status = #active
-* type = $coverage-type#1 "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/EmilKummer)
 * beneficiary = Reference(Patient/EmilKummer)
 * period.end = "2024-12-31"

@@ -33,10 +33,12 @@ Alias: $rejection-criteria            = http://terminology.hl7.org/CodeSystem/re
 // Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $substance-category            = http://terminology.hl7.org/CodeSystem/substance-category 
 Alias: $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
-// Alias: $coverage-type                 = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype // must by a CS!
-Alias: $coverage-type                 = http://http://fhir.ch/ig/ch-term/ValueSet/mainguarantor
+
+// Kostenträger
+Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-Term 
+// Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/mainguarantor  // from CH-Term
 // Alias: $coverage-type                 = http://fhir.ch/ig/ch-orf/ValueSet/ch-orf-vs-coveragetype
-Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype
+Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype  // from CH-ORF
 Alias: $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 // Alias: $observation-triggered-by-type = http://hl7.org/fhir/observation-triggeredbytype

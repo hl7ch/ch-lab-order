@@ -523,7 +523,7 @@ Usage: #inline
 
 // ---- consent item[5]
 * item[+].linkId = "consent"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-orf-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
 * item[=].type = #group
 * item[=].item[0].linkId = "consent.treatment"
@@ -541,7 +541,7 @@ Usage: #inline
 
 // ---- coverage item[6]
 * item[+].linkId = "coverage"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#insurance"
 * item[=].text = "Kostenträger"
 * item[=].type = #group
 * item[=].item[0].linkId = "coverage.uvg"

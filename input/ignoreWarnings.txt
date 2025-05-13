@@ -22,7 +22,9 @@ This resource could usefully have an OID assigned (OIDs are easy to assign - see
 # Reference to draft CodeSystem 
 Reference to draft CodeSystem%
 
-# External ValuSets
+# External private ValuSets PHARMACODE
+A definition for CodeSystem 'urn:oid:2.16.756.5.30.2.6' could not be found, so the code cannot be validated
+URL value 'urn:oid:2.16.756.5.30.2.6' does not resolve
 
 # Using old versions
 The ImplementationGuide uses package hl7.terminology#5.1.0 released on 2023-02-25, but the most recent appropriate version is 6.2.0. This reference is getting old and the more recent version should be considered
