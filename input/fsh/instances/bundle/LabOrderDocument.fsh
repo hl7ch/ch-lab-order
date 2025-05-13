@@ -172,7 +172,7 @@ Usage: #example
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.system = "http://example.org/placer-system/req-nr"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -215,7 +215,7 @@ Usage: #example
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.system = "http://example.org/placer-system/req-nr"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -256,7 +256,7 @@ Usage: #example
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.system = "http://example.org/placer-system/req-nr"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -298,7 +298,7 @@ Usage: #example
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.system = "http://example.org/placer-system/req-nr"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -337,7 +337,7 @@ Usage: #example
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.system = "http://example.org/placer-system/req-nr"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order
@@ -376,7 +376,7 @@ Usage: #example
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
+* requisition.system = "http://example.org/placer-system/req-nr"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order

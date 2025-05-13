@@ -523,7 +523,7 @@ Usage: #example
 
 // ---- consent item[5]
 * item[+].linkId = "consent"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-SR#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
 * item[=].type = #group
 * item[=].item[0].linkId = "consent.treatment"
@@ -559,7 +559,7 @@ Usage: #example
 
 // --- previousResult item[7] ----------
 * item[+].linkId = "previousResult"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-SR#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
 * item[=].type = #group
 * item[=].item.linkId = "previousResult.result"
@@ -575,7 +575,7 @@ Usage: #example
 * item[=].text = "Labor Sparten"
 * item[=].type = #group
 * item[=].item.linkId = "labSpecialties.pathology"
-* item[=].item.definition = "27898-6"
+* item[=].item.code = $loinc#27898-6
 * item[=].item.text = "Pathology"
 * item[=].item.type = #boolean
 * item[=].item.item.linkId = "labSpecialties.pathology.panels"
@@ -585,14 +585,14 @@ Usage: #example
 * item[=].item.item.enableWhen.operator = #=
 * item[=].item.item.enableWhen.answerBoolean = true
 * item[=].item.item.item[0].linkId = "labSpecialties.pathology.panels.Autopsy"
-* item[=].item.item.item[=].definition = "18743-5"
+* item[=].item.item.item[=].code = $loinc#18743-5
 * item[=].item.item.item[=].text = "Autopsy report"
 * item[=].item.item.item[=].type = #boolean
 * item[=].item.item.item[+].linkId = "labSpecialties.pathology.panels.PathologyStudy"
-* item[=].item.item.item[=].definition = "11526-1"
+* item[=].item.item.item[=].code = $loinc#11526-1
 * item[=].item.item.item[=].text = "Pathology Study"
 * item[=].item.item.item[=].type = #boolean
 * item[=].item.item.item[+].linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-* item[=].item.item.item[=].definition = "11529-5"
+* item[=].item.item.item[=].code = $loinc#11529-5
 * item[=].item.item.item[=].text = "Surgical pathology study"
 * item[=].item.item.item[=].type = #boolean

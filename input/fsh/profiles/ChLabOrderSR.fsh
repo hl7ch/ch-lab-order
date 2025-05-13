@@ -50,9 +50,9 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 
 //------- insurance -------
 
-// * insurance 0..1 MS
-// * insurance ^short = "Insurance information"
-// * insurance only Reference(ChOrfCoverage)
+* insurance 0..1 MS
+* insurance ^short = "Insurance information"
+* insurance only Reference(ChOrfCoverage)
   //* ^short = "Insurance information"
   //* ^definition = "The insurance information of the patient. The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
   //* ^comment = "The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
@@ -64,11 +64,11 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
   //* ^binding.valueSet.reference = "http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype"
 
 //------- supportingInfo -------
-/*
+
 * supportingInfo 0..* MS
 * supportingInfo ^short = "Supporting information"
-* supportingInfo only Reference(ChLabOrderDiagnosisCondition or ChLabOrderMedication or ChOrfDocumentReference or ChOrfServiceRequest)
-*/
+* supportingInfo only Reference(ChLabOrderDiagnosisCondition or ChLabOrderMedication or MedicationStatement or ChOrfDocumentReference or ChLabOrderSR or ChOrfServiceRequest)
+
 // additional information in supportingInfo when ch-lab-report and ch-rad-order is in the dependencyies
 //* supportingInfo only Reference(ChLabOrderDiagnosisCondition or ChLabOrderMedication or ChOrfDocumentReference or ChLabDiagnosticReport ChRadOrderImagingStudy or ChOrfServiceRequest)
 

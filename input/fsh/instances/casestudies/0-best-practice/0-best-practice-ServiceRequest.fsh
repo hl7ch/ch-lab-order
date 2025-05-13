@@ -229,7 +229,7 @@ Usage: #example
 /*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
 
 * code.coding[GTIN] = urn:oid:2.51.1.1#7680151590587 "LIQUEMIN Inj Lös 25000 IE/5ml"
-* code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#4937146 "LIQUEMIN Inj Lös 25000 IE/5ml"
+// * code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#4937146 "LIQUEMIN Inj Lös 25000 IE/5ml"
 * code.coding[ATC] = $atc#B01AB01 "Heparin"
 * code.text = "LIQUEMIN Inj Lös 25000 IE/5ml"
 

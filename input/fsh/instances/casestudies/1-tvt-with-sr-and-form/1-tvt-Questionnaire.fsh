@@ -523,7 +523,7 @@ Usage: #inline
 
 // ---- consent item[5]
 * item[+].linkId = "consent"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-orf-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-SR#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
 * item[=].type = #group
 * item[=].item[0].linkId = "consent.treatment"
@@ -559,7 +559,7 @@ Usage: #inline
 
 // --- previousResult item[7] ----------
 * item[+].linkId = "previousResult"
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-SR#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
 * item[=].type = #group
 * item[=].item.linkId = "previousResult.result"
