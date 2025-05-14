@@ -47,4 +47,4 @@ Usage: #example
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $loinc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 120 'mn' "minutes"
-* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/example-lab-procedure-vitamind-serum"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-vitamin-d-serum"
