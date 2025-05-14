@@ -1,9 +1,8 @@
 Instance: HealthInsuranceCardFranzMuster
 InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Franz Muster"
-Description: "Example for Insurance"
+Description: "Example for Insurance Card"
 Usage: #example
-* identifier.type = $coverage-identifiertype#VeKa
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400000"
 * status = #active
@@ -15,10 +14,10 @@ Usage: #example
 * payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "12345678900"
 
-Instance: HealthInsuranceCardHansGuggindieluft
+Instance: HealthInsuranceCardHansGuggindieluft  // Is Template
 InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard HansGuggindieluft"
-Description: "Example for Insurance"
+Description: "Example for Insurance Card"
 Usage: #example
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400009"
