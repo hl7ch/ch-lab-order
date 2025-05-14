@@ -14,7 +14,7 @@ Usage: #example
 // * basedOn[+] = Reference(248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * requisition.value = "ReqID-123456789"
 * status = #active
 * intent = #original-order

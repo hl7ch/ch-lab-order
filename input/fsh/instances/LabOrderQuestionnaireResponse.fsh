@@ -19,7 +19,7 @@ Usage: #example
 * item[=].item[=].answer.valueString = "123"
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
-* item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30"
+* item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * item[=].item[+].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
 * item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"

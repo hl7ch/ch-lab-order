@@ -17,7 +17,7 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
 
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceRenalInsufficiency"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceRenalInsufficiency"
 * identifier.use = #official
 * identifier.value = "RenalInsufficiendyLabPanel"
 * version = "current"
