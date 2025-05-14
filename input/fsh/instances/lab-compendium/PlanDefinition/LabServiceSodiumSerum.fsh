@@ -54,7 +54,6 @@ Usage: #example
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code.coding[0] = http://example.org/questdiagnostics.com/#733 "Sodium, Serum"
-* action.code.coding[+] = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* action.code.coding = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"
