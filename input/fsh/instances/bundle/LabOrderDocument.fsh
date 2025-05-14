@@ -114,8 +114,8 @@ Description: "Practitioner, works in GruppenpraxisOlten"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
-//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-//* identifier[ZSR].value = "A123309"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Meier"
 * name.given = "Esther"
@@ -167,7 +167,7 @@ Usage: #example
 // // * id ="248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/RenalInsuffiencyLabServic"
 
 // ---- grouperID, must be repeated in all dependent SR ----
@@ -207,7 +207,7 @@ Usage: #example
 // // * id ="lab-order-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 
 // Reference to superior order
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabService-eGFR"
@@ -249,7 +249,7 @@ Usage: #example
 // * id ="service-request-creatinine-serum-egfr"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123987"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceCreatinineSerum"
 
 * basedOn = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)
@@ -292,7 +292,7 @@ Usage: #example
 // * id ="lab-order-urine-albumin-creatinine-ratio"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/uACR-Service"   // PlanDefinition
 // Reference to superior order
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
@@ -332,7 +332,7 @@ Usage: #example
 // * id ="lab-order-urine-albumin"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
@@ -371,7 +371,7 @@ Usage: #example
 // * id ="lab-order-urine-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123987"
+* identifier[placerOrderIdentifier].value = "Y274589"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/procedure-creatinine-clearance"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----

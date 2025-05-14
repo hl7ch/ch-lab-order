@@ -12,7 +12,7 @@ Usage: #example
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
@@ -240,7 +240,7 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondance"
 * item[=].item[=].text = "Korrespondenssprache"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode"
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode|3.1"
 
 // ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
 * item[=].item[+].linkId = "patient.contactperson"

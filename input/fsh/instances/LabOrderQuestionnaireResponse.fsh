@@ -170,7 +170,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueString = "7601000034321"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.zsr"
 * item[=].item[=].item[=].item[=].text = "ZSR"
-* item[=].item[=].item[=].item[=].answer.valueString = "A123309"
+* item[=].item[=].item[=].item[=].answer.valueString = "L248519"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].item[=].answer.valueString = "033 333 22 11"

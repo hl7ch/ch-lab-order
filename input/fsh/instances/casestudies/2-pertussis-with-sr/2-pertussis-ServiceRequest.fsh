@@ -5,7 +5,7 @@ Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 
@@ -35,7 +35,7 @@ Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order
@@ -73,7 +73,7 @@ Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order

@@ -15,7 +15,9 @@ Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-Confidentiality            = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
+// Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
+Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/media-type
+Alias: $v3-NullFlavor                 = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
 Alias: $catalogType                   = http://terminology.hl7.org/CodeSystem/catalogType
@@ -54,7 +56,7 @@ Alias: $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech
 Alias: $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias: $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
-Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode
+Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode|3.1
 
 //---- Practitioner ----
 Alias: $hcSpecialisation              = http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcSpecialisation

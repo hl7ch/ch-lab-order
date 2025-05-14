@@ -5,7 +5,7 @@ Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 * priority = #urgent
@@ -27,7 +27,7 @@ Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 * status = #active
 * intent = #original-order
@@ -56,7 +56,7 @@ Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
@@ -87,7 +87,7 @@ Description: "Example for Service Request to exclude excessiv blood lost by frac
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
@@ -113,7 +113,7 @@ Description: "Example for Service Request to exclude excessiv blood lost by frac
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
@@ -135,7 +135,7 @@ Description: "Example for Service Request to exclude excessiv blood lost by frac
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)

@@ -5,7 +5,7 @@ Description: "Example for Service Request for Sepsis Investigation, with reflexe
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequestGrowth)
 
 // * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -41,7 +41,7 @@ Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #active
 * intent = #original-order
