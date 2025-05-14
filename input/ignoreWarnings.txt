@@ -6,7 +6,6 @@ Der Displayname%
 # External CodeSystem, ValueSet, StructureDefinition
 Canonical URL 'https://www.zkidney.com/mdrd-main' does not resolve
 A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
-A definition for CodeSystem 'https://medcodesearch.ch/de/AL/laboratory_analyses' could not be found, so the code cannot be validated # 
 A definition for CodeSystem 'https://testdirectory.questdiagnostics.com/' could not be found, so the code cannot be validated
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/translation'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 4.0.1, 5.2.0
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/translation'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 4.0.1, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/translation' to 'http://hl7.org/fhir/StructureDefinition/translation|5.2.0'
@@ -17,6 +16,7 @@ There are multiple different potential matches for the url 'http://terminology.h
 
 # AL List medcodesearch does unfortunately not resolve
 URL value 'https://medcodesearch.ch/de/AL/laboratory_analyses' does not resolve
+A definition for CodeSystem 'https://medcodesearch.ch/de/AL/laboratory_analyses' could not be found, so the code cannot be validated
 
 # No OIDs at the moment 
 This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
