@@ -1,5 +1,5 @@
 Instance: LabService-eGFR   // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for eGFR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example

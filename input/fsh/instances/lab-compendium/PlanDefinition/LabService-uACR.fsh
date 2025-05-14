@@ -1,5 +1,5 @@
 Instance: LabService-uACR   // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for uACR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example

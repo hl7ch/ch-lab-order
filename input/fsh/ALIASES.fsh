@@ -3,6 +3,11 @@ Alias: $sct                           = http://snomed.info/sct
 Alias: $sctswiss                      = http://snomed.info/sct|http://snomed.info/sct/2011000195101
 Alias: $loinc                         = http://loinc.org
 Alias: $ucum                          = http://unitsofmeasure.org
+
+// Standard country or area codes for statistical use (M49)
+Alias: $m49.htm                       = http://unstats.un.org/unsd/methods/m49/m49.htm
+
+
 Alias: $atc                           = http://www.whocc.no/atc
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v2-0038                       = http://terminology.hl7.org/CodeSystem/v2-0038  // orderStatus

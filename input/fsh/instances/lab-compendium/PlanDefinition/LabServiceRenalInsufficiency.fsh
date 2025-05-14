@@ -1,5 +1,5 @@
 Instance: LabServiceRenalInsufficiency  // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for Renal Insufficiency Assessment Panel"
 Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example

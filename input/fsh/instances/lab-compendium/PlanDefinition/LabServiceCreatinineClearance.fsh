@@ -1,5 +1,5 @@
 Instance: LabServiceCreatinineClearance   // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for Creatinin Clearance Panel"
 Description: "Plan Definition for Creatinine Clearance"
 Usage: #example
