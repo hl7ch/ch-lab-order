@@ -9,7 +9,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "Y274589"
 
 // Reference to superior order
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/eGFR-Service"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabService-eGFR"   // PlanDefinition
 * basedOn[+] = Reference(LabOrderRenalInsufficiencyPanel)
 
 // ---- grouperID, must be repeated in all dependent SR ----

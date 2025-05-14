@@ -748,7 +748,7 @@ Usage: #example
 // ---- E1 Blood sodium test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium" // item[9][0][0][1]
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/sodium-serum"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceSodiumSerum"
 * item[=].item[=].item[=].item[=].text = "Natrium"
 * item[=].item[=].item[=].item[=].code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -951,7 +951,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2069-3 "Chloride [Moles/volume] in Blood"
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/chloride-serum"
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/chloride-serum"
 //* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
 //* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
 

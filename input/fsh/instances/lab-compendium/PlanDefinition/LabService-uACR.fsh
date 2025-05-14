@@ -16,7 +16,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabService-uACR"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabService-uACR"
 * version = "current"
 * name = "RenalInsufficiendyPanelServiceACR"
 * title = "Renal Insufficiendy Panel uACR"

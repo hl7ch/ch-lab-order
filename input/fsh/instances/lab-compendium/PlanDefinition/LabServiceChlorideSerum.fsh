@@ -22,7 +22,7 @@ Usage: #example
 * extension[=].valueString = "No specific limitation for this test"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/RegulatorySummary"
 * extension[=].valueString = "CLIA Law & Regulations apply"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceChlorideSerum"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceChlorideSerum"
 * identifier.use = #official
 * identifier.value = "Cl_serum_test"
 * version = "0.1.0"
@@ -46,10 +46,9 @@ Usage: #example
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 
-* relatedArtifact.type = #documentation
-* relatedArtifact.citation = "Chloride is an essential mineral required by humans that is found mainly in body fluids. It is an important, negatively charged ion in the blood, and a major electrolyte that helps to conduct electrical impulses. Electrolytes including chloride are located in the blood, lymph, and intra- and extra-cellular fluid. Chloride helps to regulate osmolarity by offsetting the positively charged sodium and potassium ions in the serum. It combines with hydrogen to form hydrochloric acid in the digestive tract which breaks down proteins, absorbs metallic minerals, and activates intrinsic factor. Chloride is absorbed both actively and passively in order to help maintain extracellular fluid volume. There is a continuous exchange of chloride and bicarbonate that occurs between the red blood cells and the plasma that controls the pH and excretion of carbon dioxide, a waste product of respiration.[https://traceminerals.com/chloride-the-forgotten-essential-mineral/]
-"
-* relatedArtifact.url = "https://en.wikipedia.org/wiki/Chloride"
+// * relatedArtifact.type = #documentation
+// * relatedArtifact.citation = "Chloride is an essential mineral required by humans that is found mainly in body fluids. It is an important, negatively charged ion in the blood, and a major electrolyte that helps to conduct electrical impulses. Electrolytes including chloride are located in the blood, lymph, and intra- and extra-cellular fluid. Chloride helps to regulate osmolarity by offsetting the positively charged sodium and potassium ions in the serum. It combines with hydrogen to form hydrochloric acid in the digestive tract which breaks down proteins, absorbs metallic minerals, and activates intrinsic factor. Chloride is absorbed both actively and passively in order to help maintain extracellular fluid volume. There is a continuous exchange of chloride and bicarbonate that occurs between the red blood cells and the plasma that controls the pH and excretion of carbon dioxide, a waste product of respiration.[https://traceminerals.com/chloride-the-forgotten-essential-mineral/]"
+// * relatedArtifact.url = "https://en.wikipedia.org/wiki/Chloride"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
