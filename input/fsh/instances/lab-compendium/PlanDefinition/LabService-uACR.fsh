@@ -38,13 +38,6 @@ Usage: #example
 // * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
-// TODO: adapt actions
-// * action.extension[0].extension[0].extension.url = "Material"
-// * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
-// * action.extension[=].extension[=].url = "ExclusiveGroup"
-// * action.extension[=].extension[+].extension.url = "Material"
-// * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-capillary-serum-single-test) "example-specimen-capillary-serum-single-test"
-// * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.extension[=].extension.extension.url = "Material"
 * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/specimenUrineSpot) "Urine Spot"
@@ -54,9 +47,5 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-// * action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
-// * action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-// * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
 * action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
-// * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
 * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
