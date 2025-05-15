@@ -1,41 +1,26 @@
 == Suppressed Messages ==
 
-
-# External CodeSystem, ValueSet, StructureDefinition
+# External CodeSystem, ValueSet, StructureDefinition ✅
 A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
 Canonical URL 'https://www.zkidney.com/mdrd-main' does not resolve
 
-# AL List medcodesearch does unfortunately not resolve. Hopefully the FOPH will develop an API for AL List.
+# AL List medcodesearch does unfortunately not resolve. Hopefully the FOPH will develop an API for AL List. ✅
 URL value 'https://medcodesearch.ch/de/AL/laboratory_analyses' does not resolve
 A definition for CodeSystem 'https://medcodesearch.ch/de/AL/laboratory_analyses' could not be found, so the code cannot be validated
 
-# codes not accepted by publisher; although probably correct
+# codes not accepted by publisher; although probably correct ✅
 None of the codings provided are in the value set 'DocumentEntry.confidentialityCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.confidentialityCode|3.1.1-ci-build), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N)
 None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype#VeKa)
 
-# No OIDs at the moment 
-# This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-
-# Reference to draft CodeSystem 
+# Reference to draft CodeSystem ✅
 Reference to draft CodeSystem%
 URL value 'urn:oid:2.16.756.5.30.999999.1' does not resolve
 
-# BER
-URL value 'urn:oid:2.16.756.5.45' does not resolve
-
-# GLN
-URL value 'urn:oid:2.51.1.3' does not resolve
-
-# External private ValuSets PHARMACODE (branch is not yet merged on master)
+# External private ValuSets PHARMACODE (branch is not yet merged into master) ❌
 A definition for CodeSystem 'urn:oid:2.16.756.5.30.2.6' could not be found, so the code cannot be validated
 URL value 'urn:oid:2.16.756.5.30.2.6' does not resolve
 
-# Using old versions
-# The ImplementationGuide uses package hl7.terminology#5.1.0 released on 2023-02-25, but the most recent appropriate version is 6.2.0. This reference is getting old and the more recent version should be considered
-# The ImplementationGuide uses package ch.fhir.ig.ch-orf#2.0.1 released on 2023-12-28, but the most recent appropriate version is 3.0.0. This reference is getting old and the more recent version should be considered
-# The ImplementationGuide uses package ch.fhir.ig.ch-core#4.0.1 released on 2023-12-28, but the most recent appropriate version is 5.0.0. This reference is getting old and the more recent version should be considered
-
-# MaritalStatus (using ECH)
+# MaritalStatus (using ECH) ✅
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#1)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#5)
