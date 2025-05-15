@@ -12,15 +12,18 @@ This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electroni
 
 There is another use case in which the commissioning laboratory provides the client with a form, similar to how laboratories forms are used to serve clients with paper-based forms. The lab order appears again as a FHIR bundle resource of type 'document'. This situation is implemented here using [CH ORF (R4), Order & Referral by Form - Implementation Guide](http://fhir.ch/ig/ch-orf/index.html) to structure the input of the administrative and clinical data (data provider, contact for order-document, recipient, copy recipient, document type and document class, patient, author, tests, specimen etc). It includes the two resources Questionnaire (form) and QuestionnaireResponse (completed form) in the document in addition to the ServiceRequest resource. CH-ORF (R4) Implementation Guide uses the FHIR Implementation Guide for Structured Data Capture (SDC) for creating user-friendly questionnaires [SDC](https://build.fhir.org/ig/HL7/sdc/index.html) to offer forms with pre-filled fields and selectable ValueSets.
 
+<div markdown="1" class="stu-note">
+
+This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/de/) until September 30th, 2025 midnight.   
+Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+
+[Significant changes, open and closed issues.](changelog.html)
+
+</div>
+
 #### Download
 
 You can download this Implementation Guide in [NPM-format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](https://fhir.ch/ig/ch-lab-order/package.tgz).
-
-<div markdown="1" class="stu-note">
-
-<a href="changelog.html">Significant changes, open and closed issues.</a>
-
-</div>
 
 ### Foundation
 
