@@ -21,7 +21,9 @@ Usage: #example
 // * timingTiming.event.extension.valueExpression.expression = "Now()"
 // * participant.type = #practitioner
 
-// * specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
-// * observationResultRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/urineCreatinine)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/uACR)
+* specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observationAlbuminUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observationCreatinineUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-uACR)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observationCreatinineSerum)
