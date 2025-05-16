@@ -90,6 +90,9 @@ After the laboratory order has been received and processed, the situation may ar
 
 * ServiceRequest.category: ProposalForAdditionalExam
 
+### Use Case 5: Building laboratory order panels. These panels instantiate Plandefinition from Order Catalog.
 
-### Use Case 5: Building Laboratory order panels which instantiates Plandefinition from Order Catalog
+{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 1: Task" width="75%" %}
 
+Clients and laboratories prefer panels that contain several individual tests or are nested with other panels. Laboratories provide these panels according to their offerings. This example deals with clarifying and assessing chronic renal insufficiency. The order consists of two suborders: eGFR (estimated glomerular filtration rate) and uACR (urine albumin-to-creatinine ratio). The latter, in turn, contains two suborders: albumin and creatinine concentrations in urine.
+Plan and activity definitions are stored in the laboratory compendium and can be selected by the client.

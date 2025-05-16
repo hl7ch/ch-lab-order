@@ -1,6 +1,6 @@
 Instance: LabOrder-uACR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Albumin/Creatinine Ratio in Urine"
+Title: "CH LAB-Order SR Albumin/Creatinine Ratio in Urine"
 Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
 Usage: #example
 * id = "lab-order-uACR"

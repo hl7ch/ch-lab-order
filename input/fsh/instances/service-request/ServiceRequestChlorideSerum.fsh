@@ -1,6 +1,6 @@
 Instance: ServiceRequestChlorideSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order for Chloride"
+Title: "CH LAB-Order SR Chloride"
 Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "service-request-chloride-serum"

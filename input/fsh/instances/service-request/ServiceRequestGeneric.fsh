@@ -1,7 +1,7 @@
 Instance: ServiceRequestGeneric
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for some single test"
-Description: "Hemoglobin [Moles/volume] in Blood"
+Title: "CH LAB-Order SR for some single test"
+Description: "Service Request of a single test, e.g. Hemoglobin [Moles/volume] in Blood"
 Usage: #example
 * id = "service-request-generic"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

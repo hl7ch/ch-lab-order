@@ -1,6 +1,6 @@
 Instance: ServiceRequestSodiumSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Sodium"
+Title: "CH LAB-Order SR Sodium"
 Description: "Service Request for Sodium [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "service-request-sodium-serum"

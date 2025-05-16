@@ -1,6 +1,6 @@
 Instance: LabOrder-eGFR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order eGFR CKD-EPI 2021"
+Title: "CH LAB-Order SR eGFR CKD-EPI 2021"
 Description: "Service Request for serum creatinine and calculation of eGFR"
 Usage: #example
 * id = "lab-order-eGFR"

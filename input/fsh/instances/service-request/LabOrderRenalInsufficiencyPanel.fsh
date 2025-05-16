@@ -1,6 +1,6 @@
 Instance: LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order Renal Insufficiency Panel"
+Title: "CH LAB-Order SR Renal Insufficiency Panel"
 Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #example
 * id = "panel-renal-insufficiency-order"

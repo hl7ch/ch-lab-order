@@ -1,6 +1,6 @@
 Instance: ServiceRequestCreatinineUrine24h
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order ServiceRequest for Creatinine in 24h Urine"
+Title: "CH LAB-Order SR for Creatinine in 24h Urine"
 Description: "Creatinine [Moles/volume] in Urine Order"
 Usage: #example
 * id = "service-request-creatinine-urine-24h"

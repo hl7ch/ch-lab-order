@@ -1,7 +1,7 @@
 Instance: ServiceRequestPanelExample
 InstanceOf: ChLabOrderSR
-Title: "Service Request as container for multiple Service Requests"
-Description: "CH LAB-ServiceRequest for Creatinine Clearance and Electrolytes in Serum"
+Title: "CH LAB-Order SR as container for multiple Service Requests"
+Description: "ServiceRequest for Creatinine Clearance and Electrolytes in Serum"
 Usage: #example
 * id = "service-request-panel-example"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
