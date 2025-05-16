@@ -89,3 +89,7 @@ Example order document with ServiceRequest and Form: [CH LAB-Order 5-biol-monit-
 After the laboratory order has been received and processed, the situation may arise in which the laboratory physician wishes to make suggestions for additional or alternative examinations to the author of the order. He can use the received order document for this purpose, exchange the personal data of the sender and receiver through his information system, and send it back with the suggestions for further or alternative laboratory examinations.
 
 * ServiceRequest.category: ProposalForAdditionalExam
+
+
+### Use Case 5: Building Laboratory order panels which instantiates Plandefinition from Order Catalog
+

@@ -1,0 +1,48 @@
+@startuml RenalInsufficiencyPanel
+
+skinparam rectangle<<resource>> {
+  roundCorner 12
+  BackgroundColor Blue
+  BorderColor Black
+  ArrowColor Black
+  FontName Arial
+  FontSize 16
+  FontStyle Bold
+}
+
+rectangle "[[ ServiceRequest-panel-renal-insufficiency-order.html Renal Insufficiency Panel ]] " as RIP <<$bProcess>><<resource>> #Yellow
+rectangle "[[ ServiceRequest-lab-order-eGFR.html LAB-Order eGFR CKD-EPI 2021 ]] " as SRHBHT <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-lab-order-uACR.html LAB-Order Albumin/Creatinine Ratio in Urine ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-lab-order-urine-albumin.html LAB-Order Albumin ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html LAB-Order Creatinine in Urine ]] " as SRG <<$bProcess>><<resource>> #LightYellow
+
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportHbHt.html 4-sepsis DiagnosticReport Hb and Ht ]]" as DRHBHT <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCBCDiff.html 4-sepsis DiagnosticReport CBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport CRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
+
+rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+
+rectangle "[[ Task-SepsisWorkup.html Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
+rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nBactec Plus 4-sepsis]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis]]" as SS <<$bProcess>><<resource>> #LightCoral
+
+SR <-down- SRG : [LAB-3]: basedOn
+SR <-down- SRHBHT : [LAB-3]: basedOn
+SR <-down- SRDIFF : [LAB-3]: basedOn
+SR <-down- SRCRP : [LAB-3]: basedOn
+SRG <-down- DRG : [LAB-4]: basedOn
+SRHBHT <-down- DRHBHT : [LAB-4]: basedOn
+SRDIFF <-down- DRDIFF : [LAB-4]: basedOn
+SRCRP <-down- DRCRP : [LAB-4]: basedOn
+DRG -down-> OMA : [LAB-5]: result
+DRG -down-> OMANA : [LAB-5]: result
+
+SR <-up- T1 : [LAB-1]: basedOn
+T1 <-left- BBS : [LAB-2]: input
+T1 <-left- BS : [LAB-2]: input
+T1 <-left- SS : [LAB-2]: input
+
+@enduml

@@ -22,7 +22,7 @@ Usage: #example
 * identifier.value = "RenalInsufficiendyLabPanel"
 * version = "current"
 * name = "RenalInsufficiendyLabPanel"
-* title = "Renal Insufficiendy Lab Panel"
+* title = "Renal Insufficiency Lab Panel"
 
 * type = $laboratory-service-definition-type#panel
 * status = #draft
