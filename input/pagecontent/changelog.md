@@ -3,6 +3,7 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 ### Changes
+* Add namingsystem PHARMACODE (private ID)
 * Add example for Renal Insufficiency as Panel with PlanDefinition and ActionDefinition
 * [Issue#332](https://github.com/hl7ch/ch-lab-order/issues/332  Instance 3-gyn-ServiceRequest: split each lab test into a separate Service Request
 * [Issue#329](https://github.com/hl7ch/ch-lab-order/issues/329) ObservationDefinition Hemoglobin blood -> fix erroneous entries
