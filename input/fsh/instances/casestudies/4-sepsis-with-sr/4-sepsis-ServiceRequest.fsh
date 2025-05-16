@@ -5,7 +5,7 @@ Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 // * category = $sct#721963009 "Order (record artifact)"
 
 * status = #active
@@ -30,7 +30,7 @@ Description: "Example for Service Request for Sepsis Investigation, Hemoglobin a
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
@@ -55,7 +55,7 @@ Description: "Example for Service Request for Sepsis Investigation, CBC with Dif
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
@@ -80,7 +80,7 @@ Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
 // * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -112,7 +112,7 @@ Description: "Example for Service Request for Sepsis Investigation, C reactive p
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * code.coding[+].code = #1988-5 
 * code.coding[=].system = $loinc
@@ -169,7 +169,7 @@ Usage: #example
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400006"
 * status = #active
-* type = $coverage-type#1 "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/SaraSpeckmann)
 * beneficiary = Reference(Patient/SaraSpeckmann)
 * period.end = "2024-12-31"

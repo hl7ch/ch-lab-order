@@ -5,7 +5,7 @@ Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 * priority = #urgent
@@ -27,7 +27,7 @@ Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 * status = #active
 * intent = #original-order
@@ -56,7 +56,7 @@ Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
@@ -87,7 +87,7 @@ Description: "Example for Service Request to exclude excessiv blood lost by frac
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
@@ -113,7 +113,7 @@ Description: "Example for Service Request to exclude excessiv blood lost by frac
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
@@ -135,7 +135,7 @@ Description: "Example for Service Request to exclude excessiv blood lost by frac
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
 // * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
@@ -229,7 +229,7 @@ Usage: #example
 /*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
 
 * code.coding[GTIN] = urn:oid:2.51.1.1#7680151590587 "LIQUEMIN Inj Lös 25000 IE/5ml"
-* code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#4937146 "LIQUEMIN Inj Lös 25000 IE/5ml"
+// * code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#4937146 "LIQUEMIN Inj Lös 25000 IE/5ml"
 * code.coding[ATC] = $atc#B01AB01 "Heparin"
 * code.text = "LIQUEMIN Inj Lös 25000 IE/5ml"
 
@@ -307,7 +307,6 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item	
-// * category = $sct#439401001 "diagnosis"
 * severity = $sct#6736007 "Moderate (severity modifier)"
 * code = $sct#368009 "Heart valve disorder"
 * bodySite = $sct#40768004 "Left thorax"
@@ -325,8 +324,7 @@ Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category = $condition-category#problem-list-item	
-// * category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item
 * severity = $sct#24484000 "Severe (severity modifier) (qualifier value)"
 * code = $sct#446980008 "Open fracture of tibial plateau (disorder)"
 * bodySite = $sct#719496004
@@ -361,7 +359,7 @@ Usage: #example
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "A123456781"
 * status = #active
-* type = $coverage-type#1 "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/BirgitBlum)
 * beneficiary = Reference(Patient/BirgitBlum)
 * relationship.coding.code = #self

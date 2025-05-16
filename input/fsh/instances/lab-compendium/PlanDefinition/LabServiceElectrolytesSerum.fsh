@@ -22,7 +22,7 @@ Usage: #example
 * extension[=].valueString = "Set up: Mon-Sat (Day shift or Night shift), Sun (Day shift); Report available: 1 day"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LimitationSummary"
 * extension[=].valueString = "No specific limitation for this panel"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceElectrolytesSerum"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceElectrolytesSerum"
 * version = "0.1.0"
 * name = "BloodElectrolytePanel"
 * title = "Blood electrolyte panel (serum or plasma)"

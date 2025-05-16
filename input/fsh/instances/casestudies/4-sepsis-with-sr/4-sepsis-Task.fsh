@@ -12,7 +12,7 @@ Usage: #example
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
 * basedOn.display = "Sepsis Workup"
 * groupIdentifier.use = #official
-* groupIdentifier.system = "urn:oid:2.16.756.5.40"  //  requisition.system
+* groupIdentifier.system = "http://example.org/placer-system/req-nr"  //  requisition.system
 * groupIdentifier.value = "ReqID-123456789123"      //  requisition.value
 * status = #requested
 * businessStatus.text = "waiting for specimen"

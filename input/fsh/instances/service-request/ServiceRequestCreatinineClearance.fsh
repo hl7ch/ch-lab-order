@@ -6,8 +6,8 @@ Usage: #example
 * id = "lab-order-creatinine-clearance"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance"
+* identifier[placerOrderIdentifier].value = "Y274589"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceCreatinineClearance"
 
 // the service request is part of panel ServiceRequestPanelExample
 * basedOn[0] = Reference(ServiceRequestPanelExample)
@@ -85,8 +85,6 @@ Usage: #example
 * identifier.value = "12345"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-// * category.coding[0] = $sct#55607006 "Problem"
-// * category.coding[+] = $condition-category#problem-list-item
 * category = $condition-category#problem-list-item
 * severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"

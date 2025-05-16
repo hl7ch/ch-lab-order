@@ -1,5 +1,5 @@
 Instance: LabService-eGFR   // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for eGFR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example
@@ -16,7 +16,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabService-eGFR"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabService-eGFR"
 * version = "current"
 * name = "RenalInsufficiendyPanelServiceGFR"
 * title = "Renal Insufficiendy Panel: Service eGFR"
@@ -37,9 +37,7 @@ Usage: #example
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#269858003 "Biochemical evaluation of blood urea/renal function (procedure)"
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
-// * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
-// TODO: adapt actions
 * action.extension[0].extension[0].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "SpecimenDefinition Single Test Venous blood"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
@@ -47,17 +45,9 @@ Usage: #example
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "SpecimenDefinition Single Test Capillary blood"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-// * action.extension[+].extension.extension.url = "Material"
-// * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
-// * action.extension[=].extension.url = "ExclusiveGroup"
-// * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-// * action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
-// * action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-// * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
 * action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
 * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-// * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"

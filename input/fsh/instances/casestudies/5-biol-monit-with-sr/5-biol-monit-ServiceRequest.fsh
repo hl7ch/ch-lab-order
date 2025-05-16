@@ -5,7 +5,7 @@ Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
@@ -58,7 +58,7 @@ Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(5-biol-monit-ServiceRequest)
 * status = #active
 * intent = #original-order
@@ -81,7 +81,7 @@ Description: "Example for Service Request for toxicological Monitoring"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(5-biol-monit-ServiceRequest)
 * status = #active
 * intent = #original-order
@@ -146,8 +146,8 @@ Description: "Specialist for Occupational Medicine, works at SUVA, refers to 1-t
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
-//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-//* identifier[ZSR].value = "A123307"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Porcellini"
 * name.given = "Paulo"
@@ -199,8 +199,8 @@ Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601000050717"
-//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-//* identifier[ZSR].value = "A123301"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Worksdoc"
 * name.given = "Woody"

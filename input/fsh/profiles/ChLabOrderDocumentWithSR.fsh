@@ -24,7 +24,7 @@ equal one Filler Order equal one Laboratory Service Request."
 * timestamp ^short = "The document's creation date and time"
 * total 0..0
 * link 0..0
-* entry MS
+// * entry MS
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open

@@ -9,7 +9,7 @@ Description: "Medication in Lab Order"
 * code.coding ^slicing.rules = #open
 * code.coding ^short = "Code of the medication"
 * code.coding contains 
-    PHARMACODE 0..* and
+    // PHARMACODE 0..* and
     GTIN 0..* and
     ATC 0..*
 
@@ -18,14 +18,13 @@ PHARMACODE seems to still been used:
 look at:
 https://blog.hcisolutions.ch/gesundheitsindustrie/pharmacode-und-gtin-warum-braucht-es-beides
 
-*/
-
 * code.coding[PHARMACODE] ^short = "Numeric identification key for Swiss products"
 * code.coding[PHARMACODE] ^mustSupport = true
 * code.coding[PHARMACODE].system 1..1
 * code.coding[PHARMACODE].system = "urn:oid:2.16.756.5.30.2.6" (exactly)
 * code.coding[PHARMACODE].system ^short = "Pharmacode(Schweiz)"
 * code.coding[PHARMACODE].code 1..1
+*/
 
 * code.coding[GTIN] ^short = "Use GTIN for Swiss products"
 * code.coding[GTIN] ^mustSupport = true

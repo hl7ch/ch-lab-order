@@ -5,7 +5,7 @@ Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 
@@ -35,7 +35,7 @@ Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order
@@ -73,7 +73,7 @@ Description: "Example for Service Request for Pertussis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
 * intent = #original-order
@@ -150,8 +150,8 @@ Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601022050702"
-//* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-//* identifier[ZSR].value = "A123303"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Presto"
 * name.given = "Peter"
@@ -176,7 +176,7 @@ Usage: #example
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "80756011110123400004"
 * status = #active
-* type = $coverage-type#1 "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/EmilKummer)
 * beneficiary = Reference(Patient/EmilKummer)
 * period.end = "2024-12-31"

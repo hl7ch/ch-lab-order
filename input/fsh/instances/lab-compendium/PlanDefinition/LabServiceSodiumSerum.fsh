@@ -46,15 +46,14 @@ Usage: #example
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
 * topic[+] = $sct#166312007 "Blood chemistry"
 
-* relatedArtifact.type = #documentation
-* relatedArtifact.citation = "Sodium (Na) is a positively charged electrolyte and a mineral. Eighty-five percent of Na is located in the blood and lymph fluid. The hormone aldosterone that is secreted by the adrenal glands helps to regulate Na levels by signaling the kidneys to either retain or secrete it. Damage or disease to the kidneys can lead to dangerous fluctuations of sodium. Na plays a number of key roles in the homeostasis of the human body. It helps to maintain blood volume by osmotically pulling water into the blood vessels. Too much sodium in the blood may cause too much water to be brought into the blood vessels and lead to high blood pressure. Muscles and nerves conduct electrical impulses that require charged particles including Na. The electrical currents cause muscle cells to contract and nerve cells to relay electrical signals between them. Too little sodium can lead to muscle spasms, cramps, headache, irritability, restlessness, nausea and fatigue. Extreme hyponatremia can lead to confusion, hallucinations, decreased consciousness and coma. Conversely, hypernatremia can cause lethargy or restlessness, deep tendon reflexes, muscle spasticity and seizures."
-* relatedArtifact.url = "https://loinc.org/2951-2/"
+// * relatedArtifact.type = #documentation
+// * relatedArtifact.citation = "Sodium (Na) is a positively charged electrolyte and a mineral. Eighty-five percent of Na is located in the blood and lymph fluid. The hormone aldosterone that is secreted by the adrenal glands helps to regulate Na levels by signaling the kidneys to either retain or secrete it. Damage or disease to the kidneys can lead to dangerous fluctuations of sodium. Na plays a number of key roles in the homeostasis of the human body. It helps to maintain blood volume by osmotically pulling water into the blood vessels. Too much sodium in the blood may cause too much water to be brought into the blood vessels and lead to high blood pressure. Muscles and nerves conduct electrical impulses that require charged particles including Na. The electrical currents cause muscle cells to contract and nerve cells to relay electrical signals between them. Too little sodium can lead to muscle spasms, cramps, headache, irritability, restlessness, nausea and fatigue. Extreme hyponatremia can lead to confusion, hallucinations, decreased consciousness and coma. Conversely, hypernatremia can cause lethargy or restlessness, deep tendon reflexes, muscle spasticity and seizures."
+// * relatedArtifact.url = "https://loinc.org/2951-2"
 * action.extension.extension.extension.url = "Material"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-venous) "example-specimen-venous-serum-single-test"
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code.coding[0] = https://testdirectory.questdiagnostics.com/#733 "Sodium, Serum"
-* action.code.coding[+] = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* action.code.coding = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-sodium-serum"

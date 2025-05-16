@@ -1,5 +1,5 @@
 Instance: LabServiceCreatinineClearance   // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for Creatinin Clearance Panel"
 Description: "Plan Definition for Creatinine Clearance"
 Usage: #example
@@ -17,7 +17,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/BillingSummary"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceCreatinineClearance"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceCreatinineClearance"
 * version = "current"
 * name = "RenalInsufficiencyPanel"
 * title = "Renal Insufficiendy Panel"

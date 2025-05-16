@@ -113,3 +113,5 @@ A 45-year-old female patient Simone Studer came for her regular skin check to th
 [Order Document with ServiceRequest](Bundle-6-histopath-document-with-sr.html)
 
 [Order Document with ServiceRequest and Form](Bundle-6-histopath-document-with-sr-and-form.html)
+
+{% include img.html img="Dermatoscopic-image-of-superficial-spreading-melanoma.png" caption="Fig. 3: Dermatoscopic Image" width="30%" %}
