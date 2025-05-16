@@ -5,7 +5,7 @@ Description: "Procedure Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-chloride-serum"
 * version = "0.1.0"
 * name = "ChlorideSerumMeasurementProcedure"
 * title = "Procedure - chloride measurement on in vitro blood serum"

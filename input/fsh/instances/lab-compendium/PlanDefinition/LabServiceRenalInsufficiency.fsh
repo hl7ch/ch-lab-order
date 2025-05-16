@@ -59,6 +59,6 @@ Usage: #example
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
-* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
+* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine-uACR"

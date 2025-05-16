@@ -58,7 +58,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
-// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
 // * category = $sct#721963009 "Order (record artifact)"
@@ -88,7 +88,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-0)
@@ -116,7 +116,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
-// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
 * code.coding.code = #718-7
@@ -138,7 +138,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn[+] = Reference(0-best-practice-ServiceRequest-3)
 
-// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-crp-SI)
+// * instantiatesCanonical = canonical(http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp-SI)
 * status = #active
 * intent = #original-order
 

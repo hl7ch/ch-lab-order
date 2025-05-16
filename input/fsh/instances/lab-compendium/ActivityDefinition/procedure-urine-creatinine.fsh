@@ -3,7 +3,7 @@ InstanceOf: ActivityDefinition
 Title: "CH LAB-Order Procedure Urine Creatinine"
 Description: "Procedure Creatinine [Mass/volume] in Urine"
 Usage: #example
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-creatinine"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine-creatinine"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.103"
 * status = #draft
