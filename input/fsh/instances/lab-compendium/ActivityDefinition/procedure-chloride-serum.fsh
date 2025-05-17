@@ -10,7 +10,7 @@ Usage: #example
 * name = "ChlorideSerumMeasurementProcedure"
 * title = "Procedure - chloride measurement on in vitro blood serum"
 * status = #active
-* experimental = true
+* experimental = false
 * date = "2020-01-24T14:00:00+02:00"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"

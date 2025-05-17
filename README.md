@@ -151,7 +151,7 @@ look at '<https://fhirblog.com/clinicians-on-fhir-workshop/>'
     ruby -v
     ```
 
-5. Install Jeykll and add your path file
+5. Install Jeykyll and add your path file
 
     ```bash
     gem install --user-install bundler jekyll

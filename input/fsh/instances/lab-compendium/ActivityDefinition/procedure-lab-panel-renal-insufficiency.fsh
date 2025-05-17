@@ -1,4 +1,3 @@
-
 Instance: procedure-lab-panel-renal-insufficiency
 InstanceOf: ActivityDefinition
 Title: "CH LAB-Order Procedure for Renal Insufficiency Assessment Panel"
@@ -10,17 +9,17 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.100"
 * status = #draft
+* experimental = false
+* date = "2024-12-13T18:00:00+01:00"
+* contact.telecom.system = #url
+* contact.telecom.value = "http://hl7.ch"
+* title = "Procedure for renal insufficiency assessment panel"
 * description = "Order Panel for chronic renal insufficiency"
 * relatedArtifact.type = #documentation
 * relatedArtifact.display = "Explanation of diagnostic tests used for assessment of stable renal insufficiency"
 * kind = #ServiceRequest
-* code = $sct#723190009 "Chronic renal insufficiency (disorder)"
-* code.text = "test for assessment of renal insufficiency"
-// * timingTiming.event.extension.url = "http://hl7.org/fhir/StructureDefinition/cqf-expression"
-// * timingTiming.event.extension.valueExpression.language = #text/cql
-// * timingTiming.event.extension.valueExpression.expression = "Now()"
-// * participant.type = #practitioner
-
+* code = $sct#441915005 "Measurement of renal function (procedure)"
+* intent = #order
 * specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
 * observationResultRequirement[0] = Reference(ObservationDefinition/observationAlbuminUrine)
