@@ -16,22 +16,46 @@ rectangle "[[ ServiceRequest-lab-order-uACR.html SR Albumin/Creatinine Ratio in 
 rectangle "[[ ServiceRequest-lab-order-urine-albumin.html SR Albumin in Urine ]] " as UA <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-lab-order-urine-creatinine.html SR Creatinine in Urine ]] " as UC <<$bProcess>><<resource>> #LightYellow
 
-rectangle "[[ PlanDefinition-LabServiceRenalInsufficiency.html PlanDefinition\nRenal Insufficiency Service \n type panel ]]" as RIS <<$bProcess>><<resource>> #LightGray
+rectangle "[[ PlanDefinition-LabServiceRenalInsufficiency.html PlanDefinition\nRenal Insufficiency Service \ntype panel ]]" as PDRI <<$bProcess>><<resource>> #LightGray
 
-rectangle "[[ ActivityDefinition-procedure-lab-panel-renal-insufficiency.html ActivityDefinition\nProcedure Renal Insufficiency ]]" as PRI <<$bProcess>><<resource>> #MediumTurquoise
+rectangle "[[ ActivityDefinition-procedure-lab-eGFR-ckd-epi.html ActivityDefinition\nProcedure eGFK CKD-EPI ]]" as AGFK <<$bProcess>><<resource>> #MediumTurquoise
+rectangle "[[ ActivityDefinition-procedure-urine-uACR.html ActivityDefinition\nProcedure uACR ]]" as AACR <<$bProcess>><<resource>> #MediumTurquoise
 
-rectangle "[[ ActivityDefinition-procedure-lab-eGFR-ckd-epi.html ActivityDefinition\nProcedure eGFK CKD-EPI ]]" as PGFK <<$bProcess>><<resource>> #MediumTurquoise
-rectangle "[[ ActivityDefinition-procedure-urine-uACR.html ActivityDefinition\nProcedure uACR ]]" as PACR <<$bProcess>><<resource>> #MediumTurquoise
+rectangle "[[ SpecimenDefinition-single-test-serum-capillary.html SpecimenDefinition\nSerum capillary ]]" as SDBV <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ SpecimenDefinition-single-test-serum-venous.html SpecimenDefinition\nSerum venous ]]" as SDBC <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ SpecimenDefinition-specimenUrineSpot.html SpecimenDefinition\nUrine spot ]]" as SDUS <<$bProcess>><<resource>> #LightCoral
 
-RIP <-down- EGFR : [LAB-3]: basedOn
-RIP <-down- UACR : [LAB-3]: basedOn
-UACR <-down- UA : [LAB-3]: basedOn
-UACR <-down- UC : [LAB-4]: basedOn
+rectangle "[[ ObservationDefinition-observationCreatinineSerum.html ObservationDefinition\nSerum Creatinine ]]" as ODBC <<$bProcess>><<resource>> #Lavender
+rectangle "[[ ObservationDefinition-observationAlbuminUrine.html ObservationDefinition\nUrine Albumin ]]" as ODUA <<$bProcess>><<resource>> #Lavender
+rectangle "[[ ObservationDefinition-observationCreatinineUrine.html ObservationDefinition\nUrine Creatinin ]]" as ODUC <<$bProcess>><<resource>> #Lavender
 
-RIS <-down- RIP : [LAB-1]: instanciatesCanonical
-RIS <-up- PRI : [LAB-1]: definitionCanonical
 
-RIS <-right- PACR : [LAB-2]: \naction.definitionCanonical
-RIS <-left- PGFK : [LAB-2]: \naction.definitionCanonical
+RIP <-down- EGFR : [LAB-5]: basedOn
+RIP <-down- UACR : [LAB-5]: basedOn
+UACR <-down- UA : [LAB-5]: basedOn
+UACR <-down- UC : [LAB-5]: basedOn
 
+PDRI <-down- RIP : [LAB-1]: instanciatesCanonical
+
+PDRI <-right- AACR : [LAB-2]: \naction.definitionCanonical
+PDRI <-up- AGFK : [LAB-2]: \naction.definitionCanonical
+
+PDRI <-left- SDBV : [LAB-3]: \naction.specimen
+PDRI <-left- SDBC : [LAB-3]: \naction.specimen
+PDRI <-left- SDUS : [LAB-3]: \naction.specimen
+
+AGFK <-right- ODBC : [LAB-4]: \naction.observation
+AACR <-right- ODUA : [LAB-4]: \naction.observation
+AACR <-down- ODUC : [LAB-4]: \naction.observation
+
+
+legend left
+[LAB-1]: instantiatesCanonical → ServiceRequest Renal Insufficiency Panel instatiates PlanDefinition
+[LAB-2]: action.defintionCanonical → PlanDefinition defines procedures
+[LAB-3]: action.specimen → PlanDefinition defines Specimen requirements, like Serum, Urine, Container
+[LAB-4]: action.observation → ActivityDefinition defines Observations to generate
+[LAB-5]: basedOn → Sub-ServiceRequest ist based on ServiceRequest
+====
+Note: To use the links in the Rectangles open image in a new tab
+endlegend
 @enduml

@@ -1,7 +1,7 @@
 Instance: single-test-serum-capillary
 InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Single Test Capillary blood"
-Description: "Single Test Capillary blood"
+Title: "SpecimenDefinition Serum Capillary Blood"
+Description: "Serum Capillary blood, for single test"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US

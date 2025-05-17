@@ -40,6 +40,7 @@ Usage: #example
 * jurisdiction = urn:iso:std:iso:3166#CH
 
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#441915005 "Measurement of renal function (procedure)"
 * topic[+] = $sct#269858003 "Biochemical evaluation of blood urea/renal function (procedure)"
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"

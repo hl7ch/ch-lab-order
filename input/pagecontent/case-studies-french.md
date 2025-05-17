@@ -66,22 +66,9 @@ La patiente Sara Speckmann, née le 12. 12. 1975, se trouve à l'hôpital canton
 
 {% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
 legend diagram Task
-- [Lab-1] based On→Service Request is fullfilled by Task Sepsis Workup
-- [Lab-2] input→Specimen information used by Task Sepsis Workup
-- [Lab-3] based On→Sub-Service Requests grouped by 4-sepsis ServiceRequest
-- [Lab-4] based On→Diagnostic Reports requested by Sub-Service Requests
-- [Lab-5] result→Observations as Results of Diagnostic Report
- 
 
 {% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
 legend diagram Reflex Testing
-- [Lab-1] based On→Diagnostic Reports requested by Sub-Service Request Growth-
-- [Lab-2] result→Observation aerobe Growth POS, triggering further Observations-
-- [Lab-3] result→Observation anarobe Growth NEG-
-- [Lab-4] triggeredBy→Observations triggeredBy Observation aerobe Growth POS: 2 Observations with MALDI-TOF Method (E.coli, K.pneumoniae)-
-- [Lab-5] triggeredBy→Observations triggeredBy Observation aerobe Growth POS: Observation Microorganism and Susceptibility as Container for:-
-- [Lab-6] hasMember→2 Observations with Culture and Gram Stain Methods (E.coli, K.pneumoniae)-
-- [Lab-7] hasMember→Each Organism idendified (E.coli, K.pneumoniae) contains an Observation of Susceptibility and Gram Stain-
 
 [Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
 

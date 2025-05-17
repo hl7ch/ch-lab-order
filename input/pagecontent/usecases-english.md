@@ -6,7 +6,7 @@
 -->
 ### Use Case 1: Generate a Laboratory Order Document
 
-{% include img.html img="LabOrderWorkflow.svg" caption="Fig.: Laboratory Order and Testing Workflow" width="60%" %}
+{% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Laboratory Order and Testing Workflow" width="60%" %}
 
 #### Laboratory Order Document with Service Request
 
@@ -92,7 +92,7 @@ After the laboratory order has been received and processed, the situation may ar
 
 ### Use Case 5: Building laboratory order panels. These panels instantiate Plandefinition from Order Catalog.
 
-{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 1: Task" width="75%" %}
+{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 2: Renal Insufficiency Service" width="80%" %}
 
 Clients and laboratories prefer panels that contain several individual tests or are nested with other panels. Laboratories provide these panels according to their offerings. This example deals with clarifying and assessing chronic renal insufficiency. The order consists of two suborders: eGFR (estimated glomerular filtration rate) and uACR (urine albumin-to-creatinine ratio). The latter, in turn, contains two suborders: albumin and creatinine concentrations in urine.
 Plan and activity definitions are stored in the laboratory compendium and can be selected by the client.

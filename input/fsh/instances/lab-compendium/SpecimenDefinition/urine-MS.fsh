@@ -1,5 +1,6 @@
 Instance: Urine-MS
 InstanceOf: SpecimenDefinition
+Title: "SpecimenDefinition Urine Midstream"
 Description: "Urin Mittelstrahl"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"

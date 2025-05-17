@@ -39,5 +39,15 @@ OMIS -down-> OIK : [LAB-6]: hasMember
 OIK -down-> GSK : [LAB-7]: hasMember
 OIK -down-> STK : [LAB-7]: hasMember
 
-
+legend left
+[Lab-1] based On→Diagnostic Reports requested by Sub-Service Request Growth
+[Lab-2] result→Observation aerobe Growth POS, triggering further Observations
+[Lab-3] result→Observation anarobe Growth NEG
+[Lab-4] triggeredBy→Observations triggeredBy Observation aerobe Growth POS: 2 Observations with MALDI-TOF Method (E.coli, K.pneumoniae)-
+[Lab-5] triggeredBy→Observations triggeredBy Observation aerobe Growth POS: Observation Microorganism and Susceptibility as Container for:-
+[Lab-6] hasMember→2 Observations with Culture and Gram Stain Methods (E.coli, K.pneumoniae)
+[Lab-7] hasMember→Each Organism idendified (E.coli, K.pneumoniae) contains an Observation of Susceptibility and Gram Stain
+====
+Note: To use the links in the Rectangles open image in a new tab
+endlegend
 @enduml
