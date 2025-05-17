@@ -1,7 +1,7 @@
 Instance: single-test-serum-capillary-fasting
 InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Capillary Blood, 12 h fasting"
-Description: "Capillary Blood, 12 h fasting"
+Title: "SpecimenDefinition Serum Capillary Blood, 12 h fasting"
+Description: "Serum Capillary Blood, 12 h fasting, for single test"
 Usage: #example
 * typeCollected = $sct#122554006 "Capillary blood specimen"
 * patientPreparation[0].text = "12 hour fasting"

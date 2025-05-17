@@ -20,7 +20,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
-* item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30"
+* item[=].item[=].answer.valueString = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 
 * item[=].item[+].linkId = "order.precedentDocumentIdentifier"
 * item[=].item[=].text = "Identifier des Vorgängerdokuments"
@@ -179,7 +179,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueString = "7601000034321"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.zsr"
 * item[=].item[=].item[=].item[=].text = "ZSR"
-* item[=].item[=].item[=].item[=].answer.valueString = "A123309"
+* item[=].item[=].item[=].item[=].answer.valueString = "L248519"
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
 * item[=].item[=].item[=].item[=].answer.valueString = "033 123 22 11"
@@ -288,17 +288,17 @@ Usage: #example
       * linkId = "labSpecialties.pathology.panels"
       * text = "Pathology Panels"
       * item[+]
-        * definition = $loinc#18743-5 "Autopsy report"
+        // * code = $loinc#18743-5 "Autopsy report"
         * linkId = "labSpecialties.pathology.panels.Autopsy"
         * text = "Autopsy report"
         * answer.valueBoolean = false
       * item[+]
-        * definition = $loinc#11526-1 "Pathology study"
+        // * code = $loinc#11526-1 "Pathology study"
         * linkId = "labSpecialties.pathology.panels.PathologyStudy"
         * text = "Pathology Study"
         * answer.valueBoolean = false
       * item[+]
-        * definition = $loinc#11529-5 "Surgical pathology study"
+        // * code = $loinc#11529-5 "Surgical pathology study"
         * linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
         * text = "Surgical pathology study"
         * answer.valueBoolean = true

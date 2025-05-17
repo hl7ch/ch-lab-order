@@ -1,7 +1,7 @@
 Instance: single-test-serum-venous
 InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Single Test Venous blood"
-Description: "Single Test Venous blood"
+Title: "SpecimenDefinition Serum Venous Blood"
+Description: "Single Test Venous blood, for single test"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
 * language = #en-US

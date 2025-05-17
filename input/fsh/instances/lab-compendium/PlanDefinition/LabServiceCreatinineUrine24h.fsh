@@ -44,4 +44,4 @@ Usage: #example
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
 * action.code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * action.timingDuration = 2 'h' "hours"
-* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine"
+* action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine"

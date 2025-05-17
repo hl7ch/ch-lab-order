@@ -1,6 +1,6 @@
 Instance: specimenUrineSpot
 InstanceOf: SpecimenDefinition
-Title: "CH LAB-Order SpecimenDefinition Urine Spot"
+Title: "SpecimenDefinition Urine Spot"
 Description: "Urine Spot"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"

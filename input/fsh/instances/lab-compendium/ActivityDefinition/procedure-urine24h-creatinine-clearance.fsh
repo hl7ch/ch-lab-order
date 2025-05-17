@@ -5,7 +5,7 @@ Description: "Procedure to get the renal clearance in 24h Urine and Serum or Pla
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine-clearance"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine-clearance"
 * version = "0.1.0"
 * name = "UrineCreatinineClearanceProcedure"
 * title = "Procedure - 24-hour urine creatinine clearance"

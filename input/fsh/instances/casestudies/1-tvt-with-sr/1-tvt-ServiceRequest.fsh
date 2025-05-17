@@ -5,8 +5,8 @@ Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 
 // * basedOn = Reference(1-tvt-ServiceRequest-1)   // CBC
 // * basedOn = Reference(1-tvt-ServiceRequest-2)   // CBC diff
@@ -29,7 +29,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 
 Instance: 1-tvt-ServiceRequest-1
 InstanceOf: ChLabOrderSR
@@ -38,8 +38,8 @@ Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
@@ -53,7 +53,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-2
@@ -62,8 +62,8 @@ Title: "CH LAB-ServiceRequest 1-tvt-2"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
@@ -76,7 +76,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-3
@@ -85,8 +85,8 @@ Title: "CH LAB-ServiceRequest 1-tvt-3"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
@@ -99,7 +99,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Blood-coag-1-tvt)
 
 Instance: 1-tvt-ServiceRequest-4
@@ -108,8 +108,8 @@ Title: "CH LAB-ServiceRequest 1-tvt-4"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(1-tvt-ServiceRequest-0) 
 * status = #active
 * intent = #original-order
@@ -122,7 +122,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003
 * reasonCode.text = "Deep venous thrombosis of lower extremity (disorder)"
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * specimen[+] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
 
@@ -132,8 +132,8 @@ Title: "CH LAB-ServiceRequest 1-tvt-5"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(1-tvt-ServiceRequest-0)
 * status = #active
 * intent = #original-order
@@ -153,7 +153,7 @@ Usage: #example
 * reasonCode.text = "Limitation of Vit. D Lab Analyse"
 * reasonReference = Reference(ConditionRenalInsufficiency)
 
-* insurance = Reference(HealthInsuranceCardTobiasTimmermann)
+* insurance = Reference(Coverage/HealthInsuranceCardTobiasTimmermann)
 * supportingInfo[+] = Reference(ConditionRenalInsufficiency)
 * specimen[0] = Reference(Specimen/Serum-1-tvt) "Serum specimen"
 
@@ -164,7 +164,7 @@ Title: "Patient Tobias Timmermann"
 Description: "CH-Core-Patient, refers to 1-tvt"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: TobiasTimmermann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Tobias Timmermann \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: TobiasTimmermann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400003\n      </p><p><b>name</b>: Tobias Timmermann \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
@@ -173,9 +173,9 @@ Usage: #example
 * extension[=].valueAddress.state = "BL"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999777.1"
-* identifier.value = "012/08.111111"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400003"
 * name.family = "Timmermann"
 * name.given = "Tobias"
 * telecom[0].system = #phone
@@ -193,22 +193,22 @@ Usage: #example
 // ---- PractitionerRole --------> Folder
 
 Instance: HealthInsuranceCardTobiasTimmermann
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Tobias Timmermann"
 Description: "Example for Insurance"
 Usage: #example
 // * id = "health-insurance-card-tobias-timmermann"
 * identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780-1"
+* identifier.system = "http://example.org/insurer/123456789/member"
+* identifier.value = "80756011110123400003"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/TobiasTimmermann)
 * beneficiary = Reference(Patient/TobiasTimmermann)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
-
+* payor.display = "Krankenkasse AG"
 
 // ---- Specimen ---------------
 Instance: Serum-1-tvt
@@ -269,7 +269,7 @@ Description: "Problem list of Tobias Timmermann"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* category = $sct#439401001 "diagnosis"
+* category = $condition-category#problem-list-item
 * severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"
 * subject = Reference(Patient/TobiasTimmermann) "Tobias Timmermann"

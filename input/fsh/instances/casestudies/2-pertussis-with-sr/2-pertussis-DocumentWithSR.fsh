@@ -29,16 +29,15 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MarcMustermannGruppenpraxis"
 * entry[=].resource = MarcMustermannGruppenpraxis
 
-
-* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer" // entry[10]
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/EvaErlenmeyer"
 * entry[=].resource = EvaErlenmeyer
 * entry[+].fullUrl = "http://example.com/fhir/Organization/LaborPipette"
 * entry[=].resource = LaborPipette
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/EvaErlenmeyerLaborPipette"
 * entry[=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-emil-kummer"
-* entry[=].resource = HealthInsuranceCardEmilKummer
+// * entry[+].fullUrl = "http://example.com/fhir/Coverage/health-insurance-card-emil-kummer"
+// * entry[=].resource = HealthInsuranceCardEmilKummer
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-2-pertussis"
 * entry[=].resource = Serum-2-pertussis

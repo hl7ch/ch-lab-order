@@ -63,6 +63,12 @@ Der Assistenzarzt der gynäkologischen Abteilung in der Oltner Gemeinschaftsprax
 
 Die Patientin Sara Speckmann, geboren am 12. 12. 1975, befindet sich seit einiger Zeit im Kantonsspital. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da der Verdacht auf eine Sepsis besteht, ordnet der zuständige Oberarzt, Dr. Hans Hauser, an, ihr am Morgen Blut für eine Blutkultur zu entnehmen. 30 Minuten später werden eine weitere aerobe und eine anaerobe Blutkultur sowie eine Urinprobe entnommen. Alle fünf Proben werden im externen Labor Pipette weiterverarbeitet. Dort werden in einigen Materialien Keime nachgewiesen und anschliessend mittels Massenspektrometrie identifiziert. In den aeroben Blutkulturflaschen wurden die Erreger "Klebsiella pneumoniae" und "Escherichia coli" nachgewiesen. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen. Von den zwei im Blut nachgewiesenen Krankheitserregern wird ein Antibiogramm erstellt. Dieses zeigt, dass die beiden Wirkstoffe "Amoxicillin+Clavulansäure" und "Ceftriaxon" gegen beide Keime wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmäßig über die verschiedenen Teilergebnisse.
 
+{% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
+legend diagram Task
+
+{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
+legend diagram Reflex Testing
+
 [Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
 
 [Order Document with ServiceRequest and Form](Bundle-4-sepsis-document-with-sr-and-form.html)

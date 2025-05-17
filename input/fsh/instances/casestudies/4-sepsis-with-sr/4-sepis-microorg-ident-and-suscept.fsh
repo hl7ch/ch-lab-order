@@ -35,6 +35,7 @@ Usage: #example
 * code = $loinc#43409-2 "Bacteria identified in Isolate by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
+* issued = "2025-04-08T10:28:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
 * hasMember[0] = Reference(ObservationSusceptibilityEcoli)
@@ -47,7 +48,6 @@ Description: "Susceptibility of organism to Amoxicillin + Clavulanate and Ceftri
 Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final
-// * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
@@ -73,6 +73,8 @@ Usage: #example
 * code = $loinc#87975-9 "Microscopic observation [Identifier] in Isolate by Gram stain"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
+* issued = "2025-04-08T10:28:00+01:00"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 // * method = $sct#359872008  // TODO: check SCT code and concept for Gram stain
 * valueCodeableConcept = http://snomed.info/sct#87172008 "Gram-negative bacillus"  // check SCT code and concept for Gram stain
 
@@ -91,7 +93,9 @@ Usage: #example
 * code = $loinc#43409-2 "Bacteria identified in Isolate by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
+* issued = "2025-04-08T10:28:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
+* subject = Reference(Patient/SaraSpeckmann)
 * valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
 
 * hasMember[0] = Reference(ObservationSusceptibilityKpneumoniae)
@@ -110,7 +114,9 @@ Usage: #example
 * effectiveDateTime = "2025-04-08"
 * method = $sct#359872008 "Disk diffusion susceptibility test (procedure)"
 // * specimen = Reference(Specimen/GramStainSpecimen)
+* issued = "2025-04-08T10:28:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
+* subject = Reference(Patient/SaraSpeckmann)
 * valueCodeableConcept = $sct#131196009 "Susceptible"
 
 // component susceptibility of microorganism
@@ -130,4 +136,6 @@ Usage: #example
 * code = $loinc#87975-9 "Microscopic observation [Identifier] in Isolate by Gram stain"
 * subject = Reference(Patient/SaraSpeckmann)
 * effectiveDateTime = "2025-04-08"
+* issued = "2025-04-08T10:28:00+01:00"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * valueCodeableConcept = http://snomed.info/sct#87172008 "Gram-negative bacillus"

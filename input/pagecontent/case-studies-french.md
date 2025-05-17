@@ -64,6 +64,12 @@ Le médecin assistant du service de gynécologie du cabinet communautaire d'Olte
 
 La patiente Sara Speckmann, née le 12. 12. 1975, se trouve à l'hôpital cantonal depuis un certain temps. La nuit dernière, son état général s'est fortement dégradé. Comme il y a suspicion de septicémie, le médecin-chef responsable, le Dr Hans Hauser, ordonne une prise de sang dans la matinée en vue d'une hémoculture. 30 minutes plus tard, une autre hémoculture aérobie et une anaérobie sont prélevées, ainsi qu'un échantillon d'urine. Les cinq échantillons sont ensuite traités dans le laboratoire externe Pipette. Les germes y sont détectés dans des matériaux et identifiés par spectrométrie de masse. Les pathogènes "Klebsiella pneumoniae" et "Escherichia coli" ont été détectés dans les deux flacons d'hémoculture aérobie. Le germe identifié dans l'échantillon d'urine n'est normalement pas pathogène. Un antibiogramme est réalisé pour les trois pathogènes détectés dans le sang. Il en ressort que les deux substances actives "amoxicilline+acide clavulanique" et "ceftriaxone" sont efficaces contre les deux germes. Le microbiologiste informe régulièrement le Dr Hans Hauser des différents résultats partiels.
 
+{% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
+legend diagram Task
+
+{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
+legend diagram Reflex Testing
+
 [Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
 
 [Order Document with ServiceRequest and Form](Bundle-4-sepsis-document-with-sr-and-form.html)

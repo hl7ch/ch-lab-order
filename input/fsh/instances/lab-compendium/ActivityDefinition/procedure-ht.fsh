@@ -5,7 +5,7 @@ Description: "Procedure Hematocrit measurement procedure on in-vitro blood speci
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-ht"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-ht"
 * identifier.use = #official
 * identifier.value = "Hematocrit Calc (Bld) [Volume fraction]"  // LOINC display name
 * version = "0.1.0"

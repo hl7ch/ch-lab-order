@@ -6,22 +6,24 @@ Description: "Procedure for estimated Glomerual Filtration Rate and and Urine Al
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.100"
 * status = #draft
+* experimental = false
+* date = "2024-12-13T18:00:00+01:00"
+* contact.telecom.system = #url
+* contact.telecom.value = "http://hl7.ch"
+* title = "Procedure for renal insufficiency assessment panel"
 * description = "Order Panel for chronic renal insufficiency"
 * relatedArtifact.type = #documentation
 * relatedArtifact.display = "Explanation of diagnostic tests used for assessment of stable renal insufficiency"
 * kind = #ServiceRequest
-* code = $sct#723190009 "Chronic renal insufficiency (disorder)"
-* code.text = "test for assessment of renal insufficiency"
-// * timingTiming.event.extension.url = "http://hl7.org/fhir/StructureDefinition/cqf-expression"
-// * timingTiming.event.extension.valueExpression.language = #text/cql
-// * timingTiming.event.extension.valueExpression.expression = "Now()"
-// * participant.type = #practitioner
-
-// * specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
-// * observationResultRequirement[0] = Reference(ObservationDefinition/urineAlbumin)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/urineCreatinine)
-// * observationResultRequirement[+] = Reference(ObservationDefinition/uACR)
+* code = $sct#441915005 "Measurement of renal function (procedure)"
+* intent = #order
+* specimenRequirement = Reference(SpecimenDefinition/specimenUrineSpot)
+* specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)
+* observationResultRequirement[0] = Reference(ObservationDefinition/observationAlbuminUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observationCreatinineUrine)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observation-uACR)
+* observationResultRequirement[+] = Reference(ObservationDefinition/observationCreatinineSerum)

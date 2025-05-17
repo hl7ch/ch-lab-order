@@ -5,7 +5,7 @@ Description: "Hemoglobin-Hematocrit measurement procedure on in-vitro blood spec
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-hb-ht-panel"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-hb-ht-panel"
 * identifier.use = #official
 * identifier.value = "Hemoglobin and Hematocrit panel (Bld)"  // LOINC display name
 * version = "0.1.0"

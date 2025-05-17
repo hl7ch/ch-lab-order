@@ -4,8 +4,8 @@ Title: "CH LAB-ServiceRequest 4-sepsis"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 // * category = $sct#721963009 "Order (record artifact)"
 
 * status = #active
@@ -15,7 +15,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 /*
 Specimen are not defined here, but in the respective sub-serviceRequast instances
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
@@ -29,8 +29,8 @@ Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
 Description: "Example for Service Request for Sepsis Investigation, Hemoglobin and Hematocrit"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
@@ -45,7 +45,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 
 Instance: 4-sepsis-ServiceRequestCBCDiff
@@ -54,8 +54,8 @@ Title: "CH LAB-ServiceRequest 4-sepsis CBC with Differential"
 Description: "Example for Service Request for Sepsis Investigation, CBC with Differential"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
@@ -70,7 +70,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 
 Instance: 4-sepsis-ServiceRequestGrowth
@@ -79,13 +79,13 @@ Title: "CH LAB-ServiceRequest 4-sepsis microbiological growth in  blood culture"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.40"
-* requisition.value = "ReqID-123456789123"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-123456789123"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
 * code.coding[+].code = #90423-5
@@ -102,7 +102,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 
 Instance: 4-sepsis-ServiceRequestCRP   // Service request for C reactive protein
@@ -111,8 +111,8 @@ Title: "CH LAB-ServiceRequest 4-sepsis C reactive protein"
 Description: "Example for Service Request for Sepsis Investigation, C reactive protein"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * code.coding[+].code = #1988-5 
 * code.coding[=].system = $loinc
@@ -125,7 +125,7 @@ Usage: #example
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
-* insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Serum-4-sepsis)
 
 Instance: SaraSpeckmann
@@ -134,7 +134,7 @@ Title: "Patient Sara Speckmann"
 Description: "CH-Core-Patient, refers to 4-sepsis"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SaraSpeckmann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111114\n      </p><p><b>name</b>: Sara Speckmann\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SaraSpeckmann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400006\n      </p><p><b>name</b>: Sara Speckmann\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Aarau"
 * extension[=].valueAddress.country = "Schweiz"
@@ -143,9 +143,9 @@ Usage: #example
 * extension[=].valueAddress.state = "AG"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1025 "Jehovah's Witnesses"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.4"
-* identifier.value = "012/08.111114"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400006"
 * name.family = "Speckmann"
 * name.given = "Sara"
 * telecom[0].system = #phone
@@ -160,26 +160,27 @@ Usage: #example
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+/*
 Instance: HealthInsuranceCardSaraSpeckmann
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Sarah Speckmann"
 Description: "Example for Insurance"
 Usage: #example
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400006"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/SaraSpeckmann)
 * beneficiary = Reference(Patient/SaraSpeckmann)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 Instance: Blood-bactec-plus-4-sepsis
 InstanceOf: Specimen
-Title: "Blood collection in blood culture bottles, 4-sepsis bactec-plus"
-Description: "Example for Specimen for Haematological Examination"
+Title: "Blood Collection in Blood Culture Bottles, 4-sepsis"
+Description: "Example for specimen for aerobic and anaerobic blood culture"
 Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
@@ -219,6 +220,22 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
+Instance: Serum-4-sepsis
+InstanceOf: Specimen
+Title: "Serum Sample, 4-sepsis"
+Description: "Example for Specimen of Serum"
+Usage: #example
+* identifier.value = "11111-15394-75465"
+* accessionIdentifier.value = "22222-bc987-dd888"
+* status = #available
+* type = $sct#119364003 "Serum specimen (specimen)"
+* subject = Reference(Patient/SaraSpeckmann)
+* receivedTime = "2023-12-01T16:40:17Z"
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2023-12-01T06:40:17Z"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+
 Instance: Urine-4-sepsis
 InstanceOf: Specimen
 Title: "Urine Sample, 4-sepsis"
@@ -236,19 +253,3 @@ Usage: #example
 * container.identifier.value = "659e1c5b-5c5a-4829-b7fa-fb7da2276e0d-urin"
 * container.description = "Uriswab™ : Urine Collection System"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"
-
-Instance: Serum-4-sepsis
-InstanceOf: Specimen
-Title: "Serum Sample, 4-sepsis"
-Description: "Example for Specimen of Serum"
-Usage: #example
-* identifier.value = "11111-15394-75465"
-* accessionIdentifier.value = "22222-bc987-dd888"
-* status = #available
-* type = $sct#119364003 "Serum specimen (specimen)"
-* subject = Reference(Patient/SaraSpeckmann)
-* receivedTime = "2023-12-01T16:40:17Z"
-* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
-* collection.collector = Reference(Practitioner/HansHauser)
-* collection.collectedDateTime = "2023-12-01T06:40:17Z"
-* container.type = $sct#706053007 "General specimen container (physical object)"

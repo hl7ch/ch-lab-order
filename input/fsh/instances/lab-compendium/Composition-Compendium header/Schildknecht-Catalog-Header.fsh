@@ -25,7 +25,7 @@ Usage: #example
 * extension.valuePeriod.start = "2025-01-01"
 * extension.valuePeriod.end = "2025-12-31"
 * identifier.use = #official
-* identifier.system = "http://fhir.org"
+* identifier.system = "http://example.org"
 * identifier.value = "SchildknechtLabCatalog"
 * status = #preliminary
 * type.text = "Catalog"

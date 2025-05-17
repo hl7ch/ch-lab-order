@@ -5,7 +5,7 @@ Description: "Procedure Albumin/Creatinine Ratio [Mass Ratio] in Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine-uACR"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.19.7.102"
 * version = "0.1.0"
@@ -30,7 +30,7 @@ Usage: #example
 
 // * relatedArtifact.type = #documentation
 // * relatedArtifact.display = "Explanation of diagnostic tests to determine the ratio of the concentration of albumin and creatinine in urine"
-// * library = "https://www.zkidney.com/mdrd-main"
+* library = "https://www.zkidney.com/mdrd-main" 
 * kind = #ServiceRequest
 // * code.text = "uACR in Urine"
 * code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"

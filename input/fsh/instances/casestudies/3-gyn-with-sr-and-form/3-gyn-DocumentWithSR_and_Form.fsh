@@ -36,8 +36,8 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/PeterPapGruppenpraxis"
 * entry[=].resource = PeterPapGruppenpraxis
 
-* entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardMarinaRubella"
-* entry[=].resource = HealthInsuranceCardMarinaRubella
+// * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardMarinaRubella"
+// * entry[=].resource = HealthInsuranceCardMarinaRubella
 
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Cervix-swab"  // entry [9]
 * entry[=].resource = Cervix-swab 

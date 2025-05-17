@@ -1,21 +1,21 @@
 Instance: ServiceRequestChlorideSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order for Chloride"
+Title: "CH LAB-Order SR Chloride"
 Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
 Usage: #example
 * id = "service-request-chloride-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-chloride-serum"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-chloride-serum"
 
 // is part of panel Serum-Electrolytes
 * basedOn = Reference(ServiceRequestElectrolytesSerum)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-1234567"
 
 * status = #active
 * intent = #original-order
@@ -39,6 +39,6 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCard)
+// * insurance = Reference(HealthInsuranceCardHansGuggindieluft)
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
 // * specimen[+] = Reference(Specimen/Blood)

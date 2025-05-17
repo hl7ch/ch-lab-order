@@ -1,3 +1,4 @@
+/*   TO DELETE
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
@@ -14,11 +15,11 @@ Alias: $laboratory-service-type = http://hl7.org/fhir/uv/order-catalog/ValueSet/
 // Alias: $administrative-gender = http://hl7.org/fhir/ValueSet/administrative-gender
 Alias: $bibliography-artifact-type = http://hl7.org/fhir/uv/order-catalog/ValueSet/bibliography-artifact-type
 
-Profile: ChLab_LabServiceDefinition
+Profile: LabServiceDefinition
 Parent: LabServiceDefinition           // is a PlanDefinition
 Id: ch-lab-labservice-definition
 Title: "CH LAB-order Laboratory Service Definition"
-Description: """The ChLab_LabServiceDefinition profile constrains the LabServiceDefinition resource to represent a laboratory diagnostic service for the clinicians using such services. Clinicians typically order laboratory services and use the results thereof in the course of their delivery of clinical care. 
+Description: """The LabServiceDefinition profile constrains the LabServiceDefinition resource to represent a laboratory diagnostic service for the clinicians using such services. Clinicians typically order laboratory services and use the results thereof in the course of their delivery of clinical care. 
 
 A laboratory diagnostic service is a kind of clinical artifact that falls within the scope of PlanDefinition. It involves preparation of the patient, collection and delivery to the lab of biological/digital specimens , tests and panels performed on these specimens, interpretation of the results by the pathologist, and delivery of the results and diagnostic report back to the ordering clinician and possibly other recipients, including the patient. PlanDefinition conveys the general properties of the lab service. It describes the usage of the service, the contexts and situations in which this service is useful, and may also detail the goals that the laboratory service contributes to, such as screening or diagnostic of a particular pathology, monitoring of a long course treatment ... 
 
@@ -41,6 +42,9 @@ PlanDefinition is therefore selected to represent a laboratory service, and the 
 
 * . ^short = "The definition of a plan for a series of actions"
 * . ^comment = "The LChLabLabServiceDefinition profile constrains the resource LabServiceDefinition to represent a laboratory diagnostic service made visible to clinicians: the potential consumers of this service."
+
+*/
+
 // * extension ^slicing.discriminator[0].type = #value
 // * extension ^slicing.discriminator[=].path = "url"
 // * extension ^slicing.rules = #open
@@ -214,3 +218,4 @@ PlanDefinition is therefore selected to represent a laboratory service, and the 
 // * action.definition[x] MS
 // * action.definition[x] ^definition = "A reference to an ActivityDefinition that describes the laboratory procedure to be performed, or to a PlanDefinition representing a child laboratory service, either embedded or reflexed by the current one."
 // * action.definition[x] ^comment = "The definition is present only when there is no grouping of sub-actions"
+

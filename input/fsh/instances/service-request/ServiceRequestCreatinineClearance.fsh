@@ -1,21 +1,21 @@
 Instance: ServiceRequestCreatinineClearance
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest for Creatinine clearance"
+Title: "CH LAB-Order SR Creatinine Clearance"
 Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #example
 * id = "lab-order-creatinine-clearance"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/creatinine-clearance"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
+* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceCreatinineClearance"
 
 // the service request is part of panel ServiceRequestPanelExample
 * basedOn[0] = Reference(ServiceRequestPanelExample)
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PLAC "Placer Identifier"
-* requisition.system = "urn:oid:2.16.756.5.30"
-* requisition.value = "ReqID-1234567"
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-1234567"
 
 * status = #active
 * intent = #original-order
@@ -35,7 +35,7 @@ Usage: #example
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#90688005
 * reasonCode.text = "Chronic renal failure syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCard)
+// * insurance = Reference(HealthInsuranceCardHansGuggindieluft)
 * supportingInfo[+] = Reference(MedicationStatement/Diclofenac)
 * supportingInfo[+] = Reference(Condition/Renal-insufficiency)
 * specimen[+] = Reference(Specimen/Serum) "Serum specimen"
@@ -85,8 +85,6 @@ Usage: #example
 * identifier.value = "12345"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-// * category.coding[0] = $sct#55607006 "Problem"
-// * category.coding[+] = $condition-category#problem-list-item
 * category = $condition-category#problem-list-item
 * severity = $sct#255604002 "Mild (qualifier value)"
 * code = $sct#723190009 "Chronic renal insufficiency (disorder)"

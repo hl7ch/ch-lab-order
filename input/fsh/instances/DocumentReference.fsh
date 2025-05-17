@@ -19,7 +19,10 @@ Usage: #example
 * relatesTo.code = #appends
 * relatesTo.target = Reference(example)
 * description = "Physical"
+
+// seems to be correct, but publisher declared codings not in the value set:
 * securityLabel = $v3-Confidentiality#N "normal"
+
 * content.attachment.contentType = #application/fhir+xml
 * content.attachment.language = #en-US
 * content.attachment.url = "http://example.org/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"
@@ -27,14 +30,3 @@ Usage: #example
 * content.attachment.hash = "2jmj7l5rSw0yVb/vlWAYkK/YBwk="
 * content.attachment.title = "Physical"
 * content.attachment.creation = "2005-12-24T09:35:00+11:00"
-// * content.format = urn:oid:1.3.6.1.4.1.19376.1.2.3#urn:ihe:pcc:handp:2008 "History and Physical Specification"
-// * context.encounter = Reference(Encounter/xcda)
-// * context.event = $eventCodes#T-D8200 "Arm"
-// * context.period.start = "2004-12-23T08:00:00+11:00"
-// * context.period.end = "2004-12-23T08:01:00+11:00"
-// * context.facilityType = $healthcareFacilityTypeCodes#Outpatient "Outpatient"
-// * context.practiceSetting = $practiceSettingCodes#"General Medicine" "General Medicine"
-// * context.sourcePatientInfo = Reference(Patient/xcda)
-// * context.related = Reference(Patient/xcda)
-// * context.related.identifier.system = "urn:ietf:rfc:3986"
-// * context.related.identifier.value = "urn:oid:1.3.6.1.4.1.21367.2005.3.7.2345"

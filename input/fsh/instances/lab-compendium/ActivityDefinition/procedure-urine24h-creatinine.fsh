@@ -5,7 +5,7 @@ Description: "Procedure Creatinine 24 hour urine panel - 24 hour Urine"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine24h-creatinine"
+* url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine"
 * version = "0.1.0"
 * name = "UrineCreatinineProcedure"
 * title = "Procedure - urine creatinine - 24H urine"

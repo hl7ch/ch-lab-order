@@ -1,5 +1,5 @@
 Instance: LabOrder-form
-InstanceOf: Questionnaire
+InstanceOf: ChOrfQuestionnaire
 Title: "CH LAB-Order Form example"
 Description: "assembled from LabOrder-form-modular"
 Usage: #example
@@ -12,7 +12,7 @@ Usage: #example
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
 * extension[=].extension[=].valueCoding = $launchContext#patient
@@ -151,7 +151,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receciver.organization.gln"
-* item[=].item[=].item[=].definition = "GLNIdentifier"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-gln-identifier"
 * item[=].item[=].item[=].text = "GLN"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
@@ -444,7 +444,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 * item[+].linkId = "consent"  // item[5]
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-SR#ServiceRequest.supportingInfo"
 * item[=].text = "Einverständniserklärung"
 * item[=].type = #group
 * item[=].item[0].linkId = "consent.treatment"
@@ -460,7 +460,7 @@ Usage: #example
 * item[=].item[=].text = "Patientenverfügung"
 * item[=].item[=].type = #string
 * item[+].linkId = "coverage" // item[6]
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.insurance"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#insurance"
 * item[=].text = "Kostenträger"
 * item[=].type = #group
 * item[=].item[0].linkId = "coverage.uvg"
@@ -476,7 +476,7 @@ Usage: #example
 * item[=].item[=].text = "Andere (nach VVG)"
 * item[=].item[=].type = #string
 * item[+].linkId = "previousResult" // item[7]
-* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-servicerequest#ServiceRequest.supportingInfo"
+* item[=].definition = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-order-SR#ServiceRequest.supportingInfo"
 * item[=].text = "Vorheriges Untersuchungsresultat"
 * item[=].type = #group
 * item[=].item.linkId = "previousResult.result"
@@ -684,7 +684,7 @@ Usage: #example
 * item[=].item[=].item.item.text = "Labor Sparten"
 * item[=].item[=].item.item.type = #group
 * item[=].item[=].item.item.item.linkId = "labSpecialties.pathology"
-* item[=].item[=].item.item.item.definition = "27898-6"
+* item[=].item[=].item.item.item.code = $loinc#27898-6
 * item[=].item[=].item.item.item.text = "Pathology"
 * item[=].item[=].item.item.item.type = #boolean
 * item[=].item[=].item.item.item.item.linkId = "labSpecialties.pathology.panels"
@@ -694,15 +694,15 @@ Usage: #example
 * item[=].item[=].item.item.item.item.enableWhen.operator = #=
 * item[=].item[=].item.item.item.item.enableWhen.answerBoolean = true
 * item[=].item[=].item.item.item.item.item[0].linkId = "labSpecialties.pathology.panels.Autopsy"
-* item[=].item[=].item.item.item.item.item[=].definition = "18743-5"
+* item[=].item[=].item.item.item.item.item[=].code = $loinc#18743-5
 * item[=].item[=].item.item.item.item.item[=].text = "Autopsy report"
 * item[=].item[=].item.item.item.item.item[=].type = #boolean
 * item[=].item[=].item.item.item.item.item[+].linkId = "labSpecialties.pathology.panels.PathologyStudy"
-* item[=].item[=].item.item.item.item.item[=].definition = "11526-1"
+* item[=].item[=].item.item.item.item.item[=].code = $loinc#11526-1
 * item[=].item[=].item.item.item.item.item[=].text = "Pathology Study"
 * item[=].item[=].item.item.item.item.item[=].type = #boolean
 * item[=].item[=].item.item.item.item.item[+].linkId = "labSpecialties.pathology.panels.SurgicalPathologyStudy"
-* item[=].item[=].item.item.item.item.item[=].definition = "11529-5"
+* item[=].item[=].item.item.item.item.item[=].code = $loinc#11529-5
 * item[=].item[=].item.item.item.item.item[=].text = "Surgical pathology study"
 * item[=].item[=].item.item.item.item.item[=].type = #boolean
 
@@ -748,7 +748,7 @@ Usage: #example
 // ---- E1 Blood sodium test ----
 // =================================
 * item[=].item[=].item[=].item[+].linkId = "lab-compendium.Gantenbein.labServices.Sodium" // item[9][0][0][1]
-* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/sodium-serum"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceSodiumSerum"
 * item[=].item[=].item[=].item[=].text = "Natrium"
 * item[=].item[=].item[=].item[=].code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * item[=].item[=].item[=].item[=].type = #boolean
@@ -951,7 +951,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item.item.item.answerOption[+].valueCoding = $sct#122555007 "Venous blood specimen (specimen)"
 
 * item[=].item[=].item[=].item[=].item.answerOption[+].valueCoding = $loinc#2069-3 "Chloride [Moles/volume] in Blood"
-//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/chloride-serum"
+//* item[=].item[=].item[=].item[=].item.answerOption[+].valueReference.reference = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/chloride-serum"
 //* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.type = "PlanDefinition"
 //* item[=].item[=].item[=].item[=].item.answerOption[=].valueReference.display = "Chloride [Moles/volume] in Blood"
 
