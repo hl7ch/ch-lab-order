@@ -29,7 +29,6 @@ rectangle "[[ ObservationDefinition-observationCreatinineSerum.html ObservationD
 rectangle "[[ ObservationDefinition-observationAlbuminUrine.html ObservationDefinition\nUrine Albumin ]]" as ODUA <<$bProcess>><<resource>> #Lavender
 rectangle "[[ ObservationDefinition-observationCreatinineUrine.html ObservationDefinition\nUrine Creatinin ]]" as ODUC <<$bProcess>><<resource>> #Lavender
 
-
 RIP <-down- EGFR : [LAB-5]: basedOn
 RIP <-down- UACR : [LAB-5]: basedOn
 UACR <-down- UA : [LAB-5]: basedOn
@@ -44,18 +43,17 @@ PDRI <-left- SDBV : [LAB-3]: \naction.specimen
 PDRI <-left- SDBC : [LAB-3]: \naction.specimen
 PDRI <-left- SDUS : [LAB-3]: \naction.specimen
 
-AGFK <-right- ODBC : [LAB-4]: \naction.observation
-AACR <-right- ODUA : [LAB-4]: \naction.observation
-AACR <-down- ODUC : [LAB-4]: \naction.observation
-
+AGFK <-right- ODBC : [LAB-4]: \nobservationRequirement
+AACR <-right- ODUA : [LAB-4]: \nobservation\nRequirement
+AACR <-down- ODUC : [LAB-4]: \nobservation\nRequirement
 
 legend left
-[LAB-1]: instantiatesCanonical → ServiceRequest Renal Insufficiency Panel instatiates PlanDefinition
-[LAB-2]: action.defintionCanonical → PlanDefinition defines procedures
-[LAB-3]: action.specimen → PlanDefinition defines Specimen requirements, like Serum, Urine, Container
-[LAB-4]: action.observation → ActivityDefinition defines Observations to generate
-[LAB-5]: basedOn → Sub-ServiceRequest ist based on ServiceRequest
+[LAB-1]: instantiatesCanonical → ServiceRequest Renal Insufficiency Panel instantiates Renal Insufficiency Service
+[LAB-2]: action.definitionCanonical → Renal Insufficiency Service defines Laboratory Procedure
+[LAB-3]: action.specimen → Renal Insufficiency Service defines Specimen required, like Serum, Urine, Container
+[LAB-4]: action.observation → Laboratory Procedure (ActivityDefinition) define Observations required
+[LAB-5]: basedOn → Sub-ServiceRequest is based on ServiceRequest
 ====
-Note: To use the links in the Rectangles open image in a new tab
+Note: To use the links in the rectangles open image in a new tab
 endlegend
 @enduml

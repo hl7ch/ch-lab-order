@@ -92,7 +92,7 @@ Nach Eingang und Bearbeitung des Laborauftrags kann die Situation eintreten, das
 
 ### Use Case 5: Erstellen von Labor-Auftrags-Panels, die die Plandefinition aus dem Order-Katalog instanziieren.
 
-{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 2: Renal Insufficiency Service" width="80%" %}
+{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 2: Renal Insufficiency Service" width="95%" %}
 
 Auftraggeber und Labore verwenden gerne Panels mit mehreren Einzel-Tests oder verschachtelt mit weiteren Panels. Die Labore stellen die Panels gemäss dem eigenen Angebot zur Verfügung. In diesem Beispiel geht es um die Abklärung und Standortbestimmung einer chronischen Niereninsuffizienz. Der Auftrag besteht aus zwei Unteraufträgen, eGFR (estimated Glomerulum Filtrationsrate) und uACR (Albumin/Creatinine Verhältnis im Urin). Letzterer enthält wiederum zwei Unteraufträge: die Albumin Konzentration und die Kreatinin Konzentration im Urin.
 Die Plandefinitionen und Aktivitätsdefinitionen sind im Laborkompendium hinterlegt und können vom Auftraggeber gewählt werden.

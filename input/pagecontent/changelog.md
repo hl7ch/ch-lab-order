@@ -3,6 +3,11 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 ### Changes
+* In version 2.0.0, the 'basedOn' element in the ServiceRequest resource was pointing in the wrong direction. A sub-ServiceRequest must contain a 'basedOn' element pointing to its parent ServiceRequest. The profiles and examples have been updated to reflect this. 
+* The 'code' element in the ServiceRequest has a cardinality of 0..1 and can therefore only contain a single test entry. The data type 'codeableConcept' can have several codes, but only in relation to the same test. This means that different code systems can designate the same test and therefore specify different codes. However, the codeableConcept must not be used as a container for several tests. Each laboratory test must claim a separate ServiceRequest. The examples have been adapted accordingly.
+* Use case 5 has been added for illustration purposes. It shows the hierarchical structure of ServiceRequest for the creation of test panels. At the same time, the diagram shows the basics as PlanDefinition, ActivitityDefinition, SpecimenDefinition and ObservationDefinition, as they can be stored in a compendium.
+* The CH LAB-Order 4-sepsis case study has been supplemented with a diagram showing how the workflow for clinical laboratory orders can look (Fig. 1). It contains a task resource which describes an activity that can be performed on the specimen, and tracks the state of completion of that activity. It is a representation that an activity should be or has been initiated, and eventually, represents the successful or unsuccessful completion of that activity. Below is an example of a reflexed observation, that means, an observation created without explicit ServiceRequest, as consequence of a precedent observation. 
+
 * Add example for Renal Insufficiency as Panel with PlanDefinition and ActionDefinition
 * [Issue#332](https://github.com/hl7ch/ch-lab-order/issues/332  Instance 3-gyn-ServiceRequest: split each lab test into a separate Service Request
 * [Issue#329](https://github.com/hl7ch/ch-lab-order/issues/329) ObservationDefinition Hemoglobin blood -> fix erroneous entries
