@@ -1,0 +1,59 @@
+@startuml RenalInsufficiencyPanel
+
+skinparam rectangle<<resource>> {
+  roundCorner 12
+  BackgroundColor Blue
+  BorderColor Black
+  ArrowColor Black
+  FontName Arial
+  FontSize 16
+  FontStyle Bold
+}
+
+rectangle "[[ ServiceRequest-panel-renal-insufficiency-order.html SR Renal Insufficiency Panel ]] " as RIP <<$bProcess>><<resource>> #Yellow
+rectangle "[[ ServiceRequest-lab-order-eGFR.html SR eGFR CKD-EPI 2021 ]] " as EGFR <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-lab-order-uACR.html SR Albumin/Creatinine Ratio in Urine ]] " as UACR <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-lab-order-urine-albumin.html SR Albumin in Urine ]] " as UA <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-lab-order-urine-creatinine.html SR Creatinine in Urine ]] " as UC <<$bProcess>><<resource>> #LightYellow
+
+rectangle "[[ PlanDefinition-LabServiceRenalInsufficiency.html PlanDefinition\nRenal Insufficiency Service \ntype panel ]]" as PDRI <<$bProcess>><<resource>> #LightGray
+
+rectangle "[[ ActivityDefinition-procedure-lab-eGFR-ckd-epi.html ActivityDefinition\nProcedure eGFK CKD-EPI ]]" as AGFK <<$bProcess>><<resource>> #MediumTurquoise
+rectangle "[[ ActivityDefinition-procedure-urine-uACR.html ActivityDefinition\nProcedure uACR ]]" as AACR <<$bProcess>><<resource>> #MediumTurquoise
+
+rectangle "[[ SpecimenDefinition-single-test-serum-capillary.html SpecimenDefinition\nSerum capillary ]]" as SDBV <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ SpecimenDefinition-single-test-serum-venous.html SpecimenDefinition\nSerum venous ]]" as SDBC <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ SpecimenDefinition-specimenUrineSpot.html SpecimenDefinition\nUrine spot ]]" as SDUS <<$bProcess>><<resource>> #LightCoral
+
+rectangle "[[ ObservationDefinition-observationCreatinineSerum.html ObservationDefinition\nSerum Creatinine ]]" as ODBC <<$bProcess>><<resource>> #Lavender
+rectangle "[[ ObservationDefinition-observationAlbuminUrine.html ObservationDefinition\nUrine Albumin ]]" as ODUA <<$bProcess>><<resource>> #Lavender
+rectangle "[[ ObservationDefinition-observationCreatinineUrine.html ObservationDefinition\nUrine Creatinin ]]" as ODUC <<$bProcess>><<resource>> #Lavender
+
+RIP <-down- EGFR : [LAB-5]: basedOn
+RIP <-down- UACR : [LAB-5]: basedOn
+UACR <-down- UA : [LAB-5]: basedOn
+UACR <-down- UC : [LAB-5]: basedOn
+
+PDRI <-down- RIP : [LAB-1]: instanciatesCanonical
+
+PDRI <-right- AACR : [LAB-2]: \naction.definitionCanonical
+PDRI <-up- AGFK : [LAB-2]: \naction.definitionCanonical
+
+PDRI <-left- SDBV : [LAB-3]: \naction.specimen
+PDRI <-left- SDBC : [LAB-3]: \naction.specimen
+PDRI <-left- SDUS : [LAB-3]: \naction.specimen
+
+AGFK <-right- ODBC : [LAB-4]: \nobservationRequirement
+AACR <-right- ODUA : [LAB-4]: \nobservation\nRequirement
+AACR <-down- ODUC : [LAB-4]: \nobservation\nRequirement
+
+legend left
+[LAB-1]: instantiatesCanonical → ServiceRequest Renal Insufficiency Panel instantiates Renal Insufficiency Service
+[LAB-2]: action.definitionCanonical → Renal Insufficiency Service defines Laboratory Procedure
+[LAB-3]: action.specimen → Renal Insufficiency Service defines Specimen required, like Serum, Urine, Container
+[LAB-4]: action.observation → Laboratory Procedure (ActivityDefinition) define Observations required
+[LAB-5]: basedOn → Sub-ServiceRequest is based on ServiceRequest
+====
+Note: To use the links in the rectangles open image in a new tab
+endlegend
+@enduml

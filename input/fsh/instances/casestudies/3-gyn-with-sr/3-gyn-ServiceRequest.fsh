@@ -5,8 +5,8 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-smear-test"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
@@ -19,7 +19,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
 
 Instance: 3-gyn-ServiceRequest-HPV
@@ -29,8 +29,8 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-hpv"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 
@@ -43,7 +43,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
 
 Instance: 3-gyn-ServiceRequest-Urine-Panel
@@ -53,8 +53,8 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-urine-panel"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 
@@ -67,7 +67,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Urine-gyn)
 
 Instance: 3-gyn-ServiceRequest-Obstetric-Panel
@@ -77,8 +77,8 @@ Description: "Example for Service Request for preventive gynaecological check-up
 Usage: #example
 * id = "3-gyn-service-request-obstetric-panel"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30"
-* identifier[placerOrderIdentifier].value = "123"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
 
@@ -91,7 +91,7 @@ Usage: #example
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
 * reasonCode = $sct#702601001
 * reasonCode.text = "Routine gynecologic examination (procedure)"
-* insurance = Reference(HealthInsuranceCardMarinaRubella)
+// * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Blood-gyn)
 * specimen[+] = Reference(Specimen/Serum-gyn)
 
@@ -101,7 +101,7 @@ Title: "Patient Marina Rubella"
 Description: "CH-Core-Patient, refers to 3-gyn"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: MarinaRubella\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111113\n      </p><p><b>name</b>: MarinaRubella \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Aug 08, 1992\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Italienisch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: MarinaRubella\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400005\n      </p><p><b>name</b>: MarinaRubella \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Aug 08, 1992\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Italienisch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Mendrisio"
 * extension[=].valueAddress.country = "Schweiz"
@@ -110,9 +110,9 @@ Usage: #example
 * extension[=].valueAddress.state = "TI"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[=].valueCodeableConcept = $religiousAffiliation#1077 "Protestant"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111113"
+// * identifier.type = $v2-0203#MR
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400005"
 * name[0].use = #official
 * name[=].family.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-ech-11-name"
 * name[=].family.extension.valueCode = #officialName
@@ -141,21 +141,22 @@ Usage: #example
 * communication.language.text = "Italienisch (Schweiz)"
 * communication.preferred = true
 
+/*
 Instance: HealthInsuranceCardMarinaRubella
-InstanceOf: ChOrfCoverage
+InstanceOf: CHCoreCoverage
 Title: "Coverage Marina Rubella"
 Description: "Example for Insurance"
 Usage: #example
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://ehic.com/insurer/123456789/member"
-* identifier.value = "A123456780"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400005"
 * status = #active
-* type = $coverage-type#KVG "According to KVG"
+* type = $coverage-type#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/MarinaRubella)
 * beneficiary = Reference(Patient/MarinaRubella)
 * period.end = "2024-12-31"
-* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.system = "http://example.org/insurer"
 * payor.identifier.value = "123456789"
+*/
 
 Instance: PeterPapGruppenpraxis
 InstanceOf: CHCorePractitionerRole
@@ -173,7 +174,7 @@ Usage: #example
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601003050707"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123305"
+* identifier[ZSR].value = "A000001"
 * name.use = #official
 * name.family = "Pap"
 * name.given = "Peter"

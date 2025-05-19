@@ -1,5 +1,5 @@
 Instance: LabServiceRenalInsufficiency  // PlanDefinition
-InstanceOf: ChLab_LabServiceDefinition
+InstanceOf: LabServiceDefinition
 Title: "CH LAB-Order Service for Renal Insufficiency Assessment Panel"
 Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
@@ -17,19 +17,12 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
 
-* url = "http://fhir.ch/ig/ch-lab-order/lab-compendium/PlanDefinition/LabServiceRenalInsufficiency"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceRenalInsufficiency"
 * identifier.use = #official
 * identifier.value = "RenalInsufficiendyLabPanel"
 * version = "current"
 * name = "RenalInsufficiendyLabPanel"
-* title = "Renal Insufficiendy Lab Panel"
-/*
-* title.extension.extension[0].url = "lang"
-* title.extension.extension[=].valueCode = #de-CH
-* title.extension.extension[+].url = "content"
-* title.extension.extension[=].valueString = "Niereninsuffizienz Panel"
-* title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
-*/
+* title = "Renal Insufficiency Lab Panel"
 
 * type = $laboratory-service-definition-type#panel
 * status = #draft
@@ -47,18 +40,11 @@ Usage: #example
 * jurisdiction = urn:iso:std:iso:3166#CH
 
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"
+* topic[+] = $sct#441915005 "Measurement of renal function (procedure)"
 * topic[+] = $sct#269858003 "Biochemical evaluation of blood urea/renal function (procedure)"
 * topic[+] = $sct#444275009 "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 * topic[+] = $sct#250745003 "Albumin/creatinine ratio measurement (procedure)"
 
-/* publisher problem? 
-throws: Exception generating Narrative: unexpected non-end of element null::a at line 173 column 50
-* relatedArtifact.type = #documentation
-* relatedArtifact.citation = "Clinically, the most practical tests for assessing renal function are those that estimate the glomerular filtration rate (eGFR) and quantify proteinuria (albuminuria)."
-* relatedArtifact.document.url = "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
-*/
-
-// TODO: adapt actions
 * action.extension[+].extension[+].extension.url = "Material"
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/example-specimen-venous-serum-single-test) "example-specimen-venous-serum-single-test"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
@@ -74,9 +60,6 @@ throws: Exception generating Narrative: unexpected non-end of element null::a at
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all
-// * action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
-// * action.action[0].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-// * action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
-* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
-* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
-* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-urine-uACR"
+* action.definitionCanonical =           "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
+* action.action[+].definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine-uACR"

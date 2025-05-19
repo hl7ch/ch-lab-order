@@ -6,7 +6,7 @@
 
 * [CI Build master](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/master/index.html)
 * [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/develop/index.html)
-* [CI Build 2.0.0-STU-ballot](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/2.0.0-STU-ballot/index.html)
+* [CI Build pharmacode](https://build.fhir.org/ig/hl7ch/ch-lab-order/branches/pharmacode/index.html)
 
 This is a HL7 Swiss FHIR implementation guide. It describes mainly two use cases of laboratory orders. 
 The first one composes the order by the choices given from the Laboratory Information System (LIS) and stores them in the FHIR resource ServiceRequest. 
@@ -151,7 +151,7 @@ look at '<https://fhirblog.com/clinicians-on-fhir-workshop/>'
     ruby -v
     ```
 
-5. Install Jeykll and add your path file
+5. Install Jeykyll and add your path file
 
     ```bash
     gem install --user-install bundler jekyll

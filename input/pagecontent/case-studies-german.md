@@ -61,7 +61,18 @@ Der Assistenzarzt der gynäkologischen Abteilung in der Oltner Gemeinschaftsprax
 
 #### Case study 4: Verdacht auf Sepsis
 
-Die Patientin Sara Speckmann, geboren am 12. 12. 1975, befindet sich seit einiger Zeit im Kantonsspital. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da der Verdacht auf eine Sepsis besteht, ordnet der zuständige Oberarzt, Dr. Hans Hauser, an, ihr am Morgen Blut für eine Blutkultur zu entnehmen. 30 Minuten später werden eine weitere aerobe und eine anaerobe Blutkultur sowie eine Urinprobe entnommen. Alle fünf Proben werden im externen Labor Pipette weiterverarbeitet. Dort werden in einigen Materialien Keime nachgewiesen und anschliessend mittels Massenspektrometrie identifiziert. In den aeroben Blutkulturflaschen wurden die Erreger "Klebsiella pneumoniae" und "Escherichia coli" nachgewiesen. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen. Von den zwei im Blut nachgewiesenen Krankheitserregern wird ein Antibiogramm erstellt. Dieses zeigt, dass die beiden Wirkstoffe "Amoxicillin+Clavulansäure" und "Ceftriaxon" gegen beide Keime wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmäßig über die verschiedenen Teilergebnisse.
+Die Patientin Sara Speckmann, geboren am 12. 12. 1975, befindet sich seit einiger Zeit im Kantonsspital. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da der Verdacht auf eine Sepsis besteht, ordnet der zuständige Oberarzt, Dr. Hans Hauser, an, ihr am Morgen Blut für eine Blutkultur zu entnehmen. 30 Minuten später werden eine weitere aerobe und eine anaerobe Blutkultur sowie eine Urinprobe entnommen. Alle fünf Proben werden im externen Labor Pipette weiterverarbeitet. Dort werden in einigen Materialien Keime nachgewiesen und anschliessend mittels Massenspektrometrie identifiziert. In den aeroben Blutkulturflaschen wurden die Erreger "Klebsiella pneumoniae" und "Escherichia coli" nachgewiesen. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen. 
+Das Bakterienwachstum in den aeroben Kulturen führt zu weiteren Labortests, ohne dass dafür ein spezifischer Auftrag gegeben werden muss (reflexed Test).
+Von den zwei im Blut nachgewiesenen Krankheitserregern wird ein Antibiogramm erstellt. Dieses zeigt, dass die beiden Wirkstoffe "Amoxicillin+Clavulansäure" und "Ceftriaxon" gegen beide Keime wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmäßig über die verschiedenen Teilergebnisse.
+
+{% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
+Das Diagramm zeigt, wie der Arbeitsablauf für klinische Laboraufträge mit einem ServiceRequest verknüpft werden kann (Fig. 1). Sie enthält eine Aufgabenressource (Task), die eine Aktivität beschreibt, die mit der Probe durchgeführt werden kann, und verfolgt den Status der Fertigstellung dieser Aktivität. Sie stellt dar, dass eine Aktivität eingeleitet werden sollte oder eingeleitet worden ist, und repräsentiert schließlich den erfolgreichen oder erfolglosen Abschluss dieser Aktivität.
+
+Übersetzt mit DeepL.com (kostenlose Version)
+
+{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
+legend diagram Reflex Testing
+Dieses Diagramm (Fig. 2) zeigt das Beispiel eines reflex Befundes, das heisst das Resultat eines vorangehenden Test löst weitere Tests aus, ohne dass dazu ausdrückliche ServiceRequests benötigt werden. Im Beispiel ist es der Befund des positiven Bakterienwachstums, der weitere Tests, wie Keimidentifikation und Ansprechen auf Antibiotika, auslöst. 
 
 [Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
 

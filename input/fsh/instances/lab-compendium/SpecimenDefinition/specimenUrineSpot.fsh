@@ -1,6 +1,6 @@
 Instance: specimenUrineSpot
 InstanceOf: SpecimenDefinition
-Title: "CH LAB-Order SpecimenDefinition Urine Spot"
+Title: "SpecimenDefinition Urine Spot"
 Description: "Urine Spot"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
@@ -23,4 +23,4 @@ Usage: #example
 * typeTested[=].handling[0].temperatureQualifier.text = "2-8°C"
 * typeTested[=].handling[=].maxDuration = 14 'd' "day"
 * typeTested[=].handling[+].temperatureQualifier.text = "-20°"
-* typeTested[=].handling[=].maxDuration = 1 'ear' "year"
+* typeTested[=].handling[=].maxDuration = 1 'year' "year"

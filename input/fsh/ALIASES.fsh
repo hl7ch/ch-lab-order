@@ -3,6 +3,11 @@ Alias: $sct                           = http://snomed.info/sct
 Alias: $sctswiss                      = http://snomed.info/sct|http://snomed.info/sct/2011000195101
 Alias: $loinc                         = http://loinc.org
 Alias: $ucum                          = http://unitsofmeasure.org
+
+// Standard country or area codes for statistical use (M49)
+Alias: $m49.htm                       = http://unstats.un.org/unsd/methods/m49/m49.htm
+
+
 Alias: $atc                           = http://www.whocc.no/atc
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v2-0038                       = http://terminology.hl7.org/CodeSystem/v2-0038  // orderStatus
@@ -13,9 +18,10 @@ Alias: $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
 Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916
 Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $v3-Confidentiality            = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/v3-mediaType
+Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/media-type
+Alias: $v3-NullFlavor                 = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $handling-condition            = http://terminology.hl7.org/CodeSystem/handling-condition
 Alias: $catalogType                   = http://terminology.hl7.org/CodeSystem/catalogType
@@ -33,8 +39,12 @@ Alias: $rejection-criteria            = http://terminology.hl7.org/CodeSystem/re
 // Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $substance-category            = http://terminology.hl7.org/CodeSystem/substance-category 
 Alias: $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
-Alias: $coverage-type                 = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype // must by a CS!
-Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype
+
+// Kostenträger
+Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-Term 
+// Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/mainguarantor  // from CH-Term
+// Alias: $coverage-type                 = http://fhir.ch/ig/ch-orf/ValueSet/ch-orf-vs-coveragetype
+Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype  // from CH-ORF
 Alias: $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
 // Alias: $observation-triggered-by-type = http://hl7.org/fhir/observation-triggeredbytype
@@ -50,7 +60,7 @@ Alias: $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech
 Alias: $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias: $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
-Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode
+Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode|3.1
 
 //---- Practitioner ----
 Alias: $hcSpecialisation              = http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcSpecialisation
