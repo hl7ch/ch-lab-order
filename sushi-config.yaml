@@ -8,10 +8,10 @@ license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
 date: 2025-05-22
-version: 3.0.0-ballot
+version: 3.0.0-ci-build
 fhirVersion: 4.0.1
 copyrightYear: 2025+
-releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
   url: https://www.hl7.ch
@@ -23,14 +23,14 @@ contact:
         use: work
 
 dependencies:
-  ch.fhir.ig.ch-core: 6.0.0-ballot
+  ch.fhir.ig.ch-core: current
   ch.fhir.ig.ch-term: 
     uri: http://fhir.ch/ig/ch-term/ImplementationGuide/ch.fhir.ig.ch-term
-    version: 3.2.x
+    version: current # 3.2.x
   # hl7.terminology.r4:
   #   uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
   #   version: 6.3.0
-  ch.fhir.ig.ch-orf: 3.0.1
+  ch.fhir.ig.ch-orf: current # 3.0.1
   hl7.fhir.uv.order-catalog: 0.1.0
    
 pages:
