@@ -8,7 +8,7 @@ Usage: #example
 * category = $observation-category#laboratory "Laboratory"
 * code.coding.code = #98979-8
 * code.coding.system = $loinc
-* code.coding.display = "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+* code.coding.display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
 * permittedDataType = #Quantity
 * multipleResultsAllowed = false
 * preferredReportName = "Glomerular filtration rate/1.73 sq M.predicted"

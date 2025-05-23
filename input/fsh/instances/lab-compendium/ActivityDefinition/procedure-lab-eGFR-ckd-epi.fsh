@@ -33,7 +33,7 @@ Usage: #example
 * library = "https://www.zkidney.com/mdrd-main"
 * kind = #ServiceRequest
 // * code.text = "eGFR calculated with CKD-EPI 2021"
-* code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+* code = $loinc#98979-8 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
 
 // codes from SNOMED CT and from LOINC
 // * code.coding[+].system = $sct
@@ -41,7 +41,7 @@ Usage: #example
 // * code.coding[=].display = "Measurement of creatinine concentration in serum or plasma specimen with calculation of glomerular filtration rate (procedure)"
 // * code.coding[+].system = $loinc
 // * code.coding[=].code = #98979-8
-// * code.coding[=].display = "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+// * code.coding[=].display = "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
 // * code.text = "eGFR by CKD-EPI 2021"
 // * timingTiming.event.extension.url = "http://hl7.org/fhir/StructureDefinition/cqf-expression"
 // * timingTiming.event.extension.valueExpression.language = #text/cql

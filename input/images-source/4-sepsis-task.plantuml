@@ -40,7 +40,7 @@ SRCRP <-down- DRCRP : [LAB-4]: basedOn
 DRG -down-> OMA : [LAB-5]: result
 DRG -down-> OMANA : [LAB-5]: result
 
-SR <-up- T1 : [LAB-1]: basedOn
+SR <-up- T1 : [LAB-1]: focus
 T1 <-left- BBS : [LAB-2]: input
 T1 <-left- BS : [LAB-2]: input
 T1 <-left- SS : [LAB-2]: input

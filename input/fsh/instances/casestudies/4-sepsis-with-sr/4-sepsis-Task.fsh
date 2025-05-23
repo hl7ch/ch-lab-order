@@ -3,7 +3,7 @@
 // # ##########################################################
 
 Instance: SepsisWorkup
-InstanceOf: Task
+InstanceOf: ChLabOrderTask
 Description: "Example Task for Sepsis Workup"
 Usage: #example
 * contained = signature

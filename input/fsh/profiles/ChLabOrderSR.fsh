@@ -32,10 +32,9 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // * requisition 0..1 MS
 * category = $sct#108252007 "Laboratory procedure (procedure)"
 
-* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
-* code 1..1 MS
+* code 1..1
+* code.coding 1..1
 * code.coding from LoincOrSnomed (preferred)
-* code ^short = "Code for the test or service to be performed"
 
 //------- orderDetail -------
 * orderDetail.coding. 0..1 MS
