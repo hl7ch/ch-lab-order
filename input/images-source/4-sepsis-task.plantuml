@@ -46,7 +46,7 @@ T1 <-left- BS : [LAB-2]: input
 T1 <-left- SS : [LAB-2]: input
 
 legend left
-[Lab-1] based On → Service Request is fullfilled by Task Sepsis Workup
+[Lab-1] focus → Service Request is fullfilled by Task Sepsis Workup
 [Lab-2] input → Specimen information used by Task Sepsis Workup
 [Lab-3] based On → Sub-Service Requests grouped by 4-sepsis ServiceRequest
 [Lab-4] based On → Diagnostic Reports requested by Sub-Service Requests
