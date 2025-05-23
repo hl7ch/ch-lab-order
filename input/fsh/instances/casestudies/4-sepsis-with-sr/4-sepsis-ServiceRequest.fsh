@@ -11,6 +11,10 @@ Usage: #example
 * status = #active
 * intent = #original-order
 * priority = #urgent
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding.code = $loinc#26436-6 "Laboratory studies (set)"
+
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#870441004

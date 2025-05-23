@@ -9,7 +9,7 @@ Usage: #example
 // * basedOn = Reference(2-pertussis-ServiceRequest)
 * basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
-* intent = #order
+// * intent = #order
 
 // adding an additional Test, 2-pertussis-ServiceRequest is replaced
 * code.coding[+].system = $loinc

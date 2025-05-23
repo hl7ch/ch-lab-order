@@ -19,7 +19,7 @@ Usage: #example
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-// * code.coding.code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.coding.code = $loinc#26436-6 "Laboratory studies (set)"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"

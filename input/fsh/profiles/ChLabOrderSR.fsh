@@ -20,7 +20,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
 * obeys sr-1
-
+* intent = #original-order (exactly)
 * instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
@@ -33,6 +33,9 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * category = $sct#108252007 "Laboratory procedure (procedure)"
 
 * code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+* code 1..1 MS
+* code.coding from LoincOrSnomed (preferred)
+* code ^short = "Code for the test or service to be performed"
 
 //------- orderDetail -------
 * orderDetail.coding. 0..1 MS
@@ -42,6 +45,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * reasonCode MS
 * reasonCode ^short = "Clinical Question in free text"
 * reasonCode.text 1.. MS
+* reasonCode.coding from http://hl7.org/fhir/ValueSet/clinical-findings (extensible)
 
 //------- reasonReference -------
 * reasonReference MS
