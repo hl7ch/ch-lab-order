@@ -143,10 +143,7 @@ Usage: #example
 * status = #active
 * intent = #original-order
 
-* code.coding.code = #20570-8
-* code.coding.system = $loinc
-* code.coding.display = "Hematocrit [Volume Fraction] of Blood by calculation"
-
+* code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)

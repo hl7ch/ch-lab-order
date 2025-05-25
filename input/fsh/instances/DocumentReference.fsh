@@ -21,7 +21,7 @@ Usage: #example
 * description = "Physical"
 
 // seems to be correct, but publisher declared codings not in the value set:
-* securityLabel = $v3-Confidentiality#N "normal"
+* securityLabel = $sct#17621005 "Normal"
 
 * content.attachment.contentType = #application/fhir+xml
 * content.attachment.language = #en-US

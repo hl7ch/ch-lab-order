@@ -33,7 +33,7 @@ Usage: #example
 * library = "https://www.zkidney.com/mdrd-main"
 * kind = #ServiceRequest
 // * code.text = "eGFR calculated with CKD-EPI 2021"
-* code = $loinc#98979-8 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+* code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 
 // codes from SNOMED CT and from LOINC
 // * code.coding[+].system = $sct
