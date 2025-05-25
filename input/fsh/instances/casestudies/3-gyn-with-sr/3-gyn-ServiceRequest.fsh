@@ -17,8 +17,8 @@ Usage: #example
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
-* reasonCode = $sct#702601001
-* reasonCode.text = "Routine gynecologic examination (procedure)"
+* reasonCode = $sct#289906003 "Female genital tract problem (finding)"
+* reasonCode.text = "Female genital tract problem"
 // * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
 
@@ -41,8 +41,8 @@ Usage: #example
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
-* reasonCode = $sct#702601001
-* reasonCode.text = "Routine gynecologic examination (procedure)"
+* reasonCode = $sct#289906003 "Female genital tract problem (finding)"
+* reasonCode.text = "Female genital tract problem"
 // * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Cervix-swab)
 
@@ -65,8 +65,8 @@ Usage: #example
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
-* reasonCode = $sct#702601001
-* reasonCode.text = "Routine gynecologic examination (procedure)"
+* reasonCode = $sct#289906003 "Female genital tract problem (finding)"
+* reasonCode.text = "Female genital tract problem"
 // * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Urine-gyn)
 
@@ -89,8 +89,8 @@ Usage: #example
 * priority = #routine
 * subject = Reference(Patient/MarinaRubella)
 * requester = Reference(PractitionerRole/PeterPapGruppenpraxis)
-* reasonCode = $sct#702601001
-* reasonCode.text = "Routine gynecologic examination (procedure)"
+* reasonCode = $sct#289906003 "Female genital tract problem (finding)"
+* reasonCode.text = "Female genital tract problem"
 // * insurance = Reference(HealthInsuranceCardMarinaRubella)
 * specimen[+] = Reference(Specimen/Blood-gyn)
 * specimen[+] = Reference(Specimen/Serum-gyn)

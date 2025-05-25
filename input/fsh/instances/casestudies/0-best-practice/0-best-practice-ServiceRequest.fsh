@@ -39,11 +39,11 @@ Usage: #example
 
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
-// * reasonCode = $sct#250361003 "Heparin control test (procedure)"
-* reasonCode.coding.code = #250361003
-* reasonCode.coding.system = $sct
-* reasonCode.coding.display = "Heparin control test (procedure)"
-* reasonCode.text = "Patient gets Heparin injections"
+* reasonCode = $sct#446980008 "Open fracture of tibial plateau (disorder)"
+// * reasonCode.coding.code = #250361003
+// * reasonCode.coding.system = $sct
+// * reasonCode.coding.display = "Heparin control test (procedure)"
+* reasonCode.text = "Open fracture of tibial plateau"
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * reasonReference = Reference(ConditionAnticoagulation)
 * supportingInfo[+] = Reference(Liquemin)
@@ -72,10 +72,11 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode.coding.code = #171183004
-* reasonCode.coding.system = $sct
-* reasonCode.coding.display = "Diabetes mellitus screening (procedure)"
-* reasonCode.text = "Diabetes mellitus screening"
+* reasonCode.coding = $sct#73211009 "Diabetes mellitus (disorder)"
+//* reasonCode.coding.code = #171183004
+//* reasonCode.coding.system = $sct
+//* reasonCode.coding.display = "Diabetes mellitus screening (procedure)"
+* reasonCode.text = "Diabetes mellitus"
 
 // * insurance = Reference(HealthInsuranceCardBirgitBlum)
 * specimen = Reference(Specimen/Serum-0-best-practice) "Serum specimen"
@@ -101,9 +102,9 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BirgitBlum)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode.coding.code = #171201007
-* reasonCode.coding.system = $sct
-* reasonCode.coding.display = "Anemia screening (procedure)"
+* reasonCode.coding = $sct#413532003 "Anemia due to blood loss (disorder)"
+
+* reasonCode.coding.display = "Anemia due to blood loss"
 * reasonCode.text = "Anemia screening"
 
 Instance: 0-best-practice-ServiceRequest-3-Hb

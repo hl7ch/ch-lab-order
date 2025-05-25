@@ -11,11 +11,11 @@ Usage: #example
 
 * priority = #urgent
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding.code = $loinc#26436-6 "Laboratory studies (set)"
+* code = $loinc#26436-6 "Laboratory studies (set)"
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#314076009
-* reasonCode.text = "Toxicology screening test (procedure)"
+* reasonCode = $sct#39623008 "At increased risk for poisoning injury (finding)"
+* reasonCode.text = "At increased risk for poisoning injury (finding)"
 // * insurance = Reference(HealthInsuranceCardBeatBorer)
 // * specimen[+] = Reference(Specimen/Blood-biol-monit)
 // * specimen[+] = Reference(Specimen/Urine-biol-monit)
@@ -38,8 +38,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#314076009
-* reasonCode.text = "Toxicology screening test (procedure)"
+* reasonCode = $sct#39623008 "At increased risk for poisoning injury (finding)"
+* reasonCode.text = "At increased risk for poisoning injury (finding)"
 // * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Blood-biol-monit)
 
@@ -61,8 +61,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#314076009
-* reasonCode.text = "Toxicology screening test (procedure)"
+* reasonCode = $sct#39623008 "At increased risk for poisoning injury (finding)"
+* reasonCode.text = "At increased risk for poisoning injury (finding)"
 // * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 

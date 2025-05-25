@@ -20,7 +20,7 @@ Usage: #example
 
 * priority = #urgent
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding.code = $loinc#26436-6 "Laboratory studies (set)"
+* code = $loinc#26436-6 "Laboratory studies (set)"
 * subject = Reference(Patient/HansGuggindieluft)
 * requester = Reference(MarcMustermannGruppenpraxis)
 * reasonCode = $sct#404223003

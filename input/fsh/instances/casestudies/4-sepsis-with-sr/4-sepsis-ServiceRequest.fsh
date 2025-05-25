@@ -13,12 +13,12 @@ Usage: #example
 * priority = #urgent
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding.code = $loinc#26436-6 "Laboratory studies (set)"
-
+// * code = $loinc#26436-6 "Laboratory studies (set)"
+* code = $loinc#26436-6 "Laboratory studies (set)"
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 /*
 Specimen are not defined here, but in the respective sub-serviceRequast instances
@@ -47,8 +47,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 
@@ -72,8 +72,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 
@@ -104,8 +104,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
 
@@ -127,8 +127,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Serum-4-sepsis)
 

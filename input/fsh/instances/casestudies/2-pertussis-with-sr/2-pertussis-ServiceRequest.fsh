@@ -24,8 +24,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 
 Instance: 2-pertussis-ServiceRequestCBC
@@ -59,8 +59,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 // * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
@@ -97,8 +97,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 // * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 // * specimen[+] = Reference(Specimen/Blood-2-pertussis)
