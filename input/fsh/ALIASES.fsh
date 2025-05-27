@@ -32,7 +32,7 @@ Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/ob
 Alias: $referencerange-meaning        = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $usage-context-type            = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $task-code                     = http://hl7.org/fhir/CodeSystem/task-code
-
+Alias: $task-codeVS                   = http://hl7.org/fhir/ValueSet/task-code
 Alias: $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias: $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
 // Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
