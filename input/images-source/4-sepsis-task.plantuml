@@ -10,14 +10,13 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
+rectangle "[[ CarePlan-4-sepsis-CarePlan.html 4-sepsis-CarePlan ]] " as CP <<$bProcess>><<resource>> #Chartreuse
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #Yellow
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestHbHt.html 4-sepsis ServiceRequest HbHt ]] " as SRHBHT <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCBCDiff.html 4-sepsis ServiceRequest CBC Diff ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCRP.html 4-sepsis ServiceRequest CRP ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportHbHt.html 4-sepsis DiagnosticReport Hb and Ht ]]" as DRHBHT <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCBCDiff.html 4-sepsis DiagnosticReport CBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport CRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
 
@@ -30,22 +29,22 @@ rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis]]" as 
 rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis]]" as SS <<$bProcess>><<resource>> #LightCoral
 
 SR <-down- SRG : [LAB-3]: basedOn
-SR <-down- SRHBHT : [LAB-3]: basedOn
 SR <-down- SRDIFF : [LAB-3]: basedOn
 SR <-down- SRCRP : [LAB-3]: basedOn
 SRG <-down- DRG : [LAB-4]: basedOn
-SRHBHT <-down- DRHBHT : [LAB-4]: basedOn
 SRDIFF <-down- DRDIFF : [LAB-4]: basedOn
 SRCRP <-down- DRCRP : [LAB-4]: basedOn
 DRG -down-> OMA : [LAB-5]: result
 DRG -down-> OMANA : [LAB-5]: result
 
 SR <-up- T1 : [LAB-1]: focus
+CP <-left- T1 : [LAB-0]: basedOn
 T1 <-left- BBS : [LAB-2]: input
 T1 <-left- BS : [LAB-2]: input
 T1 <-left- SS : [LAB-2]: input
 
 legend left
+[Lab-0] based On → Task is based on 4-sepsis-CarePlan
 [Lab-1] focus → Service Request is fullfilled by Task Sepsis Workup
 [Lab-2] input → Specimen information used by Task Sepsis Workup
 [Lab-3] based On → Sub-Service Requests grouped by 4-sepsis ServiceRequest

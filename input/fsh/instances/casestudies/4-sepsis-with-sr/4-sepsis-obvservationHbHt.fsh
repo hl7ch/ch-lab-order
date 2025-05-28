@@ -1,3 +1,4 @@
+/*
 Instance: ObservationHbHt
 InstanceOf: ChLabObservationR4R5
 Title: "Hemoglobin/Hematocrit Panel Result"
@@ -12,7 +13,9 @@ Usage: #example
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * hasMember[0] = Reference(ObservationHb)
 * hasMember[1] = Reference(ObservationHt)
+*/
 
+/*
 Instance: ObservationHb
 InstanceOf: ChLabObservationR4R5
 Title: "Hemoglobin Result"
@@ -40,3 +43,4 @@ Usage: #example
 * effectiveDateTime = "2025-04-08"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * valueQuantity = 33 '%' "%"
+*/

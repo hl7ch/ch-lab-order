@@ -18,7 +18,7 @@ Usage: #example
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
-* reasonCode.text = "Clinical sepis"
+* reasonCode.text = "Clinical sepsis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 /*
 Specimen are not defined here, but in the respective sub-serviceRequast instances
@@ -27,6 +27,7 @@ Specimen are not defined here, but in the respective sub-serviceRequast instance
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 */
 
+/*
 Instance: 4-sepsis-ServiceRequestHbHt   // Service request for Hemoglobin and Hematocrit
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
@@ -51,6 +52,7 @@ Usage: #example
 * reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
+*/
 
 Instance: 4-sepsis-ServiceRequestCBCDiff
 InstanceOf: ChLabOrderSR
