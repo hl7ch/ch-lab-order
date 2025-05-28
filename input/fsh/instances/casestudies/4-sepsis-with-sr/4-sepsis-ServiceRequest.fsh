@@ -22,8 +22,8 @@ Usage: #example
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 /*
 Specimen are not defined here, but in the respective sub-serviceRequast instances
-* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
-* specimen[+] = Reference(Specimen/Blood-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 */
 
@@ -51,7 +51,7 @@ Usage: #example
 * reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
 * reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[+] = Reference(Specimen/Blood-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood)
 */
 
 Instance: 4-sepsis-ServiceRequestCBCDiff
@@ -77,7 +77,7 @@ Usage: #example
 * reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
 * reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[+] = Reference(Specimen/Blood-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood)
 
 Instance: 4-sepsis-ServiceRequestGrowth
 InstanceOf: ChLabOrderSR
@@ -109,7 +109,7 @@ Usage: #example
 * reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
 * reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
 
 Instance: 4-sepsis-ServiceRequestCRP   // Service request for C reactive protein
 InstanceOf: ChLabOrderSR
@@ -132,7 +132,7 @@ Usage: #example
 * reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
 * reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[+] = Reference(Specimen/Serum-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Serum)
 
 Instance: SaraSpeckmann
 InstanceOf: CHCorePatient
@@ -183,7 +183,7 @@ Usage: #example
 * payor.identifier.value = "123456789"
 */
 
-Instance: Blood-bactec-plus-4-sepsis
+Instance: 4-sepsis-Blood-bactec-plus
 InstanceOf: Specimen
 Title: "Blood Collection in Blood Culture Bottles, 4-sepsis"
 Description: "Example for specimen for aerobic and anaerobic blood culture"
@@ -211,7 +211,7 @@ Usage: #example
 
 * note.text = "Each container type contains two blood samples taken 30 minutes apart, so we get 4 vials in total"
 
-Instance: Blood-4-sepsis
+Instance: 4-sepsis-Blood
 InstanceOf: Specimen
 Title: "Blood Sample, 4-sepsis"
 Description: "Example for Specimen for Haematological Examination"
@@ -226,7 +226,7 @@ Usage: #example
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-Instance: Serum-4-sepsis
+Instance: 4-sepsis-Serum
 InstanceOf: Specimen
 Title: "Serum Sample, 4-sepsis"
 Description: "Example for Specimen of Serum"
