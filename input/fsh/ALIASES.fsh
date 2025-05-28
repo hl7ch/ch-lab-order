@@ -58,6 +58,7 @@ Alias: $ValidityPeriod = http://hl7.org/fhir/uv/order-catalog/StructureDefinitio
 Alias: $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias: $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
+Alias: $priority                      = http://terminology.hl7.org/CodeSystem/v3-ActPriority
 Alias: $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
 Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode|3.1
 

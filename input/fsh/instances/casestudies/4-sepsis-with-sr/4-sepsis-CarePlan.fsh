@@ -34,7 +34,12 @@ Instance: goal
 InstanceOf: Goal
 Usage: #inline
 * lifecycleStatus = #active
+* description = $sct#82106000 "Bacterial antibiogram analysis (procedure)"
 * description.text = "Look for identity and susceptibility of pathogens in the blood culture and urine sample"
+// * description.coding.code = #82106000
+// * description.coding.system = "$sct"
+// * description.coding.display = "Bacterial antibiogram analysis"
+
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
 
 Instance: 4-sepsis-fever-with-chills

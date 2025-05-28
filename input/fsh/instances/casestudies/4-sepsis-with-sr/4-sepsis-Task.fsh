@@ -2,7 +2,7 @@
 // #    Tasks
 // # ##########################################################
 
-Instance: SepsisWorkup
+Instance: 4-sepsis-Task
 InstanceOf: ChLabOrderTask
 Description: "Example Task for Sepsis Workup"
 Usage: #example
@@ -86,9 +86,9 @@ Usage: #example
 * identifier.use = #temp
 * identifier.value = "Encounter_Hans_20130404"
 * status = #finished
-* class = $v3-ActCode#AMB "ambulatory"
+* class = $v3-ActCode#IMP "inpatient encounter"
 * type = $sct#11429006 "Consultation"
-* priority = $sct#17621005 "Normal"
+* priority = $priority#UR "urgent"
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
 * participant.individual = Reference(Practitioner/HansHauser) "Dr Hans Hauser"
 * reasonCode.text = "The patient had fever peaks over the last night, the general condition deteriorated massively."

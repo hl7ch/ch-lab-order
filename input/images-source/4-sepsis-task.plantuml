@@ -23,10 +23,10 @@ rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis Diagno
 rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 
-rectangle "[[ Task-SepsisWorkup.html Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
-rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nBactec Plus 4-sepsis]]" as BBS <<$bProcess>><<resource>> #LightCoral
-rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
-rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis]]" as SS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Task-4-sepsis-Task.html Sepsis Workup\n4-sepsis-Task ]]" as T1 <<$bProcess>><<resource>> #LightGray
+rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nBactec Plus 4-sepsis ]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis ]]" as BS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis ]]" as SS <<$bProcess>><<resource>> #LightCoral
 
 SR <-down- SRG : [LAB-3]: basedOn
 SR <-down- SRDIFF : [LAB-3]: basedOn
