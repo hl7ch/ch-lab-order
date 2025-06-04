@@ -24,7 +24,7 @@ Usage: #example
 Specimen are not defined here, but in the respective sub-serviceRequast instances
 * specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
 * specimen[+] = Reference(Specimen/4-sepsis-Blood)
-* specimen[+] = Reference(Specimen/Urine-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Urine)
 */
 
 /*
@@ -213,7 +213,7 @@ Usage: #example
 
 Instance: 4-sepsis-Blood
 InstanceOf: Specimen
-Title: "Blood Sample, 4-sepsis"
+Title: "4-sepsis Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
@@ -228,7 +228,7 @@ Usage: #example
 
 Instance: 4-sepsis-Serum
 InstanceOf: Specimen
-Title: "Serum Sample, 4-sepsis"
+Title: "4-sepsis Serum Sample"
 Description: "Example for Specimen of Serum"
 Usage: #example
 * identifier.value = "11111-15394-75465"
@@ -242,9 +242,9 @@ Usage: #example
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * container.type = $sct#706053007 "General specimen container (physical object)"
 
-Instance: Urine-4-sepsis
+Instance: 4-sepsis-Urine
 InstanceOf: Specimen
-Title: "Urine Sample, 4-sepsis"
+Title: "4-sepsis Urine Sample"
 Description: "Example for Specimen of Urin"
 Usage: #example
 * identifier.value = "11111-15394-75465"

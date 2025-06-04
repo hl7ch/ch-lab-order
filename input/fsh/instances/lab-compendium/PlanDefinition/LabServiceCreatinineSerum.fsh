@@ -8,7 +8,7 @@ Usage: #example
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
-* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses#1509.01
+* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses/A#1509.01
 * extension[+].extension[0].url = "textualSummary"
 * extension[=].extension[=].valueMarkdown = "no notable particularity for billing"
 * extension[=].extension[+].url = "reimbursabilitySummary"

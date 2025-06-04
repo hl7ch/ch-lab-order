@@ -1,5 +1,6 @@
 Instance: 4-sepsis-CarePlan
 InstanceOf: CarePlan
+Title: "4-sepsis CarePlan"
 Description: "Care plan for Sara Speckmann with sepsis, including care team and goals. The 4-sepsis Task is based on this CarePlan."
 Usage: #example
 * contained[0] = careteam

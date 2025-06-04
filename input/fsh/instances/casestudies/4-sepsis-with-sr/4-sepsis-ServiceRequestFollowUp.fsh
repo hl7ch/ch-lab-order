@@ -31,7 +31,7 @@ Usage: #example
 * specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
 /*
 * specimen[+] = Reference(Specimen/4-sepsis-Blood)
-* specimen[+] = Reference(Specimen/Urine-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Urine)
 */
 
 Instance: 4-sepsis-ServiceRequestMALDi-TOF   // Service request for C reactive protein
