@@ -40,9 +40,11 @@ Alias: $substance-category            = http://terminology.hl7.org/CodeSystem/su
 Alias: $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
 
 // Kostenträger
-Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-Term 
+// Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-Term 
 // Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/mainguarantor  // from CH-Term
 // Alias: $coverage-type                 = http://fhir.ch/ig/ch-orf/ValueSet/ch-orf-vs-coveragetype
+Alias: $coverage-type                 = http://fhir.ch/ig/ch-term/ValueSet/mainguarantor // from CH-ORF
+Alias: $coverage-typeCS               = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-ORF
 Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype  // from CH-ORF
 Alias: $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
