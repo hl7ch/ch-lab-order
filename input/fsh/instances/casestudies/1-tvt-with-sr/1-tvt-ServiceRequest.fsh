@@ -19,7 +19,7 @@ Usage: #example
 // * category = $sct#721963009 "Order (record artifact)"
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-// * code.coding.code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code = $loinc#26436-6 "Laboratory studies (set)"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
@@ -202,7 +202,7 @@ Usage: #example
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "80756011110123400003"
 * status = #active
-* type = $coverage-type#1 "Krankenversicherung (obligat.)"
+* type = $coverage-typeCS#1 "Krankenversicherung (obligat.)"
 * subscriber = Reference(Patient/TobiasTimmermann)
 * beneficiary = Reference(Patient/TobiasTimmermann)
 * period.end = "2024-12-31"

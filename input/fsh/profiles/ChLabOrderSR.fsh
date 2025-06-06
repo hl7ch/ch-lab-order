@@ -20,7 +20,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 * ^copyright = "CC0-1.0"
 * obeys sr-1
-
+* intent = #original-order (exactly)
 * instantiatesCanonical 0..1 MS   // canonical(ActivityDefinition | PlanDefinition)
 
 // ---- SR Container and SR Labtest must have same requisition identifier ----
@@ -32,7 +32,9 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 // * requisition 0..1 MS
 * category = $sct#108252007 "Laboratory procedure (procedure)"
 
-* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+* code 1..1
+* code.coding 1..1
+* code.coding from LoincOrSnomed (preferred)
 
 //------- orderDetail -------
 * orderDetail.coding. 0..1 MS
@@ -42,6 +44,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * reasonCode MS
 * reasonCode ^short = "Clinical Question in free text"
 * reasonCode.text 1.. MS
+* reasonCode.coding from http://hl7.org/fhir/ValueSet/clinical-findings (extensible)
 
 //------- reasonReference -------
 * reasonReference MS
@@ -49,22 +52,13 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
 * reasonReference only Reference(ChLabOrderDiagnosisCondition or ChLabOrderDiagnosticReport or Observation) 
 
 //------- insurance -------
-
 * insurance 0..1 MS
-* insurance ^short = "Insurance information"
+* insurance 
+  * ^short = "Insurance information"
+  * ^comment = "The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."  
 * insurance only Reference(ChOrfCoverage)
-  //* ^short = "Insurance information"
-  //* ^definition = "The insurance information of the patient. The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
-  //* ^comment = "The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
-  //* ^binding.strength = #example
-  //* ^binding.description = "The insurance information of the patient. The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
-  //* ^binding.valueSet = $coverage-type
-  //* ^binding.valueSet.reference = "http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor"
-  //* ^binding.valueSet.reference = "http://fhir.ch/ig/ch-orf/ValueSet/ch-orf-vs-coveragetype"
-  //* ^binding.valueSet.reference = "http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype"
 
 //------- supportingInfo -------
-
 * supportingInfo 0..* MS
 * supportingInfo ^short = "Supporting information"
 * supportingInfo only Reference(ChLabOrderDiagnosisCondition or ChLabOrderMedication or MedicationStatement or ChOrfDocumentReference or ChLabOrderSR or ChOrfServiceRequest)

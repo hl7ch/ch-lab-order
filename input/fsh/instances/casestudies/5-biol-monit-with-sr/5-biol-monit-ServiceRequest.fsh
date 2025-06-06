@@ -8,45 +8,14 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "Y274589"
 * status = #active
 * intent = #original-order
-// * category = $sct#721963009 "Order (record artifact)"
-
-// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-// * code.coding[+].code = #24360-0
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "Hemoglobin and Hematocrit panel - Blood"
-// 
-// * code.coding[+].code = #43113-0
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "Hemoglobin electrophoresis panel in Blood"
-// 
-// * code.coding[+].code = #57021-8
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "CBC W Auto Differential panel - Blood"
-// 
-// * code.coding[+].code = #58410-2
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "CBC panel - Blood by Automated count"
-
-// * code.coding[+].code = #29587-3
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "Toxicology panel - Blood"
-// 
-// * code.coding[+].code = #54454-4
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "Arsenic fractions panel - Urine"
-// 
-// * code.coding[+].code = #29589-9
-// * code.coding[=].system = $loinc
-// * code.coding[=].display = "Heavy metals panel - Urine"
-
-// orderDetails: Additional order information
-// * orderDetail = $v2-0119#NW "New order/service"
 
 * priority = #urgent
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code = $loinc#26436-6 "Laboratory studies (set)"
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#314076009
-* reasonCode.text = "Toxicology screening test (procedure)"
+* reasonCode = $sct#39623008 "At increased risk for poisoning injury (finding)"
+* reasonCode.text = "At increased risk for poisoning injury (finding)"
 // * insurance = Reference(HealthInsuranceCardBeatBorer)
 // * specimen[+] = Reference(Specimen/Blood-biol-monit)
 // * specimen[+] = Reference(Specimen/Urine-biol-monit)
@@ -69,8 +38,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#314076009
-* reasonCode.text = "Toxicology screening test (procedure)"
+* reasonCode = $sct#39623008 "At increased risk for poisoning injury (finding)"
+* reasonCode.text = "At increased risk for poisoning injury (finding)"
 // * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Blood-biol-monit)
 
@@ -92,8 +61,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/BeatBorer)
 * requester = Reference(PauloPorcelliniSuva)
-* reasonCode = $sct#314076009
-* reasonCode.text = "Toxicology screening test (procedure)"
+* reasonCode = $sct#39623008 "At increased risk for poisoning injury (finding)"
+* reasonCode.text = "At increased risk for poisoning injury (finding)"
 // * insurance = Reference(HealthInsuranceCardBeatBorer)
 * specimen[+] = Reference(Specimen/Urine-biol-monit)
 

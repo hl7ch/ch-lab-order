@@ -23,8 +23,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SimoneStuder)
 * requester = Reference(ArminAhrensArztpraxis)
-* reasonCode = $sct#1163403006 "Pigmented nevus (morphologic abnormality)"
-* reasonCode.text = "Suspicion Melanoma Skin"
+* reasonCode = $sct#370172004 "Skin pigmentation (finding)"
+* reasonCode.text = "Skin pigmentation"
 * reasonReference = Reference(DiagnosticReport/skin-dermatoscopy)
 // * insurance = Reference(HealthInsuranceCardSimoneStuder)
 * specimen[+] = Reference(Specimen/Skin) "Skin specimen"

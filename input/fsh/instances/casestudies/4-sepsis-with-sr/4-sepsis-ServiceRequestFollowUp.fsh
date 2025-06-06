@@ -24,14 +24,14 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 
-* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
 /*
-* specimen[+] = Reference(Specimen/Blood-4-sepsis)
-* specimen[+] = Reference(Specimen/Urine-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood)
+* specimen[+] = Reference(Specimen/4-sepsis-Urine)
 */
 
 Instance: 4-sepsis-ServiceRequestMALDi-TOF   // Service request for C reactive protein
@@ -48,8 +48,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/SaraSpeckmann)
 * requester = Reference(HansHauserKantonsspital)
-* reasonCode = $sct#870441004
-* reasonCode.text = "Screening for sepsis (procedure)"
+* reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
+* reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 
 * code.coding[+].code = #76346-6

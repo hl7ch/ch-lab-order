@@ -9,7 +9,7 @@ Usage: #example
 // * basedOn = Reference(2-pertussis-ServiceRequest)
 * basedOn = Reference(2-pertussis-ServiceRequest)
 * status = #active
-* intent = #order
+// * intent = #order
 
 // adding an additional Test, 2-pertussis-ServiceRequest is replaced
 * code.coding[+].system = $loinc
@@ -24,7 +24,7 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)

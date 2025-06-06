@@ -41,17 +41,17 @@ Usage: #example
 // * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardSaraSpeckmann"
 // * entry[=].resource = HealthInsuranceCardSaraSpeckmann
 
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-bactec-plus-4-sepsis"
-* entry[=].resource = Blood-bactec-plus-4-sepsis
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-4-sepsis"
-* entry[=].resource = Blood-4-sepsis
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-4-sepsis"
-* entry[=].resource = Serum-4-sepsis
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/4-sepsis-Blood-bactec-plus"
+* entry[=].resource = 4-sepsis-Blood-bactec-plus
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/4-sepsis-Blood"
+* entry[=].resource = 4-sepsis-Blood
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/4-sepsis-Serum"
+* entry[=].resource = 4-sepsis-Serum
 
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequest"  // entry[15]
 * entry[=].resource = 4-sepsis-ServiceRequest
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestHbHt"  // entry[16]
-* entry[=].resource = 4-sepsis-ServiceRequestHbHt
+// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestHbHt"  // entry[16]
+// * entry[=].resource = 4-sepsis-ServiceRequestHbHt
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestCBCDiff"  // entry[16]
 * entry[=].resource = 4-sepsis-ServiceRequestCBCDiff
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestGrowth"  // entry[17]

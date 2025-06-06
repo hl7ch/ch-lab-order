@@ -24,8 +24,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 
 Instance: 2-pertussis-ServiceRequestCBC
@@ -44,10 +44,10 @@ Usage: #example
 * code.coding[0].system = $loinc
 * code.coding[=].code = #58410-2
 * code.coding[=].display = "CBC panel - Blood by Automated count"
-* code.text = "Laboratory Order"
-* code.coding[+].system = $loinc
-* code.coding[=].code = #1988-5 
-* code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
+// * code.text = "Laboratory Order"
+// * code.coding[+].system = $loinc
+// * code.coding[=].code = #1988-5 
+// * code.coding[=].display = "C reactive protein [Mass/Volume] in Serum or Plasma"
 
 // orderDetails: Additional order information
 // * orderDetail = $v2-0119#NW "New order/service"
@@ -59,8 +59,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 // * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 * specimen[+] = Reference(Specimen/Blood-2-pertussis)
@@ -79,9 +79,9 @@ Usage: #example
 * intent = #original-order
 
 // code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
-* code.coding[0].system = $loinc
-* code.coding[=].code = #58410-2
-* code.coding[=].display = "CBC panel - Blood by Automated count"
+// * code.coding[0].system = $loinc
+// * code.coding[=].code = #58410-2
+// * code.coding[=].display = "CBC panel - Blood by Automated count"
 * code.text = "Laboratory Order"
 * code.coding[+].system = $loinc
 * code.coding[=].code = #1988-5 
@@ -97,8 +97,8 @@ Usage: #example
 * priority = #urgent
 * subject = Reference(Patient/EmilKummer)
 * requester = Reference(PeterPrestoGruppenpraxis)
-* reasonCode = $sct#772146005
-* reasonCode.text = "Pertussis suspected (situation)"
+* reasonCode = $sct#49727002 "Cough (finding)"
+* reasonCode.text = "Cough"
 // * insurance = Reference(HealthInsuranceCardEmilKummer)
 // * specimen[+] = Reference(Specimen/ThroatSwab-2-pertussis)
 // * specimen[+] = Reference(Specimen/Blood-2-pertussis)

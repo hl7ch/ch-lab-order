@@ -18,7 +18,6 @@ Alias: $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
 Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916
 Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/media-type
 Alias: $v3-NullFlavor                 = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
@@ -33,7 +32,7 @@ Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/ob
 Alias: $referencerange-meaning        = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $usage-context-type            = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $task-code                     = http://hl7.org/fhir/CodeSystem/task-code
-
+Alias: $task-codeVS                   = http://hl7.org/fhir/ValueSet/task-code
 Alias: $container-cap                 = http://terminology.hl7.org/CodeSystem/container-cap
 Alias: $rejection-criteria            = http://terminology.hl7.org/CodeSystem/rejection-criteria
 // Alias:  $condition-category            = http://terminology.hl7.org/CodeSystem/condition-category
@@ -41,9 +40,11 @@ Alias: $substance-category            = http://terminology.hl7.org/CodeSystem/su
 Alias: $report-codes                  = http://hl7.org/fhir/ValueSet/report-codes
 
 // Kostenträger
-Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-Term 
+// Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-Term 
 // Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/mainguarantor  // from CH-Term
 // Alias: $coverage-type                 = http://fhir.ch/ig/ch-orf/ValueSet/ch-orf-vs-coveragetype
+Alias: $coverage-type                 = http://fhir.ch/ig/ch-term/ValueSet/mainguarantor // from CH-ORF
+Alias: $coverage-typeCS               = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor  // from CH-ORF
 Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype  // from CH-ORF
 Alias: $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
@@ -59,6 +60,7 @@ Alias: $ValidityPeriod = http://hl7.org/fhir/uv/order-catalog/StructureDefinitio
 Alias: $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 Alias: $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
+Alias: $priority                      = http://terminology.hl7.org/CodeSystem/v3-ActPriority
 Alias: $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
 Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode|3.1
 

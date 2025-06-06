@@ -10,7 +10,7 @@ Usage: #example
 // * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"  // Analysen-Liste Code
 // * extension[=].valueCodeableConcept = http://www.ama-assn.org/go/cpt#CPTfakecode "Chloride, serum"
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
-* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses#1229.00 "Chlorid"  // Analysen-Liste Code
+* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses/A#1229.00 "Chlorid"  // Analysen-Liste Code
 * extension[+].extension[0].url = "textualSummary"
 * extension[=].extension[=].valueMarkdown = "no notable particularity for billing"
 * extension[=].extension[+].url = "reimbursabilitySummary"

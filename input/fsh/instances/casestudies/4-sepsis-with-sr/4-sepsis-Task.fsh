@@ -2,8 +2,8 @@
 // #    Tasks
 // # ##########################################################
 
-Instance: SepsisWorkup
-InstanceOf: Task
+Instance: 4-sepsis-Task
+InstanceOf: ChLabOrderTask
 Description: "Example Task for Sepsis Workup"
 Usage: #example
 * contained = signature
@@ -37,32 +37,32 @@ Usage: #example
 * restriction.period.end = "2025-03-29T06:45:05+10:00"
 // 
 * input[+].type = $sct#878861003 "Blood specimen in blood culture bottle (specimen)"  //TODO: check if this is the right code and display text
-* input[=].valueReference = Reference(Specimen/Blood-bactec-plus-4-sepsis) "Blood Collection in Blood Culture Bottles, 4-sepsis"
+* input[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus) "Blood Collection in Blood Culture Bottles, 4-sepsis"
 * input[+].type = $sct#119297000 "Blood sample" //TODO: check if this is the right code and display text
-* input[=].valueReference = Reference(Specimen/Blood-4-sepsis) "Blood Sample, 4-sepsis"
+* input[=].valueReference = Reference(Specimen/4-sepsis-Blood) "Blood Sample, 4-sepsis"
 * input[+].type = $sct#119364003 "Serum specimen (specimen)" //TODO: check if this is the right code and display text
-* input[=].valueReference = Reference(Specimen/Serum-4-sepsis) "Serum Sample, 4-sepsis"
+* input[=].valueReference = Reference(Specimen/4-sepsis-Serum) "Serum Sample, 4-sepsis"
 
 /*
 * output[0].type.text = "DiagnosticReport generated"
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport Growth"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* output[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus)
 
 * output[+].type.text = "DiagnosticReport generated"
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportHbHt) "CH LAB-Order 4-sepsis DiagnosticReport Hb and Ht"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/Blood-4-sepsis)
+* output[=].valueReference = Reference(Specimen/4-sepsis-Blood)
 
 * output[+].type.text = "DiagnosticReport generated"
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportCBCDiff) "CH LAB-Order 4-sepsis DiagnosticReport CBCDiff"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/Blood-4-sepsis)
+* output[=].valueReference = Reference(Specimen/4-sepsis-Blood)
 
 * output[+].type.text = "DiagnosticReport generated"
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportCRP) "CH LAB-Order 4-sepsis DiagnosticReport CRP"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/Serum-4-sepsis)
+* output[=].valueReference = Reference(Specimen/4-sepsis-Serum)
 */
 
 Instance: signature
@@ -86,9 +86,9 @@ Usage: #example
 * identifier.use = #temp
 * identifier.value = "Encounter_Hans_20130404"
 * status = #finished
-* class = $v3-ActCode#AMB "ambulatory"
+* class = $v3-ActCode#IMP "inpatient encounter"
 * type = $sct#11429006 "Consultation"
-* priority = $sct#17621005 "Normal"
+* priority = $priority#UR "urgent"
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
 * participant.individual = Reference(Practitioner/HansHauser) "Dr Hans Hauser"
 * reasonCode.text = "The patient had fever peaks over the last night, the general condition deteriorated massively."
