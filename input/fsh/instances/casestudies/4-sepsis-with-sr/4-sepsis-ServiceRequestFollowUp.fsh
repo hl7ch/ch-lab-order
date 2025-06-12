@@ -27,8 +27,8 @@ Usage: #example
 * reasonCode = $sct#447931005 "Clinical sepsis (disorder)"
 * reasonCode.text = "Clinical sepis"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-
-* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic) "Blood Collection in Blood Culture Bottles, 4-sepsis, aerobic"
+* specimen[=] = Reference(Specimen/4-sepsis-Blood-bactec-plus-anaerobic) "Blood Collection in Blood Culture Bottles, 4-sepsis, anaerobic"
 /*
 * specimen[+] = Reference(Specimen/4-sepsis-Blood)
 * specimen[+] = Reference(Specimen/4-sepsis-Urine)

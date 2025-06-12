@@ -24,7 +24,8 @@ rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observa
 rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 
 rectangle "[[ Task-4-sepsis-Task.html Sepsis Workup  Task\n4-sepsis-Task ]]" as T1 <<$bProcess>><<resource>> #LightGray
-rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus.html Blood Culture Specimen\n4-sepsis-Bactec Plus ]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus-aerobic.html Aerobic Blood Culture Specimen\n4-sepsis-Bactec Plus aerobic ]]" as BBSA <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus-anaerobic.html AnaerobicBlood Culture Specimen\n4-sepsis-Bactec Plus anaerobic ]]" as BBSANA <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-4-sepsis-Blood.html Blood Specimen\n4-sepsis-Blood ]]" as BS <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-4-sepsis-Serum.html Serum Specimen\n4-sepsis-Serum ]]" as SS <<$bProcess>><<resource>> #LightCoral
 
@@ -39,7 +40,8 @@ DRG -down-> OMANA : [LAB-5]: result
 
 SR <-up- T1 : [LAB-1]: focus
 CP <-left- T1 : [LAB-0]: basedOn
-T1 <-left- BBS : [LAB-2]: input
+T1 <-left- BBSA : [LAB-2]: input
+T1 <-left- BBSANA : [LAB-2]: input
 T1 <-left- BS : [LAB-2]: input
 T1 <-left- SS : [LAB-2]: input
 
