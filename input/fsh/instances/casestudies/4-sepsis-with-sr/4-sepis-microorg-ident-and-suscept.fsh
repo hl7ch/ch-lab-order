@@ -75,8 +75,8 @@ Usage: #example
 * effectiveDateTime = "2025-04-08"
 * issued = "2025-04-08T10:28:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-// * method = $sct#359872008  // TODO: check SCT code and concept for Gram stain
-* valueCodeableConcept = http://snomed.info/sct#87172008 "Gram-negative bacillus"  // check SCT code and concept for Gram stain
+// * method = $sct#62777006 "Gram stain method (procedure)"
+* valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
 
 // Result found: Microorganism # 2 : Klebsiella pneumoniae
 
@@ -86,7 +86,6 @@ Title: "Gram Stain Result"
 Description: "Identified microorganism"
 Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequest)
-
 * status = #final
 // * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 // * code = $loinc#18725-2 "Microbiology studies (set)"
