@@ -1,7 +1,7 @@
-Instance: observationMicrobiolGrowthAnaerobe
+Instance: observationMicrobiolGrowthAnaerobic
 InstanceOf: Observation
-Title: "CH LAB-Order Observation Example of Microbiological Growth anaerobe"
-Description: "Observation Definition for Microbiological Growth anaerobe"
+Title: "CH LAB-Order Observation Example of Microbiological Growth anaerobic"
+Description: "Observation Definition for Microbiological Growth anaerobic"
 Usage: #example
 * basedOn = Reference(4-sepsis-ServiceRequest)
 * status = #final

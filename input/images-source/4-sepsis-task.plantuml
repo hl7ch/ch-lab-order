@@ -19,8 +19,8 @@ rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis Dia
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCBCDiff.html 4-sepsis DiagnosticReport CBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport CRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
 
-rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 
 rectangle "[[ Task-SepsisWorkup.html Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
 rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nBactec Plus 4-sepsis]]" as BBS <<$bProcess>><<resource>> #LightCoral

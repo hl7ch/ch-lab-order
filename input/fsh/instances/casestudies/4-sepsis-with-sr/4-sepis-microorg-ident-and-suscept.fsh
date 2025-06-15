@@ -9,7 +9,7 @@ Usage: #example
 * extension[triggeredBy].extension[type].valueCodeableConcept.coding.system = "http://fhir.ch/ig/ch-lab-order/CodeSystem/triggeredby-type"
 * extension[triggeredBy].extension[type].valueCodeableConcept.coding.code = #reflex
 * extension[triggeredBy].extension[type].valueCodeableConcept.coding.display = "Reflex test"
-* extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobe) "Microbiological Growth Aerobe"
+* extension[triggeredBy].extension[observation].valueReference = Reference(observationMicrobiolGrowthAerobic) "Microbiological Growth Aerobic"
 * status = #final
 * code = $loinc#85421-6 "Bacterial identification and susceptibility panel - Isolate"
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"

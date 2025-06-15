@@ -11,8 +11,8 @@ skinparam rectangle<<resource>> {
 
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[ Observation-observationMicrobiolGrowthAerobe.html 4-sepsis Observation\nMicrobiological Growth Aerobe: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[ Observation-observationMicrobiolGrowthAnaerobe.html 4-sepsis Observation\nMicrobiological Growth Anaerobe: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-observationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli ]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility ]]" as OMIS <<$bProcess>><<resource>> #APPLICATION
@@ -41,10 +41,10 @@ OIK -down-> STK : [LAB-7]: hasMember
 
 legend left
 [Lab-1] based On→Diagnostic Reports requested by Sub-Service Request Growth
-[Lab-2] result→Observation aerobe Growth POS, triggering further Observations
+[Lab-2] result→Observation aerobic Growth POS, triggering further Observations
 [Lab-3] result→Observation anarobe Growth NEG
-[Lab-4] triggeredBy→Observations triggeredBy Observation aerobe Growth POS: 2 Observations with MALDI-TOF Method (E.coli, K.pneumoniae)-
-[Lab-5] triggeredBy→Observations triggeredBy Observation aerobe Growth POS: Observation Microorganism and Susceptibility as Container for:-
+[Lab-4] triggeredBy→Observations triggeredBy Observation aerobic Growth POS: 2 Observations with MALDI-TOF Method (E.coli, K.pneumoniae)-
+[Lab-5] triggeredBy→Observations triggeredBy Observation aerobic Growth POS: Observation Microorganism and Susceptibility as Container for:-
 [Lab-6] hasMember→2 Observations with Culture and Gram Stain Methods (E.coli, K.pneumoniae)
 [Lab-7] hasMember→Each Organism idendified (E.coli, K.pneumoniae) contains an Observation of Susceptibility and Gram Stain
 ====

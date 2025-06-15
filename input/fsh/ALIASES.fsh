@@ -18,6 +18,7 @@ Alias: $v2-0373                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487
 Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916
 Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $confidentialityCode           = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.confidentialityCode
 Alias: $v3-Confidentiality            = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $v3-MediaType                  = http://terminology.hl7.org/CodeSystem/media-type
