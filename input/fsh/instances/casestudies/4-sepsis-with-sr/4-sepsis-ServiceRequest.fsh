@@ -22,7 +22,7 @@ Specimen are not defined here, but in the respective sub-serviceRequast instance
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 */
-
+/*
 Instance: 4-sepsis-ServiceRequestHbHt   // Service request for Hemoglobin and Hematocrit
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 4-sepsis Hemoglobine and Hematocrit"
@@ -47,6 +47,7 @@ Usage: #example
 * reasonCode.text = "Screening for sepsis (procedure)"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
+*/
 
 Instance: 4-sepsis-ServiceRequestCBCDiff
 InstanceOf: ChLabOrderSR

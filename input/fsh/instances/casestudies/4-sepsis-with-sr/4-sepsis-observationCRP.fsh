@@ -3,7 +3,7 @@ InstanceOf: ChLabObservationR4R5
 Title: "C-reactive protein (CRP) Result"
 Description: "Example of CRP result"
 Usage: #example
-* basedOn = Reference(4-sepsis-ServiceRequestHbHt)
+* basedOn = Reference(4-sepsis-ServiceRequestCRP) "ServiceRequest for CRP"
 * status = #final
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name* subject = Reference(Patient/SaraSpeckmann)

@@ -1,3 +1,4 @@
+/*
 Instance: ObservationHbHt
 InstanceOf: ChLabObservationR4R5
 Title: "Hemoglobin/Hematocrit Panel Result"
@@ -40,3 +41,4 @@ Usage: #example
 * effectiveDateTime = "2025-04-08"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
 * valueQuantity = 33 '%' "%"
+*/

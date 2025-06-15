@@ -34,6 +34,7 @@ Usage: #example
 * result[+] = Reference(observationMicrobiolGrowthAerobe)
 * result[+] = Reference(observationMicrobiolGrowthAnaerobe)
 
+/*
 Instance: 4-sepsis-DiagnosticReportHbHt  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
 InstanceOf: ChLabOrderDiagnosticReport
 Title: "CH LAB-Order 4-sepsis DiagnosticReport"
@@ -51,6 +52,7 @@ Usage: #example
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * result[+] = Reference(observationMicrobiolGrowthAerobe)
 * result[+] = Reference(observationMicrobiolGrowthAnaerobe)
+*/
 
 Instance: 4-sepsis-DiagnosticReportCBCDiff  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
 InstanceOf: ChLabOrderDiagnosticReport
