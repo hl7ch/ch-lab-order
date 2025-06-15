@@ -11,21 +11,23 @@ skinparam rectangle<<resource>> {
 }
 
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #Yellow
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCBCDiff.html 4-sepsis ServiceRequest CBC Diff ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCRP.html 4-sepsis ServiceRequest CRP ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCBCDiff.html 4-sepsis ServiceRequest\nCBC Diff ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCRP.html 4-sepsis ServiceRequest\nCRP ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest\nGrowth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCBCDiff.html 4-sepsis DiagnosticReport CBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport CRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport\nGrowth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCBCDiff.html 4-sepsis DiagnosticReport\nCBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport\nCRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
 
 rectangle "[[ Observation-observationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS]]" as OMA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 
-rectangle "[[ Task-SepsisWorkup.html Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
-rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html Blood Culture Specimen\nBactec Plus 4-sepsis]]" as BBS <<$bProcess>><<resource>> #LightCoral
-rectangle "[[ Specimen-Blood-4-sepsis.html Blood Specimen\nBlood 4-sepsis]]" as BS <<$bProcess>><<resource>> #LightCoral
-rectangle "[[ Specimen-Serum-4-sepsis.html Serum Specimen\nSerum 4-sepsis]]" as SS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Task-SepsisWorkup.html 4-sepsis Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
+rectangle "[[ Specimen-Blood-bactec-plus-4-sepsis.html 4-sepsis Specimen\nBlood Bactec Plus ]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Blood-4-sepsis.html 4-sepsis Specimen\nBlood ]]" as BS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Serum-4-sepsis.html 4-sepsis Specimen\nSerum ]]" as SS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-Blood-4-sepsis.html 4-sepsis Specimen\nBlood ]]" as BS <<$bProcess>><<resource>> #LightCoral
+
 
 SR <-down- SRG : [LAB-3]: basedOn
 SR <-down- SRDIFF : [LAB-3]: basedOn
