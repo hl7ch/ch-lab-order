@@ -40,8 +40,8 @@ Usage: #example
 * section[orderReferral].entry[Questionnaire] = Reference(4-sepsis-Questionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(4-sepsis-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequest)
-// * section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestHbHt)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestCBCDiff)
-* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestGrowth-aerobic)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestCRP)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestGrowth-aerobic)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestGrowth-anaerobic)
 

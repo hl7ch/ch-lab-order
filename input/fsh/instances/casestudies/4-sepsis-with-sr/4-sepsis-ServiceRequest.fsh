@@ -49,7 +49,7 @@ Usage: #example
 
 Instance: 4-sepsis-ServiceRequestGrowth-aerobic
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 4-sepsis microbiological growth in  blood culture"
+Title: "CH LAB-ServiceRequest 4-sepsis microbiological aerobic growth in  blood culture"
 Description: "Example for Service Request for Sepsis Investigation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -75,6 +75,35 @@ Usage: #example
 * reasonCode.text = "Screening for sepsis (procedure)"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 * specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
+
+Instance: 4-sepsis-ServiceRequestGrowth-anaerobic
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis microbiological anaerobic growth in  blood culture"
+Description: "Example for Service Request for Sepsis Investigation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
+* basedOn = Reference(4-sepsis-ServiceRequest)
+
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-123456789123"
+
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[+].code = #90423-5
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
+* orderDetail = $v2-0119#NW "New order/service"
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-anaerobic)
 
 Instance: 4-sepsis-ServiceRequestCRP   // Service request for C reactive protein
 InstanceOf: ChLabOrderSR
@@ -150,6 +179,29 @@ Usage: #example
 Instance: 4-sepsis-Blood-bactec-plus-aerobic
 InstanceOf: Specimen
 Title: "Blood Collection in Blood Culture Bottles, 4-sepsis"
+Description: "Example for specimen for aerobic blood culture"
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(Patient/SaraSpeckmann)
+* request = Reference(ServiceRequest/4-sepsis-ServiceRequest)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedPeriod.start = "2025-03-16T06:20:17Z"
+* collection.collectedPeriod.end = "2025-03-16T06:50:17Z"
+* collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
+// 2 aerobic blood culture bottles
+* container[+].identifier.value = "95ab0fb1-6d1c-40f0-9aaa-a68f29238a4e-bactec-plus"
+* container[=].type = $sct#767385003 "Aerobic blood culture bottle (physical object)"
+* container[=].description = "Two BACTEC™ PLUS Aerobic/F Culture Vial, cap color: grey-blue"
+// 2 anaerobic blood culture bottles
+// * container[+].identifier.value = "92af0fee-1aeb-472e-8b57-a885ba33b745-bactec-plus"
+// * container[=].type = $sct#767383005 "Anaerobic blood culture bottle (physical object)"
+// * container[=].description = "Two BACTEC™ PLUS Anaerobic/F Culture Vial, cap color: purple"
+* note.text = "Each container type contains two blood samples taken 30 minutes apart, so we get 4 vials in total"
+
+Instance: 4-sepsis-Blood-bactec-plus-anaerobic
+InstanceOf: Specimen
+Title: "Blood Collection in Blood Culture Bottles, 4-sepsis"
 Description: "Example for specimen for aerobic and anaerobic blood culture"
 Usage: #example
 * status = #available
@@ -160,19 +212,14 @@ Usage: #example
 * collection.collectedPeriod.start = "2025-03-16T06:20:17Z"
 * collection.collectedPeriod.end = "2025-03-16T06:50:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
-
-// 2 types of containers, aerobic and anaerobic, each with a different cap color and identifier
-
 // 2 aerobic blood culture bottles
-* container[+].identifier.value = "95ab0fb1-6d1c-40f0-9aaa-a68f29238a4e-bactec-plus"
-* container[=].type = $sct#767385003 "Aerobic blood culture bottle (physical object)"
-* container[=].description = "Two BACTEC™ PLUS Aerobic/F Culture Vial, cap color: grey-blue"
-
+// * container[+].identifier.value = "95ab0fb1-6d1c-40f0-9aaa-a68f29238a4e-bactec-plus"
+// * container[=].type = $sct#767385003 "Aerobic blood culture bottle (physical object)"
+// * container[=].description = "Two BACTEC™ PLUS Aerobic/F Culture Vial, cap color: grey-blue"
 // 2 anaerobic blood culture bottles
 * container[+].identifier.value = "92af0fee-1aeb-472e-8b57-a885ba33b745-bactec-plus"
 * container[=].type = $sct#767383005 "Anaerobic blood culture bottle (physical object)"
 * container[=].description = "Two BACTEC™ PLUS Anaerobic/F Culture Vial, cap color: purple"
-
 * note.text = "Each container type contains two blood samples taken 30 minutes apart, so we get 4 vials in total"
 
 Instance: Blood-4-sepsis

@@ -38,6 +38,9 @@ Usage: #example
 // 
 * input[+].type = $sct#878861003 "Blood specimen in blood culture bottle (specimen)"  //TODO: check if this is the right code and display text
 * input[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic) "Blood Collection in Blood Culture Bottles, 4-sepsis"
+* input[+].type = $sct#878861003 "Blood specimen in blood culture bottle (specimen)"  //TODO: check if this is the right code and display text
+* input[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus-anaerobic) "Blood Collection in Blood Culture Bottles, 4-sepsis"
+
 * input[+].type = $sct#119297000 "Blood sample" //TODO: check if this is the right code and display text
 * input[=].valueReference = Reference(Specimen/Blood-4-sepsis) "Blood Sample, 4-sepsis"
 * input[+].type = $sct#119364003 "Serum specimen (specimen)" //TODO: check if this is the right code and display text

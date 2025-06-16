@@ -23,7 +23,8 @@ rectangle "[[ Observation-4-sepsis-ObservationMicrobiolGrowthAerobic.html 4-seps
 rectangle "[[ Observation-ObservationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 
 rectangle "[[ Task-SepsisWorkup.html 4-sepsis Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
-rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus-aerobic.html 4-sepsis Specimen\nBlood Bactec Plus ]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus-aerobic.html 4-sepsis Specimen\nBlood Bactec Plus aerobic ]]" as BBSA <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus-anaerobic.html 4-sepsis Specimen\nBlood Bactec Plus anaerobic ]]" as BBSANA <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-Blood-4-sepsis.html 4-sepsis Specimen\nBlood ]]" as BS <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-Serum-4-sepsis.html 4-sepsis Specimen\nSerum ]]" as SS <<$bProcess>><<resource>> #LightCoral
 
@@ -37,9 +38,10 @@ DRG -down-> OMA : [LAB-5]: result
 DRG -down-> OMANA : [LAB-5]: result
 
 SR <-up- T1 : [LAB-1]: basedOn
-T1 <-left- BBS : [LAB-2]: input
-T1 <-left- BS : [LAB-2]: input
-T1 <-left- SS : [LAB-2]: input
+T1 <-left- BBSA : [LAB-2]: input
+T1 <-left- BBSANA : [LAB-2]: input
+T1 <-right- BS : [LAB-2]: input
+T1 <-right- SS : [LAB-2]: input
 
 legend left
 [Lab-1] based On → Service Request is fullfilled by Task Sepsis Workup
