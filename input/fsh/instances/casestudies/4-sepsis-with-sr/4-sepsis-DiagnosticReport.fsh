@@ -13,8 +13,8 @@ Usage: #example
 * code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * performer = Reference(EvaErlenmeyerLaborPipette)
-* result[+] = Reference(observationMicrobiolGrowthAerobic)
-* result[+] = Reference(observationMicrobiolGrowthAnaerobic)
+* result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
+* result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
 
 Instance: 4-sepsis-DiagnosticReportGrowth  // Diagnostic Report Growht detection panel
 InstanceOf: ChLabOrderDiagnosticReport
@@ -31,8 +31,8 @@ Usage: #example
 * code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * performer = Reference(EvaErlenmeyerLaborPipette)
-* result[+] = Reference(observationMicrobiolGrowthAerobic)
-* result[+] = Reference(observationMicrobiolGrowthAnaerobic)
+* result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
+* result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
 
 /*
 Instance: 4-sepsis-DiagnosticReportHbHt  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
@@ -50,8 +50,8 @@ Usage: #example
 * code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * performer = Reference(EvaErlenmeyerLaborPipette)
-* result[+] = Reference(observationMicrobiolGrowthAerobic)
-* result[+] = Reference(observationMicrobiolGrowthAnaerobic)
+* result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
+* result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
 */
 
 Instance: 4-sepsis-DiagnosticReportCBCDiff  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
@@ -87,4 +87,4 @@ Usage: #example
 * code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * performer = Reference(EvaErlenmeyerLaborPipette)
-// * result[+] = Reference(observationCRP)
+// * result[+] = Reference(4-sepsis-ObservationCRP)

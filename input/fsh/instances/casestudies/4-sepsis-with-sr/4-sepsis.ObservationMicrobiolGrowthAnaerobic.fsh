@@ -1,4 +1,4 @@
-Instance: observationMicrobiolGrowthAnaerobic
+Instance: ObservationMicrobiolGrowthAnaerobic
 InstanceOf: Observation
 Title: "CH LAB-Order Observation Example of Microbiological Growth anaerobic"
 Description: "Observation Definition for Microbiological Growth anaerobic"

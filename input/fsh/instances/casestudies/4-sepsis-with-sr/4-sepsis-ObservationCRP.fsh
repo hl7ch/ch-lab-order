@@ -1,4 +1,4 @@
-Instance: ObservationCRP
+Instance: 4-sepsis-ObservationCRP
 InstanceOf: ChLabObservationR4R5
 Title: "C-reactive protein (CRP) Result"
 Description: "Example of CRP result"
