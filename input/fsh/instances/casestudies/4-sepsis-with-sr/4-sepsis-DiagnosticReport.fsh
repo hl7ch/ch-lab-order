@@ -18,7 +18,7 @@ Usage: #example
 
 Instance: 4-sepsis-DiagnosticReportGrowth-aerobic  // Diagnostic Report Growht detection panel
 InstanceOf: ChLabOrderDiagnosticReport
-Title: "CH LAB-Order 4-sepsis DiagnosticReport"
+Title: "CH LAB-Order 4-sepsis DiagnosticReport aerobic Growth"
 Description: "Diagnostic Report for Sepsis Investigation"
 Usage: #example
 * identifier.system = "http://example.com/fhir/DiagnosticReport/4-sepsis"
@@ -32,17 +32,16 @@ Usage: #example
 * subject = Reference(Patient/SaraSpeckmann)
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
-* result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
+// * result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
 
-/*
-Instance: 4-sepsis-DiagnosticReportHbHt  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
+Instance: 4-sepsis-DiagnosticReportGrowth-anaerobic  // Diagnostic Report Growht detection panel
 InstanceOf: ChLabOrderDiagnosticReport
-Title: "CH LAB-Order 4-sepsis DiagnosticReport"
+Title: "CH LAB-Order 4-sepsis DiagnosticReport anaerobic Growth"
 Description: "Diagnostic Report for Sepsis Investigation"
 Usage: #example
 * identifier.system = "http://example.com/fhir/DiagnosticReport/4-sepsis"
 * identifier.value = "4-sepsis-diagnostic-report"
-* basedOn = Reference(4-sepsis-ServiceRequestHbHt)
+* basedOn = Reference(4-sepsis-ServiceRequestGrowth-aerobic)
 * status = #final
 * category = $loinc#26436-6 "Laboratory studies (set)"
 * code.coding[+].code = #90423-5
@@ -50,9 +49,8 @@ Usage: #example
 * code.coding[=].display = "Microorganism preliminary growth detection panel - Blood by Culture"
 * subject = Reference(Patient/SaraSpeckmann)
 * performer = Reference(EvaErlenmeyerLaborPipette)
-* result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
+// * result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
 * result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
-*/
 
 Instance: 4-sepsis-DiagnosticReportCBCDiff  // Diagnostic Report reflexed from ServiceRequest 4-sepsis
 InstanceOf: ChLabOrderDiagnosticReport
