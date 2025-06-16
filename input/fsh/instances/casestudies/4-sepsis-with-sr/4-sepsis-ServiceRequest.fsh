@@ -17,7 +17,7 @@ Usage: #example
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 /*
 Specimen are not defined here, but in the respective sub-serviceRequast instances
-* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
 */
@@ -74,7 +74,7 @@ Usage: #example
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
-* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
 
 Instance: 4-sepsis-ServiceRequestCRP   // Service request for C reactive protein
 InstanceOf: ChLabOrderSR
@@ -147,7 +147,7 @@ Usage: #example
 * payor.identifier.value = "123456789"
 */
 
-Instance: Blood-bactec-plus-4-sepsis
+Instance: 4-sepsis-Blood-bactec-plus-aerobic
 InstanceOf: Specimen
 Title: "Blood Collection in Blood Culture Bottles, 4-sepsis"
 Description: "Example for specimen for aerobic and anaerobic blood culture"

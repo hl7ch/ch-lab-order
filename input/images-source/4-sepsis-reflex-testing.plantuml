@@ -11,8 +11,8 @@ skinparam rectangle<<resource>> {
 
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[ Observation-observationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[ Observation-observationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-ObservationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ Observation-ObservationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli ]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility ]]" as OMIS <<$bProcess>><<resource>> #APPLICATION

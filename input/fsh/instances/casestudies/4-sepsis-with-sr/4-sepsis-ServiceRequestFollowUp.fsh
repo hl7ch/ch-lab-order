@@ -28,7 +28,7 @@ Usage: #example
 * reasonCode.text = "Screening for sepsis (procedure)"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 
-* specimen[+] = Reference(Specimen/Blood-bactec-plus-4-sepsis)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
 /*
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)
