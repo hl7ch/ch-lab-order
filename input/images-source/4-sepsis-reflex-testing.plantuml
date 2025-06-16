@@ -9,7 +9,7 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth-aerobic.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[ Observation-4-sepsis-ObservationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-ObservationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION

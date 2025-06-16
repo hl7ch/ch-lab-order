@@ -6,7 +6,7 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-* basedOn = Reference(4-sepsis-ServiceRequestGrowth)
+* basedOn = Reference(4-sepsis-ServiceRequestGrowth-aerobic)
 
 // * requisition.type = $v2-0203#PLAC "Placer Identifier"
 // * requisition.system = "urn:oid:2.16.756.5.45"
@@ -28,7 +28,7 @@ Usage: #example
 * reasonCode.text = "Screening for sepsis (procedure)"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
 
-* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
 /*
 * specimen[+] = Reference(Specimen/Blood-4-sepsis)
 * specimen[+] = Reference(Specimen/Urine-4-sepsis)

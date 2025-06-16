@@ -13,9 +13,9 @@ skinparam rectangle<<resource>> {
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequest.html 4-sepsis ServiceRequest]] " as SR <<$bProcess>><<resource>> #Yellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCBCDiff.html 4-sepsis ServiceRequest\nCBC Diff ]] " as SRDIFF <<$bProcess>><<resource>> #LightYellow
 rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestCRP.html 4-sepsis ServiceRequest\nCRP ]] " as SRCRP <<$bProcess>><<resource>> #LightYellow
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest\nGrowth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth-aerobic.html 4-sepsis ServiceRequest\nGrowth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
 
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth.html 4-sepsis DiagnosticReport\nGrowth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth-aerobic.html 4-sepsis DiagnosticReport\nGrowth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCBCDiff.html 4-sepsis DiagnosticReport\nCBC Diff ]]" as DRDIFF <<$bProcess>><<resource>> #LightSkyBlue
 rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportCRP.html 4-sepsis DiagnosticReport\nCRP ]]" as DRCRP <<$bProcess>><<resource>> #LightSkyBlue
 
@@ -23,7 +23,7 @@ rectangle "[[ Observation-4-sepsis-ObservationMicrobiolGrowthAerobic.html 4-seps
 rectangle "[[ Observation-ObservationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
 
 rectangle "[[ Task-SepsisWorkup.html 4-sepsis Task\nSepsis Workup]]" as T1 <<$bProcess>><<resource>> #LightGray
-rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus.html 4-sepsis Specimen\nBlood Bactec Plus ]]" as BBS <<$bProcess>><<resource>> #LightCoral
+rectangle "[[ Specimen-4-sepsis-Blood-bactec-plus-aerobic.html 4-sepsis Specimen\nBlood Bactec Plus ]]" as BBS <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-Blood-4-sepsis.html 4-sepsis Specimen\nBlood ]]" as BS <<$bProcess>><<resource>> #LightCoral
 rectangle "[[ Specimen-Serum-4-sepsis.html 4-sepsis Specimen\nSerum ]]" as SS <<$bProcess>><<resource>> #LightCoral
 

@@ -42,4 +42,4 @@ Usage: #example
 * section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestCBCDiff)
 * section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestCRP)
 
-* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestGrowth)
+* section[orderReferral].entry[ServiceRequest][+] = Reference(4-sepsis-ServiceRequestGrowth-aerobic)

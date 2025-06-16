@@ -37,7 +37,7 @@ Usage: #example
 * restriction.period.end = "2025-03-29T06:45:05+10:00"
 // 
 * input[+].type = $sct#878861003 "Blood specimen in blood culture bottle (specimen)"  //TODO: check if this is the right code and display text
-* input[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus) "Blood Collection in Blood Culture Bottles, 4-sepsis"
+* input[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic) "Blood Collection in Blood Culture Bottles, 4-sepsis"
 * input[+].type = $sct#119297000 "Blood sample" //TODO: check if this is the right code and display text
 * input[=].valueReference = Reference(Specimen/Blood-4-sepsis) "Blood Sample, 4-sepsis"
 * input[+].type = $sct#119364003 "Serum specimen (specimen)" //TODO: check if this is the right code and display text
@@ -45,9 +45,9 @@ Usage: #example
 
 /*
 * output[0].type.text = "DiagnosticReport generated"
-* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth) "CH LAB-Order 4-sepsis DiagnosticReport Growth"
+* output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportGrowth-aerobic) "CH LAB-Order 4-sepsis DiagnosticReport Growth"
 * output[+].type.text = "collected specimen"
-* output[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus)
+* output[=].valueReference = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
 
 * output[+].type.text = "DiagnosticReport generated"
 * output[=].valueReference = Reference(DiagnosticReport/4-sepsis-DiagnosticReportCBCDiff) "CH LAB-Order 4-sepsis DiagnosticReport CBCDiff"
