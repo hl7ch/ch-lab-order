@@ -3,6 +3,7 @@ Alias: $sct                           = http://snomed.info/sct
 Alias: $sctswiss                      = http://snomed.info/sct|http://snomed.info/sct/2011000195101
 Alias: $loinc                         = http://loinc.org
 Alias: $ucum                          = http://unitsofmeasure.org
+Alias: $task-inputoutput              = http://hl7.org/fhir/task-inputoutput-parameter-type // R5 and later
 
 // Standard country or area codes for statistical use (M49)
 Alias: $m49.htm                       = http://unstats.un.org/unsd/methods/m49/m49.htm

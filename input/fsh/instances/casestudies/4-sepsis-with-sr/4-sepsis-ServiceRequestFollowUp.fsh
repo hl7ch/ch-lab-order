@@ -1,13 +1,12 @@
-Instance: 4-sepsis-ServiceRequestFollowUp   // Service request for Follow-Up
+Instance: 4-sepsis-ServiceRequestFollowUp-aerobic   // Service request for Follow-Up
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 4-sepsis Follow-Up"
+Title: "CH LAB-ServiceRequest 4-sepsis Follow-Up aerobic"
 Description: "Example for Service Request for Sepsis Investigation, with reflexed observation"
 Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-* basedOn = Reference(4-sepsis-ServiceRequestGrowth)
-
+* basedOn = Reference(4-sepsis-ServiceRequestGrowth-aerobic)
 // * requisition.type = $v2-0203#PLAC "Placer Identifier"
 // * requisition.system = "urn:oid:2.16.756.5.45"
 // * requisition.value = "ReqID-123456789123"
@@ -15,10 +14,8 @@ Usage: #example
 * code.coding[+].code = #76346-6
 * code.coding[=].system = $loinc
 * code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
-
 // orderDetail: Additional order information
 * orderDetail = $v2-0119#XO	"Change order/service request"
-
 * status = #active
 * intent = #original-order
 * priority = #urgent
@@ -27,12 +24,35 @@ Usage: #example
 * reasonCode = $sct#870441004
 * reasonCode.text = "Screening for sepsis (procedure)"
 // * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-aerobic)
 
-* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus)
-/*
-* specimen[+] = Reference(Specimen/Blood-4-sepsis)
-* specimen[+] = Reference(Specimen/Urine-4-sepsis)
-*/
+Instance: 4-sepsis-ServiceRequestFollowUp-anaerobic   // Service request for Follow-Up
+InstanceOf: ChLabOrderSR
+Title: "CH LAB-ServiceRequest 4-sepsis Follow-Up anaerobic"
+Description: "Example for Service Request for Sepsis Investigation, with reflexed observation"
+Usage: #example
+* identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[placerOrderIdentifier].value = "Y274589"
+* basedOn = Reference(4-sepsis-ServiceRequestGrowth-anaerobic)
+// * requisition.type = $v2-0203#PLAC "Placer Identifier"
+// * requisition.system = "urn:oid:2.16.756.5.45"
+// * requisition.value = "ReqID-123456789123"
+// code: what is being requested (procedure codes SNOMED CT, Test Codes LOINC)
+* code.coding[+].code = #76346-6
+* code.coding[=].system = $loinc
+* code.coding[=].display = "Microorganism identified in Isolate by MS.MALDI-TOF"
+// orderDetail: Additional order information
+* orderDetail = $v2-0119#XO	"Change order/service request"
+* status = #active
+* intent = #original-order
+* priority = #urgent
+* subject = Reference(Patient/SaraSpeckmann)
+* requester = Reference(HansHauserKantonsspital)
+* reasonCode = $sct#870441004
+* reasonCode.text = "Screening for sepsis (procedure)"
+// * insurance = Reference(HealthInsuranceCardSaraSpeckmann)
+* specimen[+] = Reference(Specimen/4-sepsis-Blood-bactec-plus-anaerobic)
 
 Instance: 4-sepsis-ServiceRequestMALDi-TOF   // Service request for C reactive protein
 InstanceOf: ChLabOrderSR

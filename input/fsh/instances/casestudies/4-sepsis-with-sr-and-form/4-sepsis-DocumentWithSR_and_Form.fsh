@@ -41,8 +41,10 @@ Usage: #example
 // * entry[+].fullUrl = "http://example.com/fhir/Coverage/HealthInsuranceCardSaraSpeckmann"
 // * entry[=].resource = HealthInsuranceCardSaraSpeckmann
 
-* entry[+].fullUrl = "http://example.com/fhir/Specimen/4-sepsis-Blood-bactec-plus"
-* entry[=].resource = 4-sepsis-Blood-bactec-plus
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/4-sepsis-Blood-bactec-plus-aerobic"  // entry[11]
+* entry[=].resource = 4-sepsis-Blood-bactec-plus-aerobic
+* entry[+].fullUrl = "http://example.com/fhir/Specimen/4-sepsis-Blood-bactec-plus-anaerobic"  // entry[12]
+* entry[=].resource = 4-sepsis-Blood-bactec-plus-anaerobic
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Blood-4-sepsis"
 * entry[=].resource = Blood-4-sepsis
 * entry[+].fullUrl = "http://example.com/fhir/Specimen/Serum-4-sepsis"
@@ -53,14 +55,13 @@ Usage: #example
 * entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/4-sepsis"
 * entry[=].resource = 4-sepsis-QuestionnaireResponse
 
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequest"  // entry[18]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequest"  // entry[17]
 * entry[=].resource = 4-sepsis-ServiceRequest
-
-// * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestHbHt"  // entry[16]
-// * entry[=].resource = 4-sepsis-ServiceRequestHbHt
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestCBCDiff"  // entry[16]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestCBCDiff"  // entry[18]
 * entry[=].resource = 4-sepsis-ServiceRequestCBCDiff
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestGrowth"  // entry[17]
-* entry[=].resource = 4-sepsis-ServiceRequestGrowth
-* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestCRP"  // entry[18]
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestGrowth-aerobic"  // entry[19]
+* entry[=].resource = 4-sepsis-ServiceRequestGrowth-aerobic
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestGrowth-anaerobic"  // entry[20]
+* entry[=].resource = 4-sepsis-ServiceRequestGrowth-anaerobic
+* entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/4-sepsis-ServiceRequestCRP"  // entry[21]
 * entry[=].resource = 4-sepsis-ServiceRequestCRP
