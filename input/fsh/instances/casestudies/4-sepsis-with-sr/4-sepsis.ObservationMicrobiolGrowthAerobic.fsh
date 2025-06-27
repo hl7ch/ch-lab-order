@@ -11,7 +11,6 @@ Usage: #example
 * code.coding[+].system = $loinc
 * code.coding[=].code = #90435-9
 * code.coding[=].display = "Microorganism preliminary growth [Presence] in Blood by Aerobe culture"
-
 * subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
 * effectivePeriod.start = "2025-03-16T06:20:17Z"
 * effectivePeriod.end = "2025-03-16T06:50:17Z"
@@ -24,6 +23,46 @@ Usage: #example
 * hasMember[+] = Reference(observationMicroorgIdentAndSuscept) "Microorganism Identification and Susceptibility"
 * hasMember[+] = Reference(observationMALDI-TOF-Kpneu) "MALDI-TOF Klebsiella pneumoniae"
 * hasMember[+] = Reference(observationMALDI-TOF-Ecoli) "MALDI-TOF Escherichia coli"
+
+// Observations Gram Stain and Culture first organism
+Instance: 4-sepsis-ObservationMicrobiolGrowthAerobicGramStain-first
+InstanceOf: Observation
+Title: "CH LAB-Order Observation Example of Microbiological Growth aerobic Gram Stain, first organism"
+Description: "Observation Definition for Microbiological Growth aerobic Gram Stain, first organism"
+Usage: #example
+* basedOn = Reference(4-sepsis-ServiceRequest)
+* status = #final
+// Type of Observation ==>> code
+* code.coding[+].system = $loinc
+* code.coding[=].code = #87969-2
+* code.coding[=].display = "Microscopic observation [Identifier] in Blood by Gram stain"
+* subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
+* effectiveDateTime = "2025-03-16T06:20:17Z"
+* issued = "2025-03-16T07:10:17Z"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
+// Result of Gram Stain
+* valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
+
+// Observations Gram Stain and Culture 2nd organism
+Instance: 4-sepsis-ObservationMicrobiolGrowthAerobicGramStain-2nd
+InstanceOf: Observation
+Title: "CH LAB-Order Observation Example of Microbiological Growth aerobic Gram Stain, 2nd organism"
+Description: "Observation Definition for Microbiological Growth aerobic Gram Stain, 2nd organism"
+Usage: #example
+* basedOn = Reference(4-sepsis-ServiceRequest)
+* status = #final
+// Type of Observation ==>> code
+* code.coding[+].system = $loinc
+* code.coding[=].code = #105915-3
+* code.coding[=].display = "Microscopic observation [Identifier] in Blood by Gram stain --2nd specimen"
+* subject = Reference(Patient/SaraSpeckmann) "Sara Speckmann"
+* effectiveDateTime = "2025-03-16T06:20:17Z"
+* issued = "2025-03-16T07:10:17Z"
+* performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
+// Result of Gram Stain
+* valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
+
+
 
 Instance: observationMALDI-TOF-Kpneu  // reflexed observation
 InstanceOf: ChLabObservationR4R5
@@ -50,14 +89,11 @@ Usage: #example
 * effectivePeriod.end = "2025-03-16T06:50:17Z"
 * issued = "2025-03-16T07:10:17Z"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-
 * derivedFrom = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
-
 // component microorganism identified
 * component[0].code = $loinc#76346-6 "Microorganism identified in Isolate by MS.MALDI-TOF"
 // * component[=].code.text = "Klebsiella pneumoniae (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
 * component[=].valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
-
 // component susceptibility of microorganism
 * component[+].code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
 * component[=].valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
@@ -80,7 +116,6 @@ Usage: #example
 * extension[triggeredBy].extension[type].valueCodeableConcept.coding.code = #reflex
 * extension[triggeredBy].extension[type].valueCodeableConcept.coding.display = "Reflex test"
 * extension[triggeredBy].extension[observation].valueReference = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic) "Microbiological Growth Aerobic"
-
 * status = #final
 * code.coding[+].system = $loinc
 * code.coding[=].code = #41852-5
@@ -90,14 +125,11 @@ Usage: #example
 * effectivePeriod.end = "2025-03-16T06:50:17Z"
 * issued = "2025-03-16T07:10:17Z"
 * performer = Reference(EvaErlenmeyerLaborPipette) "E. Erlenmeyer, Labor Pipette"
-
 * derivedFrom = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
-
 // component microorganism identified
 * component[0].code = $loinc#76346-6 "Microorganism identified in Isolate by MS.MALDI-TOF"
 // * component[=].code.text = "Escherichia coli (organism) susceptible to amoxicillin+clavulanic acid and to ceftriaxone"
 * component[=].valueCodeableConcept = $sct#112283007 "Escherichia coli"
-
 // component susceptibility of microorganism
 * component[+].code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
 * component[=].valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
