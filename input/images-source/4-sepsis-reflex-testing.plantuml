@@ -9,10 +9,10 @@ skinparam rectangle<<resource>> {
   FontStyle Bold
 }
 
-rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth.html 4-sepsis ServiceRequest Growth ]] " as SRG <<$bProcess>><<resource>> #LightYellow
-rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReport.html 4-sepsis DiagnosticReport Growth ]]" as DRG <<$bProcess>><<resource>> #LightSkyBlue
-rectangle "[[ Observation-4-sepsis-ObservationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological Growth Aerobic: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
-rectangle "[[ Observation-ObservationMicrobiolGrowthAnaerobic.html 4-sepsis Observation\nMicrobiological Growth Anaerobic: NEG ]]" as OMANA <<$bProcess>><<resource>> #APPLICATION
+rectangle "[[ ServiceRequest-4-sepsis-ServiceRequestGrowth-aerobic.html 4-sepsis ServiceRequest\nGrowth aerobic ]] " as SRGA <<$bProcess>><<resource>> #LightYellow
+rectangle "[[ DiagnosticReport-4-sepsis-DiagnosticReportGrowth-aerobic.html 4-sepsis DiagnosticReport\nGrowth aerobic]]" as DRGA <<$bProcess>><<resource>> #LightSkyBlue
+rectangle "[[ Observation-4-sepsis-ObservationMicrobiolGrowthAerobic.html 4-sepsis Observation\nMicrobiological\nGrowth aerobic: POS ]]" as OMA <<$bProcess>><<resource>> #APPLICATION
+
 rectangle "[[ Observation-observationMALDI-TOF-Ecoli.html 4-sepsis Observation\nMALDI-TOF: E. coli ]]" as OMTE <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMALDI-TOF-Kpneu.html 4-sepsis Observation\nMALDI-TOF: K. pneuomoniae]]" as OMTK <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-observationMicroorgIdentAndSuscept.html 4-sepsis Observation\nMicroorganism\nidentification and susceptibility ]]" as OMIS <<$bProcess>><<resource>> #APPLICATION
@@ -23,14 +23,16 @@ rectangle "[[ Observation-ObservationKpneumoniae.html Organism Identification: K
 rectangle "[[ Observation-ObservationSusceptibilityKpneumoniae.html Susceptibility\nK.Pneumoniae ]]" as STK <<$bProcess>><<resource>> #APPLICATION
 rectangle "[[ Observation-ObservationGramStainResultKpneumoniae.html Gram Stain\nK.Pneumoniae ]]" as GSK <<$bProcess>><<resource>> #APPLICATION
 
-SRG <-right-  DRG : [LAB-1]: basedOn
-DRG -down-> OMA : [LAB-2]: result
-DRG -down-> OMANA : [LAB-3]: result
-OMA -up-> SRG : [LAB-4]: basedOn
+
+DRGA -down-> OMA : [LAB-2]: result
+SRGA <-down- DRGA : [LAB-4]: basedOn
+OMA -up-> SRGA : [LAB-4]: basedOn
 OMA -down-> OMTE : [LAB-4]: triggeredBy
-OMTE -up-> SRG : [LAB-5]: basedOn
+OMIS -up-> SRGA : [LAB-4]: basedOn
+
+OMTE -up-> SRGA : [LAB-5]: basedOn
 OMA -down-> OMTK : [LAB-4]: triggeredBy
-OMTK -up-> SRG : [LAB-5]: basedOn
+OMTK -up-> SRGA : [LAB-5]: basedOn
 OMA -down-> OMIS : [LAB-5]: triggeredBy
 OMIS -down-> OIE : [LAB-6]: hasMember
 OIE -down-> GSE : [LAB-7]: hasMember

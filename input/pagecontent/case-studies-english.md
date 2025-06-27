@@ -67,8 +67,8 @@ An antibiogram is made of both pathogens detected in the Blood. This shows that 
 {% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
 The diagram shows how the workflow for clinical laboratory orders can be linked to a ServiceRequest (Fig. 1). It contains a task resource which describes an activity that can be performed on the specimen, and tracks the state of completion of that activity. It is a representation that an activity should be or has been initiated, and eventually, represents the successful or unsuccessful completion of that activity.
 
-{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
-This diagram (Fig. 2) shows an example of a reflex finding, i.e. the result of a previous test triggers further tests without the need for explicit service requests. In the example, it is the finding of positive bacterial growth that triggers further tests, such as non-identification and response to antibiotics. 
+{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observations" width="60%" %}
+This diagram (Fig. 2) shows an example of a reflex finding, i.e. the result of a previous test triggers further tests without the need for explicit service requests. In the example, it is the finding of positive bacterial growth that triggers further tests, such as non-identification and response to antibiotics. The illustration does not show the branch labeled "Service Request Growth anaerobic".  
 
 [Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
 

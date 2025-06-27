@@ -1,3 +1,4 @@
+/*
 Instance: 4-sepsis-DiagnosticReport  // Diagnostic Report Growht detection panel
 InstanceOf: ChLabOrderDiagnosticReport
 Title: "CH LAB-Order 4-sepsis DiagnosticReport"
@@ -15,6 +16,7 @@ Usage: #example
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * result[+] = Reference(4-sepsis-ObservationMicrobiolGrowthAerobic)
 * result[+] = Reference(ObservationMicrobiolGrowthAnaerobic)
+*/
 
 Instance: 4-sepsis-DiagnosticReportGrowth-aerobic  // Diagnostic Report Growth detection panel
 InstanceOf: ChLabOrderDiagnosticReport
