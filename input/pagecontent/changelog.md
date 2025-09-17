@@ -1,7 +1,12 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
 All significant changes to this FHIR implementation guide will be documented on this page.
-### STU 3 Ballot (2025-05-22)
+### STU 3 Sequence - v3.0.0
+
+#### Changed / Updated
+* [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
+
+### STU 3 Ballot v3.0.0-ballot (2025-05-22)
 
 #### Changed / Updated 
 * In version 2.0.0, the 'basedOn' element in the ServiceRequest resource was pointing in the wrong direction. A sub-ServiceRequest must contain a 'basedOn' element pointing to its parent ServiceRequest. The profiles and examples have been updated to reflect this. 
@@ -12,7 +17,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 * Add example for Renal Insufficiency as Panel with PlanDefinition and ActionDefinition
 * [#332](https://github.com/hl7ch/ch-lab-order/issues/332): Instance 3-gyn-ServiceRequest: split each lab test into a separate Service Request
 * [#329](https://github.com/hl7ch/ch-lab-order/issues/329): ObservationDefinition Hemoglobin blood -> fix erroneous entries
-
 
 #### Fixed
 * [#313](https://github.com/hl7ch/ch-core/issues/313): Add [expansion-parameter](https://build.fhir.org/codesystem-guide-parameter-code.html#:~:text=expansion%2Dparameter,as%20SNOMED%20CT) for the usage of SNOMED CT Swiss Extension. 
@@ -42,7 +46,7 @@ Alias:  $documentEntryClassCode, Alias:  $documentEntryTypeCode
 
 See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-order/issues).
 
-### STU 2 Ballot (2025-05-22)
+### STU 2 Sequence - v2.0.0 (2024-12-17)
 
 #### Changed / Updated
 * [#284](https://github.com/hl7ch/ch-lab-order/issues/284): Home - IG Fragments (Safety Considerations) (Patrick Jolo eHealth Suisse) - changed
@@ -94,7 +98,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-order/issues).
 * [#77](https://github.com/hl7ch/ch-lab-order/issues/77): Pathology Order: Case Study and Instance is added: Case study 6: Suspected Melanoma, order for histopathology examination
 * [#89](https://github.com/hl7ch/ch-lab-order/issues/89): Case study chronic renal insufficiency-generic has been deleted.
 * [#86](https://github.com/hl7ch/ch-lab-order/issues/86): Add Term 'Nachverordnung' in [ChLabOrderServiceRequestCategories codesystem](https://fhir.ch/ig/ch-lab-order/CodeSystem-ServiceRequest.categories.html)
-* [#85](https://github.com/hl7ch/ch-lab-order/issues/85): Remove SR of Vital Monitoring Devices; should be realized under a separate IG
+* [#85](https://github.com/hl7ch/ch-lab-order/issues/85): Remove SR of Vital Monitoring Devices; should be realized under a separate IG.
 * [#84](https://github.com/hl7ch/ch-lab-order/issues/84): The Resource Service Request provides that reasonCode and/or a reasonReference can be added to the job as Condition | Observation | Diagnostic Report | DocumentReference; the descrption of UC 7 has been completed
 * [#82](https://github.com/hl7ch/ch-lab-order/issues/82): Previous lab results or images can be easily requested by phone. However, if a previous order can still be found in the system, the associated results can be requested easily and precisely by adjusting the value of ServiceRequest.categories accordingly.
 
