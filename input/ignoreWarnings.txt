@@ -8,13 +8,8 @@ Canonical URL 'https://www.zkidney.com/mdrd-main' does not resolve
 URL value 'https://medcodesearch.ch/de/AL/laboratory_analyses' does not resolve
 A definition for CodeSystem 'https://medcodesearch.ch/de/AL/laboratory_analyses' could not be found, so the code cannot be validated
 
-# codes not accepted by publisher; although probably correct ✅
-None of the codings provided are in the value set 'DocumentEntry.confidentialityCode' (http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.confidentialityCode|3.1.1-ci-build), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N)
-None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype#VeKa)
-
 # Reference to draft CodeSystem ✅
-Reference to draft CodeSystem%
-URL value 'urn:oid:2.16.756.5.30.999999.1' does not resolve
+No definition could be found for URL value 'urn:oid:2.16.756.5.30.999999.1'
 
 # External private ValuSets PHARMACODE (branch is not yet merged into master) ❌
 A definition for CodeSystem 'urn:oid:2.16.756.5.30.2.6' could not be found, so the code cannot be validated
