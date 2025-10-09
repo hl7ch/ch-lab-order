@@ -6,7 +6,7 @@ Usage: #example
 * id = "4-sepsis"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/4-sepsis|3.0.0"
 * status = #completed
 
 * item[0].linkId = "order"
