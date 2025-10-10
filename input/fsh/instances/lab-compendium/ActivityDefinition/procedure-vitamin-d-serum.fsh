@@ -3,7 +3,7 @@ InstanceOf: ActivityDefinition
 Title: "CH LAB-Order Procedure Vit. D3"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
-// * language = #de-CH
+// * language = #en-US
 * text.status = #additional
 * text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Additional Narrative in French language | Vue narrative en français : </b></p>\n            <p>Procedure 25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma</p>\n            <p>Elément clinique pertinent requis en entrée : ObservationDefinition/input-observation-context-for-vitamin-d</p>\n            <p>Résultat en sortie : ObservationDefinition/example-observation-vitamin-d</p>\n        </div>"
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-vitamin-d-serum"
