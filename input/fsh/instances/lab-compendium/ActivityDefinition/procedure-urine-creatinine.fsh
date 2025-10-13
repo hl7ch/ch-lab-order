@@ -1,5 +1,5 @@
 Instance: procedure-urine-creatinine
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure Urine Creatinine"
 Description: "Procedure Creatinine [Mass/volume] in Urine"
 Usage: #example

@@ -1,9 +1,9 @@
 Instance: procedure-crp-highsens
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure CRP highsens"
 Description: "Procedure C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp-highsens"
 * identifier.use = #official

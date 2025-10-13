@@ -1,10 +1,10 @@
 
 Instance: procedure-lab-panel-renal-insufficiency
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure for Renal Insufficiency Assessment Panel"
 Description: "Procedure for estimated Glomerual Filtration Rate and and Urine Albumine-Creatinine Ratio"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-panel-renal-insufficiency"
 * identifier.system = "urn:ietf:rfc:3986"

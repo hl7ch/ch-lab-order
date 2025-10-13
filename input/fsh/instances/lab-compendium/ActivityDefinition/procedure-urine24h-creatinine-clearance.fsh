@@ -1,9 +1,9 @@
 Instance: procedure-urine24h-creatinine-clearance
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure Creatinine Clearance"
 Description: "Procedure to get the renal clearance in 24h Urine and Serum or Plasma"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine-clearance"
 * version = "0.1.0"

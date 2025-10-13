@@ -1,9 +1,9 @@
 Instance: procedure-hb-ht-panel
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedures Hemoglobin and Hematocrit panel"
 Description: "Hemoglobin-Hematocrit measurement procedure on in-vitro blood specimen"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-hb-ht-panel"
 * identifier.use = #official

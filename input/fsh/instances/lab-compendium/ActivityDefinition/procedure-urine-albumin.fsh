@@ -1,5 +1,5 @@
 Instance: procedure-urine-albumin
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure Urine Albumin"
 Description: "Procedure for Albumin [Mass/volume] in Urine Procedure"
 Usage: #example
