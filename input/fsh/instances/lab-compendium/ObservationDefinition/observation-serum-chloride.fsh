@@ -1,9 +1,9 @@
 Instance: observation-chloride-serum
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "ObservationDefinition Chloride"
 Description: "Chlorid im Blut Befund"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2075-0 "chloride [Moles/volume] in Serum or Plasma"

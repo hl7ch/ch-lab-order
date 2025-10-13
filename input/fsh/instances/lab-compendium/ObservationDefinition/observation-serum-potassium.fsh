@@ -1,9 +1,9 @@
 Instance: observation-serum-potassium
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "ObservationDefinition Potassium in Serum"
 Description: "Kalium im Blut [Moles/volume]"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"

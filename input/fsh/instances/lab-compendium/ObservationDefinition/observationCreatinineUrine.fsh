@@ -1,9 +1,9 @@
 Instance: observationCreatinineUrine
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Creatinine in Urine"
 Description: "Observation Definition for Creatinine [Mass/volume] in Urine"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2161-8 "Creatinine [Mass/volume] in Urine"

@@ -1,9 +1,9 @@
 Instance: observation-uACR
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Albumin/Creatinine Ratio in Urine"
 Description: "Observation Definition for Albumin/Creatinine [MassRatio] in Urine"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"

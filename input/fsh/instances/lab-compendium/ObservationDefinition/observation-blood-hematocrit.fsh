@@ -1,5 +1,5 @@
 Instance: observation-blood-hematocrit
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Hematocrit, Blood"
 Description: "Hematocrit blood [Volume Fraction] by calculation"
 Usage: #example
@@ -8,7 +8,6 @@ Usage: #example
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
 * permittedDataType[0] = #Quantity
-// * permittedDataType[+] = #string
 * multipleResultsAllowed = false
 * method.text = "automated hematology analyzer (AHA)"
 * preferredReportName = "Hematocrit Calc (Bld) [Volume fraction]"  // LOINC display name
