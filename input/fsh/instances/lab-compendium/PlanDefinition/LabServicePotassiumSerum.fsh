@@ -1,5 +1,5 @@
 Instance: LabServicePotassiumSerum
-InstanceOf: PlanDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for Potassium in Serum"
 Description: "Lab Service for Serum Potassium"
 Usage: #example
@@ -33,7 +33,7 @@ Usage: #example
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage du potassium sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
+* type = $laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #active
 * experimental = true
 * date = "2023-06-05T20:00:00+02:00"
@@ -55,6 +55,6 @@ Usage: #example
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code.coding = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+// * action.code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-potassium-serum"

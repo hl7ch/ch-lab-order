@@ -1,5 +1,5 @@
 Instance: LabServiceRenalInsufficiency  // PlanDefinition
-InstanceOf: LabServiceDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for Renal Insufficiency Assessment Panel"
 Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
@@ -56,7 +56,7 @@ Usage: #example
 * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
 * action.extension[=].extension.url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $sct#441915005 "Measurement of renal function (procedure)"
+// * action.code = $sct#441915005 "Measurement of renal function (procedure)"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all

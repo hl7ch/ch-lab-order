@@ -1,5 +1,5 @@
 Instance: LabService-eGFR   // PlanDefinition
-InstanceOf: LabServiceDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for eGFR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example
@@ -45,7 +45,7 @@ Usage: #example
 * action.extension[=].extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "SpecimenDefinition Single Test Capillary blood"
 * action.extension[=].extension[=].url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+// * action.code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all

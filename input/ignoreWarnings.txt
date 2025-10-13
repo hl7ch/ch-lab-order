@@ -19,3 +19,9 @@ URL value 'urn:oid:2.16.756.5.30.2.6' does not resolve
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#1)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#5)
+
+# Using ValueSets from hl7.fhir.r4.core#4.0.1 in PlanDefinition  ❌
+ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|5.0.0' not found
+ValueSet 'http://hl7.org/fhir/ValueSet/publication-status|5.0.0' not found
+ValueSet 'http://hl7.org/fhir/ValueSet/action-grouping-behavior|5.0.0' not found
+ValueSet 'http://hl7.org/fhir/ValueSet/action-selection-behavior|5.0.0' not found

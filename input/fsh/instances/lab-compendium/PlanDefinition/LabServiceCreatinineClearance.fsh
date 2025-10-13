@@ -1,5 +1,5 @@
 Instance: LabServiceCreatinineClearance   // PlanDefinition
-InstanceOf: LabServiceDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for Creatinin Clearance Panel"
 Description: "Plan Definition for Creatinine Clearance"
 Usage: #example
@@ -50,7 +50,7 @@ Usage: #example
 * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
 * action.extension[=].extension.url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
+// * action.code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all

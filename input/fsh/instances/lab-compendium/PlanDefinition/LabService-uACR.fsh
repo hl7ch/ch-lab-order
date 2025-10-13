@@ -1,5 +1,5 @@
 Instance: LabService-uACR   // PlanDefinition
-InstanceOf: LabServiceDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for uACR"
 Description: "Plan Definition for eGFK procedures"
 Usage: #example
@@ -42,8 +42,8 @@ Usage: #example
 * action.extension[=].extension.extension.url = "Material"
 * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/specimenUrineSpot) "Urine Spot"
 * action.extension[=].extension.url = "ExclusiveGroup"
-// * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"
+* action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
+// * action.code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all

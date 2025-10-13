@@ -1,6 +1,6 @@
-Instance: example-lab-panel-urine24h-creatinine-clearance
-InstanceOf: PlanDefinition
-Title: "CH LAB-Order Template for planDefinition"
+Instance: LabServiceTemplate   // PlanDefinition
+InstanceOf: ChLabServiceDefinitionR4
+Title: "CH LAB-Order Template for Lab Service"
 Description: "only for development purposes"
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
@@ -17,15 +17,16 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ScheduleSummary"
 * extension[=].valueString = "Daily ; report on D0"
 
-* url = "http://hl7.org/fhir/uv/order-catalog/PlanDefinition/example-lab-panel-urine24h-creatinine-clearance"
+* url = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceTemplate"
 * version = "current"
 * name = "UrineCreatinineClearancePanel"
 * title = "24-hour urine creatinine clearance panel"
-* type = $laboratory-service-definition-type#panel
+* type = $laboratory-service-definition-type#panel "collection of tests and panels performed on one or more in vitro biologic specimens"
 * status = #draft
 * experimental = false
 * date = "2020-02-12T19:00:00+01:00"
 * publisher = "HL7 Switzerland Laborgruppe"
+
 * contact.telecom.system = #url
 * contact.telecom.value = "http://hl7.ch"
 * description = "This 24-hour urine creatinine clearance panel is reusing the procedures from the          serum creatinine test as well as the procedure from the 24h urine creatinine panel."
@@ -48,7 +49,10 @@ Usage: #example
 * action.extension[=].extension.extension.valueReference = Reference(SpecimenDefinition/example-specimen-urine-24h) "example-specimen-urine-24h"
 * action.extension[=].extension.url = "ExclusiveGroup"
 * action.extension[=].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#34555-3 "Creatinine 24H renal clearance panel"
+
+// * action.code.coding[orderCodeLOINC] = $loinc#34555-3 "Creatinine 24H renal clearance panel"
+// * action.code.coding[orderCodeLOINC].system = $sct#409091002 "24 hour urine measurement (procedure)"
+
 * action.timingDuration = 2 'h' "hours"
 * action.groupingBehavior = #logical-group
 * action.selectionBehavior = #all

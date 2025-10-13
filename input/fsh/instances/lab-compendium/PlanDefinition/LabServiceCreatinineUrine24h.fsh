@@ -1,5 +1,5 @@
 Instance: LabServiceCreatinineUrine24h
-InstanceOf: PlanDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for  Creatinine in 24-hour Urine collection"
 Description: "PlanDefinition for mesurement of Creatinine [Mass/time] in 24 hour Urine"
 Usage: #example
@@ -20,7 +20,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "UrineCreatininePanel"
 * title = "24-hour urine creatinine panel"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#panel
+* type = $laboratory-service-definition-type#panel
 * status = #active
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"
@@ -42,6 +42,6 @@ Usage: #example
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/urine-24h) "example-specimen-urine-24h"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
+// // * action.code = $loinc#65634-8 "Creatinine 24 hour urine panel - 24 hour Urine"
 * action.timingDuration = 2 'h' "hours"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine24h-creatinine"
