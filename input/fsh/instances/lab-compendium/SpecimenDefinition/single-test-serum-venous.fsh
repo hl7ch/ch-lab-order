@@ -1,9 +1,9 @@
 Instance: single-test-serum-venous
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Serum Venous Blood"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition Serum Venous Blood"
 Description: "Single Test Venous blood, for single test"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active 
 * language = #en-US
 * typeCollected = $sct#122555007 "Venous blood specimen (specimen)"
 * collection = $sct#28520004 "Venipuncture for blood test"

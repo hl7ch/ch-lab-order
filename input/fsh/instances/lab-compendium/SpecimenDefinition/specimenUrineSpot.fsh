@@ -1,12 +1,11 @@
 Instance: specimenUrineSpot
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Urine Spot"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition Urine Spot"
 Description: "Urine Spot"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active
 * language = #en-US
-* typeCollected = http://terminology.hl7.org/CodeSystem/v2-0487#UR "Urine"
-* collection = $sct#122575003 "Urine specimen (specimen)"
+* typeCollected = $sct#122575003 "Urine specimen"
 * typeTested[0].type = http://terminology.hl7.org/CodeSystem/v2-0487#UR "Urine"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic (substance)"

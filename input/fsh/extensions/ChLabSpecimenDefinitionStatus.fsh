@@ -1,6 +1,6 @@
 Extension: ChLabSpecimenDefinitionStatus
 Id: ch-lab-specimen-status
-Title: "SpecimenDefinition.status (R5 backport)"
+Title: "CH LAB-Order SpecimenDefinition.status (R5 backport)"
 Description: "Status of the specimen definition (active | retired | draft)."
 * ^url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-specimen-status"
 * ^context.type = #element

@@ -3,7 +3,7 @@ Id: normal-contexts-vitamin-d
 Title: "Contexts for reimbursement of the vitamin D test"
 Description: "Diese Valueset listet die Standardantworten auf die Frage \"Verordnungskontext für den Vitamin-D-Test\" auf, die eine Erstattung dieses Tests erlauben."
 * ^meta.lastUpdated = "2020-03-10T07:30:00.000+00:00"
-* ^meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ObservationValueSet"
+// * ^meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ObservationValueSet"
 * ^language = #de-CH
 * ^url = "http://fhir.ch/ig/ch-lab-order/ValueSet/normal-contexts-vitamin-d"
 * ^version = "0.1.0"

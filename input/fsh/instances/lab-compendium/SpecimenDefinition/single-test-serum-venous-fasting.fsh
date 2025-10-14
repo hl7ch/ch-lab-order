@@ -1,11 +1,11 @@
 Instance: single-test-serum-venous-fasting
 InstanceOf: ChLab_SpecimenDefinitionR4
-Title: "SpecimenDefinition Serum Venous Blood, 12 h fasting"
+Title: "CH LAB-Order SpecimenDefinition Serum Venous Blood, 12 h fasting"
 Description: "Serum Venous Blood, 12 h fasting, for single test"
 Usage: #example
 * extension[status].valueCode = #active 
 // * typeCollected = $v2-0487#BLDV "Blood venous"
-* typeCollected = $sct#2122555007 "Venous blood specimen (specimen)"
+* typeCollected = $sct#119364003 "Serum specimen"
 * patientPreparation[0].text = "12 hour fasting"
 * patientPreparation[+] = $sct#263678003 "At rest"
 * timeAspect = "preferrably morning time"

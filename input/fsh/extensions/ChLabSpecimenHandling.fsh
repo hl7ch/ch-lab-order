@@ -1,22 +1,33 @@
 Extension: ChLabSpecimenHandling
 Id: ch-lab-specimen-handling
-Title: "Specimen handling (CH extension)"
-Description: "Erfasst Handling-Informationen (Temperaturqualifier, max duration, Instruktion)."
+Title: "CH LAB Specimen Handling"
+Description: "Handling instructions for laboratory specimens (adapted from R5 SpecimenDefinition.handling)"
 * ^url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-specimen-handling"
-
-// Kontext: auf SpecimenDefinition anwendbar
+* ^version = "1.0.0"
+* ^status = #active
 * ^context.type = #element
-* ^context.expression = "SpecimenDefinition"
+* ^context.expression = "SpecimenDefinition.typeTested"
+* ^publisher = "HL7 Switzerland"
+* ^contact[0].name = "HL7 Switzerland"
 
-// Diese Extension hat keine value[x], sondern Sub-Extensions
+// ─────────────────────────────
+// Sub-extensions
+// ─────────────────────────────
 * extension contains
     temperatureQualifier 0..1 and
+    temperatureRange 0..1 and
     maxDuration 0..1 and
     instruction 0..1
 
-* extension[temperatureQualifier].valueCodeableConcept only CodeableConcept
-* extension[temperatureQualifier].valueCodeableConcept from http://hl7.org/fhir/ValueSet/specimen-container-temperature (extensible)
+// temperatureQualifier
+* extension[temperatureQualifier].valueCodeableConcept 1..1
+* extension[temperatureQualifier].valueCodeableConcept from http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-vs-container-temperature (preferred)
 
-* extension[maxDuration].valueDuration only Duration
+// temperatureRange
+* extension[temperatureRange].valueRange 1..1
 
-* extension[instruction].valueMarkdown only markdown
+// maxDuration
+* extension[maxDuration].valueDuration 1..1
+
+// instruction
+* extension[instruction].valueMarkdown 1..1

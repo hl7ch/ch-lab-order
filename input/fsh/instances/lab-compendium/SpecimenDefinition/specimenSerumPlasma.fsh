@@ -1,11 +1,11 @@
 Instance: specimenSerumPlasma
-InstanceOf: SpecimenDefinition
+InstanceOf: ChLab_SpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Serum or Plasma"
 Description: "Serum, Plasma"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active 
 * language = #en-US
-* typeCollected = $v2-0487#BLDV "Blood venous"
+* typeCollected = $sct#119364003 "Serum specimen"
 * collection = $sct#28520004 "Venipuncture for blood test"
 * typeTested[0].type = $v2-0487#SER "Serum"
 * typeTested[=].preference = #preferred

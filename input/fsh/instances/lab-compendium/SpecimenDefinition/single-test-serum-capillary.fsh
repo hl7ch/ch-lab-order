@@ -1,13 +1,12 @@
 Instance: single-test-serum-capillary
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Serum Capillary Blood"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition Serum Capillary Blood"
 Description: "Serum Capillary blood, for single test"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active 
 * language = #en-US
-* typeCollected = $sct#122554006 "Capillary blood specimen (specimen)"
-* collection = $sct#1048003 "Capillary specimen collection (procedure)"
-* typeTested[0].type = http://terminology.hl7.org/CodeSystem/v2-0487#SER "Serum"
+* typeCollected = $sct#2421000181104 "Capillary serum specimen (specimen)"
+* typeTested[0].type = $sct#1048003 "Capillary specimen collection (procedure)"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic"
 * typeTested[=].container.material.text = "plastic"

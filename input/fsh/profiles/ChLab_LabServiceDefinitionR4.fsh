@@ -15,7 +15,7 @@ Description: "A simplified adaptation of the Order Catalog LabServiceDefinition 
 * status from http://hl7.org/fhir/ValueSet/publication-status (required)
 
 * subject[x] only CodeableConcept
-* subjectCodeableConcept from http://hl7.org/fhir/ValueSet/example-specimen-types (extensible)
+* subjectCodeableConcept from http://fhir.ch/ig/ch-lab-order/ValueSet/ch-lab-vs-specimen-type (extensible)
 
 * action.groupingBehavior from http://hl7.org/fhir/ValueSet/action-grouping-behavior (required)
 * action.selectionBehavior from http://hl7.org/fhir/ValueSet/action-selection-behavior (required)
