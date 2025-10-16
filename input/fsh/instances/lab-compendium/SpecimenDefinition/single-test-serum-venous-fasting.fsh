@@ -5,7 +5,7 @@ Description: "Serum Venous Blood, 12 h fasting, for single test"
 Usage: #example
 * extension[status].valueCode = #active 
 // * typeCollected = $v2-0487#BLDV "Blood venous"
-* typeCollected = $sct#119364003 "Serum specimen"
+* typeCollected = $sct#122555007 "Venous blood specimen"
 * patientPreparation[0].text = "12 hour fasting"
 * patientPreparation[+] = $sct#263678003 "At rest"
 * timeAspect = "preferrably morning time"

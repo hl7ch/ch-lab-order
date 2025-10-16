@@ -4,11 +4,11 @@ Title: "CH LAB-Order SpecimenDefinition Serum Capillary Blood, 12 h fasting"
 Description: "Serum Capillary Blood, 12 h fasting, for single test"
 Usage: #example
 * extension[status].valueCode = #active 
-* typeCollected = $sct#2421000181104 "Capillary serum specimen (specimen)"
+* typeCollected = $sct#122554006 "Capillary blood specimen"
 * patientPreparation[0].text = "12 hour fasting"
 * patientPreparation[+] = $sct#263678003 "At rest"
 * timeAspect = "preferrably morning time"
-* typeTested[0].type = $sct#1048003 "Capillary specimen collection (procedure)"
+* typeTested[0].type = $sct#2421000181104 "Capillary serum specimen (specimen)"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "plastic"
 * typeTested[=].container.type = $sct#767384004 "Evacuated blood collection tube with clot activator"

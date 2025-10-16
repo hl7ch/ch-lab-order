@@ -10,6 +10,9 @@ Usage: #example
 * permittedDataType[0] = #Quantity
 // * permittedDataType[+] = #string
 * multipleResultsAllowed = false
+* method.coding.system = $sct
+* method.coding.code = #703452004
+* method.coding.display = "Electrical impedance technique (qualifier value)"
 * method.text = "automated hematology analyzer (AHA)"
 * preferredReportName = "Hemoglobin blood"
 // * quantitativeDetails.customaryUnit = http://unitsofmeasure.org#g/L

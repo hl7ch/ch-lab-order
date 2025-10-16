@@ -3,7 +3,7 @@ InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for Renal Insufficiency Assessment Panel"
 Description: "Plan Definition for eGFK and uACR procedures"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+//* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)

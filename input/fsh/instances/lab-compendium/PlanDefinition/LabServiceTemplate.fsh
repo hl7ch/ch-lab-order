@@ -3,7 +3,7 @@ InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Template for Lab Service"
 Description: "only for development purposes"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/example-lab-compendium-header)

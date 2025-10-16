@@ -10,6 +10,9 @@ Usage: #example
 * permittedDataType[0] = #Quantity
 * permittedDataType[+] = #string
 * multipleResultsAllowed = false
+* method.coding.system = $sct
+* method.coding.code = #703445001
+* method.coding.display = "Ion selective electrode measurement technique (qualifier value)"
 * method.text = "Ion Selective Electrode (ISE)"
 * preferredReportName = "Potassium"
 * quantitativeDetails.customaryUnit = http://unitsofmeasure.org#g/L

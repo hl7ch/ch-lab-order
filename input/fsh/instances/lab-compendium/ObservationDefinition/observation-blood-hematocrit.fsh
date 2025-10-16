@@ -9,6 +9,9 @@ Usage: #example
 * code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
 * permittedDataType[0] = #Quantity
 * multipleResultsAllowed = false
+* method.coding.system = $sct
+* method.coding.code = #703452004
+* method.coding.display = "Electrical impedance technique (qualifier value)"
 * method.text = "automated hematology analyzer (AHA)"
 * preferredReportName = "Hematocrit Calc (Bld) [Volume fraction]"  // LOINC display name
 // * quantitativeDetails.customaryUnit = http://unitsofmeasure.org#g/L

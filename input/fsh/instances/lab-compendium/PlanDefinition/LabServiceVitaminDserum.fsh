@@ -2,7 +2,7 @@ Instance: LabServiceVitaminDserum
 InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for 25-hydroxyvitamin D3 [Moles/Vol] in Serum"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 // * language = #en-US
 * text.status = #additional
 * text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Zusätzliche Informationen in deutscher Sprache | Informationen in deutscher Sprache: </b></p>\n            <p>Monoparametrischer medizinischer Biologietest :</p>\n            <p>Konzentration von 25-hydroxyvitamin D3 [Moles/Vol]</p>\n            <p>Beschreibung : Vitamine D Konzentration in Serum-Probe</p>\n            <p>verschreibbar : ja</p>\n            <p>Laufzeit : 120 Minuten</p>\n        </div>"

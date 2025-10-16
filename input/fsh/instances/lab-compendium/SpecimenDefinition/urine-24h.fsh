@@ -5,8 +5,9 @@ Description: "24 Stunden Urin"
 Usage: #example
 * extension[status].valueCode = #active 
 * language = #en-US
-* typeCollected = $sct#122575003 "Urine specimen (specimen)"
-* typeTested.type = $sct#2475000 "Urine specimen collection, 24 hours (procedure)"
+* collection = $sct#710830005 "Collection of urine over a specified time period (procedure)"
+* typeCollected = $sct#122575003 "Urine specimen"
+* typeTested.type = $sct#122575003 "Urine specimen"
 * typeTested.preference = #preferred
 * typeTested.container.type = $sct#706055000 "24-hour urine specimen container (physical object)"
 * typeTested.handling[0].temperatureQualifier.text = "room temperature"

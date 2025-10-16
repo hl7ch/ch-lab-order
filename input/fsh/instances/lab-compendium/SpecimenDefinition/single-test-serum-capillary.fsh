@@ -5,8 +5,8 @@ Description: "Serum Capillary blood, for single test"
 Usage: #example
 * extension[status].valueCode = #active 
 * language = #en-US
-* typeCollected = $sct#2421000181104 "Capillary serum specimen (specimen)"
-* typeTested[0].type = $sct#1048003 "Capillary specimen collection (procedure)"
+* typeCollected = $sct#122554006 "Capillary blood specimen"
+* typeTested[0].type = $sct#2421000181104 "Capillary serum specimen (specimen)"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic"
 * typeTested[=].container.material.text = "plastic"
@@ -25,7 +25,7 @@ Usage: #example
 * typeTested[=].handling[=].maxDuration = 7 'd' "day"
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"
-* typeTested[+].type = http://terminology.hl7.org/CodeSystem/v2-0487#PLAS "Plasma"
+* typeTested[+].type = $sct#2421000181104 "Capillary serum specimen (specimen)"
 * typeTested[=].preference = #alternate
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
 * typeTested[=].container.cap = http://terminology.hl7.org/CodeSystem/container-cap#green

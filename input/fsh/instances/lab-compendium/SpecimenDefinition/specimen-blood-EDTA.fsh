@@ -7,7 +7,7 @@ Usage: #example
 * language = #en-US
 * typeCollected = $sct#122555007 "Venous blood specimen (specimen)"
 * collection = $sct#28520004 "Venipuncture for blood test"
-* typeTested[0].type = $v2-0487#BLD "Whole blood"
+* typeTested[0].type = $sct#122555007 "Venous blood specimen (specimen)"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic"
 * typeTested[=].container.material.text = "plastic"

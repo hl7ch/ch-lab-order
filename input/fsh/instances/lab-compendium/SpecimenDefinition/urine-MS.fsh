@@ -5,8 +5,8 @@ Description: "Urin Mittelstrahl"
 Usage: #example
 * extension[status].valueCode = #active 
 * language = #en-US
-* typeCollected = $sct#122575003 "Urine specimen"
-* typeTested[0].type = $sct#258574006 "Mid-stream urine specimen (specimen)"
+* typeCollected = $sct#258574006 "Mid-stream urine specimen (specimen)"
+* typeTested[0].type = $sct#122575003 "Urine specimen"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic (substance)"
 * typeTested[=].container.material.text = "plastic"

@@ -5,9 +5,9 @@ Description: "Serum, Plasma"
 Usage: #example
 * extension[status].valueCode = #active 
 * language = #en-US
-* typeCollected = $sct#119364003 "Serum specimen"
+* typeCollected = $sct#122555007 "Venous blood specimen"
 * collection = $sct#28520004 "Venipuncture for blood test"
-* typeTested[0].type = $v2-0487#SER "Serum"
+* typeTested[0].type = $sct#119364003 "Serum specimen"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic"
 * typeTested[=].container.material.text = "plastic"
@@ -26,7 +26,7 @@ Usage: #example
 * typeTested[=].handling[=].maxDuration = 7 'd' "day"
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"
-* typeTested[+].type = $v2-0487#PLAS "Plasma"
+* typeTested[+].type = $sct#119364003 "Serum specimen"
 * typeTested[=].preference = #alternate
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
 * typeTested[=].container.cap = $container-cap#green
