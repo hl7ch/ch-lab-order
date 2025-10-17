@@ -5,7 +5,7 @@ Description: "Urine Spot"
 Usage: #example
 * extension[status].valueCode = #active
 * language = #en-US
-* collection = $sct#386099003 "Spot urine collection"
+* collection = $sct#73416001 "Urine specimen collection, clean catch (procedure)"
 * typeCollected = $sct#122575003 "Urine specimen"
 * typeTested[0].type = $sct#122575003 "Urine specimen"
 * typeTested[=].preference = #preferred
