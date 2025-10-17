@@ -5,6 +5,7 @@ Description: "Urine Spot"
 Usage: #example
 * extension[status].valueCode = #active
 * language = #en-US
+* collection = $sct#386099003 "Spot urine collection"
 * typeCollected = $sct#122575003 "Urine specimen"
 * typeTested[0].type = $sct#122575003 "Urine specimen"
 * typeTested[=].preference = #preferred
@@ -19,7 +20,13 @@ Usage: #example
 * typeTested[=].retentionTime = 24 'h' "hour"
 * typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "2-8°C"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 14 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "-20°"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 1 'year' "year"

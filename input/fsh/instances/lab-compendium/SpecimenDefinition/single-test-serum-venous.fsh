@@ -22,10 +22,17 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
 * typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 7 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"
+
 * typeTested[+].type = $sct#119364003 "Serum specimen"
 * typeTested[=].preference = #alternate
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
@@ -39,7 +46,13 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
 * typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
-* typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+
+* typeTested[=].handling[+].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 7 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"

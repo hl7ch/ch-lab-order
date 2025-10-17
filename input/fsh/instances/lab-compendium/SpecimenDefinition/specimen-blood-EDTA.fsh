@@ -22,5 +22,8 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
 * typeTested[=].rejectionCriterion[+] = $rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #ambient
 * typeTested[=].handling[=].maxDuration = 2 'h' "hour"

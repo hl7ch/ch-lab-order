@@ -3,9 +3,10 @@ Parent: SpecimenDefinition
 Id: ch-lab-specimendefinition-r4
 Title: "CH LAB Specimen Definition (R4)"
 Description: "R4-compatible specimen definition aligned with R5 and HL7 Order Catalog model."
-* ^version = "1.0.0"
+* ^url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-specimendefinition-r4"
 * ^status = #active
-* ^publisher = "HL7 Switzerland"
+* ^version = "1.0.0"
+* ^publisher = "CH LAB Working Group"
 
 // ─────────────────────────────
 // Add missing R5 'status' via extension
@@ -42,6 +43,9 @@ Description: "R4-compatible specimen definition aligned with R5 and HL7 Order Ca
 // ─────────────────────────────
 * typeTested.extension contains ChLabSpecimenHandling named handling 0..*
 * typeTested.extension[handling] ^short = "Specimen handling instructions"
+* typeTested.handling.temperatureQualifier from ChLabVsContainerTemperature (required)
+  * ^binding.description = "Temperature range applicable to this handling step."
+  * ^binding.strength = #required
 
 // ─────────────────────────────
 // Additional notes

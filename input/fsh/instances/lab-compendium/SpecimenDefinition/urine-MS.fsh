@@ -19,7 +19,13 @@ Usage: #example
 * typeTested[=].retentionTime = 24 'h' "hour"
 * typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "2-8°C"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 14 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "-20°"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 1 'ear' "year"

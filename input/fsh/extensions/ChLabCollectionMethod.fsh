@@ -1,3 +1,4 @@
+/* not needed, since http://hl7.org/fhir/ValueSet/specimen-collection-method can be used in R4*/
 Extension: ChLabCollectionMethod
 Id: ch-lab-collection-method
 Title: "Specimen collection method (CH extension)"

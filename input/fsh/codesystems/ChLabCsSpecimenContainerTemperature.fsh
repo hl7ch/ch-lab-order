@@ -1,21 +1,17 @@
 CodeSystem: ChLabCsSpecimenContainerTemperature
 Id: ch-lab-cs-specimen-container-temperature
-Title: "Specimen Container Temperature (local mirror of R5)"
-Description: """
-Mirror of the FHIR R5 CodeSystem http://hl7.org/fhir/specimen-container-temperature.
-Defines temperature conditions for laboratory specimen containers.
-"""
+Title: "Specimen Container Temperature"
+Description: "Temperature conditions for laboratory specimen containers."
 * ^url = "http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-cs-specimen-container-temperature"
 * ^status = #active
 * ^experimental = false
-* ^caseSensitive = true
+* ^version = "1.0.0"
+* ^publisher = "CH LAB Working Group"
 * ^content = #complete
+* ^caseSensitive = true
 
-* #room "Room temperature"
-  "The specimen is kept at room temperature."
-* #refrigerated "Refrigerated"
-  "The specimen is kept at refrigerator temperature (2-8 °C)."
-* #frozen "Frozen"
-  "The specimen is kept frozen (-20 °C or below)."
-* #deep-frozen "Deep frozen"
-  "The specimen is kept deep-frozen (-70 °C or below)."
+// Example codes
+* #frozen "Frozen" "Specimen must be kept frozen until processing."
+* #refrigerated "Refrigerated" "Specimen must be stored between +2°C and +8°C."
+* #ambient "Ambient" "Specimen can be transported or stored at room temperature."
+* #bodytemp "Body temperature" "Specimen must be kept at or near body temperature (~37°C)."
