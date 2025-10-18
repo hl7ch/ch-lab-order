@@ -8,4 +8,4 @@ Description: "Allowed temperature conditions for laboratory specimen containers.
 * ^version = "1.0.0"
 * ^publisher = "CH LAB Working Group"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* include codes from system http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-cs-specimen-container-temperature
+* include codes from system $specimen-handling-temperature

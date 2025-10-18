@@ -4,7 +4,7 @@ Title: "CH LAB-Order SpecimenDefinition Urine Spot"
 Description: "Urine Spot"
 Usage: #example
 * extension[status].valueCode = #active
-* extension[testingDestination].valueCode = #URN "Urinalysis"
+* extension[testingDestination].valueCodeableConcept = $v2-0074#URN "Urinalysis"
 * language = #en-US
 * collection = $sct#73416001 "Urine specimen collection, clean catch (procedure)"
 * typeCollected = $sct#122575003 "Urine specimen"

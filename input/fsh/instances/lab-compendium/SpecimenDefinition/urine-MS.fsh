@@ -4,7 +4,7 @@ Title: "CH LAB-Order SpecimenDefinition Urine Midstream"
 Description: "Urin Mittelstrahl"
 Usage: #example
 * extension[status].valueCode = #active 
-* extension[testingDestination].valueCode = #URN "Urinalysis"
+* extension[testingDestination].valueCodeableConcept = $v2-0074#URN "Urinalysis"
 * language = #en-US
 * typeCollected = $sct#258574006 "Mid-stream urine specimen (specimen)"
 * typeTested[0].type = $sct#122575003 "Urine specimen"

@@ -4,7 +4,7 @@ Title: "CH LAB-Order SpecimenDefinition Blood EDTA"
 Description: "Blood EDTA"
 Usage: #example
 * extension[status].valueCode = #active
-* extension[testingDestination].valueCode = #HM "Hematology"
+* extension[testingDestination].valueCodeableConcept = $v2-0074#HM "Hematology"
 * language = #en-US
 * typeCollected = $sct#122555007 "Venous blood specimen (specimen)"
 * collection = $sct#28520004 "Venipuncture for blood test"

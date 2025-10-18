@@ -4,7 +4,7 @@ Title: "CH LAB-Order SpecimenDefinition Serum or Plasma"
 Description: "Serum, Plasma"
 Usage: #example
 * extension[status].valueCode = #active
-* extension[testingDestination].valueCode = #CH "Chemistry"
+* extension[testingDestination].valueCodeableConcept = $v2-0074#CH "Chemistry"
 * language = #en-US
 * typeCollected = $sct#122555007 "Venous blood specimen"
 * collection = $sct#28520004 "Venipuncture for blood test"

@@ -4,7 +4,7 @@ Title: "CH LAB-Order SpecimenDefinition Serum Capillary Blood"
 Description: "Serum Capillary blood, for single test"
 Usage: #example
 * extension[status].valueCode = #active
-* extension[testingDestination].valueCode = #CH "Chemistry"
+* extension[testingDestination].valueCodeableConcept = $v2-0074#CH "Chemistry"
 * language = #en-US
 * collection = $sct#1048003 "Capillary specimen collection (procedure)"
 * typeCollected = $sct#122554006 "Capillary blood specimen"
