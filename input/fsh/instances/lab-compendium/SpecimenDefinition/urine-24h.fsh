@@ -4,6 +4,8 @@ Title: "CH LAB-Order SpecimenDefinition 24 h Urin"
 Description: "24 Stunden Urin"
 Usage: #example
 * extension[status].valueCode = #active 
+* extension[testingDestination].valueCode = #URN "Urinalysis"
+
 * language = #en-US
 // * collection = $sct#710830005 "Collection of urine over a specified time period (procedure)"
 * collection = $sct#225113003 "Timed urine collection"

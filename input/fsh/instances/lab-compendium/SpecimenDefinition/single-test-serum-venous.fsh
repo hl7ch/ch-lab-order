@@ -3,7 +3,8 @@ InstanceOf: ChLab_SpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Serum Venous Blood"
 Description: "Single Test Venous blood, for single test"
 Usage: #example
-* extension[status].valueCode = #active 
+* extension[status].valueCode = #active
+* extension[testingDestination].valueCode = #CH "Chemistry"
 * language = #en-US
 * typeCollected = $sct#122555007 "Venous blood specimen"
 * collection = $sct#28520004 "Venipuncture for blood test"

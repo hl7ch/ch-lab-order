@@ -13,6 +13,11 @@ Description: "R4-compatible specimen definition aligned with R5 and HL7 Order Ca
 // Add missing R5 publication status via extension
 // ───────────────────────────────────────────────────────
 * extension contains ChLabSpecimenDefinitionStatus named status 1..1
+* extension[status]. ^short = "Publication status of the SpecimenDefinition"
+
+* extension contains ChLabSpecimenDefinitionTestingDestination named testingDestination 0..1
+* extension[testingDestination]. ^short = "Testing destination for the SpecimenDefinition"
+// * extension[testingDestination].valueCode from $v2-0074 (preferred)
 
 // ─────────────────────────────
 // Basic specimen characteristics
