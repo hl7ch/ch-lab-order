@@ -193,12 +193,14 @@ Usage: #example
 // ---- PractitionerRole --------> Folder
 
 Instance: HealthInsuranceCardTobiasTimmermann
-InstanceOf: CHCoreCoverage
+InstanceOf: ChOrfCoverage
 Title: "Health Insurance Card Tobias Timmermann"
 Description: "Example for Insurance"
 Usage: #example
 // * id = "health-insurance-card-tobias-timmermann"
-* identifier.type = $coverage-identifiertype#VeKa
+* identifier.type.coding.system = $coverage-identifiertype
+* identifier.type.coding.code   = #VeKa
+* identifier.type.coding.display = "Insurance Card Number"
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "80756011110123400003"
 * status = #active

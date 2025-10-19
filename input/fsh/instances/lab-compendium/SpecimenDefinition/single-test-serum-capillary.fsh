@@ -1,13 +1,14 @@
 Instance: single-test-serum-capillary
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Serum Capillary Blood"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition Serum Capillary Blood"
 Description: "Serum Capillary blood, for single test"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active
+* extension[testingDestination].valueCodeableConcept = $v2-0074#CH "Chemistry"
 * language = #en-US
-* typeCollected = $sct#122554006 "Capillary blood specimen (specimen)"
 * collection = $sct#1048003 "Capillary specimen collection (procedure)"
-* typeTested[0].type = http://terminology.hl7.org/CodeSystem/v2-0487#SER "Serum"
+* typeCollected = $sct#122554006 "Capillary blood specimen"
+* typeTested[0].type = $sct#2421000181104 "Capillary serum specimen (specimen)"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic"
 * typeTested[=].container.material.text = "plastic"
@@ -22,11 +23,18 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
 * typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 7 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"
-* typeTested[+].type = http://terminology.hl7.org/CodeSystem/v2-0487#PLAS "Plasma"
+
+* typeTested[+].type = $sct#2421000181104 "Capillary serum specimen (specimen)"
 * typeTested[=].preference = #alternate
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
 * typeTested[=].container.cap = http://terminology.hl7.org/CodeSystem/container-cap#green
@@ -39,7 +47,13 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
 * typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
-* typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+
+* typeTested[=].handling[+].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 7 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"

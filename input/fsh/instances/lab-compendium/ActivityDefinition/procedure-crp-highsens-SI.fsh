@@ -1,13 +1,13 @@
 Instance: procedure-crp-highsens-SI
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure CRP highsens SI"
 Description: "Procedure C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp-highsens-SI"
 * identifier.use = #official
-* identifier.value = "CRP_test"
+* identifier.value = "CRP_high_sensitivity_test"
 * version = "0.1.0"
 * name = "CRPMeasurementProcedure"
 * title = "Procedure - CRP measurement on in vitro blood serum - SI-Units"
@@ -18,16 +18,17 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
-// * purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
+* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform CRP high sensitivity level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2022-04-01"
 * effectivePeriod.end = "2023-12-25"
 
-// * topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
-// * topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
-// * topic[+] = $sct#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)" // SCT Code
-
+* topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
+* topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
 * kind = #ServiceRequest
-* code = $loinc#76486-0 "C reactive protein [Moles/volume] in Serum or Plasma by High sensitivity method"
+
+// Detail type of lab procedure (Snomed CT)
+* code = $sct#711357009 "Measurement of C-reactive protein using high sensitivity technique (procedure)"
+
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)

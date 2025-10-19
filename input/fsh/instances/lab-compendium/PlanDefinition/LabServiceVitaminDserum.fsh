@@ -1,9 +1,9 @@
 Instance: LabServiceVitaminDserum
-InstanceOf: PlanDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for 25-hydroxyvitamin D3 [Moles/Vol] in Serum"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
-// * language = #de-CH
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+// * language = #en-US
 * text.status = #additional
 * text.div = "<div xml:lang=\"de-CH\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de-CH\">\n            <p><b>Zusätzliche Informationen in deutscher Sprache | Informationen in deutscher Sprache: </b></p>\n            <p>Monoparametrischer medizinischer Biologietest :</p>\n            <p>Konzentration von 25-hydroxyvitamin D3 [Moles/Vol]</p>\n            <p>Beschreibung : Vitamine D Konzentration in Serum-Probe</p>\n            <p>verschreibbar : ja</p>\n            <p>Laufzeit : 120 Minuten</p>\n        </div>"
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
@@ -28,7 +28,7 @@ Usage: #example
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "25-hydroxyvitamin D3 [Moles/Vol]"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
+* type = $laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #active
 * experimental = true
 * date = "2020-02-19T20:00:00+02:00"
@@ -45,6 +45,6 @@ Usage: #example
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+// * action.code = $loinc#14635-7 "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 120 'mn' "minutes"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-vitamin-d-serum"

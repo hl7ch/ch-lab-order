@@ -1,10 +1,10 @@
 Instance: observation24hCollectionVolumeUrine
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Collection volumen"
 Description: "Collection volume [mL] of specimen"
 Usage: #example
-* meta.profile[0] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"
-* meta.profile[+] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+// * meta.profile[0] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/InputObservationDefinition"
+// * meta.profile[+] = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#3167-4 "Volume of 24 hour Urine"

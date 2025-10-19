@@ -1,9 +1,9 @@
 Instance: procedure-serum-electrolyte
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure Electrolytes"
 Description: "Procedure Electrolytes 1998 panel - Serum or Plasma"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-serum-electrolyte"
 * version = "0.1.0"

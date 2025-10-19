@@ -1,13 +1,14 @@
 Instance: specimenUrineSpot
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Urine Spot"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition Urine Spot"
 Description: "Urine Spot"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active
+* extension[testingDestination].valueCodeableConcept = $v2-0074#URN "Urinalysis"
 * language = #en-US
-* typeCollected = http://terminology.hl7.org/CodeSystem/v2-0487#UR "Urine"
-* collection = $sct#122575003 "Urine specimen (specimen)"
-* typeTested[0].type = http://terminology.hl7.org/CodeSystem/v2-0487#UR "Urine"
+* collection = $sct#73416001 "Urine specimen collection, clean catch (procedure)"
+* typeCollected = $sct#122575003 "Urine specimen"
+* typeTested[0].type = $sct#122575003 "Urine specimen"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic (substance)"
 * typeTested[=].container.material.text = "plastic"
@@ -20,7 +21,13 @@ Usage: #example
 * typeTested[=].retentionTime = 24 'h' "hour"
 * typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "2-8°C"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested[=].handling[=].maxDuration = 14 'd' "day"
+
 * typeTested[=].handling[+].temperatureQualifier.text = "-20°"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
 * typeTested[=].handling[=].maxDuration = 1 'year' "year"

@@ -6,7 +6,7 @@ Usage: #example
 * id = "LabOrder-qr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
-* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
+* questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form|3.0.0"
 * status = #completed
 
 // ---------- order (Auftrag) item[0] ----------

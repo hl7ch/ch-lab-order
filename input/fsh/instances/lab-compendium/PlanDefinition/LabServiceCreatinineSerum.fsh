@@ -1,9 +1,9 @@
 Instance: LabServiceCreatinineSerum
-InstanceOf: PlanDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for Creatinine in Serum"
 Description: "Plan Definition of Lab Service for Serum Creatinine"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
@@ -20,7 +20,7 @@ Usage: #example
 * version = "0.1.0"
 * name = "SerumCreatinineTest"
 * title = "Serum creatinine test"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
+* type = $laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #active
 * experimental = true
 * date = "2020-02-12T19:00:00+01:00"
@@ -42,6 +42,6 @@ Usage: #example
 * action.extension.extension[=].extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension[=].url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+// // * action.code = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * action.timingDuration = 1 'h' "hour"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-serum-creatinine"

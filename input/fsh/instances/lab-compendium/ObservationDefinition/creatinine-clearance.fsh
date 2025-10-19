@@ -1,9 +1,9 @@
 Instance: observationCreatinineClearance
-InstanceOf: ObservationDefinition
+InstanceOf: ChLab_LabObservationDefinitionR4
 Title: "CH LAB-Order Observation Definition of Creatinin Clearance"
 Description: "Observation Definition for Serum volume which is cleared [mL/min] by the kidneys"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabObservationDefinition"
 * language = #en-US
 // * url = "http://fhir.ch/ig/ch-lab-order/ObservationDefinition/observationCreatinineClearance"
 // * status = "active"

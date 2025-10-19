@@ -1,13 +1,14 @@
 Instance: specimen-blood-EDTA
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition Blood EDTA"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition Blood EDTA"
 Description: "Blood EDTA"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active
+* extension[testingDestination].valueCodeableConcept = $v2-0074#HM "Hematology"
 * language = #en-US
-* typeCollected = $v2-0487#BLDV "Blood venous"
+* typeCollected = $sct#122555007 "Venous blood specimen (specimen)"
 * collection = $sct#28520004 "Venipuncture for blood test"
-* typeTested[0].type = $v2-0487#BLD "Whole blood"
+* typeTested[0].type = $sct#122555007 "Venous blood specimen (specimen)"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "Plastic"
 * typeTested[=].container.material.text = "plastic"
@@ -22,5 +23,8 @@ Usage: #example
 * typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
 * typeTested[=].rejectionCriterion[+] = $rejection-criteria#insufficient
 * typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+
 * typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #ambient
 * typeTested[=].handling[=].maxDuration = 2 'h' "hour"

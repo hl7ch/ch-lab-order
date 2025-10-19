@@ -1,15 +1,25 @@
 Instance: urine-24h
-InstanceOf: SpecimenDefinition
-Title: "SpecimenDefinition 24 h Urin"
+InstanceOf: ChLab_SpecimenDefinitionR4
+Title: "CH LAB-Order SpecimenDefinition 24 h Urin"
 Description: "24 Stunden Urin"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabSpecimenDefinition"
+* extension[status].valueCode = #active 
+* extension[testingDestination].valueCodeableConcept = $v2-0074#URN "Urinalysis"
+
 * language = #en-US
-* collection = $sct#2475000 "Urine specimen collection, 24 hours (procedure)"
-* typeTested.type = $sct#122575003 "Urine specimen (specimen)"
+// * collection = $sct#710830005 "Collection of urine over a specified time period (procedure)"
+* collection = $sct#225113003 "Timed urine collection"
+* typeCollected = $sct#122575003 "Urine specimen"
+* typeTested.type = $sct#122880004  // ValueSet: hl7VS-specimenType but Snomed CT code
 * typeTested.preference = #preferred
 * typeTested.container.type = $sct#706055000 "24-hour urine specimen container (physical object)"
+
 * typeTested.handling[0].temperatureQualifier.text = "room temperature"
+* typeTested.handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested.handling[=].temperatureQualifier.coding.code = #ambient
 * typeTested.handling[=].maxDuration = 2 'h' "hour"
+
 * typeTested.handling[+].temperatureQualifier.text = "refrigerated"
+* typeTested.handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested.handling[=].temperatureQualifier.coding.code = #refrigerated
 * typeTested.handling[=].maxDuration = 24 'h' "hour"

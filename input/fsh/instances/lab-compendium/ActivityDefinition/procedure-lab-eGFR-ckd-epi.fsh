@@ -1,9 +1,9 @@
 Instance: procedure-lab-eGFR-ckd-epi
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure eGFK CKD-EPI"
 Description: "Procedure to get the estimated GFR [Moles/volume] using CKD-EPI 2021 calculator, and mesurement of serum creatinine"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-lab-eGFR-ckd-epi"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -30,7 +30,7 @@ Usage: #example
 
 // * relatedArtifact.type = #documentation
 // * relatedArtifact.display = "Explanation of diagnostic tests for estimated GFR by CKD-EPI 2021 formula"
-* library = "https://www.zkidney.com/mdrd-main"
+* library = "http://fhir.ch/ig/ch-lab-order/Library/GFR-Calculator"
 * kind = #ServiceRequest
 // * code.text = "eGFR calculated with CKD-EPI 2021"
 * code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"

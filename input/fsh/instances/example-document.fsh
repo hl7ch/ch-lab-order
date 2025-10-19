@@ -25,7 +25,7 @@ Usage: #inline
 * author = Reference(urn:uuid:a8d35919-6883-4312-8b26-11b964c0e0aa)
 * title = "Clinical Summary Document"
 * section.title = "Vital Signs"
-* section.code = $loinc#8716-3 "Vital signs"
+* section.code = $loinc#8716-3 "Vital signs note"
 * section.entry = Reference(urn:uuid:e9690e11-fd84-40f3-acc0-e833ad149259)
 
 Instance: 146d8255-8963-4bdd-b69c-faf9dc7455ca

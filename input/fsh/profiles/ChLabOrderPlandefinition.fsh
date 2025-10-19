@@ -11,7 +11,7 @@ Alias: $RegulatorySummary = http://hl7.org/fhir/uv/order-catalog/StructureDefini
 Alias: $ResultInterpretationSummary = http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ResultInterpretationSummary
 Alias: $SpecimenRequested = http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested
 Alias: $LabProcedureDefinition = http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition
-Alias: $laboratory-service-type = http://hl7.org/fhir/uv/order-catalog/ValueSet/laboratory-service-type
+Alias: $laboratory-service-definition-type = http://hl7.org/fhir/uv/order-catalog/ValueSet/laboratory-service-type
 // Alias: $administrative-gender = http://hl7.org/fhir/ValueSet/administrative-gender
 Alias: $bibliography-artifact-type = http://hl7.org/fhir/uv/order-catalog/ValueSet/bibliography-artifact-type
 
@@ -70,7 +70,7 @@ PlanDefinition is therefore selected to represent a laboratory service, and the 
 // * title.extension[OtherTitle] ^short = "Synonym in a specified language"
 // * title.extension[OtherTitle] ^definition = "Expresses a synonym of the laboratory service in a specified language"
 // * type MS
-// * type from $laboratory-service-type (extensible)
+// * type from $laboratory-service-definition-type (extensible)
 // * type ^short = "panel | test"
 // * type ^comment = "In this LabServiceDefiniton profile, PlanDefinition represents a laboratory service, which can be either a test or a panel. \r\nA test is a single measurement performed on a material/digital specimen, producing generally one result (sometimes zero, sometime more).\r\nA panel is a collection of tests and panels, performed on one or more material/digital specimens, and producing a collection of results.\r\nTherefore, the type is bound to a value set {\"test\", \"panel\"}. The original value bound to this element with binding strength \"extensible\" does not contain appropriate values for laboratory diagnostic services."
 // * description ^comment = "This description provides details such as when this laboratory diagnostic service can be ordered, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the plan definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the plan definition is presumed to be the predominant language in the place the plan definition was created)."

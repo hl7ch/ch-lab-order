@@ -1,9 +1,9 @@
 Instance: procedure-crp
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure CRP"
 Description: "Procedure C reactive protein [Mass/volume] in Serum or Plasma"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-crp"
 * identifier.use = #official
@@ -18,16 +18,17 @@ Usage: #example
 * contact.telecom.value = "http://hl7.org/Special/committees/orders"
 * description = "CRP measurement procedure on in-vitro serum specimen"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#756
-* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform potassium level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
+* purpose = "This _ActivityDefinition_ specifies the input specimens and observations needed to perform CRP level test on serum, and the output observation.                  It is referenced by any _PlanDefinition_ representing a lab service focusing on this test."
 * effectivePeriod.start = "2020-04-01"
 * effectivePeriod.end = "2020-12-25"
 
 * topic[0] = $loinc#18719-5 "Chemistry studies (set)"  // LOINC Specialty code
 * topic[+] = $sct#275711006 "Serum chemistry test (procedure)" // SNOMED CT Specialty
-
-* topic[+] = $sct#55235003 "C-reactive protein measurement (procedure)"
 * kind = #ServiceRequest
-* code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+
+// Detail type of lab procedure (Snomed CT)
+* code = $sct#55235003 "C-reactive protein measurement (procedure)"
+
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)

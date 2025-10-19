@@ -19,8 +19,6 @@ Usage: #example
 * relatesTo.code = #appends
 * relatesTo.target = Reference(example)
 * description = "Physical"
-
-// seems to be correct, but publisher declared codings not in the value set:
 * securityLabel = $sct#17621005 "Normal (qualifier value)"
 
 * content.attachment.contentType = #application/fhir+xml

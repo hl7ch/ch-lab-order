@@ -1,9 +1,9 @@
 Instance: procedure-d-dimer
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure D-Dimer"
 Description: "Procedure Short Fibrin D-dimer FEU and DDU panel"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-d-dimer"
 * identifier.use = #official
@@ -25,9 +25,11 @@ Usage: #example
 
 * topic[0] = $loinc#18720-3 "Coagulation studies (set)"  // LOINC Specialty code
 * topic[+] = $sct#86236002 "Circulating anticoagulant assay (procedure)" // not shure correct code
-
 * kind = #ServiceRequest
-* code = $loinc#91556-1 "Fibrin D-dimer [Mass/volume] in Blood by Immunoassay.DDU"
+
+// Detail type of lab procedure (Snomed CT)
+* code = $sct#103826007 "D-dimer assay, quantitative (procedure)"
+
 * priority = #routine
 // * timingDuration = 30 'mn' "minutes"
 // * specimenRequirement = Reference(SpecimenDefinition/single-test-serum-venous)

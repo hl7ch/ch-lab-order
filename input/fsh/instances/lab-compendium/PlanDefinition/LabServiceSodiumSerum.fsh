@@ -1,9 +1,9 @@
 Instance: LabServiceSodiumSerum
-InstanceOf: PlanDefinition
+InstanceOf: ChLabServiceDefinitionR4
 Title: "CH LAB-Order Service for Sodium in Serum"
 Description: "Lab Service of Pipette Lab for Serum Sodium"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
 * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
 * extension[=].valueReference = Reference(Composition/Gantenbein-Catalog-Header)
@@ -33,7 +33,7 @@ Usage: #example
 * title.extension.extension[+].url = "content"
 * title.extension.extension[=].valueString = "Dosage du sodium sérique"
 * title.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
-* type = http://hl7.org/fhir/uv/order-catalog/CodeSystem/laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
+* type = $laboratory-service-definition-type#test "unitary measurement performed on an in vitro biologic specimen"
 * status = #active
 * experimental = true
 * date = "2023-06-05T20:00:00+02:00"
@@ -54,6 +54,6 @@ Usage: #example
 * action.extension.extension.extension.valueReference = Reference(SpecimenDefinition/single-test-serum-capillary) "example-specimen-capillary-serum-single-test"
 * action.extension.extension.url = "ExclusiveGroup"
 * action.extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/SpecimenRequested"
-* action.code.coding = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+// * action.code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * action.timingDuration = 30 'mn' "minutes"
 * action.definitionCanonical = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-sodium-serum"

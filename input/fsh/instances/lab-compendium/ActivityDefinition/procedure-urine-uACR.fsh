@@ -1,9 +1,9 @@
 Instance: procedure-urine-uACR
-InstanceOf: ActivityDefinition
+InstanceOf: ChLab_LabProcedureDefinitionR4
 Title: "CH LAB-Order Procedure Urine Albumin/Creatinine Ratio"
 Description: "Procedure Albumin/Creatinine Ratio [Mass Ratio] in Urine"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
+// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabProcedureDefinition"
 * language = #en-US
 * url = "http://fhir.ch/ig/ch-lab-order/ActivityDefinition/procedure-urine-uACR"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -30,7 +30,7 @@ Usage: #example
 
 // * relatedArtifact.type = #documentation
 // * relatedArtifact.display = "Explanation of diagnostic tests to determine the ratio of the concentration of albumin and creatinine in urine"
-* library = "https://www.zkidney.com/mdrd-main" 
+* library = "http://fhir.ch/ig/ch-lab-order/Library/GFR-Calculator"
 * kind = #ServiceRequest
 // * code.text = "uACR in Urine"
 * code = $loinc#9318-7 "Albumin/Creatinine [Mass Ratio] in Urine"
