@@ -66,7 +66,7 @@ parameters:
   display-warnings: true
   path-expansion-params: "../../expansion-params.json" # for using SNOMED CT Swiss Extension
   pin-canonicals: pin-multiples
-  oid-root: "2.16.756.5.30.1.143.10"
+  # oid-root: "2.16.756.5.30.1.1.20" # OID root for HL7 Switzerland Laboratory IGs
 
 FSHOnly: false
 applyExtensionMetadataToRoot: false
