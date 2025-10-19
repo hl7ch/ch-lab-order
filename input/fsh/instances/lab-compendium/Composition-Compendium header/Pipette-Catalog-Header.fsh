@@ -1,9 +1,9 @@
 Instance: Pipette-Catalog-Header
-InstanceOf: Composition
+InstanceOf: ChLabCatalogHeaderR4
 Title: "Catalog Header of Labor Pipette"
 Description: "Example of a Lab header"
 Usage: #example
-// * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogHeader"
+* meta.profile = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-catalog-header-r4"
 * language = #en-US
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\">\n
@@ -19,9 +19,8 @@ Usage: #example
 <p><b>author:</b> <a href=\"Organization-LaborPipette.html\"> Labor Pipette</a></p>\n            
 <p><b>custodian:</b> <a href=\"Organization-LaborPipette.html\"> Labor Pipette</a></p>\n        
 </div>"
-* extension.url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ValidityPeriod"
-* extension.valuePeriod.start = "2025-01-01"
-* extension.valuePeriod.end = "2025-12-31"
+* extension[validityPeriod].valuePeriod.start = "2025-01-01"
+* extension[validityPeriod].valuePeriod.end = "2025-12-31"
 * identifier.use = #official
 * identifier.system = "http://example.org"
 * identifier.value = "PipetteLabCatalog"
