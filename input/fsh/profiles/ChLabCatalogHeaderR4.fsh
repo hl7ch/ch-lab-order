@@ -16,6 +16,8 @@ Description: "Composition header for lab catalogs (R4 compatible)"
 Extension: ValidityPeriod
 Id: ch-lab-validity-period
 Title: "CH LAB Validity Period"
+Description: "Specifies the period of time during which a laboratory catalog or diagnostic service is valid."
+
 * ^context[0].type = #element
 * ^context[0].expression = "Composition"
 * value[x] only Period

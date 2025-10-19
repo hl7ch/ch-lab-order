@@ -29,9 +29,11 @@ dependencies:
     version: current
   hl7.terminology.r4:
     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
-    version: 5.5.0
+    version: 6.5.0
   ch.fhir.ig.ch-orf: current
-  hl7.fhir.uv.order-catalog: current
+  hl7.fhir.uv.order-catalog:
+    uri: http://hl7.org/fhir/uv/order-catalog/ImplementationGuide/hl7.fhir.uv.order-catalog
+    version: 0.1.0
 
 pages:
   index.md:
