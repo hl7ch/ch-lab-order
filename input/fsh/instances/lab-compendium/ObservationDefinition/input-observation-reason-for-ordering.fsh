@@ -1,5 +1,5 @@
 Instance: input-observation-reason-for-ordering
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition generic"
 Description: "For which reason is the test ordered"
 Usage: #example

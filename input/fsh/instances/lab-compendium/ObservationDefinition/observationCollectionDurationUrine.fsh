@@ -1,5 +1,5 @@
 Instance: observationCollectionDurationUrine
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Collection duration"
 Description: "Collection duration [h] of specimen"
 Usage: #example

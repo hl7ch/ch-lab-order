@@ -1,5 +1,5 @@
 Instance: observation-serum-CRP
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition CRP in blood"
 Description: "C reactive protein in serum or plasma [Moles/volume]"
 Usage: #example

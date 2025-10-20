@@ -1,5 +1,5 @@
 Instance: observation-vitamin-d
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition 25-hydroxyvitamin D3 [Moles/Vol]"
 Description: "Vitamin-D"
 Usage: #example

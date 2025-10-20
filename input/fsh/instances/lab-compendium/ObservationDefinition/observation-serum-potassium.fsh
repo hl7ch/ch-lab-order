@@ -1,5 +1,5 @@
 Instance: observation-serum-potassium
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition Potassium in Serum"
 Description: "Kalium im Blut [Moles/volume]"
 Usage: #example

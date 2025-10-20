@@ -1,5 +1,5 @@
 Instance: observation24hCollectionVolumeUrine
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Collection volumen"
 Description: "Collection volume [mL] of specimen"
 Usage: #example

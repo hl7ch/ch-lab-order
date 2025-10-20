@@ -1,5 +1,5 @@
 Instance: observation-chloride-serum
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition Chloride"
 Description: "Chlorid im Blut Befund"
 Usage: #example

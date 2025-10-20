@@ -1,5 +1,5 @@
 Instance: observation-blood-hematocrit
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Hematocrit, Blood"
 Description: "Hematocrit blood [Volume Fraction] by calculation"
 Usage: #example

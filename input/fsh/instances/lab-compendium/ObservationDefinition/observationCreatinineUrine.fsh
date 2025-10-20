@@ -1,5 +1,5 @@
 Instance: observationCreatinineUrine
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Creatinine in Urine"
 Description: "Observation Definition for Creatinine [Mass/volume] in Urine"
 Usage: #example

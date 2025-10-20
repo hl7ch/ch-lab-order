@@ -1,5 +1,5 @@
 Instance: observationCreatinineClearance
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order Observation Definition of Creatinin Clearance"
 Description: "Observation Definition for Serum volume which is cleared [mL/min] by the kidneys"
 Usage: #example

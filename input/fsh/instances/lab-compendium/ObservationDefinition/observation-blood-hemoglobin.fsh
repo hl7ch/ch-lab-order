@@ -1,5 +1,5 @@
 Instance: observation-blood-hemoglobin
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition Hemoglobin blood"
 Description: "Hemoglobin blood [Moles/volume]"
 Usage: #example

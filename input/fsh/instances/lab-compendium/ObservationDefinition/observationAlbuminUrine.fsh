@@ -1,5 +1,5 @@
 Instance: observationAlbuminUrine
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Albumin in Urine"
 Description: "Observation Definition for Albumin [Mass/volume] in Urine"
 Usage: #example

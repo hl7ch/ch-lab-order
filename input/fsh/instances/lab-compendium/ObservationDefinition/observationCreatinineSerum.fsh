@@ -1,5 +1,5 @@
 Instance: observationCreatinineSerum
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition Creatinine Serum"
 Description: "Kreatinine [Mass/Volumen] in Serum oder Plasma"
 Usage: #example

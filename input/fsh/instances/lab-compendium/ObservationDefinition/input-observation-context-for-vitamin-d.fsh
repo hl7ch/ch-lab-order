@@ -1,5 +1,5 @@
 Instance: input-observation-context-for-vitamin-d
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "ObservationDefinition: Vitamin D"
 Description: "Context des Vitamin-D Befundes"
 Usage: #example

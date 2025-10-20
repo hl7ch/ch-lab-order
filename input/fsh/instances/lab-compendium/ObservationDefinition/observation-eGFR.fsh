@@ -1,5 +1,5 @@
 Instance: observation-eGFR
-InstanceOf: ChLab_LabObservationDefinitionR4
+InstanceOf: ChLab_ObservationDefinitionR4
 Title: "CH LAB-Order ObservationDefinition eGFR CKD-EPI 2021"
 Description: "Observation Definition for Glomerular filtration rate/1.73 sq M.predicted"
 Usage: #example
