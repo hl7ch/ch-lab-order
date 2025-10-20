@@ -2,23 +2,61 @@ Profile: ChLabCatalogHeaderR4
 Parent: Composition
 Id: ch-lab-catalog-header-r4
 Title: "CH LAB Catalog Header (R4)"
-Description: "Composition header for lab catalogs (R4 compatible)"
+Description: """
+Composition header for laboratory catalogs (R4-compatible adaptation of the HL7 Order Catalog CatalogHeader profile).
+This profile defines the structure of the catalog metadata and includes the validity period extension.
+"""
+* ^url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-catalog-header-r4"
+* ^status = #active
+* ^version = "1.0.0"
+* ^publisher = "HL7 Switzerland"
+* ^jurisdiction = urn:iso:std:iso:3166#CH "Switzerland"
 
+// --------------------------
+// Extension: validityPeriod
+// --------------------------
 * extension ^slicing.discriminator[0].type = #value
 * extension ^slicing.discriminator[0].path = "url"
 * extension ^slicing.rules = #open
-
-* extension contains ValidityPeriod named validityPeriod 0..1
-* extension[validityPeriod].url ^fixedUri = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-validity-period"
+* extension contains ChLabValidityPeriod named validityPeriod 0..1
 * extension[validityPeriod].valuePeriod 1..1
 
+// --------------------------
+// Composition metadata
+// --------------------------
+* status 1..1
+* status from http://hl7.org/fhir/ValueSet/composition-status (required)
+* type 1..1
+* type ^short = "Type of composition – fixed to 'Catalog'"
+* type.text = "Catalog"
 
-Extension: ValidityPeriod
-Id: ch-lab-validity-period
-Title: "CH LAB Validity Period"
-Description: "Specifies the period of time during which a laboratory catalog or diagnostic service is valid."
+* title 1..1
+* title ^short = "Human-readable title of the catalog"
 
-* ^context[0].type = #element
-* ^context[0].expression = "Composition"
-* value[x] only Period
-* valuePeriod ^short = "Validity period of the catalog"
+* date 1..1
+* date ^short = "Date when the catalog was published or last updated"
+
+// --------------------------
+// Participants
+// --------------------------
+* author 1..*
+* author ^short = "The organization that authored the catalog"
+* author only Reference(Organization)
+
+* attester 0..*
+* attester ^short = "Attesters validating the catalog"
+* attester.mode 1..1
+* attester.mode = #official
+* attester.time 0..1
+* attester.party 0..1
+* attester.party only Reference(Organization)
+
+* custodian 1..1
+* custodian ^short = "The organization responsible for maintaining the catalog"
+* custodian only Reference(Organization)
+
+// --------------------------
+// Sections (optional, open-ended)
+// --------------------------
+* section 0..*
+* section ^short = "Catalog content sections, e.g., laboratory test categories"
