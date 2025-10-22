@@ -5,55 +5,62 @@ Description: "Single Test Venous blood, for single test"
 Usage: #example
 * extension[status].valueCode = #active
 * extension[testingDestination].valueCodeableConcept = $v2-0074#CH "Chemistry"
-* language = #en-US
+
 * typeCollected = $sct#122555007 "Venous blood specimen"
-* collection = $sct#28520004 "Venipuncture for blood test"
+// * patientPreparation[0].text = "12 hour fasting"
+// * patientPreparation[+] = $sct#263678003 "At rest"
+// * timeAspect = "preferrably morning time"
+
+// preferred container plastic, serum specimen
 * typeTested[0].type = $sct#119364003 "Serum specimen"
 * typeTested[=].preference = #preferred
-* typeTested[=].container.material = $sct#61088005 "Plastic"
-* typeTested[=].container.material.text = "plastic"
-* typeTested[=].container.type = $sct#767384004 "Evacuated blood collection tube with clot activator"
-* typeTested[=].container.cap = http://terminology.hl7.org/CodeSystem/container-cap#red
-* typeTested[=].container.cap.text = "red cap"
-* typeTested[=].container.description = "red cap plastic tube 5 mL"
-* typeTested[=].container.capacity = 5 'mL' "milliliter"
-* typeTested[=].container.minimumVolumeQuantity = 0.5 'mL' "milliliter"
-* typeTested[=].retentionTime = 24 'h' "hour"
-* typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#hemolized
-* typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
-* typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
-* typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+* typeTested[=].container.material = $sct#61088005 "plastic"
+* typeTested[=].container.type = $sct#702281005 "Evacuated blood collection tube, thrombin/clot activator/gel separator"
+* typeTested[=].container.cap = $container-cap#yellow "yellow cap"
+* typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
 
-* typeTested[=].handling[0].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[0].temperatureQualifier.text = "Ambient temperature"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #ambient
+* typeTested[=].handling[=].temperatureRange.low = 15 'Cel' "°C"
+* typeTested[=].handling[=].temperatureRange.high = 25 'Cel' "°C"
+* typeTested[=].handling[=].maxDuration = 60 'min' "minute"
+
+* typeTested[=].handling[+].temperatureQualifier.text = "Refrigerated temperature"
 * typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
 * typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
-* typeTested[=].handling[=].maxDuration = 7 'd' "day"
+* typeTested[=].handling[=].temperatureRange.low = 2 'Cel' "°C"
+* typeTested[=].handling[=].temperatureRange.high = 8 'Cel' "°C"
+* typeTested[=].handling[=].maxDuration = 8 'h' "hour"
 
 * typeTested[=].handling[+].temperatureQualifier.text = "frozen"
 * typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
 * typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
+* typeTested[=].handling[=].temperatureRange.low = -24 'Cel' "°C"
+* typeTested[=].handling[=].temperatureRange.high = -24 'Cel' "°C"
 * typeTested[=].handling[=].maxDuration = 28 'd' "day"
 
-* typeTested[+].type = $sct#119364003 "Serum specimen"
+
+// alternate container glass, plasma specimen
+* typeTested[+].type = $sct#119361006 "Plasma specimen"
 * typeTested[=].preference = #alternate
+* typeTested[=].container.material = $sct#32039001 "glass"
 * typeTested[=].container.type = $sct#767390000 "Evacuated blood collection tube with heparin lithium and gel separator"
-* typeTested[=].container.cap = http://terminology.hl7.org/CodeSystem/container-cap#green
-* typeTested[=].container.cap.text = "green cap"
-* typeTested[=].container.description = "green cap plastic tube 5 mL"
-* typeTested[=].container.capacity = 5 'mL' "milliliter"
-* typeTested[=].container.minimumVolumeQuantity = 0.5 'mL' "milliliter"
-* typeTested[=].retentionTime = 24 'h' "hour"
-* typeTested[=].rejectionCriterion[0] = http://terminology.hl7.org/CodeSystem/rejection-criteria#hemolized
-* typeTested[=].rejectionCriterion[=].text = "blood specimen hemolized"
-* typeTested[=].rejectionCriterion[+] = http://terminology.hl7.org/CodeSystem/rejection-criteria#insufficient
-* typeTested[=].rejectionCriterion[=].text = "insufficient quantity of specimen"
+* typeTested[=].container.cap = $container-cap#green "green cap"
+* typeTested[=].container.minimumVolumeQuantity = 2 'mL' "ml"
+* typeTested[=].rejectionCriterion[0] = $rejection-criteria#insufficient "insufficient specimen volume"
+* typeTested[=].rejectionCriterion[+] = $rejection-criteria#hemolized "hemolized specimen"
 
-* typeTested[=].handling[+].temperatureQualifier.text = "room temperature or refrigerated"
+* typeTested[=].handling[+].temperatureQualifier.text = "Ambient temperature"
+* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
+* typeTested[=].handling[=].temperatureQualifier.coding.code = #ambient
+* typeTested[=].handling[=].temperatureRange.low = 15 'Cel' "°C"
+* typeTested[=].handling[=].temperatureRange.high = 25 'Cel' "°C"
+* typeTested[=].handling[=].maxDuration = 60 'min' "minute"
+
+* typeTested[=].handling[+].temperatureQualifier.text = "Refrigerated temperature"
 * typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
 * typeTested[=].handling[=].temperatureQualifier.coding.code = #refrigerated
-* typeTested[=].handling[=].maxDuration = 7 'd' "day"
-
-* typeTested[=].handling[+].temperatureQualifier.text = "frozen"
-* typeTested[=].handling[=].temperatureQualifier.coding.system = $specimen-handling-temperature
-* typeTested[=].handling[=].temperatureQualifier.coding.code = #frozen
-* typeTested[=].handling[=].maxDuration = 28 'd' "day"
+* typeTested[=].handling[=].temperatureRange.low = 2 'Cel' "°C"
+* typeTested[=].handling[=].temperatureRange.high = 8 'Cel' "°C"
+* typeTested[=].handling[=].maxDuration = 8 'h' "hour"

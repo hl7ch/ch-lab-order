@@ -5,11 +5,15 @@ Description: "Serum Venous Blood, 12 h fasting, for single test"
 Usage: #example
 * extension[status].valueCode = #active
 * extension[testingDestination].valueCodeableConcept = $v2-0074#CH "Chemistry"
-// * typeCollected = $v2-0487#BLDV "Blood venous"
+
 * typeCollected = $sct#122555007 "Venous blood specimen"
+
+// Fasting details
 * patientPreparation[0].text = "12 hour fasting"
 * patientPreparation[+] = $sct#263678003 "At rest"
 * timeAspect = "preferrably morning time"
+
+// preferred container plastic, serum specimen
 * typeTested[0].type = $sct#119364003 "Serum specimen"
 * typeTested[=].preference = #preferred
 * typeTested[=].container.material = $sct#61088005 "plastic"
@@ -31,6 +35,7 @@ Usage: #example
 * typeTested[=].handling[=].temperatureRange.high = 8 'Cel' "°C"
 * typeTested[=].handling[=].maxDuration = 8 'h' "hour"
 
+// alternate container glass, plasma specimen
 * typeTested[+].type = $sct#119361006 "Plasma specimen"
 * typeTested[=].preference = #alternate
 * typeTested[=].container.material = $sct#32039001 "glass"

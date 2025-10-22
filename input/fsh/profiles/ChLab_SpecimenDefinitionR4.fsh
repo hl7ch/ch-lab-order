@@ -12,7 +12,7 @@ Description: "R4-compatible specimen definition aligned with R5 and HL7 Order Ca
 // Import extensions
 // Add missing R5 publication status via extension
 // ───────────────────────────────────────────────────────
-* extension contains ChLabSpecimenDefinitionStatus named status 1..1
+* extension contains ChLabSpecimenDefinitionStatus named status 0..1
 * extension[status]. ^short = "Publication status of the SpecimenDefinition"
 
 * extension ^slicing.rules = #open
@@ -28,7 +28,7 @@ Description: "R4-compatible specimen definition aligned with R5 and HL7 Order Ca
 
 * patientPreparation 0..*
 * collection 0..*
-// * extension contains ChLabSpecimenCollectionMethod named collectionMethod 0..1
+* extension contains ChLabSpecimenCollectionMethod named collectionMethod 0..1
 
 // ─────────────────────────────
 // Type tested section (R4B structure)
@@ -44,14 +44,17 @@ Description: "R4-compatible specimen definition aligned with R5 and HL7 Order Ca
 * typeTested.container.description ^short = "Container description (plain text)"
 // * typeTested.container.description ^type.code = #plain text
 
-// ───────────────────────────── not needed, since R4 SpecimenDefinition has handling element ─────
+// ───────────────────────────── 
 // Handling (added via extension)
 // ─────────────────────────────
-// * typeTested.extension contains ChLabSpecimenHandling named handling 0..*
-// * typeTested.extension[handling] ^short = "Specimen handling instructions"
-// * typeTested.handling.temperatureQualifier from ChLabVsContainerTemperature (required)
-//   * ^binding.description = "Temperature range applicable to this handling step."
-//   * ^binding.strength = #required
+* typeTested.extension contains ChLabSpecimenHandling named handling 0..*
+* typeTested.extension[handling] ^short = "Specimen handling instructions"
+* typeTested.extension[handling].extension[temperatureQualifier].valueCodeableConcept from ChLabVsContainerTemperature (required)
+* typeTested.extension[handling].extension[maxDuration].valueDuration
+* typeTested.extension[handling].extension[instruction]
+
+  * ^binding.description = "Temperature range applicable to this handling step."
+  * ^binding.strength = #required
 
 // ─────────────────────────────
 // Additional notes
