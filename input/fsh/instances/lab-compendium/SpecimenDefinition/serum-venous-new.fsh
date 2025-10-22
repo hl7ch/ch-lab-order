@@ -7,6 +7,13 @@ Description: "Example serum specimen for venous blood with defined handling."
 * extension[status].valueCode = #active
 * extension[testingDestination].valueCodeableConcept = $v2-0074#CH "Chemistry"
 
+// ─────────────────────────────
+// Specimen collection method (new extension)
+// ─────────────────────────────
+* extension[collectionMethod].url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-specimen-collection-method"
+* extension[collectionMethod].valueCodeableConcept = http://snomed.info/sct#28520004 "Venipuncture for blood test (procedure)"
+
+
 * typeCollected = http://snomed.info/sct#122555007 "Venous blood specimen"
 * typeTested.type = http://snomed.info/sct#119364003 "Serum specimen"
 * typeTested.preference = #preferred
