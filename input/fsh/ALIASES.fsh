@@ -60,7 +60,7 @@ Alias: $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech
 Alias: $administrative-gender         = http://hl7.org/fhir/administrative-gender
 Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias: $ch-orf-cs-consentstatus       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
-Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode|3.3.0-ci-build'|3.1
+Alias: $document-entry-language-code  = http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode
 
 //---- Practitioner ----
 Alias: $hcSpecialisation              = http://fhir.ch/ig/ch-epr-term/ValueSet/HCProfessional.hcSpecialisation
