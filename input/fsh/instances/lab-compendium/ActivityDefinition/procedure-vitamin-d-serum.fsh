@@ -28,4 +28,4 @@ Usage: #example
 * priority = #routine
 * timingDuration = 120 'mn' "minutes"
 * observationRequirement = Reference(ObservationDefinition/input-observation-context-for-vitamin-d)
-* observationResultRequirement = Reference(ObservationDefinition/example-observation-vitamin-d)
+* observationResultRequirement = Reference(ObservationDefinition/observation-vitamin-d)

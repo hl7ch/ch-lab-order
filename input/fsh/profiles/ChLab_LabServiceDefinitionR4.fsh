@@ -8,6 +8,8 @@ Description: "A simplified adaptation of the Order Catalog LabServiceDefinition 
 * ^publisher = "CH Lab Order IG Working Group"
 * ^jurisdiction = urn:iso:std:iso:3166#CH "Switzerland"
 
+* extension contains ChLabCatalogReference named catalogReference 0..1
+
 * type 1..1
 * type from http://hl7.org/fhir/uv/order-catalog/ValueSet/laboratory-service-type (required)
 
