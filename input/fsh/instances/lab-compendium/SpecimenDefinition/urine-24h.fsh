@@ -1,5 +1,5 @@
 Instance: urine-24h
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition 24 h Urin"
 Description: "24 Stunden Urin"
 Usage: #example

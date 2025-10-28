@@ -1,5 +1,5 @@
 Instance: single-test-serum-capillary-fasting
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Serum Capillary Blood, 12 h fasting"
 Description: "Serum Capillary Blood, 12 h fasting, for single test"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: serum-venous-new
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Usage: #example
 Title: "Serum Specimen Definition (Venous Blood)"
 Description: "Example serum specimen for venous blood with defined handling."

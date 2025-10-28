@@ -19,19 +19,32 @@ This profile defines the structure of the catalog metadata and includes the vali
 * extension ^slicing.discriminator[0].path = "url"
 * extension ^slicing.rules = #open
 * extension contains ChLabValidityPeriod named validityPeriod 0..1
-* extension[validityPeriod].valuePeriod 1..1
+* extension[validityPeriod].valuePeriod 0..1
 
 // --------------------------
 // Composition metadata
 // --------------------------
 * status 1..1
 * status from http://hl7.org/fhir/ValueSet/composition-status (required)
+
+* type ^short = "Kind of composition: a catalog"
 * type 1..1
 * type ^short = "Type of composition – fixed to 'Catalog'"
-* type.text = "Catalog"
+* type.text = "Catalog" (exactly)
 
-* title 1..1
-* title ^short = "Human-readable title of the catalog"
+* category from CatalogType (example)
+* category ^short = "Kind of catalog"
+* category ^min = 0
+* category ^binding.description = "Category of catalog content"
+* subject ^short = "Plan or set of dispositions subject of the catalog"
+* subject ^definition = "The catalog may be set up to be used in the context of a particular plan or set of financial, organizational or legal dispositions"
+* subject ^comment = "For example the catalog may provide the details of reimbursement of its items within the context of an insurance plan handled by a payer"
+* encounter ..0
+
+* title.extension ^slicing.discriminator.type = #value
+* title.extension ^slicing.discriminator.path = "url"
+* title.extension ^slicing.rules = #open
+* title.extension contains Translation named OtherTitle 0..*
 
 * date 1..1
 * date ^short = "Date when the catalog was published or last updated"
@@ -43,11 +56,11 @@ This profile defines the structure of the catalog metadata and includes the vali
 * author ^short = "The organization that authored the catalog"
 * author only Reference(Organization)
 
-* attester 0..*
+* attester 1..
 * attester ^short = "Attesters validating the catalog"
 * attester.mode 1..1
 * attester.mode = #official
-* attester.time 0..1
+* attester.time 1..1
 * attester.party 0..1
 * attester.party only Reference(Organization)
 
@@ -56,7 +69,8 @@ This profile defines the structure of the catalog metadata and includes the vali
 * custodian only Reference(Organization)
 
 // --------------------------
-// Sections (optional, open-ended)
+// Sections event absent
 // --------------------------
-* section 0..*
-* section ^short = "Catalog content sections, e.g., laboratory test categories"
+* event ..0
+* section ..0
+

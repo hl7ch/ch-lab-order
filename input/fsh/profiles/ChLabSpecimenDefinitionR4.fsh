@@ -1,4 +1,4 @@
-Profile: ChLab_SpecimenDefinitionR4
+Profile: ChLabSpecimenDefinitionR4
 Parent: SpecimenDefinition
 Id: ch-lab-specimendefinition-r4
 Title: "CH LAB Specimen Definition (R4)"

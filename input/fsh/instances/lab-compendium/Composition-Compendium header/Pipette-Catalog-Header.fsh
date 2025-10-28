@@ -31,3 +31,4 @@ Usage: #example
 * author = Reference(Organization/LaborPipette)
 * title = "Pipette laboratory - Directory of Diagnostic Services"
 * custodian = Reference(Organization/LaborPipette)
+* attester.time = "2025-01-01T17:00:00+02:00"

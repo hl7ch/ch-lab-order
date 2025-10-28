@@ -1,5 +1,5 @@
 Instance: single-test-serum-venous
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Serum Venous Blood"
 Description: "Single Test Venous blood, for single test"
 Usage: #example

@@ -4,4 +4,6 @@ Title: "CH LAB Limitation Summary"
 Description: "Summary of limitations or restrictions for a lab test."
 * ^context.type = #element
 * ^context.expression = "PlanDefinition"
-* valueString
+
+// * url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-limitation-summary" (exactly)
+* value[x] only string

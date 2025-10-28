@@ -5,12 +5,10 @@ Description: "Plan Definition for eGFK procedures"
 Usage: #example
 // * meta.profile = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/LabServiceDefinition"
 * language = #en-US
-// * extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
-// * extension[=].valueReference = Reference(Composition/Pipette-Catalog-Header)
-
-* extension[catalogReference].url = "http://fhir.ch/ig/ch-lab-order/StructureDefinition/ch-lab-catalog-reference"
-* extension[catalogReference].valueReference = Reference(Composition/Pipette-Catalog-Header)
-
+* extension[0].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/CatalogReference"
+* extension[=].valueReference = Reference(Composition/example-lab-compendium-header)
+* extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode"
+* extension[=].valueCodeableConcept = https://medcodesearch.ch/de/AL/laboratory_analyses#1509.00 "Creatinine [Moles/volume] in Serum or Plasma"
 // * extension[+].url = "http://hl7.org/fhir/uv/order-catalog/StructureDefinition/ServiceBillingCode" // insert AL for Switzerland
 // * extension[=].valueCodeableConcept = $nabm#0407
 * extension[+].extension[0].url = "textualSummary"

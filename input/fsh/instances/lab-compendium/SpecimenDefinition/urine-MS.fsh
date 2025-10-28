@@ -1,5 +1,5 @@
 Instance: Urine-MS
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Urine Midstream"
 Description: "Urin Mittelstrahl"
 Usage: #example

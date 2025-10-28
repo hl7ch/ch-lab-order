@@ -1,5 +1,5 @@
 Instance: specimen-blood-EDTA
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Blood EDTA"
 Description: "Blood EDTA"
 Usage: #example

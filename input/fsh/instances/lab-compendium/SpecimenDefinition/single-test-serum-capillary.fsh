@@ -1,5 +1,5 @@
 Instance: single-test-serum-capillary
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Serum Capillary Blood"
 Description: "Serum Capillary blood, for single test"
 Usage: #example

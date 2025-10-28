@@ -1,5 +1,5 @@
 Instance: specimenUrineSpot
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Urine Spot"
 Description: "Urine Spot"
 Usage: #example

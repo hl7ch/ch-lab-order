@@ -1,5 +1,5 @@
 Instance: specimenSerumPlasma
-InstanceOf: ChLab_SpecimenDefinitionR4
+InstanceOf: ChLabSpecimenDefinitionR4
 Title: "CH LAB-Order SpecimenDefinition Serum or Plasma"
 Description: "Serum, Plasma"
 Usage: #example
