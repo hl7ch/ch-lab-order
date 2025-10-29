@@ -89,10 +89,3 @@ Example order document with ServiceRequest and Form: [CH LAB-Order 5-biol-monit-
 After the laboratory order has been received and processed, the situation may arise in which the laboratory physician wishes to make suggestions for additional or alternative examinations to the author of the order. He can use the received order document for this purpose, exchange the personal data of the sender and receiver through his information system, and send it back with the suggestions for further or alternative laboratory examinations.
 
 * ServiceRequest.category: ProposalForAdditionalExam
-
-### Use Case 5: Building laboratory order panels. These panels instantiate Plandefinition from Order Catalog.
-
-{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 2: Renal Insufficiency Service" width="95%" %}
-
-Clients and laboratories prefer panels that contain several individual tests or are nested with other panels. Laboratories provide these panels according to their offerings. This example deals with clarifying and assessing chronic renal insufficiency. The order consists of two suborders: eGFR (estimated glomerular filtration rate) and uACR (urine albumin-to-creatinine ratio). The latter, in turn, contains two suborders: albumin and creatinine concentrations in urine.
-Plan and activity definitions are stored in the laboratory compendium and can be selected by the client.

@@ -168,7 +168,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceRenalInsufficiency"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -210,7 +209,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].value = "Y274589"
 
 // Reference to superior order
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabService-eGFR"
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 
 // ---- grouperID, must be repeated in all dependent SR ----
@@ -250,7 +248,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabServiceCreatinineSerum"
 
 * basedOn = Reference(urn:uuid:9ed971bb-247d-446a-80fb-f6aa7eaf374b)
 
@@ -293,7 +290,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-* instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/LabService-uACR"   // PlanDefinition
 // Reference to superior order
 * basedOn[+] = Reference(urn:uuid:248f80c7-3d8c-4aa1-8eb6-53bcbb6c9bec)
 // ---- grouperID, must be repeated in all dependent SR ----
@@ -333,7 +329,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/example-lab-panel-renal-insufficiency"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"
@@ -372,7 +367,6 @@ Usage: #example
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
-// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/PlanDefinition/procedure-creatinine-clearance"
 * basedOn = Reference(urn:uuid:62dd8013-6145-4bbb-8588-b172caaa13af)
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PLAC "Placer Identifier"

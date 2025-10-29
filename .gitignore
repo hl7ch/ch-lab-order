@@ -19,3 +19,5 @@ Thumbs.db
 /www/*   
 !www/package-list.json   
 !www/publish.ini
+
+CLAUDE.md
