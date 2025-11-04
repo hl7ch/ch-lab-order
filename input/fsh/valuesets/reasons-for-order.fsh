@@ -1,7 +1,7 @@
 ValueSet: ReasonsForOrder
 Id: reasons-for-order
 Title: "All Valid Reasons for Ordering a Lab Service"
-Description: "Broadest value set that may be referenced by ObservationDefinition.validCodedValueSet"
+Description: "Broadest value set of valid reasons for ordering laboratory services"
 * ^meta.lastUpdated = "2020-03-10T13:30:00Z"
 * ^language = #en-US
 * ^url = "http://fhir.ch/ig/ch-lab-order/ValueSet/reasons-for-order"
