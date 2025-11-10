@@ -2,7 +2,7 @@ Instance: 3-gyn-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Composition 3-gyn with ServiceRequest"
 Description: "Composition: Storyboard for Preventive Gynaecological Check-up"
-Usage: #example
+Usage: #inline
 * id = "3-gyn-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

@@ -2,7 +2,7 @@ Instance: LabOrderUrineAlbumin
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order SR Albumin [Moles/volume] in Urine"
 Description: "This term was created for, but not limited in use to, the cobas Tina-quant Albumin test kit. (Conversion factors: mg/L x 0.0152 = μmol/L, g/L x 15.2 = μmol/L)"
-Usage: #example
+Usage: #inline
 * id = "lab-order-urine-albumin"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"

@@ -2,7 +2,7 @@ Instance: 1-tvt-ServiceRequest-0
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -35,7 +35,7 @@ Instance: 1-tvt-ServiceRequest-1
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-1"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -60,7 +60,7 @@ Instance: 1-tvt-ServiceRequest-2
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-2"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -83,7 +83,7 @@ Instance: 1-tvt-ServiceRequest-3
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-3"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -106,7 +106,7 @@ Instance: 1-tvt-ServiceRequest-4
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-4"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -130,7 +130,7 @@ Instance: 1-tvt-ServiceRequest-5
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 1-tvt-5"
 Description: "Example for Service Request due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -162,7 +162,7 @@ Instance: TobiasTimmermann
 InstanceOf: CHCorePatient
 Title: "Patient Tobias Timmermann"
 Description: "CH-Core-Patient, refers to 1-tvt"
-Usage: #example
+Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: TobiasTimmermann\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400003\n      </p><p><b>name</b>: Tobias Timmermann \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
@@ -196,7 +196,7 @@ Instance: HealthInsuranceCardTobiasTimmermann
 InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Tobias Timmermann"
 Description: "Example for Insurance"
-Usage: #example
+Usage: #inline
 // * id = "health-insurance-card-tobias-timmermann"
 * identifier.type = $coverage-identifiertype#VeKa
 * identifier.system = "http://example.org/insurer/123456789/member"
@@ -215,7 +215,7 @@ Instance: Serum-1-tvt
 InstanceOf: Specimen
 Title: "Serum Sample 1-tvt"
 Description: "Example for Specimen of Serum from venous blood"
-Usage: #example
+Usage: #inline
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
@@ -231,7 +231,7 @@ Instance: Blood-coag-1-tvt
 InstanceOf: Specimen
 Title: "Blood Sample Coagulation, 1-tvt"
 Description: "Example for Specimen for haemostatic Examination"
-Usage: #example
+Usage: #inline
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
@@ -252,7 +252,7 @@ Instance: Blood-1-tvt
 InstanceOf: Specimen
 Title: "Blood Sample, 1-tvt"
 Description: "Example for Specimen for Haematological Examination"
-Usage: #example
+Usage: #inline
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/TobiasTimmermann)
@@ -266,7 +266,7 @@ Instance: ConditionRenalInsufficiency
 InstanceOf: Condition
 Title: "Problem List"
 Description: "Problem list of Tobias Timmermann"
-Usage: #example
+Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item

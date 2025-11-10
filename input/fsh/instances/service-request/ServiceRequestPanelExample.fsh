@@ -2,7 +2,7 @@ Instance: ServiceRequestPanelExample
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order SR as container for multiple Service Requests"
 Description: "ServiceRequest for Creatinine Clearance and Electrolytes in Serum"
-Usage: #example
+Usage: #inline
 * id = "service-request-panel-example"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"

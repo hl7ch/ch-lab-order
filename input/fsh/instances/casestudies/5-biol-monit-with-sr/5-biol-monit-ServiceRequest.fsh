@@ -2,7 +2,7 @@ Instance: 5-biol-monit-ServiceRequest
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -55,7 +55,7 @@ Instance: 5-biol-monit-ServiceRequestToxPanelBlood
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -78,7 +78,7 @@ Instance: 5-biol-monit-ServiceRequestHeavyMetalsUrine
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 5-biol-monit"
 Description: "Example for Service Request for toxicological Monitoring"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -102,7 +102,7 @@ Instance: BeatBorer
 InstanceOf: CHCorePatient
 Title: "Patient Beat Borer"
 Description: "Example for CH-Core-Patient"
-Usage: #example
+Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BeatBorer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400007\n      </p><p><b>name</b>: Beat Borer \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jun 06, 1986\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '6' = '6', given as 'in eingetragener Partnerschaft'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
@@ -135,7 +135,7 @@ Instance: PauloPorcelliniSuva
 InstanceOf: CHCorePractitionerRole
 Title: "PractitionerRole Paulo Porcellini Suva"
 Description: "PractitionerRole, refers to 5-biol-monit"
-Usage: #example
+Usage: #inline
 * practitioner = Reference(Practitioner/PauloPorcellini)
 * organization = Reference(Organization/Suva)
 
@@ -143,7 +143,7 @@ Instance: PauloPorcellini
 InstanceOf: CHCorePractitionerEPR
 Title: "Practitioner Paulo Porcellini"
 Description: "Specialist for Occupational Medicine, works at SUVA, refers to 1-tvt"
-Usage: #example
+Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
@@ -165,7 +165,7 @@ Instance: Suva
 InstanceOf: CHCoreOrganization
 Title: "Organization SUVA"
 Description: "Insurance for occupational medicine, refers to 5-biol-monit"
-Usage: #example
+Usage: #inline
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
 * identifier.value = "A62088168"
 * name = "Suva"
@@ -188,7 +188,7 @@ Instance: WoodyWorkdocSpeiserRails
 InstanceOf: CHCorePractitionerRole
 Title: "PractitionerRole Woody Workdoc Speiser Rails"
 Description: "PractitionerRole, refers to 5-biol-monit"
-Usage: #example
+Usage: #inline
 * practitioner = Reference(Practitioner/WoodyWorkdoc)
 * organization = Reference(Organization/SpeiserRails)
 
@@ -196,7 +196,7 @@ Instance: WoodyWorkdoc
 InstanceOf: CHCorePractitionerEPR
 Title: "Practitioner Woody Worksdoc"
 Description: "Works doctor, works at SpeiserRails, refers to 5-biol-monit"
-Usage: #example
+Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601000050717"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
@@ -218,7 +218,7 @@ Instance: SpeiserRails
 InstanceOf: CHCoreOrganization
 Title: "Organization Speiser Rails"
 Description: "Example for Manufacturer, refers to 5-biol-monit"
-Usage: #example
+Usage: #inline
 * identifier.system = "urn:oid:2.16.756.5.45"  // BER (Business and Enterprise Register)
 * identifier.value = "A62088168"
 * telecom[0].system = #phone
@@ -240,7 +240,7 @@ Instance: HealthInsuranceCardBeatBorer
 InstanceOf: CHCoreCoverage
 Title: "Covarage HealthInsuranceCard Beat Borer"
 Description: "Example for Insurance"
-Usage: #example
+Usage: #inline
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400007"
 
@@ -258,7 +258,7 @@ Instance: Blood-biol-monit
 InstanceOf: Specimen
 Title: "Blood Sample, 5-biol-monit"
 Description: "Example for Specimen for Haematological Examination"
-Usage: #example
+Usage: #inline
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/BeatBorer)
@@ -273,7 +273,7 @@ Instance: Urine-biol-monit
 InstanceOf: Specimen
 Title: "Urine Sample, 5-biol-monit"
 Description: "Example for Specimen of Urin"
-Usage: #example
+Usage: #inline
 * identifier.value = "11111-15394-75465"
 * accessionIdentifier.value = "22222-bc987-dd888"
 * status = #available

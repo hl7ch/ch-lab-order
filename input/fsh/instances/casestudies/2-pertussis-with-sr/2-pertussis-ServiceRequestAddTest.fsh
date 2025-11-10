@@ -2,7 +2,7 @@ Instance: 2-pertussis-ServiceRequestAddTest
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 2-pertussis additional test"
 Description: "Service Requst for referral/order of Pertussis investigation, additional test"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"

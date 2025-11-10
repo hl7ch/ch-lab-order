@@ -2,14 +2,14 @@ Instance: ServiceRequestPotassiumSerum
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order SR Potassium"
 Description: "Service Request for Potassium [Moles/volume] in Serum or Plasma"
-Usage: #example
+Usage: #inline
 * id = "service-request-potassium-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
 
 // is part of panel Serum-Electrolytes
-* basedOn = Reference(ServiceRequestElectrolytesSerum)
+// OE would need to include resource or just logical identifer? * basedOn = Reference(ServiceRequestElectrolytesSerum)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 // * requisition.type = $v2-0203#PLAC "Placer Identifier"

@@ -2,7 +2,7 @@ Instance: 1-tvt-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "CH LAB-QuestionnaireResponse 1-tvt"
 Description: "Example for Questionnaire Response due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 * id = "1-tvt"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"

@@ -2,7 +2,7 @@ Instance: 6-histopath-Questionnaire
 InstanceOf: ChOrfQuestionnaire
 Title: "CH LAB-Questionnaire 6-histopath"
 Description: "Example for Questionnaire of Histopathology Examination"
-Usage: #example
+Usage: #inline
 * id = "6-histopath"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-06-06T20:17:53.340+00:00"

@@ -3,6 +3,6 @@ Instance: MarcMustermannGruppenpraxis
 InstanceOf: CHCorePractitionerRole
 Title: "PractitionerRole Marc Mustermann at Gruppenpraxis"
 Description: "PractitionerRole"
-Usage: #example
+Usage: #inline
 * practitioner = Reference(Practitioner/MarcMustermann)
 * organization = Reference(Organization/Gruppenpraxis)

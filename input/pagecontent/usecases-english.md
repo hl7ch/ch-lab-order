@@ -63,10 +63,14 @@ The Order Control Codes can also be used to cancel, hold or release order reques
 * The 2-pertussis-ServiceRequest is replaced by the
 * 2-pertussis-ServiceRequestAddTest, which requests the examination of the throat swab searching for pertussis or parapertussis DNA
 
-Example of referenced Service Request: [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-ServiceRequest.html) The code in the element 'orderDetail' would be 'NW' for "New order/service", or the element could be completely omitted.
+Referenced Service Request: The code in the element 'orderDetail' would be 'NW' for "New order/service", or the element could be completely omitted.
 
-Example Service Replace Request: [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-ServiceRequestAddTest.html)
-The Replace Request contains a Reference to the previous ServiceRequest and an element 'orderDetail', carries the order Control Code from the Code System v2-0119: RP for "Order/service replace request", 'CA' for "Cancel order/service request", 'HD' for "Hold order request", and 'RL' for "Release previous hold"
+Service Replace Request: The Replace Request contains a Reference to the previous ServiceRequest and an element 'orderDetail', carries the order Control Code from the Code System v2-0119: RP for "Order/service replace request", 'CA' for "Cancel order/service request", 'HD' for "Hold order request", and 'RL' for "Release previous hold"
+
+[Order Document with ServiceRequest](Bundle-2-pertussis-document-with-sr.html)
+
+[Order Document with ServiceRequest and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
+
 
 ### Use Case 3: Collective request for toxicological testing (biological monitoring)
 

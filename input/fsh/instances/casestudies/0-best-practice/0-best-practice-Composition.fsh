@@ -2,7 +2,7 @@ Instance: 0-best-practice-Composition
 InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Composition 0-best-practice with ServiceRequest"
 Description: "Composition: Storyboard for tibial plateau fracture"
-Usage: #example
+Usage: #inline
 * id = "0-best-practice"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"

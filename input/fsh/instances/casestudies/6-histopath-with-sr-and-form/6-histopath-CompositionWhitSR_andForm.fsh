@@ -2,7 +2,7 @@ Instance: 6-histopath-CompositionWhitSR_andForm
 InstanceOf: ChOrfComposition
 Title: "CH LAB-Composition 6-histopath with ServiceRequest and Form"
 Description: "Composition: Storyboard for suspected Melanoma of skin"
-Usage: #example
+Usage: #inline
 * id = "6-histopath-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2022-10-20T17:04:38.520+00:00"

@@ -2,7 +2,7 @@ Instance: 2-pertussis-CompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Composition 2-pertussis with ServiceRequest"
 Description: "Composition: Storyboard for Pertussis Investigation"
-Usage: #example
+Usage: #inline
 * id = "2-pertussis-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

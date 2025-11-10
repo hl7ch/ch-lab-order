@@ -2,7 +2,7 @@ Instance: 0-best-practice-ServiceRequest-0
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice"
 Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -24,7 +24,7 @@ Instance: 0-best-practice-ServiceRequest-1
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Anti-Xa-Aktivität"
 Description: "Example for ServiceRequest to control anticoagulation effect"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -53,7 +53,7 @@ Instance: 0-best-practice-ServiceRequest-2
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Glucose"
 Description: "Example for ServiceRequest to exclude diabetes mellitus"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -83,7 +83,7 @@ Instance: 0-best-practice-ServiceRequest-3
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -108,7 +108,7 @@ Instance: 0-best-practice-ServiceRequest-3-Hb
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -129,7 +129,7 @@ Instance: 0-best-practice-ServiceRequest-3-Ht
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
 Description: "Example for Service Request to exclude excessiv blood lost by fracture"
-Usage: #example
+Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
 * identifier[placerOrderIdentifier].value = "Y274589"
@@ -157,7 +157,7 @@ Instance: BirgitBlum
 InstanceOf: CHCorePatient
 Title: "Patient Birgit Blum"
 Description: "CH-Core-Patient, refers to 0-best-practice"
-Usage: #example
+Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BirgitBlum\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400002\n      </p><p><b>name</b>: Birgit Blum \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
@@ -193,7 +193,7 @@ Instance: HealthInsuranceCardBirgitBlum
 InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card Birgit Blum"
 Description: "Example for Insurance"
-Usage: #example
+Usage: #inline
 // * id = "health-insurance-card-Birgit-Blum"
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400002"
@@ -211,7 +211,7 @@ Instance: FirstEncounter
 InstanceOf: Encounter
 Title: "Encounter: First Encounter"
 Description: "Example for best-practice of laboratory order"
-Usage: #example
+Usage: #inline
 * status = #in-progress
 * class = $v3-ActCode#IMP "inpatient encounter"
 * subject = Reference(Patient/BirgitBlum)
@@ -220,7 +220,7 @@ Instance: Liquemin
 InstanceOf: ChLabOrderMedication
 Title: "Medication Liquemin"
 Description: "Example for best-practice of laboratory order"
-Usage: #example
+Usage: #inline
 
 /*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
 
@@ -244,7 +244,7 @@ Instance: Serum-0-best-practice
 InstanceOf: Specimen
 Title: "Serum Sample 0-best-practice"
 Description: "Example for Specimen of Serum from venous blood"
-Usage: #example
+Usage: #inline
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
@@ -261,7 +261,7 @@ Instance: Blood-coag-0-best-practice
 InstanceOf: Specimen
 Title: "Blood Sample Coagulation, 0-best-practice"
 Description: "Example for Specimen for haemostatic Examination"
-Usage: #example
+Usage: #inline
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
@@ -284,7 +284,7 @@ Instance: Blood-0-best-practice
 InstanceOf: Specimen
 Title: "Blood Sample, 0-best-practice"
 Description: "Example for Specimen for Haematological Examination"
-Usage: #example
+Usage: #inline
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
@@ -299,7 +299,7 @@ Usage: #example
 Instance: ConditionHeartDisorder
 InstanceOf: ChLabOrderDiagnosisCondition
 Description: "Problem list of Birgit Blum Heart Disorder"
-Usage: #example
+Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item	
@@ -317,7 +317,7 @@ Usage: #example
 Instance: ConditionTibiaFracture
 InstanceOf: ChLabOrderDiagnosisCondition
 Description: "Problem list of Birgit Blum Tibia Fracture"
-Usage: #example
+Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
@@ -335,7 +335,7 @@ Usage: #example
 Instance: ConditionAnticoagulation
 InstanceOf: ChLabOrderDiagnosisCondition
 Description: "Problem list of Birgit Blum Tibia Fracture"
-Usage: #example
+Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item	
@@ -351,7 +351,7 @@ Usage: #example
 /*
 Instance: Insurance-Company
 InstanceOf: CHCoreCoverage
-Usage: #example
+Usage: #inline
 * identifier.system = "http://example.org/insurer/123456789/member"
 * identifier.value = "A123456781"
 * status = #active

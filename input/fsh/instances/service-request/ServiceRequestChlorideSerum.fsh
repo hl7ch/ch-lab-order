@@ -2,7 +2,7 @@ Instance: ServiceRequestChlorideSerum
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order SR Chloride"
 Description: "Service Request for Chloride [Moles/volume] in Serum or Plasma"
-Usage: #example
+Usage: #inline
 * id = "service-request-chloride-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"

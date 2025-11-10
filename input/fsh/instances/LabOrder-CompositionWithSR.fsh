@@ -2,7 +2,7 @@ Instance: LabOrderCompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
 Title: "CH LAB-Order Composition with ServiceRequest"
 Description: "Composition with ServiceRequest for Potassium"
-Usage: #example
+Usage: #inline
 * id = "ch-lab-order-composition-with-sr"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

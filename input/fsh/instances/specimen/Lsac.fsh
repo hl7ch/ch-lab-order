@@ -2,7 +2,7 @@ Instance: Lsac
 InstanceOf: Specimen
 Title: "Cerebrospinal Fluid Sample"
 Description: "Example for Specimen of Cerebrospinal Fluid"
-Usage: #example
+Usage: #inline
 * identifier.value = "48736-22222-75465"
 * accessionIdentifier.value = "4e88a-11111-dd888"
 * status = #available

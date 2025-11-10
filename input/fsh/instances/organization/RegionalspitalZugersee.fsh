@@ -2,7 +2,7 @@ Instance: RegionalspitalZugersee
 InstanceOf: CHCoreOrganization
 Title: "Organization Regionalspital Zugersee"
 Description: "Example for hospital"
-Usage: #example
+Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601980235500"
 * name = "Regionalspital Zugersee"

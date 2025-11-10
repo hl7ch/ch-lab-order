@@ -2,7 +2,7 @@ Instance: ServiceRequestCreatinineSerum
 InstanceOf: ChLabOrderSR
 Title: "CH LAB-Order SR for Creatinine in Serum"
 Description: "Service Request for Creatinine [Moles/volume] in Serum or Plasma"
-Usage: #example
+Usage: #inline
 * id = "service-request-creatinine-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"

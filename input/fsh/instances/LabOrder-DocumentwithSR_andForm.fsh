@@ -17,10 +17,6 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/fhir/Patient/HansGuggindieluft"
 * entry[=].resource = HansGuggindieluft
-//* entry[+].fullUrl = "http://example.com/fhir/Patient/FranzMuster"
-//* entry[=].resource = FranzMuster
-//* entry[+].fullUrl = "http://example.com/fhir/Patient/BeatBorer"
-//* entry[=].resource = BeatBorer
 
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/MarcMustermann"
 * entry[=].resource = MarcMustermann
