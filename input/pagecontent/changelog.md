@@ -5,6 +5,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 * [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation.
+* [#379](https://github.com/hl7ch/ch-lab-order/issues/379): Exception and error workflows (e.g., specimen damaged in transport, test cancellation, order status updates) are out of scope for this current document-centric IG. These workflows will be better addressed in a future version by using the concepts defined by the Clinical Order Workflow (COW) Implementation Guide.
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
 
 ### STU 3 Ballot v3.0.0-ballot (2025-05-22)
