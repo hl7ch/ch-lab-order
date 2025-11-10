@@ -4,7 +4,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 3 Sequence - v3.0.0
 
 #### Changed / Updated
+
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
+* [#372](https://github.com/hl7ch/ch-lab-order/issues/372): Clinical Order Workflow (COW) IG as future direction
 
 ### STU 3 Ballot v3.0.0-ballot (2025-05-22)
 
