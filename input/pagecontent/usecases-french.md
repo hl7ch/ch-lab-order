@@ -84,8 +84,3 @@ Exemple de document de commande avec ServiceRequest : [CH LAB-Order 5-biol-monit
 
 Exemple de document de commande avec ServiceRequest et Formulaire: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-with-sr-and-form.html).
 
-### Cas d'application 4: Suggestion d'examens supplémentaires ou alternatifs par le médecin de laboratoire (destinataire de l'ordonnance, récepteur)
-
-Après réception et traitement de l'ordonnance du laboratoire, il peut arriver que le médecin du laboratoire souhaite suggérer à l'auteur de l'ordonnance des examens supplémentaires ou alternatifs. Il peut utiliser le document de commande reçu à cette fin, échanger les données personnelles de l'expéditeur et du destinataire par l'intermédiaire de son système d'information et le renvoyer avec les suggestions d'examens de laboratoire supplémentaires ou alternatifs.
-
-* ServiceRequest.category : ProposalForAdditionalExam

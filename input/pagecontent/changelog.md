@@ -4,8 +4,15 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 3 Sequence - v3.0.0
 
 #### Changed / Updated
+
 * [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation.
+* [#383](https://github.com/hl7ch/ch-lab-order/issues/383), [#382](https://github.com/hl7ch/ch-lab-order/issues/382), [#378](https://github.com/hl7ch/ch-lab-order/issues/378): Removed Case Study 4 (sepsis) and Use Case 4 from documentation. The reflex testing and Task workflow examples did not align with document-centric approach and are better suited for Clinical Order Workflow (COW) IG patterns.
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
+
+#### Fixed
+
+* [#386](https://github.com/hl7ch/ch-lab-order/issues/386): ActivityDefinition removed by [#385](https://github.com/hl7ch/ch-lab-order/issues/385)
+
 
 ### STU 3 Ballot v3.0.0-ballot (2025-05-22)
 
