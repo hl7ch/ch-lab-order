@@ -5,6 +5,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 
+* [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation.
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
 * [#372](https://github.com/hl7ch/ch-lab-order/issues/372): Clinical Order Workflow (COW) IG as future direction
 

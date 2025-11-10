@@ -89,10 +89,3 @@ Exemple de document de commande avec ServiceRequest et Formulaire: [CH LAB-Order
 Après réception et traitement de l'ordonnance du laboratoire, il peut arriver que le médecin du laboratoire souhaite suggérer à l'auteur de l'ordonnance des examens supplémentaires ou alternatifs. Il peut utiliser le document de commande reçu à cette fin, échanger les données personnelles de l'expéditeur et du destinataire par l'intermédiaire de son système d'information et le renvoyer avec les suggestions d'examens de laboratoire supplémentaires ou alternatifs.
 
 * ServiceRequest.category : ProposalForAdditionalExam
-
-### Use Case 5: Créer des panels d'ordres de laboratoire qui instancient la définition du plan à partir du catalogue des ordres.
-
-{% include img.html img="RenalInsufficiencyPanel.svg" caption="Fig. 2: Renal Insufficiency Service" width="95%" %}
-
-Les donneurs d'ordre et les laboratoires ont tendance à utiliser des panels comportant plusieurs tests individuels ou imbriqués entre eux. Les laboratoires mettent ces panels à disposition selon leur propre offre. Dans cet exemple, il s'agit d'évaluer et de faire le point sur une insuffisance rénale chronique. Le mandat se compose de deux sous-commandes : la première, eGFR (taux de filtration glomérulaire estimé), concerne le taux de filtration glomérulaire estimé, et la seconde, uACR (rapport albumine/créatinine dans l'urine), est relative au rapport albumine/créatinine dans l'urine. Ce dernier contient à son tour deux sous-commandes : la concentration d'albumine et la concentration de créatinine dans l'urine.
-Les définitions de plan et d'activité sont enregistrées dans le compendium de laboratoire et peuvent être sélectionnées par le donneur d'ordre.
