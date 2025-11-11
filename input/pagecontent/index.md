@@ -64,8 +64,7 @@ The lab-order should define the structure of the order details so it can be used
 
 ### Six Case studies with examples for the Order Document
 
-Using concrete case studies, we have created six everyday examples of documents that contain a laboratory order. These are requirements of laboratory analyses in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
-Add images, e.g.
+Using concrete case studies ([en](case-studies-english.html), [de](case-studies-german.html), [fr](case-studies-french.html)), we have created six everyday examples of documents that contain a laboratory order. These are requirements of laboratory analyses in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
 
 ### Copyright
 
