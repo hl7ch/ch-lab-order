@@ -2,6 +2,13 @@
 
 ### HL7 Swiss FHIR Implementation Guide for generic laboratory orders
 
+<div markdown="1" class="stu-note">
+
+During the STU ballot by [HL7 Switzerland](https://www.hl7.ch/de/) until September 30th, 2025 comments were raised that 
+a further evolution of the Laboratory Order Implementation Guide should not be document-based, but based on the fundamental patterns described in the [Clinical Order Workflow (COW) implementation guide](https://hl7.org/fhir/uv/cow/2025May/). The lab group agreed that clinical order workflows should be the long-term goal and future of LAB Order. However, due to lack of resources it is proposed to stick with the document-based approach. The successful implementation and establishment of this approach is already considered a significant improvement.
+
+</div>
+
 #### Laboratory Order with Service Request
 
 This is the HL7 Swiss FHIR Implementation Guide for Laboratory Orders. Electronic Medical Records (EMR) systems can send an electronic laboratory order to a Laboratory Information System (the order filler of a LIS). This laboratory order consists of a FHIR bundle resource of type 'document' with the necessary information about the patient, his medication and his conditions (the clinical context), the ordering practitioner, the organization, the laboratory, etc. The analyses that are requested are available as code and as text in the ServiceRequest resource. This resource contains further important information about the reason for the order, the payer, and the material sample. This specimen resource, in turn, contains information about the collection, the processing details, any required additives, and the container type to be used, among other things. So all the necessary information for executing the laboratory order is available for the receiving laboratory, and there is no necessity for a Questionnaire and QuestionnaireResponse resource. This quite common use case primarily occurs in hospitals that operate their own medical laboratory.
