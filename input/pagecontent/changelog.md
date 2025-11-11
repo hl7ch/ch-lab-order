@@ -5,6 +5,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 * [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation.
+* [#377](https://github.com/hl7ch/ch-lab-order/issues/377): Added documentation about exchange mechanisms in use cases. Clarified that this IG defines document structure and content, while actual exchange mechanisms (FHIR API, messaging, file transfer, etc.) are implementation-specific. Referenced CH ORF Submit Bundle transaction as an example exchange mechanism.
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
 
 #### Fixed
