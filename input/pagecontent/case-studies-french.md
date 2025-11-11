@@ -58,24 +58,6 @@ Le médecin assistant du service de gynécologie du cabinet communautaire d'Olte
 
 [Order Document with ServiceRequest and Form](Bundle-3-gyn-document-with-sr-and-form.html)
 
-### CH LAB-Order 4-sepsis
-
-#### Septicémie présumée szenario
-
-La patiente Sara Speckmann, née le 12. 12. 1975, se trouve à l'hôpital cantonal depuis un certain temps. La nuit dernière, son état général s'est fortement dégradé. Comme il y a suspicion de septicémie, le médecin-chef responsable, le Dr Hans Hauser, ordonne une prise de sang dans la matinée en vue d'une hémoculture. 30 minutes plus tard, une autre hémoculture aérobie et une anaérobie sont prélevées, ainsi qu'un échantillon d'urine. Les cinq échantillons sont ensuite traités dans le laboratoire externe Pipette. Les germes y sont détectés dans des matériaux et identifiés par spectrométrie de masse. Les pathogènes "Klebsiella pneumoniae" et "Escherichia coli" ont été détectés dans les deux flacons d'hémoculture aérobie. Le germe identifié dans l'échantillon d'urine n'est normalement pas pathogène.
-La croissance bactérienne dans les cultures aérobies conduit à d'autres tests de laboratoire, sans qu'il soit nécessaire de donner une commande spécifique (test reflex).
-Un antibiogramme est réalisé pour les trois pathogènes détectés dans le sang. Il en ressort que les deux substances actives "amoxicilline+acide clavulanique" et "ceftriaxone" sont efficaces contre les deux germes. Le microbiologiste informe régulièrement le Dr Hans Hauser des différents résultats partiels.
-
-{% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
-Le diagramme montre comment le flux de travail des commandes de laboratoire clinique peut être lié à une demande de service (Fig. 1). Il contient une ressource de tâche (Task) qui décrit une activité pouvant être réalisée sur le spécimen, et suit l'état d'achèvement de cette activité. Il s'agit d'une représentation du fait qu'une activité devrait être ou a été initiée, et éventuellement de la réussite ou de l'échec de cette activité.
-
-{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
-Ce diagramme (Fig. 2) montre l'exemple d'un résultat réflexe, c'est-à-dire que le résultat d'un test précédent déclenche d'autres tests sans que des demandes de service explicites soient nécessaires. Dans l'exemple, c'est le résultat de la croissance bactérienne positive qui déclenche d'autres tests, comme la non-identification et la réponse aux antibiotiques. 
-
-[Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
-
-[Order Document with ServiceRequest and Form](Bundle-4-sepsis-document-with-sr-and-form.html)
-
 ### CH LAB-Order 5-biol-monit
 
 #### Ordre collectif “Surveillance biologique SUVA” szenario

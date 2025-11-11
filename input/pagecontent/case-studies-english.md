@@ -56,24 +56,6 @@ The assistant doctor in the gynaecology department at the Olten group practice, 
 
 [Order Document with ServiceRequest and Form](Bundle-3-gyn-document-with-sr-and-form.html)
 
-### CH LAB-Order 4-sepsis
-
-#### Case study 4: Suspected sepsis case study
-
-The patient Sara Speckmann, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample. All five samples are further processed in the external laboratory Pipette. There, germs are detected in some materials and then identified by mass spectrometry. The pathogens “Klebsiella pneumoniae” and “Escherichia coli” were detected in the aerobic Blood culture bottles. The germ identified in the urine sample is normally not pathogenic.
-The bacterial growth in the aerobic cultures leads to further laboratory tests without the need for a specific order (reflexed test).
-An antibiogram is made of both pathogens detected in the Blood. This shows that the two active substances “amoxicillin+clavulanic acid” and “ceftriaxone” are effective against both germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
-
-{% include img.html img="4-sepsis-task.svg" caption="Fig. 1: Task" width="85%" %}
-The diagram shows how the workflow for clinical laboratory orders can be linked to a ServiceRequest (Fig. 1). It contains a task resource which describes an activity that can be performed on the specimen, and tracks the state of completion of that activity. It is a representation that an activity should be or has been initiated, and eventually, represents the successful or unsuccessful completion of that activity.
-
-{% include img.html img="4-sepsis-reflex-testing.svg" caption="Fig. 2: Reflexed Observation" width="60%" %}
-This diagram (Fig. 2) shows an example of a reflex finding, i.e. the result of a previous test triggers further tests without the need for explicit service requests. In the example, it is the finding of positive bacterial growth that triggers further tests, such as non-identification and response to antibiotics. 
-
-[Order Document with ServiceRequest](Bundle-4-sepsis-document-with-sr.html)
-
-[Order Document with ServiceRequest and Form](Bundle-4-sepsis-document-with-sr-and-form.html)
-
 ### CH LAB-Order 5-biol-monit
 
 #### Collective order “SUVA biological monitoring” case study

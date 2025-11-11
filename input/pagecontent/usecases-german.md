@@ -86,8 +86,3 @@ Beispiel Auftragsdokument mit ServiceRequest: [CH LAB-Auftrag 5-biol-monit](Bund
 
 Beispiel Auftragsdokument mit ServiceRequest und Formular: [CH LAB-Order 5-biol-monit-form](Bundle-5-biol-monit-document-with-sr-and-form.html).
 
-### Anwendungsfall 4: Vorschlag von Zusatz- oder Alternativuntersuchungen durch den Laborarzt (Auftragsempfänger, Empfänger)
-
-Nach Eingang und Bearbeitung des Laborauftrags kann die Situation eintreten, dass der Laborarzt dem Auftragsverfasser Vorschläge für zusätzliche oder alternative Untersuchungen machen möchte. Dazu kann er das empfangene Auftragsdokument verwenden, die persönlichen Daten von Absender und Empfänger über sein Informationssystem austauschen und mit den Vorschlägen für weitere oder alternative Laboruntersuchungen zurücksenden.
-
-* ServiceRequest.category: ProposalForAdditionalExam
