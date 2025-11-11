@@ -8,6 +8,8 @@
 
 {% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Arbeitsablauf bei Laboraufträgen und Tests" width="60%" %}
 
+Dieser Implementierungsleitfaden definiert die Struktur und den Inhalt von Laborauftragsdokumenten unter Verwendung von FHIR-Bundle-Ressourcen vom Typ 'document'. Die tatsächlichen Austauschmechanismen zwischen Placer (z.B. EMR-Systeme) und Filler (z.B. Laborinformationssysteme) sind implementierungsspezifisch und hängen von der lokalen Infrastruktur und den Anforderungen ab. CH ORF definiert die Submit Bundle [[CH ORF-1]](https://fhir.ch/ig/ch-orf/index.html#submit-bundle-ch-orf-1) Transaktion, die als Austauschmechanismus verwendet werden kann.
+
 #### Laborauftragsdokument mit Serviceanforderung
 
 Der Auftraggeber (z.B. ein Arzt) benötigt zur Ergänzung der Diagnostik verschiedene Laboruntersuchungen. Er erstellt in seinem Electronic Medical Records (EMR)-System ein Auftragsdokument, das die administrativen Daten enthält, die nach dem CH Core Implementation Guide strukturiert sind und deren Inhalte im EMR verfügbar sind. Aus den vom LIS bereitgestellten Analysen kann er diejenigen auswählen, die ihm bei seiner Fragestellung weiterhelfen, und er kann auch die den Analysen entsprechenden Stichproben bestimmen. Er möchte zum Beispiel die Glukose im Blut und im Liquor analysieren lassen. Das Laborsystem kann die Informationen über die benötigten Probengefässe und eventuelle Zusatzstoffe im System hinterlegen. Die präanalytischen Bedingungen sind festgelegt.

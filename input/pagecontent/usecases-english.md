@@ -8,6 +8,8 @@
 
 {% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Laboratory Order and Testing Workflow" width="60%" %}
 
+This implementation guide defines the structure and content of laboratory order documents using FHIR Bundle resources of type 'document'. The actual exchange mechanisms between placer (e.g., EMR systems) and filler (e.g., Laboratory Information Systems) are implementation-specific and depend on the local infrastructure and requirements. CH ORF defines the Submit Bundle [[CH ORF-1]](https://fhir.ch/ig/ch-orf/index.html#submit-bundle-ch-orf-1) transaction which could be used as an exchange mechanism.
+
 #### Laboratory Order Document with Service Request
 
 The customer (e.g. a doctor) requires various laboratory tests to supplement the diagnostic process. He creates an order document in his Electronic Medical Records (EMR) system, which contains the administrative data structured in accordance with the CH Core implementation guide and whose contents are available in the EMR. From the analyses provided by the LIS, he can select those that help him with his question, and he can also determine the samples corresponding to the analyses. For example, he wants to have glucose analyzed in the blood and cerebrospinal fluid. The laboratory system can store the information on the required specimen containers and any additives in the system. The pre-analytical conditions are specified.
