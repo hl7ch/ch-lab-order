@@ -32,3 +32,9 @@ Consequently one CH Lab-Order Document contains one CH Lab-Order ServiceRequest 
 * entry[Composition] ^short = "Lab order composition"
 * entry[Composition].resource 1..
 * entry[Composition].resource only ChLabOrderCompositionWithSR_AndForm
+
+// ---------- Bundle.entry:Patient ----------
+* entry[Patient] 1..*
+* entry[Patient] ^short = "Patient"
+* entry[Patient].resource 1..
+* entry[Patient].resource only CHCorePatient

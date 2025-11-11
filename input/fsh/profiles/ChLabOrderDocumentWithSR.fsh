@@ -35,6 +35,11 @@ equal one Filler Order equal one Laboratory Service Request."
 * entry[Composition].resource 1..
 * entry[Composition].resource only ChLabOrderCompositionWithSR
 
+// ---------- Bundle.entry:Patient ----------
+* entry[Patient] 1..*
+* entry[Patient] ^short = "Patient"
+* entry[Patient].resource 1..
+* entry[Patient].resource only CHCorePatient
 
 // the entries below are not mandatory, but they are useful for the lab order
 // and the lab order document to suppress the informations about slicing mismatches. But there are issues
