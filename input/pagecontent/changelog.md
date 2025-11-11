@@ -4,8 +4,13 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 3 Sequence - v3.0.0
 
 #### Changed / Updated
-* [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation. This change also addresses [#386](https://github.com/hl7ch/ch-lab-order/issues/386), [#381](https://github.com/hl7ch/ch-lab-order/issues/381) and [#380](https://github.com/hl7ch/ch-lab-order/issues/380) regarding Use Case 5 and Order Catalog references.
+* [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation.
+* [#379](https://github.com/hl7ch/ch-lab-order/issues/379): Exception and error workflows (e.g., specimen damaged in transport, test cancellation, order status updates) are out of scope for this current document-centric IG. These workflows will be better addressed in a future version by using the concepts defined by the Clinical Order Workflow (COW) Implementation Guide.
+* [#377](https://github.com/hl7ch/ch-lab-order/issues/377): Added documentation about exchange mechanisms in use cases. Clarified that this IG defines document structure and content, while actual exchange mechanisms (FHIR API, messaging, file transfer, etc.) are implementation-specific. Referenced CH ORF Submit Bundle transaction as an example exchange mechanism.
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
+
+#### Fixed
+* [#376](https://github.com/hl7ch/ch-lab-order/issues/376): Fixed Bundle.entry:Patient cardinality from 0..* to 1..* in document profiles. Since Composition.subject is 1..1 and must reference a Patient, and the Bundle is declared as type 'document' (meaning all references must be contained within the Bundle), the Patient entry must be present. Updated both ChLabOrderDocumentWithSR and ChLabOrderDocumentWithSR_AndForm profiles.
 
 ### STU 3 Ballot v3.0.0-ballot (2025-05-22)
 

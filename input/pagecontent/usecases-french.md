@@ -8,6 +8,8 @@
 
 {% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Commande de laboratoire et flux de travail des tests" width="60%" %}
 
+Ce guide de mise en œuvre définit la structure et le contenu des documents de commande de laboratoire à l'aide de ressources FHIR Bundle de type 'document'. Les mécanismes d'échange réels entre le placer (par exemple, les systèmes EMR) et le filler (par exemple, les systèmes d'information de laboratoire) sont spécifiques à l'implémentation et dépendent de l'infrastructure locale et des exigences. CH ORF définit la transaction Submit Bundle [[CH ORF-1]](https://fhir.ch/ig/ch-orf/index.html#submit-bundle-ch-orf-1) qui peut être utilisée comme mécanisme d'échange.
+
 #### Document de commande de laboratoire avec demande de service
 
 Le client (par exemple un médecin) a besoin de divers tests de laboratoire pour compléter le processus de diagnostic. Il crée un document de commande dans son système de dossiers médicaux électroniques (DME), qui contient les données administratives structurées conformément au guide de mise en œuvre du CH Core et dont le contenu est disponible dans le DME. Parmi les analyses fournies par le SIL, il peut sélectionner celles qui l'aident à répondre à sa question, et il peut également déterminer les échantillons correspondant aux analyses. Par exemple, il veut faire analyser le glucose dans le sang et le liquide céphalo-rachidien. Le système de laboratoire peut stocker les informations sur les récipients d'échantillons requis et les additifs éventuels dans le système. Les conditions pré-analytiques sont spécifiées.
