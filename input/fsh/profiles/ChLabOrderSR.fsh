@@ -56,7 +56,7 @@ Description: "Definition of a ServiceRequests of a single LabTest in the context
   //* ^short = "Insurance information"
   //* ^definition = "The insurance information of the patient. The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
   //* ^comment = "The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
-  //* ^binding.strength = #example
+  //* ^binding.strength = #inline
   //* ^binding.description = "The insurance information of the patient. The insurance information is not mandatory for the ServiceRequest, but it is recommended to be included in the ServiceRequest."
   //* ^binding.valueSet = $coverage-type
   //* ^binding.valueSet.reference = "http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor"

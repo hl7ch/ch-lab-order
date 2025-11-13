@@ -1,7 +1,7 @@
 Instance: example
 InstanceOf: ChLabDocumentReference
 Title: "DocumentReference: Physical"
-Usage: #example
+Usage: #inline 
 // * contained = a2
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.3.6.1.4.1.21367.2005.3.7"

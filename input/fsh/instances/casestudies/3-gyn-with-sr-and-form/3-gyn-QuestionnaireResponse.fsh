@@ -2,7 +2,7 @@ Instance: 3-gyn-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "CH LAB-QuestionnaireResponse 3-gyn"
 Description: "Example for Laboratory Order Questionnaire response for preventive gynecological check-up"
-Usage: #example
+Usage: #inline
 * id = "3-gyn"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"

@@ -2,7 +2,7 @@ Instance: LabOrderCompositionWithSR_AndForm
 InstanceOf: ChLabOrderCompositionWithSR_AndForm
 Title: "CH LAB-Order Composition with ServiceRequest and Form"
 Description: "Composition with ServiceRequest and Questionnaire/QuestionnaireResponse"
-Usage: #example
+Usage: #inline
 * id = "ch-lab-order-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"

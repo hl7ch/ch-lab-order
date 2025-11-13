@@ -63,10 +63,14 @@ Les codes de commande peuvent par ailleurs être utilisés pour annuler, mettre 
 * La demande de 2-pertussis-ServiceRequest est remplacée par la demande de service
 * 2-pertussis-ServiceRequestAddTest, qui demande l'examen du prélèvement de gorge à la recherche de l'ADN de la coqueluche ou de la para-coqueluche.
 
-Exemple de demande de service référencée : [CH LAB-Order 2-pertussis](ServiceRequest-2-pertussis-ServiceRequest.html), le code de l'élément 'orderDetail' serait 'NW' pour "New order/service", ou l'élément pourrait être complètement omis.
+Service référencée: Le code de l'élément 'orderDetail' serait 'NW' pour "New order/service", ou l'élément pourrait être complètement omis.
 
-Exemple de demande de remplacement de service : [CH LAB-Order 2-pertussis additional test](ServiceRequest-2-pertussis-ServiceRequestAddTest.html)
-La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : 'RP' pour "Order/service replace request", 'CA' pour "Cancel order/service request", 'HD' pour "Hold order request", et 'RL' pour "Release previous hold"
+Remplacement de service: La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : 'RP' pour "Order/service replace request", 'CA' pour "Cancel order/service request", 'HD' pour "Hold order request", et 'RL' pour "Release previous hold"
+
+[Order Document with ServiceRequest](Bundle-2-pertussis-document-with-sr.html)
+
+[Order Document with ServiceRequest and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
+
 
 ### Cas d'application 3: Demande collective d'essais toxicologiques (surveillance biologique)
 

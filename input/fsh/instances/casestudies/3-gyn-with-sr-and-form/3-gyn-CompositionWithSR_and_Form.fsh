@@ -2,7 +2,7 @@ Instance: 3-gyn-CompositionWithSR_andForm
 InstanceOf: ChOrfComposition
 Title: "CH LAB-Composition 3-gyn with ServiceRequest and Form"
 Description: "Composition: Storyboard for Preventive Gynecological Check-up"
-Usage: #example
+Usage: #inline
 * id = "with3-gyn-composition-with-sr-and-form"
 * meta.versionId = "1"
 * meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
