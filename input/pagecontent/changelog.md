@@ -9,6 +9,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#383](https://github.com/hl7ch/ch-lab-order/issues/383), [#382](https://github.com/hl7ch/ch-lab-order/issues/382), [#378](https://github.com/hl7ch/ch-lab-order/issues/378): Removed Case Study 4 (sepsis) and Use Case 4 from documentation. The reflex testing and Task workflow examples did not align with document-centric approach and are better suited for Clinical Order Workflow (COW) IG patterns.
 * [#384](https://github.com/hl7ch/ch-lab-order/issues/384): Clarified example usage by changing supporting/inline instances from `Usage: #example` to `Usage: #inline`. Standalone example instances (Bundles) remain as `#example`, while supporting resources referenced by examples (Patients, Practitioners, Organizations, Specimens, Conditions, MedicationStatements) are now marked as `#inline` to indicate they are generic FHIR base resource instances used for illustration purposes.
 * [#362](https://github.com/hl7ch/ch-lab-order/issues/362): Changelog
+* [#366](https://github.com/hl7ch/ch-lab-order/issues/366): Use stable and versioned link to SDC IG
+* [#364](https://github.com/hl7ch/ch-lab-order/issues/364): Update link and title from former CH EPR Term to CH Term IG
+* [#365](https://github.com/hl7ch/ch-lab-order/issues/365): Unify spelling
 
 #### Fixed
 
