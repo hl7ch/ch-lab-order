@@ -15,7 +15,7 @@ Description: "refers to https://wiki.ihe.net/index.php/1.3.6.1.4.1.19376.1.3.3.2
 * $loinc#18725-2 "Microbiology studies (set)"
 * $loinc#18727-8 "Serology studies (set)"
 * $loinc#18728-6 "Toxicology studies (set)"
-* $loinc#18729-4 "Urinanalysis studies (set)"
+* $loinc#18729-4 "Urinalysis studies (set)"
 * $loinc#18767-4 "Blood gas studies (set)"
 * $loinc#18768-2 "Cell counts+Differential studies (set)"
 * $loinc#18769-0 "Microbial susceptibility tests Set"
