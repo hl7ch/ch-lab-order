@@ -2,7 +2,7 @@ Profile: ChLabOrderSR
 Parent: ChOrfServiceRequest
 Id: ch-lab-order-SR
 Title: "CH LAB-Order ServiceRequest"
-Description: "Definition of the ServiceRequest resource to describe a single lab test."
+Description: "Definition of the ServiceRequest resource to describe a single lab test order."
 * . ^short = "CH LAB-Order ServiceRequest"
 
 * obeys sr-1

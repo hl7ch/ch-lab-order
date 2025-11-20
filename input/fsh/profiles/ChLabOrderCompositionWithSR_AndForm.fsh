@@ -2,7 +2,7 @@ Profile: ChLabOrderCompositionWithSR_AndForm
 Parent: ChOrfComposition
 Id: ch-lab-order-composition-with-sr-and-form
 Title: "CH LAB-Order Composition with ServiceRequest and Form"
-Description: "Definition of the Composition resource in the using ServiceRequest and Form."
+Description: "Definition of the Composition resource using ServiceRequest and Form."
 * . ^short = "CH LAB-Order Composition with ServiceRequest and Form"
 
 * type from DocumentEntryTypeCode (required)
