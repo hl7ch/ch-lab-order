@@ -9,7 +9,7 @@ Usage: #inline
 * identifier[placerOrderIdentifier].value = "Y274589"
 
 * basedOn[+] = Reference(ServiceRequestCreatinineClearance)
-* basedOn[+] = Reference(ServiceRequest-eGFR)
+// * basedOn[+] = Reference(ServiceRequest-eGFR)
 
 // ---- grouperID, must be repeated in all dependent SR ----
 // * requisition.type = $v2-0203#PLAC "Placer Identifier"
