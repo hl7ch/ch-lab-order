@@ -1,21 +1,10 @@
 Profile: ChLabOrderCompositionWithSR
 Parent: CHCoreComposition
 Id: ch-lab-order-composition-with-sr
-Title: "CH LAB-Order Composition with Service Request"
-Description: "Definition for Composition resource in the context of CH LAB-Order with Service Request, parent is CHCoreComposition"
+Title: "CH LAB-Order Composition with ServiceRequest"
+Description: "Definition of the Composition resource using ServiceRequest."
 * . ^short = "CH LAB-Order Composition with ServiceRequest"
-* ^version = "3.0.0"
-* ^status = #active
-* ^date = "2019-01-30"
-* ^publisher = "HL7 Switzerland"
-* ^contact[0].name = "HL7 Switzerland"
-* ^contact[=].telecom.system = #url
-* ^contact[=].telecom.value = "https://www.hl7.ch/"
-* ^contact[+].name = "Marcel Hanselmann"
-* ^contact[=].telecom.system = #email
-* ^contact[=].telecom.value = "hanselmann48@gmail.com"
-* ^jurisdiction = urn:iso:std:iso:3166#CH
-* ^copyright = "CC0-1.0"
+
 * type from DocumentEntryTypeCode (required)
 * type ^short = "Precise type of clinical document"
 * category 1..1
@@ -57,6 +46,6 @@ Description: "Definition for Composition resource in the context of CH LAB-Order
 * section[orderReferral].entry[ServiceRequest].reference 1.. MS
 // ---------- Composition.section.entry:DocumentReference ----------
 * section[orderReferral].entry contains DocumentReference 0..* MS
-* section[orderReferral].entry[DocumentReference] only Reference(ChLabDocumentReference)
+* section[orderReferral].entry[DocumentReference] only Reference(ChLabOrderDocumentReference)
 * section[orderReferral].entry[DocumentReference] ^short = "DocumentReference"
 * section[orderReferral].entry[DocumentReference].reference 1.. MS
