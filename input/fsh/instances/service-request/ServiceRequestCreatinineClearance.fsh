@@ -41,7 +41,7 @@ Usage: #inline
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Diclofenac
-InstanceOf: MedicationStatement
+InstanceOf: CHCoreMedicationStatement
 Title: "CH CoreMedicationStatement: Diclofenac Verordnung"
 Description: "Medication Record: Diclofenac"
 Usage: #inline
@@ -57,7 +57,7 @@ Usage: #inline
 * dosage.text = "1 tablet per day"
 
 Instance: Voltaren
-InstanceOf: Medication
+InstanceOf: CHCoreMedication
 Title: "Medication Voltaren(product)"
 Description: "Example of a medication product"
 Usage: #inline

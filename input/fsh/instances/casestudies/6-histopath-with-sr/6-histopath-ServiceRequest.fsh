@@ -114,7 +114,7 @@ Usage: #inline
 * container.type = $sct#701394007 "General specimen receptacle transport container (physical object)"
 
 Instance: SkinDermatoscopy
-InstanceOf: ChLabOrderDiagnosticReport
+InstanceOf: DiagnosticReport
 Title: "Report about the dermatiscopy of skin"
 Description: "DiagnosticReport about the dermatiscopy of skin"
 Usage: #inline

@@ -38,7 +38,7 @@ Usage: #inline
 // * specimen[+] = Reference(Specimen/Blood)
 
 Instance: Acetylsalicylat
-InstanceOf: MedicationStatement
+InstanceOf: CHCoreMedicationStatement
 Title: "MedicationStatement: Acetylsalicylat Verordnung"
 Description: "Example of Medication Record"
 Usage: #inline
@@ -54,7 +54,7 @@ Usage: #inline
 * dosage.text = "1 tablet per day"
 
 Instance: Aspirin
-InstanceOf: Medication
+InstanceOf: CHCoreMedication
 Title: "Medication Aspirin"
 Description: "Example of a Medication Product"
 Usage: #inline

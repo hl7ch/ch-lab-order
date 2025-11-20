@@ -1,9 +1,9 @@
-Profile: ChLabDocumentReference
+Profile: ChLabOrderDocumentReference
 Parent: CHCoreDocumentReference
-Id: ch-lab-document-reference
-Title: "CH Core DocumentReference"
-Description: "Profile to describe how to provide a reference to a document to make it available to a healthcare system."
-* . ^short = "CH Core DocumentReference"
+Id: ch-lab-order-document-reference
+Title: "CH LAB-Order DocumentReference"
+Description: "Definition of the DocumentReference resource to describe how to provide a reference to a document to make it available to a healthcare system."
+* . ^short = "CH LAB-Order DocumentReference"
 * status MS
 * type MS
 * type ^short = "Precise type of clinical document"

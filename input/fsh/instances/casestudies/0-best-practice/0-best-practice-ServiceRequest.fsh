@@ -217,7 +217,7 @@ Usage: #inline
 * subject = Reference(Patient/BirgitBlum)
 
 Instance: Liquemin
-InstanceOf: ChLabOrderMedication
+InstanceOf: CHCoreMedication
 Title: "Medication Liquemin"
 Description: "Example for best-practice of laboratory order"
 Usage: #inline
@@ -297,7 +297,7 @@ Usage: #inline
 * note.text = "Specimen is grossly lipemic"
 
 Instance: ConditionHeartDisorder
-InstanceOf: ChLabOrderDiagnosisCondition
+InstanceOf: CHCoreCondition
 Description: "Problem list of Birgit Blum Heart Disorder"
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
@@ -315,7 +315,7 @@ Usage: #inline
 * evidence.code = $sct#426396005 "Cardiac chest pain"
 
 Instance: ConditionTibiaFracture
-InstanceOf: ChLabOrderDiagnosisCondition
+InstanceOf: CHCoreCondition
 Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
@@ -333,7 +333,7 @@ Usage: #inline
 * evidence.code = $sct#111645003 "Open fracture of upper end of tibia (disorder)"
 
 Instance: ConditionAnticoagulation
-InstanceOf: ChLabOrderDiagnosisCondition
+InstanceOf: CHCoreCondition
 Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #inline
 * clinicalStatus = $condition-clinical#active

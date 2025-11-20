@@ -1,5 +1,5 @@
 Instance: example
-InstanceOf: ChLabDocumentReference
+InstanceOf: ChLabOrderDocumentReference
 Title: "DocumentReference: Physical"
 Usage: #inline 
 // * contained = a2
