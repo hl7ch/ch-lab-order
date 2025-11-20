@@ -97,7 +97,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-order/issues).
 
 #### Changed / Updated
 
-* [#132](https://github.com/hl7ch/ch-lab-order/issues/132): Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](http://build.fhir.org/ig/hl7ch/ch-lab-order/Questionnaire-LabOrder-form.html)
+* [#132](https://github.com/hl7ch/ch-lab-order/issues/132): Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](https://fhir.ch/ig/ch-lab-order/2.0.0/Questionnaire-LabOrder-form.html)
 
 * [#88](https://github.com/hl7ch/ch-lab-order/issues/88): The pre-analytical conditions and any limitations are specified in the laboratory catalogue. These include, for example, the fasting of the patient, the type of sample container, the storage period and temperature of the sample, the reasons for rejection, etc. In addition, the costs of Vitamin D determination are only covered by health insurance in certain situations, e.g. rickets, osteoporosis, etc.
 
