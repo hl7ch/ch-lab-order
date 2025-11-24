@@ -47,7 +47,6 @@ Alias: $coverage-type                 = http://fhir.ch/ig/ch-core/CodeSystem/bfs
 Alias: $coverage-identifiertype       = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype  // from CH-ORF
 Alias: $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $microbiol-procedures          = http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures
-// Alias: $observation-triggered-by-type = http://hl7.org/fhir/observation-triggeredbytype
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $shareablevalueset             = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias: $launchContext                 = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
