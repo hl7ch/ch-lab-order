@@ -1,14 +1,8 @@
-<!-- markdownlint-disable MD001 MD033 MD041 -->
-<!--
-╭───────────────────── UC-german  ──────────────────────────╮
-│  UC-english is original, german and french are dependent  │
-╰───────────────────────────────────────────────────────────╯
--->
-### Anwendungsfall 1: Einen Laborauftragsdokument generieren
-
-{% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Arbeitsablauf bei Laboraufträgen und Tests" width="60%" %}
-
 Dieser Implementierungsleitfaden definiert die Struktur und den Inhalt von Laborauftragsdokumenten unter Verwendung von FHIR-Bundle-Ressourcen vom Typ 'document'. Die tatsächlichen Austauschmechanismen zwischen Placer (z.B. EMR-Systeme) und Filler (z.B. Laborinformationssysteme) sind implementierungsspezifisch und hängen von der lokalen Infrastruktur und den Anforderungen ab. CH ORF definiert die Submit Bundle [[CH ORF-1]](https://fhir.ch/ig/ch-orf/index.html#submit-bundle-ch-orf-1) Transaktion, die als Austauschmechanismus verwendet werden kann.
+
+{% include img.html img="LabOrderWorkflow.svg" caption="Abb.: Arbeitsablauf bei Laboraufträgen und Tests" width="60%" %}
+
+### Anwendungsfall 1: Einen Laborauftragsdokument generieren
 
 #### Laborauftragsdokument mit Serviceanforderung
 

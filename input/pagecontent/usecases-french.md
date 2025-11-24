@@ -1,14 +1,8 @@
-<!-- markdownlint-disable MD001 MD033 MD041 -->
-<!--
-╭───────────────────── UC-french  ──────────────────────────╮
-│  UC-english is original, german and french are dependent  │
-╰───────────────────────────────────────────────────────────╯
--->
-### Cas d'application 1: Générer un document d'ordre de laboratoire
-
-{% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Commande de laboratoire et flux de travail des tests" width="60%" %}
-
 Ce guide de mise en œuvre définit la structure et le contenu des documents de commande de laboratoire à l'aide de ressources FHIR Bundle de type 'document'. Les mécanismes d'échange réels entre le placer (par exemple, les systèmes EMR) et le filler (par exemple, les systèmes d'information de laboratoire) sont spécifiques à l'implémentation et dépendent de l'infrastructure locale et des exigences. CH ORF définit la transaction Submit Bundle [[CH ORF-1]](https://fhir.ch/ig/ch-orf/index.html#submit-bundle-ch-orf-1) qui peut être utilisée comme mécanisme d'échange.
+
+{% include img.html img="LabOrderWorkflow.svg" caption="Fig. : Commande de laboratoire et flux de travail des tests" width="60%" %}
+
+### Cas d'application 1: Générer un document d'ordre de laboratoire
 
 #### Document de commande de laboratoire avec demande de service
 

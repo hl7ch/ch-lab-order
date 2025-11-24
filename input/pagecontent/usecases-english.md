@@ -1,14 +1,8 @@
-<!-- markdownlint-disable MD001 MD033 MD041 -->
-<!--
-╭───────────────────── UC-english ──────────────────────────╮
-│  UC-english is original, german and french are dependent  │
-╰───────────────────────────────────────────────────────────╯
--->
-### Use Case 1: Generate a Laboratory Order Document
-
-{% include img.html img="LabOrderWorkflow.svg" caption="Fig. 1: Laboratory Order and Testing Workflow" width="60%" %}
-
 This implementation guide defines the structure and content of laboratory order documents using FHIR Bundle resources of type 'document'. The actual exchange mechanisms between placer (e.g., EMR systems) and filler (e.g., Laboratory Information Systems) are implementation-specific and depend on the local infrastructure and requirements. CH ORF defines the Submit Bundle [[CH ORF-1]](https://fhir.ch/ig/ch-orf/index.html#submit-bundle-ch-orf-1) transaction which could be used as an exchange mechanism.
+
+{% include img.html img="LabOrderWorkflow.svg" caption="Fig.: Laboratory Order and Testing Workflow" width="60%" %}
+
+### Use Case 1: Generate a Laboratory Order Document
 
 #### Laboratory Order Document with Service Request
 
