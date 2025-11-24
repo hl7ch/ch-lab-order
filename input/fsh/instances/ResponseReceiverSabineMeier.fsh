@@ -1,7 +1,5 @@
 Instance: ResponseReceiverSabineMeier
 InstanceOf: Practitioner
-Title: "Practitioner Response Receiver Sabine Meier"
-Description: "Practitioner, works in Kantonsspital"
 Usage: #inline
 * name.use = #official
 * name.family = "Meier"

@@ -1,7 +1,5 @@
 Instance: ServiceRequestElectrolytesSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Electrolytes in Serum"
-Description: "Service Request as container for multiple Service Requests"
 Usage: #inline
 * id = "service-request-electrolytes-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

@@ -1,7 +1,5 @@
 Instance: PraxisSeeblick
 InstanceOf: CHCoreOrganization
-Title: "Organization Praxis Seeblick"
-Description: "Example for practice"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601230235526"

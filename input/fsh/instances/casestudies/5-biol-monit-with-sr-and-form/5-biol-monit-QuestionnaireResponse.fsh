@@ -1,11 +1,7 @@
 Instance: 5-biol-monit-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "CH LAB-QuestionnaireResponse 5-biol-monit"
-Description: "Example for Laboratory Order Questionnaire response for toxicological Monitoring"
 Usage: #inline
 * id = "5-biol-monit"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/5-biol-monit"
 * status = #completed
 

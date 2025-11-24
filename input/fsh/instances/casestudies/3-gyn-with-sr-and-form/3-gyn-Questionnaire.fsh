@@ -1,11 +1,7 @@
 Instance: 3-gyn-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "CH LAB-Questionnaire 3-gyn"
-Description: "Example for Laboratory Order Questionnaire for gynaecological check-up"
 Usage: #inline
 * id = "3-gyn"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"

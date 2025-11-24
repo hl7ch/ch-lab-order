@@ -1,7 +1,5 @@
 Instance: CoverageFranzMuster
 InstanceOf: CHCoreCoverage
-Title: "Coverage FranzMuster"
-Description: "Example for Insurance Coverage"
 Usage: #inline
 * contained = Sanitas
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"

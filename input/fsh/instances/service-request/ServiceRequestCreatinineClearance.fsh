@@ -1,7 +1,5 @@
 Instance: ServiceRequestCreatinineClearance
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Creatinine Clearance"
-Description: "Service Request for Creatinine [Moles/volume] and 24h Urin Creatinin"
 Usage: #inline
 * id = "lab-order-creatinine-clearance"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -42,8 +40,6 @@ Usage: #inline
 
 Instance: Diclofenac
 InstanceOf: CHCoreMedicationStatement
-Title: "CH CoreMedicationStatement: Diclofenac Verordnung"
-Description: "Medication Record: Diclofenac"
 Usage: #inline
 * status = #active
 * medicationReference = Reference(Medication/Voltaren)
@@ -58,8 +54,6 @@ Usage: #inline
 
 Instance: Voltaren
 InstanceOf: CHCoreMedication
-Title: "Medication Voltaren(product)"
-Description: "Example of a medication product"
 Usage: #inline
 * contained = sub01
 * code = $sct#775563008 "Product containing only diclofenac (medicinal product)"
@@ -72,14 +66,11 @@ Usage: #inline
 
 Instance: sub01
 InstanceOf: Substance
-Description: "Example of a medication substance"
 Usage: #inline
 * code = $sct#62039007 "Diclofenac sodium (substance)"
 
 Instance: Renal-insufficiency
 InstanceOf: Condition
-Title: "Condition Renal Insuffiency"
-Description: "Problem or Diagnosis from problem list: Renal Insuffiency"
 Usage: #inline
 * identifier.value = "12345"
 * clinicalStatus = $condition-clinical#active

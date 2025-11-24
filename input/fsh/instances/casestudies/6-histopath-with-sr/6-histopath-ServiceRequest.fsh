@@ -1,7 +1,5 @@
 Instance: 6-histopath-ServiceRequest
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 6-histopath"
-Description: "Example for Service Request due to suspected melanoma of skin"
 Usage: #inline
 * id = "6-histopath-service-request"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -31,11 +29,7 @@ Usage: #inline
 
 Instance: SimoneStuder
 InstanceOf: CHCorePatient
-Title: "Patient Marina Rubella"
-Description: "CH-Core-Patient, refers to 6-histopath"
 Usage: #inline
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: SimoneStuder\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400008\n      </p><p><b>name</b>: SimoneStuder \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 08, 1992\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Italienisch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'it-CH' = 'Italian (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Huttwil"
 * extension[=].valueAddress.country = "Schweiz"
@@ -75,27 +69,8 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-/*
-Instance: HealthInsuranceCardSimoneStuder
-InstanceOf: CHCoreCoverage
-Title: "Health Insurance Card Simone Studer"
-Description: "Example for Insurance"
-Usage: #inline
-* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
-* identifier[insuranceCardNumber].value = "80756011110123400008"
-* status = #active
-* type = $coverage-type#1 "Krankenversicherung (obligat.)"
-* subscriber = Reference(Patient/SimoneStuder)
-* beneficiary = Reference(Patient/SimoneStuder)
-* period.end = "2024-12-31"
-* payor.identifier.system = "http://example.org/insurer"
-* payor.identifier.value = "123444449"
-*/
-
 Instance: Skin
 InstanceOf: Specimen
-Title: "Skin Sample 6-histopath"
-Description: "Example for Specimen of Serum"
 Usage: #inline
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e99a-12345-dd333"
@@ -115,11 +90,8 @@ Usage: #inline
 
 Instance: SkinDermatoscopy
 InstanceOf: DiagnosticReport
-Title: "Report about the dermatiscopy of skin"
-Description: "DiagnosticReport about the dermatiscopy of skin"
 Usage: #inline
 * id = "skin-dermatoscopy"
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
 * identifier.system = "http://example.org/identifiers"
 * identifier.value = "P44444444"
 * status = #final
@@ -139,8 +111,6 @@ Usage: #inline
 
 Instance: SkinDermatoscopyImage
 InstanceOf: Media
-Title: "Media Dermatoscopic image of the skin excision"
-Description: "Example of an image sent together with a histopathological examination order"
 Usage: #inline
 * id = "skin-dermatoskopy-image"
 * status = #completed

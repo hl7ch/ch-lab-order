@@ -1,11 +1,7 @@
 Instance: 5-biol-monit-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "CH LAB-Questionnaire 5-biol-monit"
-Description: "Example for Laboratory Order Questionnaire for toxicological Monitoring"
 Usage: #inline
 * id = "5-biol-monit"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"

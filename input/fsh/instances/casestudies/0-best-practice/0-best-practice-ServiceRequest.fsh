@@ -1,7 +1,5 @@
 Instance: 0-best-practice-ServiceRequest-0
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 0-best-practice"
-Description: "Example for ServiceRequest due to suspected deep vein thrombosis"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -22,8 +20,6 @@ Usage: #inline
 
 Instance: 0-best-practice-ServiceRequest-1
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 0-best-practice Anti-Xa-Aktivität"
-Description: "Example for ServiceRequest to control anticoagulation effect"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -51,8 +47,6 @@ Usage: #inline
 
 Instance: 0-best-practice-ServiceRequest-2
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 0-best-practice Glucose"
-Description: "Example for ServiceRequest to exclude diabetes mellitus"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -81,8 +75,6 @@ Usage: #inline
 
 Instance: 0-best-practice-ServiceRequest-3
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin Hematocrit panel"
-Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -106,8 +98,6 @@ Usage: #inline
 
 Instance: 0-best-practice-ServiceRequest-3-Hb
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 0-best-practice Hemoglobin"
-Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -127,8 +117,6 @@ Usage: #inline
 
 Instance: 0-best-practice-ServiceRequest-3-Ht
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 0-best-practice Hematocrit"
-Description: "Example for Service Request to exclude excessiv blood lost by fracture"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -155,11 +143,7 @@ Usage: #inline
 // ---- Patient --------
 Instance: BirgitBlum
 InstanceOf: CHCorePatient
-Title: "Patient Birgit Blum"
-Description: "CH-Core-Patient, refers to 0-best-practice"
 Usage: #inline
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: BirgitBlum\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400002\n      </p><p><b>name</b>: Birgit Blum \n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
@@ -191,8 +175,6 @@ Usage: #inline
 /*
 Instance: HealthInsuranceCardBirgitBlum
 InstanceOf: CHCoreCoverage
-Title: "Health Insurance Card Birgit Blum"
-Description: "Example for Insurance"
 Usage: #inline
 // * id = "health-insurance-card-Birgit-Blum"
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
@@ -209,8 +191,6 @@ Usage: #inline
 // ---- encounter -----
 Instance: FirstEncounter
 InstanceOf: Encounter
-Title: "Encounter: First Encounter"
-Description: "Example for best-practice of laboratory order"
 Usage: #inline
 * status = #in-progress
 * class = $v3-ActCode#IMP "inpatient encounter"
@@ -218,8 +198,6 @@ Usage: #inline
 
 Instance: Liquemin
 InstanceOf: CHCoreMedication
-Title: "Medication Liquemin"
-Description: "Example for best-practice of laboratory order"
 Usage: #inline
 
 /*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
@@ -242,8 +220,6 @@ Usage: #inline
 // ---- Specimen ---------------
 Instance: Serum-0-best-practice
 InstanceOf: Specimen
-Title: "Serum Sample 0-best-practice"
-Description: "Example for Specimen of Serum from venous blood"
 Usage: #inline
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e88a-12345-dd888"
@@ -259,8 +235,6 @@ Usage: #inline
 
 Instance: Blood-coag-0-best-practice
 InstanceOf: Specimen
-Title: "Blood Sample Coagulation, 0-best-practice"
-Description: "Example for Specimen for haemostatic Examination"
 Usage: #inline
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
@@ -282,8 +256,6 @@ Usage: #inline
 
 Instance: Blood-0-best-practice
 InstanceOf: Specimen
-Title: "Blood Sample, 0-best-practice"
-Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
@@ -298,7 +270,6 @@ Usage: #inline
 
 Instance: ConditionHeartDisorder
 InstanceOf: CHCoreCondition
-Description: "Problem list of Birgit Blum Heart Disorder"
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -316,7 +287,6 @@ Usage: #inline
 
 Instance: ConditionTibiaFracture
 InstanceOf: CHCoreCondition
-Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -334,7 +304,6 @@ Usage: #inline
 
 Instance: ConditionAnticoagulation
 InstanceOf: CHCoreCondition
-Description: "Problem list of Birgit Blum Tibia Fracture"
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed

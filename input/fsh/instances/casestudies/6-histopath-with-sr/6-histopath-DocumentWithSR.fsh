@@ -4,8 +4,6 @@ Title: "CH LAB-Order 6-histopath with ServiceRequest"
 Description: "Document for referral/order due to suspected skin melanoma"
 Usage: #example
 * id = "6-histopath-document-with-sr"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
 * type = #document

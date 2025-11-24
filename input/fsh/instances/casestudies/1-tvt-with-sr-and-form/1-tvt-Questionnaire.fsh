@@ -1,11 +1,7 @@
 Instance: 1-tvt-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "CH LAB-Questionnaire 1-tvt"
-Description: "Example for Laboratory Order Questionnaire due to suspected deep vein thrombosis"
 Usage: #inline
 * id = "1-tvt"
-* meta.versionId = "1"
-* meta.lastUpdated = "2023-06-06T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"

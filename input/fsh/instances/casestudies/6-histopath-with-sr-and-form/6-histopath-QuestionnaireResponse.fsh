@@ -1,11 +1,7 @@
 Instance: 6-histopath-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "CH LAB-QuestionnaireResponse 6-histopath (modular version)"
-Description: "Example for QuestionnaireResponse of Histopathology Examination"
 Usage: #inline
 * id = "6-histopath"
-* meta.versionId = "1"
-* meta.lastUpdated = "2023-06-06T17:04:38.520+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/6-histopath"
 * status = #completed
 

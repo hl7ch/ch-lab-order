@@ -1,7 +1,5 @@
 Instance: HealthInsuranceCardFranzMuster
 InstanceOf: CHCoreCoverage
-Title: "Covarage HealthInsuranceCard Franz Muster"
-Description: "Example for Insurance Card"
 Usage: #inline
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400000"
@@ -16,8 +14,6 @@ Usage: #inline
 
 Instance: HealthInsuranceCardHansGuggindieluft  // Is Template
 InstanceOf: CHCoreCoverage
-Title: "Covarage HealthInsuranceCard HansGuggindieluft"
-Description: "Example for Insurance Card"
 Usage: #inline
 * identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
 * identifier[insuranceCardNumber].value = "80756011110123400009"

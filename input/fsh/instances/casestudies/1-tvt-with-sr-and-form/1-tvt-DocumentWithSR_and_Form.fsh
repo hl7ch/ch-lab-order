@@ -4,8 +4,6 @@ Title: "CH LAB-Order 1-tvt with ServiceRequest and Form"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "1-tvt-document-with-sr-and-form"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd11125f8"
 * type = #document

@@ -1,7 +1,5 @@
 Instance: SabineMeier
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Sabine Meier"
-Description: "Practitioner, works in Kantonsspital, refers to 4-sepsis"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000034823"

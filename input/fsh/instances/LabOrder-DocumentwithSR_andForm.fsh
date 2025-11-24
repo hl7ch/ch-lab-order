@@ -4,8 +4,6 @@ Title: "CH LAB-Order Document with ServiceRequest and Form"
 Description: "Document for referral/order due to suspected deep vein thrombosis"
 Usage: #example
 * id = "ch-lab-order-with-sr-and-form"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * language = #en
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"

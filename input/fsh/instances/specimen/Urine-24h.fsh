@@ -1,7 +1,5 @@
 Instance: Urine-24h
 InstanceOf: Specimen
-Title: "Urin 24h Sample"
-Description: "Example for Specimen of 24h Urine"
 Usage: #inline
 * identifier.value = "11111-15394-75466"
 * accessionIdentifier.value = "22222-bc987-dd889"

@@ -1,7 +1,5 @@
 Instance: EvaErlenmeyer
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Eva Erlenmeyer"
-Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050717"

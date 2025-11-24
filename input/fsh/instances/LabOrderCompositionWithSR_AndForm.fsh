@@ -1,11 +1,7 @@
 Instance: LabOrderCompositionWithSR_AndForm
 InstanceOf: ChLabOrderCompositionWithSR_AndForm
-Title: "CH LAB-Order Composition with ServiceRequest and Form"
-Description: "Composition with ServiceRequest and Questionnaire/QuestionnaireResponse"
 Usage: #inline
 * id = "ch-lab-order-composition-with-sr-and-form"
-* meta.versionId = "1"
-* meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order with ServiceRequest and Form</div></div>"
 
@@ -32,8 +28,6 @@ Usage: #inline
 * title = "Laborauftrag"
 * section[orderReferral].title = "Auftrag für Laboruntersuchung"
 * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
-* section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                Order-Referral-Form\n            </div>"
 * section[orderReferral].entry[Questionnaire] = Reference(LabOrder-form)
 * section[orderReferral].entry[QuestionnaireResponse] = Reference(LabOrder-QuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] = Reference(ServiceRequestPotassiumSerum)

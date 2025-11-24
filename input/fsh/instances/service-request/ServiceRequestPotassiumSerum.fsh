@@ -1,7 +1,5 @@
 Instance: ServiceRequestPotassiumSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Potassium"
-Description: "Service Request for Potassium [Moles/volume] in Serum or Plasma"
 Usage: #inline
 * id = "service-request-potassium-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

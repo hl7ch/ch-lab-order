@@ -1,7 +1,5 @@
 Instance: LaborSchildknecht
 InstanceOf: CHCoreOrganization
-Title: "Organization Labor Schildknecht"
-Description: "Laboratory Organization, refers to all Storyboards"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601055231222"

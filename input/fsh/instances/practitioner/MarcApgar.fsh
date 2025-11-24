@@ -1,6 +1,5 @@
 Instance: MarcApgar
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Marc Apgar"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050717"

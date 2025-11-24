@@ -4,8 +4,6 @@ Title: "CH LAB-Order document best-practice"
 Description: "Document with Service Request in context of tibial plateau fracture"
 Usage: #example
 * id = "0-best-practice-document-with-sr"
-* meta.versionId = "1"
-* meta.lastUpdated = "2023-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
 * type = #document

@@ -1,13 +1,10 @@
 Instance: LabOrderCompositionWithSR
 InstanceOf: ChLabOrderCompositionWithSR
-Title: "CH LAB-Order Composition with ServiceRequest"
-Description: "Composition with ServiceRequest for Potassium"
 Usage: #inline
 * id = "ch-lab-order-composition-with-sr"
-* meta.versionId = "1"
-* meta.lastUpdated = "2021-02-18T17:04:38.520+00:00"
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order with ServiceRequest</div></div>"
+
 
 * extension[0].extension.url = "enterer"
 * extension[=].extension.valueReference = Reference(MarcMustermannGruppenpraxis)
@@ -32,7 +29,4 @@ Usage: #inline
 * title = "Laborauftrag"
 * section[orderReferral].title = "Auftrag für Laboruntersuchung"
 // * section[orderReferral].code = $loinc#93037-0 "Portable medical order form"
-* section[orderReferral].text.status = #generated
-* section[orderReferral].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                Order-Referral-Form\n            </div>"
-
 * section[orderReferral].entry[ServiceRequest] = Reference(ServiceRequestPotassiumSerum)

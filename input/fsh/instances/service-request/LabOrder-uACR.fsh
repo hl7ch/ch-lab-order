@@ -1,7 +1,5 @@
 Instance: LabOrder-uACR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Albumin/Creatinine Ratio in Urine"
-Description: "Service Request for a albumin and creatinine test in Urine, and Ratio Calculation"
 Usage: #inline
 * id = "lab-order-uACR"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

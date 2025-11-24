@@ -1,7 +1,5 @@
 Instance: ServiceRequestSodiumSerum
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Sodium"
-Description: "Service Request for Sodium [Moles/volume] in Serum or Plasma"
 Usage: #inline
 * id = "service-request-sodium-serum"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

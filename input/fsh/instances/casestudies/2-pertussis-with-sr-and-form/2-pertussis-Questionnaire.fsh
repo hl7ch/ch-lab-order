@@ -1,11 +1,7 @@
 Instance: 2-pertussis-Questionnaire
 InstanceOf: ChOrfQuestionnaire
-Title: "CH LAB-Questionnaire 2-pertussis"
-Description: "Example for Laboratory Order Questionnaire for Pertussis Investigation"
 Usage: #inline
 * id = "2-pertussis"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
