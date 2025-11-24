@@ -199,7 +199,7 @@ Usage: #inline
 * collection.collector = Reference(Practitioner/PeterPresto)
 * collection.collectedDateTime = "2023-12-01T06:40:17Z"
 * collection.method = $sct#418932006 "Oral swab (specimen)"
-* collection.bodySite = $sct#312535008 "Structure of pharynx and/or larynx (body structure)"
+* collection.bodySite = $sct#312535008 "Pharynx and larynx structures (body structure)"
 * container.identifier.value = "4e88a-bc987-dd888-12345"
 * container.description = "ESwab 486C tubes Copan"
 * container.type = $sct#706053007 "General specimen container (physical object)"
