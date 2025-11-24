@@ -1,7 +1,7 @@
 Instance: 0-best-practice-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order document best-practice"
-Description: "Document with Service Request in context of tibial plateau fracture"
+Title: "Anticoagulant Effect"
+Description: "CH LAB-Order Document with Service Request"
 Usage: #example
 * id = "0-best-practice-document-with-sr"
 * identifier.system = "urn:ietf:rfc:3986"

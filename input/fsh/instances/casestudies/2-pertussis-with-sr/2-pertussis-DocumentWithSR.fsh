@@ -1,7 +1,7 @@
 Instance: 2-pertussis-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 2-pertussis with ServiceRequest"
-Description: "Document for referral/order for Pertussis investigation"
+Title: "Pertussis"
+Description: "CH LAB-Order Document with Service Request"
 Usage: #example
 * id = "2-pertussis-document-with-sr"
 

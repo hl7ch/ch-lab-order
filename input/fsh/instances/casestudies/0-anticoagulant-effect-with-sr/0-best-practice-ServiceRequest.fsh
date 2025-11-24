@@ -169,24 +169,6 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ---- PractitionerRole --------> Folder
-
-// issue: orf wants a VS, in FSH a CS is required ???
-/*
-Instance: HealthInsuranceCardBirgitBlum
-InstanceOf: CHCoreCoverage
-Usage: #inline
-// * id = "health-insurance-card-Birgit-Blum"
-* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
-* identifier[insuranceCardNumber].value = "80756011110123400002"
-
-* status = #active
-* type = $coverage-type#4 "According to UVG"
-* beneficiary = Reference(Patient/BirgitBlum)
-* period.end = "2024-12-31"
-* payor.identifier.system = "http://example.org/insurer"
-* payor.identifier.value = "123456789"
-*/
 
 // ---- encounter -----
 Instance: FirstEncounter
@@ -199,9 +181,6 @@ Usage: #inline
 Instance: Liquemin
 InstanceOf: CHCoreMedication
 Usage: #inline
-
-/*A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.*/
-
 * code.coding[GTIN] = urn:oid:2.51.1.1#7680151590587 "LIQUEMIN Inj Lös 25000 IE/5ml"
 // * code.coding[PHARMACODE] = urn:oid:2.16.756.5.30.2.6#4937146 "LIQUEMIN Inj Lös 25000 IE/5ml"
 * code.coding[ATC] = $atc#B01AB01 "Heparin"
@@ -316,19 +295,3 @@ Usage: #inline
 * recordedDate = "2024-02-05"
 * asserter = Reference(PractitionerRole/HansHauserKantonsspital) "Birgit Blum"
 * evidence.code = $sct#111645003 "Open fracture of upper end of tibia (disorder)"
-
-/*
-Instance: Insurance-Company
-InstanceOf: CHCoreCoverage
-Usage: #inline
-* identifier.system = "http://example.org/insurer/123456789/member"
-* identifier.value = "A123456781"
-* status = #active
-* type = $coverage-type#1 "Krankenversicherung (obligat.)"
-* subscriber = Reference(Patient/BirgitBlum)
-* beneficiary = Reference(Patient/BirgitBlum)
-* relationship.coding.code = #self
-* period.end = "2025-03-17"
-* payor.identifier.system = "http://example.org/insurer"
-* payor.identifier.value = "1234567891"
-*/

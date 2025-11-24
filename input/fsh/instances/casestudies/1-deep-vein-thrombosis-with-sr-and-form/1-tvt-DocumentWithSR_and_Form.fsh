@@ -1,7 +1,7 @@
 Instance: 1-tvt-DocumentWithSR_andForm
 InstanceOf: ChOrfDocument
-Title: "CH LAB-Order 1-tvt with ServiceRequest and Form"
-Description: "Document for referral/order due to suspected deep vein thrombosis"
+Title: "Deep Vein Thrombosis"
+Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example
 * id = "1-tvt-document-with-sr-and-form"
 * identifier.system = "urn:ietf:rfc:3986"

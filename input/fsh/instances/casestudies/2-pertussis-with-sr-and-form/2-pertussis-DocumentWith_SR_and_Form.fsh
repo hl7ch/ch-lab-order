@@ -1,7 +1,7 @@
 Instance: 2-pertussis-DocumentWith_SR_and_Form
 InstanceOf: ChOrfDocument
-Title: "CH LAB-Order 2-pertussis with ServiceRequest and Form"
-Description: "Document for referral/order Pertussis investigation"
+Title: "Pertussis"
+Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example
 * id = "2-pertussis-document-with-sr-and-form"
 * identifier.system = "urn:ietf:rfc:3986"

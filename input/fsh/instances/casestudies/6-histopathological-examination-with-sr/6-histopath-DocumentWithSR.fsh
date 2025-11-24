@@ -1,7 +1,7 @@
 Instance: 6-histopath-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 6-histopath with ServiceRequest"
-Description: "Document for referral/order due to suspected skin melanoma"
+Title: "Histopathological Examination"
+Description: "CH LAB-Order Document with Service Request"
 Usage: #example
 * id = "6-histopath-document-with-sr"
 * identifier.system = "urn:ietf:rfc:3986"

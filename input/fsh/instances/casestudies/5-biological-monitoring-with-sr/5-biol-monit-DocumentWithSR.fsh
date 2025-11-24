@@ -1,7 +1,7 @@
 Instance: 5-biol-monit-DocumentWithSR
 InstanceOf: ChLabOrderDocumentWithSR
-Title: "CH LAB-Order 5-biol with ServiceRequest"
-Description: "Document for referral/order toxicological Monitoring"
+Title: "Biological Monitoring"
+Description: "CH LAB-Order Document with Service Request"
 Usage: #example
 * id = "5-biol-monit-document-with-sr"
 * identifier.system = "urn:ietf:rfc:3986"
