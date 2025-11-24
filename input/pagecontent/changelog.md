@@ -11,6 +11,7 @@ Significant changes to this FHIR implementation guide will be documented on this
 * [#364](https://github.com/hl7ch/ch-lab-order/issues/364): Update link and title from former CH EPR Term to CH Term IG
 * [#365](https://github.com/hl7ch/ch-lab-order/issues/365): Unify spelling
 * [#401](https://github.com/hl7ch/ch-lab-order/issues/401), [#403](https://github.com/hl7ch/ch-lab-order/issues/403): Cleanup profiles (naming, description, remove unused)
+* [#367](https://github.com/hl7ch/ch-lab-order/issues/367): Improve the connection between use cases and case studies
 
 #### Fixed
 * [#375](https://github.com/hl7ch/ch-lab-order/issues/375), [#362](https://github.com/hl7ch/ch-lab-order/issues/362), [#373](https://github.com/hl7ch/ch-lab-order/issues/373): Cleanup changelog (sections/ordering, add issue links where available)
