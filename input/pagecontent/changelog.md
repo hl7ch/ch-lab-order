@@ -7,6 +7,9 @@ Significant changes to this FHIR implementation guide will be documented on this
 * [#383](https://github.com/hl7ch/ch-lab-order/issues/383), [#382](https://github.com/hl7ch/ch-lab-order/issues/382), [#378](https://github.com/hl7ch/ch-lab-order/issues/378): Removed Case Study 4 (sepsis) and Use Case 4 from documentation. The reflex testing and Task workflow examples did not align with document-centric approach and are better suited for Clinical Order Workflow (COW) IG patterns. (Issue [#358](https://github.com/hl7ch/ch-lab-order/issues/358) is therefore obsolete.)
 * [#368](https://github.com/hl7ch/ch-lab-order/issues/368): Remove triggeredBy artifacts (Extension, Observation, CodeSystem, ValueSet) because the concept belongs to task/order workflow (see above).
 * [#384](https://github.com/hl7ch/ch-lab-order/issues/384): Clarified example usage by changing supporting/inline instances from `Usage: #example` to `Usage: #inline`. Standalone example instances (Bundles) remain as `#example`, while supporting resources referenced by examples (Patients, Practitioners, Organizations, Specimens, Conditions, MedicationStatements) are now marked as `#inline` to indicate they are generic FHIR base resource instances used for illustration purposes.
+* [#366](https://github.com/hl7ch/ch-lab-order/issues/366): Use stable and versioned link to SDC IG
+* [#364](https://github.com/hl7ch/ch-lab-order/issues/364): Update link and title from former CH EPR Term to CH Term IG
+* [#365](https://github.com/hl7ch/ch-lab-order/issues/365): Unify spelling
 * [#401](https://github.com/hl7ch/ch-lab-order/issues/401), [#403](https://github.com/hl7ch/ch-lab-order/issues/403): Cleanup profiles (naming, description, remove unused)
 
 #### Fixed
@@ -70,7 +73,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-order/issues).
 * [#98](https://github.com/hl7ch/ch-term/issues/98): Add NamingSystem for VEKA and GTIN
 
 #### Changed / Updated
-* [#132](https://github.com/hl7ch/ch-lab-order/issues/132): Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](http://build.fhir.org/ig/hl7ch/ch-lab-order/Questionnaire-LabOrder-form.html)
+* [#132](https://github.com/hl7ch/ch-lab-order/issues/132): Try to build a Questionnaire with a general part and 6 specific parts: [Questionnaire Specification](https://fhir.ch/ig/ch-lab-order/2.0.0/Questionnaire-LabOrder-form.html)
 * [#88](https://github.com/hl7ch/ch-lab-order/issues/88): The pre-analytical conditions and any limitations are specified in the laboratory catalogue. These include, for example, the fasting of the patient, the type of sample container, the storage period and temperature of the sample, the reasons for rejection, etc. In addition, the costs of Vitamin D determination are only covered by health insurance in certain situations, e.g. rickets, osteoporosis, etc.
 * [#87](https://github.com/hl7ch/ch-lab-order/issues/87): Relations between Specimens and Tests. Refer to issue [#72](https://github.com/hl7ch/ch-lab-order/issues/72)
 * [#80](https://github.com/hl7ch/ch-lab-order/issues/80): User should be able to select analyses or analyse panels from a Laboratory Catalog. The applies to Specimens
