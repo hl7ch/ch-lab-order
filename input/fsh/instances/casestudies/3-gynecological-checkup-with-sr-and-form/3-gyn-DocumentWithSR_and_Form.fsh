@@ -1,5 +1,5 @@
 Instance: 3-gyn-DocumentWithSR_andForm
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "Gynecological Checkup"
 Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example

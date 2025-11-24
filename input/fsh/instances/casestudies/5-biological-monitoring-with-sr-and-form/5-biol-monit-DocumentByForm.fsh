@@ -1,5 +1,5 @@
 Instance: 5-biol-monit-DocumentByForm
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "Biological Monitoring"
 Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example

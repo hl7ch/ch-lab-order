@@ -1,5 +1,5 @@
 Instance: 2-pertussis-DocumentWith_SR_and_Form
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "Pertussis"
 Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example

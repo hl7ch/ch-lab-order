@@ -1,5 +1,5 @@
 Instance: 1-tvt-DocumentWithSR_andForm
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "Deep Vein Thrombosis"
 Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example

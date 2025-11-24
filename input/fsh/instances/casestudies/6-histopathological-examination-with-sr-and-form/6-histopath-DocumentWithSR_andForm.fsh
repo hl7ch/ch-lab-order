@@ -1,5 +1,5 @@
 Instance: 6-histopath-DocumentWithSR_andForm
-InstanceOf: ChOrfDocument
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
 Title: "Histopathological Examination"
 Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example
