@@ -276,7 +276,7 @@ Usage: #inline
 * item[=].text = "Hämatologie"
 * item[=].item.linkId = "Blood-diff"
 * item[=].item.text = "Manual Differential panel - Blood"
-* item[=].item.answer.valueCoding = $loinc#24318-8 "Manual diff Bld"
+* item[=].item.answer.valueCoding = $loinc#57782-5 "CBC W Ordered Manual Differential panel - Blood"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].item.linkId = "crp"

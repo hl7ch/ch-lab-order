@@ -551,7 +551,7 @@ Usage: #example
 * item[=].item[=].item.item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item[=].item.item[=].item.type = #choice
 * item[=].item[=].item.item[=].item.repeats = true
-* item[=].item[=].item.item[=].item.answerOption.valueCoding = $loinc#24318-8 "Manual diff Bld"
+* item[=].item[=].item.item[=].item.answerOption.valueCoding = $loinc#57782-5 "CBC W Ordered Manual Differential panel - Blood"
 * item[=].item[=].item.item[+].linkId = "clinical-chemistry-2"
 * item[=].item[=].item.item[=].text = "Klinische Chemie"
 * item[=].item[=].item.item[=].type = #group
