@@ -15,13 +15,6 @@ Comme il s'agit probablement d'une thrombose primaire de la veine de la jambe, l
 * [CH LAB-Order Document with Service Request](Bundle-1-tvt-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-1-tvt-document-with-sr-and-form.html)
 
-### Suspicion de coqueluche
-Une mère se rend chez le médecin de famille Peter Presto du cabinet de groupe d'Olten avec son fils Emil Kummer, 6 ans, né le 5 mai 2014, car l'enfant tousse de plus en plus depuis une quinzaine de jours, avec des quintes de toux, et a de la fièvre. La réceptionniste du médecin mesure la fièvre, prélève un échantillon de sang au bout du doigt, détermine la CRP et prépare un frottis sanguin. Le médecin soupçonne une infection virale, mais veut exclure la coqueluche, bien que l'enfant ait été vacciné contre cette maladie. Comme il est pressé par l'urgence, il ne veut pas effectuer lui-même le prélèvement de gorge nécessaire, mais demande à la mère d'accompagner l'enfant au laboratoire le plus proche pour que le prélèvement soit effectué en toute tranquillité. Il prépare un ordre de laboratoire pour effectuer une PCR coqueluche sur le prélèvement de gorge de l'enfant et donne l'ordre à la mère. La mère elle-même n'est pas sûre d'avoir été vaccinée contre la coqueluche.     
-En conséquence, le médecin de famille Peter Presto la vaccine immédiatement contre la coqueluche et recommande de faire de même pour le père et les grands-parents de l'enfant. Entre-temps, l'AMP a examiné au microscope le frottis sanguin de l'enfant et trouve beaucoup de lymphocytes réactifs, ce qui lui semble suspect. Elle n'est pas sûre et interroge le médecin, qui donne l'ordre de remettre les frottis sanguins de l'enfant à la mère et de les faire examiner de plus près au laboratoire. La mère arrive au laboratoire avec son fils, où le médecin ordonne d'abord d'établir l'identité du fils. Ensuite, un prélèvement pharyngé et une ponction cubitale droite sont effectués sur l'enfant dans la salle de prélèvement sanguin du laboratoire et transmis au laboratoire avec les frottis sanguins et l'ordre d'examen du médecin.
-
-* [CH LAB-Order Document with Service Request](Bundle-2-pertussis-document-with-sr.html)
-* [CH LAB-Order Document with Service Request and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
-
 ### Contrôle gynécologique annuel
 Le médecin assistant du service de gynécologie du cabinet communautaire d'Olten, le Dr Peter Pap, prépare les consultations du lendemain. Comme le cabinet ne dispose que d'un laboratoire propre minimal, certaines patientes sont envoyées avant le rendez-vous au laboratoire ambulatoire Pipette situé à proximité, dont la jeune patiente Mme Marina Rubella, née le 8. 8. 1992. Dans le logiciel de son cabinet, l'assistante médicale prescrit les analyses standard convenues avec le laboratoire pour l'examen gynécologique triennal de la patiente Rubella. Cela comprend également le prélèvement de sérum sanguin pour d'éventuelles prescriptions ultérieures. Le laboratoire transmet les résultats au cabinet médical au plus tard 90 minutes après la prise de sang. Le Dr Pap prescrit les examens suivants au cours de la consultation :      
 * Cytologie cervicale gynécologique : Frottis de Papanicolaou - si cela est indiqué, la détection et le typage du HPV (virus du papillome humain) doivent également être effectués. Matériel de prélèvement selon les instructions du laboratoire. L'examen cytologique est effectué dans le laboratoire Pipette. Le laboratoire Pipette n'effectue pas le typage lui-même.
@@ -32,15 +25,6 @@ Le médecin assistant du service de gynécologie du cabinet communautaire d'Olte
 * [CH LAB-Order Document with Service Request](Bundle-3-gyn-document.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-3-gyn-document-with-sr-and-form.html)
 
-### Surveillance biologique SUVA
-Les entreprises qui travaillent avec des substances dangereuses pour la santé et dans lesquelles les employés sont exposés à des risques particuliers sont soumises à un examen de santé au travail par la SUVA. La surveillance biologique est l'une des possibilités de contrôle. Il permet d'évaluer l'exposition des travailleurs à des agents chimiques en déterminant les agents ou les métabolites dans le matériel biologique (par exemple l'urine). La prévention médicale du travail (AMV) de la SUVA envoie au laboratoire une liste mensuelle contenant les informations suivantes par entreprise (ordre collectif) :    
-* Établissement (nom, adresse, numéro d'établissement)
-* Nombre d'employés pour le contrôle biologique
-* Examens à effectuer (par exemple arsenic, plomb, mercure, acide mandélique). Les entreprises reçoivent de l'AMV une liste comprenant les étiquettes des employés concernés. Nous prenons ici le document d'un employé, Beat Borer, né le 6. 6. 1986. Le laboratoire imprime les bons de commande avec le numéro de l'entreprise et envoie le nombre nécessaire de gobelets d'urine et de bons de commande aux entreprises. Dans l'entreprise, les bons de commande et les gobelets d'urine sont étiquetés avec les étiquettes fournies par l'AMV et remis aux employés. Les échantillons, y compris le bon de commande, sont envoyés de l'entreprise au laboratoire.
-
-* [CH LAB-Order Document with Service Request](Bundle-5-biol-monit-document-with-sr.html)
-* [CH LAB-Order Document with Service Request and Form](Bundle-5-biol-monit-document-with-sr-and-form.html)
-
 ### Histopathology examination
 Simone Studer, une patiente de 45 ans, s'est présentée à l'Arztpraxis du dermatologue Armin Ahrens pour un contrôle régulier de sa peau, et cette lésion a été notée : Naevus de jonction composé d'une zone séborrhéique à l'extrémité supérieure et d'un réseau atypique constitué de nombreux points, structures, etc. distincts, suggérant une implication mélanocytaire. Excision. Images dermatoscopiques jointes. Spécimen : Ellipse cutanée de 29 x 11 x 5 mm Site corporel :    
 * Dos paralombaire gauche
@@ -50,3 +34,19 @@ Simone Studer, une patiente de 45 ans, s'est présentée à l'Arztpraxis du derm
 
 * [CH LAB-Order Document with Service Request](Bundle-6-histopath-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-6-histopath-document-with-sr-and-form.html)
+
+### Suspicion de coqueluche
+Une mère se rend chez le médecin de famille Peter Presto du cabinet de groupe d'Olten avec son fils Emil Kummer, 6 ans, né le 5 mai 2014, car l'enfant tousse de plus en plus depuis une quinzaine de jours, avec des quintes de toux, et a de la fièvre. La réceptionniste du médecin mesure la fièvre, prélève un échantillon de sang au bout du doigt, détermine la CRP et prépare un frottis sanguin. Le médecin soupçonne une infection virale, mais veut exclure la coqueluche, bien que l'enfant ait été vacciné contre cette maladie. Comme il est pressé par l'urgence, il ne veut pas effectuer lui-même le prélèvement de gorge nécessaire, mais demande à la mère d'accompagner l'enfant au laboratoire le plus proche pour que le prélèvement soit effectué en toute tranquillité. Il prépare un ordre de laboratoire pour effectuer une PCR coqueluche sur le prélèvement de gorge de l'enfant et donne l'ordre à la mère. La mère elle-même n'est pas sûre d'avoir été vaccinée contre la coqueluche.     
+En conséquence, le médecin de famille Peter Presto la vaccine immédiatement contre la coqueluche et recommande de faire de même pour le père et les grands-parents de l'enfant. Entre-temps, l'AMP a examiné au microscope le frottis sanguin de l'enfant et trouve beaucoup de lymphocytes réactifs, ce qui lui semble suspect. Elle n'est pas sûre et interroge le médecin, qui donne l'ordre de remettre les frottis sanguins de l'enfant à la mère et de les faire examiner de plus près au laboratoire. La mère arrive au laboratoire avec son fils, où le médecin ordonne d'abord d'établir l'identité du fils. Ensuite, un prélèvement pharyngé et une ponction cubitale droite sont effectués sur l'enfant dans la salle de prélèvement sanguin du laboratoire et transmis au laboratoire avec les frottis sanguins et l'ordre d'examen du médecin.
+
+* [CH LAB-Order Document with Service Request](Bundle-2-pertussis-document-with-sr.html)
+* [CH LAB-Order Document with Service Request and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
+
+### Surveillance biologique SUVA
+Les entreprises qui travaillent avec des substances dangereuses pour la santé et dans lesquelles les employés sont exposés à des risques particuliers sont soumises à un examen de santé au travail par la SUVA. La surveillance biologique est l'une des possibilités de contrôle. Il permet d'évaluer l'exposition des travailleurs à des agents chimiques en déterminant les agents ou les métabolites dans le matériel biologique (par exemple l'urine). La prévention médicale du travail (AMV) de la SUVA envoie au laboratoire une liste mensuelle contenant les informations suivantes par entreprise (ordre collectif) :    
+* Établissement (nom, adresse, numéro d'établissement)
+* Nombre d'employés pour le contrôle biologique
+* Examens à effectuer (par exemple arsenic, plomb, mercure, acide mandélique). Les entreprises reçoivent de l'AMV une liste comprenant les étiquettes des employés concernés. Nous prenons ici le document d'un employé, Beat Borer, né le 6. 6. 1986. Le laboratoire imprime les bons de commande avec le numéro de l'entreprise et envoie le nombre nécessaire de gobelets d'urine et de bons de commande aux entreprises. Dans l'entreprise, les bons de commande et les gobelets d'urine sont étiquetés avec les étiquettes fournies par l'AMV et remis aux employés. Les échantillons, y compris le bon de commande, sont envoyés de l'entreprise au laboratoire.
+
+* [CH LAB-Order Document with Service Request](Bundle-5-biol-monit-document-with-sr.html)
+* [CH LAB-Order Document with Service Request and Form](Bundle-5-biol-monit-document-with-sr-and-form.html)
