@@ -30,7 +30,7 @@ A 45-year-old female patient Simone Studer came for her regular skin check to th
 * Back paralumbar left
 * The skin sample, including the order document and the dermatoscopic image are sent to the laboratory.
 
-{% include img.html img="Dermatoscopic-image-of-superficial-spreading-melanoma.png" caption="Fig.: Dermatoscopic Image" width="20%" %}
+{% include img.html img="Dermatoscopic-image-of-superficial-spreading-melanoma.png" caption="Fig.: Dermatoscopic Image" width="15%" %}
 
 * [CH LAB-Order Document with Service Request](Bundle-6-histopath-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-6-histopath-document-with-sr-and-form.html)
