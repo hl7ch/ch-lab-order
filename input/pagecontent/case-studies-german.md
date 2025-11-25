@@ -47,5 +47,7 @@ Eine 45-jährige Patientin, Simone Studer, kam zur regelmäßigen Hautkontrolle 
 * Rücken paralumbar links
 * Die Hautprobe wird zusammen mit dem Auftragsformular und dem dermatoskopischen Bild an das Labor gesandt.
 
+{% include img.html img="Dermatoscopic-image-of-superficial-spreading-melanoma.png" caption="Abb.: Dermatoskopisches Bild" width="20%" %}
+
 * [CH LAB-Order Document with Service Request](Bundle-6-histopath-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-6-histopath-document-with-sr-and-form.html)

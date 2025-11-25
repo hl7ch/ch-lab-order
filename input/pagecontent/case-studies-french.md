@@ -46,5 +46,7 @@ Simone Studer, une patiente de 45 ans, s'est présentée à l'Arztpraxis du derm
 * Dos paralombaire gauche
 * L'échantillon de peau, le formulaire de commande et l'image dermatoscopique sont envoyés au laboratoire.
 
+{% include img.html img="Dermatoscopic-image-of-superficial-spreading-melanoma.png" caption="Fig. : Image dermatoscopique" width="20%" %}
+
 * [CH LAB-Order Document with Service Request](Bundle-6-histopath-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-6-histopath-document-with-sr-and-form.html)
