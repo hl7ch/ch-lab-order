@@ -11,7 +11,11 @@ Er kann dem Laborauftrag auch Informationen über den klinischen Kontext hinzuf�
 
 Das Auftragsdokument wird an das Laborinformationssystem (LIS) gesendet.
 
-* [Beispiele](StructureDefinition-ch-lab-order-document-with-sr-examples.html) für 'CH LAB-Order Document with Service Request'
+#### Fallstudien & Beispiele
+* [**Kontrolle der Antikoagulationswirkung**](case-studies-german.html#kontrolle-der-antikoagulationswirkung): [CH LAB-Order Dokument mit Serviceanforderung](Bundle-0-best-practice-document-with-sr.html)
+* [**Verdacht auf tiefe Venenthrombose**](case-studies-german.html#verdacht-auf-tiefe-venenthrombose): [CH LAB-Order Dokument mit Serviceanforderung](Bundle-1-tvt-document-with-sr.html)
+* [**Jährliche gynäkologische Vorsorgeuntersuchung**](case-studies-german.html#jährliche-gynäkologische-vorsorgeuntersuchung): [CH LAB-Order Dokument mit Serviceanforderung](Bundle-3-gyn-document.html)
+* [**Histopathologischen Untersuchung**](case-studies-german.html#histopathologischen-untersuchung): [CH LAB-Order Dokument mit Serviceanforderung](Bundle-6-histopath-document-with-sr.html)
 
 #### Laborauftragsdokument mit Serviceanforderung und Formular
 Der Auftraggeber (z.B. Arzt) benötigt zur weiteren Diagnostik verschiedene Laboruntersuchungen. Dazu erstellt er in seinem Praxisinformationssystem ein Auftragsdokument mit den notwendigen Angaben zu Patient, Laboruntersuchung, Proben usw. Das benötigte Probenmaterial (Serum, Urin, Liquor, etc.) wird in den entsprechenden Auftragsdokumenten hinterlegt. Das benötigte Probenmaterial (Serum, Urin, Liquor) wird in entsprechenden Behältnissen gesammelt und dem Auftragsdokument eindeutig zugeordnet (Specimen.identifier, Specimen.container.identifier). Die Proben können im eigenen Labor untersucht werden, oder sie müssen per Post oder Kurier an das externe Labor geschickt werden. Dort werden sie vom Laborinformationssystem mit einem eigenen Identifikator (Specimen.accessionIdentifier) versehen.
@@ -37,12 +41,15 @@ Dem Auftraggeber wird ein Formular (Fragebogen) vorgelegt, das die folgenden Inf
   * Kostenträger (Krankenkasse, Unfallversicherung, etc.)
   * und mehr
 
-* [Beispiele](StructureDefinition-ch-lab-order-document-with-sr-and-form-examples.html) für 'CH LAB-Order Document with Service Request and Form'
+#### Fallstudien & Beispiele
+* [**Verdacht auf tiefe Venenthrombose**](case-studies-german.html#verdacht-auf-tiefe-venenthrombose): [CH LAB-Order Dokument mit Serviceanforderung und Formular](Bundle-1-tvt-document-with-sr-and-form.html)
+* [**Jährliche gynäkologische Vorsorgeuntersuchung**](case-studies-german.html#jährliche-gynäkologische-vorsorgeuntersuchung): [CH LAB-Order Dokument mit Serviceanforderung und Formular](Bundle-3-gyn-document-with-sr-and-form.html)
+* [**Histopathologischen Untersuchung**](case-studies-german.html#histopathologischen-untersuchung): [CH LAB-Order Dokument mit Serviceanforderung und Formular](Bundle-6-histopath-document-with-sr-and-form.html)
 
 ### Anforderung zusätzlicher Tests für dieselbe Probe
 Es ist nicht ungewöhnlich, dass die Ergebnisse von Laboruntersuchungen dazu führen, dass weitere Untersuchungen an derselben Probe angefordert werden. Oder die internen Laboranalysen werden durch weitere Tests ergänzt, die nur in einem externen Labor durchgeführt werden können.
 
-Im [Pertussis Beispiel](case-studies-german.html#verdacht-auf-keuchhusten) werden die internen Labortests (automatisiertes Blutbild, CRP) durch die Suche nach Bordetella pertussis- und parapertussis-DNA im Rachenabstrich ergänzt, die von einem externen Vertragslabor durchgeführt wird, um Keuchhusten auszuschliessen.
+In der Fallstudie [**Verdacht auf Keuchhusten**](case-studies-german.html#verdacht-auf-keuchhusten) werden die internen Labortests (automatisiertes Blutbild, CRP) durch die Suche nach Bordetella pertussis- und parapertussis-DNA im Rachenabstrich ergänzt, die von einem externen Vertragslabor durchgeführt wird, um Keuchhusten auszuschliessen.
 
 Wenn das placer System zusätzliche Tests für die vorhandenen Proben anfordert, kopiert es die ursprüngliche ServiceAnforderung, fügt die erforderlichen Labortests und einen Auftragskontrollcode 'RP' hinzu, was eine Auftrags-/Leistungsersetzungsanforderung bedeutet. Eine spezielle Invarianzregel 'sr-1' sorgt dafür, dass ein Verweis auf die ursprüngliche ServiceAnforderung hergestellt wird.
 
@@ -55,12 +62,12 @@ Beispiel für eine referenzierte Serviceanfrage: Der Code im Element 'orderDetai
 
 Beispiel Service Replace Request: Der Replace Request enthält einen Verweis auf den vorherigen ServiceRequest und ein Element 'orderDetail', das den Order Control Code aus dem Code System v2-0119 trägt: 'RP' für "Order/service replace request", 'CA' für "Cancel order/service request", 'HD' für "Hold order request", und 'RL' für "Release previous hold"
 
-* [CH LAB-Order Document with Service Request](Bundle-2-pertussis-document-with-sr.html)
-* [CH LAB-Order Document with Service Request and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
-
+#### Beispiele
+* [CH LAB-Order Dokument mit Serviceanforderung](Bundle-2-pertussis-document-with-sr.html)
+* [CH LAB-Order Dokument mit Serviceanforderung und Formular](Bundle-2-pertussis-document-with-sr-and-form.html)
 
 ### Sammelauftrag für toxikologische Tests
-Dieser Anwendungsfall entspricht dem [Beispiel der biologischen Überwachung der SUVA](case-studies-german.html#verdacht-auf-keuchhusten). Um die Exposition von Arbeitnehmern gegenüber chemischen Stoffen zu beurteilen, werden die Messungen am Arbeitsplatz durch arbeitsmedizinische Untersuchungen ergänzt. Dabei können die toxischen Substanzen selbst oder deren Metaboliten im Serum oder Urin bestimmt werden. Die Anordnung erfolgt durch den Arbeitsmediziner des Unternehmens oder die Versicherung. Die Problematik der Fluktuation der Mitarbeiter muss beachtet werden.
+Dieser Anwendungsfall entspricht der Fallstudie [**Biologische Überwachung der SUVA**](case-studies-german.html#verdacht-auf-keuchhusten). Um die Exposition von Arbeitnehmern gegenüber chemischen Stoffen zu beurteilen, werden die Messungen am Arbeitsplatz durch arbeitsmedizinische Untersuchungen ergänzt. Dabei können die toxischen Substanzen selbst oder deren Metaboliten im Serum oder Urin bestimmt werden. Die Anordnung erfolgt durch den Arbeitsmediziner des Unternehmens oder die Versicherung. Die Problematik der Fluktuation der Mitarbeiter muss beachtet werden.
 
 Beispiele sind:
 * Arbeitsmedizin: Bestellung von Laboruntersuchungen bei einer Gruppe von Arbeitnehmern
@@ -71,6 +78,6 @@ Beispiele sind:
 
 Es werden Arbeitslisten bearbeitet, die sich über einen längeren Zeitraum (Tage/Wochen) erstrecken. In der Regel werden bestimmte Untersuchungen bei mehreren Patienten angefordert.
 
-* [CH LAB-Order Document with Service Request](Bundle-5-biol-monit-document-with-sr.html)
-* [CH LAB-Order Document with Service Request and Form](Bundle-5-biol-monit-document-with-sr-and-form.html)
-
+#### Beispiele
+* [CH LAB-Order Dokument mit Serviceanforderung](Bundle-5-biol-monit-document-with-sr.html)
+* [CH LAB-Order Dokument mit Serviceanforderung und Formular](Bundle-5-biol-monit-document-with-sr-and-form.html)

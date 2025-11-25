@@ -11,7 +11,11 @@ He can also add information about the clinical context to the laboratory order: 
 
 The order document is sent to the laboratory information system (LIS).
 
-* [Examples](StructureDefinition-ch-lab-order-document-with-sr-examples.html) for 'CH LAB-Order Document with Service Request'
+#### Case Studies and Examples
+* [**Control of Anticoagulant Effect**](case-studies-english.html#control-of-anticoagulant-effect): [CH LAB-Order Document with Service Request](Bundle-0-best-practice-document-with-sr.html)
+* [**Suspicion of Deep Vein Thrombosis**](case-studies-english.html#suspicion-of-deep-vein-thrombosis): [CH LAB-Order Document with Service Request](Bundle-1-tvt-document-with-sr.html)
+* [**Annual Gynecological Checkup**](case-studies-english.html#annual-gynecological-checkup): [CH LAB-Order Document with Service Request](Bundle-3-gyn-document.html)
+* [**Histopathological Examination**](case-studies-english.html#histopathological-examination): [CH LAB-Order Document with Service Request](Bundle-6-histopath-document-with-sr.html)
 
 #### Laboratory Order Document with Service Request and Form
 The client (e.g., physician) requires various laboratory tests for further diagnostics. For this purpose, he creates an order document in his practice information system with the necessary information on the patient, laboratory test, samples, etc. The necessary sample material (serum, urine, cerebrospinal fluid, etc.) is stored in the corresponding order documents. The necessary sample material (serum, urine, cerebrospinal fluid) is collected in appropriate containers and clearly assigned to the order document (Specimen.identifier, Specimen.container.identifier). Samples can be examined in the own laboratory, or they have to be sent via mail or courier to the external laboratory. There, the laboratory information system assigns them their own identifier (Specimen.accessionIdentifier).
@@ -37,12 +41,15 @@ A form (Questionnaire) is presented to the client, which contains the following 
   * payer (health insurance, accident insurance, etc.)
   * and more
 
-* [Examples](StructureDefinition-ch-lab-order-document-with-sr-and-form-examples.html) for 'CH LAB-Order Document with Service Request and Form'
+#### Case Studies and Examples
+* [**Suspicion of Deep Vein Thrombosis**](case-studies-english.html#suspicion-of-deep-vein-thrombosis): [CH LAB-Order Document with Service Request and Form](Bundle-1-tvt-document-with-sr-and-form.html)
+* [**Annual Gynecological Checkup**](case-studies-english.html#annual-gynecological-checkup): [CH LAB-Order Document with Service Request and Form](Bundle-3-gyn-document-with-sr-and-form.html)
+* [**Histopathological Examination**](case-studies-english.html#histopathological-examination): [CH LAB-Order Document with Service Request and Form](Bundle-6-histopath-document-with-sr-and-form.html)
 
 ### Requesting Additional Tests of the Same Sample
 It is not uncommon for the results of laboratory tests to lead to the request for additional tests on the same sample, or in-house laboratory analyses are supplemented by further tests that can only be carried out in an external laboratory.
 
-In the [pertussis example](case-studies-english.html#suspicion-of-pertussis), the in-house laboratory tests (automated blood count, CRP) are supplemented by a search for the Bordetella pertussis and parapertussis DNA in the throat swab, carried out by an external contract laboratory, in order to rule out whooping cough.
+In the [**suspicion of pertussis**](case-studies-english.html#suspicion-of-pertussis) case study, the in-house laboratory tests (automated blood count, CRP) are supplemented by a search for the Bordetella pertussis and parapertussis DNA in the throat swab, carried out by an external contract laboratory, in order to rule out whooping cough.
 
 When the placer system request additional tests the existing samples, it copies the original ServiceRequest, adds the required laboratory tests and an Order Control Code 'RP', which means an order/service replace request. A special invariant rule 'sr-1' ensures that a reference to the original ServiceRequest is created.
 
@@ -55,12 +62,12 @@ Referenced Service Request: The code in the element 'orderDetail' would be 'NW' 
 
 Service Replace Request: The Replace Request contains a Reference to the previous ServiceRequest and an element 'orderDetail', carries the order Control Code from the Code System v2-0119: RP for "Order/service replace request", 'CA' for "Cancel order/service request", 'HD' for "Hold order request", and 'RL' for "Release previous hold"
 
+#### Examples
 * [CH LAB-Order Document with Service Request](Bundle-2-pertussis-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
 
-
 ### Collective Request for Toxicological Testing
-This use case corresponds to the [biological monitoring example](case-studies-english.html#suva-biological-monitoring). In order to assess the exposure of workers to chemical substances, measurements at the workplace are supplemented by occupational health checkups. The toxic substances themselves or their metabolites in serum or urine can be determined. The order is initiated by the occupational physician of the company or the insurance company. The problem of employee fluctuations must be kept in mind.
+This use case corresponds to the [**SUVA biological monitoring**](case-studies-english.html#suva-biological-monitoring) case study. In order to assess the exposure of workers to chemical substances, measurements at the workplace are supplemented by occupational health checkups. The toxic substances themselves or their metabolites in serum or urine can be determined. The order is initiated by the occupational physician of the company or the insurance company. The problem of employee fluctuations must be kept in mind.
 
 Examples are:
 * Occupational medicine: ordering laboratory tests on a group of workers
@@ -71,5 +78,6 @@ Examples are:
 
 Work lists are processed, which last over a longer period of time (days/weeks). Generally, specific examinations are requested on multiple patients.
 
+#### Examples
 * [CH LAB-Order Document with Service Request](Bundle-5-biol-monit-document-with-sr.html)
 * [CH LAB-Order Document with Service Request and Form](Bundle-5-biol-monit-document-with-sr-and-form.html)

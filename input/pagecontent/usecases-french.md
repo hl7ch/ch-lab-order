@@ -11,7 +11,11 @@ Il peut de plus ajouter des informations sur le contexte clinique à la commande
 
 Le document de commande est envoyé au système d'information du laboratoire (LIS).
 
-* [Exemples](StructureDefinition-ch-lab-order-document-with-sr-examples.html) pour 'CH LAB-Order Document with Service Request'
+### Études de cas et exemples
+* [**Contrôle de l'effet de l'anticoagulation**](case-studies-french.html#contrôle-de-leffet-de-lanticoagulation) : [CH LAB-Order document avec demande de service](Bundle-0-best-practice-document-with-sr.html)
+* [**Soupçon de thrombose veineuse profonde szenario**](case-studies-french.html#soupçon-de-thrombose-veineuse-profonde-szenario) : [CH LAB-Order document avec demande de service](Bundle-1-tvt-document-with-sr.html)
+* [**Contrôle gynécologique annuel**](case-studies-french.html#contrôle-gynécologique-annuel) : [CH LAB-Order document avec demande de service](Bundle-3-gyn-document.html)
+* [**Histopathology examination**](case-studies-french.html#histopathology-examination) : [CH LAB-Order document avec demande de service](Bundle-6-histopath-document-with-sr.html)
 
 #### Document de commande de laboratoire avec demande de service et formulaire
 Le client (par exemple, le médecin) a besoin de divers tests de laboratoire pour un diagnostic plus approfondi. À cette fin, il crée un document de commande dans le système d'information de son cabinet, avec les informations nécessaires sur le patient, le test de laboratoire, les échantillons, etc. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien, etc.) sont stockés dans les documents de commande correspondants. Les échantillons nécessaires (sérum, urine, liquide céphalorachidien) sont collectés dans des récipients appropriés et clairement affectés au document de commande (Specimen.identifier, Specimen.container.identifier). Les échantillons peuvent être examinés dans le propre laboratoire ou doivent être envoyés par courrier ou par service de messagerie au laboratoire externe. Là, le système d'information du laboratoire leur attribue leur propre identifiant (Specimen.accessionIdentifier).
@@ -37,12 +41,15 @@ Un formulaire (Questionnaire) est présenté au client, qui contient les informa
   * payeur (assurance maladie, assurance accident, etc.)
   * et plus encore.
 
-* [Exemples](StructureDefinition-ch-lab-order-document-with-sr-and-form-examples.html) pour 'CH LAB-Order Document with Service Request and Form'
+#### Études de cas et exemples
+* [**Soupçon de thrombose veineuse profonde szenario**](case-studies-french.html#soupçon-de-thrombose-veineuse-profonde-szenario) : [CH LAB-Order document avec demande de service et formulaire](Bundle-1-tvt-document-with-sr-and-form.html)
+* [**Contrôle gynécologique annuel**](case-studies-french.html#contrôle-gynécologique-annuel) : [CH LAB-Order document avec demande de service et formulaire](Bundle-3-gyn-document-with-sr-and-form.html)
+* [**Histopathology examination**](case-studies-french.html#histopathology-examination) : [CH LAB-Order document avec demande de service et formulaire](Bundle-6-histopath-document-with-sr-and-form.html)
 
 ### Demande de tests supplémentaires sur le même échantillon
 Il n'est pas rare que les résultats des tests de laboratoire conduisent à demander des tests supplémentaires sur le même échantillon. Ou bien les analyses de laboratoire internes sont complétées par d'autres tests qui ne peuvent être effectués que dans un laboratoire externe.
 
-Dans l'[exemple pertussis](case-studies-french.html#suspicion-de-coqueluche), les analyses de laboratoire internes (numération sanguine automatisée, CRP) sont complétées par une recherche d'ADN de Bordetella pertussis et parapertussis dans le prélèvement de gorge, effectuée par un laboratoire contractuel externe, afin d'exclure la coqueluche.
+Dans l'étude de cas [**suspicion de coqueluche**](case-studies-french.html#suspicion-de-coqueluche), les analyses de laboratoire internes (numération sanguine automatisée, CRP) sont complétées par une recherche d'ADN de Bordetella pertussis et parapertussis dans le prélèvement de gorge, effectuée par un laboratoire contractuel externe, afin d'exclure la coqueluche.
 
 Lorsque le système de placement demande des tests supplémentaires pour les échantillons existants, il copie la demande de service originale, ajoute les tests de laboratoire requis et un code de commande 'RP', qui signifie une demande de remplacement d'une commande ou d'un service. Une règle invariante spéciale "sr-1" garantit la création d'une référence à la demande de service originale.
 
@@ -55,12 +62,12 @@ Service référencée : Le code de l'élément 'orderDetail' serait 'NW' pour "N
 
 Remplacement de service : La demande de remplacement contient une référence à la demande de service précédente et un élément "orderDetail", qui porte le code de contrôle de l'ordre du système de codes v2-0119 : 'RP' pour "Order/service replace request", 'CA' pour "Cancel order/service request", 'HD' pour "Hold order request", et 'RL' pour "Release previous hold"
 
-* [CH LAB-Order Document with Service Request](Bundle-2-pertussis-document-with-sr.html)
-* [CH LAB-Order Document with Service Request and Form](Bundle-2-pertussis-document-with-sr-and-form.html)
-
+#### Exemples
+* [CH LAB-Order document avec demande de service](Bundle-2-pertussis-document-with-sr.html)
+* [CH LAB-Order document avec demande de service et formulaire](Bundle-2-pertussis-document-with-sr-and-form.html)
 
 ### Demande collective d'essais toxicologiques
-Ce cas d'application correspond à l'[exemple surveillance biologique SUVA](case-studies-french.html#surveillance-biologique-suva). Afin d'évaluer l'exposition des travailleurs aux substances chimiques, les mesures sur le lieu de travail sont complétées par des examens de santé au travail. Les substances toxiques elles-mêmes ou leurs métabolites dans le sérum ou l'urine peuvent être déterminés. La demande est initiée par le médecin du travail de l'entreprise ou de la compagnie d'assurance. Le problème des fluctuations des employés doit être pris en compte.
+Ce cas d'application correspond à l'étude de cas [**surveillance biologique SUVA**](case-studies-french.html#surveillance-biologique-suva). Afin d'évaluer l'exposition des travailleurs aux substances chimiques, les mesures sur le lieu de travail sont complétées par des examens de santé au travail. Les substances toxiques elles-mêmes ou leurs métabolites dans le sérum ou l'urine peuvent être déterminés. La demande est initiée par le médecin du travail de l'entreprise ou de la compagnie d'assurance. Le problème des fluctuations des employés doit être pris en compte.
 
 Voici quelques exemples :
 * Médecine du travail : demande d'analyses de laboratoire pour un groupe de travailleurs
@@ -71,6 +78,6 @@ Voici quelques exemples :
 
 Les listes de travail sont traitées sur une période plus longue (jours/semaines). En général, des examens spécifiques sont demandés pour plusieurs patients.
 
-* [CH LAB-Order Document with Service Request](Bundle-5-biol-monit-document-with-sr.html)
-* [CH LAB-Order Document with Service Request and Form](Bundle-5-biol-monit-document-with-sr-and-form.html)
-
+#### Exemples
+* [CH LAB-Order document avec demande de service](Bundle-5-biol-monit-document-with-sr.html)
+* [CH LAB-Order document avec demande de service et formulaire](Bundle-5-biol-monit-document-with-sr-and-form.html)
