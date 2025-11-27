@@ -4,10 +4,7 @@ Usage: #inline
 * id = "3-gyn-with-sr"
 
 // ---- Sender and Receiver -----
-* extension[0].extension.url = "enterer"
-* extension[=].extension.valueReference = Reference(PeterPapGruppenpraxis)
-* extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
-* extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
+* extension[0].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
