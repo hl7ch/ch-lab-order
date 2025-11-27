@@ -1,7 +1,5 @@
 Instance: LabOrderRenalInsufficiencyPanel
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Renal Insufficiency Panel"
-Description: "Service Request for a Laboratory Panel (Battery) to assess the renal insufficiency by eGFR and Albumin/Creatinin Ratio in Urine "
 Usage: #inline
 * id = "panel-renal-insufficiency-order"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

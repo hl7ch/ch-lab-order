@@ -1,11 +1,9 @@
 Instance: 2-pertussis-DocumentWith_SR_and_Form
-InstanceOf: ChOrfDocument
-Title: "CH LAB-Order 2-pertussis with ServiceRequest and Form"
-Description: "Document for referral/order Pertussis investigation"
+InstanceOf: ChLabOrderDocumentWithSR_AndForm
+Title: "Pertussis"
+Description: "CH LAB-Order Document with Service Request and Form"
 Usage: #example
 * id = "2-pertussis-document-with-sr-and-form"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:18:41.341+00:00"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f8"
 * type = #document

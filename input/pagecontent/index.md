@@ -39,30 +39,21 @@ The lab order can optionally and in addition to the ServiceRequest contain forms
 
 ### Requirements
 
-The lab-order should define the structure of the order details so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
-
+The lab order should define the structure of the order details so it can be used by different laboratories and different providers of practice or clinic systems or independent tool.
 1. The partly or fully filled electronic order should be storable in the order placer system (practice system, hospital system), so it can be changed until the samples are scanned by the receiver laboratory.
-
 2. Data about practitioner, patient and treatment should be transferable to the electronic order.
-
 3. In the electronic order all available analyses should be presentable, a search option should be available. The content of panels should be visible.
    * The the electronic order should contain analyses and test-panels. Groups of tests, e.g. for "blood count" are usually requested as panels. They are split into service requests for single analyses in the ServiceRequest Container. If the LIS (Laboratory Information System) knows the components of the panels, it can do the splitting itself.
-
-4. Analyses, Sample type, required Sample additives and preanalytic handling should be presented to the order filler.
-
+4. Analyses, Sample type, required Sample additives and pre-analytic handling should be presented to the order filler.
    * Information for the sample taking should be available for the person preparing the taking of blood.
-
    * A numbering system should be supported, so that relabeling at the laboratory can be limited (eg. practitioner number + number-range).
-
 5. The electronic order should be able to handle the request of analyses for samples that were sent at an earlier point of time.
-
 6. The electronic order should receive updates on the process of the laboratory analyses: as sample received in laboratory, first results available, report finished [Domain of Lab-Report].
-
    * The status of the order at the practitioner site should be supported as well: new order, replaced order (enhanced or partly deleted), printed sample labels, documentation of blood take (additional Information as urine volume and Date and Time of withdrawal of blood).
 
-### Six Case Studies with Examples for the Order Document
+### Case Studies with Examples for the Order Document
 
-Using concrete case studies ([en](case-studies-english.html), [de](case-studies-german.html), [fr](case-studies-french.html)), we have created six everyday examples of documents that contain a laboratory order. These are requirements of laboratory analyses in the field of hematology, clinical chemistry, coagulation, infectious serology and microbiology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
+Using concrete case studies ([en](case-studies-english.html), [de](case-studies-german.html), [fr](case-studies-french.html)), we have created examples of documents that contain a laboratory order. These are requirements of laboratory analyses in the field of hematology, clinical chemistry, coagulation and infectious serology. The biological monitoring example covers the special case where several employees of a company send their biological material (serum, urine) to the laboratory for determination of substances hazardous to health (toxicology).
 
 ### Copyright
 

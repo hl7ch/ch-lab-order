@@ -2,8 +2,6 @@
 
 Instance: Arztpraxis
 InstanceOf: CHCoreOrganization
-Title: "Organization Arztpraxis"
-Description: "Practice, refers to 2-pertussis and 3-gyn and 6-histopath"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000235503"

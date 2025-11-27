@@ -1,7 +1,5 @@
 Instance: 2-pertussis-ServiceRequest
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 2-pertussis"
-Description: "Example for Service Request for Pertussis Investigation"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -30,8 +28,6 @@ Usage: #inline
 
 Instance: 2-pertussis-ServiceRequestCBC
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 2-pertussis CBC"
-Description: "Example for Service Request for Pertussis Investigation"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -68,8 +64,6 @@ Usage: #inline
 
 Instance: 2-pertussis-ServiceRequestCRP
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-ServiceRequest 2-pertussis CRP"
-Description: "Example for Service Request for Pertussis Investigation"
 Usage: #inline
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[placerOrderIdentifier].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
@@ -107,11 +101,7 @@ Usage: #inline
 
 Instance: EmilKummer
 InstanceOf: CHCorePatient
-Title: "Patient Emil Kummer"
-Description: "CH-Core-Patient, refers to 2-pertussis"
 Usage: #inline
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: EmilKummer\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 80756011110123400004\n      </p><p><b>name</b>: Emil Kummer\n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: May 05, 2014\n      </p><p><b>maritalStatus</b>: ledig \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '1' = '1', given as 'ledig'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Paris"
 * extension[=].valueAddress.country = "Frankreich"
@@ -137,16 +127,12 @@ Usage: #inline
 
 Instance: PeterPrestoGruppenpraxis
 InstanceOf: CHCorePractitionerRole
-Title: "PractitionerRole Peter Presto at Gruppenpraxis"
-Description: "PractitionerRole, refers to 2-pertussis"
 Usage: #inline
 * practitioner = Reference(Practitioner/PeterPresto)
 * organization = Reference(Organization/Gruppenpraxis)
 
 Instance: PeterPresto
 InstanceOf: CHCorePractitionerEPR
-Title: "Practitioner Peter Presto"
-Description: "Practitioner, works at Gruppenpraxis, refers to 2-pertussis"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3" //GLN
 * identifier[GLN].value = "7601022050702"
@@ -165,29 +151,9 @@ Usage: #inline
 * telecom[=].value = "peter.presto@arztpraxis.ch"
 * telecom[=].use = #work
 
-/*
-Instance: HealthInsuranceCardEmilKummer
-InstanceOf: CHCoreCoverage
-Title: "Health Insurance Card Emil Kummer"
-Description: "Example for Insurance"
-Usage: #inline
-* id = "health-insurance-card-emil-kummer"
-* identifier.type = $coverage-identifiertype#VeKa
-* identifier.system = "http://example.org/insurer/123456789/member"
-* identifier.value = "80756011110123400004"
-* status = #active
-* type = $coverage-type#1 "Krankenversicherung (obligat.)"
-* subscriber = Reference(Patient/EmilKummer)
-* beneficiary = Reference(Patient/EmilKummer)
-* period.end = "2024-12-31"
-* payor.identifier.system = "http://example.org/insurer"
-* payor.identifier.value = "123456789"
-*/
 
 Instance: ThroatSwab-2-pertussis
 InstanceOf: Specimen
-Title: "Throat Swab"
-Description: "Example for Specimen of Throat Swab"
 Usage: #inline
 * identifier.value = "48736-222333-75465"
 * accessionIdentifier.value = "4e88a-bc987-dd888"
@@ -207,8 +173,6 @@ Usage: #inline
 
 Instance: Blood-2-pertussis
 InstanceOf: Specimen
-Title: "Blood Sample, 2-pertussis"
-Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
 * status = #available
 * type = $sct#119297000 "Blood sample"
@@ -220,8 +184,6 @@ Usage: #inline
 
 Instance: Serum-2-pertussis
 InstanceOf: Specimen
-Title: "Serum Sample 2-pertussis"
-Description: "Example for Specimen of Serum from venous blood"
 Usage: #inline
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e88a-12345-dd888"
@@ -231,17 +193,3 @@ Usage: #inline
 * collection.collector = Reference(Practitioner/PeterPresto)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * container.type = $sct#702304001 "Microcapillary blood transfer tube, clot activator (physical object)"
-
-// Instance: Cough
-// InstanceOf: Observation
-// Title: "Cough"
-// Description: "Cough as a detected symptom"
-// Usage: #inline
-// * id = "cough"
-// * status = #final
-// * category.text = "Signs and Symptoms"
-// * code.coding[+] = $sct#49727002 "Cough (finding)"
-// * subject = Reference(Patient/EmilKummer)
-// * performer = Reference(Practitioner/PeterPresto)
-// * effectiveDateTime = "2023-11-01T22:33:22Z"
-// * valueCodeableConcept =  $sct#260349009 "Present +++ out of ++++ (qualifier value)"

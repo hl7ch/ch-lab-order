@@ -1,7 +1,5 @@
 Instance: LabOrder-eGFR
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR eGFR CKD-EPI 2021"
-Description: "Service Request for serum creatinine and calculation of eGFR"
 Usage: #inline
 * id = "lab-order-eGFR"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

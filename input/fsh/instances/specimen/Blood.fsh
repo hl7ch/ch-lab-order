@@ -1,7 +1,5 @@
 Instance: Blood
 InstanceOf: Specimen
-Title: "Blood Sample, generic"
-Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
 * status = #available
 * type = $sct#119297000 "Blood sample"

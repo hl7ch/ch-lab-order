@@ -1,7 +1,5 @@
 Instance: ServiceRequestGeneric
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR for some single test"
-Description: "Service Request of a single test, e.g. Hemoglobin [Moles/volume] in Blood"
 Usage: #inline
 * id = "service-request-generic"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"
@@ -39,8 +37,6 @@ Usage: #inline
 
 Instance: Acetylsalicylat
 InstanceOf: CHCoreMedicationStatement
-Title: "MedicationStatement: Acetylsalicylat Verordnung"
-Description: "Example of Medication Record"
 Usage: #inline
 * status = #active
 * medicationReference = Reference(Medication/Aspirin)
@@ -55,8 +51,6 @@ Usage: #inline
 
 Instance: Aspirin
 InstanceOf: CHCoreMedication
-Title: "Medication Aspirin"
-Description: "Example of a Medication Product"
 Usage: #inline
 * contained = sub02
 * code = $sct#774656009 "Product containing only aspirin (medicinal product)"
@@ -67,7 +61,5 @@ Usage: #inline
 
 Instance: sub02
 InstanceOf: Substance
-Title: "Substance: Aspirin Substanz"
-Description: "Example of a medication substance"
 Usage: #inline
 * code = $sct#387458008 "Aspirin (substance)"

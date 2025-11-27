@@ -1,7 +1,5 @@
 Instance: LabOrderUrineCreatinine
 InstanceOf: ChLabOrderSR
-Title: "CH LAB-Order SR Creatinine [Moles/volume] in Urine"
-Description: "Service Request for Creatinine [Moles/volume] in Urine"
 Usage: #inline
 * id = "lab-order-urine-creatinine"
 * identifier[placerOrderIdentifier].type = $v2-0203#PLAC "Placer Identifier"

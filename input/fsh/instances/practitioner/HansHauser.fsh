@@ -1,7 +1,5 @@
 Instance: HansHauser
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Hans Hauser"
-Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"

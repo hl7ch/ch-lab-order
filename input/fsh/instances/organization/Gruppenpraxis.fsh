@@ -1,7 +1,5 @@
 Instance: Gruppenpraxis
 InstanceOf: CHCoreOrganizationEPR
-Title: "Organization Praxis Gruppenpraxis"
-Description: "Example for group practice"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000241115"

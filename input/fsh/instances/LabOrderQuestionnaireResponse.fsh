@@ -1,11 +1,7 @@
 Instance: LabOrder-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "CH LAB-Order example Questionnaire Response"
-Description: "Example for Laboratory Order Questionnaire Response"
 Usage: #inline
 * id = "LabOrder-qr"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/LabOrder-form"
 * status = #completed
 

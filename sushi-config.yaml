@@ -36,27 +36,45 @@ pages:
   index.md:
     title: Home
   usecases-english.md:
-    title: Use Cases in English
+    title: Use Cases
   usecases-german.md:
-    title: Use Cases in German
+    title: Anwendungsfälle
   usecases-french.md:
-    title: Use Cases in French
+    title: Cas d’application
   case-studies-english.md:
-    title: Case Studies in English
+    title: Case Studies
   case-studies-german.md:
-    title: Case Studies in German
+    title: Fallstudien
   case-studies-french.md:
-    title: Case Studies in French
+    title: Études de cas
+  document-lo-sr.md:
+    title: CH LAB-Order with Service Request  
   document-lo-sr-and-form.md:
     title: CH LAB-Order with Service Request and Form
-  document-lo-sr.md:
-    title: CH LAB-Order with Service Request
   profiles.md:
     title: Profiles
   terminology.md:
     title: Terminology
   changelog.md:
     title: Changelog
+
+menu:
+  Home: index.html
+  Use Cases:
+    English: usecases-english.html
+    German: usecases-german.html
+    French: usecases-french.html
+  Case Studies:
+    English: case-studies-english.html
+    German: case-studies-german.html
+    French: case-studies-french.html
+  Document:
+    Document with Service Request: document-lo-sr.html
+    Document with Service Request and Form: document-lo-sr-and-form.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Artifacts: artifacts.html  
+  Changelog: changelog.html
 
 parameters:
   allow-extensible-warnings: true

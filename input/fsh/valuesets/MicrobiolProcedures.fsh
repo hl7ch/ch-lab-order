@@ -1,37 +1,13 @@
-Instance:     MicrobiolProcedures
-InstanceOf:   $shareablevalueset
-Usage:        #Definition
-Description:  "Valueset Snomed CT Codes of Microbiological Procedures"
-* extension.url = "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod"
-* extension.valuePeriod.start = "2024-01-24T00:00:00+01:00"
-* url = "http://fhir.ch/ig/ch-lab-order/ValueSet/MicrobiolProcedures"
-* identifier.use = #official
-// * identifier.system = "http://art-decor.org/ns/oids/vs"
-// * identifier.value = "2.16.756.5.30.1.1.11.xyz"
-* version = "2024-01-24T00:00:00"
-* name = "MicrobiologicalProcedure"
-* title = "Microbiological Procedure"
-* status = #active
-* experimental = false
-* publisher = "eHealth Suisse"
-* contact.name = "eHealth Suisse"
-* contact.telecom.system = #url
-* contact.telecom.value = "https://www.e-health-suisse.ch"
-* description = "Valueset Snomed CT Codes of Microbiological Procedures"
-* immutable = true
+ValueSet: MicrobiolProcedures
+Id: MicrobiolProcedures
+Title: "Microbiological Procedure"
+Description: "Valueset Snomed CT Codes of Microbiological Procedures"
+* ^experimental = true
 
-* compose.include.system = "$sct"
-* compose.include.concept[0].code = #19851009
-* compose.include.concept[=].display = "Microbiology procedure (procedure)"
-* compose.include.system = $sct  
-* compose.include.concept[0].code = $sct#14788002
-* compose.include.concept[=].display = "Antimicrobial susceptibility test (procedure)"
-
-* compose.include.concept[+].code = $sct#115254003
-* compose.include.concept[=].display = "Fungal identification method (procedure)"
-
-* compose.include.concept[+].code = $sct#115253009
-* compose.include.concept[=].display = "Bacterial identification method (procedure)"
+* $sct#19851009 "Microbiology procedure (procedure)"
+* $sct#14788002 "Antimicrobial susceptibility test (procedure)"
+* $sct#115254003 "Fungal identification method (procedure)"
+* $sct#115253009 "Bacterial identification method (procedure)"
 
 
 // * compose.include.concept[=].designation[0].language = #de-CH

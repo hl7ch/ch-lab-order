@@ -1,7 +1,5 @@
 Instance: MarcMustermann
 InstanceOf: CHCorePractitioner
-Title: "Practitioner Marc Mustermann"
-Description: "Practitioner, works in Gruppenpraxis"
 Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"

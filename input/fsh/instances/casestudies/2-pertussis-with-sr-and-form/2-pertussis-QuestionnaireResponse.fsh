@@ -1,11 +1,7 @@
 Instance: 2-pertussis-QuestionnaireResponse
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "CH LAB-QuestionnaireResponse 2-pertussis"
-Description: "Example Laboratory Order Questionnaire Response for Pertussis Investigation"
 Usage: #inline
 * id = "2-pertussis"
-* meta.versionId = "1"
-* meta.lastUpdated = "2019-04-01T20:17:53.340+00:00"
 * questionnaire = "http://fhir.ch/ig/ch-lab-order/Questionnaire/2-pertussis"
 * status = #completed
 
