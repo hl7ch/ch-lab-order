@@ -8,15 +8,10 @@ Description:  "Valueset Snomed CT Codes of Microbiological Procedures"
 * identifier.use = #official
 // * identifier.system = "http://art-decor.org/ns/oids/vs"
 // * identifier.value = "2.16.756.5.30.1.1.11.xyz"
-* version = "2024-01-24T00:00:00"
 * name = "MicrobiologicalProcedure"
 * title = "Microbiological Procedure"
 * status = #active
 * experimental = false
-* publisher = "eHealth Suisse"
-* contact.name = "eHealth Suisse"
-* contact.telecom.system = #url
-* contact.telecom.value = "https://www.e-health-suisse.ch"
 * description = "Valueset Snomed CT Codes of Microbiological Procedures"
 * immutable = true
 
