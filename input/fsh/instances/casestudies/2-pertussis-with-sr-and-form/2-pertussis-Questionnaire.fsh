@@ -560,7 +560,7 @@ Usage: #inline
 * item[=].item.text = "Manual Differential panel - Blood"
 * item[=].item.type = #choice
 * item[=].item.repeats = true
-* item[=].item.answerOption.valueCoding = $loinc#24318-8 "Manual diff Bld"
+* item[=].item.answerOption.valueCoding = $loinc#57782-5 "CBC W Ordered Manual Differential panel - Blood"
 * item[+].linkId = "clinical chemistry"
 * item[=].text = "Klinische Chemie"
 * item[=].type = #group

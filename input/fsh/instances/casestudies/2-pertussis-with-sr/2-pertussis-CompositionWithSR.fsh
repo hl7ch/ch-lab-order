@@ -4,10 +4,7 @@ Usage: #inline
 * id = "2-pertussis-with-sr"
 
 // ---- Sender and Receiver ----
-* extension[0].extension.url = "enterer"
-* extension[=].extension.valueReference = Reference(PeterPrestoGruppenpraxis)
-* extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
-* extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
+* extension[0].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)

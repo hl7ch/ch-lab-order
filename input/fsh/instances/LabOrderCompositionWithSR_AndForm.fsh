@@ -5,10 +5,7 @@ Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order with ServiceRequest and Form</div></div>"
 
-* extension[0].extension.url = "enterer"
-* extension[=].extension.valueReference = Reference(MarcMustermannGruppenpraxis)
-* extension[=].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer"
-* extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"
+* extension[0].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"
 * extension[=].valueReference = Reference(EvaErlenmeyerLaborPipette)
 * extension[+].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"
 * extension[=].valueReference = Reference(MarcMustermannGruppenpraxis)
