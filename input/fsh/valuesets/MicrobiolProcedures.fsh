@@ -1,22 +1,13 @@
 ValueSet: MicrobiolProcedures
 Id: MicrobiolProcedures
-Title: Microbiological Procedure
-Description: Valueset Snomed CT Codes of Microbiological Procedures
-* ^status = #active
+Title: "Microbiological Procedure"
+Description: "Valueset Snomed CT Codes of Microbiological Procedures"
 * ^experimental = true
 
-* compose.include.system = "$sct"
-* compose.include.concept[0].code = #19851009
-* compose.include.concept[=].display = "Microbiology procedure (procedure)"
-* compose.include.system = $sct  
-* compose.include.concept[0].code = $sct#14788002
-* compose.include.concept[=].display = "Antimicrobial susceptibility test (procedure)"
-
-* compose.include.concept[+].code = $sct#115254003
-* compose.include.concept[=].display = "Fungal identification method (procedure)"
-
-* compose.include.concept[+].code = $sct#115253009
-* compose.include.concept[=].display = "Bacterial identification method (procedure)"
+* $sct#19851009 "Microbiology procedure (procedure)"
+* $sct#14788002 "Antimicrobial susceptibility test (procedure)"
+* $sct#115254003 "Fungal identification method (procedure)"
+* $sct#115253009 "Bacterial identification method (procedure)"
 
 
 // * compose.include.concept[=].designation[0].language = #de-CH
