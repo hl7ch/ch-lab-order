@@ -4,8 +4,9 @@
 
 <div markdown="1" class="stu-note">
 
-During the STU ballot by [HL7 Switzerland](https://www.hl7.ch/de/) until September 30th, 2025 comments were raised that 
-a further evolution of the Laboratory Order Implementation Guide should not be document-based, but based on the fundamental patterns described in the [Clinical Order Workflow (COW) Implementation Guide](https://hl7.org/fhir/uv/cow/2025May/). The lab group agreed that clinical order workflows should be the long-term goal and future of LAB Order. However, due to lack of resources it is proposed to stick with the document-based approach. The successful implementation and establishment of this approach is already considered a significant improvement.
+During the STU3 ballot by [HL7 Switzerland](https://www.hl7.ch/de/) negative comments were raised that a further evolution of the Laboratory Order Implementation Guide should not be document-based, but based on the fundamental patterns described in the [Clinical Order Workflow (COW) Implementation Guide](https://hl7.org/fhir/uv/cow/2025May/). The lab group agreed that clinical order workflows should be the long-term goal and future of LAB Order. However, due to lack of resources it is proposed to stick with the document-based approach. The successful implementation and establishment of this approach is already considered a significant improvement.
+
+[Significant changes, open and closed issues.](changelog.html)
 
 </div>
 
