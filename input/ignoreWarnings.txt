@@ -9,13 +9,10 @@ Reference to draft CodeSystem%
 # MaritalStatus (using eCH)
 None of the codings provided are in the value set 'MaritalStatus' (http://hl7.org/fhir/ValueSet/marital-status|%
 
-# Information about pinned version
-Pinned the version of%
-
 # Caused through underlying structure (snapshot)
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|%
-The extension http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer|6.0.0-ci-build is retired
+The extension http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer|%
 
 # Known IG Publisher issue (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458)
 The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
