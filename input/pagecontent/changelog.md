@@ -20,7 +20,7 @@ Significant changes to this FHIR implementation guide will be documented on this
 * [#379](https://github.com/hl7ch/ch-lab-order/issues/379): Exception and error workflows (e.g., specimen damaged in transport, test cancellation, order status updates) are out of scope for this current document-centric IG. These workflows will be better addressed in a future version by using the concepts defined by the Clinical Order Workflow (COW) Implementation Guide.
 * [#376](https://github.com/hl7ch/ch-lab-order/issues/376): Fixed Bundle.entry:Patient cardinality from 0..* to 1..* in document profiles. Since Composition.subject is 1..1 and must reference a Patient, and the Bundle is declared as type 'document' (meaning all references must be contained within the Bundle), the Patient entry must be present. Updated both ChLabOrderDocumentWithSR and ChLabOrderDocumentWithSR_AndForm profiles.
 
-### Negative comments and open issues which could not be resolved during the ballot
+#### Negative comments and open issues which could not be resolved during the ballot
 * [#371](https://github.com/hl7ch/ch-lab-order/issues/371), [#372](https://github.com/hl7ch/ch-lab-order/issues/372), [#377](https://github.com/hl7ch/ch-lab-order/issues/377): Negative comments by EPIC: We understand that an immediate switch to the COR-based lab orders workflow isn’t feasible, but our goal with this feedback is to make sure the ballot includes a path towards making the switch.
 
 ### STU 3 Ballot - v3.0.0-ballot (2025-05-22)
