@@ -1,6 +1,6 @@
 Significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 3 - v3.0.0 (2025-12-15)
+### STU 3 - v3.0.0 (2025-12-16)
 
 #### Fixed / Changed / Updated
 * [#385](https://github.com/hl7ch/ch-lab-order/issues/385): A future published Order Catalogue IG is based on R5 and this IG is based on FHIR R4. Decision to remove Catalogue dependency and examples from this IG: Removed ObservationDefinition, PlanDefinition, ActivityDefinition, and Catalog (Composition profile) resources and profiles. Removed Use Case 5 from documentation. (Issues [#322](https://github.com/hl7ch/ch-lab-order/issues/322) and [#359](https://github.com/hl7ch/ch-lab-order/issues/359) are therefore obsolete.)
